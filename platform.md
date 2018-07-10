@@ -81,7 +81,7 @@ All integrated billing services that offer a metered plan must use the {{site.da
 
 **Note:** You’re required to automate hourly usage submission using metering service API if you offer a metered plan.
 
-For more information on metering see: [Metering integration](/docs/third-party/metering.html#meteringintera). For more information submitting metered usage, see: [Submitting usage for metered plans](docs/third-party/submitusage.html#submitusage)
+For more information on metering see: [Metering integration](/docs/third-party/metering.html#meteringintera). For more information submitting metered usage, see: [Submitting usage for metered plans](/docs/third-party/submitusage.html#submitusage)
 
 ## Provisioning scenario: Pulling it all together
 
@@ -145,7 +145,7 @@ In the previous example you can see the metadata returned in the `context` param
 
    In this sample, this `compose-redis` instance is part of {{site.data.keyword.Bluemix_notm}} account with id `46aa677e-e83f-4d17-a2b6-5b752564477c`, the unique id for the instance is `416d769b-682d-4833-8bd7-5ef8778e5b52`, and the instance is hosted in the `us-south` region of the public {{site.data.keyword.Bluemix_notm}}.
 
-* **resource_group_crn**: Returns the resource group that contains the service instance. For more details, see [Managing resource groups](docs/resources/resourcegroups.html).
+* **resource_group_crn**: Returns the resource group that contains the service instance. For more details, see [Managing resource groups](/docs/resources/resourcegroups.html).
 
    **Note**: Offering providers shouldn’t be concerned with the `resource_group_crn` except in very unique circumstances. Consult your IBM representative on your use case before using that field.
 

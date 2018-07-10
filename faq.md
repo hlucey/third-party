@@ -26,7 +26,7 @@ See the following Frequently Asked Questions for clarification on commonly asked
 
 For more information on metering see: [Metering integration](/docs/third-party/metering.html#meteringintera).
 
-For more information submitting metered usage see: [Submitting usage for metered plans](docs/third-party/submitusage.html#submitusage)
+For more information submitting metered usage see: [Submitting usage for metered plans](/docs/third-party/submitusage.html#submitusage)
 
 ## I lost my {{site.data.keyword.Bluemix_notm}} Identity and Access Management API Key. How can I generate another?
 {: #iam-creds}

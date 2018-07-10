@@ -78,7 +78,7 @@ Your initial offering letter includes a service documentation URL that was gener
 
 ## Register with IAM
 
-IAM is required for all services onboarding into {{site.data.keyword.Bluemix_notm}}. See [ What is IAM?](iam/index.html#what-is-cloud-iam-) to learn more about IAM concepts and requirements.
+IAM is required for all services onboarding into {{site.data.keyword.Bluemix_notm}}. See [ What is IAM?](/docs/iam/index.html#what-is-cloud-iam-) to learn more about IAM concepts and requirements.
 
 The resource management console generates the following IAM values:
    - Service ID (generated and stored)
@@ -109,7 +109,7 @@ When you onboard your service into {{site.data.keyword.Bluemix_notm}}, you must 
    * **Metered plan**: Specify **No** for **Is this plan free?**. Complete the required fields. *Delete* the default **Pricing metrics** subscription metric. Click **Add another metric**, complete the **Add pricing metric** page, and click **Add metric**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage. For help selecting the right metrics, see [Metering integration](/docs/third-party/metering.html).
 3. The **Pricing** page should now be marked complete, indicating that you passed the minimum requirements to complete this page.
 
-Service providers are required to automate hourly usage submission for all metered plans. For more information, see: [Submitting usage for metered plans](docs/third-party/submitusage.html)
+Service providers are required to automate hourly usage submission for all metered plans. For more information, see: [Submitting usage for metered plans](/docs/third-party/submitusage.html)
 {: tip}
 
 ## Export your metadata as JSON

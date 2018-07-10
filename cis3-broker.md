@@ -22,7 +22,7 @@ Using the metadata you exported from the resource management console, you’ll b
 
 Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with service brokers to provision and manage service instances (an instantiation of a service offering) and service bindings (The representation of an association between an application and a service instance, which often contain the credentials that the application will use to communicate with the service instance). Providing valid metadata values will create a successful RESTful API Response when a Request is performed.
 
-You can get started building your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation. To develop your broker, you will:
+You can get started building your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation. To develop your broker, you’ll:
 
 1. View our platform provisioning scenario
 2. Read through the OSB specification
@@ -46,11 +46,11 @@ Ensure you have started step 1 and completed step 2
 
 ## View our {{site.data.keyword.Bluemix_notm}} platform provisioning scenario
 
-You will be developing an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](https://console.stage1.bluemix.net/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) to gain an understanding of how resource creation works.
+You’ll be developing an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) to gain an understanding of how resource creation works.
 
 ## Become familiar with the OSB specification
 
-{{site.data.keyword.Bluemix_notm}} uses the Open Service Broker API (OSB) `version 2.12` specification. Read through and familiarize yourself with the [Open Broker API spec](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and use the readme as a guide to learn more.
+{{site.data.keyword.Bluemix_notm}} uses the Open Service Broker API (OSB) `version 2.12` specification. Read through and familiarize yourself with the [Open Broker API spec](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and use the readme file as a guide to learn more.
 
 ## View our {{site.data.keyword.Bluemix_notm}} broker samples
 
