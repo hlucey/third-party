@@ -262,27 +262,27 @@ User access tokens created with your client id can only be used to access your s
 
 As part of third-party integration, token scoping is being used to ensure that tokens have the minimal access scope needed to accomplish the user's goals. To facilitate this, IAM tokens will have access based on the client ID that created the token. This means that if an IAM token was created by a third-party service, an end user will not be able to execute certain APIs and functions, even if the user has an appropriate policy configured.
 
-The impact on authorizations (all calls  to [v2/authz](https://iam.bluemix.net/v2/authz) is the need to pass down `scope` information in the subject. This information is contained inside an IAM token (base64 encoded) in the `scope` claim.
+The impact on authorizations (all calls to `https://iam.bluemix.net/v2/authz`) is the need to pass down `scope` information in the subject. This information is contained inside an IAM token (base64 encoded) in the `scope` claim.
 
 Here is an example of what has been added in the authorization call:
 ```
-  [  
+  [
    {  Headers
    `Authorization` -> a jwt token representing a 3rd party service and/or dashboard
    `Transaction-ID` -> "a unique guid lets us help trace the request end to end"
    `Accept` -> `application/vnd.authz.v2+json`
    `Content-Type` -> `application/json`
-   
+
       Body
-      "subject":{  
-         "attributes":{  
+      "subject":{
+         "attributes":{
             "id":"IBMid-123",
             "scope":"libraryservice openid"
          }
       },
       "action":"libraryservice.books.read",
-      "resource":{  
-         "attributes":{  
+      "resource":{
+         "attributes":{
             "serviceName":"libraryservice",
             "serviceInstance":"12345",
             "accountId":"123456789"
@@ -297,4 +297,4 @@ This is applicable to all usages (`user, serviceId, crn`) and all `subject.attri
 
 ## Next steps
 
-Now it's time to pull everyting together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. See: [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
+Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. See: [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
