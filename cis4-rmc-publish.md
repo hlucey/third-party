@@ -55,7 +55,7 @@ Because you deployed in limited visibility mode, only you can see your offering 
 
 1. Log in to {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") with your IBMid.
 2. Ensure you are in the correct account (the same account you used to create the service)
-3. Click the **Catalog** link in the header, and search for your offering. You may need to open the experimental service catalog?
+3. Click the **Catalog** link in the header, and search for your offering.
 4. Next, use the checklist below to validate your service.
 
 ### Checklist - Test your service
