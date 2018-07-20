@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1277px" height="632px" viewBox="0 0 1277 632" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-150.000000, -108.000000)">
+            <g id="Group" transform="translate(150.000000, 108.000000)">
+                <g id="Path-2" transform="translate(559.000000, 128.000000)">
+                    <path d="M0,8 L98,8" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="90 16 90 0 100 8"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(1079.000000, 555.000000)">
+                    <path d="M0,9 L60,9" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="52 17 52 1 62 9"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(259.000000, 128.000000)">
+                    <path d="M0,8 L98,8" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="90 16 90 0 100 8"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(117.000000, 340.000000) rotate(-90.000000) translate(-117.000000, -340.000000) translate(54.000000, 332.000000)">
+                    <path d="M0,8 L124,8" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="116 16 116 0 126 8"></polygon>
+                </g>
+                <g id="IBM-Cloud">
+                    <g id="Page">
+                        <rect id="Mask" fill="#3D70B2" x="0" y="0" width="248" height="267" rx="6"></rect>
+                        <g id="Base-Elements-/-Browser">
+                            <g id="Browser" transform="translate(0.000000, 0.000000)">
+                                <path d="M0,6.00670248 C0,2.6892923 2.67969716,0 6.00748919,0 L241.992511,0 C245.310355,0 248,2.68475771 248,6.00670248 L248,28 L0,28 L0,6.00670248 Z" id="Combined-Shape" fill="#CFD8DC"></path>
+                                <circle id="Oval" fill="#F9F9FA" cx="10.5" cy="14.7" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="20.5" cy="14.7" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="30.5" cy="14.7" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                    <text font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="22" y="101">IBM Cloud</tspan>
+                    </text>
+                    <text id="User-logs-in,-goes-t" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#FAFAFA">
+                        <tspan x="22" y="131">使用者登入、移至「型錄」</tspan>
+                        <tspan x="22" y="151">然後挑選服務。使用者從服</tspan>
+                        <tspan x="22" y="171">務儀表板按一下「建立」。</tspan>
+                    </text>
+                </g>
+                <g id="metered-plan" transform="translate(975.000000, 352.000000)">
+                    <g id="Comment-Up" fill="#BA8FF7">
+                        <rect id="Combined-Shape" x="0" y="0" width="248" height="131.283341" rx="6"></rect>
+                    </g>
+                    <text id="Metered-Plan-Usage-S" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="26" y="36">計量方案</tspan>
+                        <tspan x="26" y="61">用量提交</tspan>
+                    </text>
+                    <text id="Service-provider-mus" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" fill="#FAFAFA">
+                        <tspan x="30" y="90">服務提供者必須</tspan>
+                        <tspan x="30" y="108">每小時提交</tspan>
+                    </text>
+                </g>
+                <g id="usage" transform="translate(943.000000, 523.000000)">
+                    <g id="Comment-Up" fill="#C8F08F">
+                        <rect id="Combined-Shape" x="0" y="0" width="126" height="87" rx="6"></rect>
+                    </g>
+                    <text id="Usage" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#152935">
+                        <tspan x="15" y="28">用量</tspan>
+                    </text>
+                    <text id="Stores-usage-by-plan" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" fill="#000000">
+                        <tspan x="15" y="52">依方案儲存</tspan>
+                        <tspan x="15" y="70">用量</tspan>
+                    </text>
+                </g>
+                <g id="billing" transform="translate(1151.000000, 523.000000)">
+                    <g id="Comment-Up" fill="#C8F08F">
+                        <rect id="Combined-Shape" x="0" y="0" width="126" height="87" rx="6"></rect>
+                    </g>
+                    <text id="Billing" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#152935">
+                        <tspan x="16" y="28">計費</tspan>
+                    </text>
+                    <text id="Card-is-charged" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" fill="#000000">
+                        <tspan x="16" y="52">向信用卡收費</tspan>
+                    </text>
+                </g>
+                <g id="Resource-Group" transform="translate(382.000000, 416.000000)">
+                    <g id="Sub-Page">
+                        <rect id="Mask" fill="#5AAAFA" x="0" y="0" width="432" height="193" rx="6"></rect>
+                        <g id="Base-Elements-/-Browser">
+                            <g id="Browser" transform="translate(0.000000, 0.000000)">
+                                <path d="M0,5.99884495 C0,2.68577437 2.68842315,0 6.00388767,0 L425.996112,0 C429.311968,0 432,2.68870147 432,5.99884495 L432,30 L0,30 L0,5.99884495 Z" id="Combined-Shape" fill="#CFD8DC"></path>
+                                <circle id="Oval" fill="#F9F9FA" cx="10.5" cy="15.75" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="20.5" cy="15.75" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="30.5" cy="15.75" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                    <path d="M138.5,71.5 L138.5,157.5" id="Line" stroke="#FAFAFA" stroke-linecap="square"></path>
+                    <text font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="21" y="103">資源</tspan>
+                        <tspan x="21" y="128">群組</tspan>
+                    </text>
+                    <text id="Service-Instance" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="18" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="171" y="89">服務實例</tspan>
+                    </text>
+                    <text id="•-Create-connection" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#FAFAFA">
+                        <tspan x="171" y="118">• 建立與應用程式的連線（連結）</tspan>
+                        <tspan x="171" y="142">• 產生服務金鑰</tspan>
+                    </text>
+                </g>
+                <g id="IAM" transform="translate(382.000000, 46.000000)">
+                    <g id="Sub-Page">
+                        <rect id="Mask" fill="#00B4A0" x="0" y="0" width="162" height="174" rx="6"></rect>
+                        <g id="Base-Elements-/-Browser">
+                            <g id="Browser" transform="translate(0.000000, 0.000000)">
+                                <path d="M0,5.9921751 C0,2.68278818 2.67665175,0 6.00627079,0 L155.993729,0 C159.310901,0 162,2.68757343 162,5.9921751 L162,27 L0,27 L0,5.9921751 Z" id="Combined-Shape" fill="#CFD8DC"></path>
+                                <circle id="Oval" fill="#F9F9FA" cx="10.5" cy="14.175" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="20.5" cy="14.175" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="30.5" cy="14.175" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                    <text font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="17" y="73">IAM </tspan>
+                    </text>
+                    <text id="Authorizes-user" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#FAFAFA">
+                        <tspan x="17" y="100">授權使用者</tspan>
+                    </text>
+                </g>
+                <g id="Resource-Controller" transform="translate(679.000000, 46.000000)">
+                    <g id="Sub-Page">
+                        <rect id="Mask" fill="#607D8B" x="0" y="0" width="162" height="174" rx="6"></rect>
+                        <g id="Base-Elements-/-Browser">
+                            <g id="Browser" transform="translate(0.000000, 0.000000)">
+                                <path d="M0,5.9921751 C0,2.68278818 2.67665175,0 6.00627079,0 L155.993729,0 C159.310901,0 162,2.68757343 162,5.9921751 L162,27 L0,27 L0,5.9921751 Z" id="Combined-Shape" fill="#CFD8DC"></path>
+                                <circle id="Oval" fill="#F9F9FA" cx="10.5" cy="14.175" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="20.5" cy="14.175" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="30.5" cy="14.175" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                    <text id="IBM-Cloud-provisioni" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FFFFFF">
+                        <tspan x="25" y="58">IBM Cloud </tspan>
+                        <tspan x="25" y="83">佈建層</tspan>
+                        <tspan x="25" y="108"></tspan>
+                    </text>
+                    <text id="Creates-the-service" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#FFFFFF">
+                        <tspan x="25" y="137">建立服務實例</tspan>
+                        <tspan x="25" y="157"></tspan>
+                    </text>
+                </g>
+                <g id="Open-Service" transform="translate(975.000000, 0.000000)">
+                    <g id="Page">
+                        <rect id="Mask" fill="#BA8FF7" x="0" y="0" width="248" height="312" rx="6"></rect>
+                        <g id="Base-Elements-/-Browser">
+                            <g id="Browser" transform="translate(0.000000, 0.000000)">
+                                <path d="M0,6.00017566 C0,2.68637015 2.67969716,0 6.00748919,0 L241.992511,0 C245.310355,0 248,2.68697795 248,6.00017566 L248,32 L0,32 L0,6.00017566 Z" id="Combined-Shape" fill="#CFD8DC"></path>
+                                <circle id="Oval" fill="#F9F9FA" cx="10.5" cy="16.8" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="20.5" cy="16.8" r="3.5"></circle>
+                                <circle id="Oval" fill="#F9F9FA" cx="30.5" cy="16.8" r="3.5"></circle>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="external" transform="translate(136.000000, 224.000000)">
+                        <rect id="Rectangle-8" fill="#FFFFFF" x="5" y="0" width="70.8710167" height="62.106383" rx="5"></rect>
+                        <text id="Free-Plan" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" letter-spacing="0.2333334" fill="#152935">
+                            <tspan x="25.2667316" y="27">免費</tspan>
+                            <tspan x="25.6768879" y="44">方案</tspan>
+                        </text>
+                    </g>
+                    <g id="external" transform="translate(44.000000, 224.000000)">
+                        <rect id="Rectangle-8" fill="#FFFFFF" x="5" y="0" width="70.8710167" height="62.106383" rx="5"></rect>
+                        <text id="Metered-Plan" font-family=".AppleSystemUIFont" font-size="14" font-weight="normal" letter-spacing="0.2333334" fill="#152935">
+                            <tspan x="25.6768879" y="27">計量</tspan>
+                            <tspan x="25.6768879" y="44">方案</tspan>
+                        </text>
+                    </g>
+                    <text id="Open-Service-Broker" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#FAFAFA">
+                        <tspan x="26" y="89">Open Service Broker</tspan>
+                    </text>
+                    <text id="Provisioning-details" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#FAFAFA">
+                        <tspan x="26" y="121">佈建詳細資料（服務 ID、方案</tspan>
+                        <tspan x="26" y="141">ID、可連結、方案詳細資料）</tspan>
+                        <tspan x="26" y="171">管理有效的 HTTPS 公用端點</tspan>
+                        <tspan x="26" y="191"></tspan>
+                    </text>
+                </g>
+                <g id="Path-2-Copy-3" transform="translate(1060.000000, 325.500000) rotate(-90.000000) translate(-1060.000000, -325.500000) translate(1018.500000, 317.500000)">
+                    <g id="arrow-down">
+                        <g id="Group">
+                            <path d="M3,8 L81,8" id="Path-2" stroke="#152935" stroke-width="2"></path>
+                            <polygon id="Triangle" fill="#152935" points="73 16 73 0 83 8"></polygon>
+                            <polygon id="Triangle" fill="#152935" transform="translate(5.000000, 8.000000) scale(-1, -1) translate(-5.000000, -8.000000) " points="0 16 0 0 10 8"></polygon>
+                        </g>
+                    </g>
+                </g>
+                <g id="Path-2" transform="translate(786.000000, 536.000000)">
+                    <path d="M138,55 L19.9926431,55 C8.95101122,55 0,46.0408909 0,35.0076135 L0,19.9923865 C0,8.95089633 8.94823541,0 19.9926431,0 L138,0" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="130 8 130 -8 140 1.77635684e-15"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(759.500000, 348.000000) scale(-1, -1) rotate(90.000000) translate(-759.500000, -348.000000) translate(640.500000, 320.500000)">
+                    <path d="M238,55 L20.0099356,55 C8.95875331,55 0,46.0408909 0,35.0076135 L0,19.9923865 C0,8.95089633 8.94929355,0 20.0099356,0 L238,0" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="230 8 230 -8 240 1.77635684e-15"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(1051.000000, 508.500000) scale(-1, 1) rotate(90.000000) translate(-1051.000000, -508.500000) translate(1015.500000, 499.500000)">
+                    <path d="M0,9 L69,9" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="61 17 61 1 71 9"></polygon>
+                </g>
+                <g id="Path-2" transform="translate(916.500000, 116.500000) scale(-1, -1) translate(-916.500000, -116.500000) translate(847.000000, 89.000000)">
+                    <path d="M139,55 L20.0077834,55 C8.95778977,55 0,46.0408909 0,35.0076135 L0,19.9923865 C0,8.95089633 8.95973297,0 20.0077834,0 L139,0" stroke="#152935" stroke-width="2"></path>
+                    <polygon id="Triangle" fill="#152935" fill-rule="evenodd" points="131 8 131 -8 141 1.77635684e-15"></polygon>
+                </g>
+                <path d="M116.638531,479.540525 C124.417162,479.027988 132.215922,478.729138 139.969003,477.956462 C152.637633,476.692928 165.074771,474.220056 176.952918,469.464771 C182.961672,467.059256 188.786935,464.265081 193.261176,459.392114 C197.692061,454.566375 197.665738,450.003098 193.275112,445.156454 C189.740005,441.25359 185.240214,438.719554 180.512027,436.611342 C164.68069,429.550417 147.857573,426.917281 130.740251,425.771429 C117.072871,424.855522 103.420976,425.198503 89.8194054,426.916507 C77.5696303,428.463407 65.5467029,430.959505 54.1276704,435.820859 C48.7057784,438.129596 43.5161537,440.850994 39.4623158,445.288847 C35.3349267,449.807993 35.2528589,454.535406 39.3446337,459.08707 C40.7119137,460.607646 42.2967506,461.98654 43.962881,463.175748 C49.9050517,467.419271 56.6222207,470.050859 63.5461076,472.163717 C80.8430502,477.441603 98.6215602,479.170445 116.638531,479.540525 M27.0065971,524.756766 C27.0065971,500.627295 26.9841446,476.498598 27.0220816,452.369901 C27.0321465,446.10875 30.3411807,441.385982 34.6907722,437.341435 C42.1302924,430.422968 51.2204585,426.47907 60.7387707,423.447982 C74.084073,419.198266 87.8397141,417.253415 101.783492,416.448996 C114.875623,415.694127 127.953043,415.845875 140.992527,417.250318 C157.157554,418.992322 172.96876,422.148834 187.511787,429.864752 C193.370342,432.973262 198.727973,436.760767 202.506187,442.379312 C204.705758,445.649635 205.900386,449.174678 205.894192,453.237806 C205.829158,501.173123 205.846965,549.107665 205.870966,597.044529 C205.872514,599.228616 205.282555,601.013977 204.175415,602.984377 C200.095253,610.248149 193.774487,614.83775 186.664012,618.561768 C175.576347,624.369224 163.60297,627.365471 151.34313,629.369938 C139.09413,631.37363 126.740608,632.13237 114.351473,631.981396 C95.920292,631.756097 77.6656341,630.033448 60.0094515,624.290253 C51.0710333,621.382267 42.4090131,617.758898 35.4719644,611.223671 C32.4269406,608.355171 30.0957516,604.700058 27.6329445,601.264825 C27.0344692,600.429438 27.0329207,599.048222 27.0313723,597.91708 C26.9996291,573.530567 27.0065971,549.143279 27.0065971,524.756766" id="Fill-1" fill="#EFC100"></path>
+                <text id="IBM-Cloud-Catalog" font-family="IBMPlexSans-SemiBold, IBM Plex Sans" font-size="20" font-weight="500" line-spacing="25" fill="#152935">
+                    <tspan x="52" y="513">IBM Cloud </tspan>
+                    <tspan x="52" y="538">型錄</tspan>
+                </text>
+                <text id="Holds-all-catalog-re" font-family="IBMPlexSans, IBM Plex Sans" font-size="14" font-weight="normal" line-spacing="20" fill="#152935">
+                    <tspan x="52" y="563">存放所有型錄</tspan>
+                    <tspan x="52" y="583">呈現 meta 資料</tspan>
+                    <tspan x="52" y="603">以顯示使用者介面</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
