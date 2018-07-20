@@ -19,12 +19,12 @@ lastupdated: "2018-07-20"
 # Overview: Developing an integrated billing service
 {: #overview}
 
-This topic introduces you to the steps that are required to develop and publish your third-party integrated billing service in {{site.data.keyword.Bluemix}. 
+This topic introduces you to the steps that are required to develop and publish your third-party integrated billing service in {{site.data.keyword.Bluemix}}. 
 {:shortdesc}
 
 After you're approved to deliver your offering in the {{site.data.keyword.Bluemix_notm}} catalog, you start developing your offering in the resource management console, a guided UI experience. You design your catalog metadata, set up the service pricing plans, and integrate with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
-Next, outside of resource management console, you perform code development to build and host a new open service broker (starter broker samples and API docs are provided), and you use IAM to develop an authentication flow. After you complete these steps, you return to the resource management console to deploy your service to the catalog in a limited visibility mode that allows you to test and validate multiple deliverable requirements. When you are ready, and your offering meets all requirements, your service becomes fully visible in the {{site.data.keyword.Bluemix_notm}} catalog!
+Next, outside of the resource management console, you perform code development to build and host a new open service broker (starter broker samples and API docs are provided), and you use IAM to develop an authentication flow. After you complete these steps, you return to the resource management console to deploy your service to the catalog in a limited visibility mode that allows you to test and validate multiple deliverable requirements. When you are ready, and your offering meets all requirements, your service becomes fully visible in the {{site.data.keyword.Bluemix_notm}} catalog!
 
 
 ## How the process works
