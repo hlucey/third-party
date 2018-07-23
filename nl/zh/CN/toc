@@ -1,0 +1,34 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html"}
+开发第三方 Integrated Billing 服务
+
+    {: .navgroup id="learn"}
+    index.md
+    platform.md
+    offering-types.md
+    checklist.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    integrated-billing-service.md
+
+    {: .topicgroup}
+    开发和发布 Integrated Billing 服务
+        cis1-docs-marketing.md
+        cis2-rmc-define.md
+        cis3-broker.md
+        cis5-iam.md
+        cis4-rmc-publish.md
+        cis6-ga.md
+
+    {: .topicgroup}
+    计量和提交使用量
+        submitusage.md
+        metering.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    faq.md
+    {: .navgroup-end}
