@@ -55,7 +55,7 @@ Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo
 
 1. Esegui l'accesso a {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") con il tuo ID IBM.
 2. Assicurati di essere nell'account corretto (lo stesso account che hai utilizzato per creare il servizio)
-3. Fai clic sul link **Catalog** nell'intestazione e cerca la tua offerta. Potresti aver bisogno di aprire il catalogo dei servizi sperimentale?
+3. Fai clic sul link **Catalog** nell'intestazione e cerca la tua offerta.
 4. Utilizza quindi l'elenco di controllo qui di seguito per convalidare il tuo servizio.
 
 ### Elenco di controllo - verifica il tuo servizio
