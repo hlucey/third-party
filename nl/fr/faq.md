@@ -1,0 +1,36 @@
+---
+
+copyright:
+  years: 2015, 2018
+lastupdated: "2018-03-15"
+
+---
+
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:new_window: target="_blank"}
+
+# Foire aux questions
+{: #3p-faqs}
+
+Consultez la section Foire aux questions suivante pour plus d'informations sur les questions fréquemment posées.
+
+## Quelles sont les différentes options de mesure pour les plans ?
+{: #metering}
+
+{{site.data.keyword.Bluemix}} prend en charge plusieurs modèles pour l'agrégation de l'utilisation d'offre. Les fournisseurs d'offres prennent différentes mesures sur les instances mises à disposition et soumettent ces mesures au service approprié. Le service d'évaluation place l'utilisation soumise à différents emplacements (instance, groupe de ressources et compte) en fonction du modèle choisi par les fournisseurs d'offre. Les modèles d'agrégation et d'évaluation de toutes les mesures d'un plan sont disponibles dans les documents permettant de définir la mesure et l'évaluation du plan.
+
+**Remarque :** vous devez automatiser la soumission d'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
+
+Pour plus d'informations sur la mesure, voir [Intégration de mesure](/docs/third-party/metering.html#meteringintera).
+
+Pour plus d'informations sur l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
+
+## J'ai perdu ma clé d'API {{site.data.keyword.Bluemix_notm}} Identity and Access Management. Comment puis-je en générer une autre ?
+{: #iam-creds}
+
+Une clé d'API vous est octroyée lorsque vous **activez IAM**. Il est primordial de sauvegarder cette clé. Cette valeur ne s'affichera plus. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle : [Gestion des clés d'API d'ID de service](/docs/iam/serviceid_keys.html#serviceidapikeys)
+
+
