@@ -55,7 +55,7 @@ Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede
 
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con su IBMid.
 2. Asegúrese de que está en la cuenta correcta (la misma cuenta que ha utilizado para crear el servicio)
-3. Pulse el enlace **Catálogo** en la cabecera y busque la oferta. Es posible que tenga que abrir el catálogo de servicios experimentales.
+3. Pulse el enlace **Catálogo** en la cabecera y busque la oferta.
 4. A continuación, utilice la lista de comprobación siguiente para validar el servicio.
 
 ### Lista de comprobación - Probar el servicio
