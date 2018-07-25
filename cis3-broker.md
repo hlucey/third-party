@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Next steps
 
-You have some serious skills! You just built and hosted a service broker that meets the OSB specification. See [Step 4: Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
+You have some serious skills! You just built and hosted a service broker that meets the OSB specification. See [Step 4: Developing an authentication flow](/docs/third-party/cis5-iam.html).
