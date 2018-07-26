@@ -55,7 +55,7 @@ Como a implementação foi no modo de visibilidade limitada, somente você pode 
 
 1. Efetue login no {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com seu IBMid.
 2. Assegure-se de que você esteja na conta correta (a mesma conta que usou para criar o serviço)
-3. Clique no link **Catálogo** no cabeçalho e procure sua oferta. Pode ser necessário abrir o catálogo de serviço experimental?
+3. Clique no link **Catálogo** no cabeçalho e procure sua oferta.
 4. Em seguida, use a lista de verificação abaixo para validar seu serviço.
 
 ### Lista de verificação - Testar seu serviço
