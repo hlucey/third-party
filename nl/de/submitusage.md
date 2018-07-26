@@ -15,7 +15,7 @@ lastupdated: "2018-06-21"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# Nutzungsdaten für nutzungsabhängige Pläne übermitteln
+# Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln
 {: #submitusage}
 
 Sie müssen die Nutzungsdaten stündlich für alle aktiven Serviceinstanzen übermitteln. Werden die Nutzungsdaten nicht gemeldet, dann kann dies zu Umsatzeinbußen für IBM führen, die ihrerseits Umsatzeinbußen in Bezug auf die Anteile der Angebotsprovider zur Folge haben können.
@@ -26,8 +26,8 @@ Sie müssen die Nutzungsdaten stündlich für alle aktiven Serviceinstanzen übe
 
 In den folgenden Schritten wird der Prozess zur Übermittlung von Nutzungsdaten beschrieben:
 
-1. Übermitteln Sie über das REST-API-Tool für die Nutzungsdatenübermittlung eine Testmeldung für die Nutzungsdaten, um zu überprüfen, ob Ihre nutzungsabhängigen Pläne korrekt konfiguriert wurden.
-2. Automatisieren Sie die fortlaufende stündliche Übermittlung an das REST-API-Tool für die Nutzungsdatenübermittlung für jeden nutzungsabhängigen Plan. Sie können diese automatisierten Übermittlungen an einer beliebigen Position hosten, solange diese Position die SSO-Standardfunktionen unterstützt.
+1. Übermitteln Sie über das REST-API-Tool für die Nutzungsdatenübermittlung eine Testmeldung für die Nutzungsdaten, um zu überprüfen, ob Ihre Pläne mit Nutzungsmessung korrekt konfiguriert wurden.
+2. Automatisieren Sie die fortlaufende stündliche Übermittlung an das REST-API-Tool für die Nutzungsdatenübermittlung für jeden Plan mit Nutzungsmessung. Sie können diese automatisierten Übermittlungen an einer beliebigen Position hosten, solange diese Position die SSO-Standardfunktionen unterstützt.
 2. Die Nutzungsdatensätze werden auf Basis des Messungsmodells aggregiert und die Gesamtmenge wird im Nutzungsdashboard an der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt.
 3. Die aggregierte Einheitenmenge aus dem Messungsprozess wird verwendet, die Kosten werden angewendet und der Betrag, den der Benutzer für die Serviceinstanz schuldet, wird berechnet.
 4. Am Monatsende wird der für den Benutzer generierte Betrag auf Basis der abschließenden berechneten Kosten ermittelt.
@@ -83,7 +83,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Verwenden Sie ein Wort für den Einheitennamen und verwenden Sie ein Unterstreichungszeichen (_) anstelle eines Leerzeichens, um Wörter voneinander zu trennen. Beispiel: Geben Sie **API_CALL** anstelle von **API CALL** an.  
   * Geben Sie alle Buchstaben des Namens in Großschreibung an.
   
-### Richtlinien für Ressourceneinheitenqualität
+### Richtlinien für Ressourceneinheitenquantität
 
   Bei der Angabe des Ressourcenmengentyps im Feld 'resources.unit.quantityType' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
   
@@ -134,23 +134,23 @@ Nutzungsdatensätze sind die kleinsten Entitäten, die zu den aggregierten Werte
 
 | Name | Beschreibung                                           |
 | ------ | ---------------------------------------------------- |
-| resource_instance_id | Die ID der Ressourceninstanz.     |
-| plan_id | Der Vertrag, anhand dessen der Nutzungsdatensatz aggregiert und bewertet wird. |
-| start  | Der Zeitpunkt, ab dem die Nutzung gemessen wird, angegeben in Millisekunden seit der Epoche. |
-| end  | Der Zeitpunkt, bis zu dem die Nutzung gemessen wird, angegeben in Millisekunden seit der Epoche. |
-| region  | Die Region des Angebotsproviders, in der die Nutzung gemessen wird. |
-| measured_usage  | Ein Array von Messpunkten mit Werten. |
+| resource_instance_id |  Die ID der Ressourceninstanz.  |
+| plan_id | Der Vertrag, anhand dessen der Nutzungsdatensatz aggregiert und bewertet wird.   |
+| start  | Der Zeitpunkt, ab dem die Nutzung gemessen wird, angegeben in Millisekunden seit der Epoche.  |
+| end  | Der Zeitpunkt, bis zu dem die Nutzung gemessen wird, angegeben in Millisekunden seit der Epoche.  |
+| region  | Die Region des Angebotsproviders, in der die Nutzung gemessen wird.  |
+| measured_usage  | Ein Array von Messpunkten mit Werten.  |
 | consumer_id | Optional. Dieses Feld ist nur erforderlich, wenn die Aggregation auf Konsumentenebene erforderlich ist. Nur Angebotsprovider kennen den Wert für 'consumer_id'. |
 {: caption="Tabelle 1. Felder des Nutzungsdatensatzes" caption-side="top"}
 
 Sie können mehrere Nutzungsdatensätze übermitteln, indem Sie einen API-Aufruf verwenden. Sie können maximal 100 Nutzungsdatensätze pro Aufruf übermitteln. Der Antworthauptteil umfasst den Annahmestatus der einzelnen Nutzungsdatensätze. Jeder Status ungleich '201' umfasst einen Fehlercode und gibt an, warum der Nutzungsdatensatz nicht akzeptiert wurde. In der folgenden Tabelle werden die Statuscodes und die erforderliche Aktion aufgeführt.
 
-| Statuscode  | Erforderliche Aktion                                  |
+| Statuscode | Erforderliche Aktion                                       |
 | ------ | ---------------------------------------------------- |
 | 500 |  Wiederholen Sie die Übermittlung des Nutzungsdatensatzes. Wenn das Problem bestehen bleibt, wenden Sie sich an das BSS-Messteam. |
-| 400 |  Der Nutzungsdatensatz weist nicht das richtige Format auf. Entweder ist die Schemaprüfung fehlgeschlagen, die Messungen in den Nutzungsdatensätzen sind falsch oder der Start- und der Endzeitpunkt liegen nicht innerhalb des Zeitraums zwischen der Bereitstellung und der Aufhebung der Bereitstellung. Aktualisieren Sie den Nutzungsdatensatz und übermitteln Sie ihn erneut. |
+| 400 |  Der Nutzungsdatensatz weist nicht das richtige Format auf. Entweder ist die Schemaprüfung fehlgeschlagen, die Messungen in den Nutzungsdatensätzen sind falsch oder der Start- und der Endzeitpunkt liegen nicht innerhalb des Zeitraums zwischen der Bereitstellung und der Aufhebung der Bereitstellung. Aktualisieren Sie den Nutzungsdatensatz und übermitteln Sie ihn erneut.   |
 | 424  | In den Metadaten der Ressourceninstanz sind Fehler aufgetreten. Aktualisieren Sie die Details der Ressourceninstanz und übermitteln Sie den Nutzungsdatensatz erneut.  |
-| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes.|
+| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes.  |
 | 409  | Der Nutzungsdatensatz ist ein Duplikat. Versuchen Sie nicht, ihn erneut zu übermitteln. |
 {: caption="Tabelle 2. Statuscodes und erforderliche Aktionen" caption-side="top"}
 {: #actions}
