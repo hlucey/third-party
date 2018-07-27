@@ -23,7 +23,7 @@ lastupdated: "2018-06-27"
 
 ## 开始之前
 
-此步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.md)。
+此步骤假定您已获准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.md)。
 {: tip}
 
 确保已开始执行步骤 1，并完成了步骤 2、3 和 4：
@@ -55,7 +55,7 @@ lastupdated: "2018-06-27"
 
 1. 使用 IBM 标识登录到 {{site.data.keyword.Bluemix_notm}}：[https://console.bluemix.net](https://console.bluemix.net){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 2. 请确保您使用的是正确的帐户（与用于创建服务的帐户相同）。
-3. 单击标题中的**目录**链接，然后搜索您的产品。您可能需要打开试验性服务目录？
+3. 单击标题中的**目录**链接，然后搜索您的产品。
 4. 接下来，使用下面的核对表来验证您的服务。
 
 ### 核对表 - 测试服务
