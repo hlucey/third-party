@@ -55,7 +55,7 @@ Etant donné que le déploiement a été effectué en mode de visibilité limit�
 
 1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} : [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec votre IBMid.
 2. Vérifiez que vous utilisez le compte approprié (même compte que celui utilisé pour la création du service)
-3. Cliquez sur le lien **Catalog** dans l'en-tête puis recherchez votre offre. Il peut être nécessaire d'ouvrir le catalogue de service expérimental. 
+3. Cliquez sur le lien **Catalog** dans l'en-tête puis recherchez votre offre.
 4. Utilisez ensuite la liste de contrôle pour valider votre service.
 
 ### Liste de contrôle - Test de votre service
