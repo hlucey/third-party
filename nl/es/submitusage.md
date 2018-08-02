@@ -83,7 +83,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Utilice una palabra para el nombre de la unidad y utilice un signo de subrayado (_), en lugar de un espacio, para separar palabras. Por ejemplo, especifique **LLAMADA_API** en lugar de **LLAMADA API**.  
   * Especifique en mayúsculas todas las letras del nombre.
   
-### Directrices sobre la calidad de la unidad del recurso
+### Directrices sobre la cantidad de unidades de recursos
 
   Debe seguir estas directrices cuando especifique del tipo de cantidad del recurso utilizando el campo resources.unit.quantityType en la definición del recurso:
   

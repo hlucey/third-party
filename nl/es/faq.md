@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-03-15"
+lastupdated: "2018-07-20"
 
 ---
 
@@ -15,8 +15,6 @@ lastupdated: "2018-03-15"
 # Preguntas más frecuentes
 {: #3p-faqs}
 
-Consulte las siguientes preguntas frecuentes para ver una explicación sobre las preguntas más comunes.
-
 ## ¿Cuáles son las distintas opciones de medición para los planes?
 {: #metering}
 
@@ -24,13 +22,11 @@ Consulte las siguientes preguntas frecuentes para ver una explicación sobre las
 
 **Nota:** Es necesario automatizar el envío de uso por hora utilizando la API de servicio de medición si ofrece un plan de medición.
 
-Para obtener más información sobre la medición, consulte: [Integración de mediciones](/docs/third-party/metering.html#meteringintera).
+Para obtener más información sobre la medición, consulte [Integración de mediciones](/docs/third-party/metering.html#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos de uso para planes de medición](/docs/third-party/submitusage.html#submitusage).
 
-Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos sobre uso para planes de medición](/docs/third-party/submitusage.html#submitusage)
-
-## He perdido mi clave de API de {{site.data.keyword.Bluemix_notm}} Identity and Access Management. ¿Cómo puedo generar otra?
+## ¿Cómo puedo generar una nueva clave de API de {{site.data.keyword.Bluemix_notm}} Identity and Access Management?
 {: #iam-creds}
 
-Se le proporciona una clave de API cuando **habilita IAM**. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva: [Gestión de claves de API de ID de servicio](/docs/iam/serviceid_keys.html#serviceidapikeys)
+Se le proporciona una clave de API cuando se habilita IAM. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva. Consulte [Gestionar claves de API de ID de servicio](/docs/iam/serviceid_keys.html#serviceidapikeys) para obtener más información. 
 
 
