@@ -83,7 +83,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Utilizza una parola per il nome di unità e utilizza un carattere di sottolineatura (_) invece di uno spazio per separare le parole. Ad esempio, specifica **API_CALL** invece di **API CALL**.  
   * Metti in maiuscole tutte le lettere del nome.
   
-### Linee guida per la qualità di unità risorsa
+### Linee guida per la quantità di unità risorsa
 
   Devi attenerti alle seguenti linee guida quando specifichi il tipo di quantità della risorsa utilizzando il campo resources.unit.quantityType nella definizione della risorsa:
   
@@ -138,7 +138,7 @@ I record di utilizzo sono le entità più piccole che contribuiscono ai valori a
 | plan_id | Il contratto in base al quale il record di utilizzo viene aggregato e valutato.   |
 | start  | L'ora da cui viene misurato l'utilizzo, specificato in millisecondi a partire dall'epoch.  |
 | end  | L'ora fino a cui viene misurato l'utilizzo, specificato in millisecondi a partire dall'epoch.  |
-| region  | La regione del provider di offerte in cui viene misurato l'utilizzo.  |
+| regione  | La regione del provider di offerte in cui viene misurato l'utilizzo.  |
 | measured_usage  | Un array di misure con i valori.  |
 | consumer_id | Facoltativo. Questo campo è obbligatorio solo se l'aggregazione è richiesta a un livello di consumatore. Solo i provider di offerte conoscono il valore consumer_id. |
 {: caption="Tabella 1. Campi di un record di utilizzo" caption-side="top"}
