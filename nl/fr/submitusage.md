@@ -83,7 +83,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Utilisez un mot comme nom d'unité et utilisez un trait de soulignement (_) et non un espace, pour séparer les mots. Par exemple, indiquez **API_CALL** et non **API CALL**.  
   * Utilisez des majuscules pour toutes les lettres du nom.
   
-### Instructions pour la qualité d'unité de ressource
+### Instructions concernant la quantité d'unités de ressource
 
   Vous devez suivre ces instructions lorsque vous spécifiez le type de quantité de ressource en utilisant la zone resources.unit.quantityType dans la définition de ressource :
   

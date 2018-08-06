@@ -83,7 +83,7 @@ A seguir estão as melhores práticas para enviar o uso:
   * Use uma palavra para o nome da unidade e use um sublinhado (_), em vez de um espaço, para separar as palavras. Por exemplo, especifique **API_CALL** em vez de **API CALL**.  
   * Altere para letras maiúsculas todas as letras do nome.
   
-### Diretrizes de qualidade da unidade de recurso
+### Diretrizes de quantidade da unidade de recurso
 
   Deve-se seguir estas diretrizes ao especificar o tipo de quantidade de recursos usando o campo resources.unit.quantityType na definição de recurso:
   
