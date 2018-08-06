@@ -30,7 +30,7 @@ lastupdated: "2018-06-27"
 1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
 2. [在資源管理主控台中定義供應項目](/docs/third-party/cis2-rmc-define.html)。
 3. [開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。
-3. [開發鑑別流程](/docs/third-party/cis-iam.html)。
+3. [開發鑑別流程](/docs/third-party/cis5-iam.html)。
 
 ## 將服務發佈至 {{site.data.keyword.Bluemix_notm}}
 

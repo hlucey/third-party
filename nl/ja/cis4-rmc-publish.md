@@ -30,7 +30,7 @@ lastupdated: "2018-06-27"
 1. [サービス文書とマーケティング発表を作成する](/docs/third-party/cis1-docs-marketing.html)。
 2. [リソース管理コンソールでオファリングを定義する](/docs/third-party/cis2-rmc-define.html)。
 3. [サービス・ブローカーを作成してホストする](/docs/third-party/cis3-broker.html)。
-3. [認証フローを作成する](/docs/third-party/cis-iam.html)。
+3. [認証フローを作成する](/docs/third-party/cis5-iam.html)。
 
 ## {{site.data.keyword.Bluemix_notm}} へのサービスの公開
 

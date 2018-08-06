@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -32,7 +32,7 @@ Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigun
 ## Vorbereitende Schritte
 
 Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2 und 3 abgeschlossen haben.
-1. [Servicedokumentation und Marketingankündigung verfassen](/docs/third-party/cis1-docs-marketing.html).
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
 2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
 
@@ -100,11 +100,15 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 ### POST <token_endpoint>
 
 #### Header:
+{: #headers1}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Mit Parametern:
+{: #parameters1}
+
   - client_id=*[client id]*
   - client_secret=*[client secret]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Antwort:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.
 ### POST /identity/token
 
 #### Header:
+{: #headers2}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Mit Parametern:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[Api key]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Antwort:
+{: #response2}
 
 ```
 {

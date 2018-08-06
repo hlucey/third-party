@@ -20,9 +20,9 @@ lastupdated: "2018-06-26"
 
 リソース管理コンソールからエクスポートしたメタデータを使用して、希望のプログラミング言語で新しいサービス・ブローカーを 1 つ以上作成します。
 
-サービス・ブローカーは、サービスのライフサイクルを管理します。{{site.data.keyword.Bluemix_notm}} プラットフォームは、サービス・ブローカーと対話して、サービス・インスタンス (サービス・オファリングのインスタンス化) とサービス・バインディング (アプリケーションとサービス・インスタンス間の関連を表すもの。多くの場合、サービス・インスタンスとの通信にアプリケーションが使用する資格情報が含まれる) をプロビジョンして管理します。有効なメタデータ値を指定すると、要求の実行時に正常な RESTful API 応答が作成されます。
+サービス・ブローカーは、サービスのライフサイクルを管理します。 {{site.data.keyword.Bluemix_notm}} プラットフォームは、サービス・ブローカーと対話して、サービス・インスタンス (サービス・オファリングのインスタンス化) とサービス・バインディング (アプリケーションとサービス・インスタンス間の関連を表すもの。多くの場合、サービス・インスタンスとの通信にアプリケーションが使用する資格情報が含まれる) をプロビジョンして管理します。 有効なメタデータ値を指定すると、要求の実行時に正常な RESTful API 応答が作成されます。
 
-リソース管理コンソールからエクスポートしたメタデータ、{{site.data.keyword.Bluemix_notm}} サービス・ブローカーの公開サンプル、およびリソース・ブローカー API 文書を組み合わせて使用して、ブローカーの作成を開始できます。ブローカーを開発するには、以下を行います。
+リソース管理コンソールからエクスポートしたメタデータ、{{site.data.keyword.Bluemix_notm}} サービス・ブローカーの公開サンプル、およびリソース・ブローカー API 文書を組み合わせて使用して、ブローカーの作成を開始できます。 ブローカーを開発するには、以下を行います。
 
 1. プラットフォーム・プロビジョニング・シナリオを参照する
 2. OSB 仕様を読み通す
@@ -36,7 +36,7 @@ lastupdated: "2018-06-26"
 
 ## 始める前に
 
-このステップでは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.md)を参照してください。
+このステップでは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.md)を参照してください。
 {: tip}
 
 ステップ 1 を開始し、ステップ 2 を完了したことを確認します
@@ -46,22 +46,22 @@ lastupdated: "2018-06-26"
 
 ## {{site.data.keyword.Bluemix_notm}} プラットフォーム・プロビジョニング・シナリオの参照
 
-{{site.data.keyword.Bluemix_notm}} プラットフォームと動作する Open Service Broker をこれから開発します。[プロビジョニング・シナリオ](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)を参照して、リソース作成の仕組みを把握してください。
+{{site.data.keyword.Bluemix_notm}} プラットフォームと動作する Open Service Broker をこれから開発します。 [プロビジョニング・シナリオ](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)を参照して、リソース作成の仕組みを把握してください。
 
 ## OSB 仕様の熟知
 
-{{site.data.keyword.Bluemix_notm}} は、Open Service Broker API (OSB) `バージョン 2.12` 仕様を使用します。[Open Broker API 仕様](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を読んで熟知してください。詳細については、README ファイルをガイドとして使用してください。
+{{site.data.keyword.Bluemix_notm}} は、Open Service Broker API (OSB) `バージョン 2.12` 仕様を使用します。 [Open Broker API 仕様](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を読んで熟知してください。詳細については、README ファイルをガイドとして使用してください。
 
 ## {{site.data.keyword.Bluemix_notm}} ブローカー・サンプルの参照
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン")
 
-**注:** サンプルでは、すべての言語が示されているわけではありません。例えば、Python のサンプル・ブローカーが必要な場合には、Google で検索すれば Cloud Foundry のサンプルを見つけられるはずです。OSB の要件を満たすように、このサンプルを調整する必要がある場合があります。
+**注:** サンプルでは、すべての言語が示されているわけではありません。 例えば、Python のサンプル・ブローカーが必要な場合には、Google で検索すれば Cloud Foundry のサンプルを見つけられるはずです。 OSB の要件を満たすように、このサンプルを調整する必要がある場合があります。
 
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文書の確認
 
-サービス・ブローカーは、[{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を理解した上で開発する必要があります。Broker API 自体と、それがブローカーとどう相互作用するかについて熟知してください。
+サービス・ブローカーは、[{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を理解した上で開発する必要があります。 Broker API 自体と、それがブローカーとどう相互作用するかについて熟知してください。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker は、Open Service Broker 2.12 仕様を拡張します。
 {: tip}
@@ -72,7 +72,7 @@ lastupdated: "2018-06-26"
 
 <dl>
   <dt>カタログ (GET)</dt>
-  <dd>ブローカーに含まれるカタログ・メタデータを戻します。その他に、戻されないカタログ・メタデータ値が多くあります。そうした値は、リソース管理コンソール内でのみ追加され、{{site.data.keyword.Bluemix_notm}} カタログ内に保管されます。</dd>
+  <dd>ブローカーに含まれるカタログ・メタデータを戻します。 その他に、戻されないカタログ・メタデータ値が多くあります。そうした値は、リソース管理コンソール内でのみ追加され、{{site.data.keyword.Bluemix_notm}} カタログ内に保管されます。</dd>
   <dt>リソース・インスタンス (PUT)</dt>
   <dd>サービス・インスタンスをプロビジョンします</dd>
   <dt>リソース・インスタンス (DELETE)</dt>
@@ -81,7 +81,7 @@ lastupdated: "2018-06-26"
   <dd>サービス・インスタンスを更新します。</dd>
 </dl>
 
-**カタログ (GET) に関する注**: このエンドポイントは、ブローカーがサポートするサービスとプランについて、ブローカーと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の契約を定義します。このエンドポイントは、ブローカー内に保管されたカタログ・メタデータを戻します。これらの値は、サービスと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の最小限のプロビジョニング契約を定義します。プロビジョニングに必要でないその他のカタログ・メタデータはすべて、{{site.data.keyword.Bluemix_notm}} カタログ内に保管され、ダッシュボードのレンダリングに使用されるカタログ表示値 (リンク、アイコン、国際化対応翻訳メタデータなど) への更新は、ブローカー内に収容されるのではなく、リソース管理コンソールで更新される必要があります。ブローカーに保管されたメタデータは、{{site.data.keyword.Bluemix_notm}} コンソールでも {{site.data.keyword.Bluemix_notm}} CLI でも表示されません。コンソールと CLI は、リソース管理コンソール内で設定され、{{site.data.keyword.Bluemix_notm}} カタログに保管されたものを戻します。カタログ (GET) が戻す必要がある最小限の必須値は、以下のとおりです。
+**カタログ (GET) に関する注**: このエンドポイントは、ブローカーがサポートするサービスとプランについて、ブローカーと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の契約を定義します。 このエンドポイントは、ブローカー内に保管されたカタログ・メタデータを戻します。 これらの値は、サービスと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の最小限のプロビジョニング契約を定義します。 プロビジョニングに必要でないその他のカタログ・メタデータはすべて、{{site.data.keyword.Bluemix_notm}} カタログ内に保管され、ダッシュボードのレンダリングに使用されるカタログ表示値 (リンク、アイコン、国際化対応翻訳メタデータなど) への更新は、ブローカー内に収容されるのではなく、リソース管理コンソールで更新される必要があります。 ブローカーに保管されたメタデータは、{{site.data.keyword.Bluemix_notm}} コンソールでも {{site.data.keyword.Bluemix_notm}} CLI でも表示されません。コンソールと CLI は、リソース管理コンソール内で設定され、{{site.data.keyword.Bluemix_notm}} カタログに保管されたものを戻します。 カタログ (GET) が戻す必要がある最小限の必須値は、以下のとおりです。
 
 ```
 {
@@ -105,7 +105,7 @@ lastupdated: "2018-06-26"
 
 ### バインド可能なサービスに必要なエンドポイント・ロジック
 
-{{site.data.keyword.Bluemix_notm}} 内のアプリケーションにバインドできるサービスは、API エンドポイントと資格情報をサービス・コンシューマーに戻せなければなりません。バインド可能なサービスは、Open Service Broker 仕様のバインド可能な操作を使用して、以下のエンドポイント/パスを実装する必要があります。
+{{site.data.keyword.Bluemix_notm}} 内のアプリケーションにバインドできるサービスは、API エンドポイントと資格情報をサービス・コンシューマーに戻せなければなりません。 バインド可能なサービスは、Open Service Broker 仕様のバインド可能な操作を使用して、以下のエンドポイント/パスを実装する必要があります。
 
 <dl>
   <dt>バインディングと資格情報 (PUT)</dt>
@@ -116,7 +116,7 @@ lastupdated: "2018-06-26"
 
 ### 必要な {{site.data.keyword.Bluemix_notm}} 拡張エンドポイント
 
-OSB 仕様では、インスタンスを削除はせずに無効化した状態を*サポートしていません*。請求の期限切れや (アカウント取り消しには至らないが) アカウント中断になる状況が発生した顧客に {{site.data.keyword.Bluemix_notm}} が対応するために、サービス・インスタンスの無効化と再有効化を許可する拡張 API エンドポイントが {{site.data.keyword.Bluemix_notm}} では定義されています。以下のエンドポイント拡張が**必要**です。
+OSB 仕様では、インスタンスを削除はせずに無効化した状態を*サポートしていません*。 請求の期限切れや (アカウント取り消しには至らないが) アカウント中断になる状況が発生した顧客に {{site.data.keyword.Bluemix_notm}} が対応するために、サービス・インスタンスの無効化と再有効化を許可する拡張 API エンドポイントが {{site.data.keyword.Bluemix_notm}} では定義されています。 以下のエンドポイント拡張が**必要**です。
 
 <dl>
   <dt>インスタンスの有効化と無効化 (GET)</dt>
@@ -129,7 +129,7 @@ OSB 仕様では、インスタンスを削除はせずに無効化した状態�
 
 ## エクスポートされたメタデータを使用してブローカー開発をガイドする方法の理解
 
-リソース管理コンソールからエクスポートしたメタデータは、ブローカー開発のガイドとして使用できます。リソース管理コンソールに入力したすべての値が、サービスのプロビジョンに必要であるわけではありません。リソース管理コンソールからエクスポートしたメタデータは、サービスと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の最小限のプロビジョニング契約を定義します。エクスポートした JSON は、以下の値を提供する必要があります。
+リソース管理コンソールからエクスポートしたメタデータは、ブローカー開発のガイドとして使用できます。 リソース管理コンソールに入力したすべての値が、サービスのプロビジョンに必要であるわけではありません。 リソース管理コンソールからエクスポートしたメタデータは、サービスと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の最小限のプロビジョニング契約を定義します。 エクスポートした JSON は、以下の値を提供する必要があります。
 
 ```
 {
@@ -180,7 +180,7 @@ services :
 ```
 
 
-OSB サービス配列は、リソース管理コンソールに追加したオファリング・メタデータと正確に同じでなければなりません。OSB とリソース管理コンソールで 1 対 1 で一致するように、リソース管理コンソールからダウンロードした `catalog.json` 内のサービス配列を、ブローカー内の実際のサービス配列と比較することが重要です。サービスとプランの ID と名前はすべて一致しなければなりません。
+OSB サービス配列は、リソース管理コンソールに追加したオファリング・メタデータと正確に同じでなければなりません。 OSB とリソース管理コンソールで 1 対 1 で一致するように、リソース管理コンソールからダウンロードした `catalog.json` 内のサービス配列を、ブローカー内の実際のサービス配列と比較することが重要です。 サービスとプランの ID と名前はすべて一致しなければなりません。
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} プラットフォームで提供されるブローカー情報
@@ -189,7 +189,7 @@ OSB サービス配列は、リソース管理コンソールに追加したオ�
 
 ### X-Broker-API-Originating-Identity
 
-**ユーザー ID ヘッダー**は、API originating identity ヘッダーによって提供されます。この要求ヘッダーには、ユーザーの {{site.data.keyword.Bluemix_notm}} IAM ID が含まれます。IAM ID は、Base64 でエンコードされます。{{site.data.keyword.Bluemix_notm}} は、単一認証レルム `IBMid` をサポートします。`IBMid` レルムは、IBMid Unique ID (IUI) を使用して、{{site.data.keyword.Bluemix_notm}} でユーザーの ID を識別します。この IUI は、サービス・プロバイダーに内部が見えないストリングです。
+**ユーザー ID ヘッダー**は、API originating identity ヘッダーによって提供されます。 この要求ヘッダーには、ユーザーの {{site.data.keyword.Bluemix_notm}} IAM ID が含まれます。 IAM ID は、Base64 でエンコードされます。 {{site.data.keyword.Bluemix_notm}} は、単一認証レルム `IBMid` をサポートします。 `IBMid` レルムは、IBMid Unique ID (IUI) を使用して、{{site.data.keyword.Bluemix_notm}} でユーザーの ID を識別します。 この IUI は、サービス・プロバイダーに内部が見えないストリングです。
 
 例:
 
@@ -201,7 +201,7 @@ Decoded:
 
 ### API ヘッダー・バージョン
 
-**API バージョン・ヘッダー**は、[2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") になります。例えば、`X-Broker-Api-Version: 2.12` などです。
+**API バージョン・ヘッダー**は、[2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") になります。 例えば、`X-Broker-Api-Version: 2.12` などです。
 
 ### リソース・インスタンス (PUT) の body.context とリソース・インスタンス (PATCH) の body.context
 
@@ -211,7 +211,7 @@ Decoded:
 
 ### 非同期操作と同期操作の使用に関する推奨
 
-OSB API は、操作の同期モードと非同期モードの両方をサポートします。操作が 10 秒未満で完了する場合は、同期応答が推奨されます。それ以外の場合は、非同期モードの操作を使用してください。これに関する詳細は、OSB の仕様に記載されています。
+OSB API は、操作の同期モードと非同期モードの両方をサポートします。 操作が 10 秒未満で完了する場合は、同期応答が推奨されます。  それ以外の場合は、非同期モードの操作を使用してください。  これに関する詳細は、OSB の仕様に記載されています。
 
 インスタンスをプロビジョンしようとして、非同期操作が 10 秒未満で完了すると、プラットフォームはタイムアウトになります。
 {: tip}
@@ -220,18 +220,18 @@ OSB API は、操作の同期モードと非同期モードの両方をサポー
 
 ユーザーが、待ち時間、可用性、データ常駐のためにクラウド・サービスのロケーションを理解することは重要です
 
-{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスをプロビジョンする際に、ユーザーが指定する必須パラメーターの 1 つとして、サービス・インスタンスをプロビジョンするロケーションがあります。サービスによっては、複数ロケーションでのプロビジョニングをサポートするものもあります。例えば、データベース・サービスが、すべての {{site.data.keyword.Bluemix_notm}} 地域でのプロビジョンをサポートする場合も、一部の地域をサポートする場合もあります。
+{{site.data.keyword.Bluemix_notm}} でサービス・インスタンスをプロビジョンする際に、ユーザーが指定する必須パラメーターの 1 つとして、サービス・インスタンスをプロビジョンするロケーションがあります。 サービスによっては、複数ロケーションでのプロビジョニングをサポートするものもあります。 例えば、データベース・サービスが、すべての {{site.data.keyword.Bluemix_notm}} 地域でのプロビジョンをサポートする場合も、一部の地域をサポートする場合もあります。
 
 サード・パーティーの API ベースのサービスが別のクラウドで実装されていて {{site.data.keyword.Bluemix_notm}} に公開される場合、ロケーションは、そのもう一方のクラウドにおけるサービスのロケーションを示す必要があります。
 
-{{site.data.keyword.Bluemix_notm}} にオンボードする際には、少なくとも 1 つの OSB ブローカーを実装する必要がありますが、そのサービスにサポートするデプロイメント戦略とロケーションによっては、複数のブローカーを用意するオプションもあります。リソース管理コンソール・ツール内で、サービス/プラン/ロケーションのタプルと、そのタプルの操作を処理するブローカーとのマッピングを設定しました。一般的な選択肢としては、サービスのすべてのロケーションを処理する単一ブローカーを定義するか、ロケーションごとにブローカーを定義します。この選択は、サービス・プロバイダーに委ねられます。
+{{site.data.keyword.Bluemix_notm}} にオンボードする際には、少なくとも 1 つの OSB ブローカーを実装する必要がありますが、そのサービスにサポートするデプロイメント戦略とロケーションによっては、複数のブローカーを用意するオプションもあります。  リソース管理コンソール・ツール内で、サービス/プラン/ロケーションのタプルと、そのタプルの操作を処理するブローカーとのマッピングを設定しました。 一般的な選択肢としては、サービスのすべてのロケーションを処理する単一ブローカーを定義するか、ロケーションごとにブローカーを定義します。この選択は、サービス・プロバイダーに委ねられます。
 
-選択可能なロケーションのリストについては、[IBM グローバル・カタログ・ロケーション](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。サービスでグローバル・カタログに追加のロケーションを定義する必要がある場合は、{{site.data.keyword.Bluemix_notm}} オンボード・チームに相談してください。
+選択可能なロケーションのリストについては、[IBM グローバル・カタログ・ロケーション](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。 サービスでグローバル・カタログに追加のロケーションを定義する必要がある場合は、{{site.data.keyword.Bluemix_notm}} オンボード・チームに相談してください。
 
 
 ## ブローカーのホスト
 
-ブローカーは、REST API 呼び出しに応答できるアプリケーションの一部としてホストされなければなりません。また、ホストされるロケーションは、{{site.data.keyword.Bluemix_notm}} のセキュリティー・ガイドラインに適合する必要があります。{{site.data.keyword.Bluemix_notm}} でホストすることも、あるいは、{{site.data.keyword.Bluemix_notm}} からパブリックでアクセス可能である限り、外部でホストすることも可能です。
+ブローカーは、REST API 呼び出しに応答できるアプリケーションの一部としてホストされなければなりません。 また、ホストされるロケーションは、{{site.data.keyword.Bluemix_notm}} のセキュリティー・ガイドラインに適合する必要があります。 {{site.data.keyword.Bluemix_notm}} でホストすることも、あるいは、{{site.data.keyword.Bluemix_notm}} からパブリックでアクセス可能である限り、外部でホストすることも可能です。
 
 IBM 外部でブローカーをホストするには、以下のセキュリティー・ガイドラインに適合することを確認してください。
 - Transport Layer Security (TLS) プロトコル バージョン 1.2 に従う必要があります。
@@ -239,12 +239,12 @@ IBM 外部でブローカーをホストするには、以下のセキュリテ�
 
 {{site.data.keyword.Bluemix_notm}} でホストする場合は、以下に、コンテナー (Kubernetes) を使用したアプリケーションの作成に関する情報があります。[Internal Adopters - Usage information](/docs/containers/cs_internal.html#cs_internal)
 
-次のステップを完了するには、サービス・ブローカーのホストされるロケーションが必要になります。アプリケーションに関連付けられた URL と資格情報を準備してから、次のステップに進んでください。
+次のステップを完了するには、サービス・ブローカーのホストされるロケーションが必要になります。 アプリケーションに関連付けられた URL と資格情報を準備してから、次のステップに進んでください。
 {: tip}
 
 ## サービスのブローカーをテストする方法
 
-有効化するさまざまなエンドポイントに対して curl コマンドを実行することで、ブローカーを検証してください。以下のサンプルの README に、OSB エンドポイントに対する curl 実行に関する優れたガイダンスがあります。https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+有効化するさまざまなエンドポイントに対して curl コマンドを実行することで、ブローカーを検証してください。 以下のサンプルの README に、OSB エンドポイントに対する curl 実行に関する優れたガイダンスがあります。https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 
 ### サービスのブローカーに対する curl 実行方法
 
@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## 次のステップ
 
-重要なスキルをいくつか習得されました。これで、OSB 仕様に適合するサービス・ブローカーを作成してホストしました。[ステップ 4: サービスの公開およびテスト](/docs/third-party/cis4-rmc-publish.html)を参照してください。
+重要なスキルをいくつか習得されました。 これで、OSB 仕様に適合するサービス・ブローカーを作成してホストしました。 [ステップ 4: 認証フローの作成](/docs/third-party/cis5-iam.html)を参照してください。

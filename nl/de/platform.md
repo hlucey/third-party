@@ -58,7 +58,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebot
    * Kategorie: Die Auswahl der verfügbaren {{site.data.keyword.Bluemix_notm}}-Kategorien, unter denen Ihr Service in den Katalog aufgenommen werden soll.
    * Listenpunkte: Kurze beschreibende Highlights zu Ihrem Service.
    * Medien: Screenshots und Videos zu Ihrem Service.
-   * Name des Serviceplans: Jeder Plan verfügt über einen technischen Namen. Der Name wird vollständig in Kleinschreibung und ohne Leerzeichen eingegeben. Er darf jedoch das Zeichen "-" enthalten. Beispiel: `gold`.
+   * Name des Serviceplans: Jeder Plan verfügt über einen technischen Namen. Der Name wird vollständig in Kleinschreibung und ohne Leerzeichen eingegeben. Er darf jedoch das Zeichen "-" enthalten.  Beispiel: `gold`.
    * Anzeigename des Serviceplans: Der benutzerfreundliche Name des Plans. Beispiel: `Gold`
    * Serviceplan-ID: Die GUID für Ihren Serviceplan, die in API-Aufrufen an den Open Service Broker verwendet wird. Dieser Wert muss eindeutig sein. Die Konsole für das Ressourcenmanagement generiert diesen Wert für Sie.
    * Serviceplanbeschreibung: Die Beschreibung des Ressourcenplans. Die Beschreibung wird angezeigt, nachdem Sie einen Plan auf der Ressourcendetailseite im IBM Cloud-Katalog ausgewählt haben.
@@ -75,13 +75,13 @@ Wenn der Resource Controller eine Anforderung zur Bereitstellung einer Ressource
 
 ## {{site.data.keyword.Bluemix_notm}}-Messservice
 
-Wenn für einen Service ein nutzungsabhängiger Plan angeboten wird, dann werden die Gebühren von {{site.data.keyword.Bluemix_notm}}-Benutzern auf Basis des Ressourcenvolumens berechnet, das von den Benutzern genutzt wird. Für {{site.data.keyword.Bluemix_notm}}-Benutzer, die Datenbankservices nutzen, werden die Gebühren beispielsweise auf Basis der Speicherkapazität berechnet, die von den Anwendungen der Benutzer verbraucht wird. Die Übermittlung von Nutzungsdaten ist erforderlich, um die Nutzungsdaten in einen Datensatz umzuwandeln, auf dessen Basis die Belastung erfolgen kann.
+Wenn für einen Service ein Plan mit Nutzungsmessung angeboten wird, werden die Gebühren von {{site.data.keyword.Bluemix_notm}}-Benutzern auf Basis des Ressourcenvolumens berechnet, das von den Benutzern genutzt wird. Für {{site.data.keyword.Bluemix_notm}}-Benutzer, die Datenbankservices nutzen, werden die Gebühren beispielsweise auf Basis der Speicherkapazität berechnet, die von den Anwendungen der Benutzer verbraucht wird. Die Übermittlung von Nutzungsdaten ist erforderlich, um die Nutzungsdaten in einen Datensatz umzuwandeln, auf dessen Basis die Belastung erfolgen kann.
 
-Alle integrierten Abrechnungsservices mit einem nutzungsabhängigen Plan müssen den {{site.data.keyword.Bluemix_notm}}-Messservice verwenden, um die Nutzungsdaten zu melden.
+Alle integrierten Abrechnungsservices mit einem Plan mit Nutzungsmessung müssen den {{site.data.keyword.Bluemix_notm}}-Messservice verwenden, um die Nutzungsdaten zu melden.
 
-**Hinweis:** Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen nutzungsabhängigen Plan anbieten möchten.
+**Hinweis:** Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten möchten.
 
-Weitere Informationen zur Messung finden Sie in [Messungsintegration](/docs/third-party/metering.html#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie im Abschnitt [Nutzungsdaten für nutzungsabhängige Pläne übermitteln](/docs/third-party/submitusage.html#submitusage).
+Weitere Informationen zur Messung finden Sie in [Messungsintegration](/docs/third-party/metering.html#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie im Abschnitt [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party/submitusage.html#submitusage).
 
 ## Bereitstellungsszenario: Zusammenfassung
 

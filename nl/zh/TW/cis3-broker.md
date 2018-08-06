@@ -116,7 +116,7 @@ lastupdated: "2018-06-26"
 
 ### 必要 {{site.data.keyword.Bluemix_notm}} 延伸端點
 
-OSB 規格*不* 支援已停用但尚未刪除的實例狀態。為了讓 {{site.data.keyword.Bluemix_notm}} 支援可能會遇到計費失效或其他導致帳戶暫停（但尚未取消）之狀況的客戶，{{site.data.keyword.Bluemix_notm}} 已定義可容許停用及重新啟用服務實例的延伸 API 端點。下列端點延伸為**必要**：
+OSB 規格*不* 支援已停用但尚未刪除的實例狀態。為了讓 {{site.data.keyword.Bluemix_notm}} 支援可能會遇到計費失誤或其他導致帳戶暫停（但尚未取消）之狀況的客戶，{{site.data.keyword.Bluemix_notm}} 定義了可容許停用及重新啟用服務實例的延伸 API 端點。下列端點延伸為**必要**：
 
 <dl>
   <dt>啟用及停用實例 (GET)</dt>
@@ -189,7 +189,7 @@ services :
 
 ### X-Broker-API-Originating-Identity
 
-**使用者身分標頭**將會透過 API 原始身分標頭提供。此要求標頭將包含使用者的「{{site.data.keyword.Bluemix_notm}} IAM 身分」。「IAM 身分」將會以 base64 編碼。{{site.data.keyword.Bluemix_notm}} 支援單一鑑別領域：`IBMid`。`IBMid` 領域使用「IBM ID 唯一 ID (IUI)」來識別使用者在 {{site.data.keyword.Bluemix_notm}} 中的身分。此 IUI 對服務提供者來說是不可探知的字串。
+**使用者身分標頭**將會透過產生身分標頭的 API 提供。此要求標頭將包含使用者的「{{site.data.keyword.Bluemix_notm}} IAM 身分」。「IAM 身分」將會以 base64 編碼。{{site.data.keyword.Bluemix_notm}} 支援單一鑑別領域：`IBMid`。`IBMid` 領域使用「IBM ID 唯一 ID (IUI)」來識別使用者在 {{site.data.keyword.Bluemix_notm}} 中的身分。此 IUI 對服務提供者來說是不可探知的字串。
 
 範例：
 
@@ -203,7 +203,7 @@ Decoded:
 
 **API 版本標頭**將會是 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。例如：`X-Broker-Api-Version: 2.12`。
 
-### 資源實例 (PUT) body.context 及 資源實例 (PATCH) body.context
+### 資源實例 (PUT) body.context 及資源實例 (PATCH) body.context
 
 `PUT /v2/service_instances/:resource_instance_id` 及 `PATCH /v2/service_instances/:resource_instance_id` 將在 **body.context** 內收到下列值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
@@ -218,7 +218,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業將需要不到
 
 ### 跨位置管理分配管理系統的建議
 
-使用者必須瞭解其雲端服務發生延遲、可用性問題及資料儲存所在的位置。
+使用者必須瞭解其雲端服務的位置，查看是否會有延遲、可用性及資料常駐等問題。
 
 在 {{site.data.keyword.Bluemix_notm}} 上佈建服務實例時，使用者將提供的其中一個必要參數，就是他們想要佈建該服務實例的位置。部分服務可能支援在多個位置中進行佈建。例如，資料庫服務可能支援在所有 {{site.data.keyword.Bluemix_notm}} 地區中佈建，或是可能支援子集。
 
@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## 後續步驟
 
-您有一些重大技能！您剛剛建置並管理了符合 OSB 規格的服務分配管理系統。請參閱[步驟 5：發佈及測試服務](/docs/third-party/cis4-rmc-publish.html)。
+您有一些重大技能！您剛剛建置並管理了符合 OSB 規格的服務分配管理系統。請參閱[步驟 4：開發鑑別流程](/docs/third-party/cis5-iam.html)。

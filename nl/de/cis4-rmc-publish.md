@@ -27,10 +27,10 @@ Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigun
 {: tip}
 
 Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2, 3 und 4 abgeschlossen haben.
-1. [Servicedokumentation und Marketingankündigung verfassen](/docs/third-party/cis1-docs-marketing.html).
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
 2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
-3. [Authentifizierungsablauf entwickeln](/docs/third-party/cis-iam.html).
+3. [Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).
 
 ## Eigenen Service in {{site.data.keyword.Bluemix_notm}} veröffentlichen
 
@@ -70,7 +70,7 @@ Da Sie die Bereitstellung im Modus für eingeschränkte Sichtbarkeit durchgefüh
 9. Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit IBM Cloud Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch nicht zum Abbruch) führen können, hat IBM Cloud erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Die folgenden Endpunkterweiterungen sind **ERFORDERLICH**. Arbeiten Sie mit Ihrem IBM Ansprechpartner zusammen und lassen Sie die Aktivierungs- und Inaktivierungsendpunkte testen:
    - Instanzen aktivieren und inaktivieren (GET): Status - Gibt den Status Ihrer Serviceinstanz zurück.
    - Instanzen aktivieren und inaktivieren (PUT): Ermöglicht das Aktivieren oder Inaktivieren einer Serviceinstanz.
-10. Testen der Übermittlung von Nutzungsdaten bei Unterstützung von nutzungsabhängigen Plänen. Für alle nutzungsabhängigen Pläne müssen Sie Folgendes überprüfen:
+10. Testen der Übermittlung von Nutzungsdaten bei Unterstützung von Plänen mit Nutzungsmessung. Für alle Pläne mit Nutzungsmessung müssen Sie Folgendes überprüfen:
    - Sie können die Nutzungs-API mit curl bearbeiten und es können korrekte Preisstrukturdaten auf Basis der Nutzung zurückgegeben werden.
    - Sie können demonstrieren, dass Sie die automatisierte stündliche Übermittlung von Nutzungsdaten aktiviert haben, sodass alle Benutzer unterstützt werden, die eine Instanz Ihres Service bereitstellen.
 

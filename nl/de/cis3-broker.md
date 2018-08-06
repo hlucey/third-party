@@ -20,7 +20,7 @@ lastupdated: "2018-06-26"
 
 Mithilfe der von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten werden Sie nun mindestens einen neuen Service-Broker in der Programmiersprache Ihrer Wahl erstellen.
 
- Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um so Serviceinstanzen (Instanziierung eines Serviceangebots) und Servicebindungen (Darstellung einer Zuordnung zwischen einer Anwendung und einer Serviceinstanz, in der häufig die Berechtigungsnachweise enthalten sind, die die Anwendung zur Kommunikation mit der Serviceinstanz verwendet) bereitzustellen und zu verwalten. Wenn Sie gültige Metadatenwerte angeben, dann können Sie erfolgreich eine REST-konforme API-Antwort erstellen, wenn eine Anforderung ausgeführt wird.
+Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um so Serviceinstanzen (Instanziierung eines Serviceangebots) und Servicebindungen (Darstellung einer Zuordnung zwischen einer Anwendung und einer Serviceinstanz, in der häufig die Berechtigungsnachweise enthalten sind, die die Anwendung zur Kommunikation mit der Serviceinstanz verwendet) bereitzustellen und zu verwalten. Wenn Sie gültige Metadatenwerte angeben, dann können Sie erfolgreich eine REST-konforme API-Antwort erstellen, wenn eine Anforderung ausgeführt wird.
 
 Beginnen Sie die Erstellung Ihres Brokers, indem Sie eine Kombination aus den von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten, den von IBM bereitgestellten öffentlichen {{site.data.keyword.Bluemix_notm}}-Service-Broker-Beispielen und der API-Dokumentation für Ressourcenbroker verwenden. Zum Entwickeln Ihres Brokers werden Sie die folgenden Schritte ausführen:
 
@@ -40,7 +40,7 @@ Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigun
 {: tip}
 
 Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und Schritt 2 abgeschlossen haben.
-1. [Servicedokumentation und Marketingankündigung verfassen](/docs/third-party/cis1-docs-marketing.html).
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
 2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 
 
@@ -117,7 +117,7 @@ Wenn Ihr Service an Anwendungen in {{site.data.keyword.Bluemix_notm}} gebunden w
 
 ### Erforderliche {{site.data.keyword.Bluemix_notm}}-Erweiterungsendpunkte
 
-Die OSB-Spezifikation bietet *keine* Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit {{site.data.keyword.Bluemix_notm}} Kunden unterstützen kann, bei denen es möglicherweise zu einem Abrechnungsfehler oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch nicht zum Abbruch) führen können, hat {{site.data.keyword.Bluemix_notm}} erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Die folgenden Endpunkterweiterungen sind **erforderlich**:
+Die OSB-Spezifikation bietet *keine* Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit {{site.data.keyword.Bluemix_notm}} Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch nicht zum Abbruch) führen können, hat {{site.data.keyword.Bluemix_notm}} erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Die folgenden Endpunkterweiterungen sind **erforderlich**:
 
 <dl>
   <dt>Instanzen aktivieren und inaktivieren (GET)</dt>
@@ -212,7 +212,7 @@ Der **Header der API-Version** lautet [2.12](https://github.com/openservicebroke
 
 ### Empfehlungen zur Verwendung asynchroner oder synchroner Operationen
 
-Die OSB-API unterstützt sowohl den synchronen als auch den asynchronen Betriebsmodus. Wenn die Operationen weniger als 10 Sekunden in Anspruch nehmen, dann werden synchrone Antworten empfohlen. Andernfalls sollte der asynchrone Betriebsmodus verwendet werden. Weitere Informationen zu diesem Thema sind in der OSB-Spezifikation enthalten.
+Die OSB-API unterstützt sowohl den synchronen als auch den asynchronen Betriebsmodus. Wenn die Operationen weniger als 10 Sekunden in Anspruch nehmen, dann werden synchrone Antworten empfohlen.  Andernfalls sollte der asynchrone Betriebsmodus verwendet werden.  Weitere Informationen zu diesem Thema sind in der OSB-Spezifikation enthalten.
 
 Wenn die asynchrone Operation für den Versuch, eine Instanz bereitzustellen, weniger als 10 Sekunden dauert, dann tritt auf der Plattform eine Zeitlimitüberschreitung auf.
 {: tip}
@@ -225,7 +225,7 @@ Bei der Bereitstellung von Serviceinstanzen in {{site.data.keyword.Bluemix_notm}
 
 Wenn Ihr API-basierter Drittanbieterservice in einer anderen Cloud implementiert wurde und in {{site.data.keyword.Bluemix_notm}} zugänglich gemacht wurde, dann muss die Position die Position des Service in der anderen Cloud angeben.
 
-Beim Onboarding in {{site.data.keyword.Bluemix_notm}} müssen Sie mindestens einen OSB-Broker implementieren. Sie haben jedoch die Option, abhängig von Ihrer Bereitstellungsstrategie und den Positionen, die Sie für Ihren Service unterstützen wollen, mit mehreren Brokern zu arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
+Beim Onboarding in {{site.data.keyword.Bluemix_notm}} müssen Sie mindestens einen OSB-Broker implementieren. Sie haben jedoch die Option, abhängig von Ihrer Bereitstellungsstrategie und den Positionen, die Sie für Ihren Service unterstützen wollen, mit mehreren Brokern zu arbeiten.  Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
 
 Eine Liste der verfügbaren Positionen finden Sie unter den [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service zusätzliche Positionen im globalen Katalog definiert werden müssen, dann wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
 
@@ -266,4 +266,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Nächste Schritte
 
-Sie verfügen nun über fundierte Kenntnisse! Sie haben soeben einen Service-Broker erstellt und gehostet, der der OSB-Spezifikation entspricht. Weitere Informationen hierzu finden Sie in [Schritt 4: Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).
+Sie verfügen nun über fundierte Kenntnisse! Sie haben soeben einen Service-Broker erstellt und gehostet, der der OSB-Spezifikation entspricht. Weitere Informationen finden Sie in [Schritt 4: Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).
