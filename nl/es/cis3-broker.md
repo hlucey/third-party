@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Pasos siguientes
 
-¡Ya dispone de conocimientos avanzados! Acaba de crear y alojar un intermediario de servicio que cumple con la especificación OSB. Consulte el [Paso 4: Publicación y prueba del servicio](/docs/third-party/cis4-rmc-publish.html).
+¡Ya dispone de conocimientos avanzados! Acaba de crear y alojar un intermediario de servicio que cumple con la especificación OSB. Consulte [Paso 4: Desarrollo de un flujo de autenticación](/docs/third-party/cis5-iam.html).

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -100,11 +100,15 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 ### PUBLIQUE (POST) <token_endpoint>
 
 #### Cabeceras:
+{: #headers1}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Con los parámetros:
+{: #parameters1}
+
   - client_id=*[id cliente]*
   - client_secret=*[secreto cliente]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Respuesta:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ Consulte el ejemplo de nuestros intermediarios de ejemplo: https://github.com/IB
 ### POST /identidad/señal
 
 #### Cabeceras:
+{: #headers2}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Con los parámetros:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[clave API]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Respuesta:
+{: #response2}
 
 ```
 {
