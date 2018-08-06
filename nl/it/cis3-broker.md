@@ -36,7 +36,7 @@ Puoi iniziare a creare il tuo broker utilizzando una combinazione dei metadati c
 
 ## Prima di iniziare
 
-Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrata. Se non hai ancora completato la registrazione e l'approvazione iniziale in Provider Workbench, vedi l'[Esercitazione introduttiva](/docs/third-party/index.md).
+Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziale in Provider Workbench, vedi l'[Esercitazione introduttiva](/docs/third-party/index.md).
 {: tip}
 
 Assicurati di aver iniziato il passo 1 e completato il passo 2
@@ -266,4 +266,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Passi successivi
 
-Ottimo lavoro! Hai appena creato e ospitato un broker dei servizi che soddisfa la specifica OSB. Vedi il [Passo 4: Pubblica e verifica il tuo servizio](/docs/third-party/cis4-rmc-publish.html).
+Ottimo lavoro! Hai appena creato e ospitato un broker dei servizi che soddisfa la specifica OSB. Consulta [Passo 4: Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).

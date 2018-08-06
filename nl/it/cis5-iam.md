@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -32,7 +32,7 @@ Questo passo presuppone che tu sia stato approvato per fornire un servizio di fa
 ## Prima di iniziare
 
 Assicurati di aver avviato il passo 1 e di aver completato i passi 2 e 3.
-1. [ Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
+1. [Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
 2. [Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).
 3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party/cis3-broker.html).
 
@@ -100,11 +100,15 @@ Questa richiesta può essere eseguita dopo che l'applicazione è stata avvitata 
 ### POST <token_endpoint>
 
 #### Intestazioni:
+{: #headers1}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Con parametri:
+{: #parameters1}
+
   - client_id=*[id client]*
   - client_secret=*[segreto client]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Risposta:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ Vedi l'esempio nei nostri broker di esempio: https://github.com/IBM/sample-resou
 ### POST /identity/token
 
 #### Intestazioni:
+{: #headers2}
+
   - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Con parametri:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[Chiave api]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Risposta:
+{: #response2}
 
 ```
 {

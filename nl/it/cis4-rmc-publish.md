@@ -27,10 +27,10 @@ Questo passo presuppone che tu sia stato approvato per fornire un servizio di fa
 {: tip}
 
 Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
-1. [ Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
+1. [Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
 2. [Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).
 3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party/cis3-broker.html).
-3. [Sviluppa un flusso di autenticazione](/docs/third-party/cis-iam.html).
+3. [Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
 
 ## Pubblica il tuo servizio in {{site.data.keyword.Bluemix_notm}}
 
