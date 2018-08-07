@@ -212,7 +212,7 @@ O **Cabeçalho da versão da API** será [2.12](https://github.com/openservicebr
 
 ### Recomendações sobre o uso de operações assíncronas vs. síncronas
 
-O OSB API suporta os modos síncrono e assíncrono de operação. Se as suas operações levam menos de 10 segundos, então, respostas síncronas são recomendadas. Caso contrário, é necessário usar o modo assíncrono de operação. Mais informações sobre isso estão contidas na especificação do OSB.
+O OSB API suporta os modos síncrono e assíncrono de operação. Se as suas operações levam menos de 10 segundos, então, respostas síncronas são recomendadas.  Caso contrário, é necessário usar o modo assíncrono de operação.  Mais informações sobre isso estão contidas na especificação do OSB.
 
 Se a sua operação assíncrona levar menos de 10 segundos ao tentar provisionar uma instância, a plataforma atingirá o tempo limite.
 {: tip}
@@ -225,7 +225,7 @@ Ao provisionar instâncias de serviço no {{site.data.keyword.Bluemix_notm}}, um
 
 Se seu serviço baseado em API de terceiro for implementado em outra nuvem e exposto no {{site.data.keyword.Bluemix_notm}}, o local deverá indicar o local do serviço na outra nuvem.
 
-Ao integrar ao {{site.data.keyword.Bluemix_notm}}, deve-se implementar pelo menos um broker do OSB, mas você tem a opção de ter mais de um broker, dependendo da sua estratégia de implementação e dos locais que deseja suportar para o seu serviço. Na ferramenta do console de gerenciamento de recurso, você estabeleceu o mapeamento entre sua tupla de serviço/plano/local e o broker que atenderá as operações para essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
+Ao integrar ao {{site.data.keyword.Bluemix_notm}}, deve-se implementar pelo menos um broker do OSB, mas você tem a opção de ter mais de um broker, dependendo da sua estratégia de implementação e dos locais que deseja suportar para o seu serviço.  Na ferramenta do console de gerenciamento de recurso, você estabeleceu o mapeamento entre sua tupla de serviço/plano/local e o broker que atenderá as operações para essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
 
 Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o seu serviço requer que locais adicionais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
 
@@ -266,4 +266,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Próximas Etapas
 
-Você tem algumas habilidades sérias! Você acabou de construir e hospedar um broker de serviço que atende à especificação do OSB. Veja [Etapa 4: publicando e testando seu serviço](/docs/third-party/cis4-rmc-publish.html).
+Você tem algumas habilidades sérias! Você acabou de construir e hospedar um broker de serviço que atende à especificação do OSB. Consulte [Etapa 4: Desenvolvendo um fluxo de autenticação](/docs/third-party/cis5-iam.html).

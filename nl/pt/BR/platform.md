@@ -58,7 +58,7 @@ O catálogo do {{site.data.keyword.Bluemix_notm}} armazena as definições de of
    * Categoria: seleção de categorias disponíveis do {{site.data.keyword.Bluemix_notm}} em que seu serviço deve ser colocado no catálogo.
    * Marcadores: lampejos descritivos curtos sobre seu serviço
    * Mídia: capturas de tela e vídeos sobre seu serviço
-   * Nome do plano de serviço: cada plano tem um nome técnico. Todo em minúsculas, sem espaços, pode incluir "-". Por exemplo,  ` gold `.
+   * Nome do plano de serviço: cada plano tem um nome técnico. Todo em minúsculas, sem espaços, pode incluir "-".  Por exemplo,  ` gold `.
    * Nome de exibição do plano de serviço: nome fácil do usuário para o plano. Por exemplo,  ` Gold `
    * ID do plano de serviço: GUID para o seu plano de serviço usado em chamadas API para o seu broker do OSB. Esse deve ser um valor exclusivo. O console de gerenciamento de recurso gerará esse valor para você.
    * Descrição do plano de serviço: a descrição do plano de recursos. A descrição é exibida depois que você seleciona um plano na página de detalhes do recurso no catálogo do IBM Cloud
@@ -69,9 +69,9 @@ O catálogo do {{site.data.keyword.Bluemix_notm}} armazena as definições de of
 
 Os Brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{site.data.keyword.Bluemix_notm}} interage com os Brokers de Serviço para provisionar e gerenciar Instâncias de Serviço (uma instanciação de uma Oferta de Serviços) e Ligações de Serviços (a representação de uma associação entre um Aplicativo e uma Instância de Serviço, que frequentemente contêm as credenciais que o Aplicativo usará para se comunicar com a Instância de Serviço). O fornecimento de valores de metadados válidos criará uma Resposta da API de REST bem-sucedida quando uma Solicitação for executada.
 
-O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broker API (OSB) `versão 2.12`. Leia e familiarize-se com a [Especificação do Open Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e use o arquivo leia-me como um guia para aprender mais.
+O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broker API (OSB) `versão 2.12`. Leia e familiarize-se com a [Especificação do Open Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e use o arquivo leia-me como um guia para saber mais.
 
-Quando o controlador de recurso recebe uma solicitação para provisionar um recurso, ele chama o seu OSB para validar o tipo de serviço, a oferta, os planos e a disponibilidade de regiões. O controlador de recursos também valida a visibilidade do plano associado com a conta do cliente. O {{site.data.keyword.Bluemix_notm}} fornece amostras de broker e docs de API que estendem a especificação do OSB. É possível localizar mais detalhes sobre como desenvolver e hospedar seu broker à medida que você percorre as etapas detalhadas de desenvolvimento integrado do faturamento integrado.
+Quando o controlador de recurso recebe uma solicitação para provisionar um recurso, ele chama o seu OSB para validar o tipo de serviço, a oferta, os planos e a disponibilidade de regiões. O controlador de recursos também valida a visibilidade do plano associado com a conta do cliente. O {{site.data.keyword.Bluemix_notm}} fornece amostras do broker e docs de API que ampliam a especificação de OSB. É possível localizar mais detalhes sobre como desenvolver e hospedar seu broker à medida que você percorre as etapas detalhadas de desenvolvimento integrado do faturamento integrado.
 
 ## {{site.data.keyword.Bluemix_notm}}  Serviço de medição
 

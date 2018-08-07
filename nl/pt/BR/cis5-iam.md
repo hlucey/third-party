@@ -1,9 +1,9 @@
-﻿---
+---
 
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -34,7 +34,7 @@ Esta etapa supõe que você tenha sido aprovado para entregar um serviço de Fat
 Assegure-se de ter iniciado a etapa 1 e concluído as etapas 2 e 3:
 1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
 2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
-3. [ Desenvolva e hospeda seus brokers de serviço ](/docs/third-party/cis3-broker.html).
+3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
 
 
 ## Derivar o URI de redirecionamento do IAM (console de gerenciamento de recurso: página do IAM)
@@ -100,11 +100,15 @@ Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e 
 ### POST <token_endpoint>
 
 #### Cabeçalhos:
+{: #headers1}
+
   - Autorização: básica *[client id]:[client segredo]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Com parâmetros:
+{: #parameters1}
+
   - client_id=*[ID de cliente]*
   - client_secret=*[segredo do cliente]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Resposta:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ Veja o exemplo em nossos brokers de amostra: https://github.com/IBM/sample-resou
 ### POST /identity/token
 
 #### Cabeçalhos:
+{: #headers2}
+
   - Autorização: básica *[client id]:[client segredo]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### Com parâmetros:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[Api key]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Resposta:
+{: #response2}
 
 ```
 {

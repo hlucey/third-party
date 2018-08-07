@@ -30,7 +30,7 @@ Assegure-se de ter iniciado a etapa 1 e concluído as etapas 2, 3 e 4:
 1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
 2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
 3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
-3. [Desenvolva um fluxo de autenticação](/docs/third-party/cis-iam.html).
+3. [ Desenvolva um fluxo de autenticação ](/docs/third-party/cis5-iam.html).
 
 ## Publicar seu serviço no {{site.data.keyword.Bluemix_notm}}
 
