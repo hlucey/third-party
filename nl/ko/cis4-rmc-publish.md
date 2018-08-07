@@ -30,7 +30,7 @@ lastupdated: "2018-06-27"
 1. [서비스 문서 및 마케팅 공지사항 작성](/docs/third-party/cis1-docs-marketing.html).
 2. [리소스 관리 콘솔의 오퍼링 정의](/docs/third-party/cis2-rmc-define.html).
 3. [서비스 브로커 개발 및 호스트](/docs/third-party/cis3-broker.html).
-3. [인증 플로우 개발](/docs/third-party/cis-iam.html).
+3. [인증 플로우 개발](/docs/third-party/cis5-iam.html).
 
 ## 서비스를 {{site.data.keyword.Bluemix_notm}}에 공개
 

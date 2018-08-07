@@ -23,14 +23,14 @@ lastupdated: "2018-06-27"
 
 ## 开始之前
 
-此步骤假定您已获准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.md)。
+此步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.md)。
 {: tip}
 
 确保已开始执行步骤 1，并完成了步骤 2、3 和 4：
 1. [编写服务文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
 2. [在资源管理控制台中定义产品](/docs/third-party/cis2-rmc-define.html)。
 3. [开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。
-3. [开发认证流程](/docs/third-party/cis-iam.html)。
+3. [开发认证流程](/docs/third-party/cis5-iam.html)。
 
 ## 将服务发布到 {{site.data.keyword.Bluemix_notm}}
 

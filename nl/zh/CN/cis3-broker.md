@@ -266,4 +266,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## 后续步骤
 
-您已掌握了一些重要技能！您刚才已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：发布和测试服务](/docs/third-party/cis4-rmc-publish.html)。
+您已掌握了一些重要技能！您刚才已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：开发认证流程](/docs/third-party/cis5-iam.html)。

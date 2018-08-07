@@ -211,7 +211,7 @@ Decoded:
 
 ### 비동기 대 동기 오퍼레이션 사용에 대한 권장사항
 
-OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니다. 오퍼레이션에 걸리는 시간이 10초 미만인 경우 동기 응답이 권장됩니다. 그렇지 않으면 비동기 모드의 오퍼레이션을 사용해야 합니다. 이에 대한 자세한 정보는 OSB 스펙에 포함되어 있습니다.
+OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니다. 오퍼레이션에 걸리는 시간이 10초 미만인 경우 동기 응답이 권장됩니다.  그렇지 않으면 비동기 모드의 오퍼레이션을 사용해야 합니다.  이에 대한 자세한 정보는 OSB 스펙에 포함되어 있습니다.
 
 인스턴스를 프로비저닝하는 중에 비동기 오퍼레이션에 10초 미만이 걸리는 경우 플랫폼이 제한시간 초과됩니다.
 {: tip}
@@ -224,9 +224,9 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 써드파티 API 기반 서비스가 다른 클라우드에서 구현되고 {{site.data.keyword.Bluemix_notm}}에 노출되는 경우 위치는 다른 클라우드에 있는 서비스의 위치를 표시해야 합니다.
 
-{{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 최소 하나의 OSB 브로커를 구현해야 하지만, 배치 전략과 서비스를 지원하고자 하는 위치에 따라 둘 이상의 브로커를 사용할 수 있는 옵션이 있습니다. 리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
+{{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 최소 하나의 OSB 브로커를 구현해야 하지만, 배치 전략과 서비스를 지원하고자 하는 위치에 따라 둘 이상의 브로커를 사용할 수 있는 옵션이 있습니다.  리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
 
-사용 가능한 위치 목록은 [IBM 글로벌 카탈로그 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")참조하십시오. 서비스에서 글로벌 카탈로그에 추가 위치를 정의해야 하는 경우 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
+사용 가능한 위치 목록은 [IBM 글로벌 카탈로그 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스에서 글로벌 카탈로그에 추가 위치를 정의해야 하는 경우 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
 
 
 ## 브로커 호스트
@@ -237,7 +237,7 @@ IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인�
 - TLS(Transport Layer Security) 프로토콜 버전 1.2를 준수해야 함
 - 공용 인터넷에서 액세스할 수 있는 올바른 HTTP 엔드포인트에 호스팅되어야 함
 
-{{site.data.keyword.Bluemix_notm}}에서 호스팅하려는 경우 컨테이너(Kubernetes)를 사용하여 앱을 작성하는 방법에 대한 정보는 다음에 있습니다. [내부 채택자 - 사용 정보](/docs/containers/cs_internal.html#cs_internal)
+{{site.data.keyword.Bluemix_notm}}에서 호스팅하려는 경우 컨테이너(Kubernetes)를 사용하여 앱을 작성하는 방법에 대한 정보는 다음에 있습니다. [내부 채택자 - 사용 정보](/docs/containers/cs_internal.html#cs_internal).
 
 다음 단계를 완료하려면 서비스 브로커의 호스트 위치가 필요합니다. 다음 단계로 이동할 때 앱과 연관된 URL과 신임 정보를 준비해 두십시오.
 {: tip}
@@ -250,7 +250,7 @@ IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인�
 
 다음 예제를 사용하여 브로커 curl 응답을 테스트하십시오.
 
-
+```
 curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resource-crn> \
      -u '<your broker user>:<your broker password>' \
      -H 'content-type: application/json' \
@@ -261,8 +261,8 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
                         "target_crn": "<target_crn>"}, \
             "service_id": "a07f025c-90db-4652-afd1-cf4adfac93c8", \
             "plan_id": "fe442cec-2eef-41fe-9f92-58d6c094584f"}'
-
+```
 
 ## 다음 단계
 
-일부 중요한 스킬을 획득했습니다! 이제 OSB 스펙을 충족하는 서비스 브로커를 구현하고 호스팅했습니다. [4단계: 서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오.
+일부 중요한 스킬을 획득했습니다! 이제 OSB 스펙을 충족하는 서비스 브로커를 구현하고 호스팅했습니다. [4단계: 인증 플로우 개발](/docs/third-party/cis5-iam.html)을 참조하십시오. 

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -26,7 +26,7 @@ lastupdated: "2018-06-22"
    1. IAM과 통신하여 API 키에서 액세스 토큰을 받음
    2. `authorization_endpoint`(/v2/authz POST)를 사용하여 서비스 대시보드에 대한 사용자 권한 유효성 검증
 
-이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. PWB의 초기 등록 및 승인을 아직 완료하지 않은 경우 [써드파티 오퍼링 공개 시작하기{{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)를 참조하십시오.
+이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. PWB의 초기 등록 및 승인을 아직 완료하지 않은 경우 [{{site.data.keyword.Bluemix_notm}}에서 써드파티 오퍼링 공개 시작하기](/docs/third-party/index.html)를 참조하십시오.
 {: tip}
 
 ## 시작하기 전에
@@ -39,11 +39,11 @@ lastupdated: "2018-06-22"
 
 ## IAM 경로 재지정 URI 파생(리소스 관리 콘솔: IAM 페이지)
 
- 리소스 관리 콘솔에서 서비스를 정의했으면 클라이언트 ID를 생성한 것입니다. 그러나 이 때 경로 재지정 URI는 없었을 가능성이 큽니다. 이는 IAM이 false로 설정된 클라이언트 ID를 생성했음을 의미합니다. 경로 재지정 URI를 사용하여 리소스 관리 콘솔로 돌아가기 전에는 진짜 클라이언트 ID를 가질 수 없습니다. 
+ 리소스 관리 콘솔에서 서비스를 정의했으면 클라이언트 ID를 생성한 것입니다. 그러나 이 때 경로 재지정 URI는 없었을 가능성이 큽니다. 이는 IAM이 false로 설정된 클라이언트 ID를 생성했음을 의미합니다. 경로 재지정 URI를 사용하여 리소스 관리 콘솔로 돌아가기 전에는 true 클라이언트 ID를 가질 수 없습니다.
 
 좋은 소식은 이전 개발 단계에서 OSB를 개발하여 호스팅했다는 것입니다(샘플 브로커 코드에서 IAM 값을 확인했을 것입니다). `redirect_uri`는 앱이 있는 호스트 url이며 여기에는 일반적으로 인증/권한 부여를 처리하는 일부 추가 url이 있습니다.
 
- 경로 재지정 URI의 에는 다음과 같습니다.
+ 다음은 경로 재지정 URI의 예입니다.
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
@@ -60,7 +60,7 @@ http://localhost:3000/auth/callback <-- for testing locally
 
 이제 경로 재지정 URI를 알고 있고 true로 설정된 클라이언트 ID를 가지고 있어야 합니다! 다음 단계에서 이 클라이언트 ID를 사용하여 OAuth 플로우를 개발할 수 있습니다.
 
-##  인증을 위한 OAuth 플로우 개발 
+##  인증을 위한 OAuth 플로우 개발
 {: #oauth}
 
 
@@ -100,11 +100,15 @@ Content-Type: application/json
 ### POST <token_endpoint>
 
 #### 헤더:
+{: #headers1}
+
   - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### 매개변수 사용:
+{: #parameters1}
+
   - client_id=*[client id]*
   - client_secret=*[client secret]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### 응답:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ curl -k -X POST \
 ### POST/ID/토큰
 
 #### 헤더:
+{: #headers2}
+
   - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### 매개변수 사용:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[Api key]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### 응답:
+{: #response2}
 
 ```
 {
