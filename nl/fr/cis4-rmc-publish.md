@@ -30,7 +30,7 @@ Vérifiez que vous avez commencé l'étape 1 et avez terminé les étapes 2, 3 e
 1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
 3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
-3. [Développement d'un flux d'authentification](/docs/third-party/cis-iam.html).
+3. [Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
 
 ## Publication de votre service dans {{site.data.keyword.Bluemix_notm}}
 

@@ -58,7 +58,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre 
    * Category : sélection des catégories {{site.data.keyword.Bluemix_notm}} disponibles où votre service doit être placé dans le catalogue.
    * Bullets : brèves descriptions de votre service
    * Media : captures d'écran et vidéos concernant votre service
-   * Service Plan Name : chaque plan a un nom technique. Ce nom inclut des lettres en minuscules, aucun espace et peut inclure le caractère "-". Par exemple, `gold`.
+   * Service Plan Name : chaque plan a un nom technique. Ce nom inclut des lettres en minuscules, aucun espace et peut inclure le caractère "-".  Par exemple, `gold`.
    * Service Plan Display Name : nom intuitif du plan. Par exemple, `Gold`
    * Service Plan ID : identificateur global unique de votre plan de service utilisé dans les appels d'API de votre courtier OSB. Cette valeur doit être unique. La console de gestion des ressources génère cette valeur pour vous.
    * Service Plan Description : description du plan de ressources. Cette description s'affiche une fois que vous avez sélectionné un plan sur la page des détails de ressources dans le catalogue IBM Cloud
@@ -69,7 +69,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre 
 
 Les courtiers de services gèrent le cycle de vie des services. La plateforme {{site.data.keyword.Bluemix_notm}} interagit avec les courtiers de services pour mettre à disposition et gérer des instances de service (instanciation d'une offre de service) et des liaisons de service (représentation d'une association entre une application et une instance de service, qui contient souvent les données d'identification utilisées par l'application pour communiquer avec l'instance de service). Le fait de mettre à disposition des valeurs de métadonnées valides crée une réponse d'API REST lors d'une demande.
 
-{{site.data.keyword.Bluemix_notm}} utilise la spécification OSB (Open Service Broker) `version 2.12`. Familiarisez-vous avec la [spécification d'API Open Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et consultez le fichier readme pour en savoir plus.
+{{site.data.keyword.Bluemix_notm}} utilise la spécification OSB (Open Service Broker) `version 2.12`. Familiarisez-vous avec la [spécification d'API Open Service Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et consultez le fichier readme pour en savoir plus.
 
 Lorsque le contrôleur de ressources reçoit une demande de mise à disposition d'une ressource, il appelle votre courtier OSB afin de valider la disponibilité des régions, des plans, de l'offre et du type de service. Le contrôleur de ressources valide également la visibilité du plan associé au compte client. {{site.data.keyword.Bluemix_notm}} fournit des exemples de courtier et des documents d'API qui étendent la spécification OSB. Vous pouvez trouver plus d'informations sur le développement et l'hébergement de votre courtier lorsque vous parcourez les procédures détaillées de développement d'intégration de facturation.
 
@@ -81,7 +81,7 @@ Tous les services de facturation intégrée proposant un plan mesuré doivent ut
 
 **Remarque :** vous devez automatiser la soumission d'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
 
-Pour plus d'informations sur la mesure, voir [Intégration de mesure](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
+Pour plus d'informations sur la mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
 
 ## Scénario de mise à disposition : rassemblement de tous les éléments
 

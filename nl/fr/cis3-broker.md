@@ -50,7 +50,7 @@ Vous allez développer un courtier OSB (Open Service Broker) fonctionnant avec l
 
 ## Familiarisez-vous avec la spécification OSB
 
-{{site.data.keyword.Bluemix_notm}} utilise la spécification OSB (Open Service Broker) `version 2.12`. Familiarisez-vous avec la [spécification d'API Open Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et consultez le fichier readme pour en savoir plus.
+{{site.data.keyword.Bluemix_notm}} utilise la spécification OSB (Open Service Broker) `version 2.12`. Familiarisez-vous avec la [spécification d'API Open Service Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") et consultez le fichier readme pour en savoir plus.
 
 ## Affichez nos exemples de courtiers {{site.data.keyword.Bluemix_notm}}
 
@@ -76,7 +76,7 @@ Les courtiers de services doivent fournir un ensemble standard de valeurs de mé
   <dt>resource instances (PUT)</dt>
   <dd>Met à disposition votre instance de service</dd>
   <dt>resource instances (DELETE)</dt>
-  <dd>Annule la mise à disposition de votre instance de service. </dd>
+  <dd>Annule la mise à disposition de votre instance de service.</dd>
   <dt>resource instances (PATCH)</dt>
   <dd>Met à jour votre instance de service.</dd>
 </dl>
@@ -202,7 +202,7 @@ Decoded:
 
 ### Version d'en-tête d'API
 
-L'**en-tête de version d'API** est [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Par exemple : `X-Broker-Api-Version: 2.12`.
+La **version d'en-tête d'API** est [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Par exemple : `X-Broker-Api-Version: 2.12`.
 
 ### resource instance (PUT) body.context and resource instance (PATCH) body.context
 
@@ -212,7 +212,7 @@ L'**en-tête de version d'API** est [2.12](https://github.com/openservicebrokera
 
 ### Recommandations en matière d'utilisation d'opérations asynchrones et d'opérations synchrones
 
-L'API OSB prend en charge à la fois les modes de fonctionnement synchrones et asynchrones. Si vos opérations durent moins de 10 secondes, les réponses synchrones sont recommandées. Dans le cas contraire, vous devez utiliser le mode de fonctionnement asynchrone. Des informations supplémentaires sont disponibles dans la spécification OSB.
+L'API OSB prend en charge à la fois les modes de fonctionnement synchrones et asynchrones. Si vos opérations durent moins de 10 secondes, les réponses synchrones sont recommandées.  Dans le cas contraire, vous devez utiliser le mode de fonctionnement asynchrone.  Des informations supplémentaires sont disponibles dans la spécification OSB.
 
 Si votre opération asynchrone dure moins de 10 secondes lors de la tentative de mise à disposition d'une instance, la plateforme arrivera à expiration.
 {: tip}
@@ -225,7 +225,7 @@ Lors de la mise à disposition d'instances de service sur {{site.data.keyword.Bl
 
 Si votre service de tiers reposant sur une API est implémenté dans un autre cloud et exposé dans {{site.data.keyword.Bluemix_notm}}, l'emplacement doit indiquer l'emplacement du service dans l'autre cloud.
 
-Lors de l'intégration à {{site.data.keyword.Bluemix_notm}}, vous devez implémenter au moins un courtier OSB mais vous pouvez avoir plus d'un courtier en fonction de votre stratégie de déploiement et des emplacements à prendre en charge pour votre service. Dans l'outil de console de gestion des ressources, vous avez établi le mappage entre votre bloc de données service/plan/emplacement et le courtier qui va traiter les opérations pour ce bloc de données. Les choix standard consistent à définir un courtier unique pour traiter tous les emplacements pour votre service ou à définir un courtier par emplacement. Ce choix dépend de votre fournisseur de services.
+Lors de l'intégration à {{site.data.keyword.Bluemix_notm}}, vous devez implémenter au moins un courtier OSB mais vous pouvez avoir plus d'un courtier en fonction de votre stratégie de déploiement et des emplacements à prendre en charge pour votre service.  Dans l'outil de console de gestion des ressources, vous avez établi le mappage entre votre bloc de données service/plan/emplacement et le courtier qui va traiter les opérations pour ce bloc de données. Les choix standard consistent à définir un courtier unique pour traiter tous les emplacements pour votre service ou à définir un courtier par emplacement. Ce choix dépend de votre fournisseur de services.
 
 Pour obtenir la liste des emplacements disponibles, consultez les [emplacements IBM Global Catalog](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Si votre service exige que des emplacements supplémentaires soient définis dans le catalogue global, consultez l'équipe d'intégration {{site.data.keyword.Bluemix_notm}}.
 
@@ -235,7 +235,7 @@ Pour obtenir la liste des emplacements disponibles, consultez les [emplacements 
 Votre courtier doit être hébergé comme partie d'une application pouvant répondre aux appels d'API REST. De plus, votre emplacement hébergé doit être conforme aux instructions de sécurité {{site.data.keyword.Bluemix_notm}}. L'hébergement peut être effectué dans {{site.data.keyword.Bluemix_notm}} ou en externe tant que l'élément est accessible publiquement à partir d'{{site.data.keyword.Bluemix_notm}}.
 
 Pour héberger votre courtier en dehors d'IBM, vous devez vous assurer que les instructions de sécurité suivantes sont respectées :
-- Le protocole TLS (Transport Layer Security) version 1.2 doit être respecté 
+- Le protocole TLS (Transport Layer Security) version 1.2 doit être respecté
 - L'hébergement doit être effectué sur un noeud final HTTPs valide accessible sur le réseau Internet public
 
 Si vous souhaitez effectuer l'hébergement dans {{site.data.keyword.Bluemix_notm}}, vous pouvez trouver des informations sur la création d'une application utilisant des conteneurs (Kubernetes) ici : [Utilisateurs internes - Informations sur l'utilisation](/docs/containers/cs_internal.html#cs_internal).
@@ -266,4 +266,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Etapes suivantes
 
-Vous venez de créer et d'héberger un courtier de services respectant la spécification OSB. Voir [Etape 4 : Publication et test de votre service](/docs/third-party/cis4-rmc-publish.html).
+Vous venez de créer et d'héberger un courtier de services respectant la spécification OSB. Voir [Etape 4 : Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
