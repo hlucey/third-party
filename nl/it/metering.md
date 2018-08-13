@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -124,7 +124,7 @@ Dato un mese di 30 giorni:
 | Giorno 2 (mattina)    | 2                | 2 / 1         | (5,5 + 2) / 2                          | 3,75                                             |
 | Giorno 2 (notte)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (il giorno 2 fine giornata)                               |
 | Dal giorno 3 al giorno 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666  (il giorno 15 fine giornata)                          |
-| Dal giorno 15 al giorno 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 * 12) + (0  * 15) / 30 | 0,7333  (il giorno 20 fine giornata)                          |
+| Dal giorno 15 al giorno 30   | 0                | 0 / 1         | (5.5 + 3.5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (il giorno 30 fine giornata)   |
 
 \* Come visto nello stesso giorno di quando è stato inoltrato l'utilizzo.
 
