@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -18,7 +18,8 @@ lastupdated: "2018-06-21"
 # Integração de medição
 {: #meteringintera}
 
-O {{site.data.keyword.Bluemix}} suporta múltiplos modelos para agregar o uso de oferta. Os provedores de ofertas medem várias métricas sobre as instâncias provisionadas e enviam essas medidas para o serviço de medição. O serviço de classificação agrega o uso enviado em diferentes depósitos (instância, grupo de recursos e conta) com base no modelo que os provedores de oferta escolhem. Os modelos de agregação e classificação para todas as métricas em um plano estão contidos nos documentos de definição de medição e classificação para o plano.{:shortdesc}
+O {{site.data.keyword.Bluemix}} suporta múltiplos modelos para agregar o uso de oferta. Os provedores de ofertas medem várias métricas sobre as instâncias provisionadas e enviam essas medidas para o serviço de medição. O serviço de classificação agrega o uso enviado em diferentes depósitos (instância, grupo de recursos e conta) com base no modelo que os provedores de oferta escolhem. Os modelos de agregação e classificação para todas as métricas em um plano estão contidos nos documentos de definição de medição e classificação para o plano.
+{:shortdesc}
 
 A lista a seguir descreve as expectativas para rastreamento e envio de uso:
 
@@ -73,7 +74,7 @@ Calcule os usos para o mês inteiro.
 
 Fórmula: ADD (usos)
 
-| Horário         | Uso Enviado | Cálculo | Quantidade no Painel |
+| Horário            | Uso Enviado | Cálculo | Quantidade no Painel |
 |-----------------|:-------------:| ----------- |:---------------------:|
 | Dia 1 (manhã) | 5             | 5           | 5                     |
 | Dia 1 (noite)   | 5             | 5 + 5       | 10                    |
@@ -86,7 +87,7 @@ Calcule a média dos usos para o mês inteiro. Observe que enviar um uso zero ta
 
 Fórmula: AVG (usos)
 
-| Horário         | Uso Enviado | Cálculo                 | Quantidade no Painel |
+| Horário            | Uso Enviado | Cálculo             | Quantidade no Painel |
 |-----------------|:-------------:| ----------------------- |:---------------------:|
 | Dia 1 (manhã) | 4             | 4 / 1                   | 4                     |
 | Dia 1 (noite)   | 0             | (4 + 0) / 2             | 2                     |
@@ -99,7 +100,7 @@ Calcule o máximo dos usos para o mês inteiro.
 
 Fórmula: MAX (usos)
 
-| Horário         | Uso Enviado  | Cálculo      | Quantidade no Painel |
+| Horário            | Uso Enviado  | Cálculo  | Quantidade no Painel |
 |-----------------|:--------------:| ------------ |:---------------------:|
 | Dia 1 (manhã) | 5              | MAX (5)       | 5                     |
 | Dia 1 (noite)   | 10             | MAX (5, 10)   | 10                    |
@@ -116,14 +117,14 @@ Observe que a quantidade pode mudar durante todo o mês, mas o que é taxado é 
 
 Dado um mês de 30 dias:
 
-| Horário            | Uso Enviado    | Média diária  | Cálculo                                | Quantidade no Painel *                           |
+| Horário               | Uso Enviado    | Média diária | Cálculo                            | Quantidade no Painel *                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
 | Dia 1 (manhã)    | 8                | 8 / 1         | 8 / 1                                  | 8                                                |
 | Dia 1 (noite)      | 3                | (8 + 3) / 2   | 5,5 / 1                                | 5,5 (No dia 1 EOD)                               |
 | Dia 2 (manhã)    | 2                | 2 / 1         | (5,5 + 2) / 2                          | 3,75                                             |
 | Dia 2 (noite)      | 5                | (2 + 5) / 2   | (5.5 + 3.5) / 2                        | 4.5 (No Dia 2 EOD)                               |
 | Dia 3 ao Dia 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1.4666 (No Dia 15 EOD)                          |
-| Dia 15 ao Dia 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 * 12) + (0  * 15) / 30 | 0,7333 (No dia 20 EOD)                          |
+| Dia 15 ao Dia 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (no dia 30 - final do dia)                          |
 
 \* Conforme visto no mesmo dia que o momento em que o uso foi enviado.
 
@@ -136,7 +137,7 @@ Observe que a quantidade pode mudar ao longo do mês, mas o que é taxado é o u
 
 Dado um mês de 30 dias:
 
-| Horário          | Uso Enviado  | Máximo Diário | Cálculo                        | Quantidade no Painel * |
+| Horário             | Uso Enviado  | Máximo Diário | Cálculo                    | Quantidade no Painel * |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|
 | Dia 1 (manhã)  | 0              | MAX (0)    | 0 / 1                          | 0                      |
 | Dia 1 (noite)    | 1              | MAX (0, 1) | 1 / 1                          | 1                      |
@@ -168,12 +169,12 @@ Isso retém true caso sua métrica também seja precificada como US$ X por 100 c
 
 A tabela a seguir fornece informações detalhadas sobre os modelos de precificação que estão disponíveis. Para muitas das métricas disponíveis, você seleciona um modelo de precificação associado.
 
-| Modelo         | Descrição | Cálculo     | Exemplo (5000 quantity) |
+| Modelo          | Descrição | Cálculo | Exemplo (5000 quantity) |
 |:-----------------|:-------------|:----------- |:---------------------|
-| Linear         | Multiplique o preço unitário por recurso (P) pela quantidade de uso (Q) para obter a quantia total (T) | P*Q    | P=$1 T = 1 * 5000 = $5000        |
-| Rateio         | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. O encargo total envolve acumular os encargos de todos os dias no mês especificado.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
+| Linear         | Multiplique o preço unitário por recurso (P) pela quantidade de uso (Q) para obter a quantia total (T)  | P*Q    | P=$1 T = 1 * 5000 = $5000        |
+| Rateio      | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. O encargo total envolve acumular os encargos de todos os dias no mês especificado.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
 | Camada simples (camada granular)  | Um modelo P*Q no qual o preço unitário para todo o consumo é determinado pela camada na qual a quantidade se enquadra.           | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
-| Camada graduada (camada da etapa) | O preço por unidade varia conforme a quantidade consumida se move para diferentes camadas predefinidas. O encargo total envolve acumular os encargos das camadas anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1 = 1000, P1 = US$ 1, T1 = 1*1000</li><li>Q2 = 1500, P2 = US$ 0,9, T2 = 0,9*1500</li><li>Q3 = 10000, P3 = US$ 0,75, T3 = 0,75*2500</li><li>T = 1000 + 1350 + 1875 = US$ 4225</li></ul>          |
+| Camada graduada (camada da etapa)   | O preço por unidade varia conforme a quantidade consumida se move para diferentes camadas predefinidas. O encargo total envolve acumular os encargos das camadas anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1 = 1000, P1 = US$ 1, T1 = 1*1000</li><li>Q2 = 1500, P2 = US$ 0,9, T2 = 0,9*1500</li><li>Q3 = 10000, P3 = US$ 0,75, T3 = 0,75*2500</li><li>T = 1000 + 1350 + 1875 = US$ 4225</li></ul>          |
 | Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até", que não varia dentro do bloco     | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
 
 
