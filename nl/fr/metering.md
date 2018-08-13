@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -117,14 +117,14 @@ La quantité peut changer au cours du mois, mais l'élément évalué est l'util
 
 Prenons un mois à 30 jours :
 
-| Période               | Utilisation envoyée dans    |Moyenne quotidienne | Calcul                            | Quantité dans le tableau de bord*                           |
+| Période               | Utilisation envoyée dans    | Moyenne quotidienne | Calcul                            | Quantité dans le tableau de bord*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
-| Jour 1 (matin)     | 8                | 8 / 1         | 8 / 1                                  | 8                                                |
+| Jour 1 (matin)    | 8                | 8 / 1         | 8 / 1                                  | 8                                                |
 | Jour 1 (soir)      | 3                | (8 + 3) / 2   | 5,5 / 1                                | 5,5 (A la fin du jour 1)                               |
 | Jour 2 (matin)    | 2                | 2 / 1         | (5,5 + 2) / 2                          | 3,75                                             |
 | Jour 2 (soir)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (A la fin du jour 2)                               |
 | Jour 3 à jour 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666 (A la fin du jour 15)                          |
-| Jour 15 à jour 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 * 12) + (0  * 15) / 30 | 0,7333  (A la fin du jour 30)                         |
+| Jour 15 à jour 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (A la fin du jour 30 EOD)                   |
 
 \* Situation au jour de soumission de l'utilisation.
 
