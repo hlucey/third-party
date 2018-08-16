@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-09"
 
 ---
 
@@ -124,7 +124,7 @@ En el caso de un mes de 30 días:
 | Día 2 (mañana)    | 2                | 2 / 1         | (5,5 + 2) / 2                          | 3,75                                             |
 | Día 2 (noche)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (Día 2 EOD)                               |
 | Día 3 a Día 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666  (Día 15 EOD)                          |
-| Día 15 a Día 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 * 12) + (0  * 15) / 30 | 0,7333  (Día 20 EOD)                          |
+| Día 15 a Día 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (Día 30 EOD)                          |
 
 \* Datos observados en el mismo día que cuando se enviaron los datos de uso.
 
