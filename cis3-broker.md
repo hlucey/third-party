@@ -61,7 +61,7 @@ You’ll be developing an Open Service Broker that works with the {{site.data.ke
 
 ## View our {{site.data.keyword.Bluemix_notm}} Open Service Broker API Documentation
 
-Service brokers should be developed with an understanding of the [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Become familiar with the Broker API, and how it will interact with your broker or brokers.
+Service brokers should be developed with an understanding of the [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Become familiar with the Broker API, and how it will interact with your broker or brokers.
 
 The {{site.data.keyword.Bluemix_notm}} Open Service Broker extends the Open Service Broker 2.12 specification.
 {: tip}
@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## Next steps
 
-You have some serious skills! You just built and hosted a service broker that meets the OSB specification. See [Step 4: Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
+You have some serious skills! You just built and hosted a service broker that meets the OSB specification. See [Step 4: Developing an authentication flow](/docs/third-party/cis5-iam.html).

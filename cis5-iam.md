@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-22"
+lastupdated: "2018-07-27"
 
 
 ---
@@ -100,11 +100,15 @@ This request can be done once when the application is started and again if the `
 ### POST <token_endpoint>
 
 #### Headers:
+{: #headers1}
+
   - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### With parameters:
+{: #parameters1}
+
   - client_id=*[client id]*
   - client_secret=*[client secret]*
   - grant_type=authorization_code
@@ -128,6 +132,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Response:
+{: #response1}
 
 ```
 {
@@ -156,11 +161,15 @@ See the example in our sample brokers: https://github.com/IBM/sample-resource-se
 ### POST /identity/token
 
 #### Headers:
+{: #headers2}
+
   - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
 #### With parameters:
+{: #parameters2}
+
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
   - apikey=*[Api key]*
@@ -177,6 +186,7 @@ curl -k -X POST \
 {: codeblock}
 
 ### Response:
+{: #response2}
 
 ```
 {
