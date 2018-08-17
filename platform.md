@@ -71,7 +71,7 @@ Service Brokers manage the lifecycle of services. The {{site.data.keyword.Bluemi
 
 {{site.data.keyword.Bluemix_notm}} uses the Open Service Broker API (OSB) `version 2.12` specification. Read through and familiarize yourself with the [Open Broker API spec](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and use the readme file as a guide to learn more.
 
-When the resource controller receives a request to provision a resource, it calls your OSB to validate the service type, offering, plans, and regions availability. The resource controller also validates the visibility of the plan associated with the customer account. {{site.data.keyword.Bluemix_notm}} provides broker samples and API docs that extens the OSB spec. You can find more details about developing and hosting your broker as you walk through the detailed integrated billing onboarding development steps.
+When the resource controller receives a request to provision a resource, it calls your OSB to validate the service type, offering, plans, and regions availability. The resource controller also validates the visibility of the plan associated with the customer account. {{site.data.keyword.Bluemix_notm}} provides broker samples and API docs that extends the OSB spec. You can find more details about developing and hosting your broker as you walk through the detailed integrated billing onboarding development steps.
 
 ## {{site.data.keyword.Bluemix_notm}} Metering service
 

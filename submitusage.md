@@ -83,7 +83,7 @@ The following are best practices for submitting usage:
   * Use one word for the unit name, and use an underscore (_), instead of a space, to separate words. For example, specify **API_CALL** instead of **API CALL**.  
   * Capitalize all letters of the name.
   
-### Resource unit quality guidelines
+### Resource unit quantity guidelines
 
   You must follow these guidelines when you specify the resource quantity type by using the resources.unit.quantityType field in the resource definition:
   

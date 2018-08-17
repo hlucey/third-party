@@ -1,0 +1,34 @@
+{:navgroup: .navgroup}
+{:topicgroup: .topicgroup}
+
+{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html"}
+Sviluppo dei servizi di fatturazione integrati di terze parti
+
+    {: .navgroup id="learn"}
+    index.md
+    platform.md
+    offering-types.md
+    checklist.md
+    {: .navgroup-end}
+
+    {: .navgroup id="howto"}
+    integrated-billing-service.md
+
+    {: .topicgroup}
+    Sviluppo e pubblicazione di un servizio di fatturazione integrato
+        cis1-docs-marketing.md
+        cis2-rmc-define.md
+        cis3-broker.md
+        cis5-iam.md
+        cis4-rmc-publish.md
+        cis6-ga.md
+
+    {: .topicgroup}
+    Inoltro dell'utilizzo e della misurazione
+        submitusage.md
+        metering.md
+    {: .navgroup-end}
+
+    {: .navgroup id="help"}
+    faq.md
+    {: .navgroup-end}
