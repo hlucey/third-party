@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Step 2: Defining your offering in the resource management console
+# Step 2. Defining your offering in the resource management console
 
 The resource management console is a web-based tool that helps guide you through delivering your third-party offering into the {{site.data.keyword.Bluemix_notm}} catalog.
 
 Now that you’re approved to deliver an integrated billing service, you’re ready to head to the resource management console to register, start developing your offering, and provide pricing plans:
-   1. Register your service with the resource management console and validate the *Summary* page.
-   2. Enter your catalog metadata within the *Offering* page.
-   3. Register your offering with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Registration generates Client ID and Service ID credentials that are used to authenticate your service.
-   4. Complete the *Pricing* page, ensuring that your service offering in {{site.data.keyword.Bluemix_notm}} offers the right pricing plans to customers. The plans that you define include metering that provides important usage details.
+   1. Register your service with the resource management console and validate the Summary page.
+   2. Enter your catalog metadata within the Offering page.
+   3. Register your offering with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Registration generates client ID and service ID credentials that are used to authenticate your service.
+   4. Complete the Pricing page, ensuring that your service offering in {{site.data.keyword.Bluemix_notm}} offers the right pricing plans to customers. The plans that you define include metering that provides important usage details.
    5. Export your offering metadata into JSON format.
 
 
@@ -33,10 +33,10 @@ Now that you’re approved to deliver an integrated billing service, you’re re
 This step assumes that you’re approved to deliver an integrated billing service. If you haven’t completed the initial registration and approval in the Provider Workbench, see the [Getting started tutorial](/docs/third-party/index.html).
 {: tip}
 
-1. Ensure that you've begun working on: [Step 1: Author service docs and marketing announcement (PWB)](/docs/third-party/cis1-docs-marketing.html)
+1. Ensure that you've begun working on [Step 1: Author service docs and marketing announcement (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Ensure that you're registered with {{site.data.keyword.Bluemix_notm}}. If not, [register](https://console.bluemix.net/registration) before proceeding.
 3. Ensure that you are in the correct account when you begin working in the resource management console.
-4. Prepare your {{site.data.keyword.Bluemix_notm}} service name
+4. Prepare your {{site.data.keyword.Bluemix_notm}} service name.
 
    You must provide both a service name that is used to identify the service by the {{site.data.keyword.Bluemix_notm}} platform, and a display name that your customers see in the {{site.data.keyword.Bluemix_notm}} catalog.
 

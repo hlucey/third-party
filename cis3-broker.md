@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,37 +16,37 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# Step 3: Developing and hosting your service brokers
+# Step 3. Developing and hosting your service brokers
 
-Using the metadata you exported from the resource management console, you’ll build one or more new service brokers in the programming language of your choice.
+Using the metadata you exported from the resource management console, you build one or more new service brokers in the programming language of your choice.
 
 Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with service brokers to provision and manage service instances (an instantiation of a service offering) and service bindings (The representation of an association between an application and a service instance, which often contain the credentials that the application will use to communicate with the service instance). Providing valid metadata values will create a successful RESTful API Response when a Request is performed.
 
-You can get started building your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation. To develop your broker, you’ll:
+You can get started building your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation. To develop your broker, you:
 
-1. View our platform provisioning scenario
-2. Read through the OSB specification
-2. Look at the {{site.data.keyword.Bluemix_notm}} broker samples
-3. Use the Resource Broker API documentation to understand REST API endpoint logic
-4. Use the metadata you exported from resource management console to inform your development
-5. View the Broker information provided by the {{site.data.keyword.Bluemix_notm}} platform
-6. Read through the additional recommendations to optimize your development
-7. Host your broker
-8. Test out your broker
+1. View our platform provisioning scenario.
+2. Read through the OSB specification.
+2. Look at the {{site.data.keyword.Bluemix_notm}} broker samples.
+3. Use the Resource Broker API documentation to understand REST API endpoint logic.
+4. Use the metadata you exported from resource management console to inform your development.
+5. View the Broker information provided by the {{site.data.keyword.Bluemix_notm}} platform.
+6. Read through the additional recommendations to optimize your development.
+7. Host your broker.
+8. Test out your broker.
 
 ## Before you begin
 
 This step assumes that you have been approved to deliver an integrated billing service. If you haven't yet completed the initial registration and approval in Provider Workbench, see the [Getting started tutorial](/docs/third-party/index.md).
 {: tip}
 
-Ensure you have started step 1 and completed step 2
+Ensure you have started step 1 and completed step 2:
 1. [Author service docs and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
 2. [Define your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
 
 
 ## View our {{site.data.keyword.Bluemix_notm}} platform provisioning scenario
 
-You’ll be developing an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) to gain an understanding of how resource creation works.
+You develop an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) to gain an understanding of how resource creation works.
 
 ## Become familiar with the OSB specification
 

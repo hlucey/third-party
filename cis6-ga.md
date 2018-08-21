@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# Step 6: Publicly releasing your service
+# Step 6. Publicly releasing your service
 
-Are you ready to go live? Have you tested your limited visibility service? If so, it's time to prepare for GA. Service providers must record a video, demonstrating that your finished service meets all requirements. You will submit to IBM via email. Your demo will be reviewed by IBM before final publish approval can be granted. Recordings are reviewed every Tuesday with a decision or feedback returned the following Thursday, so be sure to plan enough time to prepare for you go-live date.
+Are you ready to go live? Have you tested your limited visibility service? If so, it's time to prepare for GA. Service providers must record a video, demonstrating that your finished service meets all requirements. You will submit to IBM through email. Your demo will be reviewed by IBM before final publish approval can be granted. Recordings are reviewed every Tuesday with a decision or feedback returned the following Thursday, so be sure to plan enough time to prepare for you go-live date.
 
-This step assumes you have been approved to deliver a Commerce Integrated service. If you haven't yet completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+This step assumes you are approved to deliver an integrated billing service. If you haven't yet completed the initial registration and approval in the Provider Workbench, see the [getting started tutorial](/docs/third-party/index.html).
 {: tip}
 
 ## Before you begin

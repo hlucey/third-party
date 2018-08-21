@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-27"
 
 # Step 5: Publishing and testing your service
 
-Now that you have your hosted broker or brokers that meet the OSB specification, you can return to the resource management console to publish your service to the{{site.data.keyword.Bluemix_notm}} catalog. Complete the *Deployments* tab: schedule the deployment of your service plans into one or more regions of the {{site.data.keyword.Bluemix_notm}} catalog, test your broker or brokers, and finally publish to the catalog in limited visibility mode. After you successfully deploy, test your offering to make sure it meets the required criteria, and iterate through the publication process as needed.
+Now that you have your hosted broker or brokers that meet the OSB specification, you can return to the resource management console to publish your service to the{{site.data.keyword.Bluemix_notm}} catalog. Complete the **Deployments** tab: schedule the deployment of your service plans into one or more regions of the {{site.data.keyword.Bluemix_notm}} catalog, test your broker or brokers, and finally publish to the catalog in limited visibility mode. After you successfully deploy, test your offering to make sure it meets the required criteria, and iterate through the publication process as needed.
 
 
 ## Before you begin
@@ -34,15 +34,15 @@ Ensure you have started step 1 and completed steps 2, 3, and 4:
 
 ## Publish your service to {{site.data.keyword.Bluemix_notm}}
 
-1. From the resource management console, click the **Deployments** page.
-2. Click the **Brokers** tab and click **Add broker**
+1. From the resource management console, click the Deployments page.
+2. Click the **Brokers** tab and click **Add broker**.
 3. Click **Manage** to open the Service Broker Configuration page.
 4. Add your hosted broker, and click **Register broker**.
 5. After successfully registering switch to the **Catalog Deployments** tab.
 6. Click **Add Deployment** and select the plan and the broker you want to deploy.
-7. Select the Region and Data Center where you want to deploy your service to and click **Add**.
-8. From the **Deployments** page review your un-published deployment and click **Publish**.
-9. From the **Publish to the Catalog** page review the details of your deployment and click **Publish**.
+7. Select the region and data center where you want to deploy your service to and click **Add**.
+8. From the Deployments page review your un-published deployment and click **Publish**.
+9. From the Publish to the Catalog page review the details of your deployment and click **Publish**.
 
 The Deployments page should now be marked complete in the navigation, indicating that you have passed the minimum requirements.
 

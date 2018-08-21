@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Step 1: Creating your documentation and marketing accouncement
+# Step 1. Creating your documentation and marketing accouncement
 {: #content-tasks}
 
 You can use the IBM Provider Workbench to create your getting started documentation and marketing announcement.

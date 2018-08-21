@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Step 4: Developing an authentication flow
+# Step 4. Developing an authentication flow
 
-When you defined your offering, The resource management console - **Access Management** page provided you with your {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) Client ID and Secret, your Service ID, and your API key. Now it's time to use those values to complete the following steps:
+When you defined your offering, The Access Management page in the resource management console provided you with your {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) Client ID and Secret, your Service ID, and your API key. Now it's time to use those values to complete the following steps:
 
 1. Derive your redirect URI based on your handling of your `dashboard_url`, return to the resource managent console and add it to the IAM Tab, ensuring you update your Client ID.
-2. Develop the OAuth flow for authentication. You will use your redirect uri(s), client id and client secret as parameters to the `token_endpoint` IAM Rest APIs to complete this flow.
+2. Develop the OAuth flow for authentication. You will use your redirect uris, client id and client secret as parameters to the `token_endpoint` IAM Rest APIs to complete this flow.
 3. Validate user authorization:
-   1. Communicate with IAM to obtain an access token from your api key
-   2. Validate authorization for the user to the service dashboard using the `authorization_endpoint` (/v2/authz POST)
+   1. Communicate with IAM to obtain an access token from your api key.
+   2. Validate authorization for the user to the service dashboard by using the `authorization_endpoint` (/v2/authz POST).
 
-This step assumes you have been approved to deliver an Integrated Billing service. If you haven't yet completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+This step assumes you are approved to deliver an Integrated Billing service. If you haven't yet completed the initial registration and approval in the Provider Workbench, see the [getting started tutorial](/docs/third-party/index.html).
 {: tip}
 
 ## Before you begin
@@ -37,9 +37,9 @@ Ensure you have started step 1 and completed steps 2 and 3:
 3. [Develop and host your service brokers](/docs/third-party/cis3-broker.html).
 
 
-## Derive your IAM Redirect URI (resource management console: IAM page)
+## Derive your IAM redirect URI (resource management console: IAM page)
 
-When you defined your service in resource management console, you generated a Client ID, but note that you likely did not have a Redirect URI at the time. This means IAM created a Client ID that is set to false. Until you return to the resource management console with your Redirect URI, you won't have a true Client ID.
+When you defined your service in resource management console, you generated a client ID, but note that you likely did not have a redirect URI at the time. This means IAM created a client ID that is set to false. Until you return to the resource management console with your redirect URI, you won't have a true client ID.
 
 The good news is that in the previous development step, you developed an OSB and hosted it (You probably saw IAM values in the sample broker code). The `redirect_uri` is usually the host url where the app lives with some additional url that will handle the authentication/authorization.
 
