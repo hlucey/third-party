@@ -16,7 +16,7 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Step 1. Creating your documentation and marketing accouncement
+# Step 1. Creating your documentation and marketing announcement
 {: #content-tasks}
 
 You can use the IBM Provider Workbench to create your getting started documentation and marketing announcement.
@@ -25,12 +25,12 @@ You can use the IBM Provider Workbench to create your getting started documentat
 ## Before you begin
 {: #prereqs}
 
-Make sure you completed the [getting started tutorial](/docs/third-party/index.html), and you're approved to deliver an integrated billing service.
+Make sure that you completed the [getting started tutorial](/docs/third-party/index.html), and you're approved to deliver an integrated billing service.
 
 ## Create your getting started documentation
 {: #docs}
 
-To deliver an integrated billing service, you are required to provide gettng started documentation that describes how users get started with using your service in the context of {{site.data.keyword.Bluemix_notm}}. You can work on this task in parallel while you develop your service.
+To deliver an integrated billing service, you're required to provide getting started documentation that describes how users get started with using your service in the context of {{site.data.keyword.Bluemix_notm}}. You can work on this task in parallel while you develop your service.
 
 1. Log in to the [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 2. From the Provider Workbench dashboard, click **Tasks** on your offering tile.
@@ -42,7 +42,7 @@ Your catalog metadata must link to your published documentation URL. Defining yo
 ## Create your service announcement
 {: #announcement}
 
-In addition to your getting started documentation, you are also required to create marketing content to announce the availability of your service through the {{site.data.keyword.Bluemix_notm}} newsletter and social media channels. You can work on this task in parallel while you develop your service.
+In addition to your getting started documentation, you're also required to create marketing content to announce the availability of your service through the {{site.data.keyword.Bluemix_notm}} newsletter and social media channels. You can work on this task in parallel while you develop your service.
 
 1. Log in to the [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 2. From the Provider Workbench dashboard, click **Tasks** on your offering tile.
