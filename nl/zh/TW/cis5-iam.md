@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# 步驟 4：開發鑑別流程
+# 步驟 4. 開發鑑別流程
 
-當您定義供應項目時，資源管理主控台 - **存取管理**頁面會提供您的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)「用戶端 ID」及「密碼」、「服務 ID」和 API 金鑰。現在可以使用這些值來完成下列步驟：
+當您定義供應項目時，資源管理主控台中的「存取管理」頁面提供了您的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)「用戶端 ID」及「密碼」、「服務 ID」和 API 金鑰。現在可以使用這些值來完成下列步驟：
 
 1. 根據處理 `dashboard_url` 的方式衍生重新導向 URI、回到資源管理主控台，然後將其新增至 IAM 標籤，並確定更新「用戶端 ID」。
 2. 開發 OAuth 流程以進行鑑別。您將使用重新導向 URI、用戶端 ID 及用戶端密碼作為 `token_endpoint` IAM REST API 的參數，來完成此流程。
 3. 驗證使用者授權：
-   1. 與 IAM 通訊，以從 API 金鑰取得存取記號
-   2. 使用 `authorization_endpoint` (/v2/authz POST)，驗證使用者對於服務儀表板的授權
+   1. 與 IAM 通訊，以從 API 金鑰取得存取記號。
+   2. 使用 `authorization_endpoint` (/v2/authz POST)，驗證使用者對於服務儀表板的授權。
 
-此步驟假設您已獲准提供「整合式計費服務」。如果您尚未在 PWB 中完成起始登錄及核准，則請參閱：[在 {{site.data.keyword.Bluemix_notm}} 中開始發佈協力廠商供應項目](/docs/third-party/index.html)
+此步驟假設您已獲准提供「整合式計費服務」。如果您尚未在 Provider Workbench 中完成起始登錄及核准，則請參閱[入門指導教學](/docs/third-party/index.html)。
 {: tip}
 
 ## 開始之前
@@ -39,7 +39,7 @@ lastupdated: "2018-07-27"
 
 ## 衍生 IAM 重新導向 URI（資源管理主控台：IAM 頁面）
 
-當您在資源管理主控台中定義服務時，已產生「用戶端 ID」，但請注意，您在當時可能沒有「重新導向 URI」。這表示 IAM 已建立設為 false 的「用戶端 ID」。在您使用「重新導向 URI」回到資源管理主控台之前，不會有真正的「用戶端 ID」。
+當您在資源管理主控台中定義服務時，已產生用戶端 ID，但請注意，您在當時可能沒有重新導向 URI。這表示 IAM 已建立設為 false 的用戶端 ID。在您使用重新導向 URI 回到資源管理主控台之前，不會有真正的用戶端 ID。
 
 好消息是在前一個開發步驟中，您已開發並管理 OSB（您可能已在範例分配管理系統程式碼中看到 IAM 值）。`redirect_uri` 通常是應用程式所在的主機 URL，以及將處理鑑別/授權的某個其他 URL。
 

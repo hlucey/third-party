@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# 步驟 3：開發及管理服務分配管理系統
+# 步驟 3. 開發及管理服務分配管理系統
 
 您將使用從資源管理主控台匯出的 meta 資料，以您選擇的程式設計語言建置一個以上的新服務分配管理系統。
 
@@ -24,22 +24,22 @@ lastupdated: "2018-06-26"
 
 您可以使用下列項目的組合來開始建置分配管理系統：從資源管理主控台匯出的 meta 資料、公用 {{site.data.keyword.Bluemix_notm}} 服務分配管理系統範例，以及 Resource Broker API 文件。若要開發分配管理系統，您將：
 
-1. 檢視平台佈建情境
-2. 閱讀 OSB 規格
-2. 查看 {{site.data.keyword.Bluemix_notm}} 分配管理系統範例
-3. 使用 Resource Broker API 文件來瞭解 REST API 端點邏輯
-4. 使用您從資源管理主控台匯出的 meta 資料來通知開發
-5. 檢視 {{site.data.keyword.Bluemix_notm}} 平台提供的分配管理系統資訊
-6. 閱讀其他建議以便最佳化開發
-7. 管理分配管理系統
-8. 測試分配管理系統
+1. 檢視平台佈建情境。
+2. 閱讀 OSB 規格。
+2. 查看 {{site.data.keyword.Bluemix_notm}} 分配管理系統範例。
+3. 使用 Resource Broker API 文件來瞭解 REST API 端點邏輯。
+4. 使用您從資源管理主控台匯出的 meta 資料來通知開發。
+5. 檢視 {{site.data.keyword.Bluemix_notm}} 平台提供的分配管理系統資訊。
+6. 閱讀其他建議以便最佳化開發。
+7. 管理分配管理系統。
+8. 測試分配管理系統。
 
 ## 開始之前
 
 此步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准，則請參閱[入門指導教學](/docs/third-party/index.md)。
 {: tip}
 
-確定您已開始步驟 1 並完成步驟 2
+確定您已開始步驟 1 並完成步驟 2：
 1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
 2. [在資源管理主控台中定義供應項目](/docs/third-party/cis2-rmc-define.html)。
 
@@ -61,7 +61,7 @@ lastupdated: "2018-06-26"
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文件
 
-應該先瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 再開發服務分配管理系統。熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
+應該先瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 再開發服務分配管理系統。熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 延伸了 Open Service Broker 2.12 規格。
 {: tip}

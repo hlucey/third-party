@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Schritt 2: Angebot in der Konsole für das Ressourcenmanagement definieren
+# Schritt 2. Angebot in der Konsole für das Ressourcenmanagement definieren
 
 Die Konsole für das Ressourcenmanagement ist ein webbasiertes Tool, das Sie durch die Bereitstellung Ihres Drittanbieterangebots im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
 
 Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen, sind Sie bereit, in der Konsole für das Ressourcenmanagement die Registrierung durchzuführen, mit der Entwicklung Ihres Angebots zu beginnen und Ihre Preisstrukturpläne bereitzustellen:
-   1. Registrieren Sie Ihren Service bei der Konsole für das Ressourcenmanagement und überprüfen Sie, ob die Daten auf der Seite *Zusammenfassung* korrekt sind.
-   2. Geben Sie Ihre Katalogmetadaten auf der Seite *Angebot* ein.
+   1. Registrieren Sie Ihren Service bei der Konsole für das Ressourcenmanagement und überprüfen Sie, ob die Daten auf der Zusammenfassungsseite korrekt sind.
+   2. Geben Sie Ihre Katalogmetadaten auf der Angebotsseite ein.
    3. Registrieren Sie Ihr Angebot bei {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Bei der Registrierung werden die Berechtigungsnachweise für die Client- und die Service-ID generiert, die zur Authentifizierung Ihres Service dienen.
-   4. Füllen Sie die Seite *Preisstruktur* aus und überprüfen Sie, dass Ihr Serviceangebot in {{site.data.keyword.Bluemix_notm}} den Kunden mit den korrekten Preisstrukturplänen angezeigt wird. Die Pläne, die Sie definieren, umfassen Messungen, in denen wichtige Nutzungsdetails enthalten sind.
+   4. Füllen Sie die Preisstrukturseite aus und überprüfen Sie, dass Ihr Serviceangebot in {{site.data.keyword.Bluemix_notm}} den Kunden mit den korrekten Preisstrukturplänen angezeigt wird. Die Pläne, die Sie definieren, umfassen Messungen, in denen wichtige Nutzungsdetails enthalten sind.
    5. Exportieren Sie Ihre Angebotsmetadaten im JSON-Format.
 
 
@@ -33,7 +33,7 @@ Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abre
 Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.html) vertraut machen.
 {: tip}
 
-1. Vergewissern Sie sich, dass Sie mit dem folgenden Schritt begonnen haben: [Schritt 1: Servicedokumentation und Marketingankündigung verfassen (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Vergewissern Sie sich, dass Sie mit dem folgenden Schritt begonnen haben: [Schritt 1. Servicedokumentation und Vertriebsfreigabe verfassen (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Vergewissern Sie sich, dass Sie die Registrierung bei {{site.data.keyword.Bluemix_notm}} durchgeführt haben. Falls Sie diesen Schritt noch nicht ausgeführt haben, dann führen Sie die [Registrierung](https://console.bluemix.net/registration) durch, bevor Sie fortfahren.
 3. Vergewissern Sie sich, dass Sie sich im korrekten Konto befinden, bevor Sie mit dem Arbeiten in der Konsole für das Ressourcenmanagement beginnen.
 4. Bereiten Sie Ihren {{site.data.keyword.Bluemix_notm}}-Servicenamen vor.
@@ -100,21 +100,21 @@ Sie erhalten Ihren API-Schlüssel, wenn Sie **IAM aktivieren**. Es ist wichtig, 
 
 ## Preisstrukturplan entwickeln
 
-Wenn Sie das Onboarding Ihres Service in {{site.data.keyword.Bluemix_notm}} durchführen, dann müssen Sie auch einen Preisstrukturplan definieren. Wenn Sie über detailliertes Wissen zur Vorgehensweise bei der Belastung von Benutzern für Ihren Service verfügen, dann können Sie diese Informationen in Ihrem Plan angeben. Wenn Sie sich jedoch noch nicht für einen gebührenpflichtigen Plan entschieden haben, dann können Sie mit der Aktivierung eines kostenlosen Plans beginnen und später einen gebührenpflichtigen Plan einrichten.
+Wenn Sie das Onboarding Ihres Service in {{site.data.keyword.Bluemix_notm}} durchführen, dann müssen Sie auch einen Preisstrukturplan definieren. Wenn Sie über detailliertes Wissen zur Vorgehensweise bei der Belastung von Benutzern für Ihren Service verfügen, dann können Sie diese Informationen in Ihrem Plan angeben. Wenn Sie sich jedoch noch nicht für einen gebührenpflichtigen Plan entschieden haben, dann können Sie mit der Aktivierung eines kostenfreien Plans beginnen und später einen gebührenpflichtigen Plan einrichten.
 
 1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Preisstruktur**.
 2. Klicken Sie auf **Plan hinzufügen**, um einen neuen Planeintrag zu erstellen, und klicken Sie dann auf **Plan bearbeiten**, um den Plan zu bearbeiten.
-   * **Kostenloser Plan**: Alle Angebote können über einen Lite-Plan verfügen, für den keine Gebühren berechnet werden. Auf diese Weise können Benutzer Ihren Service testen. Kostenlose Pläne verwenden als **Anzeigename** den Wert *Lite* und als **programmorientierten Namen** den Wert *lite*. Geben Sie für **Ist dieser Plan kostenlos?** die Option **Ja** an. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht.
-   * **Abonnementplan**: Geben Sie bei diesem Plan für **Ist dieser Plan kostenlos?** die Option **Nein** an. Füllen Sie die erforderlichen Felder aus. Behalten Sie die Standardmetrik **Preisstrukturmetrik** bei. Diese Standardmetrik wird bereitgestellt, damit Sie Benutzern eine einmalige monatliche Gebühr berechnen können. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht. Speichern Sie den curl-Beispielbefehl, um die Nutzungsdaten zu übermitteln.
-   * **Nutzungsabhängiger Plan**: Geben Sie bei diesem Plan für **Ist dieser Plan kostenlos?** die Option **Nein** an. Füllen Sie die erforderlichen Felder aus. *Löschen* Sie die standardmäßige Abonnementmetrik **Preisstrukturmetrik**. Klicken Sie auf **Weitere Metrik hinzufügen**, füllen Sie die Seite **Preisstrukturmetrik hinzufügen** aus und klicken Sie auf **Metrik hinzufügen**. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht. Speichern Sie den curl-Beispielbefehl, um die Nutzungsdaten zu übermitteln. Wenn Sie Hilfe bei der Auswahl der richtigen Metriken benötigen, dann lesen Sie die Informationen unter [Messungsintegration](/docs/third-party/metering.html).
+   * **Kostenfreier Plan**: Alle Angebote können über einen Lite-Plan verfügen, für den keine Gebühren berechnet werden. Auf diese Weise können Benutzer Ihren Service testen. Kostenfreie Pläne verwenden als **Anzeigename** den Wert *Lite* und als **programmorientierten Namen** den Wert *lite*. Geben Sie für **Ist dieser Plan kostenfrei?** die Option **Ja** an. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht.
+   * **Abonnementplan**: Geben Sie bei diesem Plan für **Ist dieser Plan kostenfrei?** die Option **Nein** an. Füllen Sie die erforderlichen Felder aus. Behalten Sie die Standardmetrik **Preisstrukturmetrik** bei. Diese Standardmetrik wird bereitgestellt, damit Sie Benutzern eine einmalige monatliche Gebühr berechnen können. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht. Speichern Sie den curl-Beispielbefehl, um die Nutzungsdaten zu übermitteln.
+   * **Plan mit Nutzungsmessung**: Geben Sie bei diesem Plan für **Ist dieser Plan kostenfrei?** die Option **Nein** an. Füllen Sie die erforderlichen Felder aus. *Löschen* Sie die standardmäßige Abonnementmetrik **Preisstrukturmetrik**. Klicken Sie auf **Weitere Metrik hinzufügen**, füllen Sie die Seite **Preisstrukturmetrik hinzufügen** aus und klicken Sie auf **Metrik hinzufügen**. Klicken Sie auf **Speichern**. Ihr Plan wird im {{site.data.keyword.Bluemix_notm}}-Katalog veröffentlicht. Speichern Sie den curl-Beispielbefehl, um die Nutzungsdaten zu übermitteln. Wenn Sie Hilfe bei der Auswahl der richtigen Metriken benötigen, dann lesen Sie die Informationen unter [Messungsintegration](/docs/third-party/metering.html).
 3. Die Seite **Preisstruktur** wird nun als vollständig ausgewiesen. Damit wird angegeben, dass Sie die Mindestanforderungen beim Ausfüllen dieser Seite erfüllt haben.
 
-Service-Provider müssen die stündliche Übermittlung der Nutzungsdaten für alle nutzungsabhängigen Pläne automatisieren. Weitere Informationen finden Sie im Abschnitt [Nutzungsdaten für nutzungsabhängige Pläne übermitteln](/docs/third-party/submitusage.html).
+Service-Provider müssen die stündliche Übermittlung der Nutzungsdaten für alle Pläne mit Nutzungsmessung automatisieren. Weitere Informationen finden Sie im Abschnitt [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party/submitusage.html).
 {: tip}
 
 ## Metadaten im JSON-Format exportieren
 
- Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement definiert haben, können Sie die Datei mit dem Namen 'catalog.json' herunterladen und sie verwenden, um die Entwicklung Ihres Open Service Broker zu informieren. Die Datei 'catalog.json' enthält Metadaten, die im Broker gehostet werden müssen. Diese Werte definieren den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Alle zusätzlichen Katalogmetadaten, die nicht zur Bereitstellung erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden.
+Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement definiert haben, können Sie die Datei mit dem Namen 'catalog.json' herunterladen und sie verwenden, um die Entwicklung Ihres Open Service Broker zu informieren. Die Datei 'catalog.json' enthält Metadaten, die im Broker gehostet werden müssen. Diese Werte definieren den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Alle zusätzlichen Katalogmetadaten, die nicht zur Bereitstellung erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden.
 
 1. Öffnen Sie in der Konsole für das Ressourcenmanagement die Seite **Bereitstellungen**.
 2. Klicken Sie auf **Verwalten**.

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# Schritt 3: Service-Broker entwickeln und hosten
+# Schritt 3. Service-Broker entwickeln und hosten
 
 Mithilfe der von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten werden Sie nun mindestens einen neuen Service-Broker in der Programmiersprache Ihrer Wahl erstellen.
 
@@ -34,19 +34,19 @@ Beginnen Sie die Erstellung Ihres Brokers, indem Sie eine Kombination aus den vo
 7. Hosten Sie Ihren Broker.
 8. Testen Sie Ihren Broker.
 
-## Vorbereitende Schritte
+## #Vorbereitende Schritte
 
 Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.md) vertraut machen.
 {: tip}
 
-Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und Schritt 2 abgeschlossen haben.
+Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und Schritt 2 abgeschlossen haben:
 1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
 2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Szenario für {{site.data.keyword.Bluemix_notm}}-Plattformbereitstellung anzeigen
 
-Sie werden einen Open Service Broker entwickeln, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
+Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
 
 ## Einarbeitung in OSB-Spezifikation durchführen
 
@@ -61,7 +61,7 @@ Sie werden einen Open Service Broker entwickeln, der mit der {{site.data.keyword
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker-API-Dokumentation anzeigen
 
-Zur Entwicklung von Service-Brokern sollten Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, in der die Interaktion der API mit Ihren Brokern erfolgt.
+Zur Entwicklung von Service-Brokern sollten Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, in der die Interaktion der API mit Ihren Brokern erfolgt.
 
 Der {{site.data.keyword.Bluemix_notm}} Open Service Broker erweitert die Version 2.12 der Open Service Broker-Spezifikation.
 {: tip}

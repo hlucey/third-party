@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-27"
 
 # Schritt 5: Eigenen Service veröffentlichen und testen
 
-Nachdem Sie nun über die gehosteten Broker verfügen, die der OSB-Spezifikation entsprechen, können Sie zur Konsole für das Ressourcenmanagement zurückkehren, um Ihren Service im {{site.data.keyword.Bluemix_notm}}-Katalog zu veröffentlichen. Füllen Sie die Registerkarte *Bereitstellungen* aus: Planen Sie die Bereitstellung Ihrer Servicepläne in einer oder auch mehreren Regionen des {{site.data.keyword.Bluemix_notm}}-Katalogs, testen Sie Ihre Broker und führen Sie anschließend die Veröffentlichung im Katalog im Modus für eingeschränkte Sichtbarkeit durch. Nach der erfolgreichen Bereitstellung müssen Sie Ihr Angebot testen, um sicherzustellen, dass es die erforderlichen Kriterien erfüllt, und anschließend den Veröffentlichungsprozess gemäß Ihren Anforderungen durchlaufen.
+Nachdem Sie nun über die gehosteten Broker verfügen, die der OSB-Spezifikation entsprechen, können Sie zur Konsole für das Ressourcenmanagement zurückkehren, um Ihren Service im {{site.data.keyword.Bluemix_notm}}-Katalog zu veröffentlichen. Füllen Sie die Registerkarte **Bereitstellungen** aus: Planen Sie die Bereitstellung Ihrer Servicepläne in einer oder auch mehreren Regionen des {{site.data.keyword.Bluemix_notm}}-Katalogs, testen Sie Ihre Broker und führen Sie anschließend die Veröffentlichung im Katalog im Modus für eingeschränkte Sichtbarkeit durch. Nach der erfolgreichen Bereitstellung müssen Sie Ihr Angebot testen, um sicherzustellen, dass es die erforderlichen Kriterien erfüllt, und anschließend den Veröffentlichungsprozess gemäß Ihren Anforderungen durchlaufen.
 
 
 ## Vorbereitende Schritte
@@ -34,15 +34,15 @@ Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2, 3 und
 
 ## Eigenen Service in {{site.data.keyword.Bluemix_notm}} veröffentlichen
 
-1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Bereitstellungen**.
+1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Bereitstellungsseite.
 2. Klicken Sie auf die Registerkarte **Broker** und anschließend auf **Broker hinzufügen**.
 3. Klicken Sie auf **Verwalten**, um die Seite für die Konfiguration des Service-Brokers zu öffnen.
 4. Fügen Sie den gehosteten Broker hinzu und klicken Sie dann auf **Broker registrieren**.
 5. Rufen Sie nach erfolgreicher Registrierung die Registerkarte **Katalogbereitstellungen** auf.
 6. Klicken Sie auf **Bereitstellung hinzufügen** und wählen Sie den Plan und den Broker aus, die bereitgestellt werden sollen.
 7. Wählen Sie die Region und das Rechenzentrum aus, in denen Ihr Service bereitgestellt werden soll, und klicken Sie dann auf **Hinzufügen**.
-8. Überprüfen Sie auf der Seite **Bereitstellungen** die nicht veröffentlichte Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
-9. Überprüfen Sie auf der Seite **Im Katalog veröffentlichen** die Details Ihrer Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
+8. Überprüfen Sie auf der Bereitstellungsseite die nicht veröffentlichte Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
+9. Überprüfen Sie auf der Seite für die Veröffentlichung im Katalog die Details Ihrer Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
 
 Die Seite 'Bereitstellungen' muss nun in der Navigation als vollständig markiert sein. Dies bedeutet, dass Sie die Mindestanforderungen erfüllt haben.
 

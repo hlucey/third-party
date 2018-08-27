@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# 步驟 2：在資源管理主控台中定義供應項目
+# 步驟 2. 在資源管理主控台中定義供應項目
 
 資源管理主控台是一種 Web 型工具，可協助引導您將協力廠商供應項目提供至 {{site.data.keyword.Bluemix_notm}} 型錄。
 
 既然您已獲准提供整合式計費服務，就可以前往資源管理主控台來登錄、開始開發供應項目，以及提供定價方案：
-   1. 向資源管理主控台登錄服務，並驗證*摘要* 頁面。
-   2. 在*供應項目* 頁面內，輸入您的型錄 meta 資料。
-   3. 向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 登錄供應項目。登錄會產生用來鑑別服務的「用戶端 ID」及「服務 ID」認證。
-   4. 完成*定價* 頁面，並確定 {{site.data.keyword.Bluemix_notm}} 中的服務供應項目提供正確的定價方案給客戶。您定義的方案包括可提供重要用量詳細資料的計量。
+   1. 向資源管理主控台登錄服務，並驗證「摘要」頁面。
+   2. 在「供應項目」頁面內，輸入您的型錄 meta 資料。
+   3. 向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 登錄供應項目。登錄會產生用來鑑別服務的用戶端 ID 及服務 ID 認證。
+   4. 完成「定價」頁面，並確定 {{site.data.keyword.Bluemix_notm}} 中的服務供應項目提供正確的定價方案給客戶。您定義的方案包括可提供重要用量詳細資料的計量。
    5. 將供應項目 meta 資料匯出為 JSON 格式。
 
 
@@ -33,10 +33,10 @@ lastupdated: "2018-07-03"
 此步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准，則請參閱[入門指導教學](/docs/third-party/index.html)。
 {: tip}
 
-1. 確定您已開始處理：[步驟 1：編寫服務文件及行銷公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)
+1. 確定您已開始處理[步驟 1：編寫服務文件及行銷公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
 2. 確定您已向 {{site.data.keyword.Bluemix_notm}} 登錄。否則，請先[登錄](https://console.bluemix.net/registration)，再繼續。
 3. 當您開始在資源管理主控台中工作時，請確定位於正確的帳戶中。
-4. 準備 {{site.data.keyword.Bluemix_notm}} 服務名稱
+4. 準備 {{site.data.keyword.Bluemix_notm}} 服務名稱。
 
    您必須同時提供 {{site.data.keyword.Bluemix_notm}} 平台用來識別服務的服務名稱，以及客戶在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的顯示名稱。
 
@@ -109,7 +109,7 @@ lastupdated: "2018-07-03"
    * **計量方案**：針對**此方案是否免費？**，指定**否**。完成必要欄位。*刪除* 預設**定價標準**訂閱度量值。按一下**新增另一個度量值**，並完成**新增定價標準**頁面，然後按一下**新增度量值**。按一下**儲存**。您的方案會發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。儲存範例 curl 指令來提交用量。如需選取正確度量值的說明，請參閱[計量整合](/docs/third-party/metering.html)。
 3. **定價**頁面現在應該會標示為已完成，指出您已達到完成此頁面的最低需求。
 
-需要有服務提供者，才能自動化所有計量方案的每小時用量提交。如需相關資訊，請參閱：[提交計量方案的用量](/docs/third-party/submitusage.html)
+需要有服務提供者，才能自動執行所有計量方案的每小時用量提交。如需相關資訊，請參閱：[提交計量方案的用量](/docs/third-party/submitusage.html)
 {: tip}
 
 ## 將 meta 資料匯出為 JSON

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,9 +16,9 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Schritt 4: Authentifizierungsablauf entwickeln
+# Schritt 4. Authentifizierungsablauf entwickeln
 
-Beim Definieren Ihres Angebots hat die Konsole für das Ressourcenmanagement auf der Seite **Zugriffsmanagement** eine Client-ID und einen geheimen Schlüssel für {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), Ihre Service-ID und Ihren API-Schlüssel bereitgestellt. Nun sollen diese Werte verwendet werden, um die folgenden Schritte auszuführen:
+Beim Definieren Ihres Angebots haben Sie in der Ressourcenmanagementkonsole auf der Seite für das Zugriffsmanagement eine Client-ID und einen geheimen Schlüssel für {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), Ihre Service-ID und Ihren API-Schlüssel erhalten. Nun sollen diese Werte verwendet werden, um die folgenden Schritte auszuführen:
 
 1. Ableiten Ihres Weiterleitungs-URI auf Basis der Verarbeitung des Werts für `dashboard_url`, Zurückkehren zur Konsole für das Ressourcenmanagement und Hinzufügen des Werts zur Registerkarte für IAM sowie Sicherstellen der Aktualisierung Ihrer Client-ID.
 2. Entwickeln des OAuth-Ablaufs für die Authentifizierung. Sie werden die Weiterleitungs-URIs, die Client-ID und den geheimen Clientschlüssel als Parameter für die IAM-REST-APIs `token_endpoint` verwenden, um diesen Ablauf auszuführen.
@@ -26,7 +26,7 @@ Beim Definieren Ihres Angebots hat die Konsole für das Ressourcenmanagement auf
    1. Kommunizieren mit IAM zum Anfordern eines Zugriffstokens über den API-Schlüssel.
    2. Validieren der Berechtigung des Benutzers für das Service-Dashboard mithilfe von `authorization_endpoint` (/v2/authz POST).
 
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench (PWB) noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im Abschnitt mit der [Einführung zur Veröffentlichung Ihres Drittanbieterangebots in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html) vertraut machen.
+Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in der Provider-Workbench noch nicht durchgeführt haben, sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.html) vertraut machen.
 {: tip}
 
 ## Vorbereitende Schritte

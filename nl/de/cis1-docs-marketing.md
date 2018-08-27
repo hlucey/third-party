@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,10 +16,10 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Schritt 1: Dokumentation und Marketingankündigung erstellen
+# Schritt 1. Dokumentation und Vertriebsfreigabe erstellen
 {: #content-tasks}
 
-Mit der IBM Provider Workbench können Sie die einführende Dokumentation und die Marketingankündigung erstellen.
+Mit der IBM Provider Workbench können Sie die einführende Dokumentation und die Vertriebsfreigabe erstellen.
 {:shortdesc}
 
 ## Vorbereitende Schritte

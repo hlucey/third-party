@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# 步驟 1：建立文件及行銷公告
+# 步驟 1. 建立文件及行銷公告
 {: #content-tasks}
 
 您可以使用 IBM Provider Workbench 來建立入門文件及行銷公告。
