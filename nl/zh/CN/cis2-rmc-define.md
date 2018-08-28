@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# 步骤 2：在资源管理控制台中定义产品
+# 步骤 2. 在资源管理控制台中定义产品
 
 资源管理控制台是一个基于 Web 的工具，可帮助指导您将第三方产品交付到 {{site.data.keyword.Bluemix_notm}}“目录”中。
 
 现在，您已获得批准交付 Integrated Billing 服务，也已准备好转至资源管理控制台来注册、开始开发产品，以及提供价格套餐：
-   1. 向资源管理控制台注册服务，并验证*摘要*页面。
-   2. 在*产品*页面中输入目录元数据。
+   1. 向资源管理控制台注册服务，并验证“摘要”页面。
+   2. 在“产品”页面中输入目录元数据。
    3. 向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 注册产品。注册将生成用于认证服务的客户机标识和服务标识凭证。
-   4. 完成*定价*页面，以确保 {{site.data.keyword.Bluemix_notm}} 中的服务产品向客户提供正确的价格套餐。您定义的套餐包括用于提供重要使用量详细信息的计量。
+   4. 填写“定价”页面，以确保 {{site.data.keyword.Bluemix_notm}} 中的服务产品向客户提供正确的价格套餐。您定义的套餐包括用于提供重要使用量详细信息的计量。
    5. 将产品元数据导出为 JSON 格式。
 
 
@@ -33,10 +33,10 @@ lastupdated: "2018-07-03"
 此步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.html)。
 {: tip}
 
-1. 确保您已开始工作：[步骤 1：编写服务文档和市场营销公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)
+1. 确保您已开始工作：[步骤 1：编写服务文档和市场营销公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
 2. 确保已向 {{site.data.keyword.Bluemix_notm}} 注册。如果未注册，请先[注册](https://console.bluemix.net/registration)，然后再继续操作。
 3. 在资源管理控制台中开始工作时，请确保您处于正确的帐户中。
-4. 准备 {{site.data.keyword.Bluemix_notm}} 服务名称
+4. 准备 {{site.data.keyword.Bluemix_notm}} 服务名称。
 
    您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。
 

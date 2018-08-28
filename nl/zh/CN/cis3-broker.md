@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# 步骤 3：开发和托管服务代理程序
+# 步骤 3. 开发和托管服务代理程序
 
 通过使用从资源管理控制台中导出的元数据，您可使用所选编程语言构建一个或多个新的服务代理程序。
 
@@ -24,15 +24,15 @@ lastupdated: "2018-06-26"
 
 您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来开始构建代理程序。要开发代理程序，请执行以下操作：
 
-1. 查看平台供应方案
-2. 通读 OSB 规范
-2. 查看 {{site.data.keyword.Bluemix_notm}} 代理程序样本
-3. 使用资源代理程序 API 文档来了解 REST API 端点逻辑
-4. 使用从资源管理控制台导出的元数据来通知开发
-5. 查看 {{site.data.keyword.Bluemix_notm}} 平台提供的代理程序信息
-6. 通读其他建议以优化开发
-7. 托管代理程序
-8. 测试代理程序
+1. 查看平台供应方案。
+2. 通读 OSB 规范。
+2. 查看 {{site.data.keyword.Bluemix_notm}} 代理程序样本。
+3. 使用资源代理程序 API 文档来了解 REST API 端点逻辑。
+4. 使用从资源管理控制台导出的元数据来通知开发。
+5. 查看 {{site.data.keyword.Bluemix_notm}} 平台提供的代理程序信息。
+6. 通读其他建议以优化开发。
+7. 托管代理程序。
+8. 测试代理程序。
 
 ## 开始之前
 
@@ -46,7 +46,7 @@ lastupdated: "2018-06-26"
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} 平台供应方案
 
-您将开发与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
+开发与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
 
 ## 熟悉 OSB 规范
 
@@ -61,7 +61,7 @@ lastupdated: "2018-06-26"
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文档
 
-应该在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它将如何与代理程序进行交互。
+应该在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它将如何与代理程序进行交互。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 扩展了 Open Service Broker 2.12 规范。
 {: tip}

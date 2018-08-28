@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -23,7 +23,7 @@ lastupdated: "2018-06-21"
 您可以将 {{site.data.keyword.Bluemix}} 中的第三方产品作为 Integrated Billing 服务或引荐服务交付。本教程着重描述 Integrated Billing 服务选项。要了解有关引荐服务选项的更多信息，请参阅[第三方产品类型](/docs/third-party/offering-types.html)。
 {: tip}
 
-## 步骤 1：注册产品
+## 步骤 1. 注册产品
 {: #step1}
 
 在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中注册您的产品。
@@ -31,7 +31,7 @@ lastupdated: "2018-06-21"
 1. 在 Provider Workbench 的“详细信息”页面中，单击**新产品上线**，然后填写注册表单。
 2. 检查您的收件箱，以获取用于确认注册的电子邮件。
 
-## 步骤 2：列出产品类型
+## 步骤 2. 列出产品类型
 {: #step2}
 
 使用 Provider Workbench 将产品类型列为 Integrated Billing 服务。
@@ -40,7 +40,7 @@ lastupdated: "2018-06-21"
 2. 从**过滤**菜单中选择 **{{site.data.keyword.Bluemix_notm}} 任务列表**以仅针对 {{site.data.keyword.Bluemix_notm}} 任务进行过滤。
 3. 单击“内容”任务磁贴中的**启动**，然后完成就绪性评估表单。通过选择 **Integrated Billing 服务**作为产品类型来回答最后一个问题。
 
-## 步骤 3：定义产品详细信息
+## 步骤 3. 定义产品详细信息
 {: #step3}
 
 选择 **Integrated Billing 服务**作为产品类型并提交了就绪性评估表单后，页面将刷新，其中包含用于定义在 {{site.data.keyword.Bluemix_notm}} 控制台中“目录详细信息”页面上所显示内容的部分。填写每个字段并提交表单以供复查。复查过程可能需要几天时间。

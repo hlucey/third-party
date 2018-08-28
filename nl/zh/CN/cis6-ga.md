@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# 步骤 6：公开发布服务
+# 步骤 6. 公开发布服务
 
 准备好上线了吗？是否已通过有限可视性方式测试过服务？如果是，那么现在该准备 GA 了。服务提供者必须录制视频，通过演示来证明完成的服务满足所有需求。您将通过电子邮件向 IBM 提交。IBM 会审查您的演示，然后才会授予最终发布批准。记录在每周二进行审查，并在接下来的周四返回相关决策或反馈，因此请确保计划足够的时间来为上线日期做好准备。
 
-此步骤假定您已获得批准交付 Commerce Integrated 服务。如果您尚未完成 PWB 中的初始注册和批准，请参阅：[在 {{site.data.keyword.Bluemix_notm}} 中发布第三方产品入门](/docs/third-party/index.html)
+此步骤假定批准您交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.html)。
 {: tip}
 
 ## 开始之前

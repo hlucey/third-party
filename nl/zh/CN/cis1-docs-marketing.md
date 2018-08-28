@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# 步骤 1：创建文档和市场营销公告
+# 步骤 1. 创建文档和市场营销公告
 {: #content-tasks}
 
 您可以使用 IBM Provider Workbench 来创建入门文档和市场营销公告。

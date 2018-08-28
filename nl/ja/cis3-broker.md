@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# ステップ 3: サービス・ブローカーの開発とホスティング
+# ステップ 3. サービス・ブローカーの開発とホスティング
 
 リソース管理コンソールからエクスポートしたメタデータを使用して、希望のプログラミング言語で新しいサービス・ブローカーを 1 つ以上作成します。
 
@@ -24,29 +24,29 @@ lastupdated: "2018-06-26"
 
 リソース管理コンソールからエクスポートしたメタデータ、{{site.data.keyword.Bluemix_notm}} サービス・ブローカーの公開サンプル、およびリソース・ブローカー API 文書を組み合わせて使用して、ブローカーの作成を開始できます。 ブローカーを開発するには、以下を行います。
 
-1. プラットフォーム・プロビジョニング・シナリオを参照する
-2. OSB 仕様を読み通す
-2. {{site.data.keyword.Bluemix_notm}} ブローカー・サンプルを参照する
-3. リソース・ブローカー API 文書で REST API エンドポイント・ロジックを理解する
-4. リソース管理コンソールからエクスポートしたメタデータを使用して開発に情報を提供する
-5. {{site.data.keyword.Bluemix_notm}} プラットフォームで提供されたブローカー情報を表示する
-6. その他の推奨を読み、開発を最適化する
-7. ブローカーをホストする
-8. ブローカーをテストする
+1. プラットフォーム・プロビジョニング・シナリオを表示します。
+2. OSB 仕様を読み通します。
+2. {{site.data.keyword.Bluemix_notm}} ブローカー・サンプルを調べます。
+3. リソース・ブローカー API 文書で REST API エンドポイント・ロジックを理解します。
+4. リソース管理コンソールからエクスポートしたメタデータを使用して開発に情報を提供します。
+5. {{site.data.keyword.Bluemix_notm}} プラットフォームで提供されたブローカー情報を表示します。
+6. その他の推奨を読み、開発を最適化します。
+7. ブローカーをホストします。
+8. ブローカーをテストします。
 
 ## 始める前に
 
 このステップでは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.md)を参照してください。
 {: tip}
 
-ステップ 1 を開始し、ステップ 2 を完了したことを確認します
+ステップ 1 を開始しており、ステップ 2 を完了していることを確認してください。
 1. [サービス文書とマーケティング発表を作成する](/docs/third-party/cis1-docs-marketing.html)。
 2. [リソース管理コンソールでオファリングを定義する](/docs/third-party/cis2-rmc-define.html)。
 
 
 ## {{site.data.keyword.Bluemix_notm}} プラットフォーム・プロビジョニング・シナリオの参照
 
-{{site.data.keyword.Bluemix_notm}} プラットフォームと動作する Open Service Broker をこれから開発します。 [プロビジョニング・シナリオ](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)を参照して、リソース作成の仕組みを把握してください。
+{{site.data.keyword.Bluemix_notm}} プラットフォームと動作する Open Service Broker を開発します。[プロビジョニング・シナリオ](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)を参照して、リソース作成の仕組みを把握してください。
 
 ## OSB 仕様の熟知
 
@@ -61,7 +61,7 @@ lastupdated: "2018-06-26"
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文書の確認
 
-サービス・ブローカーは、[{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を理解した上で開発する必要があります。 Broker API 自体と、それがブローカーとどう相互作用するかについて熟知してください。
+サービス・ブローカーは、[{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を理解した上で開発する必要があります。 Broker API 自体と、それがブローカーとどう相互作用するかについて熟知してください。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker は、Open Service Broker 2.12 仕様を拡張します。
 {: tip}

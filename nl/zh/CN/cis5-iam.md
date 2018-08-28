@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# 步骤 4：开发认证流程
+# 步骤 4. 开发认证流程
 
-定义产品时，资源管理控制台的**访问管理**页面向您提供了 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 客户机标识和密钥、服务标识和 API 密钥。现在，使用这些值来完成以下步骤：
+定义产品时，资源管理控制台中的“访问管理”页面向您提供了 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 客户机标识和密钥、服务标识和 API 密钥。现在，使用这些值来完成以下步骤：
 
 1. 根据对 `dashboard_url` 的处理来派生重定向 URI，返回到资源管理控制台并将其添加到 IAM 选项卡，从而确保更新客户机标识。
 2. 开发用于认证的 OAuth 流程。要完成此流程，您将使用重定向 URI、客户机标识和客户机密钥作为 `token_endpoint` IAM REST API 的参数。
 3. 验证用户授权：
-   1. 与 IAM 通信以从 API 密钥获取访问令牌
-   2. 使用 `authorization_endpoint` 验证是否授予用户对服务仪表板的权限 (/v2/authz POST)
+   1. 与 IAM 通信以从 API 密钥获取访问令牌。
+   2. 使用 `authorization_endpoint` 验证是否授予用户对服务仪表板的权限 (/v2/authz POST)。
 
-此步骤假定已批准您交付 Integrated Billing 服务。如果您尚未完成 PWB 中的初始注册和批准，请参阅：[在 {{site.data.keyword.Bluemix_notm}} 中发布第三方产品入门](/docs/third-party/index.html)
+此步骤假定批准您交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.html)。
 {: tip}
 
 ## 开始之前
@@ -39,7 +39,7 @@ lastupdated: "2018-07-27"
 
 ## 派生 IAM 重定向 URI（资源管理控制台：IAM 页面）
 
-在资源管理控制台中定义服务时，您已生成客户机标识，但请注意，此时您可能并没有重定向 URI。这意味着 IAM 创建的是设置为 false 的客户机标识。在使用“重定向 URI”返回到资源管理控制台之前，您不会拥有设置为 true 的客户机标识。
+在资源管理控制台中定义服务时，您已生成客户机标识，但请注意，此时您可能并没有重定向 URI。这意味着 IAM 创建的是设置为 false 的客户机标识。在使用重定向 URI 返回到资源管理控制台之前，您不会拥有设置为 true 的客户机标识。
 
 好消息是，在先前的开发步骤中，您已开发了 OSB 并对其进行了托管（可能在样本代理程序代码中会看到 IAM 值）。`redirect_uri` 通常是应用程序所在的主机 URL，以及其他一些将处理认证/授权的 URL。
 
