@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -17,33 +17,24 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Step 4. Developing an authentication flow
+{: #step4-iam}
 
-When you defined your offering, The Access Management page in the resource management console provided you with your {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) Client ID and Secret, your Service ID, and your API key. Now it's time to use those values to complete the following steps:
-
-1. Derive your redirect URI based on your handling of your `dashboard_url`, return to the resource managent console and add it to the IAM Tab, ensuring you update your Client ID.
-2. Develop the OAuth flow for authentication. You will use your redirect uris, client id and client secret as parameters to the `token_endpoint` IAM Rest APIs to complete this flow.
-3. Validate user authorization:
-   1. Communicate with IAM to obtain an access token from your api key.
-   2. Validate authorization for the user to the service dashboard by using the `authorization_endpoint` (/v2/authz POST).
-
-This step assumes you are approved to deliver an Integrated Billing service. If you haven't yet completed the initial registration and approval in the Provider Workbench, see the [getting started tutorial](/docs/third-party/index.html).
-{: tip}
+When you define your offering, the Access Manage page in the resource management console lists your {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) client ID and secret, your service ID, and your API key. Now you're ready to use those values to develop an authentication flow.
+{:shortdesc}
 
 ## Before you begin
+{: #pre-reqs}
 
-Ensure you have started step 1 and completed steps 2 and 3:
-1. [Author service docs and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
-2. [Define your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
-3. [Develop and host your service brokers](/docs/third-party/cis3-broker.html).
+Make sure that you completed the [getting started tutorial](/docs/third-party/index.html), and you're approved to deliver an integrated billing service.
 
+## Derive your IAM redirect URI
+{: #redirect-uri}
 
-## Derive your IAM redirect URI (resource management console: IAM page)
+When you define your service in the resource management console, you generate a Client ID, but note that you likely don't have a Redirect URI at the time. A Client ID that is set to false is created by IAM. Until you return to the resource management console with your Redirect URI, you won't have a true Client ID.
 
-When you defined your service in resource management console, you generated a client ID, but note that you likely did not have a redirect URI at the time. This means IAM created a client ID that is set to false. Until you return to the resource management console with your redirect URI, you won't have a true client ID.
+The good news is that in the previous development step, you developed an OSB and hosted it (You probably saw IAM values in the sample broker code). The `redirect_uri` is usually the host url where the app lives with some additional url that can handle the authentication/authorization.
 
-The good news is that in the previous development step, you developed an OSB and hosted it (You probably saw IAM values in the sample broker code). The `redirect_uri` is usually the host url where the app lives with some additional url that will handle the authentication/authorization.
-
- Here are some example redirect URIs
+ The following examples show redirect URIs:
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
@@ -52,13 +43,13 @@ http://localhost:3000/auth/callback <-- for testing locally
 
 Return to the resource management console and add your redirect URI to the IAM tab:
 
-1. Sign into the console
-2. Grab your redirect URI
-3. Return to the resource management console
+1. Sign in to the console.
+2. Grab your redirect URI.
+3. Return to the resource management console.
 4. From the **IAM tab**, paste your redirect URI into the **Redirect URI** field.
 5. Click **Update Client ID** to update your Client ID.
 
-You should now have a Client ID that understands your Redirect URI and is set to true! You can use that Client ID in the next steps to develop your OAuth flow.
+You now have a Client ID that understands your Redirect URI and is set to true! You can use that Client ID in the next steps to develop your OAuth flow.
 
 ## Develop your OAuth flow for authentication
 {: #oauth}
@@ -82,17 +73,17 @@ Content-Type: application/json
 }
 ```
 
-This request can be done once when the application is started and again if the `authorization_endpoint` fails. You should be able to cache the `authorization_endpoint` value for a short amount of time and refresh after the cache expired or an error is encountered.
+This request can be done once when the application is started and again if the `authorization_endpoint` fails. You now are able to cache the `authorization_endpoint` value for a short amount of time and refresh after the cache expired or an error is encountered.
 
 
 **Authentication - Step 1:** When a user navigates to your `dashboard_url`, redirect browser to `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 
--> login prompt will show up
+-> login prompt shows up
 
 -> User enters credentials
 
--> browser callback to redirect uri providing a "code" response parameter and "state" value
+-> browser callback to redirect URI providing a "code" response parameter and "state" value
 
 
 **Authentication - Step 2:** Exchange the code for an access token calling
@@ -113,7 +104,7 @@ This request can be done once when the application is started and again if the `
   - client_secret=*[client secret]*
   - grant_type=authorization_code
   - response_type=cloud_iam
-  - redirect_uri=*[same uri as redirect_uri from step 1]*
+  - redirect_uri=*[same URI as redirect_uri from step 1]*
   - code=*[code from callback]*
 
 ```
@@ -145,17 +136,17 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-  Make sure to store the user's access_token returned in this response as it will be used during user authorization next.
+  Make sure to store the user's access_token returned in this response as it is used during user authorization next.
 
 See the example in our sample brokers: https://github.com/IBM/sample-resource-service-brokers
 
 ## Now it's time to validate the user authorization
 {: #validate}
 
-1. Communicate with IAM to obtain an access token for an api key
-2. Validate authorization for the user to the service instance (/v2/authz POST)
+1. Communicate with IAM to get an access token for an API key.
+2. Validate authorization for the user to the service instance (/v2/authz POST).
 
-### Authorization - Step 1: Get an {{site.data.keyword.Bluemix_notm}} IAM token using an API Key.
+### Authorization - Step 1: Get an {{site.data.keyword.Bluemix_notm}} IAM token by using an API Key.
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
@@ -199,16 +190,16 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Note:** This token is valid for one hour, and can be reused as many times as needed during the one hour time frame. It is highliy recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
+**Note:** This token is valid for one hour, and can be reused as many times as needed during the one hour time frame. It is highly recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
 
 
 ### Authorization - Step 2: Validate authorization for the user to the service instance (/v2/authz POST)
 
-Now that we have authenticated the user and have our own access token, we need to validate the user has the ability to access the service dashboard. First, we'll need a few pieces of information included in the user's access token which we will decode on step 2.1. Then, we'll use that information to call IAM to check if the user is authorized to access the dashboard in step 2.2.
+Now that you authenticated the user and have your own access token, you need to validate that the user is able to access the service dashboard. First, you need a few pieces of information that are included in the user's access token that you decode in step 2.1. Then, you use that information to call IAM to check whether the user is authorized to access the dashboard in step 2.2.
 
-**Step 2.1**: Decode the user's access token (returned during `**Authentication - Step 2:** Exchange the code for an access token ` found above.)
-   This is a JWT token which can be decoded using the any JWT compliant library. For example, see the library included in our [sample broker code](https://github.com/IBM/sample-resource-service-brokers).
-   Once the token is decoded, the format is as shown below; we'll need to extract `iam_id` and `scope` fields which will be used in the next step:
+**Step 2.1**: Decode the user's access token (returned during `**Authentication - Step 2:** Exchange the code for an access token ` found in the preceding section.)
+   The access token is a JWT token that can be decoded by using any JWT-compliant library. For example, see the library included in our [sample broker code](https://github.com/IBM/sample-resource-service-brokers).
+   After the token is decoded, the format is as shown in the following section; you extract the `iam_id` and `scope` fields, which are used in the next step:
 
 ```
 {
@@ -237,7 +228,7 @@ Now that we have authenticated the user and have our own access token, we need t
 }
 ```
 
-**Step 2.2**: Call IAM to check if the user is authorized to access the dashboard
+**Step 2.2**: Call IAM to check whether the user is authorized to access the dashboard
 
 ```
 curl -X POST \
@@ -265,16 +256,16 @@ curl -X POST \
 
 See the example in our sample brokers: https://github.com/IBM/sample-resource-service-brokers
 
-## {{site.data.keyword.Bluemix_notm}} Identity and Access Management Token Scoping for third-party adopters
+## IAM token scoping for third-party adopters
 {: #token_scoping}
 
-User access tokens created with your client id can only be used to access your service APIs. Requests to other cloud APIs using this token will result in access denied, even if the user has an appropriate policy configured.
+User access tokens that are created with your Client ID can only be used to access your service APIs. Requests to other cloud APIs that use this token results in access denied, even if the user has an appropriate policy configured.
 
-As part of third-party integration, token scoping is being used to ensure that tokens have the minimal access scope needed to accomplish the user's goals. To facilitate this, IAM tokens will have access based on the client ID that created the token. This means that if an IAM token was created by a third-party service, an end user will not be able to execute certain APIs and functions, even if the user has an appropriate policy configured.
+As part of third-party integration, token scoping is being used to ensure that tokens have the minimal access scope that is needed to accomplish the user's goals. To facilitate this, IAM tokens access is based on the Client ID that created the token. If an IAM token was created by a third-party service, an end user can't run certain APIs and functions, even if the user has an appropriate policy configured.
 
 The impact on authorizations (all calls to `https://iam.bluemix.net/v2/authz`) is the need to pass down `scope` information in the subject. This information is contained inside an IAM token (base64 encoded) in the `scope` claim.
 
-Here is an example of what has been added in the authorization call:
+The following section is an example of what is added in the authorization call:
 ```
   [
    {  Headers
@@ -306,5 +297,6 @@ Here is an example of what has been added in the authorization call:
 This is applicable to all usages (`user, serviceId, crn`) and all `subject.attributes` need a scope.
 
 ## Next steps
+{: #next-steps}
 
 Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. See: [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
