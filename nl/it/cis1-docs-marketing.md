@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Passo 1: Creazione della tua documentazione e del comunicato di marketing
+# Passo 1. Crea la tua documentazione e il comunicato di marketing
 {: #content-tasks}
 
 Puoi utilizzare IBM Provider Workbench per creare la tua documentazione introduttiva e il comunicato di marketing.

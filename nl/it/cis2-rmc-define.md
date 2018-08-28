@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Passo 2: Definisci la tua offerta nella console di gestione delle risorse
+# Passo 2. Definisci la tua offerta nella console di gestione delle risorse
 
 La console di gestione delle risorse è uno strumento basato sul web che ti assiste nella fornitura della tua offerta di terze parti nel catalogo {{site.data.keyword.Bluemix_notm}}.
 
 Ora che sei stato approvato per fornire un servizio di fatturazione integrato, sei pronto ad andare alla console di gestione delle risorse per eseguire la registrazione, iniziare a sviluppare la tua offerta e fornire piani dei prezzi:
-   1. Registra il tuo servizio con la console di gestione delle risorse e convalida la pagina *Summary*.
-   2. Immetti i tuoi metadati del catalogo all'interno della pagina *Offerta*.
+   1. Registra il tuo servizio con la console di gestione delle risorse e convalida la pagina Riepilogo.
+   2. Immetti i tuoi metadati del catalogo all'interno della pagina Offerta.
    3. Registra la tua offerta presso {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). La registrazione genera le credenziali ID client e ID servizio utilizzate per autenticare il tuo servizio.
-   4. Completa la pagina *Pricing*, garantendo che la tua offerta dei servizi in {{site.data.keyword.Bluemix_notm}} offre i corretti piani dei prezzi ai clienti. I piani che definisci includono una misurazione che fornisce importanti dettagli sull'utilizzo.
+   4. Completa la pagina Prezzi, assicurandoti che la tua offerta di servizi in {{site.data.keyword.Bluemix_notm}} offra i corretti piani dei prezzi ai clienti. I piani che definisci includono una misurazione che fornisce importanti dettagli sull'utilizzo.
    5. Esporta i tuoi metadati dell'offerta in formato JSON.
 
 
@@ -33,10 +33,10 @@ Ora che sei stato approvato per fornire un servizio di fatturazione integrato, s
 Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[Esercitazione introduttiva](/docs/third-party/index.html).
 {: tip}
 
-1. Assicurati di aver iniziato a lavorare su: [Passo 1: Crea i documenti e il comunicato di marketing del servizio(PWB)](/docs/third-party/cis1-docs-marketing.html)
+1. Assicurati di aver iniziato a lavorare su [Passo 1: Crea i documenti e il comunicato di marketing del servizio (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Assicurati che sei registrato presso {{site.data.keyword.Bluemix_notm}}. In caso contrario, [registrati](https://console.bluemix.net/registration) prima di procedere.
 3. Assicurati di essere nell'account corretto quando inizi a lavorare nella console di gestione delle risorse.
-4. Prepara il tuo nome servizio {{site.data.keyword.Bluemix_notm}}
+4. Prepara il tuo nome servizio {{site.data.keyword.Bluemix_notm}}.
 
    Devi fornire sia un nome servizio che viene utilizzato per identificare il servizio dalla piattaforma {{site.data.keyword.Bluemix_notm}} sia un nome di visualizzazione che i tuoi clienti vedono nel catalogo {{site.data.keyword.Bluemix_notm}}.
 

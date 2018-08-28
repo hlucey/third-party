@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Passo 4: Sviluppa un flusso di autenticazione
+# Passo 4. Sviluppa un flusso di autenticazione
 
-Quando hai definito la tua offerta, la pagina **Access Management** della console di gestione delle risorse ti ha fornito la tua chiave IP, il tuo ID servizio e il segreto e l'ID client di {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). Ora puoi utilizzare questi valori per completare la seguente procedura:
+Quando hai definito la tua offerta, la pagina Access Management della console di gestione delle risorse ti ha fornito il segreto e l'ID client, l'ID servizio e la chiave API di {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Ora puoi utilizzare questi valori per completare la seguente procedura:
 
 1. Deriva il tuo URI di reindirizzamento in base alla tua gestione del tuo `dashboard_url`, ritorna alla console di gestione delle risorse e aggiungilo alla scheda IAM, assicurandoti di aggiornare il tuo ID client.
-2. Sviluppa il flusso OAuth per l'autenticazione. Utilizzerai il tuo uri o i tuoi uri di reindirizzamento, il tuo id client e il tuo segreto client come parametri per le API REST `token_endpoint` IAM per completare questo flusso.
+2. Sviluppa il flusso OAuth per l'autenticazione. Per completare questo flusso, utilizzerai i tuoi URI di reindirizzamento, il tuo id client e il tuo segreto client come parametri per le API REST `token_endpoint` IAM.
 3. Convalida l'autorizzazione utente:
-   1. Comunica con IAM per ottenere un token di accesso dalla tua chiave api
-   2. Convalida l'autorizzazione per l'utente al dashboard del servizio utilizzando `authorization_endpoint` (/v2/authz POST)
+   1. Comunica con IAM per ottenere un token di accesso dalla tua chiave api.
+   2. Convalida l'autorizzazione per l'utente al dashboard del servizio utilizzando `authorization_endpoint` (/v2/authz POST).
 
-Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali in PWB, vedi [Introduzione alla pubblicazione della tua offerta di terze parti in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Questo passo presuppone che hai ricevuto l'approvazione a distribuire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[esercitazione introduttiva](/docs/third-party/index.html).
 {: tip}
 
 ## Prima di iniziare
@@ -39,7 +39,7 @@ Assicurati di aver avviato il passo 1 e di aver completato i passi 2 e 3.
 
 ## Deriva il tuo URI di reindirizzamento IAM (console di gestione delle risorse: pagina IAM)
 
-Quando hai definito il tuo servizio nella console di gestione delle risorse, hai generato un ID client; nota però che a questo punto probabilmente non hai un URI di reindirizzamento. Questo significa che IAM ha creato un ID client che è impostato su false. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
+Quando hai definito il tuo servizio nella console di gestione delle risorse, hai generato un ID client, ma è probabile che in quel momento non disponevi di un URI di reindirizzamento. Questo significa che IAM ha creato un ID client che è impostato su false. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
 
 La buona notizia è che nel passo di sviluppo precedente hai sviluppato un OSB e lo hai ospitato (hai probabilmente viso i valori IAM nel codice broker di esempio). Il `redirect_uri` è di norma l'url host dove risiede l'applicazione con qualche url aggiuntivo che gestirà l'autenticazione/autorizzazione.
 

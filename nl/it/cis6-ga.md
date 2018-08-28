@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# Passo 6: Rilascia pubblicamente il tuo servizio
+# Passo 6. Rilascia pubblicamente il tuo servizio
 
-Sei pronto ad andare in scena? Hai verificato il tuo servizio di visibilità limitata? Se sì, è ora di prepararti per la GA. I provider del servizio devono registrare un video, che dimostra che il tuo servizio finale rispetta tutti i requisiti. Lo invierai a IBM per email. La tua demo sarà controllata da IBM prima che possa essere concessa l'approvazione alla pubblicazione finale. Le registrazioni vengono controllate ogni martedì con la restituzione di una decisione o di un feedback il giovedì seguente, per cui assicurati di pianificare il tempo necessario a prepararti per la tua Data Go Live.
+Sei pronto ad andare in scena? Hai verificato il tuo servizio di visibilità limitata? Se sì, è ora di prepararti per la GA. I provider del servizio devono registrare un video, che dimostra che il tuo servizio finale rispetta tutti i requisiti. Lo invierai a IBM tramite email. La tua demo sarà controllata da IBM prima che possa essere concessa l'approvazione alla pubblicazione finale. Le registrazioni vengono controllate ogni martedì con la restituzione di una decisione o di un feedback il giovedì seguente, per cui assicurati di pianificare il tempo necessario a prepararti per la tua Data Go Live.
 
-Questo passo presuppone che tu abbia ricevuto l'approvazione a distribuire un servizio integrato di commercio. Se non hai ancora completato la registrazione iniziale e l'approvazione in PWB, consulta: [Pubblicazione iniziale della tua offerta di terze parti in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Questo passo presuppone che hai ricevuto l'approvazione a distribuire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[esercitazione introduttiva](/docs/third-party/index.html).
 {: tip}
 
 ## Prima di iniziare
@@ -28,7 +28,7 @@ Questo passo presuppone che tu abbia ricevuto l'approvazione a distribuire un se
 Assicurati di aver iniziato il passo 1 e completato i passi 2, 3, 4 e 5:
 1. [Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
 2. [Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).
-3. [Sviluppa e ospita i tuoi broker di servizi](/docs/third-party/cis3-broker.html).
+3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party/cis3-broker.html).
 3. [Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
 3. [Pubblica e verifica il tuo servizio](/docs/third-party/cis4-rmc-publish.html)
 
