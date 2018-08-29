@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# 1단계: 문서 및 마케팅 공지사항 작성
+# 1단계. 문서 및 마케팅 공지사항 작성
 {: #content-tasks}
 
 IBM Provider Workbench를 사용하여 시작하기 문서 및 마케팅 공지사항을 작성할 수 있습니다.
