@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 6: Publicación del servicio para el público
+# Paso 6. Publicación del servicio para el público
 
 ¿Está listo para publicar su servicio? ¿Ha probado su servicio de visibilidad limitada? Si es así, es hora de prepararse para su disponibilidad general. Los proveedores de servicios deben grabar un vídeo que demuestre que su servicio finalizado cumple todos los requisitos. Lo deberá enviar a IBM por correo electrónico. IBM revisará su demostración antes de garantizar la aprobación de la publicación final. Las grabaciones se revisan cada martes y se comunica la decisión el jueves siguiente, así que asegúrese de planificar el tiempo suficiente para prepararse para la fecha de publicación.
 
-En este paso se presupone que se ha aprobado que suministre un servicio de comercio integrado. Si aún no ha realizado el proceso de registro y aprobación inicial en PWB, consulte [Cómo comenzar a publicar su oferta de terceros en {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si todavía no ha completado el registro y aprobación iniciales en el Provider Workbench, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.html).
 {: tip}
 
 ## Antes de empezar

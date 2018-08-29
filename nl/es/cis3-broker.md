@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,37 +16,37 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 3: Desarrollo y alojamiento de intermediarios de servicio
+# Paso 3. Desarrollo y alojamiento de intermediarios de servicio
 
-Utilizando los metadatos que ha exportado desde la consola de gestión de recursos, va a crear uno o varios intermediarios de servicio nuevos en el lenguaje de programación que elija.
+Utilizando los metadatos que ha exportado desde la consola de gestión de recursos, cree uno o varios intermediarios de servicio nuevos en el lenguaje de programación que elija.
 
 Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con intermediarios de servicio para suministrar y gestionar instancias de servicio (una instancia de una oferta de servicio) y enlaces de servicio (la representación de una asociación entre una aplicación y una instancia de servicio, que a menudo contiene las credenciales que utilizará la aplicación para comunicarse con la instancia de servicio). Al proporcionar valores de metadatos válidos se creará una respuesta de API RESTful correcta cuando se realice una solicitud.
 
 Puede empezar a crear el intermediario utilizando una combinación de los metadatos que ha exportado desde la consola de gestión de recursos, nuestros ejemplos de intermediarios de servicio públicos de {{site.data.keyword.Bluemix_notm}} y la documentación de la API del intermediario de recursos. Para desarrollar el intermediario, puede:
 
-1. Ver el escenario de suministro de nuestra plataforma
-2. Consultar la especificación OSB
-2. Examinar los ejemplos de intermediarios de {{site.data.keyword.Bluemix_notm}}
-3. Utilizar la documentación de la API del intermediario de recursos para comprender la lógica del punto final de la API REST
-4. Utilizar los metadatos que ha exportado desde la consola de gestión de recursos para informar sobre su desarrollo
-5. Ver la información de intermediario que proporciona la plataforma {{site.data.keyword.Bluemix_notm}}
-6. Leer las recomendaciones adicionales para optimizar su desarrollo
-7. Alojar el intermediario
-8. Probar el intermediario
+1. Ver el escenario de suministro de nuestra plataforma.
+2. Consultar la especificación OSB.
+2. Examinar los ejemplos de intermediarios de {{site.data.keyword.Bluemix_notm}}.
+3. Utilizar la documentación de la API del intermediario de recursos para comprender la lógica del punto final de la API REST.
+4. Utilizar los metadatos que ha exportado desde la consola de gestión de recursos para informar sobre su desarrollo.
+5. Ver la información de intermediario que proporciona la plataforma {{site.data.keyword.Bluemix_notm}}.
+6. Leer las recomendaciones adicionales para optimizar su desarrollo.
+7. Alojar el intermediario.
+8. Probar el intermediario.
 
 ## Antes de empezar
 
 En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.md).
 {: tip}
 
-Asegúrese de que ha comenzado el paso 1 y ha completado el paso 2
+Asegúrese de que ha comenzado el paso 1 y ha completado el paso 2:
 1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Vea nuestro caso de ejemplo de suministro de la plataforma {{site.data.keyword.Bluemix_notm}}
 
-Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.data.keyword.Bluemix_notm}}. Consulte nuestro [Caso de ejemplo de suministro](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obtener una visión general del funcionamiento del proceso de creación de recursos.
+Puede desarrollar un Open Service Broker que funcione con la plataforma {{site.data.keyword.Bluemix_notm}}. Consulte nuestro [Caso de ejemplo de suministro](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obtener una visión general del funcionamiento del proceso de creación de recursos.
 
 ## Familiarícese con la especificación OSB
 
@@ -61,7 +61,7 @@ Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.da
 
 ## Vea la documentación de nuestra API de Open Service Broker de {{site.data.keyword.Bluemix_notm}}
 
-Los intermediarios de servicio se deberían desarrollar con un cierto conocimiento de la [{{site.data.keyword.Bluemix_notm}}API de Open Service Broker](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
+Los intermediarios de servicio se deberían desarrollar con un cierto conocimiento de la [{{site.data.keyword.Bluemix_notm}}API de Open Service Broker](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker amplía la especificación Open Service Broker 2.12.
 {: tip}

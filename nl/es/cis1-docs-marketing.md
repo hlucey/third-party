@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 1: Creación de la documentación y del anuncio de marketing
+# Paso 1. Creación de la documentación y del anuncio de marketing
 {: #content-tasks}
 
 Puede utilizar IBM Provider Workbench para crear la documentación de inicio y el anuncio de marketing.

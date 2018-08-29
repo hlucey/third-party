@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-27"
 
 # Paso 5: Publicación y prueba del servicio
 
-Ahora que tiene el intermediario o intermediarios alojados que cumplen la especificación OSB, puede volver a la consola de gestión de recursos para publicar el servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}. Complete el separador *Despliegues*: planifique el despliegue de los planes de servicio en una o varias regiones del catálogo de {{site.data.keyword.Bluemix_notm}}, pruebe el intermediario o intermediarios y, finalmente, publique el servicio en el catálogo en modalidad de visibilidad limitada. Después de desplegarla correctamente, pruebe la oferta para asegurarse de que cumple los criterios necesarios y repita el proceso de publicación si es necesario.
+Ahora que tiene el intermediario o intermediarios alojados que cumplen la especificación OSB, puede volver a la consola de gestión de recursos para publicar el servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}. Complete el separador **Despliegues**: planifique el despliegue de los planes de servicio en una o varias regiones del catálogo de {{site.data.keyword.Bluemix_notm}}, pruebe el intermediario o intermediarios y, finalmente, publique el servicio en el catálogo en modalidad de visibilidad limitada. Después de desplegarla correctamente, pruebe la oferta para asegurarse de que cumple los criterios necesarios y repita el proceso de publicación si es necesario.
 
 
 ## Antes de empezar
@@ -34,15 +34,15 @@ Asegúrese de que ha comenzado el paso 1 y ha completado los pasos 2, 3 y 4:
 
 ## Publique su servicio en {{site.data.keyword.Bluemix_notm}}
 
-1. En la consola de gestión de recursos, pulse la página **Despliegues**.
-2. Pulse el separador **Intermediarios** y pulse **Añadir intermediario**
+1. En la consola de gestión de recursos, pulse la página Despliegues.
+2. Pulse el separador **Intermediarios** y pulse **Añadir intermediario**.
 3. Pulse **Gestionar** para abrir la página Configuración del intermediario de servicios.
 4. Añada su intermediario alojado y pulse **Registrar intermediario**.
 5. Después de registrarlo correctamente, vaya al separador **Despliegues del catálogo**.
 6. Pulse **Añadir despliegue** y seleccione el plan y el intermediario que desea desplegar.
 7. Seleccione la región y el centro de datos en los que desea desplegar el servicio y pulse **Añadir**.
-8. En la página **Despliegues**, revise el despliegue no publicado y pulse **Publicar**.
-9. En la página **Publicar en el catálogo**, revise los detalles del despliegue y pulse **Publicar**.
+8. En la página Despliegues, revise el despliegue no publicado y pulse **Publicar**.
+9. En la página Publicar en el catálogo, revise los detalles del despliegue y pulse **Publicar**.
 
 Ahora la página Despliegues debería estar marcada como completada en el área de navegación, lo que indica que ha pasado los requisitos mínimos.
 

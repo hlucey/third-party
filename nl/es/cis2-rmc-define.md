@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 2: Definición de la oferta en la consola de gestión de recursos
+# Paso 2. Definición de la oferta en la consola de gestión de recursos
 
 La consola de gestión de recursos es una herramienta basada en web que le ayuda en el proceso de suministro de su oferta de terceros en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
 Ahora que tiene la aprobación para suministrar un servicio de facturación integrado, está listo para dirigirse a la consola de gestión de recursos para registrarse, iniciar el desarrollo de su oferta y proporcionar planes de precios:
-   1. Registre el servicio con la consola de gestión de recursos y valide la página *Resumen*.
-   2. Especifique los metadatos del catálogo en la página *Oferta*.
+   1. Registre el servicio con la consola de gestión de recursos y valide la página Resumen.
+   2. Especifique los metadatos del catálogo en la página Oferta.
    3. Registre su oferta con {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). El registro genera las credenciales de ID de cliente y de ID de servicio que se utilizan para autenticar el servicio.
-   4. Complete la página *Precios*, asegurándose de que la oferta de servicio en {{site.data.keyword.Bluemix_notm}} ofrece los planes de precios correctos a los clientes. Los planes que defina deben incluir datos de medición que ofrezcan detalles de uso importantes.
+   4. Complete la página Precios, asegurándose de que la oferta de servicio en {{site.data.keyword.Bluemix_notm}} ofrece los planes de precios correctos a los clientes. Los planes que defina deben incluir datos de medición que ofrezcan detalles de uso importantes.
    5. Exporte los metadatos de la oferta en formato JSON.
 
 
@@ -33,10 +33,10 @@ Ahora que tiene la aprobación para suministrar un servicio de facturación inte
 En este paso se presupone que tiene la aprobación para suministrar un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.html).
 {: tip}
 
-1. Asegúrese de que ha comenzado en: [Paso 1: Crear documentación del servicio y anuncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html)
+1. Asegúrese de que ha comenzado en [Paso 1: Crear documentación del servicio y anuncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Asegúrese de que está registrado con {{site.data.keyword.Bluemix_notm}}. Si no es así, [regístrese](https://console.bluemix.net/registration) antes de continuar.
 3. Asegúrese de que está en la cuenta correcta cuando empiece a trabajar en la consola de gestión de recursos.
-4. Prepare su nombre de servicio de {{site.data.keyword.Bluemix_notm}}
+4. Prepare su nombre de servicio de {{site.data.keyword.Bluemix_notm}}.
 
    Debe proporcionar un nombre de servicio, que se utiliza para identificar el servicio en la plataforma {{site.data.keyword.Bluemix_notm}}, y un nombre de visualización, que es el que ven los clientes en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 

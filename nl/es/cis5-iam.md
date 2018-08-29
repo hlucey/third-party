@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 4: Desarrollo de un flujo de autenticación
+# Paso 4. Desarrollo de un flujo de autenticación
 
-Cuando definió la oferta, la consola de gestión de recursos, página **Gestión de acceso**, le proporcionó un ID de cliente y un secreto de IAM (Identity and Access Management) de {{site.data.keyword.Bluemix_notm}}, un ID de servicio y una clave de API. Ahora es el momento de utilizar estos valores para llevar a cabo los pasos siguientes:
+Cuando definió la oferta, la página Gestión de acceso de la consola de gestión de recursos le proporcionó un ID de cliente y un secreto de IAM (Identity and Access Management) de {{site.data.keyword.Bluemix_notm}}, un ID de servicio y una clave de API. Ahora es el momento de utilizar estos valores para llevar a cabo los pasos siguientes:
 
 1. Obtener el URI de redirección en función de su manejo de `dashboard_url`, volver a la consola de gestión de recursos y añadirlo al separador IAM, asegurándose de que actualiza el ID de cliente.
 2. Desarrollar el flujo de OAuth para la autenticación. Utilizará los URI de redirección, el ID de cliente y el secreto de cliente como parámetros para las API Rest de IAM `token_endpoint` para completar este flujo.
 3. Validar la autorización de usuario:
-   1. Comuníquese con IAM para obtener una señal de acceso de la clave de API
-   2. Valide la autorización del usuario en el panel de control de servicio mediante `authorization_endpoint` (/v2/authz POST)
+   1. Comuníquese con IAM para obtener una señal de acceso de la clave de API.
+   2. Valide la autorización del usuario en el panel de control de servicio mediante `authorization_endpoint` (/v2/authz POST).
 
-En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si aún no ha realizado el proceso de registro y aprobación inicial en PWB, consulte [Cómo comenzar a publicar su oferta de terceros en {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si todavía no ha completado el registro y aprobación iniciales en el Provider Workbench, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.html).
 {: tip}
 
 ## Antes de empezar

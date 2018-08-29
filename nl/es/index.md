@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-06-21"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -23,7 +23,7 @@ En esta guía de aprendizaje, presentamos el producto IBM Provider Workbench y l
 Puede distribuir una oferta de terceros en {{site.data.keyword.Bluemix}} como un servicio de facturación integrado o como un servicio de referencia. Esta guía de aprendizaje se centra en la opción de servicio de facturación integrado. Para obtener más información sobre la opción de servicio de referencia, consulte [Tipos de ofertas de terceros](/docs/third-party/offering-types.html).
 {: tip}
 
-## Paso 1: Registrar la oferta
+## Paso 1. Registrar la oferta
 {: #step1}
 
 Registre la oferta en [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
@@ -31,7 +31,7 @@ Registre la oferta en [Provider Workbench](https://www.ibm.com/marketplace/workb
 1. En la página de detalles de Provider Workbench, pulse **Incorporar una nueva oferta** y complete el formulario de registro.
 2. Consulte en su bandeja de entrada un correo electrónico que confirme el registro.
 
-## Paso 2: Listar el tipo de oferta
+## Paso 2. Listar el tipo de oferta
 {: #step2}
 
 Utilice Provider Workbench para listar su tipo de oferta como servicio de facturación integrado.
@@ -40,7 +40,7 @@ Utilice Provider Workbench para listar su tipo de oferta como servicio de factur
 2. Seleccione **Tareas de listado de {{site.data.keyword.Bluemix_notm}}** en el menú **Filtrar** para filtrar solo las tareas de {{site.data.keyword.Bluemix_notm}}.
 3. Pulse **Iniciar** en el mosaico de tareas de Contenido y complete el formulario de evaluación de disponibilidad. En la respuesta a la última pregunta, seleccione **Servicio de facturación integrado** como tipo de oferta.
 
-## Paso 3: Definir los detalles de la oferta
+## Paso 3. Definir los detalles de la oferta
 {: #step3}
 
 Después de seleccionar **Servicio de facturación integrado** como tipo de oferta y de enviar el formulario de evaluación de disponibilidad, la página se renueva con una sección para definir el contenido que se muestra en la página de detalles del catálogo en la consola de {{site.data.keyword.Bluemix_notm}}. Complete cada campo y envíe el formulario para su revisión. El proceso de revisión puede tardar unos días.
