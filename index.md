@@ -57,4 +57,4 @@ When you're approved, you receive an email that outlines your next steps:
 
 * In the resource management console, integrate your offering into {{site.data.keyword.Bluemix_notm}} by defining your offering, building pricing plans, enabling security, and managing the deployment of your offering in different {{site.data.keyword.Bluemix_notm}} environments. 
 
-For more details, see [Developing and publishing an integrated billing service](/docs/third-party/integrated-billing-service.html)
+For more details, see [Developing and publishing an integrated billing service](/docs/third-party/integrated-billing-service.html) 
