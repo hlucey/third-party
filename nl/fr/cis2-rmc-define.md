@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-07-03"
 
 
 ---
@@ -16,15 +16,15 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 2. Définition de votre offre dans la console de gestion des ressources
+# Etape 2 : Définition de votre offre dans la console de gestion des ressources
 
 La console de gestion des ressources est un outil disponible sur le Web qui vous permet d'intégrer votre offre de tiers au catalogue {{site.data.keyword.Bluemix_notm}}.
 
 Maintenant que vous disposez d'une approbation vous permettant de mettre à disposition un service de facturation intégrée, vous êtes prêt à accéder à la console de gestion des ressources pour effectuer l'enregistrement, démarrer le développement de votre offre et proposer des plans de tarification :
-   1. Enregistrez votre service avec la console de gestion des ressources et validez la page Summary.
-   2. Entrez vos métadonnées de catalogue sur la page Offering.
-   3. Enregistrez votre offre avec {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). L'enregistrement génère des données d'identification de client et de service utilisées pour l'authentification de votre service.
-   4. Complétez la page Pricing, en vous assurant que votre offre de service d'{{site.data.keyword.Bluemix_notm}} propose les plans de tarification adaptés aux clients. Les plans définis incluent des données de mesure fournissant des détails d'utilisation importants.
+   1. Enregistrez votre service avec la console de gestion des ressources et validez la page *Summary*.
+   2. Entrez vos métadonnées de catalogue sur la page *Offering*.
+   3. Enregistrez votre offre avec {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). L'enregistrement génère des données d'identification d'ID client et de service client utilisées pour l'authentification de votre service.
+   4. Complétez la page *Pricing*, en vous assurant que votre offre de service d'{{site.data.keyword.Bluemix_notm}} propose les plans de tarification adaptés aux clients. Les plans définis incluent des données de mesure fournissant des détails d'utilisation importants.
    5. Exportez vos métadonnées d'offre au format JSON.
 
 
@@ -33,10 +33,10 @@ Maintenant que vous disposez d'une approbation vous permettant de mettre à disp
 Pour cette procédure, vous devez disposer d'une approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.html).
 {: tip}
 
-1. Vérifiez que avez commencé la tâche suivante : [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Vérifiez que avez commencé la tâche suivante : [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party/cis1-docs-marketing.html)
 2. Vérifiez que vous êtes enregistré auprès d'{{site.data.keyword.Bluemix_notm}}. Dans le cas contraire, [inscrivez-vous](https://console.bluemix.net/registration) avant de continuer.
 3. Vérifiez que vous vous trouvez dans le compte correct avant de commencer à utiliser la console de gestion des ressources.
-4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}.
+4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}
 
    Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 

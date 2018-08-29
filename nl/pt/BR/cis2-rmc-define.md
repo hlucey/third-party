@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-07-03"
 
 
 ---
@@ -16,16 +16,15 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Etapa 2. Definindo a oferta no console de gerenciamento de recurso
+# Etapa 2: definindo sua oferta no console de gerenciamento de recurso
 
 O console de gerenciamento de recurso é uma ferramenta baseada na web que ajuda a guiar você na entrega de sua oferta de terceiros no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 Agora que está aprovado para entregar um serviço de faturamento integrado, você está pronto para se dirigir ao console de gerenciamento de recurso para registrar, iniciar o desenvolvimento de sua oferta e fornecer planos de precificação:
-   1. Registre o serviço com o console de gerenciamento de recurso e valide a página Resumo.
-   2. Insira os metadados do catálogo na página Oferta.
-   3. Registre sua oferta com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). O registro
-gera as credenciais do identificador de cliente e do identificador de serviço usadas para autenticar o serviço.
-   4. Preencha a página Precificação, assegurando que a oferta de serviços no {{site.data.keyword.Bluemix_notm}} ofereça os planos de precificação certos para os clientes. Os planos que você define incluem medição que fornece detalhes de uso importantes.
+   1. Registre seu serviço com o console de gerenciamento de recurso e valide a página *Resumo*.
+   2. Insira seus metadados do catálogo dentro da página *Oferta*.
+   3. Registre sua oferta com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). O registro gera as credenciais de ID de cliente e de ID do serviço que são usadas para autenticar seu serviço.
+   4. Conclua a página *Precificação*, assegurando que sua oferta de serviços no {{site.data.keyword.Bluemix_notm}} ofereça os planos de precificação certos para os clientes. Os planos que você define incluem medição que fornece detalhes de uso importantes.
    5. Exporte seus metadados da oferta para o formato JSON.
 
 
@@ -34,11 +33,10 @@ gera as credenciais do identificador de cliente e do identificador de serviço u
 Esta etapa supõe que você está aprovado para entregar um serviço de faturamento integrado. Se você não tiver concluído o registro e aprovação iniciais no Provider Workbench, veja o [Tutorial de introdução](/docs/third-party/index.html).
 {: tip}
 
-1. Assegure-se de que tenha começado a trabalhar na [Etapa 1:
-criar docs de serviço e anúncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Assegure-se de que você começou a trabalhar em: [Etapa 1: criar docs de serviço e anúncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html)
 2. Assegure-se de estar registrado no  {{site.data.keyword.Bluemix_notm}}. Se não, [registre](https://console.bluemix.net/registration) antes de continuar.
 3. Assegure-se de que você esteja na conta correta quando começar a trabalhar no console de gerenciamento de recurso.
-4. Prepare o nome do serviço do {{site.data.keyword.Bluemix_notm}}.
+4. Prepare o nome do serviço do {{site.data.keyword.Bluemix_notm}}
 
    Deve-se fornecer um nome de serviço que seja usado para identificar o serviço pela plataforma {{site.data.keyword.Bluemix_notm}} e um nome de exibição que seus clientes veem no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
@@ -58,7 +56,7 @@ Para começar, efetue login e registre sua oferta.
 2. Acesse o painel do console de gerenciamento de recurso: [ https://console.bluemix.net/onboarding/dashboard](https://console.bluemix.net/onboarding/dashboard){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 3. Clique em **Novo recurso** para incluir seu recurso.
 4. Inclua seu  ** Nome do recurso **. Esse valor é o seu nome do serviço exclusivo do {{site.data.keyword.Bluemix_notm}} que você derivou na seção anterior.
-5. Neste ponto do processo, não esperamos que você tenha um broker de serviço hospedado existente, selecione **Não** para o campo **O seu broker está pronto para importação?** . Vamos guiá-lo pela criação de um broker em etapas posteriores e você retornará para o console de gerenciamento de recurso para importar seu broker depois que ele for desenvolvido e hospedado.
+5. Neste ponto do processo, não esperamos que você tenha um broker de serviço hospedado existente, selecione **Não** para o campo **O seu broker está pronto para importação?**. Vamos guiá-lo pela criação de um broker em etapas posteriores e você retornará para o console de gerenciamento de recurso para importar seu broker depois que ele for desenvolvido e hospedado.
 7. Depois de enviar, você será levado para a página **Resumo**. Conclua quaisquer valores *necessários* adicionais e clique em **Salvar**.
 
 É possível salvar o progresso no console de gerenciamento de recurso e voltar mais tarde para incluir mais informações. O console de gerenciamento de recurso foi projetado para ajudá-lo a gerenciar o ciclo de vida de seu serviço, portanto, tudo bem se você não tiver todas as respostas para todos os campos imediatamente.

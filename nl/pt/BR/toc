@@ -32,10 +32,3 @@ Desenvolvendo serviços de faturamento integrado de terceiros
     {: .navgroup id="help"}
     faq.md
     {: .navgroup-end}
-
-    {: .navgroup id="reference"}
-    [Referência do Open Service Broker API do IBM Cloud](https://console.bluemix.net/apidocs/resource-controller)
-    [Referência da API do IBM Cloud Usage Metering](https://ibm-bluemix-docs.github.io/usage-submission/)
-    {: .navgroup-end}
-
-https://console.bluemix.net/apidocs/resource-controller

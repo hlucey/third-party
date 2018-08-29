@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-07-03"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Etapa 1. Criando a documentação e o anúncio de marketing
+# Etapa 1: Criando sua documentação e anúncio de marketing
 {: #content-tasks}
 
 É possível usar o IBM Provider Workbench para criar sua documentação de introdução e anúncio de marketing.
