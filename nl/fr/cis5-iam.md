@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 4 : Développement d'un flux d'authentification
+# Etape 4. Développement d'un flux d'authentification
 
-Une fois que vous avez défini votre offre, la page **Access Management** de la console de gestion des ressources inclut votre ID client et votre valeur confidentielle {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), votre ID de service et votre clé d'API. Il est temps maintenant d'utiliser ces valeurs pour effectuer la procédure suivante :
+Une fois que vous avez défini votre offre, la page Access Management de la console de gestion des ressources inclut votre ID client et votre valeur confidentielle {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), votre ID de service et votre clé d'API. Il est temps maintenant d'utiliser ces valeurs pour effectuer la procédure suivante :
 
 1. Dérivez votre URI de redirection en fonction du traitement de votre élément `dashboard_url`, accédez à nouveau à la console de gestion des ressources et ajoutez-le dans l'onglet IAM en vous assurant d'avoir mis à jour votre ID client.
-2. Développez le flux OAuth pour l'authentification. Vous allez utiliser votre ou vos URI de redirection, votre ID client, et votre valeur confidentielle du client en tant que paramètres des API Rest IAM `token_endpoint` pour finaliser ce flux.
+2. Développez le flux OAuth pour l'authentification. Vous allez utiliser vos URI de redirection, votre ID client et votre valeur confidentielle du client en tant que paramètres des API Rest IAM `token_endpoint` pour finaliser ce flux.
 3. Validez l'autorisation utilisateur :
-   1. Communiquez avec IAM afin d'obtenir un jeton d'accès à partir de votre clé d'API
-   2. Validez l'autorisation concernant le tableau de bord de service en utilisant l'élément `authorization_endpoint` pour l'utilisateur (/v2/authz POST)
+   1. Communiquez avec IAM afin d'obtenir un jeton d'accès à partir de votre clé d'API.
+   2. Validez l'autorisation concernant le tableau de bord de service en utilisant l'élément `authorization_endpoint` pour l'utilisateur (/v2/authz POST).
 
-Cette étape suppose que vous disposez de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas encore effectué le processus d'enregistrement et d'approbation dans PWB, voir la section présentant comment [commencer à publier votre offre de tiers dans {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Cette étape suppose que vous disposez de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.html).
 {: tip}
 
 ## Avant de commencer

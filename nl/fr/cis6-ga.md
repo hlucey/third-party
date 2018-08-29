@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 6 : Mise à disposition publique de votre service
+# Etape 6. Mise à disposition publique de votre service
 
 Etes-vous prêts pour une diffusion en ligne ? Avez-vous testé votre service de visibilité limitée ? Le cas échéant, il est temps de se préparer pour la disponibilité générale. Les fournisseurs de services doivent enregistrer une vidéo démontrant que votre service terminé répond à toutes les exigences. La soumission à IBM s'effectue par courrier électronique. Votre démonstration sera révisée par IBM avant qu'une approbation publique finale ne soit accordée. Les enregistrements sont révisés tous les mardis et une décision est rendue le jeudi suivant. Pensez donc à prévoir suffisamment de temps pour votre date de diffusion en ligne.
 
-Cette étape suppose que l'approbation a été accordée pour la mise à disposition d'un service intégré de commerce. Si vous n'avez pas encore effectué le processus d'enregistrement et d'approbation dans PWB, voir la section présentant comment [commencer à publier votre offre de tiers dans {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Cette étape suppose que vous disposez de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.html).
 {: tip}
 
 ## Avant de commencer

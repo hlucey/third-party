@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html"}
-Développement de services de facturation intégrée de tiers
+Développement de services de facturation intégrée tiers
 
     {: .navgroup id="learn"}
     index.md
@@ -32,3 +32,10 @@ Développement de services de facturation intégrée de tiers
     {: .navgroup id="help"}
     faq.md
     {: .navgroup-end}
+
+    {: .navgroup id="reference"}
+    [IBM Cloud Open Service Broker API Reference](https://console.bluemix.net/apidocs/resource-controller)
+    [IBM Cloud Usage Metering API Reference](https://ibm-bluemix-docs.github.io/usage-submission/)
+    {: .navgroup-end}
+
+https://console.bluemix.net/apidocs/resource-controller
