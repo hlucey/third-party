@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,37 +16,37 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 3 : Développement et hébergement de vos courtiers de services
+# Etape 3. Développement et hébergement de vos courtiers de services
 
-En utilisant les métadonnées exportées de la console de gestion des ressources, vous allez créer un ou plusieurs courtiers de services dans le langage de programmation de votre choix.
+En utilisant les métadonnées exportées de la console de gestion des ressources, créez un ou plusieurs courtiers de services dans le langage de programmation de votre choix.
 
 Les courtiers de services gèrent le cycle de vie des services. La plateforme {{site.data.keyword.Bluemix_notm}} interagit avec les courtiers de services pour mettre à disposition et gérer des instances de service (instanciation d'une offre de service) et des liaisons de service (représentation d'une association entre une application et une instance de service, qui contient souvent les données d'identification utilisées par l'application pour communiquer avec l'instance de service). Le fait de mettre à disposition des valeurs de métadonnées valides crée une réponse d'API RESTful lors d'une demande.
 
-Vous pouvez commencer à créer votre courtier en utilisant une combinaison des métadonnés exportées à partir de la console de gestion des ressources, de nos exemples de courtiers de services {{site.data.keyword.Bluemix_notm}} publics et de la documentation de l'API Resource Broker. Pour développer votre courtier, vous allez :
+Vous pouvez commencer à créer votre courtier en utilisant une combinaison des métadonnés exportées à partir de la console de gestion des ressources, de nos exemples de courtiers de services {{site.data.keyword.Bluemix_notm}} publics et de la documentation de l'API Resource Broker. Pour développer votre courtier, vous effectuez les opérations suivantes :
 
-1. Consulter notre scénario de mise à disposition de plateforme
-2. Parcourir la spécification OSB
-2. Examiner le courtier {{site.data.keyword.Bluemix_notm}} exemple
-3. Utiliser la documentation de l'API Resource Broker pour découvrir la logique de noeud final de l'API REST
-4. Utiliser les métadonnées exportées à partir de la console de gestion des ressources pour le développement
-5. Consulter les informations de courtier fournies par la plateforme {{site.data.keyword.Bluemix_notm}}
-6. Parcourir les recommandations supplémentaires afin d'optimiser votre développement
-7. Héberger votre courtier
-8. Tester votre courtier
+1. Consulter notre scénario de mise à disposition de plateforme.
+2. Parcourir la spécification OSB.
+2. Examiner le courtier {{site.data.keyword.Bluemix_notm}} exemple.
+3. Utiliser la documentation de l'API Resource Broker pour découvrir la logique de noeud final de l'API REST.
+4. Utiliser les métadonnées exportées à partir de la console de gestion des ressources pour le développement.
+5. Consulter les informations de courtier fournies par la plateforme {{site.data.keyword.Bluemix_notm}}.
+6. Parcourir les recommandations supplémentaires afin d'optimiser votre développement.
+7. Héberger votre courtier.
+8. Tester votre courtier.
 
 ## Avant de commencer
 
 Pour cette procédure, vous devez disposer d'une approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.md).
 {: tip}
 
-Vérifiez que vous avez commencé l'étape 1 et avez terminé l'étape 2
+Vérifiez que vous avez commencé l'étape 1 et terminé l'étape 2 :
 1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Consultez notre scénario de mise à disposition de plateforme {{site.data.keyword.Bluemix_notm}}
 
-Vous allez développer un courtier OSB (Open Service Broker) fonctionnant avec la plateforme {{site.data.keyword.Bluemix_notm}}. Consultez notre [scénario de mise à disposition](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) pour plus d'informations sur la création de ressources.
+Développez un courtier OSB (Open Service Broker) fonctionnant avec la plateforme {{site.data.keyword.Bluemix_notm}}. Consultez notre [scénario de mise à disposition](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) pour plus d'informations sur la création de ressources.
 
 ## Familiarisez-vous avec la spécification OSB
 
@@ -61,7 +61,7 @@ Vous allez développer un courtier OSB (Open Service Broker) fonctionnant avec l
 
 ## Consultez la documentation de l'API Open Service Broker {{site.data.keyword.Bluemix_notm}}
 
-Les courtiers de services doivent être développés en prenant en compte l'[API Open Service Broker {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Familiarisez-vous avec l'API Broker et découvrez comment cette dernière interagit avec votre courtier ou vos courtiers.
+Les courtiers de services doivent être développés en prenant en compte l'[API Open Service Broker {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Familiarisez-vous avec l'API Broker et découvrez comment cette dernière interagit avec votre courtier ou vos courtiers.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker étend la spécification Open Service Broker 2.12.
 {: tip}

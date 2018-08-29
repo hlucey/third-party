@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-03"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-07-03"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 1 : Création de votre documentation et de votre annonce marketing
+# Etape 1. Création de votre documentation et de votre annonce marketing
 {: #content-tasks}
 
 Vous pouvez utiliser IBM Provider Workbench pour créer votre documentation d'initiation et une annonce marketing.

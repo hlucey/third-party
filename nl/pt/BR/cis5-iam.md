@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,20 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# Etapa 4: desenvolvendo um fluxo de autenticação
+# Etapa 4. Desenvolvendo um fluxo de autenticação
 
-Quando você definiu sua oferta, o console de gerenciamento de recurso - página **Gerenciamento de acesso** forneceu seu ID de cliente e Segredo do {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), o ID do serviço e a chave API. Agora, é hora de usar esses valores para concluir as etapas a seguir:
+Quando você definiu a oferta, a página Gerenciamento de acesso no console de gerenciamento de recurso forneceu o
+segredo e o identificador de cliente do {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), o seu identificador de
+serviço e a sua chave API. Agora, é hora de usar esses valores para concluir as etapas a seguir:
 
 1. Derive seu URI de redirecionamento com base na manipulação de seu `dashboard_url`, retorne para o console de gerenciamento de recurso e inclua-o na guia IAM, assegurando a atualização do ID de cliente.
-2. Desenvolva o fluxo OAuth para autenticação. Você usará seus URIs de redirecionamento, o ID de cliente e o segredo do cliente como parâmetros para as APIs de REST do IAM `token_endpoint` para concluir esse fluxo.
+2. Desenvolva o fluxo OAuth para autenticação. Para concluir esse fluxo, você usará os URIs de redirecionamento, o identificador de cliente e o segredo
+do cliente como os parâmetros para as APIs de REST do IAM `token_endpoint`.
 3. Valide a autorização do usuário:
-   1. Comunique-se com o IAM para obter um token de acesso de sua chave API
-   2. Valide a autorização para o usuário para o painel de serviço usando o `authorization_endpoint` (/v2/authz POST)
+   1. Comunique-se com o IAM para obter um token de acesso da chave API.
+   2. Valide a autorização para o usuário para o painel de serviço usando o `authorization_endpoint` (/v2/authz POST).
 
-Esta etapa supõe que você tenha sido aprovado para entregar um serviço de Faturamento integrado. Se você ainda não concluiu o registro e a aprovação iniciais no PWB, veja: [Introdução à publicação de sua oferta de terceiros no {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Essa etapa supõe que você esteja aprovado para entregar um serviço de faturamento integrado. Se você ainda não concluiu o registro e a aprovação inicial na Área de trabalho do provedor, consulte o [tutorial de introdução](/docs/third-party/index.html).
 {: tip}
 
 ## Antes de começar
@@ -37,9 +40,12 @@ Assegure-se de ter iniciado a etapa 1 e concluído as etapas 2 e 3:
 3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
 
 
-## Derivar o URI de redirecionamento do IAM (console de gerenciamento de recurso: página do IAM)
+## Derive o URI de redirecionamento do IAM (console de gerenciamento de recurso: página do IAM)
 
-Quando você definiu o seu serviço no console de gerenciamento de recurso, gerou um ID de cliente, mas observe que provavelmente não tinha um URI de redirecionamento no momento. Isso significa que o IAM criou um ID de cliente que está configurado para false. Até que retorne para o console de gerenciamento de recurso com seu URI de redirecionamento, você não terá um ID de cliente verdadeiro.
+Quando definiu o serviço no console de gerenciamento de recurso, você gerou um identificador de cliente, mas observe que
+provavelmente não obteve um URI de redirecionamento naquele momento. Isso significa que o IAM criou um identificador de
+cliente configurado como false. Até que retorne para o console de gerenciamento de recurso com o URI de redirecionamento,
+você não terá um identificador de cliente true.
 
 A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um OSB e hospedou-o (você provavelmente viu valores do IAM no código do broker de amostra). O `redirect_uri` é geralmente a URL do host na qual o app reside com alguma URL adicional que manipulará a autenticação/autorização.
 

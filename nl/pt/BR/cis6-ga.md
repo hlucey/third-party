@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,11 +16,11 @@ lastupdated: "2018-06-27"
 {:tip: .tip}
 {:download: .download}
 
-# Etapa 6: Liberando Publicamente o Serviço
+# Etapa 6. Liberando Publicamente seu Serviço
 
-Você está pronto para ir ao vivo? Você testou seu serviço de visibilidade limitada? Se sim, é hora de se preparar para o GA. Os provedores de serviços devem registrar um vídeo, demonstrando que o seu serviço concluído atende a todos os requisitos. Você enviará à IBM via e-mail. Sua demo será revisada pela IBM antes que a aprovação de publicação final possa ser concedida. As gravações são revisadas todas as terças-feiras com uma decisão ou feedback retornados na quinta-feira seguinte, portanto, certifique-se de planejar tempo suficiente para se preparar para a data de liberação.
+Você está pronto para ir ao vivo? Você testou seu serviço de visibilidade limitada? Se sim, é hora de se preparar para o GA. Os provedores de serviços devem registrar um vídeo, demonstrando que o seu serviço concluído atende a todos os requisitos. Você o enviará para a IBM por e-mail. Sua demo será revisada pela IBM antes que a aprovação de publicação final possa ser concedida. As gravações são revisadas todas as terças-feiras com uma decisão ou feedback retornados na quinta-feira seguinte, portanto, certifique-se de planejar tempo suficiente para se preparar para a data de liberação.
 
-Esta etapa supõe que você tenha sido aprovado para entregar um serviço Integrado de Comércio. Se você ainda não concluiu o registro e a aprovação iniciais no PWB, veja: [Introdução à publicação de sua oferta de terceiros no {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.html)
+Essa etapa supõe que você esteja aprovado para entregar um serviço de faturamento integrado. Se você ainda não concluiu o registro e a aprovação inicial na Área de trabalho do provedor, consulte o [tutorial de introdução](/docs/third-party/index.html).
 {: tip}
 
 ## Antes de começar
@@ -28,7 +28,7 @@ Esta etapa supõe que você tenha sido aprovado para entregar um serviço Integr
 Assegure-se de ter iniciado a Etapa 1 e concluído as Etapas 2, 3, 4 e 5:
 1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
 2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
-3. [ Desenvolva e hospeda seus brokers de serviço ](/docs/third-party/cis3-broker.html).
+3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
 3. [ Desenvolva um fluxo de autenticação ](/docs/third-party/cis5-iam.html).
 3. [ Publicando e testando seu serviço ](/docs/third-party/cis4-rmc-publish.html)
 

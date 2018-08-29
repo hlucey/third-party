@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-27"
 
 # Etape 5 : Publication et test de votre service
 
-Maintenant que vos courtiers hébergés respectent la spécification OSB, vous pouvez accéder à nouveau à la console de gestion des ressources pour publier votre service dans le catalogue {{site.data.keyword.Bluemix_notm}}. Renseignez l'onglet *Deployments*, planifiez le déploiement de vos plans de service dans une ou plusieurs régions du catalogue {{site.data.keyword.Bluemix_notm}}, testez vos courtiers et pour finir, effectuez la publication dans le catalogue en mode de visibilité limitée. Une fois le déploiement effectué, testez votre offre afin de vous assurer qu'elle répond aux critères requis puis effectuez à nouveau le processus de publication, si nécessaire.
+Maintenant que vos courtiers hébergés respectent la spécification OSB, vous pouvez accéder à nouveau à la console de gestion des ressources pour publier votre service dans le catalogue {{site.data.keyword.Bluemix_notm}}. Renseignez l'onglet **Deployments**, planifiez le déploiement de vos plans de service dans une ou plusieurs régions du catalogue {{site.data.keyword.Bluemix_notm}}, testez vos courtiers et pour finir, effectuez la publication dans le catalogue en mode de visibilité limitée. Une fois le déploiement effectué, testez votre offre afin de vous assurer qu'elle répond aux critères requis puis effectuez à nouveau le processus de publication, si nécessaire.
 
 
 ## Avant de commencer
@@ -34,15 +34,15 @@ Vérifiez que vous avez commencé l'étape 1 et avez terminé les étapes 2, 3 e
 
 ## Publication de votre service dans {{site.data.keyword.Bluemix_notm}}
 
-1. Dans la console de gestion des ressources, cliquez sur la page **Deployments**.
-2. Cliquez sur l'onglet **Brokers** puis sur **Add broker**
+1. Dans la console de gestion des ressources, cliquez sur la page Deployments.
+2. Cliquez sur l'onglet **Brokers**, puis sur **Add broker**.
 3. Cliquez sur **Manage** pour ouvrir la page Service Broker Configuration.
 4. Ajoutez votre courtier hébergé puis cliquez sur **Register broker**.
 5. Une fois l'enregistrement effectué, accédez à l'onglet **Catalog Deployments**.
 6. Cliquez sur **Add Deployment** puis sélectionnez le plan et le courtier à déployer.
-7. Sélectionnez la région et le centre de données où vous souhaitez déployer votre service puis cliquez sur **Add**.
-8. Sur la page **Deployments**, consultez votre déploiement non publié puis cliquez sur **Publish**.
-9. Sur la page **Publish to the Catalog**, consultez les détails de votre déploiement puis cliquez sur **Publish**.
+7. Sélectionnez la région et le centre de données où vous souhaitez déployer votre service, puis cliquez sur **Add**.
+8. Sur la page Deployments, consultez votre déploiement non publié, puis cliquez sur **Publish**.
+9. Sur la page Publish to the Catalog, consultez les détails de votre déploiement, puis cliquez sur **Publish**.
 
 La page Deployments doit être marquée comme complétée dans le navigateur, indiquant que les exigences minimales ont été respectées.
 

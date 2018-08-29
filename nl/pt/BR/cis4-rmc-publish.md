@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -18,7 +18,7 @@ lastupdated: "2018-06-27"
 
 # Etapa 5: publicando e testando seu serviço
 
-Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recurso para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Conclua a guia *Implementações*: planeje a implementação de seus planos de serviço em uma ou mais regiões do catálogo do {{site.data.keyword.Bluemix_notm}}, teste seu broker ou brokers e, finalmente, publique no catálogo no modo de visibilidade limitada. Depois de implementar com êxito, teste sua oferta para certificar-se de que ela atenda aos critérios necessários e itere por meio do processo de publicação, conforme necessário.
+Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recurso para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Conclua a guia **Implementações**: planeje a implementação de seus planos de serviço em uma ou mais regiões do catálogo do {{site.data.keyword.Bluemix_notm}}, teste seu broker ou brokers e, finalmente, publique no catálogo no modo de visibilidade limitada. Depois de implementar com êxito, teste sua oferta para certificar-se de que ela atenda aos critérios necessários e itere por meio do processo de publicação, conforme necessário.
 
 
 ## Antes de começar
@@ -34,15 +34,15 @@ Assegure-se de ter iniciado a etapa 1 e concluído as etapas 2, 3 e 4:
 
 ## Publicar seu serviço no {{site.data.keyword.Bluemix_notm}}
 
-1. No console de gerenciamento de recurso, clique na página **Implementações**.
-2. Clique na guia **Brokers** e clique em **Incluir broker**
+1. No console de gerenciamento de recurso, clique na página Implementações.
+2. Clique na guia **Brokers** e clique em **Incluir broker**.
 3. Clique em **Gerenciar** para abrir a página Configuração de broker de serviço.
 4. Inclua o seu broker hospedado e clique em **Registrar o broker**.
 5. Depois de registrar com êxito, alterne para a guia **Implementações do catálogo**.
 6. Clique em ** Incluir implementação** e selecione o plano e o broker que você deseja implementar.
-7. Selecione a Região e o Data center no qual você deseja implementar seu serviço e clique em **Incluir**.
-8. Na página **Implementações**, revise sua implementação não publicada e clique em **Publicar**.
-9. Na página **Publicar no catálogo**, revise os detalhes de sua implementação e clique em **Publicar**.
+7. Selecione a região e o data center no qual deseja implementar o serviço e clique em **Incluir**.
+8. Na página Implementações, revise a implementação não publicada e clique em **Publicar**.
+9. Na página Publicar no catálogo, revise os detalhes da implementação e clique em **Publicar**.
 
 A página Implementações deve agora ser marcada como concluída na navegação, indicando que você passou os requisitos mínimos.
 
