@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-26"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,7 +16,7 @@ lastupdated: "2018-06-26"
 {:tip: .tip}
 {:download: .download}
 
-# 3단계: 서비스 브로커 개발 및 호스팅
+# 3단계. 서비스 브로커 개발 및 호스팅
 
 리소스 관리 콘솔에서 내보낸 메타데이터를 사용하여 선택한 프로그래밍 언어로 하나 이상의 새 서비스 브로커를 빌드합니다.
 
@@ -61,7 +61,7 @@ lastupdated: "2018-06-26"
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 문서 보기
 
-서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/821-ibm-cloud-open-service-broker-api?&language=node#introduction){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
+서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker는 Open Service Broker 2.12 스펙을 확장합니다.
 {: tip}
@@ -199,7 +199,7 @@ Decoded:
 {"iam_id":"IBMid-50GNR717YE"}
 ```
 
-### API 헤더 버전
+### API 버전 헤더
 
 **API 버전 헤더**는 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")가 됩니다. 예: `X-Broker-Api-Version: 2.12`.
 
@@ -265,4 +265,4 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 
 ## 다음 단계
 
-일부 중요한 스킬을 획득했습니다! 이제 OSB 스펙을 충족하는 서비스 브로커를 구현하고 호스팅했습니다. [4단계: 인증 플로우 개발](/docs/third-party/cis5-iam.html)을 참조하십시오. 
+일부 중요한 스킬을 획득했습니다! 이제 OSB 스펙을 충족하는 서비스 브로커를 구현하고 호스팅했습니다. [4단계: 인증 플로우 개발](/docs/third-party/cis5-iam.html)을 참조하십시오.

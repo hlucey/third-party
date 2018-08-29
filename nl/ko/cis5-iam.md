@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-27"
+lastupdated: "2018-08-21"
 
 
 ---
@@ -16,17 +16,17 @@ lastupdated: "2018-07-27"
 {:tip: .tip}
 {:download: .download}
 
-# 4단계: 인증 플로우 개발
+# 4단계. 인증 플로우 개발
 
-오퍼링을 정의했을 때 리소스 관리 콘솔 - **액세스 관리** 페이지에서 {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management) 클라이언트 ID 및 시크릿, 서비스 ID와 API 키를 제공했습니다. 이제 해당 값을 사용하여 다음 단계를 완료해야 합니다.
+오퍼링을 정의했을 때 리소스 관리 콘솔의 액세스 관리 페이지에서 {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management) 클라이언트 ID 및 시크릿, 서비스 ID와 API 키를 제공했습니다. 이제 해당 값을 사용하여 다음 단계를 완료해야 합니다.
 
 1. `dashboard_url`에 대한 처리 방법에 따라 경로 재지정 URI를 파생시키고 리소스 관리 콘솔로 돌아가 경로 재지정 URI를 IAM 탭에 추가합니다. 이렇게 하면 클라이언트 ID가 업데이트됩니다.
-2. 인증을 위한 OAuth 플로우를 개발합니다. 경로 재지정 uri, 클라이언트 ID 및 클라이언트 시크릿을 매개변수로 `token_endpoint` IAM Rest API에 사용하여 이 플로우를 완료합니다.
+2. 인증을 위한 OAuth 플로우를 개발합니다. 경로 재지정 URI, 클라이언트 ID 및 클라이언트 시크릿을 매개변수로 `token_endpoint` IAM Rest API에 사용하여 이 플로우를 완료합니다.
 3. 사용자 권한 유효성 검증:
-   1. IAM과 통신하여 API 키에서 액세스 토큰을 받음
-   2. `authorization_endpoint`(/v2/authz POST)를 사용하여 서비스 대시보드에 대한 사용자 권한 유효성 검증
+   1. IAM과 통신하여 API 키에서 액세스 토큰을 받습니다.
+   2. `authorization_endpoint`(/v2/authz POST)를 사용하여 서비스 대시보드에 대한 사용자 권한 유효성을 검증합니다.
 
-이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. PWB의 초기 등록 및 승인을 아직 완료하지 않은 경우 [{{site.data.keyword.Bluemix_notm}}에서 써드파티 오퍼링 공개 시작하기](/docs/third-party/index.html)를 참조하십시오.
+이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. Provider Workbench의 초기 등록 및 승인을 아직 완료하지 않은 경우 [튜토리얼 시작하기](/docs/third-party/index.html)를 참조하십시오.
 {: tip}
 
 ## 시작하기 전에
@@ -95,7 +95,7 @@ Content-Type: application/json
 -> 브라우저에서 "code" 응답 매개변수 및 "state" 값을 제공하는 uri를 경로 재지정하도록 콜백합니다.
 
 
-**인증 - 2단계:** 액세스 토큰 호출을 위한 코드 교환
+**인증 - 2단계:** 다음을 호출하는 액세스 토큰용 코드 교환
 
 ### POST <token_endpoint>
 
@@ -307,4 +307,4 @@ curl -X POST \
 
 ## 다음 단계
 
-이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링을 유효성 검증하십시오. [서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오.
+이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링의 유효성을 검증하십시오. [서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오.
