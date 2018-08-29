@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ Use the Provider Workbench to list your offering type as an integrated billing s
 ## Step 3. Define your offering details
 {: #step3}
 
-After you select **Integrated billing service** as your offering type and submit the readiness assessment form, the page is refreshed with a section for defining the content that's displayed on your catalog details page in the {{site.data.keyword.Bluemix_notm}} console. Complete each field and submit the form for review. The review process can take a few days.
+After you select **Integrated billing service** as your offering type and submit the readiness assessment form, the page is refreshed with a section for defining the content. It is displayed on your catalog details page in the {{site.data.keyword.Bluemix_notm}} console. Complete each field and submit the form for review. The review process can take a few days.
 
 ## Next steps
 {: #next-steps}
@@ -55,6 +55,6 @@ When you're approved, you receive an email that outlines your next steps:
   The email includes the link to where your getting started documentation is published. Save the URL, because you use it as you're working in the resource management console. 
   {: tip}
 
-* In the resource management console, you integrate your offering into {{site.data.keyword.Bluemix_notm}} by defining your offering, building pricing plans, enabling security, and managing the deployment of your offering in different {{site.data.keyword.Bluemix_notm}} environments. 
+* In the resource management console, integrate your offering into {{site.data.keyword.Bluemix_notm}} by defining your offering, building pricing plans, enabling security, and managing the deployment of your offering in different {{site.data.keyword.Bluemix_notm}} environments. 
 
 For more details, see [Developing and publishing an integrated billing service](/docs/third-party/integrated-billing-service.html)
