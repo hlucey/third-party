@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-21"
 # Submitting usage for metered plans
 {: #submitusage}
 
-You are required to submit usage for all active service instances every hour. Not reporting usage can lead to the loss of revenue collection for IBM, in turn causing loss of revenue share for offering providers.
+You're required to submit usage for all active service instances every hour. Not reporting usage can lead to the loss of revenue collection for IBM, which can cause a loss of revenue share for offering providers.
 {:shortdesc}
 
 ## How the process works
@@ -47,22 +47,22 @@ Review the following prerequisites for enabling metering for your service:
 
 Refer to the following guidelines when you use the {{site.data.keyword.Bluemix_notm}} metering service to submit resource usage data:
 
-* The start time and end time represent the time range during which the measures were collected. The times are not dependent on the time at which the usage record is submitted to the metering APIs.
-* Usage records are facts. Do not update the usage record after you create it. A location is specified when you successfully create a usage record. If an error code is returned, see the [actions](#actions) that you might have to take.
+* The start time and end time represent the time range during which the measures were collected. The times aren't dependent on the time at which the usage record is submitted to the metering APIs.
+* Usage records are facts. Don't update the usage record after you create it. A location is specified when you successfully create a usage record. If an error code is returned, see the [actions](#actions) that you might have to take.
 * A usage record is uniquely identified by the signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. When a usage record is processed, any other usage record with the same signature is rejected as a duplicate.
-* The interactions with the metering service should not be combined with any other services. The requests should be handled individually even if the metering starts and ends with provisioning and de-provisioning of the instance.
+* Don't combine the interaction with the metering service with any other services. The requests must be handled individually even if the metering starts and ends with provisioning and de-provisioning of the instance.
 * The resource usage data must be submitted to the metering service once every 2 - 24 hours. How often you submit your usage data depends on how often your usage metrics change.
-* Usage records must submitted within two days from the time at which the measurement was completed. Older usage records are rejected.
+* Usage records must be submitted within two days from the time at which the measurement was completed. Older usage records are rejected.
 * A successful submission returns a response code of 201. If any other response code is returned, update and resend the data until you receive the 201 code.
 
 The following are best practices for submitting usage:
 
-* It is recommended for the service providers to submit usage every 1 hour so that the end user does not see a huge delay from the time which the resource was consumed and time at which the cost is reflected in their accounts.
-* Retry submission of usage records only if there was a genuine failure with the previous request. Do not resubmit usage records that were successfully accepted.
+* It's recommended that service providers submit usage every 1 hour so that the user doesn't see a huge delay from the time that the resource was consumed and time at which the cost is reflected in their accounts.
+* Retry submission of usage records only if a genuine failure with the previous request occurs. Don't resubmit usage records that were successfully accepted.
 
 ### Service ID guidelines
 
-  You must follow these guidelines when you specify the service ID by using the id field in the resource definition:
+  You must follow these guidelines when you specify the service ID by using the ID field in the resource definition:
   * Start the ID with an alphanumeric character.
   * Use characters A - Z, a - z, and 0 - 9. The only special characters that you can use are hyphens (-) and underscores (_).
   * Follow the camel case convention if the ID contains more than one word.
@@ -148,10 +148,10 @@ You can submit multiple usage records by using API call, and you can submit a ma
 | Status Code | Required Action                                       |
 | ------ | ---------------------------------------------------- |
 | 500 |  Try submitting the usage record again. If the problem continues, contact the BSS metering team. |
-| 400 |  The usage record is not in the correct format. Either the schema validation has failed, the measures in the usage records are incorrect, or the start and end times do not fall between the provisioned and de-provisioned times. Update the usage record and submit it again.   |
+| 400 |  The usage record isn't in the correct format. Either the schema validation has failed, the measures in the usage records are incorrect, or the start and end times don't fall between the provisioned and de-provisioned times. Update the usage record and submit it again.   |
 | 424  | The resource instance metadata has some issues. Update the resource instance details and submit the usage record again.  |
-| 404  | The metering definition has not been onboarded. Work with the BSS metering team to check if the resource is onboarded and submit the usage record again.  |
-| 409  | The usage record is a duplicate. Do not try submitting it again. |
+| 404  | The metering definition wasn't onboarded. Work with the BSS metering team to check whether the resource is onboarded and submit the usage record again.  |
+| 409  | The usage record is a duplicate. Don't try submitting it again. |
 {: caption="Table 2. Status codes and required actions" caption-side="top"}
 {: #actions}
 
