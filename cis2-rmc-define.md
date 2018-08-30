@@ -17,28 +17,19 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Step 2. Defining your offering in the resource management console
+{: #step2-define}
 
-The resource management console is a web-based tool that helps guide you through delivering your third-party offering into the {{site.data.keyword.Bluemix_notm}} catalog.
-
-Now that you’re approved to deliver an integrated billing service, you’re ready to head to the resource management console to register, start developing your offering, and provide pricing plans:
-   1. Register your service with the resource management console and validate the Summary page.
-   2. Enter your catalog metadata within the Offering page.
-   3. Register your offering with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Registration generates client ID and service ID credentials that are used to authenticate your service.
-   4. Complete the Pricing page, ensuring that your service offering in {{site.data.keyword.Bluemix_notm}} offers the right pricing plans to customers. The plans that you define include metering that provides important usage details.
-   5. Export your offering metadata into JSON format.
-
+The resource management console is a tool that helps guide you through delivering your third-party offering into the {{site.data.keyword.Bluemix_notm}} catalog.
+Now that you're approved to deliver an integrated billing service, you're ready to use the resource management console to register your service, start developing, and define your pricing plans. The resource management console is a web-based tool that helps guide you through delivering your integrated billing service to the {{site.data.keyword.Bluemix_notm}} catalog.
+{:shortdesc}
 
 ## Before you begin
-
-This step assumes that you’re approved to deliver an integrated billing service. If you haven’t completed the initial registration and approval in the Provider Workbench, see the [Getting started tutorial](/docs/third-party/index.html).
-{: tip}
+{: #pre-reqs}
 
 1. Ensure that you've begun working on [Step 1: Author service docs and marketing announcement (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Ensure that you're registered with {{site.data.keyword.Bluemix_notm}}. If not, [register](https://console.bluemix.net/registration) before proceeding.
 3. Ensure that you are in the correct account when you begin working in the resource management console.
-4. Prepare your {{site.data.keyword.Bluemix_notm}} service name.
-
-   You must provide both a service name that is used to identify the service by the {{site.data.keyword.Bluemix_notm}} platform, and a display name that your customers see in the {{site.data.keyword.Bluemix_notm}} catalog.
+4. Prepare your {{site.data.keyword.Bluemix_notm}} service name. You must provide both a service name that is used to identify the service by the {{site.data.keyword.Bluemix_notm}} platform, and a display name that your customers see in the {{site.data.keyword.Bluemix_notm}} catalog.
 
   When you register your offering with resource management console, have your {{site.data.keyword.Bluemix_notm}} service name ready. The service name is not your display name. Your service name must follow these rules:
    - Must be all lowercase
@@ -48,6 +39,7 @@ This step assumes that you’re approved to deliver an integrated billing servic
    Your service name should include your company name. If your company has more than one offering, your service name should include both company and offering as part of the name. For example, the Compose company has offerings for Redis and Elasticsearch. Sample service names on {{site.data.keyword.Bluemix_notm}} for these offerings would be `compose-redis` and `compose-elasticsearch`. Both of these service names have associated display names that are shown in the {{site.data.keyword.Bluemix_notm}} catalog: *Compose Redis* and *Compose Elasticsearch*. Another company (for example, FastJetMail) can have only the single JetMail offering, in which case the service name should be `fastjetmail`.
 
 ## Register your offering
+{: #register}
 
 To get started, log in and register your offering.
 
@@ -63,6 +55,7 @@ You can save your progress in the resource management console and come back late
 {: tip}
 
 ## Enter your offering metadata
+{: #offering-metadata}
 
 On the **Offering** page, provide metadata values that are stored in the {{site.data.keyword.Bluemix_notm}} catalog. Additionally, some of these values need to be exported and stored in your service broker where they are used for provisioning and returned as part of the `catalog (GET)` Response. You’ll use these values to help jump-start the development of a service broker in later steps.
 
@@ -77,6 +70,7 @@ Your initial offering letter includes a service documentation URL that was gener
 {: tip}
 
 ## Register with IAM
+{: #reg-iam}
 
 IAM is required for all services onboarding into {{site.data.keyword.Bluemix_notm}}. See [ What is IAM?](/docs/iam/index.html#what-is-cloud-iam-) to learn more about IAM concepts and requirements.
 
@@ -99,6 +93,7 @@ You’re given your API Key when you **Enable IAM**. It’s critical that you sa
 {: tip}
 
 ## Develop a pricing plan
+{: #pricing-plan}
 
 When you onboard your service into {{site.data.keyword.Bluemix_notm}}, you must define a pricing plan. If you have detailed knowledge about how you want to charge users for your service, you can provide that information in your plan. However, if you haven’t yet settled on a paid plan, you can start by enabling a free plan, and then come back and set up a paid plan later.
 
@@ -113,6 +108,7 @@ Service providers are required to automate hourly usage submission for all meter
 {: tip}
 
 ## Export your metadata as JSON
+{: #export-metadata}
 
 Now that you defined your service within the resource management console, you can download a catalog.json file and use it to inform the development of your Open Service Broker. The catalog.json contains metadata that must be hosted in your broker. These values define the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. All additional catalog metadata that isn’t required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog, and any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata should be updated in the resource management console, and not housed in your broker. None of metadata stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI; the console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog.
 
@@ -123,5 +119,6 @@ Now that you defined your service within the resource management console, you ca
 Save your `catalog.json` file. You’ll use it in to develop your Open Service Broker in the next section.
 
 ## Next steps
+{: #next-steps}
 
 Way to go! You defined your service offering by adding catalog display metadata, by registering with IAM, and by creating one or more pricing plans. Next, you can take your exported JSON and begin developing a service broker. See [Step 3: Developing and hosting service brokers](/docs/third-party/cis3-broker.html).
