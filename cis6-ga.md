@@ -25,7 +25,7 @@ This step assumes you are approved to deliver an integrated billing service. If 
 
 ## Before you begin
 
-Ensure you have started Step 1 and completed Steps 2, 3, 4, and 5:
+Ensure you have started step 1 and completed steps 2, 3, 4, and 5:
 1. [Author service docs and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
 2. [Define your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
 3. [Develop and host your service brokers](/docs/third-party/cis3-broker.html).

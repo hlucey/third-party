@@ -16,12 +16,14 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Step 5: Publishing and testing your service
+# Step 5. Publishing and testing your service
+{: #step5-pubtest}
 
-Now that you have your hosted broker or brokers that meet the OSB specification, you can return to the resource management console to publish your service to the{{site.data.keyword.Bluemix_notm}} catalog. Complete the **Deployments** tab: schedule the deployment of your service plans into one or more regions of the {{site.data.keyword.Bluemix_notm}} catalog, test your broker or brokers, and finally publish to the catalog in limited visibility mode. After you successfully deploy, test your offering to make sure it meets the required criteria, and iterate through the publication process as needed.
-
+Now that you have your hosted broker or brokers that meet the OSB specification, you can return to the resource management console to publish your service to the {{site.data.keyword.Bluemix_notm}} catalog. 
+{:shortdesc}
 
 ## Before you begin
+{: #pre-reqs}
 
 This step assumes that you have been approved to deliver an integrated billing service. If you haven't yet completed the initial registration and approval in Provider Workbench, see the [Getting started tutorial](/docs/third-party/index.md).
 {: tip}
@@ -33,16 +35,17 @@ Ensure you have started step 1 and completed steps 2, 3, and 4:
 3. [Develop an authentication flow](/docs/third-party/cis5-iam.html).
 
 ## Publish your service to {{site.data.keyword.Bluemix_notm}}
+{: #publish}
 
-1. From the resource management console, click the Deployments page.
-2. Click the **Brokers** tab and click **Add broker**.
+1. From the resource management console, click the **Deployments** page.
+2. Click the **Brokers** tab and click **Add broker**
 3. Click **Manage** to open the Service Broker Configuration page.
 4. Add your hosted broker, and click **Register broker**.
 5. After successfully registering switch to the **Catalog Deployments** tab.
 6. Click **Add Deployment** and select the plan and the broker you want to deploy.
-7. Select the region and data center where you want to deploy your service to and click **Add**.
-8. From the Deployments page review your un-published deployment and click **Publish**.
-9. From the Publish to the Catalog page review the details of your deployment and click **Publish**.
+7. Select the Region and Data Center where you want to deploy your service to and click **Add**.
+8. From the **Deployments** page review your un-published deployment and click **Publish**.
+9. From the **Publish to the Catalog** page review the details of your deployment and click **Publish**.
 
 The Deployments page should now be marked complete in the navigation, indicating that you have passed the minimum requirements.
 
@@ -50,6 +53,7 @@ Stuck on a deployment failure? Contact your IBM representative for help.
 {: tip}
 
 ## Test your deployed offering 
+{: #test}
 
 Because you deployed in limited visibility mode, only you can see your offering in the {{site.data.keyword.Bluemix_notm}} catalog. Using the checklist below, log into {{site.data.keyword.Bluemix_notm}} and work through the test criteria.
 
@@ -78,5 +82,6 @@ If your tests are unsuccessful, repeat the previous steps to publish your servic
 
 
 ## Next steps
+{: #next-steps}
 
 Now that you have a functional service in the catalog, you can build a Demo and ask for approval to publicly release your service. See: [Step 6: Publicly release your service](/docs/third-party/cis6-ga.html).

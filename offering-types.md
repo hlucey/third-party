@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -31,9 +31,9 @@ The following table provides a detailed comparison of the third-party offering t
 
 |  | Integrated Billing Service  | Referral Service |
 |---|---|---|
-| **Onboarding** | Onboarding is handled through Provider Workbench (PWB) and the resource management console. The offering provider is responsible for developing an Open Service Broker, hosting it, testing it, and publishing their offering through a series of self-service steps. | Onboarding is handled through the Provider Workbench. Self-service onboarding process takes about two weeks. |
+| **Onboarding** | Onboarding is handled through the IBM Provider Workbench and the resource management console. The offering provider is responsible for developing an Open Service Broker, hosting it, testing it, and publishing their offering through a series of self-service steps. | Onboarding is handled through the Provider Workbench. The self-service onboarding process takes about two weeks. |
 | **Deploying** | Provisioned by the {{site.data.keyword.Bluemix_notm}} platform | API-based services only |
-| **Billing**  |  In the Integrated Billing model, the user receives a single bill for both their IBM offering and their integrated third-party offering. | In the referral model, provider's bill the user and keep 100% of the revenue.  |
+| **Billing**  |  In the integrated billing model, the user receives a single bill for both their IBM offering and their integrated third-party offering. | In the referral model, providers' bill the user and keep 100% of the revenue.  |
 | **Example** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [Accern API](https://console.bluemix.net/catalog/services/accern-api) |
 {: caption="Table 1. Comparison of third-party offering types" caption-side="top"}
 
