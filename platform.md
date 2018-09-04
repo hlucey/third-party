@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-31"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -17,6 +17,7 @@ lastupdated: "2018-08-31"
 {:download: .download}
 
 # How integrated billing services use the {{site.data.keyword.Bluemix_notm}} platform
+{: #how-it-works}
 
 Integrated billing services are different from referral services. An integrated billing service uses the {{site.data.keyword.Bluemix_notm}} platform for authentication, access, provisioning, metering, and billing. This topic provides a high-level overview of the platform components your integrated billing service uses.
 
