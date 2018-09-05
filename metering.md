@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -67,9 +67,13 @@ The following table shows the available metering models.
 {: caption="Table 1. Metering model" caption-side="top"}
 
 ### Examples
+{: #examples}
+
 Note that the quantity in the dashboard in each of the following examples is before the next usage is submitted but after the current usage is processed.
 
 #### Standard Add
+{: #standard-add}
+
 Calculate the usages for the entire month.
 
 Formula: ADD(usages)
@@ -83,6 +87,8 @@ Formula: ADD(usages)
 | Day 4 (night)   | 5             | 20 + 5      | 25                    |
 
 #### Standard Average
+{: #standard-average}
+
 Calculate the average of the usages for the entire month. Note that submitting a zero usage also counts toward the average.
 
 Formula: AVG(usages)
@@ -96,6 +102,8 @@ Formula: AVG(usages)
 | Day 4 (night)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Standard Max
+{: #standard-max}
+
 Calculate the maximum of the usages for the entire month.
 
 Formula: MAX(usages)
@@ -109,6 +117,8 @@ Formula: MAX(usages)
 | Day 4 (night)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Daily proration Average
+{: #proration-average}
+
 Calculate the average usage for each day and average it for the month. The average of each day is added up and divided by the number of days currently passed (in UTC).
 
 Formula: Summation(daily average) / Number of days passed in billing period
@@ -129,6 +139,8 @@ Given a 30-day month:
 \* As seen on the same day as when the usage was submitted.
 
 #### Daily proration Max
+{: #daily-proration}
+
 Calculate the maximum usage per day and average it for the month. The maximum of each day is added up and divided by the number of days currently passed (in UTC).
 
 Formula: Summation(daily max) / number of days passed in billing period
@@ -152,16 +164,22 @@ Given a 30-day month:
 You can use the scaling configuration to compile the unit quantity differently from what is sent in usage submissions to what is displayed in the Usage Dashboard, and what is used for the rating and cost calculations. The following examples demonstrate these scenarios:
 
 ### You want more granularity than what users see
+{: #users}
+
 You want to send usages at a more granular level, but you want to show customers a more readable number.
 
 For example, you might want to measure an instance's traffic in bytes and want the aggregated values in megabytes. To do this, you add a `scale` of 1024 to the **metering** configuration.
 
 ### You want more granularity than what your pricing configuration has
+{: #pricing-configuration}
+
 You price your metrics as $X / gigabyte, but you want to send them in megabytes. If your metric is priced at $1 / gigabyte, but a user uses 0.5 megabytes, they're charged $1 since your pricing is per gigabyte. You add a `scale` of 1024 to the **rating** configuration and set `clip` to `true`.
 
 This holds true if your metric is also priced as $X per 100 API calls (or some other pack size).
 
 ### You want to scale at both metering and rating levels
+{: #metering-rating}
+
 You can add scaling to both metering and rating configurations. If you want to send in bytes but show megabytes to the user, you configure the metering scale to 1024. If your metric price is in gigabytes, you also configure the rating scale to be 1024.
 
 ## Pricing models

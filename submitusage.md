@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-31" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ Review the following prerequisites for enabling metering for your service:
 {: #metering_guidelines}
 
 ### Submission guidelines
+{: #submission-guidelines}
 
 Refer to the following guidelines when you use the {{site.data.keyword.Bluemix_notm}} metering service to submit resource usage data:
 
@@ -61,6 +62,7 @@ The following are best practices for submitting usage:
 * Retry submission of usage records only if a genuine failure with the previous request occurs. Don't resubmit usage records that were successfully accepted.
 
 ### Service ID guidelines
+{: #id-guidelines}
 
   You must follow these guidelines when you specify the service ID by using the ID field in the resource definition:
   * Start the ID with an alphanumeric character.
@@ -69,6 +71,7 @@ The following are best practices for submitting usage:
   * Ensure that the maximum length of the ID is 50 characters.
 
 ### Resource name guidelines
+{: #resource-name}
 
   You must follow these guidelines when you specify the resource name by using the resources.name field in the resource definition:
 
@@ -77,6 +80,7 @@ The following are best practices for submitting usage:
   * Capitalize the first character of the name.
 
 ### Resource unit name guidelines
+{: #resource-unti}
 
   You must follow these guidelines when you specify the resource unit name by using the resources.unit.name field in the resource definition:
 
@@ -84,6 +88,7 @@ The following are best practices for submitting usage:
   * Capitalize all letters of the name.
   
 ### Resource unit quantity guidelines
+{: #unit-quantity}
 
   You must follow these guidelines when you specify the resource quantity type by using the resources.unit.quantityType field in the resource definition:
   
@@ -91,6 +96,7 @@ The following are best practices for submitting usage:
   * Capitalize all letters of the quantity type.
   
 ### Aggregation ID guidelines
+{: #aggregation}
 
   You must follow these guidelines when you specify the aggregation ID by using the aggregations.id field in the resource definition:
 
@@ -99,6 +105,7 @@ The following are best practices for submitting usage:
   * Ensure that this ID starts with or matches with the value of aggregations.unit. For example, you can specify **API_CALLS_PER_MONTH** for aggregations.id and specify **API_CALLS** for aggregations.unit.
 
 ### Aggregation unit guidelines
+{: #aggregation-unit}
 
   You must follow these guidelines when you specify the aggregation unit by using the aggregations.unit field in the resource definition:
    
@@ -107,10 +114,12 @@ The following are best practices for submitting usage:
   * Ensure that the unit name that you specify in the aggregations.unit field is an aggregate of the unit name that you specify in the resources.unit.name field.
   
 ### Aggregation group guidelines
+{: #aggregation-group}
 
   You must use lowercase letters for the aggregations.aggregationGroup field in the resource definition.
   
 ### Aggregation formula guidelines
+{: #aggregation-formula}
 
   For the aggregations.formula field in the resource definition, if you want to use arithmetic operations in the formula, you must use the resource unit as one operand and use an infix arithmetic expression in the function of the formula. For example, you can use the following formula to convert Bytes to Megabytes:
   ```

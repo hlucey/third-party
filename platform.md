@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-04"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -22,10 +22,12 @@ lastupdated: "2018-09-04"
 Integrated billing services are different from referral services. An integrated billing service uses the {{site.data.keyword.Bluemix_notm}} platform for authentication, access, provisioning, metering, and billing. This topic provides a high-level overview of the platform components your integrated billing service uses.
 
 ## The {{site.data.keyword.Bluemix_notm}} provisioning layer
+{: #provisioning-layer}
 
 The provisioning layer manages the lifecycle of {{site.data.keyword.Bluemix_notm}} resources. The provisioning layer is responsible for controlling and tracking the lifecycle of resources in a customer account. *Resources* are physical or logical components that can be provisioned or reserved for an application or service instance. Examples of resources include database, accounts, processor, memory, and storage limits. In general, resources that are tracked by the provisioning layer are intended to associate usage metrics and billing, but that isn’t always the case. In some cases, the resource might be associated to the provisioning layer to ensure that the resource lifecycle can be managed along with the account lifecycle.
 
 ### Resource lifecycle management
+{: #lifecycle}
 
 The provisioning layer provides common APIs to control the lifecycle of resources from provisioning (creating an instance) to binding (creating access credentials) to unbinding (removing access) to de-provisioning (deleting an instance). Additionally, the {{site.data.keyword.Bluemix_notm}} platform provides CLIs and a UI that can manage the lifecycle of these resources that don’t require you to create your own facilities.
 
@@ -38,12 +40,14 @@ The provisioning layer provides APIs to help you manage the following elements o
 * De-provisioning
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
+{: #iam}
 
 Identity Access Management (IAM) enables you to securely authenticate users and control access to all cloud resources consistently across {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.Bluemix_notm}} provisioning layer adopted IAM for authentication and authorization of actions that are taken against the provisioning layer. Third-party offering providers use IAM to create an authentication flow (OAuth). For more information, see [What is IAM](/docs/iam/index.html#iamoverview)?
 
 If your offering uses OpenID Connect (OIDC) libraries, IAM supports OIDC integration. OIDC is an authentication layer on top of OAuth 2.0, an authorization framework and can help simplify the onboarding process. For more information on OIDC, see [Open ID Connect](http://openid.net/connect/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## {{site.data.keyword.Bluemix_notm}} catalog
+{: #catalog}
 
 The {{site.data.keyword.Bluemix_notm}} catalog stores the offering definitions (description, features, images, URLs, and so on) of the resources that are displayed in the {{site.data.keyword.Bluemix_notm}} console. The resource management console is used to define all aspects of your service's required metadata. This metadata is published to the catalog and used for display in the catalog. You can find detailed information about required and optional metadata fields in the **Offering** and **Plan** pages in the resource management console. Key items are included here to jumpstart your understanding.
 
@@ -67,6 +71,7 @@ The {{site.data.keyword.Bluemix_notm}} catalog stores the offering definitions (
 
 
 ## Open Service Broker
+{: #open-service}
 
 Service Brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with Service Brokers to provision and manage Service Instances (an instantiation of a Service Offering) and Service Bindings (the representation of an association between an Application and a Service Instance, which often include the credentials that the Application uses to communicate with the Service Instance). Providing valid metadata values create a successful REST API Response when a Request is performed.
 
@@ -75,6 +80,7 @@ Service Brokers manage the lifecycle of services. The {{site.data.keyword.Bluemi
 When the resource controller receives a request to provision a resource, it calls your OSB to validate the service type, offering, plans, and regions availability. The resource controller also validates the visibility of the plan that is associated with the customer account. {{site.data.keyword.Bluemix_notm}} provides broker samples and API docs that extends the OSB spec. You can find more details about developing and hosting your broker as you walk through the detailed integrated billing onboarding development steps.
 
 ## {{site.data.keyword.Bluemix_notm}} Metering service
+{: #metering-service}
 
 If a service offers a metered plan, {{site.data.keyword.Bluemix_notm}} users are charged based on the amount of resources that they use. For example, {{site.data.keyword.Bluemix_notm}} users that use database services might be charged based on the amount of storage that their applications use. Usage submission must occur in order for the usage to be converted into a chargeable record.
 
@@ -125,6 +131,7 @@ Example provision request:
 ```
 
 ### Understanding the {{site.data.keyword.Bluemix_notm}} `context` parameter
+{: #parameter}
 
 In the previous example, you can see the metadata returned in the `context` parameter. The provision context for {{site.data.keyword.Bluemix_notm}} returns the following:
 

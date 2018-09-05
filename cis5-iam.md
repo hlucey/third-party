@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -89,6 +89,7 @@ This request can be done once when the application is started and again if the `
 **Authentication - Step 2:** Exchange the code for an access token calling
 
 ### POST <token_endpoint>
+{: #post}
 
 #### Headers:
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### Authorization - Step 2: Validate authorization for the user to the service instance (/v2/authz POST)
+{: #step-2-authorization}
 
 Now that you authenticated the user and have your own access token, you need to validate that the user is able to access the service dashboard. First, you need a few pieces of information that are included in the user's access token that you decode in step 2.1. Then, you use that information to call IAM to check whether the user is authorized to access the dashboard in step 2.2.
 

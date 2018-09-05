@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-31"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -246,7 +246,7 @@ You'll need the hosted location of your service broker to complete the next step
 You must be validating your broker by running curl commands against the different endpoints you're enabling. The sample readme file provides excellent guidance for curling your OSB endpoints: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 
 ### How to curl your service's broker
-
+{: #curl-broker}
 Use the following example to test your brokers curl response:
 
 ```
@@ -263,6 +263,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Next steps
+{: #next-steps}
 
 You have some serious skills! You built and hosted a service broker that meets the OSB specification. See [Step 4: Developing an authentication flow](/docs/third-party/cis5-iam.html).
-

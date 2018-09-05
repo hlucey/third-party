@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-31"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -63,6 +63,8 @@ Because you deployed in limited visibility mode, only you can see your offering 
 4. Next, use the checklist in the following section to validate your service.
 
 ### Checklist - Test your service
+{: #test-your-service}
+
 1. Validate authentication from the service instance dashboard
 2. Catalog displays correctly (Import from broker shows correctly in the resource management console)
 3. Provision works - you can create a service instance in plan of choice

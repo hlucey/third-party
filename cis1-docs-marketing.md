@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -52,5 +52,6 @@ In addition to your getting started documentation, you're also required to creat
 After you submit your service announcement, an IBM marketing manager reviews and approves it, and then publishes it to the appropriate channels after your service is released.
 
 ## Next steps
+{: #next-steps}
 
 Now that you've started the tasks for creating your getting started documentation and service announcement, you're ready to define your offering in the resource management console. See [Step 2: Defining your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
