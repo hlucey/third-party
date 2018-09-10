@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ Utilizza Provider Workbench per elencare il tuo tipo di offerta come un servizio
 ## Passo 3. Definisci i tuoi dettagli dell'offerta
 {: #step3}
 
-Dopo aver selezionato **Integrated billing service** come tuo tipo di offerta e inviato il modulo di valutazione della disponibilità, la pagina viene aggiornata con una sezione per la definizione del contenuto visualizzato nella tua pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Compila tutti i campi e invia il modulo per la revisione. Il processo di revisione può richiedere alcuni giorni.
+Dopo aver selezionato **Integrated billing service** come tuo tipo di offerta e inviato il modulo di valutazione della disponibilità, la pagina viene aggiornata con una sezione per la definizione del contenuto. Viene visualizzato nella tua pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Compila tutti i campi e invia il modulo per la revisione. Il processo di revisione può richiedere alcuni giorni.
 
 ## Passi successivi
 {: #next-steps}

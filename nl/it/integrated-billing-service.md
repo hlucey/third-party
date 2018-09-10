@@ -19,7 +19,7 @@ lastupdated: "2018-07-20"
 # Panoramica: sviluppo di un servizio di fatturazione integrato
 {: #overview}
 
-Questo argomento ti presenta i passi necessari per sviluppare e pubblicare il tuo servizio di fatturazione integrato di terze parti in {{site.data.keyword.Bluemix}}.
+Questo argomento ti presenta i passi necessari per sviluppare e pubblicare il tuo servizio di fatturazione integrato di terze parti in {{site.data.keyword.Bluemix}}. 
 {:shortdesc}
 
 Dopo che hai ricevuto l'approvazione a distribuire la tua offerta nel catalogo di {{site.data.keyword.Bluemix_notm}}, inizi a sviluppare la tua offerta nella console di gestione delle risorse, un'esperienza IU guidata. Progetti i tuoi metadati del catalogo, configuri i piani di prezzi dei servizi ed esegui l'integrazione con {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). 
@@ -32,15 +32,15 @@ Successivamente, al di fuori della console di gestione delle risorse, esegui lo 
 
 Per fornire un servizio di fatturazione integrato, utilizzi il Provider Workbench, la console di gestione delle risorse e l'ambiente di sviluppo di tua scelta. Consulta l'[elenco di controllo](/docs/third-party/checklist.html#checklist) per tracciare questa procedura.
 
+Questi passi presuppongono che tu abbia ricevuto l'approvazione per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali in PWB, vedi [Introduzione alla pubblicazione della tua offerta di terze parti in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+{: tip}
+
 1. [Crea la tua documentazione e il tuo comunicato di marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Definisci la tua offerta nella console di gestione delle risorse{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
 3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party/cis3-broker.html).
 4. [Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
 5. [Verifica il tuo servizio](/docs/third-party/cis4-rmc-publish.html).
 6. [Rilascia pubblicamente il tuo servizio](/docs/third-party/cis6-ga.html).
-
-Questi passi presuppongono che tu sia stato approvato per fornire un servizio di fatturazione integrata. Se non hai completato la registrazione e l'approvazione iniziale nel Provider Workbench, vedi l'[esercitazione introduttiva](/docs/third-party/index.md).
-{: tip}
 
 ## Supporto
 {: #support}

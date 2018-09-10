@@ -34,8 +34,6 @@ Sviluppo dei servizi di fatturazione integrati di terze parti
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [Riferimento API Open Service Broker IBM Cloud](https://console.bluemix.net/apidocs/resource-controller)
+    [Riferimento API Open Service Broker IBM Cloud](https://console.bluemix.net/apidocs/ibm-cloud-osb-api)
     [Riferimento API Usage Metering IBM Cloud](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
-
-https://console.bluemix.net/apidocs/resource-controller

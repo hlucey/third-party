@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -18,12 +18,11 @@ lastupdated: "2018-06-29"
 
 # In che modo i servizi di fatturazione integrati utilizzano la piattaforma {{site.data.keyword.Bluemix_notm}}
 
-I servizi di fatturazione integrati sono diversi dai servizi di riferimento. Un servizio di fatturazione integrato utilizza la piattaforma {{site.data.keyword.Bluemix_notm}} per l'autenticazione, l'accesso, il provisioning, la misurazione e la fatturazione. Questo argomento fornisce una panoramica di alto livello dei componenti della piattaforma che verranno utilizzati dal tuo servizio di fatturazione integrato.
+I servizi di fatturazione integrati sono diversi dai servizi di riferimento. Un servizio di fatturazione integrato utilizza la piattaforma {{site.data.keyword.Bluemix_notm}} per l'autenticazione, l'accesso, il provisioning, la misurazione e la fatturazione. Questo argomento fornisce una panoramica di alto livello dei componenti della piattaforma che vengono utilizzati dal tuo servizio di fatturazione integrato.
 
 ## Livello di provisioning {{site.data.keyword.Bluemix_notm}}
 
-Il livello di provisioning gestisce il ciclo di vita delle risorse {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning è responsabile del controllo e della traccia del ciclo di vita delle risorse in un account del cliente. Le *risorse* sono componenti fisici o logici di cui è possibile eseguire il provisioning, o che possono essere riservati, per un'istanza dell'applicazione o del servizio. Esempi di
-risorse includono database, account e processore, memoria e i limiti di archiviazione. In generale, è previsto che alle risorse tracciate dal livello di provisioning siano associate delle metriche di utilizzo e una fatturazione, ma non è sempre così. In alcuni casi, la risorsa può essere associata al livello di provisioning per garantire che il ciclo di vita della risorsa possa essere gestito insieme al ciclo di vita dell'account.
+Il livello di provisioning gestisce il ciclo di vita delle risorse {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning è responsabile del controllo e della traccia del ciclo di vita delle risorse in un account del cliente. Le *risorse* sono componenti fisici o logici di cui è possibile eseguire il provisioning, o che possono essere riservati, per un'istanza dell'applicazione o del servizio. Esempi di risorse includono database, account, processore, memoria e limiti di archiviazione. In generale, è previsto che alle risorse tracciate dal livello di provisioning siano associate delle metriche di utilizzo e una fatturazione, ma non è sempre così. In alcuni casi, la risorsa può essere associata al livello di provisioning per garantire che il ciclo di vita della risorsa possa essere gestito insieme al ciclo di vita dell'account.
 
 ### Gestione del ciclo di vita della risorsa
 
@@ -39,38 +38,38 @@ Il livello di provisioning fornisce le API che ti aiutano a gestire i seguenti e
 
 ## {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management)
 
-IAM (Identity Access Management) ti consente di autenticare in modo sicuro gli utenti e controllare l'accesso a tutte le risorse cloud in modo congruente in tutto {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning {{site.data.keyword.Bluemix_notm}} ha adottato IAM per l'autenticazione e l'autorizzazione delle azioni eseguite sul livello di provisioning. I provider di offerte di terze parti usano IAM per creare un flusso di autenticazione (OAuth). Per ulteriori dettagli, vedi [Cos'è IAM](/docs/iam/index.html#iamoverview)?
+IAM (Identity Access Management) ti consente di autenticare in modo sicuro gli utenti e controllare l'accesso a tutte le risorse cloud in modo congruente in tutto {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning {{site.data.keyword.Bluemix_notm}} ha adottato IAM per l'autenticazione e l'autorizzazione delle azioni eseguite sul livello di provisioning. I provider di offerte di terze parti usano IAM per creare un flusso di autenticazione (OAuth). Per ulteriori informazioni, vedi [Cos'è IAM](/docs/iam/index.html#iamoverview)?
 
 Se la tua offerta utilizza librerie OIDC (OpenID Connect), IAM supporta l'integrazione OIDC. OIDC è un livello di autenticazione in aggiunta a OAuth 2.0, un framework di autorizzazione, e può aiutare a semplificare il processo di onboarding. Per ulteriori informazioni su OIDC, vedi [Open ID Connect](http://openid.net/connect/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Catalogo {{site.data.keyword.Bluemix_notm}}
 
-Il catalogo {{site.data.keyword.Bluemix_notm}} archivia le definizioni di offerte (descrizione, funzioni, immagini, URL e così via) delle risorse visualizzate nella console{{site.data.keyword.Bluemix_notm}}. La console di gestione delle risorse viene utilizzata per definire tutti gli aspetti dei metadati obbligatori del servizio. Questi metadati vengono pubblicati nel catalogo e utilizzati per la visualizzazione nel catalogo. Puoi trovare informazioni dettagliate sui campi di metadati obbligatori e facoltativi nelle pagine **Offering** e **Plan** nella console di gestione delle risorse, ma gli elementi chiave sono inclusi in questa sezione per consentirti di comprendere tutto in tempi più brevi.
+Il catalogo {{site.data.keyword.Bluemix_notm}} archivia le definizioni di offerte (descrizione, funzioni, immagini, URL e così via) delle risorse visualizzate nella console{{site.data.keyword.Bluemix_notm}}. La console di gestione delle risorse viene utilizzata per definire tutti gli aspetti dei metadati obbligatori del servizio. Questi metadati vengono pubblicati nel catalogo e utilizzati per la visualizzazione nel catalogo. Puoi trovare informazioni dettagliate sui campi di metadati obbligatori e facoltativi nelle pagine **Offering** e **Plan** nella console di gestione delle risorse. Gli elementi chiave sono inclusi in questa sezione per consentirti di comprendere tutto in tempi più brevi 
 
-   * Service Name: nome tecnico per il tuo servizio. Il nome servizio è di importanza critica e deve essere definito correttamente. Devi fornire sia un nome servizio che viene utilizzato per identificare il servizio dalla piattaforma {{site.data.keyword.Bluemix_notm}} sia un nome di visualizzazione che i tuoi clienti vedono nel catalogo {{site.data.keyword.Bluemix_notm}}. Il tuo nome servizio non è il tuo nome di visualizzazione.
+   * Service Name: nome tecnico per il tuo servizio. Il nome servizio è di importanza critica e deve essere definito correttamente. Devi fornire sia un nome servizio che viene utilizzato per identificare il servizio dalla piattaforma {{site.data.keyword.Bluemix_notm}} sia un nome di visualizzazione che i tuoi clienti vedono nel catalogo {{site.data.keyword.Bluemix_notm}}. Il tuo nome servizio non è il tuo nome di visualizzazione. 
    * Service Display Name: nome descrittivo per il tuo servizio. Ad esempio, "Compose Redis"
-   * Service ID: GUID per il tuo servizio utilizzato nelle chiamate API al tuo broker OSB. Questo deve essere un valore univoco.
+   * Service ID: GUID per il tuo servizio utilizzato nelle chiamate API al tuo broker OSB. Questo valore deve essere univoco. 
    * Service Icon: SVG con il tuo logo del servizio
    * Service Description: la descrizione della risorsa visualizzata quando passi il puntatore del mouse sull'icona della risorsa nell'interfaccia utente del catalogo {{site.data.keyword.Bluemix_notm}}. Puoi aggiungere una singola parola o frase per la descrizione.
    * Service Detailed Description: il primo paragrafo che compare nella pagina di elenco del catalogo. Valuta l'utilizzo di almeno due frasi per una descrizione dettagliata.
-   * Documentation URL: un link alla tua documentazione {{site.data.keyword.Bluemix_notm}}. Eseguirai la creazione in PWB e il tuo valore url sarà generato da PWB per te.
+   * Documentation URL: un link alla tua documentazione {{site.data.keyword.Bluemix_notm}}. Eseguirai la creazione in PWB e il tuo valore url viene generato da PWB per te.
    * Terms URL: un link ai termini e alla condizioni per l'utilizzo del tuo servizio. Nota: ai fini del GDPR, non eseguire il collegamento ai termini e alle condizioni del tuo servizio di terze parti esistente. Devi invece fornire una pagina univoca per un servizio di fatturazione integrato.
-   * Instructions URL: in modo analogo a Documentation URL, punterai alla tua documentazione {{site.data.keyword.Bluemix_notm}}; tuttavia, l'Instructions URL estrarrà dinamicamente la tua documentazione in una scheda Getting Started nel dashboard del tuo servizio.
-   * Category: selezione delle categorie {{site.data.keyword.Bluemix_notm}} disponibili dove deve essere inserito il tuo servizio nel catalogo.
+   * Instructions URL: in modo analogo a Documentation URL, punterai alla tua documentazione {{site.data.keyword.Bluemix_notm}}; tuttavia, l'Instructions URL estrae dinamicamente la tua documentazione in una scheda Getting Started nel dashboard del tuo servizio.
+   * Category: selezione delle categorie {{site.data.keyword.Bluemix_notm}} disponibili dove viene inserito il tuo servizio nel catalogo.
    * Bullets: brevi punti descrittivi relativi al tuo servizio
    * Media: acquisizioni di schermo e video relativi al tuo servizio
    * Service Plan Name: ogni piano ha un nome tecnico. Tutto in minuscole, senza spazi, può includere "-".  Ad esempio, `gold`.
    * Service Plan Display Name: nome descrittivo per il piano. Ad esempio, `Gold`
-   * Service Plan ID: GUID per il tuo piano del servizio utilizzato nelle chiamate API al tuo broker OSB. Questo deve essere un valore univoco. La console di gestione delle risorse genererà questo valore per te.
+   * Service Plan ID: GUID per il tuo piano del servizio utilizzato nelle chiamate API al tuo broker OSB. Questo valore deve essere univoco. La console di gestione delle risorse genera questo valore per te.
    * Service Plan Description: la descrizione del piano risorse. La descrizione viene visualizzata quando selezioni un piano nella pagina dei dettagli della risorsa nel catalogo IBM Cloud.
    * Service Plan Bullets: brevi punti descrittivi relativi al tuo piano di servizio.
 
 
 ## Open Service Broker
 
-I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker dei servizi per eseguire il provisioning e la gestione delle istanze del servizio (un'istanziazione di un'offerta di servizi) e dei bind di servizio (la rappresentazione di un'associazione tra un'applicazione e un'istanza del servizio, che spesso contengono le credenziali che verranno utilizzate dall'applicazione per comunicare con l'istanza del servizio). Fornire dei valori di metadati validi creerà una risposta API REST corretta quando viene eseguita una richiesta.
+I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker dei servizi per eseguire il provisioning e la gestione delle istanze del servizio (un'istanziazione di un'offerta di servizi) e dei bind di servizio (la rappresentazione di un'associazione tra un'applicazione e un'istanza del servizio, che spesso include le credenziali che vengono utilizzate dall'applicazione per comunicare con l'istanza del servizio). Fornire dei valori di metadati validi crea una risposta API REST corretta quando viene eseguita una richiesta.
 
-{{site.data.keyword.Bluemix_notm}} utilizza la specifica dell'API OSB (Open Service Broker) `versione 2.12`. Leggi attentamente e prendi dimestichezza con la [specifica Open Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e usa il file readme come guida per ulteriori informazioni.
+{{site.data.keyword.Bluemix_notm}} utilizza la specifica dell'API OSB (Open Service Broker) `versione 2.12`. Leggi attentamente e familiarizza con la [specifica API Open Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") e utilizza il file readme come guida per saperne di più.
 
 Quando il controller della risorsa riceve una richiesta di provisioning di una risorsa, richiama il tuo OSB per convalidare il tipo di servizio, l'offerta, i piani e la disponibilità delle regioni. Il controller della risorsa convalida anche la visibilità del piano associato all'account del cliente. {{site.data.keyword.Bluemix_notm}} fornisce degli esempi di broker e dei documenti API che estendono la specifica OSB. Puoi trovare ulteriori dettagli sullo sviluppo e sull'hosting del tuo broker man mano che affronti la dettagliata procedura di sviluppo dell'onboarding della fatturazione integrato.
 
@@ -94,10 +93,10 @@ Quando un utente desidera creare un'istanza del servizio, può iniziare tale att
 * **CLI**: utilizzando `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Console {{site.data.keyword.Bluemix_notm}}**: l'utente può selezionare il piano del servizio e utilizzare l'operazione **Crea**.
 
-La piattaforma {{site.data.keyword.Bluemix_notm}} convalida che l'utente dispone dell'autorizzazione a creare l'istanza del servizio utilizzando {{site.data.keyword.Bluemix_notm}} IAM. Dopo l'esecuzione di tale convalida, viene richiamato l'endpoint di provisioning del tuo broker dei servizi (PUT /v2/resource_instances/:resource_instance_id). Quando viene eseguito il provisioning, devono essere soddisfatte le seguenti regole:
+La piattaforma {{site.data.keyword.Bluemix_notm}} convalida che l'utente dispone dell'autorizzazione a creare l'istanza del servizio utilizzando {{site.data.keyword.Bluemix_notm}} IAM. Dopo l'esecuzione di tale convalida, viene avviato l'endpoint di provisioning del tuo broker dei servizi (PUT /v2/resource_instances/:resource_instance_id). Quando viene eseguito il provisioning, devono essere soddisfatte le seguenti regole:
 * Il contesto {{site.data.keyword.Bluemix_notm}} è incluso nella variabile di contesto
-* L'`X-Broker-API-Originating-Identity` avrà l'ID IBM IAM dell'utente che ha avviato la richiesta
-* La sezione parameters includerà l'ubicazione richiesta (e i parametri aggiuntivi richiesti dal tuo servizio).
+* L'`X-Broker-API-Originating-Identity` ha l'ID IBM IAM dell'utente che ha avviato la richiesta
+* La sezione parameters include l'ubicazione richiesta (e i parametri aggiuntivi richiesti dal tuo servizio).
 
 Richiesta di provisioning di esempio:
 

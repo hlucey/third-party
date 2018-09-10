@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-21"
 # Inoltro dell'utilizzo per i piani a consumo
 {: #submitusage}
 
-Devi inoltrare l'utilizzo per tutte le istanze del servizio attivo ogni ora. La mancata notifica dell'utilizzo può portare alla perdita della raccolta di ricavi per IBM, causando di conseguenza una perdita della quota di ricavi per i provider di offerte.
+Devi inoltrare l'utilizzo per tutte le istanze del servizio attivo ogni ora. La mancata notifica dell'utilizzo può portare alla perdita della raccolta di ricavi per IBM, che può causare una perdita della quota di ricavi per i provider di offerte.
 {:shortdesc}
 
 ## Come funziona il processo
@@ -50,19 +50,19 @@ Fai riferimento alle seguenti linee guida quando utilizzi il servizio di misuraz
 * L'ora di inizio e l'ora di fine rappresentano l'intervallo di tempo durante il quale le misure sono state raccolte. Le ore non dipendono dall'ora in cui il record di utilizzo viene inoltrato alle API di misurazione.
 * I record di utilizzo sono fatti. Non aggiornare il record di utilizzo dopo averlo creato. Un'ubicazione viene specificata quando crei correttamente un record di utilizzo. Se viene restituito un codice di errore, vedi le [azioni](#actions) che potresti dover eseguire.
 * Un record di utilizzo viene identificato in modo univoco dalla firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando un record di utilizzo viene elaborato, qualsiasi altro record di utilizzo con la stessa firma viene rifiutato come un duplicato.
-* Le interazioni con il servizio di misurazione non devono essere combinate con altri servizi. Le richieste devono essere gestite singolarmente anche se la misurazione inizia e termina con il provisioning e l'annullamento del provisioning dell'istanza.
+* Non combinare l'interazione con il servizio di misurazione con altri servizi. Le richieste devono essere gestite singolarmente anche se la misurazione inizia e termina con il provisioning e l'annullamento del provisioning dell'istanza.
 * I dati di utilizzo delle risorse devono essere inoltrati al servizio di misurazione una volta ogni 2 - 24 ore. La frequenza con cui inoltri i dati di utilizzo dipende dalla frequenza con cui vengono modificate le tue metriche di utilizzo.
 * I record di utilizzo devono essere inoltrati entro due giorni dall'ora in cui è stata completata la misurazione. I record di utilizzo meno recenti vengono rifiutati.
 * Un inoltro eseguito correttamente restituisce un codice di risposta 201. Se viene restituito qualsiasi altro codice di risposta, aggiorna e invia nuovamente i dati finché non ricevi il codice 201.
 
 Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
 
-* Si consiglia ai provider di servizi di inoltrare l'utilizzo ogni ora in modo che l'utente finale non visualizzi un notevole ritardo dall'ora in cui la risorsa è stata consumata e l'ora in cui il costo viene riflesso nel suo account.
+* Si consiglia a tali provider di servizi di inoltrare l'utilizzo ogni ora in modo che l'utente non visualizzi un notevole ritardo dall'ora in cui la risorsa è stata consumata e l'ora in cui il costo viene riflesso nel suo account.
 * Ritenta l'inoltro dei record di utilizzo solo se si è verificato un errore effettivo con la richiesta precedente. Non inoltrare nuovamente i record di utilizzo che erano stati accettati correttamente.
 
 ### Linee guida per gli ID servizio
 
-  Devi attenerti alle seguenti linee guida quando specifichi l'ID servizio utilizzando il campo id nella definizione della risorsa:
+  Devi attenerti alle seguenti linee guida quando specifichi l'ID servizio utilizzando il campo ID nella definizione della risorsa:
   * Inizia l'ID con un carattere alfanumerico.
   * Utilizza i caratteri A - Z, a - z e 0 - 9. I soli caratteri speciali che puoi usare sono trattini (-) e caratteri di sottolineatura (_).
   * Rispetta la convenzione di caratteri con notazione a cammello se l'ID contiene più di una parola.

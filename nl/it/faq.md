@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -12,7 +12,7 @@ lastupdated: "2018-07-20"
 {:tip: .tip}
 {:new_window: target="_blank"}
 
-# FAQ
+# Domande frequenti
 {: #3p-faqs}
 
 ## Quali sono le diverse opzioni di misurazione per i piani?

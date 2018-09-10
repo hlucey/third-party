@@ -16,14 +16,16 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Passo 5: Pubblica e verifica il tuo servizio
+# Passo 5. Pubblica e verifica il tuo servizio
+{: #step5-pubtest}
 
-Ora che hai il tuo broker o i tuoi broker ospitati che soddisfano la specifica OSB, puoi ritornare alla console di gestione delle risorse per pubblicare il tuo servizio nel catalogo {{site.data.keyword.Bluemix_notm}}. Completa la scheda **Deployments**; pianifica la distribuzione dei tuoi piani di servizio in una o più regioni del catalogo {{site.data.keyword.Bluemix_notm}}, verifica il tuo broker o i tuoi broker e, infine, pubblica nel tuo catalogo in modalità di visibilità limitata. Dopo che hai eseguito correttamente la distribuzione, verifica la tua offerta per assicurarti che soddisfi i criteri obbligatori oppure riesegui il processo di pubblicazione come necessario.
-
+Ora che hai uno o più broker ospitati che soddisfano la specifica OSB, puoi tornare alla console di gestione delle risorse per pubblicare il tuo servizio nel catalogo {{site.data.keyword.Bluemix_notm}}. 
+{:shortdesc}
 
 ## Prima di iniziare
+{: #pre-reqs}
 
-Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[Esercitazione introduttiva](/docs/third-party/index.md).
+Questo passo presuppone che tu abbia ricevuto l'approvazione per fornire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[Esercitazione introduttiva](/docs/third-party/index.md).
 {: tip}
 
 Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
@@ -33,16 +35,17 @@ Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
 3. [Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
 
 ## Pubblica il tuo servizio in {{site.data.keyword.Bluemix_notm}}
+{: #publish}
 
-1. Dalla console di gestione delle risorse, fai clic sulla pagina Deployments.
-2. Fai clic sulla scheda **Brokers** e quindi su **Add broker**.
+1. Dalla console di gestione delle risorse, fai clic sulla pagina **Deployments**.
+2. Fai clic sulla scheda **Brokers** e fai clic su **Add broker**
 3. Fai clic su **Manage** per aprire la pagina Service Broker Configuration.
 4. Aggiungi il tuo broker ospitato e fai clic su **Register broker**.
 5. Dopo che hai eseguito correttamente la registrazione, passa alla scheda **Catalog Deployments**.
 6. Fai clic su **Add Deployment** e seleziona il piano e il broker che desideri distribuire.
-7. Seleziona la regione e il data center dove vuoi distribuire il tuo servizio e fai clic su **Add**.
-8. Dalla pagina Deployments, riesamina la tua distribuzione non ancora pubblicata e fai clic su **Publish**.
-9. Dalla pagina Publish to the Catalog, riesamina i dettagli della tua distribuzione e fai clic su **Publish**.
+7. Seleziona la regione (Region) e il data center dove vuoi distribuire il tuo servizio e fai clic su **Add**.
+8. Dalla pagina **Deployments**, riesamina la tua distribuzione non ancora pubblicata e fai clic su **Publish**.
+9. Dalla pagina **Publish to the Catalog**, riesamina i dettagli della tua distribuzione e fai clic su **Publish**.
 
 La pagina Deployments dovrebbe ora essere contrassegnata come completa nella navigazione, a indicare che hai soddisfatto i requisiti minimi.
 
@@ -50,6 +53,7 @@ Sei bloccato su un errore di distribuzione? Contatta il tuo rappresentante IBM p
 {: tip}
 
 ## Verifica la tua offerta distribuita 
+{: #test}
 
 Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo tu puoi vedere la tua offerta nel catalogo {{site.data.keyword.Bluemix_notm}}. Utilizzando l'elenco di controllo qui di seguito, esegui l'accesso {{site.data.keyword.Bluemix_notm}} e procedi con i criteri di verifica.
 
@@ -78,5 +82,6 @@ Se i tuoi test non vengono eseguiti correttamente, ripeti i passi precedenti per
 
 
 ## Passi successivi
+{: #next-steps}
 
 Ora che hai un servizio funzionale nel catalogo, puoi creare una Demo e chiedere l'approvazione per rilasciare pubblicamente il tuo servizio. Vedi [Passo 6: Rilascia pubblicamente il tuo servizio](/docs/third-party/cis6-ga.html).
