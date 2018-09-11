@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-27"
 
 
 ---
@@ -25,12 +25,13 @@ lastupdated: "2018-08-21"
 ## Antes de começar
 {: #prereqs}
 
-Certifique-se de que tenha concluído o [tutorial de introdução](/docs/third-party/index.html) e que você esteja aprovado para entregar um serviço de faturamento integrado.
+Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party/index.html) e que esteja aprovado para entregar um serviço de faturamento integrado.
 
 ## Criar sua documentação de introdução
 {: #docs}
 
-Para entregar um serviço de faturamento integrado, é necessário fornecer a documentação de introdução que descreve como os usuários começam a usar seu serviço no contexto do {{site.data.keyword.Bluemix_notm}}. É possível trabalhar nessa tarefa em paralelo enquanto desenvolve seu serviço.
+Para entregar um serviço de faturamento integrado, é necessário fornecer a documentação de introdução que descreve como os
+usuários são iniciados no uso do serviço no contexto do {{site.data.keyword.Bluemix_notm}}. É possível trabalhar nessa tarefa em paralelo enquanto desenvolve seu serviço.
 
 1. Efetue login no [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 2. No painel do Provider Workbench, clique em **Tarefas** no tile de sua oferta.
@@ -42,7 +43,8 @@ Seus metadados do catálogo devem ser vinculados à URL da documentação public
 ## Criar seu anúncio de serviço
 {: #announcement}
 
-Além de sua documentação de introdução, também é necessário criar conteúdo de marketing para anunciar a disponibilidade de seu serviço por meio dos canais de newsletter e de mídia social do {{site.data.keyword.Bluemix_notm}}. É possível trabalhar nessa tarefa em paralelo enquanto desenvolve seu serviço.
+Além da documentação de introdução, também é necessário criar o conteúdo de marketing para anunciar a disponibilidade do
+serviço por meio do newsletter do {{site.data.keyword.Bluemix_notm}} e dos canais de mídia social. É possível trabalhar nessa tarefa em paralelo enquanto desenvolve seu serviço.
 
 1. Efetue login no [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 2. No painel do Provider Workbench, clique em **Tarefas** no tile de sua oferta.

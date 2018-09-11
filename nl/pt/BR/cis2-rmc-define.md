@@ -17,30 +17,23 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Etapa 2. Definindo a oferta no console de gerenciamento de recurso
+{: #step2-define}
 
-O console de gerenciamento de recurso é uma ferramenta baseada na web que ajuda a guiar você na entrega de sua oferta de terceiros no catálogo do {{site.data.keyword.Bluemix_notm}}.
-
-Agora que está aprovado para entregar um serviço de faturamento integrado, você está pronto para se dirigir ao console de gerenciamento de recurso para registrar, iniciar o desenvolvimento de sua oferta e fornecer planos de precificação:
-   1. Registre o serviço com o console de gerenciamento de recurso e valide a página Resumo.
-   2. Insira os metadados do catálogo na página Oferta.
-   3. Registre sua oferta com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). O registro
-gera as credenciais do identificador de cliente e do identificador de serviço usadas para autenticar o serviço.
-   4. Preencha a página Precificação, assegurando que a oferta de serviços no {{site.data.keyword.Bluemix_notm}} ofereça os planos de precificação certos para os clientes. Os planos que você define incluem medição que fornece detalhes de uso importantes.
-   5. Exporte seus metadados da oferta para o formato JSON.
-
+O console de gerenciamento de recurso é uma ferramenta que ajuda a orientá-lo na entrega da oferta de terceiro no catálogo do {{site.data.keyword.Bluemix_notm}}.
+Agora que você está aprovado para entregar um serviço de faturamento integrado, está pronto para usar o console de
+gerenciamento de recurso para registrar o serviço, iniciar o desenvolvimento e definir os planos de precificação. O console de
+gerenciamento de recurso é uma ferramenta baseada na web que o ajuda a entregar o serviço de faturamento integrado para o
+catálogo do {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 ## Antes de começar
-
-Esta etapa supõe que você está aprovado para entregar um serviço de faturamento integrado. Se você não tiver concluído o registro e aprovação iniciais no Provider Workbench, veja o [Tutorial de introdução](/docs/third-party/index.html).
-{: tip}
+{: #pre-reqs}
 
 1. Assegure-se de que tenha começado a trabalhar na [Etapa 1:
 criar docs de serviço e anúncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Assegure-se de estar registrado no  {{site.data.keyword.Bluemix_notm}}. Se não, [registre](https://console.bluemix.net/registration) antes de continuar.
 3. Assegure-se de que você esteja na conta correta quando começar a trabalhar no console de gerenciamento de recurso.
-4. Prepare o nome do serviço do {{site.data.keyword.Bluemix_notm}}.
-
-   Deve-se fornecer um nome de serviço que seja usado para identificar o serviço pela plataforma {{site.data.keyword.Bluemix_notm}} e um nome de exibição que seus clientes veem no catálogo do {{site.data.keyword.Bluemix_notm}}.
+4. Prepare o nome do serviço do {{site.data.keyword.Bluemix_notm}}. Deve-se fornecer um nome de serviço que seja usado para identificar o serviço pela plataforma {{site.data.keyword.Bluemix_notm}} e um nome de exibição que seus clientes veem no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
   Quando você registrar sua oferta com o console de gerenciamento de recurso, tenha o nome do serviço do {{site.data.keyword.Bluemix_notm}} pronto. O nome do serviço não é seu nome de exibição. Seu nome do serviço deve seguir estas regras:
    - Deve estar todo em minúsculas
@@ -50,6 +43,7 @@ criar docs de serviço e anúncio de marketing (PWB)](/docs/third-party/cis1-doc
    Seu nome do serviço deve incluir o nome da sua empresa. Se sua empresa tiver mais de uma oferta, seu nome do serviço deverá incluir a empresa e a oferta como parte do nome. Por exemplo, a empresa Compose tem ofertas para Redis e Elasticsearch. Os nomes de serviço de amostra no {{site.data.keyword.Bluemix_notm}} para essas ofertas seriam `compose-redis` e `compose-elasticsearch`. Ambos os nomes de serviço têm nomes de exibição associados que são mostrados no catálogo do {{site.data.keyword.Bluemix_notm}}: *Compose Redis* e *Compose Elasticsearch*. Outra empresa (por exemplo, FastJetMail) pode ter somente a única oferta JetMail, nesse caso, o nome do serviço deve ser `fastjetmail`.
 
 ## Registrar sua oferta
+{: #register}
 
 Para começar, efetue login e registre sua oferta.
 
@@ -65,6 +59,7 @@ Para começar, efetue login e registre sua oferta.
 {: tip}
 
 ## Inserir seus metadados da oferta
+{: #offering-metadata}
 
 Na página **Oferta**, forneça os valores de metadados que são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Além disso, alguns desses valores precisam ser exportados e armazenados em seu broker de serviço no qual eles são usados para fornecimento e retornados como parte da Resposta `catalog (GET)`. Você usará esses valores para ajudar a iniciar o desenvolvimento de um broker de serviço em etapas posteriores.
 
@@ -79,6 +74,7 @@ Sua carta de oferta inicial inclui uma URL de documentação de serviço que foi
 {: tip}
 
 ## Registrar com o IAM
+{: #reg-iam}
 
 O IAM é necessário para todos os serviços a serem integrados no {{site.data.keyword.Bluemix_notm}}. Veja [O que é IAM?](/docs/iam/index.html#what-is-cloud-iam-) para saber mais sobre os conceitos e os requisitos do IAM.
 
@@ -101,6 +97,7 @@ Você recebe sua Chave API ao **Ativar o IAM**. É crítico que você salve a Ch
 {: tip}
 
 ## Desenvolver um plano de precificação
+{: #pricing-plan}
 
 Ao integrar seu serviço ao {{site.data.keyword.Bluemix_notm}}, deve-se definir um plano de precificação. Se você tem conhecimento detalhado sobre como deseja cobrar os usuários por seu serviço, é possível fornecer essas informações em seu plano. No entanto, se você ainda não estabeleceu um plano pago, é possível começar ativando um plano grátis e, então, voltar e configurar um plano pago posteriormente.
 
@@ -115,6 +112,7 @@ Os provedores de serviços precisam automatizar o envio de uso por hora para tod
 {: tip}
 
 ## Exportar seus metadados como JSON
+{: #export-metadata}
 
 Agora que você definiu seu serviço no console de gerenciamento de recurso, é possível fazer download de um arquivo catalog.json e usá-lo para informar o desenvolvimento de seu Open Service Broker. O catalog.json contém metadados que devem ser hospedados em seu broker. Esses valores definem o contrato entre o broker e a plataforma {{site.data.keyword.Bluemix_notm}} para os serviços e planos suportados pelo broker. Todos os metadados do catálogo adicionais que não são necessários para fornecimento são armazenados dentro do catálogo do {{site.data.keyword.Bluemix_notm}} e quaisquer atualizações nos valores de exibição do catálogo que são usados para renderizar seu painel, como links, ícones e metadados convertidos de i18n, devem ser atualizadas no console de gerenciamento de recurso e não alojadas em seu broker. Nenhum dos metadados armazenados em seu broker é exibido no console do {{site.data.keyword.Bluemix_notm}} ou na CLI do {{site.data.keyword.Bluemix_notm}}; o console e a CLI retornam o que foi configurado no console de gerenciamento de recurso e armazenado no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
@@ -125,5 +123,6 @@ Agora que você definiu seu serviço no console de gerenciamento de recurso, é 
 Salve seu arquivo  ` catalog.json ` . Você o usará para desenvolver seu Open Service Broker na próxima seção.
 
 ## Próximas Etapas
+{: #next-steps}
 
 Way to go! Você definiu sua oferta de serviços incluindo metadados de exibição do catálogo, registrando com o IAM e criando um ou mais planos de precificação. Em seguida, é possível tomar o JSON exportado e começar a desenvolver um broker de serviço. Veja [Etapa 3: desenvolvendo e hospedando brokers de serviço](/docs/third-party/cis3-broker.html).

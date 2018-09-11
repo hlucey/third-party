@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-23"
 
 
 ---
@@ -17,28 +17,18 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Etapa 3. Desenvolvendo e hospedando os brokers de serviço
+{: #step3-osb}
 
-Usando os metadados que você exportou do console de gerenciamento de recurso, construa um ou mais novos brokers
-de serviço na linguagem de programação de sua escolha.
+Ao usar os metadados exportados do console de gerenciamento de recurso, é possível construir um ou mais novos
+brokers de serviço na linguagem de programação de sua escolha.
+{:shortdesc}
 
 Os brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{site.data.keyword.Bluemix_notm}} interage com os brokers de serviço para provisionar e gerenciar instâncias de serviço (uma instanciação de uma oferta de serviços) e ligações de serviços (a representação de uma associação entre um aplicativo e uma instância de serviço, que frequentemente contêm as credenciais que o aplicativo usará para se comunicar com a instância de serviço). Fornecer valores de metadados válidos criará uma Resposta de API RESTful bem-sucedida quando uma Solicitação for executada.
 
-É possível começar a construir seu broker usando uma combinação dos metadados que você exportou do console de gerenciamento de recurso, nossas amostras do broker de serviço público do {{site.data.keyword.Bluemix_notm}} e a documentação da API do broker de recurso. Para desenvolver seu broker, você:
-
-1. Visualize o cenário de fornecimento de nossa plataforma.
-2. Leia através da especificação do OSB.
-2. Consulte as amostras do  {{site.data.keyword.Bluemix_notm}}  broker.
-3. Use a documentação da API do broker de recurso para entender a lógica de terminal da API de REST.
-4. Use os metadados que você exportou do console de gerenciamento de recurso para informar o desenvolvimento.
-5. Visualize as informações do broker fornecidas pela plataforma {{site.data.keyword.Bluemix_notm}}.
-6. Leia as recomendações adicionais para otimizar o desenvolvimento.
-7. Hospeda seu broker.
-8. Teste seu broker.
+É possível começar a construir seu broker usando uma combinação dos metadados que você exportou do console de gerenciamento de recurso, nossas amostras do broker de serviço público do {{site.data.keyword.Bluemix_notm}} e a documentação da API do broker de recurso.
 
 ## Antes de começar
-
-Esta etapa supõe que você tenha sido aprovado para entregar um serviço de faturamento integrado. Se você ainda não concluiu o registro e a aprovação iniciais no Provider Workbench, veja o [Tutorial de introdução](/docs/third-party/index.md).
-{: tip}
+{: #pre-reqs}
 
 Assegure-se de ter iniciado a etapa 1 e concluído a etapa 2:
 1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
@@ -46,14 +36,17 @@ Assegure-se de ter iniciado a etapa 1 e concluído a etapa 2:
 
 
 ## Visualize o cenário de fornecimento de plataforma do  {{site.data.keyword.Bluemix_notm}}
+{: #scenario}
 
-Desenvolva um Open Service Broker que funcione com a plataforma {{site.data.keyword.Bluemix_notm}}. Veja nosso [Cenário de fornecimento](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obter um entendimento de como a criação de recursos funciona.
+Você desenvolverá um Open Service Broker que funciona com a plataforma {{site.data.keyword.Bluemix_notm}}. Veja nosso [Cenário de fornecimento](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obter um entendimento de como a criação de recursos funciona.
 
 ## Familiarize-se com a especificação do OSB
+{: #learn-osb}
 
 O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broker API (OSB) `versão 2.12`. Leia e familiarize-se com a [Especificação do Open Broker API](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") e use o arquivo leia-me como um guia para saber mais.
 
 ## Visualize nossas amostras do  {{site.data.keyword.Bluemix_notm}}  broker
+{: #samples}
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
 
@@ -61,8 +54,9 @@ O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broke
 
 
 ## Visualize nossa documentação do Open Service Broker API do {{site.data.keyword.Bluemix_notm}}
+{: #docs}
 
-Os brokers de serviço devem ser desenvolvidos com um entendimento do [{{site.data.keyword.Bluemix_notm}}Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Familiarize-se com a API do Broker e como ela interagirá com seu broker ou brokers.
+Os brokers de serviço devem ser desenvolvidos com um entendimento do [{{site.data.keyword.Bluemix_notm}}Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Familiarize-se com a API do Broker e como ela interagirá com seu broker ou brokers.
 
 O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especificação do Open Service Broker 2.12.
 {: tip}
@@ -130,6 +124,7 @@ A especificação do OSB *não* suporta um estado de instância desativada, mas 
 **Nota**: é responsabilidade do provedor de serviços desativar o acesso à instância de serviço quando o terminal de desativação for chamado e reativar esse acesso quando o terminal de ativação for chamado.
 
 ## Aprenda como usar os metadados exportados para guiar seu desenvolvimento do broker
+{: #use-metadata}
 
 Os metadados que você exportou do console de gerenciamento de recurso podem ser usados como um guia para desenvolver seu próprio broker. Nem todos os valores inseridos no console de gerenciamento de recurso são necessários para provisionar um serviço. Os metadados exportados do console de gerenciamento de recurso definem o contrato de fornecimento mínimo entre seu serviço e a plataforma {{site.data.keyword.Bluemix_notm}}. O seu json exportado deve fornecer os valores a seguir:
 
@@ -186,6 +181,7 @@ A matriz de serviços do OSB deve ser exatamente a mesma que os metadados de ofe
 {: tip}
 
 ## Informações do broker fornecidas pela plataforma  {{site.data.keyword.Bluemix_notm}}
+{: #broker info}
 
 Seu broker ou brokers de serviço receberão as informações a seguir da plataforma {{site.data.keyword.Bluemix_notm}}:
 
@@ -210,6 +206,7 @@ O **Cabeçalho da versão da API** será [2.12](https://github.com/openservicebr
 `PUT /v2/service_instances/:resource_instance_id` e `PATCH /v2/service_instances/:resource_instance_id` receberão o valor a seguir em **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
 ## Recomendações adicionais do broker
+{: #more-info}
 
 ### Recomendações sobre o uso de operações assíncronas vs. síncronas
 
@@ -232,6 +229,7 @@ Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo gl
 
 
 ## Hospeda seus brokers
+{: #host}
 
 Seu broker deve ser hospedado como parte de um aplicativo que pode responder às chamadas API de REST. E seu local hospedado deve atender às diretrizes de segurança do {{site.data.keyword.Bluemix_notm}}. É possível ser hospedado no {{site.data.keyword.Bluemix_notm}} ou ele pode estar hospedado externamente, desde que seja publicamente acessível do próprio {{site.data.keyword.Bluemix_notm}}.
 
@@ -245,6 +243,7 @@ Você precisará do local hospedado de seu broker de serviço para concluir a pr
 {: tip}
 
 ## Como testar o broker do seu serviço
+{: #test}
 
 É necessário validar seu broker executando comandos curl em relação aos diferentes terminais que você está ativando. O leia-me de amostra fornece excelente orientação para curling de seus terminais do OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 

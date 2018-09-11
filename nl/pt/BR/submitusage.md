@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -18,7 +18,9 @@ lastupdated: "2018-06-21"
 # Enviando o uso para planos medidos
 {: #submitusage}
 
-É obrigatório enviar o uso para todas as instâncias de serviço ativo a cada hora. Não relatar o uso pode levar à perda de coleta de renda para a IBM, por sua vez, causando perda de compartilhamento de renda para provedores de oferta.
+É requerido que você envie o uso para todas as instâncias de serviço ativo a cada hora. Não relatar o uso pode levar
+à perda de coleta de renda para a IBM, o que pode causar uma perda de compartilhamento de renda para os provedores da
+oferta.
 {:shortdesc}
 
 ## Como o processo funciona
@@ -47,22 +49,26 @@ Revise os pré-requisitos a seguir para ativar a medição para seu serviço:
 
 Consulte as diretrizes a seguir ao usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para enviar dados de uso de recurso:
 
-* O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
+* O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. 
+Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
 * Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, veja as [ações](#actions) que você pode ter que tomar.
 * Um registro de uso é identificado com exclusividade pela assinatura ` account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando um registro de uso é processado, qualquer outro registro de uso com a mesma assinatura é rejeitado como uma duplicata.
-* As interações com o serviço de medição não devem ser combinadas com nenhum outro serviço. As solicitações deverão ser manipuladas individualmente, mesmo se a medição se iniciar e terminar com o fornecimento e a remoção de provisão da instância.
+* Não combine a interação com o serviço de medição com quaisquer outros serviços. As solicitações devem ser tratadas
+individualmente, mesmo caso a medição inicie e termine com o fornecimento e a remoção do fornecimento da instância.
 * Os dados de uso do recurso devem ser enviados para o serviço de medição uma vez a cada 2 a 24 horas. A frequência com que você envia seus dados de uso depende da frequência com que suas métricas de uso mudam.
-* Os registros de uso devem ser enviados dentro de dois dias a partir do horário em que a medição foi concluída. Os registros de uso mais antigos são rejeitados.
+* Os registros de uso devem ser enviados dentro de dois dias a partir do momento da conclusão da medição. Os registros de uso mais antigos são rejeitados.
 * Um envio bem-sucedido retorna um código de resposta de 201. Se qualquer outro código de resposta for retornado, atualize e reenvie os dados até que você receba o código 201.
 
 A seguir estão as melhores práticas para enviar o uso:
 
-* É recomendado que os provedores de serviços enviem o uso a cada 1 hora para que o usuário final não veja um grande atraso entre o horário em que o recurso foi consumido e o horário em que o custo é refletido em suas contas.
-* Tente novamente o envio de registros de uso somente se houver uma falha genuína com a solicitação anterior. Não reenvie registros de uso que foram aceitos com êxito.
+* Recomenda-se que os provedores de serviços enviem o uso a cada 1 hora para que o usuário não veja um grande atraso entre o
+horário do consumo do recurso e o horário no qual o custo é refletido nas contas.
+* Somente tente novamente o envio dos registros de uso se ocorrer uma falha genuína com a
+solicitação anterior. Não reenvie os registros de uso que foram aceitos com êxito.
 
 ### Diretrizes de ID do serviço
 
-  Deve-se seguir estas diretrizes ao especificar o ID de serviço usando o campo de ID na definição de recurso:
+  Deve-se seguir essas diretrizes ao especificar o ID do serviço usando o campo de ID na definição de recurso:
   * Inicie o ID com um caractere alfanumérico.
   * Use os caracteres A - Z, a - z e 0 - 9. Os únicos caracteres especiais que podem ser usados são hifens (-) e sublinhados (_).
   * Siga a convenção Camel Case se o ID contiver mais de uma palavra.
@@ -148,10 +154,13 @@ Os registros de uso são as menores entidades que contribuem para os valores agr
 | Código de status | Ação necessária                                       |
 | ------ | ---------------------------------------------------- |
 | 500 |  Tente enviar o registro de uso novamente. Se o problema continuar, entre em contato com a equipe de medição BSS. |
-| 400 |  O registro de uso não está no formato correto. A validação de esquema falhou, as medidas nos registros de uso estão incorretas ou os horários de início e de encerramento não se enquadram entre os tempos de provisão e de remoção de provisão. Atualize o registro de uso e envie-o novamente.   |
+| 400 |  O registro de uso não está no formato correto. A validação de esquema falhou, as medidas nos registros de uso estão
+incorretas ou os horários de início e de encerramento não estão entre os horários de fornecimento e de remoção de
+fornecimento. Atualize o registro de uso e envie-o novamente.   |
 | 424  | Os metadados da instância de recurso têm alguns problemas. Atualize os detalhes da instância de recurso e envie o registro de uso novamente.  |
-| 404  | A definição de medição não foi integrada. Trabalhe com a equipe de medição BSS para verificar se o recurso está integrado e envie o registro de uso novamente.  |
-| 409  | O registro de uso é uma duplicata. Não tente enviá-la novamente. |
+| 404  | A definição de medidor não estava embarcada. Trabalhe com a equipe de medição do BSS para verificar se o recurso está
+integrado e envie o registro de uso novamente.  |
+| 409  | O registro de uso é uma duplicata. Não tente submetê-lo novamente. |
 {: caption="Tabela 2. Códigos de status e ações necessárias" caption-side="top"}
 {: #actions}
 

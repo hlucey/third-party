@@ -25,7 +25,7 @@ Essa etapa supõe que você esteja aprovado para entregar um serviço de faturam
 
 ## Antes de começar
 
-Assegure-se de ter iniciado a Etapa 1 e concluído as Etapas 2, 3, 4 e 5:
+Certifique-se de ter iniciado a etapa 1 e concluído as etapas 2, 3, 4 e 5:
 1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
 2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
 3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).

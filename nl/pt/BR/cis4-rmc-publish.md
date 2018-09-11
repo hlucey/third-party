@@ -16,12 +16,14 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Etapa 5: publicando e testando seu serviço
+# Etapa 5. Publicando e testando o serviço
+{: #step5-pubtest}
 
-Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recurso para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Conclua a guia **Implementações**: planeje a implementação de seus planos de serviço em uma ou mais regiões do catálogo do {{site.data.keyword.Bluemix_notm}}, teste seu broker ou brokers e, finalmente, publique no catálogo no modo de visibilidade limitada. Depois de implementar com êxito, teste sua oferta para certificar-se de que ela atenda aos critérios necessários e itere por meio do processo de publicação, conforme necessário.
-
+Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recursos para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. 
+{:shortdesc}
 
 ## Antes de começar
+{: #pre-reqs}
 
 Esta etapa supõe que você tenha sido aprovado para entregar um serviço de faturamento integrado. Se você ainda não concluiu o registro e a aprovação iniciais no Provider Workbench, veja o [Tutorial de introdução](/docs/third-party/index.md).
 {: tip}
@@ -33,16 +35,17 @@ Assegure-se de ter iniciado a etapa 1 e concluído as etapas 2, 3 e 4:
 3. [ Desenvolva um fluxo de autenticação ](/docs/third-party/cis5-iam.html).
 
 ## Publicar seu serviço no {{site.data.keyword.Bluemix_notm}}
+{: #publish}
 
-1. No console de gerenciamento de recurso, clique na página Implementações.
-2. Clique na guia **Brokers** e clique em **Incluir broker**.
+1. No console de gerenciamento de recurso, clique na página **Implementações**.
+2. Clique na guia **Brokers** e clique em **Incluir broker**
 3. Clique em **Gerenciar** para abrir a página Configuração de broker de serviço.
 4. Inclua o seu broker hospedado e clique em **Registrar o broker**.
 5. Depois de registrar com êxito, alterne para a guia **Implementações do catálogo**.
 6. Clique em ** Incluir implementação** e selecione o plano e o broker que você deseja implementar.
-7. Selecione a região e o data center no qual deseja implementar o serviço e clique em **Incluir**.
-8. Na página Implementações, revise a implementação não publicada e clique em **Publicar**.
-9. Na página Publicar no catálogo, revise os detalhes da implementação e clique em **Publicar**.
+7. Selecione a Região e o Data center no qual você deseja implementar seu serviço e clique em **Incluir**.
+8. Na página **Implementações**, revise sua implementação não publicada e clique em **Publicar**.
+9. Na página **Publicar no catálogo**, revise os detalhes de sua implementação e clique em **Publicar**.
 
 A página Implementações deve agora ser marcada como concluída na navegação, indicando que você passou os requisitos mínimos.
 
@@ -50,6 +53,7 @@ Preso em uma falha de implementação? Entre em contato com seu representante IB
 {: tip}
 
 ## Testar sua oferta implementada 
+{: #test}
 
 Como a implementação foi no modo de visibilidade limitada, somente você pode ver a sua oferta no catálogo do {{site.data.keyword.Bluemix_notm}}. Usando a lista de verificação abaixo, efetue login no {{site.data.keyword.Bluemix_notm}} e trabalhe por meio dos critérios de teste.
 
@@ -78,5 +82,6 @@ Se seus testes forem malsucedidos, repita as etapas anteriores para publicar seu
 
 
 ## Próximas Etapas
+{: #next-steps}
 
 Agora que você tem um serviço funcional no catálogo, é possível construir uma Demo e solicitar a aprovação para liberar publicamente o seu serviço. Veja: [Etapa 6: liberar publicamente seu serviço](/docs/third-party/cis6-ga.html).

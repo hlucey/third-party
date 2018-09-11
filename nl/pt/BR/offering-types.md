@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -31,9 +31,12 @@ A tabela a seguir fornece uma comparação detalhada dos tipos de oferta de terc
 
 |  | Serviço de Faturamento Integrado  | Serviço de Referramento |
 |---|---|---|
-| **Integração** | A integração é manipulada por meio do Provider Workbench (PWB) e do console de gerenciamento de recurso. O provedor de oferta é responsável pelo desenvolvimento de um Open Service Broker, hospedando-o, testando-o e publicando sua oferta por meio de uma série de etapas de autoatendimento. | A integração é manipulada por meio do Provider Workbench. O processo de integração de autoatendimento leva cerca de duas semanas. |
+| **Integração** | A integração é manipulada por meio do IBM Provider Workbench e do console de
+gerenciamento de recurso. O provedor de oferta é responsável pelo desenvolvimento de um Open Service Broker, hospedando-o, testando-o e publicando sua oferta por meio de uma série de etapas de autoatendimento. | A integração é manipulada por meio do Provider Workbench. 
+O processo de integração de autoatendimento leva cerca de duas semanas. |
 | **Implementação** | Provisionado pela plataforma  {{site.data.keyword.Bluemix_notm}} | Somente serviços baseados em API |
-| **Faturamento**  | No modelo de Faturamento Integrado, o usuário recebe uma única conta para sua oferta IBM e sua oferta de terceiro integrada. | No modelo de indicação, o provedor fatura para o usuário e mantém 100% da renda. |
+| **Faturamento**  |  No modelo de faturamento integrado, o usuário recebe uma nota única para a oferta IBM e
+a oferta de terceiro integrada. | No modelo referencial, os provedores faturam o usuário e mantêm 100% da renda. |
 | **Exemplo** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [API Accern](https://console.bluemix.net/catalog/services/accern-api) |
 {: caption="Tabela 1. Comparação de tipos de ofertas de terceiros" caption-side="top"}
 

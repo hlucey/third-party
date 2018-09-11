@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -23,15 +23,20 @@ O {{site.data.keyword.Bluemix}} suporta múltiplos modelos para agregar o uso de
 
 A lista a seguir descreve as expectativas para rastreamento e envio de uso:
 
-*	Os provedores de oferta de terceiros não precisam enviar o uso para planos grátis.
-*	Os provedores de oferta de terceiros não precisam enviar o uso para planos de assinatura mensal.
+*	Os provedores de oferta de terceiro não precisam enviar o uso para os planos grátis.
+*	Os provedores de oferta de terceiro não precisam enviar o uso para os planos de assinatura mensais.
 *	Para planos medidos, todos os provedores de oferta devem enviar o uso por hora (os planos Lite devem ser enviados a cada 15 minutos até 1 hora).
-*	O provedor de oferta é responsável por automatizar o envio de uso, incluindo a automação que tenta respostas de falha novamente. O {{site.data.keyword.Bluemix_notm}} não fornece uma função de nova tentativa para envios com falha. Veja a tabela de códigos de status e ações em [Enviando registros de uso](/docs/third-party/submitusage.html#submitting-usage-records) para obter mais informações.
-*	Os registros de uso para o mês atual têm que ser enviados, no máximo, até o 2º dia do mês seguinte.
-*	O {{site.data.keyword.Bluemix_notm}} é configurado para um ciclo de faturamento mensal e o tempo é representado em UTC.
+*	O provedor de oferta é responsável por automatizar o envio de uso, incluindo a automação que tenta respostas de falha novamente. 
+O {{site.data.keyword.Bluemix_notm}} não fornece uma função de nova tentativa para envios com falha. Para obter mais
+informações, consulte os códigos de status e a tabela de ações em
+[Enviando registros de uso](/docs/third-party/submitusage.html#submitting-usage-records).
+*	Os registros de uso do mês atual devem ser enviados, o mais tardar, até o dia 2 do mês seguinte.
+*	O {{site.data.keyword.Bluemix_notm}} é configurado para um ciclo de faturamento mensal e o horário é representado em
+Hora Universal Coordenada (UTC).
 *  Os provedores de ofertas devem testar o envio de uso e validar seus resultados para informar como o ciclo de faturamento mensal é calculado.
 
-Veja [Como calcular seus custos](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost) para obter informações gerais sobre precificação.
+Para obter informações gerais sobre precificação, consulte
+[Como calcular os custos](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propriedades de Configuração
 {: #configure}
@@ -63,7 +68,8 @@ A tabela a seguir mostra os modelos de medição disponíveis.
 | standard_avg | Quantidade média de todos os registros de uso enviados por um mês. |
 | dailyateation_max | Máximo calculado diariamente. Somar todos os dias para o mês. | 
 | dailyateation_avg | Média diária calculada. Somar todos os dias para o mês. |
-| monthlyproration | Calculado de forma semelhante ao rateio diário, mas o preço usado é o preço do plano dividido pelo número total de dias para o mês (preço diário). |
+| monthlyproration | Calculado semelhantemente ao rateio diário, mas o preço usado é o preço do plano que é dividido pelo número
+total de dias para o mês (preço diário). |
 {: caption="Tabela 1. Modelo de medição" caption-side="top"}
 
 ### Exemplos
@@ -108,7 +114,7 @@ Fórmula: MAX (usos)
 | Dia 3 (manhã) | 15             | MAX (10, 15)  | 15                    |
 | Dia 4 (noite)   | 1              | MAX(15, 1)   | 15                    |
 
-#### Média de rateio diário
+#### Média de rateio diária
 Calcule o uso médio para cada dia e calcule a média para o mês. A média de cada dia é somada e dividida pelo número de dias atualmente passados (em UTC).
 
 Fórmula: adição (média diária) / Número de dias passados no período de faturamento
@@ -128,7 +134,7 @@ Dado um mês de 30 dias:
 
 \* Conforme visto no mesmo dia que o momento em que o uso foi enviado.
 
-#### Máximo de rateio diário
+#### Máximo de rateio Diário
 Calcule o uso máximo por dia e calcule a média para o mês. O máximo de cada dia é somado e dividido pelo número de dias atualmente passados (em UTC).
 
 Fórmula: adição (máximo diário)/número de dias passados no período de faturamento
@@ -149,7 +155,8 @@ Dado um mês de 30 dias:
 ## Exemplos de escala de medição e classificação
 {: #scale-examples}
 
-É possível usar a configuração de ajuste de escala para compilar a quantidade de unidade de forma diferente do que é enviado em envios de uso para o que é exibido no Painel de uso e o que é finalmente usado para a classificação e os cálculos de custo. Os exemplos a seguir demonstram cenários quando esses valores devem ser configurados:
+É possível usar a configuração de ajuste de escala para compilar a quantidade de unidade de forma diferente do que é enviado
+em envios de uso para o que é exibido no Painel de uso e o que é usado para os cálculos de classificação e de custo. Os exemplos a seguir demonstram esses cenários:
 
 ### Você deseja mais granularidade do que os usuários veem
 Você deseja enviar usos a um nível mais granular, mas deseja mostrar aos clientes um número mais legível.
@@ -157,7 +164,8 @@ Você deseja enviar usos a um nível mais granular, mas deseja mostrar aos clien
 Por exemplo, você pode desejar medir o tráfego de uma instância em bytes e desejar os valores agregados em megabytes. Para fazer isso, inclua um `scale` de 1024 na configuração de **medição**.
 
 ### Você deseja mais granularidade do que a sua configuração de precificação tem
-Você precifica suas métricas como US$ X/gigabyte, mas deseja enviá-las em megabytes. Se a sua métrica for precificada em US$ 1/gigabyte, mas um usuário usar 0,5 megabyte, US$ 1 será cobrado porque sua precificação é por gigabyte. Você inclui um `scale` de 1024 na configuração de **classificação** e configura `clip` como `true`.
+Você precifica suas métricas como US$ X/gigabyte, mas deseja enviá-las em megabytes. Se a métrica for precificada em
+US$ 1/gigabyte, mas um usuário usar 0,5 megabytes, será cobrado US$ 1 porque a precificação é por gigabyte. Você inclui um `scale` de 1024 na configuração de **classificação** e configura `clip` como `true`.
 
 Isso retém true caso sua métrica também seja precificada como US$ X por 100 chamadas API (ou algum outro tamanho de pacote).
 
@@ -172,9 +180,11 @@ A tabela a seguir fornece informações detalhadas sobre os modelos de precifica
 | Modelo          | Descrição | Cálculo | Exemplo (5000 quantity) |
 |:-----------------|:-------------|:----------- |:---------------------|
 | Linear         | Multiplique o preço unitário por recurso (P) pela quantidade de uso (Q) para obter a quantia total (T)  | P*Q    | P=$1 T = 1 * 5000 = $5000        |
-| Rateio      | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. O encargo total envolve acumular os encargos de todos os dias no mês especificado.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
-| Camada simples (camada granular)  | Um modelo P*Q no qual o preço unitário para todo o consumo é determinado pela camada na qual a quantidade se enquadra.           | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
+| Rateio      | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. 
+O total de encargos envolve o acúmulo dos encargos para todos os dias do mês.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
+| Camada simples (camada granular)  | Um modelo P*Q no qual o preço unitário para todo o consumo é determinado pela
+camada em que a quantidade se encaixa. | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
 | Camada graduada (camada da etapa)   | O preço por unidade varia conforme a quantidade consumida se move para diferentes camadas predefinidas. O encargo total envolve acumular os encargos das camadas anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1 = 1000, P1 = US$ 1, T1 = 1*1000</li><li>Q2 = 1500, P2 = US$ 0,9, T2 = 0,9*1500</li><li>Q3 = 10000, P3 = US$ 0,75, T3 = 0,75*2500</li><li>T = 1000 + 1350 + 1875 = US$ 4225</li></ul>          |
-| Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até", que não varia dentro do bloco     | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
+| Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até" que não varia dentro do bloco | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
 
 

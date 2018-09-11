@@ -2,54 +2,141 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-02"
+lastupdated: "2018-07-20"
 
 ---
 
 {:right: .ph data-hd-position='right'}
 {:shortdesc: .shortdesc}
 {:table: .aria-labeledby="caption"}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:new_window: target="_blank"}
 
 # Listas de verificação de ponta a ponta
 {: #checklist}
 
 Use as listas de verificação a seguir para rastrear todas as tarefas necessárias para definir, desenvolver e publicar seu serviço de faturamento integrado.
+{:shortdesc}
 
-## Definir sua oferta
-
-| Atividade | Subtarefas | Descrição | Ambiente |
-|------| ----------| ------------|-----|
-| Aprenda sobre a plataforma  {{site.data.keyword.Bluemix_notm}} . | ☐ Eu entendo como a camada de fornecimento, o {{site.data.keyword.Bluemix_notm}} IAM, o catálogo, o OSB e o serviço de medição trabalham todos juntos para a plataforma {{site.data.keyword.Bluemix_notm}}. | Diferente de um serviço referencial do {{site.data.keyword.Bluemix_notm}}, um serviço de faturamento integrado usa a plataforma {{site.data.keyword.Bluemix_notm}} para criar, ligar, excluir e cobrar por instâncias de serviço. [Aprenda](/docs/third-party/platform.html#what-is-the-ibm-cloud-platform-) sobre os componentes críticos que compõem a plataforma para iniciar seu desenvolvimento! | Documentação |
-| Registrar no PWB | ☐ Concluída a **Tarefa de conteúdo** no PWB <br><br>☐ Eu obtive aprovação para publicar minha oferta como um serviço de faturamento integrado <br><br> ☐ Eu obtive um e-mail inicial com meu valor de URL de documentação <br><br> | A primeira etapa é registrar sua oferta com o {{site.data.keyword.Bluemix_notm}} PWB. Para obter mais informações sobre como concluir essa tarefa, veja o [Tutorial de introdução](/docs/third-party/index.html#get-started). | PWB |
-| Autor e publicação  {{site.data.keyword.Bluemix_notm}}  docs | ☐ Eu iniciei a **Tarefa de orientação (documentação)** no PWB <br><br>UNK I obteve minha  ` URL da Documentação ` <br><br> eu publique com sucesso meus documentos <br><br> | Sabemos que sua documentação de terceiros hospedada em seu próprio website é ótima. No entanto, agora que você está entregando um serviço de faturamento integrado no {{site.data.keyword.Bluemix_notm}}, é necessário entregar a documentação customizada para a sua experiência de faturamento integrado do {{site.data.keyword.Bluemix_notm}}. O PWB guiará você por essa tarefa e ajudará a publicar seus documentos em https://console.bluemix.net/docs/. Para obter mais informações sobre como concluir essa tarefa, veja: [Criar sua documentação de introdução](/docs/third-party/cis1-docs-marketing.html#docs) | PWB |
-| Autor e publicação de anúncio de marketing | ☐ Eu iniciei a **Tarefa de marketing (comunicado)** no PWB <br><br>  Eu publique com sucesso meu anúncio <br><br>  | Crie um material de marketing para anunciar a disponibilidade para seu serviço por meio dos canais de newsletter e de mídia social do {{site.data.keyword.Bluemix_notm}}. O PWB vai guiá-lo por essa tarefa. Para obter mais detalhes, veja: [Criar sua documentação de introdução](/docs/third-party/cis1-docs-marketing.html#announcement) | PWB |
-| Registre seu serviço no console de gerenciamento de recurso | ☐ Eu defini um `service-name` exclusivo e significativo como meu **Nome do recurso**<br><br>  ☐ Eu salvei e validei com êxito um registro no console de gerenciamento de recurso <br><br>  | O console de gerenciamento de recurso ajudará você a criar uma oferta exclusiva. Siga a [orientação](/docs/third-party/cis2-rmc-define.html#register-your-offering-by-using-the-resource-management-console-rmc-) para registrar sua oferta. | Console de gerenciamento de recurso |
-| Conclua a página **Oferta** no console de gerenciamento de recurso | ☐ Usando o valor fornecido em meu e-mail de oferta do PWB, eu configurei corretamente minha **URL da documentação** e **URL de instrução**<br><br>  ☐ Eu forneci uma URL de **Termos de serviço** que não é a minha página TOS da empresa, mas uma página TOS exclusiva sem cláusulas de faturamento ou pagamento.<br><br>  ☐ Eu entendi e especifiquei corretamente se **Mudanças do plano suportadas?** está ativado. ☐ Eu entendi e especifiquei corretamente se meu serviço é **Ligável**.| Forneça metadados do catálogo no console de gerenciamento de recurso que será exibido em seu tile {{site.data.keyword.Bluemix_notm}}, incluindo URLs críticas como Termos de Serviço, e detalhes significativos sobre sua oferta, como boletins de informações e mais. Siga a [orientação](/docs/third-party/cis2-rmc-define.html#enter-your-offering-metadata-rmc-offering-page-) para configurar os metadados de catálogo necessários e recomendados para a sua oferta. | Console de gerenciamento de recurso |
-| Conclua a página **Gerenciamento de acesso** no console de gerenciamento de recursos | UNK I ativado com sucesso IAM<br><br>  ☐ Eu salvei a chave API do IAM gerada uma vez que a IU do console de gerenciamento de recurso criou para mim e entendo que a chave API não está armazenada no console de gerenciamento de recurso e eu não poderei recuperá-la posteriormente.<br><br> ☐ Eu entendo que a página Gerenciamento de acesso não pode ser concluída até que eu desenvolva e hospede um OSB em etapas posteriores e, em seguida, derive meu URI de redirecionamento.<br><br> ☐ Após criar e hospedar meu OSB, retornei para a página do IAM e concluí com êxito a página clicando em **Incluir URI de redirecionamento** e incluindo meu valor derivado.| Registre sua oferta com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) no console de gerenciamento de recurso. O IAM permite que você autentique os usuários com segurança para os serviços de plataforma e controle o acesso aos recursos de forma consistente na plataforma {{site.data.keyword.Bluemix_notm}}. (Você irá voltar e ativar seu URI de redirecionamento). Siga a [orientação](/docs/third-party/cis2-rmc-define.html#register-with-identity-and-access-management-rmc-iam-page-) para ativar o gerenciamento de acesso inicial de sua oferta. | Console de gerenciamento de recurso |
-| Desenvolva um ou mais planos de precificação no console de gerenciamento de recurso | ☐ Eu forneci um plano grátis com um nome exclusivo.<br><br>  ☐ (Opcional) Eu trabalhei com meu representante IBM para definir um plano pago (assinatura ou medido) e entendo que, para criar um plano medido, devo remover o plano de assinatura padrão.<br><br> ☐ (Opcional) Eu entendo que os planos medidos precisam de mim para hospedar e desenvolver o envio de uso por hora automatizado usando o serviço de medição de plataforma {{site.data.keyword.Bluemix_notm}}.| Como você cobrará por sua oferta? O console de gerenciamento de recurso fornece planos grátis ou pagos (assinatura e medido). Siga a [orientação](/docs/third-party/cis2-rmc-define.html#develop-a-pricing-plan-rmc-pricing-page-) para definir o plano de precificação de sua oferta. | Console de gerenciamento de recurso |
-| Exporte os seus metadados do catálogo por meio do console de gerenciamento de recurso| ☐ Eu entendo que alguns dos metadados que forneci nas páginas **Oferta** e **Precificação** do console de gerenciamento de recurso devem ser exportados e fornecidos em meu OSB. Exportando os valores do console de gerenciamento de recurso, eu posso mapear GUIDs críticos, como meu serviço e IDs de plano que o console de gerenciamento de recurso gerou para mim, e fornecê-los em meu OSB para que a camada de fornecimento da plataforma possa ler esse contrato de fornecimento por meio da resposta do meu terminal `catalog GET`. <br><br>  ☐ Eu obtive o meu arquivo `catalog.json` por meio da página do console de gerenciamento de recurso **Implementações** e estou pronto para mapear a matriz de serviços para os metadados em meu OSB.<br><br> | Agora que você definiu seu serviço no console de gerenciamento de recurso, é possível fazer download de um arquivo catalog.json e usá-lo para informar o desenvolvimento de seu Open Service Broker. O catalog.json contém metadados que devem ser hospedados em seu broker. Esses valores definem o contrato entre o broker e a plataforma IBM Cloud para os serviços e planos que o broker suporta. Siga a [orientação](/docs/third-party/cis2-rmc-define.html#export-your-metadata-as-json-rmc-deployments-page-) para exportar seus metadados do catálogo. | Console de gerenciamento de recurso |
-{: caption="Tabela 1. Definir sua oferta de faturamento integrado" caption-side="top"}
-
-## Desenvolva sua oferta
+## Definindo seu Serviço
+{: #define}
 
 | Atividade | Subtarefas | Descrição | Ambiente |
 |------| ----------| ------------|-----|
-| Aprenda sobre a especificação do Open Service Broker (OSB) versão 2.12 | ☐ Eu li a especificação do OSB e entendo que devo desenvolver meu próprio OSB. <br><br>  |  Os brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{site.data.keyword.Bluemix_notm}} interage com Open Service Brokers para provisionar e gerenciar instâncias de serviço (uma instanciação de uma oferta de serviços) e ligações de serviço (a representação de uma associação entre um aplicativo e uma instância de serviço, que frequentemente contêm as credenciais que o aplicativo usará para se comunicar com a instância de serviço).[Aprenda](/docs/third-party/cis3-broker.html#become-familiar-with-the-osb-specification) sobre a especificação da versão 2.12 | Documentação |
-| Visualize nossas amostras do broker do {{site.data.keyword.Bluemix_notm}} | ☐ Eu clonei o repositório, olhei as amostras do broker e estou pronto para usar essas amostras para iniciar o desenvolvimento. <br><br>  |  [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") | Exemplos de código |
-| Visualize nossa documentação do Open Service Broker API do {{site.data.keyword.Bluemix_notm}} | ☐ Eu entendo que há vários terminais necessários que o código em meu OSB deve suportar. <br><br>  ☐ Eu entendo que, se o meu serviço pode ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}, ele deve ser capaz de retornar os terminais e as credenciais de API para meus consumidores do serviço. <br><br> ☐ Eu entendo que o {{site.data.keyword.Bluemix_notm}} definiu terminais de API estendidos que permitem que as instâncias de serviço sejam desativadas e reativadas. Eu devo estender meu OSB e definir as **instâncias de ativação e desativação (GET e PUT)** |  O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especificação do Open Service Broker 2.12. [Aprenda](/docs/third-party/cis3-broker.html#view-our-resource-broker-api-documentation) sobre os terminais necessários que seu broker deve usar | Documentação |
-| Use seus metadados do catálogo para iniciar o desenvolvimento do seu broker | ☐ Eu entendo que alguns dos metadados que forneci nas páginas **Oferta** e **Precificação** do console de gerenciamento de recurso devem ser exportados e fornecidos em meu OSB. Exportando os valores do console de gerenciamento de recurso, eu posso mapear GUIDs críticos, como meus IDs de serviço e de plano que o console de gerenciamento de recurso gerou para mim, e fornecê-los em meu OSB para que a camada de fornecimento da plataforma possa ler esse contrato de fornecimento por meio da resposta de meu terminal `catalog GET`. <br><br>  ☐ Eu incluí os GUIDs necessários e outros valores necessários listados em meu arquivo `catalog.json` na matriz de serviços em meu OSB de amostra. | Depois de fazer download de um arquivo `catalog.json` por meio do console de gerenciamento de recurso, é possível usá-lo para informar o desenvolvimento do Open Service Broker. O catalog.json contém metadados que devem ser hospedados em seu broker. Esses valores definem o contrato de fornecimento entre o broker e a plataforma IBM Cloud para os serviços e planos que o broker suporta. Siga a [orientação](/docs/third-party/cis3-broker.html#learn-how-to-use-the-exported-metadata-to-guide-your-broker-development) para incluir os metadados do catálogo exportado no OSB. | Ambiente de desenvolvimento e documentação |
-| Hospeda o OSB | ☐ Eu entendo que o local hospedado do meu broker deve seguir o protocolo de Segurança da Camada de Transporte (TLS) versão 1.2. Além disso, meu broker deve ser hospedado em um terminal HTTPs válido que está acessível na Internet pública. <br><br> | Seu broker deve ser hospedado como parte de um aplicativo que pode responder às chamadas API de REST. E seu local hospedado deve atender às diretrizes de segurança do IBM Cloud. Siga a [orientação](/docs/third-party/cis3-broker.html#host-your-brokers) para hospedar seu broker. | Ambiente de desenvolvimento e documentação |
-| Teste o OSB hospedado | ☐ Eu validei cada um dos terminais de API que meu broker suporta, executando comandos curl com relação a seu broker hospedado e validando as respostas. <br><br> | É necessário validar seu broker executando comandos curl com relação aos diferentes terminais que você está ativando. Siga a [orientação](/docs/third-party/cis3-broker.html#how-to-test-your-service-s-broker) para hospedar seu broker.| Ambiente de desenvolvimento e documentação |
-| Derive e configure seu URI de redirecionamento do IAM | ☐ Eu derivei com êxito a minha URL de redirecionamento do IAM usando o local hospedado do meu OSB e algumas informações de autenticação. <br><br> ☐ Eu concluí com êxito a página do console de gerenciamento de recurso **Gerenciamento de acesso** especificando meu **URI de redirecionamento** e configurando corretamente meu ID de cliente. <br><br> | Quando você definiu o seu serviço no console de gerenciamento de recurso, gerou um ID de cliente, mas observe que provavelmente não tinha um URI de Redirecionamento no momento. Isso significa que o IAM criou um ID de cliente que está configurado para `false`. Até que retorne para o console de gerenciamento de recurso com seu **URI de redirecionamento**, você não terá um ID de cliente verdadeiro. Siga a [orientação](/docs/third-party/cis5-iam.html#derive-your-iam-redirect-uri-resource-management-console-iam-page-) para derivar e configurar o URI de redirecionamento do IAM. | O ambiente de desenvolvimento e o console de gerenciamento de recurso |
-| Desenvolva seu fluxo OAuth para autenticação | ☐ Eu entendo que o IAM suporta o Open ID Connect (OIDC). <br><br> ☐ Eu descobri meu terminal regional do IAM e eu redireciono com êxito os usuários de `dashboard_url` para o meu URI de redirecionamento montado e eu armazeno o `access_token` do usuário retornado em minha resposta para que possa ser usado durante a autenticação. <br><br> | Os usuários que visitam o painel de serviço devem ser autenticados corretamente. Desenvolva a autenticação e autorização baseada em token de autorização aberta usando o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Siga a [orientação](/docs/third-party/cis5-iam.html#oauth) para desenvolver um fluxo OAuth para autenticação. | Ambiente de desenvolvimento e documentação|
-| Validar autorização do usuário | ☐ eu posso me comunicar com o IAM para obter um token de acesso para uma chave API <br><br> ☐ Eu sou capaz de validar a autorização do usuário para a instância de serviço (/v2/authz POST). <br><br> | Depois de desenvolver o seu fluxo OAuth para autenticação, deve-se validar que os usuários serão autorizados corretamente, assegurando que os usuários de seu serviço tenham a capacidade de acessar o painel de serviço. Siga a [orientação](/docs/third-party/cis5-iam.html#validate) para validar a autorização do usuário. | Ambiente de desenvolvimento e documentação |
-{: caption="Tabela 2. Desenvolver sua oferta de faturamento integrado" caption-side="top"}
+| Aprenda sobre a plataforma  {{site.data.keyword.Bluemix}} . | ☐ Entendo como a camada de fornecimento, o
+{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), o catálogo, o Open Service Broker e o serviço de medição funcionam juntos. | Diferente de um serviço referencial do {{site.data.keyword.Bluemix_notm}}, um serviço de faturamento integrado usa a plataforma {{site.data.keyword.Bluemix_notm}} para criar, ligar, excluir e cobrar por instâncias de serviço. [Conheça](/docs/third-party/platform.html#what-is-the-ibm-cloud-platform-)
+os componentes críticos que compõem a plataforma para acelerar o desenvolvimento. | Documentação |
+| Registre a oferta no ambiente de trabalho do Provedor {{site.data.keyword.Bluemix_notm}}. | A conclusão da tarefa de conteúdo foi concluída. <br><br>
+☐ Recebi a aprovação para publicar a oferta como um serviço de faturamento integrado. <br><br> ☐ Recebi um e-mail com o valor
+da URL da documentação. <br><br> | A primeira etapa é registrar a oferta no ambiente de trabalho do Provedor. Para obter mais detalhes, consulte o
+[Tutorial de introdução](/docs/third-party/index.html#get-started). | Workbench do Provedor |
+| Publique os docs do {{site.data.keyword.Bluemix_notm}}. | ☐ Iniciei a tarefa de orientação no ambiente de trabalho
+do Provedor. <br><br>O recebimento do  ` URL da Documentação ` foi recebido. <br><br> Eu publique com sucesso minhas docas. <br><br> |
+Sabemos que a documentação de terceiro hospedada em seu website é ótima. No entanto, agora que você está entregando um serviço de
+faturamento integrado no {{site.data.keyword.Bluemix_notm}}, é necessário entregar a documentação customizada para
+a sua experiência de faturamento integrada do {{site.data.keyword.Bluemix_notm}}. Para obter mais detalhes, consulte
+[Criando a documentação](/docs/third-party/cis1-docs-marketing.html#docs). | Workbench do Provedor |
+| Publique seu anúncio de marketing. | ☐ Comecei a tarefa de marketing no ambiente de trabalho do provedor. <br><br>  ☐ Publiquei com
+sucesso o anúncio de marketing. <br><br>  | Crie o material paralelo de marketing para anunciar a disponibilidade para
+o serviço por meio do newsletter do {{site.data.keyword.Bluemix_notm}} e dos canais de mídia social. Para obter mais
+detalhes, consulte [Criando o anúncio de marketing](/docs/third-party/cis1-docs-marketing.html#announcement). | Workbench do Provedor |
+| Registre a oferta no console de gerenciamento de recurso. | ☐ Defini um `service-name` exclusivo e significativo
+como o nome do recurso.<br><br>  ☐ Validei com êxito que tenho um registro no console de gerenciamento de
+recurso. <br><br>  | Use o console de gerenciamento de recurso para criar uma oferta exclusiva. Para obter mais detalhes, consulte
+[as etapas para registrar a oferta](/docs/third-party/cis2-rmc-define.html#register). | Console de gerenciamento de recurso |
+| Preencha a página Oferta no console de gerenciamento de recurso. |☐ Usando o valor fornecido no e-mail da oferta do
+ambiente de trabalho do Provedor, eu configurei corretamente a URL da documentação e a URL da instrução. <br><br>  ☐ Forneci uma
+URL que aponta para um termo exclusivo da página de serviço sem cláusulas de faturamento ou de pagamento.<br><br>  ☐ Eu entendi e especifiquei corretamente se **Mudanças do plano suportadas?** está ativado. 
+☐ Compreendi e especifiquei corretamente se o serviço é de ligação.| Forneça os metadados do catálogo no console de gerenciamento de
+recurso exibido no quadro do {{site.data.keyword.Bluemix_notm}}. Para obter mais detalhes, consulte [as etapas para inserir os metadados da oferta](/docs/third-party/cis2-rmc-define.html#offering-metadata). | Console de gerenciamento de recurso |
+| Preencha a página Gerenciamento de acesso no console de gerenciamento de recurso. | O IAM ativou com êxito o IAM. <br><br>  ☐ Salvei
+a chave API única do IAM gerada que foi criada para mim e entendo que ela não está armazenada no console
+de gerenciamento de recurso e que não posso recuperá-la posteriormente.<br><br> ☐ Entendo que a página Gerenciamento de acesso não pode
+ser preenchida até que eu desenvolva e hospede um broker de serviço aberto e, em seguida, derive o URI de
+redirecionamento.<br><br> ☐ Depois de hospedar o broker de serviço aberto, eu retornei à página do IAM e a preenchi com êxito.|
+Registre a oferta com o IAM do {{site.data.keyword.Bluemix_notm}} no console de gerenciamento de recurso. O IAM permite que você autentique os usuários com segurança para os serviços de plataforma e controle o acesso aos recursos de forma consistente na plataforma {{site.data.keyword.Bluemix_notm}}. 
+Para obter mais detalhes, consulte [as etapas para registrar com o IAM](/docs/third-party/cis2-rmc-define.html#reg-iam). | Console de gerenciamento de recurso |
+| Desenvolva um ou mais planos de precificação no console de gerenciamento de recurso. | ☐ Eu forneci um plano grátis com um nome exclusivo.<br><br>  
+☐ (Opcional) Trabalhei com o representante IBM para definir um plano pago, de assinatura ou medido, e entendo que devo remover o plano
+de assinatura padrão para criar um plano medido.<br><br> ☐ (Opcional) Entendo que devo hospedar e desenvolver o envio de uso por
+hora automatizado.| Como você cobrará pelo serviço? O console de gerenciamento de recurso fornece planos grátis ou pagos. Para obter
+mais detalhes, consulte [as etapas para desenvolver um plano de precificação](/docs/third-party/cis2-rmc-define.html#develop-a-pricing-plan-rmc-pricing-page-). | Console de gerenciamento de recurso |
+| Exporte os metadados do catálogo do console de gerenciamento de recurso. | ☐ Entendo que alguns dos metadados que forneço nas
+páginas Oferta e Precificação do console de gerenciamento de recurso devem ser exportados e fornecidos no Open Service Broker. <br><br>  
+☐ Obtive o arquivo `catalog.json` na página Implementações e estou pronto para mapear a matriz de serviços
+para os metadados no Open Service Broker.<br><br> | Agora que você definiu o serviço no console de gerenciamento de recurso,
+é possível fazer download de um arquivo `catalog.json` e usá-lo para informar o desenvolvimento do Open Service
+Broker. Para obter mais detalhes, consulte [as etapas para exportar os metadados](/docs/third-party/cis2-rmc-define.html#export metadata). | Console de gerenciamento de recurso |
+{: caption="Tabela 1. Definindo o serviço de faturamento integrado" caption-side="top"}
 
-## Publicar e testar sua oferta
+## Desenvolvendo o serviço
+{: #develop}
 
 | Atividade | Subtarefas | Descrição | Ambiente |
 |------| ----------| ------------|-----|
-| Publique sua oferta no modo de visibilidade limitada | ☐ Eu registrei com êxito meu OSB hospedado na página **Implementações** do console de gerenciamento de recurso. <br><br> ☐ Eu criei com êxito novas implementações na página **Implementações** do console de gerenciamento de recurso e publiquei minha oferta para uma ou mais regiões. <br><br> |  Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recursos para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Siga a [orientação](/docs/third-party/cis4-rmc-publish.html#publish-your-service-to-ibm-cloud) para publicar sua oferta no modo de visibilidade limitada. | Console de gerenciamento de recurso |
-| Teste sua oferta | ☐ Conectado com minha conta incluída na lista de desbloqueio, eu posso ver meu serviço no catálogo https://console.bluemix.net. <br><br> ☐ Eu validei a autenticação validada com êxito por meio do painel da instância de serviço <br><br> ☐ Eu validei com êxito que a minha oferta é exibida corretamente no catálogo. <br><br> ☐ Eu validei com êxito que o fornecimento funciona; eu posso escolher um plano e criar uma instância de serviço. <br><br> ☐ Eu validei com êxito que a remoção de provisão funciona; eu posso excluir uma instância de serviço. <br><br> ☐ Eu validei com êxito que a ligação funciona; eu posso clicar em **Conexões** e conectar o meu serviço a outro aplicativo. <br><br> ☐ Eu validei com êxito que a desvinculação funciona; eu posso desconectar meu serviço e excluir a conexão. <br><br>  ☐ Eu validei com êxito que Criar chave de serviço e Excluir chave de serviço funcionam; eu posso clicar em **Credenciais**, gerar uma chave de serviço e excluir essa chave de serviço. <br><br> ☐ Eu trabalhei com meu representante IBM para validar que minha oferta suporta corretamente os terminais de ativação e desativação. <br><br> ☐ Como minha oferta tem um plano medido, eu testei com êxito o envio de uso executando curl da API de uso e retornando corretamente a precificação precisa com base no uso e ativando o envio por hora automatizado para o uso, suportando todos os usuários que provisionam uma instância do meu serviço. | Agora que você tem seu broker ou brokers hospedados que atendem à especificação do OSB, é possível retornar para o console de gerenciamento de recursos para publicar seu serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Siga a [orientação](/docs/third-party/cis4-rmc-publish.html#test-your-deployed-offering) para testar seu serviço implementado. | Console do {{site.data.keyword.Bluemix_notm}} |
-{: caption="Tabela 3. Publicar e testar sua oferta de faturamento integrado" caption-side="top"}
+| Conheça a especificação do Open Service Broker versão 2.12. | ☐ Li a especificação do Open Service Broker e entendo que
+devo desenvolver o meu próprio Open Service Broker. <br><br>  |  Os brokers de serviço gerenciam o ciclo de vida de serviços. A
+plataforma {{site.data.keyword.Bluemix_notm}} interage com os Open Service Brokers para fornecer e gerenciar as instâncias
+de serviço e as ligações de serviço. Para obter mais detalhes, consulte
+[Desenvolvendo e hospedando os brokers de serviço](/docs/third-party/cis3-broker.html#step3-osb). | Documentação |
+| Visualize as amostras do  {{site.data.keyword.Bluemix_notm}}  intermediário. | ☐ Clonei o repositório, pesquisei as
+amostras do broker e estou pronto para usá-las para iniciar o desenvolvimento. <br><br>  |  [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") | Exemplos de código |
+| Visualize a documentação da API do Open Service Broker do {{site.data.keyword.Bluemix_notm}}. | ☐ Entendo que há vários
+terminais necessários que o código no Open Service Broker deve suportar. <br><br>  ☐ Entendo que, se o serviço puder ser ligado aos
+apps no {{site.data.keyword.Bluemix_notm}}, ele deverá ser capaz de retornar os terminais de API e as credenciais para
+os usuários do serviço. <br><br> ☐ Entendo que o {{site.data.keyword.Bluemix_notm}} definiu terminais de API estendidos
+que permitem que as instâncias de serviço sejam desativadas e reativadas. |  O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especificação do Open Service Broker 2.12. 
+[Conheça](/docs/third-party/cis3-broker.html#docs) os terminais necessários que o broker de serviço deve usar. | Documentação |
+| Use os metadados do catálogo para iniciar o desenvolvimento do broker de serviço. | ☐ Entendo que alguns dos metadados que
+forneci no console de gerenciamento de recurso devem ser exportados e fornecidos no Open Service Broker. <br><br>  ☐ Incluí os
+GUIDs e outros valores necessários listados no arquivo `catalog.json` para a matriz
+de serviços no Open Service Broker de amostra. | Depois de fazer download de um arquivo `catalog.json` do console
+de gerenciamento de recurso, é possível usá-lo para informar o desenvolvimento do Open Service Broker. Para obter mais detalhes,
+consulte [as etapas para usar os metadados exportados para guiar o
+desenvolvimento](/docs/third-party/cis3-broker.html#use-metadata). | Ambiente de desenvolvimento e documentação |
+| Hospeda o Open Service Broker. | ☐ Entendo que o local hospedado do broker de serviço deve seguir o protocolo de Segurança da
+Camada de Transporte (TLS) versão 1.2. <br><br> | O broker de serviço deve ser hospedado como parte de um app que pode
+responder às chamadas da API de REST. E seu local hospedado deve atender às diretrizes de segurança do {{site.data.keyword.Bluemix_notm}}. 
+Para obter mais detalhes, consulte [as etapas para hospedar o broker de serviço](/docs/third-party/cis3-broker.html#host). | Ambiente de desenvolvimento e documentação |
+| Teste seu host Open Service Broker hospedado. | ☐ Validei cada um dos terminais de API que o broker de serviço
+suporta executando os comandos curl com relação ao broker de serviço hospedado. <br><br> | Valide o broker de serviço executando
+os comandos curl com relação aos diferentes terminais que você está ativando. Para obter mais detalhes, consulte
+[as etapas para testar o broker de serviço](/docs/third-party/cis3-broker.html#test).| Ambiente de desenvolvimento e documentação |
+| Derive e configure o URI de redirecionamento do IAM. |☐ Derivei com êxito o URI de redirecionamento do IAM usando o local
+hospedado do Open Service Broker e algumas informações sobre autenticação. <br><br> ☐ Preenchi com êxito a página
+Gerenciamento de acesso especificando o URI de redirecionamento e configurando corretamente o identificador de cliente. <br><br> |
+Ao definir o serviço no console de gerenciamento de recurso, um identificador de cliente é gerado, mas observe que
+provavelmente você não tinha um URI de redirecionamento no momento. Isso significa que o identificador de cliente está
+configurado como `false`. 
+Até você retornar ao console de gerenciamento de recurso com o URI de redirecionamento, não terá um identificador de cliente
+true. Para obter mais detalhes, consulte [as etapas para derivar o URI de redirecionamento](/docs/third-party/cis5-iam.html#redirect-uri). | O ambiente de desenvolvimento e o console de gerenciamento de recurso |
+| Desenvolva o fluxo do Open Authorization (OAuth) para a autenticação. | ☐ Eu entendo que o IAM suporta o Open ID Connect (OIDC). <br><br> ☐ Eu descobri meu terminal regional do IAM e eu redireciono com êxito os usuários de `dashboard_url` para o meu URI de redirecionamento montado e eu armazeno o `access_token` do usuário retornado em minha resposta para que possa ser usado durante a autenticação. <br><br> | Os usuários que visitam o painel de serviço devem ser autenticados corretamente. 
+Desenvolva a autenticação baseada em token do OAuth e a autorização usando o IAM. Para obter mais detalhes, consulte
+[as etapas para desenvolver o fluxo do OAuth](/docs/third-party/cis5-iam.html#oauth). | Ambiente de desenvolvimento e documentação|
+| Validar autorização do usuário. | ☐ Posso obter um token de acesso para uma chave API. <br><br> ☐ Posso validar a autorização para
+os usuários para a instância de serviço. <br><br> | Depois de desenvolver o fluxo do OAuth para a autenticação, deve-se validar que
+os usuários estejam corretamente autorizados, assegurando que os usuários do serviço possam acessar o painel de serviço. Para obter
+mais detalhes, consulte [as etapas para validar](/docs/third-party/cis5-iam.html#validate). | Ambiente de desenvolvimento e documentação |
+{: caption="Tabela 2. Desenvolvendo o serviço de faturamento integrado" caption-side="top"}
+
+## Publicando e testando seu serviço
+{: #pubtest}
+
+| Atividade | Subtarefas | Descrição | Ambiente |
+|------| ----------| ------------|-----|
+| Publique o serviço no modo de visibilidade limitada. | ☐ O Open Service Broker hospedado foi registrado com êxito na página
+Implementações no console de gerenciamento de recurso. <br><br> ☐ As novas implementações foram criadas com êxito e a oferta
+publicada para uma ou mais regiões. <br><br> | Agora que os brokers de serviço hospedados atendem à especificação do Open
+Service Broker, é possível publicar o serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Para obter mais detalhes,
+consulte [as etapas para publicar o serviço](/docs/third-party/cis4-rmc-publish.html#publish). | Console de gerenciamento de recurso |
+| Teste sua oferta. | ☐ Posso ver o serviço no catálogo. <br><br> ☐ A autenticação foi validada por meio do painel da instância de serviço. <br><br> 
+☐ Validei que o serviço é exibido corretamente no catálogo. <br><br> ☐ Posso selecionar um plano e criar uma instância de serviço. <br><br> ☐
+Posso excluir uma instância de serviço. <br><br> ☐ Posso conectar o serviço a outro aplicativo. <br><br> ☐ Posso desconectar o
+serviço e excluir a conexão. <br><br>  ☐ Posso gerar uma chave de serviço e excluí-la. <br><br> ☐ Eu trabalhei com meu representante IBM para validar que minha oferta suporta corretamente os terminais de ativação e desativação. <br><br> 
+☐ Porque a oferta tem um plano medido, testei com sucesso o envio de uso. | Agora que os brokers de serviço hospedados atendem à
+especificação do Open Service Broker, é possível publicar o serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Para
+obter mais detalhes, consulte [as etapas para testar o serviço](/docs/third-party/cis4-rmc-publish.html#test). | Console do {{site.data.keyword.Bluemix_notm}} |
+{: caption="Tabela 3. Publicando e testando o serviço de faturamento integrado" caption-side="top"}
 

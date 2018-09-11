@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,9 @@ Use o Provider Workbench para listar seu tipo de oferta como um serviço de fatu
 ## Etapa 3. Definir os detalhes da sua oferta
 {: #step3}
 
-Depois de selecionar **Serviço de faturamento integrado** como seu tipo de oferta e enviar o formulário de avaliação de prontidão, a página é atualizada com uma seção para definir o conteúdo que é exibido na página de detalhes do catálogo no console do {{site.data.keyword.Bluemix_notm}}. Preencha cada campo e envie o formulário para revisão. O processo de revisão pode demorar alguns dias.
+Depois de selecionar **Serviço de faturamento integrado** como o tipo de oferta e enviar o formulário
+de avaliação de prontidão, a página será atualizada com uma seção para definir o conteúdo. Ela é exibida na página de detalhes do
+catálogo no console do {{site.data.keyword.Bluemix_notm}}. Preencha cada campo e envie o formulário para revisão. O processo de revisão pode demorar alguns dias.
 
 ## Próximas Etapas
 {: #next-steps}
@@ -55,6 +57,7 @@ Quando estiver aprovado, você receberá um e-mail que descreve suas próximas e
   O e-mail inclui o link para onde a documentação de introdução foi publicada. Salve a URL, porque você a usará à medida que estiver trabalhando no console de gerenciamento de recurso. 
   {: tip}
 
-* No console de gerenciamento de recurso, você integra sua oferta ao {{site.data.keyword.Bluemix_notm}} definindo sua oferta, construindo planos de precificação, ativando a segurança e gerenciando a implementação de sua oferta em diferentes ambientes do {{site.data.keyword.Bluemix_notm}}. 
+* No console de gerenciamento de recurso, integre a oferta no {{site.data.keyword.Bluemix_notm}} definindo-a, criando
+planos de precificação, ativando a segurança e gerenciando a implementação da oferta em diferentes ambientes do {{site.data.keyword.Bluemix_notm}}. 
 
 Para obter mais detalhes, veja [Desenvolvendo e publicando um serviço de faturamento integrado](/docs/third-party/integrated-billing-service.html)
