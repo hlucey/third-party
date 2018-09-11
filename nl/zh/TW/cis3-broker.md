@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-23"
 
 
 ---
@@ -17,27 +17,17 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 步驟 3. 開發及管理服務分配管理系統
+{: #step3-osb}
 
-您將使用從資源管理主控台匯出的 meta 資料，以您選擇的程式設計語言建置一個以上的新服務分配管理系統。
+藉由使用從資源管理主控台匯出的 meta 資料，您可以用選擇的程式設計語言建置一個以上的新服務分配管理系統。
+{:shortdesc}
 
 服務分配管理系統可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與服務分配管理系統互動，以佈建及管理服務實例（服務供應項目的實例化）和服務連結（應用程式與服務實例之間的關聯表示法，其中通常包含應用程式用來與服務實例進行通訊的認證）。提供有效的 meta 資料值將會在執行「要求」時建立成功的「RESTful API 回應」。
 
-您可以使用下列項目的組合來開始建置分配管理系統：從資源管理主控台匯出的 meta 資料、公用 {{site.data.keyword.Bluemix_notm}} 服務分配管理系統範例，以及 Resource Broker API 文件。若要開發分配管理系統，您將：
-
-1. 檢視平台佈建情境。
-2. 閱讀 OSB 規格。
-2. 查看 {{site.data.keyword.Bluemix_notm}} 分配管理系統範例。
-3. 使用 Resource Broker API 文件來瞭解 REST API 端點邏輯。
-4. 使用您從資源管理主控台匯出的 meta 資料來通知開發。
-5. 檢視 {{site.data.keyword.Bluemix_notm}} 平台提供的分配管理系統資訊。
-6. 閱讀其他建議以便最佳化開發。
-7. 管理分配管理系統。
-8. 測試分配管理系統。
+您可以使用下列項目的組合來開始建置分配管理系統：從資源管理主控台匯出的 meta 資料、公用 {{site.data.keyword.Bluemix_notm}} 服務分配管理系統範例，以及 Resource Broker API 文件。
 
 ## 開始之前
-
-此步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准，則請參閱[入門指導教學](/docs/third-party/index.md)。
-{: tip}
+{: #pre-reqs}
 
 確定您已開始步驟 1 並完成步驟 2：
 1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
@@ -45,14 +35,17 @@ lastupdated: "2018-08-21"
 
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} 平台佈建情境
+{: #scenario}
 
 您將會開發 Open Service Broker，以與 {{site.data.keyword.Bluemix_notm}} 平台搭配使用。請參閱[佈建情境](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以瞭解如何建立資源。
 
 ## 熟悉 OSB 規格
+{: #learn-osb}
 
 {{site.data.keyword.Bluemix_notm}} 使用 Open Service Broker API (OSB) `2.12 版`規格。閱讀並熟悉 [Open Broker API 規格](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，以及使用 Readme 檔作為指引以進一步瞭解。
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} 分配管理系統範例
+{: #samples}
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
 
@@ -60,8 +53,9 @@ lastupdated: "2018-08-21"
 
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文件
+{: #docs}
 
-應該先瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 再開發服務分配管理系統。熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
+應該先瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 再開發服務分配管理系統。熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 延伸了 Open Service Broker 2.12 規格。
 {: tip}
@@ -128,6 +122,7 @@ OSB 規格*不* 支援已停用但尚未刪除的實例狀態。為了讓 {{site
 **附註**：呼叫停用端點時，服務提供者必須負責停用對服務實例的存取權，並在呼叫啟用端點時重新啟用該存取權。
 
 ## 瞭解如何使用匯出的 meta 資料來引導分配管理系統開發
+{: #use-metadata}
 
 您從資源管理主控台匯出的 meta 資料可以用來作為自行開發分配管理系統的指引。佈建服務時並不需要您在資源管理主控台中輸入的所有值。您從資源管理主控台匯出的 meta 資料會定義服務與 {{site.data.keyword.Bluemix_notm}} 平台之間的最低佈建合約。您匯出的 json 應該提供下列值：
 
@@ -184,6 +179,7 @@ services :
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 平台提供的分配管理系統資訊
+{: #broker info}
 
 您的服務分配管理系統將會從 {{site.data.keyword.Bluemix_notm}} 平台收到下列資訊：
 
@@ -208,6 +204,7 @@ Decoded:
 `PUT /v2/service_instances/:resource_instance_id` 及 `PATCH /v2/service_instances/:resource_instance_id` 將在 **body.context** 內收到下列值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
 ## 其他分配管理系統建議
+{: #more-info}
 
 ### 使用非同步與同步作業的建議
 
@@ -230,6 +227,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業將需要不到
 
 
 ## 管理分配管理系統
+{: #host}
 
 您的分配管理系統必須被管理來當作可回應 REST API 呼叫之應用程式的一部分。您的受管理位置必須符合 {{site.data.keyword.Bluemix_notm}} 安全準則。您可以在 {{site.data.keyword.Bluemix_notm}} 中管理，也可以在外部管理，只要可以從 {{site.data.keyword.Bluemix_notm}} 本身公開存取它即可。
 
@@ -243,6 +241,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業將需要不到
 {: tip}
 
 ## 如何測試服務的分配管理系統
+{: #test}
 
 您應該對您要啟用的不同端點執行 curl 指令，來驗證分配管理系統。範例 ReadMe 提供對 OSB 端點進行 curl 處理的絕佳指引：https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 

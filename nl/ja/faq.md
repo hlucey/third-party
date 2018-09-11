@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -27,6 +27,6 @@ lastupdated: "2018-07-20"
 ## 新しい {{site.data.keyword.Bluemix_notm}} Identity and Access Management の API キーを生成するにはどうすればよいですか。
 {: #iam-creds}
 
-IAM を有効化する時に、API キーが付与されます。この API キーを保存することは極めて重要です。 この値は再度表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます。詳しくは、[サービス ID の API キーの管理](/docs/iam/serviceid_keys.html#serviceidapikeys)を参照してください。 
+IAM を有効化する時に、API キーが付与されます。 この API キーを保存することは極めて重要です。 この値は再度表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます。 詳しくは、[サービス ID API キーの管理](/docs/iam/serviceid_keys.html#serviceidapikeys)を参照してください。 
 
 

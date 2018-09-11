@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -18,11 +18,11 @@ lastupdated: "2018-06-29"
 
 # 整合式計費服務如何使用 {{site.data.keyword.Bluemix_notm}} 平台
 
-整合式計費服務與轉介服務不同。整合式計費服務使用 {{site.data.keyword.Bluemix_notm}} 平台進行鑑別、存取、佈建、計量及計費。本主題提供整合式計費服務將使用之平台元件的進階概觀。
+整合式計費服務與轉介服務不同。整合式計費服務使用 {{site.data.keyword.Bluemix_notm}} 平台進行鑑別、存取、佈建、計量及計費。本主題提供整合式計費服務使用之平台元件的進階概觀。
 
 ## {{site.data.keyword.Bluemix_notm}} 佈建層
 
-佈建層會管理 {{site.data.keyword.Bluemix_notm}} 資源的生命週期。佈建層負責控制及追蹤客戶帳戶中的資源生命週期。*資源* 是可以針對應用程式或服務實例佈建或保留的實體或邏輯元件。資源的範例包括資料庫、帳戶，以及處理器、記憶體和儲存空間限制。一般而言，佈建層所追蹤的資源，預期會有相關聯的用量度量值及計費，但不一定都是這種情況。在某些情況下，資源可能會與佈建層相關聯，以確保可以管理資源生命週期及帳戶生命週期。
+佈建層會管理 {{site.data.keyword.Bluemix_notm}} 資源的生命週期。佈建層負責控制及追蹤客戶帳戶中的資源生命週期。*資源* 是可以針對應用程式或服務實例佈建或保留的實體或邏輯元件。資源的範例包括資料庫、帳戶、處理器、記憶體和儲存空間限制。一般而言，佈建層所追蹤的資源，預期會讓用量度量值與計費相關聯，但不一定都是這種情況。在某些情況下，資源可能會與佈建層相關聯，以確保可以管理資源生命週期及帳戶生命週期。
 
 ### 資源生命週期管理
 
@@ -38,36 +38,36 @@ lastupdated: "2018-06-29"
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 
-Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{site.data.keyword.Bluemix_notm}} 一致地控制所有雲端資源的存取。{{site.data.keyword.Bluemix_notm}} 佈建層已採用 IAM 來鑑別及授權針對佈建層所採取的動作。協力廠商供應項目提供者會使用 IAM 來建立鑑別流程 (OAuth)。如需詳細資料，請參閱[何謂 IAM？](/docs/iam/index.html#iamoverview)
+Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{site.data.keyword.Bluemix_notm}} 一致地控制所有雲端資源的存取。{{site.data.keyword.Bluemix_notm}} 佈建層已採用 IAM 來鑑別及授權針對佈建層所採取的動作。協力廠商供應項目提供者會使用 IAM 來建立鑑別流程 (OAuth)。如需相關資訊，請參閱[何謂 IAM？](/docs/iam/index.html#iamoverview)
 
 如果您的供應項目使用 OpenID Connect (OIDC) 程式庫，則 IAM 支援 OIDC 整合。OIDC 是在 OAuth 2.0 之上的鑑別層，而 OAuth 2.0 是可協助簡化上線處理程序的授權架構。如需 OIDC 的相關資訊，請參閱 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
 ## {{site.data.keyword.Bluemix_notm}} 型錄
 
-{{site.data.keyword.Bluemix_notm}} 型錄會儲存 {{site.data.keyword.Bluemix_notm}} 主控台中所顯示資源的供應項目定義（說明、特性、影像、URL 等等）。資源管理主控台用來定義服務必要 meta 資料的所有層面。此 meta 資料會發佈至型錄，並用於顯示在型錄中。您可以在資源管理主控台的**供應項目**及**方案**頁面中找到必要及選用 meta 資料欄位的詳細資訊，但這裡會包括可幫助您快速瞭解的主要項目。
+{{site.data.keyword.Bluemix_notm}} 型錄會儲存 {{site.data.keyword.Bluemix_notm}} 主控台中所顯示資源的供應項目定義（說明、特性、影像、URL 等等）。資源管理主控台用來定義服務必要 meta 資料的所有層面。此 meta 資料會發佈至型錄，並用於顯示在型錄中。您可以在資源管理主控台的**供應項目**及**方案**頁面中找到必要及選用 meta 資料欄位的詳細資訊。這裡包含了主要項目，以協助您快速瞭解。
 
    * 服務名稱：服務的技術名稱。服務名稱十分重要，而且必須正確地定義。您必須同時提供 {{site.data.keyword.Bluemix_notm}} 平台用來識別服務的服務名稱，以及客戶在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的顯示名稱。服務名稱不是您的顯示名稱。
    * 服務顯示名稱：使用者易記的服務名稱。例如，"Compose Redis"
-   * 服務 ID：用於 OSB 分配管理系統之 API 呼叫的服務 GUID。這必須是唯一值。
+   * 服務 ID：用於 OSB 分配管理系統之 API 呼叫的服務 GUID。這個值必須是唯一的。
    * 服務圖示：含服務標誌的 SVG
    * 服務說明：將游標移至 {{site.data.keyword.Bluemix_notm}} 型錄使用者介面中的資源圖示上方時所顯示的資源說明。您可以新增一個句子或一個詞組來作為說明。
    * 服務詳細說明：出現在型錄列出頁面中的第一個段落。請考慮至少使用兩個句子來作為詳細說明。
-   * 文件 URL：{{site.data.keyword.Bluemix_notm}} 文件的鏈結。您將在 PWB 中編寫，PWB 將為您產生 URL 值。
+   * 文件 URL：{{site.data.keyword.Bluemix_notm}} 文件的鏈結。您將在 PWB 中編寫，PWB 會為您產生 URL 值。
    * 條款 URL：服務之使用條款的鏈結。請注意，針對 GDPR 用途，請不要鏈結至您的現有協力廠商服務條款。相反地，您必須為整合式計費服務提供唯一頁面。
    * 指示 URL：與「文件 URL」類似，您將指向 {{site.data.keyword.Bluemix_notm}} 文件；不過，「指示 URL」會將您的文件動態地取回到服務儀表板的「入門」標籤中。
-   * 種類：選取您的服務應該放在型錄中的可用 {{site.data.keyword.Bluemix_notm}} 種類。
+   * 種類：選取您的服務在型錄中放置的可用 {{site.data.keyword.Bluemix_notm}} 種類。
    * 項目符號：服務的簡短說明亮點
    * 媒體：服務的畫面擷取及視訊
    * 服務方案名稱：每一個方案都有一個技術名稱。全部小寫、沒有空格，且可以包含 "-"。例如，`gold`。
    * 服務方案顯示名稱：使用者易記的方案名稱。例如，`Gold`
-   * 服務方案 ID：用於 OSB 分配管理系統之 API 呼叫的服務方案 GUID。這必須是唯一值。資源管理主控台將會為您產生此值。
+   * 服務方案 ID：用於 OSB 分配管理系統之 API 呼叫的服務方案 GUID。這個值必須是唯一的。資源管理主控台會為您產生此值。
    * 服務方案說明：資源方案的說明。在 IBM Cloud 型錄的資源詳細資料頁面上選取方案之後，即會顯示說明。
    * 服務方案項目符號：服務方案的簡短說明亮點
 
 
 ## Open Service Broker
 
-「服務分配管理系統」可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與「服務分配管理系統」互動，以佈建及管理「服務實例」（「服務供應項目」的實例化）和「服務連結」（「應用程式」與「服務實例」之間的關聯表示法，其中通常包含「應用程式」用來與「服務實例」進行通訊的認證）。提供有效的 meta 資料值將會在執行「要求」時建立成功的「REST API 回應」。
+「服務分配管理系統」可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與「服務分配管理系統」互動，以佈建及管理「服務實例」（「服務供應項目」的實例化）和「服務連結」（「應用程式」與「服務實例」之間的關聯表示法，其中通常包含「應用程式」用來與「服務實例」進行通訊的認證）。提供有效的 meta 資料值會在執行「要求」時建立成功的「REST API 回應」。
 
 {{site.data.keyword.Bluemix_notm}} 使用 Open Service Broker API (OSB) `2.12 版`規格。閱讀並熟悉 [Open Broker API 規格](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，以及使用 Readme 檔作為指引以進一步瞭解。
 
@@ -81,7 +81,7 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 
 **附註：**如果您提供計量方案，則需要使用計量服務 API 自動執行每小時用量提交。
 
-如需計量的相關資訊，請參閱：[計量整合](/docs/third-party/metering.html#meteringintera)。如需提交計量用量的相關資訊，請參閱：[提交計量方案的用量](/docs/third-party/submitusage.html#submitusage)
+如需計量的相關資訊，請參閱：[計量整合](/docs/third-party/metering.html#meteringintera)。如需提交計量用量的相關資訊，請參閱[提交計量方案的用量](/docs/third-party/submitusage.html#submitusage)
 
 ## 佈建情境：組合在一起
 
@@ -93,10 +93,10 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 * **CLI**：使用 `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **{{site.data.keyword.Bluemix_notm}} 主控台**：使用者可以選取服務、規劃並使用**建立**作業。
 
-{{site.data.keyword.Bluemix_notm}} 平台會驗證使用者是否有權使用 {{site.data.keyword.Bluemix_notm}} IAM 來建立服務實例。進行這項驗證之後，即會呼叫服務分配管理系統的佈建端點 (PUT /v2/resource_instances/:resource_instance_id)。進行佈建時，必須符合下列規則：
+{{site.data.keyword.Bluemix_notm}} 平台會驗證使用者是否有權使用 {{site.data.keyword.Bluemix_notm}} IAM 來建立服務實例。進行這項驗證之後，即會啟動服務分配管理系統的佈建端點 (PUT /v2/resource_instances/:resource_instance_id)。進行佈建時，必須符合下列規則：
 * {{site.data.keyword.Bluemix_notm}} 環境定義包括在環境定義變數中
-* `X-Broker-API-Originating-Identity` 將具有已起始要求之使用者的 IBM IAM ID
-* parameters 區段將包含所要求的位置（以及服務所需的其他參數）。
+* `X-Broker-API-Originating-Identity` 具有已起始要求之使用者的 IBM IAM ID
+* parameters 區段包含所要求的位置（以及服務所需的其他參數）。
 
 範例佈建要求：
 

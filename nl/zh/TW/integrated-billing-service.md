@@ -32,15 +32,15 @@ lastupdated: "2018-07-20"
 
 若要提供整合式計費服務，請使用 Provider Workbench、資源管理主控台及您選擇的開發環境。請參閱[核對清單](/docs/third-party/checklist.html#checklist)，以協助追蹤這些步驟。
 
+這些步驟假設您已獲准提供「整合式計費服務」。如果您尚未在 PWB 中完成起始登錄及核准，則請參閱：[在 {{site.data.keyword.Bluemix_notm}} 中開始發佈協力廠商供應項目](/docs/third-party/index.md)
+{: tip}
+
 1. [建立文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
 2. [在資源管理主控台中定義供應項目{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html)。
 3. [開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。
 4. [開發鑑別流程](/docs/third-party/cis5-iam.html)。
 5. [測試服務](/docs/third-party/cis4-rmc-publish.html)。
 6. [公開發行服務](/docs/third-party/cis6-ga.html)。
-
-這些步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准處理程序，則請參閱[入門指導教學](/docs/third-party/index.md)。
-{: tip}
 
 ## 支援
 {: #support}

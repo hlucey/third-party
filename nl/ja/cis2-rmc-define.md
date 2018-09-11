@@ -17,28 +17,19 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # ステップ 2. リソース管理コンソールでのオファリングの定義
+{: #step2-define}
 
-リソース管理コンソールは、第三者オファリングを {{site.data.keyword.Bluemix_notm}} カタログに提供する過程を支援する Web ベースのツールです。
-
-統合請求サービスの提供が承認されたため、リソース管理コンソールに移動して、登録、オファリング開発の開始、料金プランの指定を行えます。
-   1. リソース管理コンソールにサービスを登録し、「サマリー」ページを確認します。
-   2. 「オファリング (Offering)」ページでカタログ・メタデータを入力します。
-   3. {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) にオファリングを登録します。 登録により、サービスの認証に使用されるクライアント ID とサービス ID の資格情報が生成されます。
-   4. {{site.data.keyword.Bluemix_notm}} のサービス・オファリングで適切な料金プランが顧客に提供されるように、「料金」ページに入力します。定義するプランには、重要な使用量詳細を提供する計量も含まれます。
-   5. オファリング・メタデータを JSON 形式にエクスポートします。
-
+リソース管理コンソールは、第三者オファリングを {{site.data.keyword.Bluemix_notm}} カタログに提供する過程を支援するツールです。
+統合請求サービスの提供が承認されたため、リソース管理コンソールを使用したサービスの登録、開発の開始、料金プランの定義を始めることができます。リソース管理コンソールは、統合された請求サービスを {{site.data.keyword.Bluemix_notm}} カタログに提供する過程を支援する Web ベースのツールです。
+{:shortdesc}
 
 ## 始める前に
-
-このステップでは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.html)を参照してください。
-{: tip}
+{: #pre-reqs}
 
 1. [ステップ 1: サービス文書とマーケティング発表の作成 (PWB)](/docs/third-party/cis1-docs-marketing.html)の作業を必ず開始しておいてください。
 2. {{site.data.keyword.Bluemix_notm}} に登録済みであることを確認します。 そうでない場合は、[登録](https://console.bluemix.net/registration)してから先に進んでください。
 3. リソース管理コンソールでの作業の開始時に正しいアカウントを使用していることを確認します。
-4. {{site.data.keyword.Bluemix_notm}} サービス名を準備します。
-
-   {{site.data.keyword.Bluemix_notm}} プラットフォームがサービスの識別に使用するサービス名と、{{site.data.keyword.Bluemix_notm}} カタログで顧客に表示される表示名の両方を指定する必要があります。
+4. {{site.data.keyword.Bluemix_notm}} サービス名を準備します。 {{site.data.keyword.Bluemix_notm}} プラットフォームがサービスの識別に使用するサービス名と、{{site.data.keyword.Bluemix_notm}} カタログで顧客に表示される表示名の両方を指定する必要があります。
 
   リソース管理コンソールにオファリングを登録する際には、{{site.data.keyword.Bluemix_notm}} サービス名を準備してください。 サービス名は表示名ではありません。 サービス名は、以下の規則に従っていなければなりません。
    - すべて小文字でなければなりません
@@ -48,6 +39,7 @@ lastupdated: "2018-08-21"
    サービス名には、お客様の会社名を含めてください。 お客様の会社が複数のオファリングを提供する場合は、サービス名の中に、会社とオファリングの両方を含めてください。 例えば、Compose 社が、Redis と Elasticsearch のオファリングを提供しているとします。 これらのオファリングに対する {{site.data.keyword.Bluemix_notm}} でのサービス名は、例えば、`compose-redis` と `compose-elasticsearch` になります。 これら 2 つのサービス名に対して、{{site.data.keyword.Bluemix_notm}} カタログで表示される表示名 *Compose Redis* と *Compose Elasticsearch* が関連付けられています。 別の FastJetMail という会社が JetMail という 1 つだけのオファリングを提供する場合は、サービス名は `fastjetmail` になります。
 
 ## オファリングの登録
+{: #register}
 
 始めに、ログインしてオファリングを登録します。
 
@@ -63,6 +55,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## オファリング・メタデータの入力
+{: #offering-metadata}
 
 **「オファリング (Offering)」**ページで、{{site.data.keyword.Bluemix_notm}} カタログに保管されるメタデータ値を指定します。 さらに、一部の値は、エクスポートしてサービス・ブローカーに保管する必要があります。サービス・ブローカーではそれらがプロビジョニングに使用され、`カタログ (GET)` 応答の一部として戻されます。 これらの値を使用して、後のステップでサービス・ブローカーの開発を円滑に開始できます。
 
@@ -77,6 +70,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## IAM への登録
+{: #reg-iam}
 
 {{site.data.keyword.Bluemix_notm}} にオンボードするすべてのサービスに、IAM が必要です。 IAM の概念と要件の詳細については、[IAM とは?](/docs/iam/index.html#what-is-cloud-iam-) を参照してください。
 
@@ -99,6 +93,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 料金プランの開発
+{: #pricing-plan}
 
 {{site.data.keyword.Bluemix_notm}} にサービスをオンボードする際には、料金プランを定義する必要があります。 サービスに関するユーザーへの課金方法について詳細知識がある場合には、プランでその情報を指定することができます。 しかし、まだ有料プランを固めていなければ、まず、無料プランを有効にして始めて、後で戻って有料プランをセットアップすることができます。
 
@@ -113,6 +108,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## メタデータを JSON としてエクスポート
+{: #export-metadata}
 
 リソース管理コンソールでサービスを定義したので、catalog.json ファイルをダウンロードして使用し、Open Service Broker の開発に情報を提供することができます。 catalog.json には、ブローカーでホストする必要があるメタデータが含まれます。 これらの値によって、ブローカーがサポートするサービスとプランについて、ブローカーと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の契約が定義されます。 プロビジョニングに必要でないその他のカタログ・メタデータはすべて、{{site.data.keyword.Bluemix_notm}} カタログ内に保管され、ダッシュボードのレンダリングに使用されるカタログ表示値 (リンク、アイコン、国際化対応翻訳メタデータなど) への更新は、ブローカー内に収容されるのではなく、リソース管理コンソールで更新される必要があります。 ブローカーに保管されたメタデータは、{{site.data.keyword.Bluemix_notm}} コンソールでも {{site.data.keyword.Bluemix_notm}} CLI でも表示されません。コンソールと CLI は、リソース管理コンソール内で設定され、{{site.data.keyword.Bluemix_notm}} カタログに保管されたものを戻します。
 
@@ -123,5 +119,6 @@ lastupdated: "2018-08-21"
 `catalog.json` ファイルを保存します。 これを使用して、次のセクションで Open Service Broker を開発します。
 
 ## 次のステップ
+{: #next-steps}
 
 順調です。 カタログ表示メタデータを追加し、IAM に登録し、1 つ以上の料金プランを作成して、サービス・オファリングを定義しました。 次に、エクスポートされた JSON を使用して、サービス・ブローカーの開発を始めます。 [ステップ 3: サービス・ブローカーの開発とホスティング](/docs/third-party/cis3-broker.html)を参照してください。

@@ -17,28 +17,18 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 步驟 2. 在資源管理主控台中定義供應項目
+{: #step2-define}
 
-資源管理主控台是一種 Web 型工具，可協助引導您將協力廠商供應項目提供至 {{site.data.keyword.Bluemix_notm}} 型錄。
-
-既然您已獲准提供整合式計費服務，就可以前往資源管理主控台來登錄、開始開發供應項目，以及提供定價方案：
-   1. 向資源管理主控台登錄服務，並驗證「摘要」頁面。
-   2. 在「供應項目」頁面內，輸入您的型錄 meta 資料。
-   3. 向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 登錄供應項目。登錄會產生用來鑑別服務的用戶端 ID 及服務 ID 認證。
-   4. 完成「定價」頁面，並確定 {{site.data.keyword.Bluemix_notm}} 中的服務供應項目提供正確的定價方案給客戶。您定義的方案包括可提供重要用量詳細資料的計量。
-   5. 將供應項目 meta 資料匯出為 JSON 格式。
-
+資源管理主控台是一種工具，可協助引導您將協力廠商供應項目提供至 {{site.data.keyword.Bluemix_notm}} 型錄。既然您已獲准提供整合式計費服務，就可以使用資源管理主控台來登錄服務、開始開發，以及定義您的定價方案。資源管理主控台是一種 Web 型工具，可協助引導您將整合式計費服務提供至 {{site.data.keyword.Bluemix_notm}} 型錄。
+{:shortdesc}
 
 ## 開始之前
-
-此步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准，則請參閱[入門指導教學](/docs/third-party/index.html)。
-{: tip}
+{: #pre-reqs}
 
 1. 確定您已開始處理[步驟 1：編寫服務文件及行銷公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
 2. 確定您已向 {{site.data.keyword.Bluemix_notm}} 登錄。否則，請先[登錄](https://console.bluemix.net/registration)，再繼續。
 3. 當您開始在資源管理主控台中工作時，請確定位於正確的帳戶中。
-4. 準備 {{site.data.keyword.Bluemix_notm}} 服務名稱。
-
-   您必須同時提供 {{site.data.keyword.Bluemix_notm}} 平台用來識別服務的服務名稱，以及客戶在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的顯示名稱。
+4. 準備 {{site.data.keyword.Bluemix_notm}} 服務名稱。您必須同時提供 {{site.data.keyword.Bluemix_notm}} 平台用來識別服務的服務名稱，以及客戶在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的顯示名稱。
 
   向資源管理主控台登錄供應項目時，請準備好 {{site.data.keyword.Bluemix_notm}} 服務名稱。服務名稱不是您的顯示名稱。您的服務名稱必須遵循下列規則：
    - 必須全部為小寫
@@ -48,6 +38,7 @@ lastupdated: "2018-08-21"
    您的服務名稱應該包含您的公司名稱。如果貴公司有多個供應項目，則服務名稱應該同時包含公司及供應項目作為名稱的一部分。例如，Compose 公司有 Redis 及 Elasticsearch 的供應項目。{{site.data.keyword.Bluemix_notm}} 上這些供應項目的範例服務名稱會是 `compose-redis` 及 `compose-elasticsearch`。這兩個服務名稱都有 {{site.data.keyword.Bluemix_notm}} 型錄中所顯示的相關聯顯示名稱：*Compose Redis* 及 *Compose Elasticsearch*。另一家公司（例如，FastJetMail）只能有單一 JetMail 供應項目，在此情況下，服務名稱應該是 `fastjetmail`。
 
 ## 登錄供應項目
+{: #register}
 
 若要開始使用，請登入並登錄供應項目。
 
@@ -63,6 +54,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 輸入供應項目 meta 資料
+{: #offering-metadata}
 
 在**供應項目**頁面上，提供 {{site.data.keyword.Bluemix_notm}} 型錄中所儲存的 meta 資料值。此外，這當中有一些值需要匯出並儲存在服務分配管理系統中，而在服務分配管理系統中，它們用來進行佈建，且會傳回作為「`型錄 (GET)` 回應」的一部分。在稍後的步驟中，您將使用這些值來協助快速開始服務分配管理系統的開發。
 
@@ -77,6 +69,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 向 IAM 登錄
+{: #reg-iam}
 
 所有服務都需要有 IAM，才能在 {{site.data.keyword.Bluemix_notm}}上線。請參閱[何謂 IAM？](/docs/iam/index.html#what-is-cloud-iam-)，以進一步瞭解 IAM 概念及需求。
 
@@ -99,6 +92,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 開發定價方案
+{: #pricing-plan}
 
 在 {{site.data.keyword.Bluemix_notm}} 中讓服務上線時，您必須定義定價方案。如果您十分瞭解如何向使用者收取服務的費用，則可以在方案中提供該資訊。不過，如果您尚未確定使用付費方案，則可以從啟用免費方案開始，然後返回並設定付費方案。
 
@@ -113,6 +107,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 將 meta 資料匯出為 JSON
+{: #export-metadata}
 
 既然您已在資源管理主控台內定義服務，就可以下載 catalog.json 檔案，並使用它來通知開發您的 Open Service Broker。catalog.json 包含必須在分配管理系統中管理的 meta 資料。這些值定義分配管理系統與分配管理系統所支援服務及方案之 {{site.data.keyword.Bluemix_notm}} 平台間的合約。佈建不需要的所有其他型錄 meta 資料，都會儲存在 {{site.data.keyword.Bluemix_notm}} 型錄內，而且用來呈現儀表板的任何型錄顯示值更新（例如鏈結、圖示及 i18n 已翻譯 meta 資料）都應該在資源管理主控台中進行更新，而不是在分配管理系統中進行管理。您分配管理系統中所儲存的 meta 資料都不會顯示在 {{site.data.keyword.Bluemix_notm}} 主控台或 {{site.data.keyword.Bluemix_notm}} CLI 中；主控台及 CLI 會傳回資源管理主控台內所設定並儲存在 {{site.data.keyword.Bluemix_notm}} 型錄中的內容。
 
@@ -123,5 +118,6 @@ lastupdated: "2018-08-21"
 儲存 `catalog.json` 檔案。您將使用它在下一節開發 Open Service Broker。
 
 ## 後續步驟
+{: #next-steps}
 
 做得好！您已透過新增型錄顯示 meta 資料、向 IAM 登錄並建立一個以上的定價方案，來定義服務供應項目。接下來，您可以取得匯出的 JSON，並開始開發服務分配管理系統。請參閱[步驟 3：開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。

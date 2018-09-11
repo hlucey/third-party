@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -17,33 +17,24 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # ステップ 4. 認証フローの作成
+{: #step4-iam}
 
-オファリングを定義したときに、リソース管理コンソールの「アクセス管理」ページに、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) のクライアント ID と秘密鍵、サービス ID、および API キーが表示されました。次に、これらの値を使用して以下の手順を実行します。
-
-1. `dashboard_url` の処理に基づいてリダイレクト URI を取得し、リソース管理コンソールに戻り、クライアント ID の更新を確認して、取得したリダイレクト URI を IAM タブに追加します。
-2. 認証のための OAuth フローを作成します。 このフローを完了するには、リダイレクト URI、クライアント ID、およびクライアント秘密鍵を `token_endpoint` IAM Rest API のパラメーターとして使用します。
-3. 以下のようにしてユーザー許可を検証します。
-   1. IAM と通信して API キーからアクセス・トークンを取得します。
-   2. `authorization_endpoint` を使用して、サービス・ダッシュボードへのユーザーの許可を検証します (/v2/authz POST)。
-
-このステップは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.html)を参照してください。
-{: tip}
+オファリングを定義するとき、リソース管理コンソールの「アクセス管理」ページに {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) のクライアント ID と秘密鍵、サービス ID、および API キーがリストされます。それらの値を使用して認証フローを作成する準備ができました。
+{:shortdesc}
 
 ## 始める前に
+{: #pre-reqs}
 
-ステップ 1 を開始しており、ステップ 2 と 3 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party/cis1-docs-marketing.html)。
-2. [リソース管理コンソールでオファリングを定義する](/docs/third-party/cis2-rmc-define.html)。
-3. [サービス・ブローカーを作成してホストする](/docs/third-party/cis3-broker.html)。
+[入門チュートリアル](/docs/third-party/index.html)を完了し、統合請求サービスの提供が承認されていることを確認してください。
 
+## IAM リダイレクト URI の導出
+{: #redirect-uri}
 
-## IAM リダイレクト URI の取得 (リソース管理コンソール: IAM ページ)
+リソース管理コンソールでサービスを定義するときにクライアント ID を生成しますが、その時点ではリダイレクト URI はおそらく手元にないことに注意してください。IAM によって作成されるのは、false に設定されたクライアント ID です。リダイレクト URI を取得してリソース管理コンソールに戻るまでは、クライアント ID は true に設定されません。
 
-リソース管理コンソールでサービスを定義したときにクライアント ID を生成しましたが、その時点ではリダイレクト URI を取得しなかった可能性が高い点に注意してください。つまり、IAM はクライアント ID を作成しましたが、それは false に設定されています。リダイレクト URI を取得してリソース管理コンソールに戻るまでは、クライアント ID は true に設定されません。
+前の作成ステップで OSB を作成してホストしています (おそらく、サンプル・ブローカー・コードに IAM の値が表示されたはずです)。 通常、`redirect_uri` は、アプリが稼働するホスト URL で、認証/許可を処理できるいくつかの追加 URL があります。
 
-前の作成ステップで OSB を作成してホストしています (おそらく、サンプル・ブローカー・コードに IAM の値が表示されたはずです)。 通常、`redirect_uri` は、アプリが稼働するホスト URL で、認証/許可を処理するいくつかの追加 URL があります。
-
- いくつかのサンプル・リダイレクト URI を以下に示します。
+ 以下はリダイレクト URI の例です。
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
@@ -82,7 +73,7 @@ Content-Type: application/json
 }
 ```
 
-この要求は、アプリケーションが開始されたときに 1 度実行でき、`authorization_endpoint` が失敗した場合、再度実行できます。 `authorization_endpoint` 値は、時間短縮のためにキャッシュに入れることができ、キャッシュの期限が切れた後、またはエラーが発生した後に最新表示できます。
+この要求は、アプリケーションが開始されたときに 1 度実行でき、`authorization_endpoint` が失敗した場合、再度実行できます。 この時点で、`authorization_endpoint` 値を短時間の間キャッシュに入れることができ、キャッシュの期限が切れた後、またはエラーが発生した後にリフレッシュできます。
 
 
 **認証 - ステップ 1:** ユーザーが `dashboard_url` にナビゲートしたら、ブラウザーを `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>` にリダイレクトします。
@@ -113,7 +104,7 @@ Content-Type: application/json
   - client_secret=*[client secret]*
   - grant_type=authorization_code
   - response_type=cloud_iam
-  - redirect_uri=*[same uri as redirect_uri from step 1]*
+  - redirect_uri=*[same URI as redirect_uri from step 1]*
   - code=*[code from callback]*
 
 ```
@@ -152,8 +143,8 @@ curl -k -X POST \
 ## ユーザー許可の検証
 {: #validate}
 
-1. IAM と通信して、API キーのアクセス・トークンを取得します
-2. サービス・インスタンスへのユーザーの許可を検証します (/v2/authz POST)
+1. IAM と通信して、API キーのアクセス・トークンを取得します。
+2. サービス・インスタンスへのユーザーの許可を検証します (/v2/authz POST)。
 
 ### 許可 - ステップ 1: API キーを使用した {{site.data.keyword.Bluemix_notm}} IAM トークンの取得
 {: #iam_token_using_api_key}
@@ -206,9 +197,9 @@ curl -k -X POST \
 
 ユーザーを認証し、独自のアクセス・トークンを取得したので、次に、ユーザーがサービス・ダッシュボードにアクセスできることを確認する必要があります。 最初に、ステップ 2.1 でデコードするユーザーのアクセス・トークンに含まれているいくつかの情報が必要になります。 次に、ステップ 2.2 で、その情報を使用して IAM を呼び出し、ユーザーがダッシュボードにアクセスする権限を持っているかどうかを確認します。
 
-**ステップ 2.1**: (上記の `**Authentication - Step 2:** Exchange the code for an access token ` 中に返された) ユーザーのアクセス・トークンをデコードします。
-   これは、任意の JWT 準拠のライブラリーを使用してデコードできる JWT トークンです。 例えば、[sample broker code](https://github.com/IBM/sample-resource-service-brokers) に含まれているライブラリーを参照してください。
-   トークンがデコードされると、フォーマットは以下のようになります。次のステップで使用する `iam_id` フィールドと `scope` フィールドの抽出が必要になります。
+**ステップ 2.1**: (前のセクションの `認証 - ステップ 2: アクセス・トークン呼び出しのためのコードの交換`で返された) ユーザーのアクセス・トークンをデコードします。
+   アクセス・トークンは、任意の JWT 準拠ライブラリーを使用してデコードできる JWT トークンです。例えば、[sample broker code](https://github.com/IBM/sample-resource-service-brokers) に含まれているライブラリーを参照してください。
+   トークンがデコードされた後、フォーマットは次のセクションで示されているようになります。次のステップで使用される `iam_id` フィールドと `scope` フィールドを抽出します。
 
 ```
 {
@@ -265,16 +256,16 @@ curl -X POST \
 
 次のサンプル・ブローカーにある例を参照してください: https://github.com/IBM/sample-resource-service-brokers
 
-## サード・パーティー・アダプター用の {{site.data.keyword.Bluemix_notm}} Identity and Access Management トークンのスコープ指定
+## サード・パーティー・アダプターの IAM トークンのスコープ
 {: #token_scoping}
 
 クライアント ID を使用して作成されたユーザー・アクセス・トークンは、ユーザーのサービス API にアクセスするためだけに使用できます。 このトークンを使用して他のクラウド API への要求を行うと、ユーザーが構成済みの適切なポリシーを持っている場合でも、アクセスは拒否されます。
 
-サード・パーティー統合の一部として、ユーザーの目的を実現するのに必要な最小アクセス・スコープをトークンが持っていることを確認するために、トークンのスコープ指定が使用されています。 これを可能にするために、IAM トークンは、そのトークンを作成したクライアント ID に基づいたアクセス権限を持ちます。 つまり、IAM トークンがサード・パーティー・サービスによって作成された場合、構成済みの適切なポリシーをエンド・ユーザーが持っていたとしても、そのユーザーは特定の API および機能を実行できません。
+サード・パーティー統合の一部として、ユーザーの目的を実現するのに必要な最小アクセス・スコープをトークンが持っていることを確認するために、トークンのスコープ指定が使用されています。 これを可能にするために、IAM トークンのアクセス権限は、トークンを作成したクライアント ID に基づきます。IAM トークンがサード・パーティー・サービスによって作成された場合、エンド・ユーザーは、構成済みの適切なポリシーを持っていたとしても、特定の API および機能を実行できません。
 
 許可へのインパクト (`https://iam.bluemix.net/v2/authz` へのすべての呼び出し) は、サブジェクトでの `scope` 情報の受け渡しが必要になることです。 この情報は、IAM トークン (base64 エンコード) 内の `scope` クレームに含まれています。
 
-許可呼び出しに追加された項目の例を以下に示します。
+以下のセクションは、許可呼び出しに追加されるものの例です。
 ```
   [
    {  Headers
@@ -306,5 +297,6 @@ curl -X POST \
 これはすべての使用法 (`user, serviceId, crn`) に適用され、すべての `subject.attributes` にスコープが必要です。
 
 ## 次のステップ
+{: #next-steps}
 
 次に、すべての事項をまとめます。 リソース管理コンソールに戻り、限定表示モードでサービスを公開して、カタログでオファリングを確認します。 [サービスの公開およびテスト](/docs/third-party/cis4-rmc-publish.html)を参照。
