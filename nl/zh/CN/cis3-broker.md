@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-23"
 
 
 ---
@@ -17,27 +17,17 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 步骤 3. 开发和托管服务代理程序
+{: #step3-osb}
 
 通过使用从资源管理控制台中导出的元数据，您可使用所选编程语言构建一个或多个新的服务代理程序。
+{:shortdesc}
 
 服务代理程序用于管理服务的生命周期。{{site.data.keyword.Bluemix_notm}} 平台与服务代理程序进行交互，以供应和管理服务实例（服务产品的实例化）和服务绑定（应用程序与服务实例之间的关联的表示，通常包含应用程序将用于与服务实例进行通信的凭证）。提供有效的元数据值将在执行请求时创建成功的 RESTful API 响应。
 
-您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来开始构建代理程序。要开发代理程序，请执行以下操作：
-
-1. 查看平台供应方案。
-2. 通读 OSB 规范。
-2. 查看 {{site.data.keyword.Bluemix_notm}} 代理程序样本。
-3. 使用资源代理程序 API 文档来了解 REST API 端点逻辑。
-4. 使用从资源管理控制台导出的元数据来通知开发。
-5. 查看 {{site.data.keyword.Bluemix_notm}} 平台提供的代理程序信息。
-6. 通读其他建议以优化开发。
-7. 托管代理程序。
-8. 测试代理程序。
+您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来开始构建代理程序。
 
 ## 开始之前
-
-此步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.md)。
-{: tip}
+{: #pre-reqs}
 
 确保已开始执行步骤 1，并完成了步骤 2：
 1. [编写服务文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
@@ -45,14 +35,17 @@ lastupdated: "2018-08-21"
 
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} 平台供应方案
+{: #scenario}
 
-开发与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
+您将开发与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
 
 ## 熟悉 OSB 规范
+{: #learn-osb}
 
 {{site.data.keyword.Bluemix_notm}} 使用 Open Service Broker API (OSB) `V2.12` 规范。通读并熟悉 [Open Service Broker API 规范](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")，然后使用自述文件作为指南以了解更多信息。
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} 代理程序样本
+{: #samples}
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
 
@@ -60,8 +53,9 @@ lastupdated: "2018-08-21"
 
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文档
+{: #docs}
 
-应该在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它将如何与代理程序进行交互。
+应该在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它将如何与代理程序进行交互。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 扩展了 Open Service Broker 2.12 规范。
 {: tip}
@@ -129,6 +123,7 @@ OSB 规范*不*支持禁用但尚未删除的实例状态。为了使 {{site.dat
 **注**：调用禁用端点时禁用对服务实例的访问，以及调用启用端点时重新启用对服务实例的访问，是服务提供者的责任。
 
 ## 了解如何使用导出的元数据来指导代理程序开发
+{: #use-metadata}
 
 从资源管理控制台导出的元数据可以用作开发您自己的代理程序的指南。并非输入到资源管理控制台中的所有值都需要用于供应服务。从资源管理控制台导出的元数据定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。导出的 JSON 应该提供以下值：
 
@@ -185,6 +180,7 @@ OSB 服务数组必须与添加到资源管理控制台中的产品元数据完�
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 平台提供的代理程序信息
+{: #broker info}
 
 服务代理程序将从 {{site.data.keyword.Bluemix_notm}} 平台接收以下信息：
 
@@ -209,6 +205,7 @@ Decoded:
 `PUT /v2/service_instances/:resource_instance_id` 和 `PATCH /v2/service_instances/:resource_instance_id` 将在 **body.context** 中接收到以下值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
 ## 其他代理程序建议
+{: #more-info}
 
 ### 有关使用异步与同步操作的建议
 
@@ -231,6 +228,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间将少于
 
 
 ## 托管代理程序
+{: #host}
 
 代理程序必须作为可响应 REST API 调用的应用程序的一部分进行托管。托管位置必须符合 {{site.data.keyword.Bluemix_notm}} 安全准则。您可以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，也可以在外部进行托管，只要可从 {{site.data.keyword.Bluemix_notm}} 本身公开访问托管位置即可。
 
@@ -244,6 +242,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间将少于
 {: tip}
 
 ## 如何测试服务的代理程序
+{: #test}
 
 您应该通过对要启用的不同端点运行 curl 命令来验证代理程序。样本自述文件提供了有关对 OSB 端点运行 curl 的极佳指导信息：https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 

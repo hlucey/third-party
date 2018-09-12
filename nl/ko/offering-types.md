@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -31,9 +31,9 @@ lastupdated: "2018-07-01"
 
 |  | 통합 청구 서비스  | 추천 서비스 |
 |---|---|---|
-| **온보딩** | 온보딩은 Provider Workbench(PWB) 및 리소스 관리 콘솔에서 처리됩니다. 오퍼링 제공자는 Open Service Broker를 개발하고 이를 호스팅 및 테스트하며 해당 오퍼링을 일련의 셀프 서비스 단계를 통해 공개합니다. | 온보딩은 Provider Workbench에서 처리됩니다. 셀프 서비스 온보딩 프로세스는 약 2주 정도 걸립니다. |
+| **온보딩** | 온보딩은 IBM Provider Workbench(PWB) 및 리소스 관리 콘솔을 통해 처리됩니다. 오퍼링 제공자는 Open Service Broker를 개발하고 이를 호스팅 및 테스트하며 해당 오퍼링을 일련의 셀프 서비스 단계를 통해 공개합니다. | 온보딩은 Provider Workbench에서 처리됩니다. 셀프 서비스 온보딩 프로세스는 약 2주 정도 걸립니다. |
 | **배치** | {{site.data.keyword.Bluemix_notm}} 플랫폼에서 프로비저닝됩니다. | API 기반 서비스만 해당 |
-| **비용 청구**  | 통합 청구 모델에서 사용자는 IBM 오퍼링과 해당 통합 써드파티 오퍼링에 모두에 대해 단일 청구서를 받습니다. | 추천 모델에서는 제공자가 사용자에게 청구하고 수익의 100% 를 보존합니다. |
+| **비용 청구**  | 통합 청구 모델에서 사용자는 IBM 오퍼링과 해당 통합 써드파티 오퍼링 모두에 대해 단일 청구서를 받습니다. | 추천 모델에서는 제공자가 사용자에게 청구하고 수익의 100%를 보존합니다. |
 | **예제** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [Accern API](https://console.bluemix.net/catalog/services/accern-api) |
 {: caption="표1. 써드파티 오퍼링 유형의 비교" caption-side="top"}
 

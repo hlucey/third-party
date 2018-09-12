@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ lastupdated: "2018-08-21"
 ## 步骤 3. 定义产品详细信息
 {: #step3}
 
-选择 **Integrated Billing 服务**作为产品类型并提交了就绪性评估表单后，页面将刷新，其中包含用于定义在 {{site.data.keyword.Bluemix_notm}} 控制台中“目录详细信息”页面上所显示内容的部分。填写每个字段并提交表单以供复查。复查过程可能需要几天时间。
+选择 **Integrated Billing 服务**作为产品类型并提交了就绪性评估表单后，页面将刷新，其中包含用于定义内容的部分。该部分显示在 {{site.data.keyword.Bluemix_notm}} 控制台中“目录详细信息”页面上。填写每个字段并提交表单以供复查。复查过程可能需要几天时间。
 
 ## 后续步骤
 {: #next-steps}

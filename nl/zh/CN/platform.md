@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -18,11 +18,11 @@ lastupdated: "2018-06-29"
 
 # Integrated Billing 服务如何使用 {{site.data.keyword.Bluemix_notm}} 平台
 
-Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用 {{site.data.keyword.Bluemix_notm}} 平台进行认证、访问、供应、计量和计费。本主题提供了 Integrated Billing 服务将使用的平台组件的高级别概述。
+Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用 {{site.data.keyword.Bluemix_notm}} 平台进行认证、访问、供应、计量和计费。本主题提供了 Integrated Billing 服务使用的平台组件的高级别概述。
 
 ## {{site.data.keyword.Bluemix_notm}} 供应层
 
-供应层用于管理 {{site.data.keyword.Bluemix_notm}} 资源的生命周期。供应层负责控制和跟踪客户帐户中资源的生命周期。*资源*是一种物理或逻辑组件，可以针对应用程序或服务实例进行供应或保留。例如，资源包括数据库、帐户、处理器、内存以及存储限制。通常，由供应层跟踪的资源旨在具有关联的使用量度量值和帐单，但并不一定总是如此。在某些情况下，资源可能会与供应层相关联，以确保资源生命周期可与帐户生命周期一起进行管理。
+供应层用于管理 {{site.data.keyword.Bluemix_notm}} 资源的生命周期。供应层负责控制和跟踪客户帐户中资源的生命周期。*资源*是一种物理或逻辑组件，可以针对应用程序或服务实例进行供应或保留。例如，资源包括数据库、帐户、处理器、内存以及存储限制。通常，由供应层跟踪的资源旨在关联使用量度量值和帐单，但并不一定总是如此。在某些情况下，资源可能会与供应层相关联，以确保资源生命周期可与帐户生命周期一起进行管理。
 
 ### 资源生命周期管理
 
@@ -38,13 +38,13 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 
-通过 Identity and Access Management (IAM)，您可以在整个 {{site.data.keyword.Bluemix_notm}} 上安全地对用户进行认证并一致地控制对所有云资源的访问权。{{site.data.keyword.Bluemix_notm}} 供应层采用了 IAM 来对针对供应层执行的操作进行认证和授权。第三方产品提供者使用 IAM 来创建认证流程 (OAuth)。有关更多详细信息，请参阅[什么是 IAM](/docs/iam/index.html#iamoverview)？
+通过 Identity and Access Management (IAM)，您可以在整个 {{site.data.keyword.Bluemix_notm}} 上安全地对用户进行认证并一致地控制对所有云资源的访问权。{{site.data.keyword.Bluemix_notm}} 供应层采用了 IAM 来对针对供应层执行的操作进行认证和授权。第三方产品提供者使用 IAM 来创建认证流程 (OAuth)。有关更多信息，请参阅[什么是 IAM？](/docs/iam/index.html#iamoverview)
 
 如果您的产品使用的是 OpenID Connect (OIDC) 库，那么 IAM 支持 OIDC 集成。OIDC 是基于 OAuth 2.0 的认证层，这是一个授权框架，可以帮助简化上线过程。有关 OIDC 的更多信息，请参阅 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## {{site.data.keyword.Bluemix_notm}} 目录
 
-{{site.data.keyword.Bluemix_notm}}“目录”将存储显示在 {{site.data.keyword.Bluemix_notm}} 控制台中的资源的产品定义（描述、功能、图像和 URL 等）。资源管理控制台用于定义服务必需元数据的所有方面。此元数据将发布到目录并用于显示在目录中。您可以在资源管理控制台中的**产品**和**套餐**页面中找到有关必需和可选元数据字段的详细信息，但此处包含的关键项可让您快速了解这些信息。
+{{site.data.keyword.Bluemix_notm}}“目录”将存储显示在 {{site.data.keyword.Bluemix_notm}} 控制台中的资源的产品定义（描述、功能、图像和 URL 等）。资源管理控制台用于定义服务必需元数据的所有方面。此元数据将发布到目录并用于显示在目录中。您可以在资源管理控制台中的**产品**和**套餐**页面中找到有关必需和可选元数据字段的详细信息。此处包含的关键项可让您快速了解这些信息。
 
    * 服务名称：服务的技术名称。服务名称至关重要，必须正确定义。您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。服务名称并不是显示名称。
    * 服务显示名称：服务的用户友好名称。例如，“Compose Redis”
@@ -85,7 +85,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
 ## 供应方案：融会贯通
 
-现在，我们将把先前描述的所有概念集中在一起，并查看有关如何使用 {{site.data.keyword.Bluemix_notm}} 平台来创建服务实例的示例。
+现在，我们将把先前描述的所有概念融会贯通，并查看有关如何使用 {{site.data.keyword.Bluemix_notm}} 平台来创建服务实例的示例。
 
 ![供应方案](images/flow-am.svg "平台如何处理服务实例创建")
 
@@ -93,10 +93,10 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 * **CLI**：使用 `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **{{site.data.keyword.Bluemix_notm}} 控制台**：用户可以选择服务和套餐并使用**创建**操作。
 
-{{site.data.keyword.Bluemix_notm}} 平台会验证用户是否有权使用 {{site.data.keyword.Bluemix_notm}} IAM 来创建服务实例。执行此验证后，将调用服务代理程序的供应端点 (PUT /v2/resource_instances/:resource_instance_id)。执行供应时，必须满足以下规则：
+{{site.data.keyword.Bluemix_notm}} 平台会验证用户是否有权使用 {{site.data.keyword.Bluemix_notm}} IAM 来创建服务实例。执行此验证后，将启动服务代理程序的供应端点 (PUT /v2/resource_instances/:resource_instance_id)。执行供应时，必须满足以下规则：
 * context 变量中包含 {{site.data.keyword.Bluemix_notm}} 上下文
-* `X-Broker-API-Originating-Identity` 具有发起请求的用户的 IBM IAM 标识
-* parameters 部分包含请求的位置（以及服务所需的其他参数）。
+* `X-Broker-API-Originating-Identity` 包含发起请求的用户的 IBM IAM 标识
+* parameters 部分包含请求的位置（以及服务所需的更多参数）。
 
 示例供应请求：
 

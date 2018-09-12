@@ -17,28 +17,18 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 步骤 2. 在资源管理控制台中定义产品
+{: #step2-define}
 
-资源管理控制台是一个基于 Web 的工具，可帮助指导您将第三方产品交付到 {{site.data.keyword.Bluemix_notm}}“目录”中。
-
-现在，您已获得批准交付 Integrated Billing 服务，也已准备好转至资源管理控制台来注册、开始开发产品，以及提供价格套餐：
-   1. 向资源管理控制台注册服务，并验证“摘要”页面。
-   2. 在“产品”页面中输入目录元数据。
-   3. 向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 注册产品。注册将生成用于认证服务的客户机标识和服务标识凭证。
-   4. 填写“定价”页面，以确保 {{site.data.keyword.Bluemix_notm}} 中的服务产品向客户提供正确的价格套餐。您定义的套餐包括用于提供重要使用量详细信息的计量。
-   5. 将产品元数据导出为 JSON 格式。
-
+资源管理控制台是一个工具，可帮助指导您将第三方产品交付到 {{site.data.keyword.Bluemix_notm}}“目录”中。现在，您已获得批准交付 Integrated Billing 服务，也已准备好使用资源管理控制台来注册服务、开始进行开发，以及定义价格套餐。资源管理控制台是一个基于 Web 的工具，可帮助指导您将 Integrated Billing 服务交付到 {{site.data.keyword.Bluemix_notm}}“目录”中。
+{:shortdesc}
 
 ## 开始之前
-
-此步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准，请参阅[入门教程](/docs/third-party/index.html)。
-{: tip}
+{: #pre-reqs}
 
 1. 确保您已开始工作：[步骤 1：编写服务文档和市场营销公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
 2. 确保已向 {{site.data.keyword.Bluemix_notm}} 注册。如果未注册，请先[注册](https://console.bluemix.net/registration)，然后再继续操作。
 3. 在资源管理控制台中开始工作时，请确保您处于正确的帐户中。
-4. 准备 {{site.data.keyword.Bluemix_notm}} 服务名称。
-
-   您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。
+4. 准备 {{site.data.keyword.Bluemix_notm}} 服务名称。您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。
 
   向资源管理控制台注册产品时，准备好 {{site.data.keyword.Bluemix_notm}} 服务名称。服务名称并不是显示名称。服务名称必须遵循以下规则：
    - 必须全部为小写
@@ -48,6 +38,7 @@ lastupdated: "2018-08-21"
    服务名称应该包含您的公司名称。如果公司有多个产品，那么服务名称中应该同时包含公司和产品名称。例如，Compose 公司提供了 Redis 和 Elasticsearch 产品。这些产品在 {{site.data.keyword.Bluemix_notm}} 上的样本服务名称将为 `compose-redis` 和 `compose-elasticsearch`。这两个服务名称都具有 {{site.data.keyword.Bluemix_notm}}“目录”中显示的关联显示名称：*Compose Redis* 和 *Compose Elasticsearch*。另一家公司（例如 FastJetMail）可能只有一个 JetMail 产品，在这种情况下，服务名称应该为 `fastjetmail`。
 
 ## 注册产品
+{: #register}
 
 首先，请登录并注册产品。
 
@@ -62,6 +53,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 输入产品元数据
+{: #offering-metadata}
 
 在**产品**页面上，提供存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的元数据值。此外，其中的某些值需要导出并存储在服务代理程序中，这些值将用于供应，并作为 `catalog (GET)` 响应的一部分返回。您将使用这些值来帮助在后面的步骤中快速开始服务代理程序的开发。
 
@@ -76,6 +68,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 向 IAM 注册
+{: #reg-iam}
 
 所有要上线到 {{site.data.keyword.Bluemix_notm}} 中的服务都需要 IAM。请参阅[什么是 IAM？](/docs/iam/index.html#what-is-cloud-iam-)以了解有关 IAM 概念和需求的更多信息。
 
@@ -98,6 +91,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 制定价格套餐
+{: #pricing-plan}
 
 将服务上线到 {{site.data.keyword.Bluemix_notm}} 后，必须定义价格套餐。如果您对要如何向服务用户收费有详细的了解，那么可以在套餐中提供这些信息。但是，如果您尚未决定好付费套餐，那么一开始可以启用免费套餐，以后回来设置付费套餐。
 
@@ -114,6 +108,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 将元数据导出为 JSON
+{: #export-metadata}
 
 现在，您已在资源管理控制台中定义服务，因此可以下载 catalog.json 文件，并将其用于通知 Open Service Broker 的开发。catalog.json 包含必须在代理程序中托管的元数据。这些值定义代理程序与 {{site.data.keyword.Bluemix_notm}} 平台（用于代理程序支持的服务和套餐）之间的合同。在供应时非必需的其他所有目录元数据都将存储在 {{site.data.keyword.Bluemix_notm}}“目录”中，并且对用于呈现仪表板的目录显示值（如链接、图标和 i18n 转换的元数据）的任何更新都应在资源管理控制台中进行更新，而不在代理程序中存放。代理程序中存储的任何元数据都不会显示在 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 中；控制台和 CLI 将返回在资源管理控制台内设置并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的内容。
 
@@ -124,5 +119,6 @@ lastupdated: "2018-08-21"
 保存 `catalog.json` 文件。在下一部分中，将使用此文件来开发 Open Service Broker。
 
 ## 后续步骤
+{: #next-steps}
 
 加油！您已通过添加目录显示元数据，向 IAM 注册以及创建一个或多个价格套餐，定义了服务产品。接下来，可以采用导出的 JSON 并开始开发服务代理程序。请参阅[步骤 3：开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。

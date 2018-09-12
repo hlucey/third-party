@@ -17,28 +17,19 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 2단계. 리소스 관리 콘솔에서 오퍼링 정의
+{: #step2-define}
 
-리소스 관리 콘솔은 써드파티 오퍼링을 {{site.data.keyword.Bluemix_notm}} 카탈로그에 제공하도록 안내하는 웹 기반 도구입니다.
-
-이제 통합 청구 서비스를 제공하도록 승인되었으며 리소스 관리 콘솔로 이동하여 등록하고 오퍼링 개발을 시작하고 가격 책정 플랜을 제공할 준비가 되었습니다.
-   1. 서비스를 리소스 관리 콘솔에 등록하고 요약 페이지의 유효성을 검증하십시오.
-   2. 오퍼링 페이지 내에 카탈로그 메타데이터를 입력하십시오.
-   3. {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management)에 오퍼링을 등록하십시오. 등록하면 서비스를 인증하는 데 사용되는 클라이언트 ID 및 서비스 ID 신임 정보를 생성합니다.
-   4. 가격 책정 페이지를 완성하여 {{site.data.keyword.Bluemix_notm}}의 서비스 오퍼링이 고객에게 올바른 가격 책정 플랜을 제공하도록 해야 합니다. 정의한 플랜에는 중요한 사용량 세부사항을 제공하는 측정이 포함됩니다.
-   5. 오퍼링 메타데이터를 JSON 형식으로 내보내십시오.
-
+리소스 관리 콘솔은 써드파티 오퍼링을 {{site.data.keyword.Bluemix_notm}} 카탈로그에 제공하도록 안내하는 도구입니다.
+통합 청구 서비스를 제공하도록 승인되었으므로 리소스 관리 콘솔을 사용하여 서비스를 등록하고 개발을 시작하고 가격 책정 플랜을 정의할 준비가 되었습니다. 리소스 관리 콘솔은 통합 청구 서비스를 {{site.data.keyword.Bluemix_notm}} 카탈로그에 제공하도록 안내하는 웹 기반 도구입니다.
+{:shortdesc}
 
 ## 시작하기 전에
-
-이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인된다고 가정합니다. Provider Workbench의 초기 등록 및 승인을 완료하지 않은 경우 [튜토리얼 시작하기](/docs/third-party/index.html)를 참조하십시오.
-{: tip}
+{: #pre-reqs}
 
 1. [1단계: 서비스 문서 및 마케팅 공지사항 작성(PWB)](/docs/third-party/cis1-docs-marketing.html) 작업을 시작했는지 확인하십시오.
 2. {{site.data.keyword.Bluemix_notm}}에 등록되어 있는지 확인하십시오. 등록되어 있지 않은 경우 계속하기 전에 [등록](https://console.bluemix.net/registration)하십시오.
 3. 리소스 관리 콘솔에서 작업을 시작할 때 올바른 계정이 있는지 확인하십시오.
-4. {{site.data.keyword.Bluemix_notm}} 서비스 이름을 준비하십시오.
-
-   {{site.data.keyword.Bluemix_notm}} 플랫폼에서 서비스를 식별하는 데 사용되는 서비스 이름과 고객이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 볼 수 있는 표시 이름을 모두 제공해야 합니다.
+4. {{site.data.keyword.Bluemix_notm}} 서비스 이름을 준비하십시오. {{site.data.keyword.Bluemix_notm}} 플랫폼에서 서비스를 식별하는 데 사용되는 서비스 이름과 고객이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 볼 수 있는 표시 이름을 모두 제공해야 합니다.
 
   리소스 관리 콘솔에 오퍼링을 등록할 때는 {{site.data.keyword.Bluemix_notm}} 서비스 이름을 준비하십시오. 서비스 이름이 표시 이름은 아닙니다. 서비스 이름은 다음 규칙을 따라야 합니다.
    - 모두 소문자여야 함
@@ -48,6 +39,7 @@ lastupdated: "2018-08-21"
    서비스 이름에는 회사 이름이 포함되어야 합니다. 회사에 둘 이상의 오퍼링이 있는 경우, 서비스 이름에 회사 및 오퍼링이 모두 이름의 일부로 포함되어야 합니다. 예를 들어, Compose 회사에 Redis 및 Elasticsearch에 대한 오퍼링이 있습니다. 이러한 오퍼링에 대한 {{site.data.keyword.Bluemix_notm}}의 샘플 서비스 이름은 `compose-redis` 및 `compose-elasticsearch`입니다. 이들 서비스 이름은 모두 {{site.data.keyword.Bluemix_notm}} 카탈로그에 표시되는 표시 이름과 연관됩니다(*Compose Redis* 및 *Compose Elasticsearch*). 다른 회사(예: FastJetMail)에는 하나의 JetMail 오퍼링만 있을 수 있는데, 이 경우에는 서비스 이름이 `fastjetmail`이어야 합니다.
 
 ## 오퍼링 등록
+{: #register}
 
 시작하려면 로그인하여 오퍼링을 등록하십시오.
 
@@ -63,6 +55,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## 오퍼링 메타데이터 입력
+{: #offering-metadata}
 
 **오퍼링** 페이지에서 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장된 메타데이터 값을 제공하십시오. 또한 이러한 값 중 일부는 서비스 브로커에 내보내고 저장해야 하며 이들 값은 프로비저닝에 사용되고 `catalog(GET)` 응답의 일부로 리턴됩니다. 이러한 값을 사용하면 이후 단계에서 서비스 브로커 개발을 신속하게 시작하는 데 도움이 됩니다.
 
@@ -77,6 +70,7 @@ lastupdated: "2018-08-21"
 {: tip}
 
 ## IAM에 등록
+{: #reg-iam}
 
 IAM은 모든 서비스를 {{site.data.keyword.Bluemix_notm}}에 온보딩하는 데 필요합니다. IAM 개념과 요구사항에 대해 자세히 알아보려면 [IAM 개념](/docs/iam/index.html#what-is-cloud-iam-)을 참조하십시오.
 
@@ -99,6 +93,7 @@ IAM은 모든 서비스를 {{site.data.keyword.Bluemix_notm}}에 온보딩하는
 {: tip}
 
 ## 가격 책정 플랜 개발
+{: #pricing-plan}
 
 서비스를 {{site.data.keyword.Bluemix_notm}}에 온보딩할 때 가격 책정 플랜을 정의해야 합니다. 사용자에게 서비스 요금을 부과하는 방법에 대해 자세히 알고 있는 경우 플랜에 해당 정보를 제공할 수 있습니다. 그러나 아직 유료 사용제를 확정하지 않은 경우 무료 사용제를 사용하여 시작한 다음 나중에 다시 돌아가 유료 사용제를 설정할 수 있습니다.
 
@@ -113,8 +108,9 @@ IAM은 모든 서비스를 {{site.data.keyword.Bluemix_notm}}에 온보딩하는
 {: tip}
 
 ## 메타데이터를 JSON으로 내보내기
+{: #export-metadata}
 
-이제 리소스 관리 콘솔에서 서비스를 정의했으므로 catalog.json 파일을 다운로드하고 이를 사용하여 Open Service Broker를 개발할 수 있습니다. catalog.json에는 브로커에 호스팅되어야 하는 메타데이터가 포함되어 있습니다. 이러한 값은 브로커가 지원하는 서비스 및 플랜에 대한 브로커와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 계약을 정의합니다. 프로비저닝에 필요하지 않은 모든 추가 카탈로그 메타데이터는 {{site.data.keyword.Bluemix_notm}} 카탈로그 내에 저장되며 링크, 아이콘 및 i18n 변환 메타데이터와 같은 대시보드를 렌더링하는 데 사용되는 카탈로그 표시 값에 대한 업데이트는 리소스 관리 콘솔에서 업데이트해야 하며 브로커에 포함되지 않습니다. 브로커에 저장된 메타데이터는 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 {{site.data.keyword.Bluemix_notm}} CLI에 표시되지 않습니다. 콘솔과 CLI는 리소스 관리 콘솔에서 설정하고 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장한 항목을 리턴합니다.
+이제 리소스 관리 콘솔에서 서비스를 정의했으므로 catalog.json 파일을 다운로드하고 이를 사용하여 Open Service Broker의 개발을 알릴 수 있습니다. catalog.json에는 브로커에 호스팅되어야 하는 메타데이터가 포함되어 있습니다. 이러한 값은 브로커가 지원하는 서비스 및 플랜에 대한 브로커와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 계약을 정의합니다. 프로비저닝에 필요하지 않은 모든 추가 카탈로그 메타데이터는 {{site.data.keyword.Bluemix_notm}} 카탈로그 내에 저장되며 링크, 아이콘 및 i18n 변환 메타데이터와 같은 대시보드를 렌더링하는 데 사용되는 카탈로그 표시 값에 대한 업데이트는 리소스 관리 콘솔에서 업데이트해야 하며 브로커에 포함되지 않습니다. 브로커에 저장된 메타데이터는 {{site.data.keyword.Bluemix_notm}} 콘솔 또는 {{site.data.keyword.Bluemix_notm}} CLI에 표시되지 않습니다. 콘솔과 CLI는 리소스 관리 콘솔에서 설정하고 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장한 항목을 리턴합니다.
 
 1. 리소스 관리 콘솔에서 **개발** 페이지를 여십시오.
 2. **관리**를 클릭하십시오.
@@ -123,5 +119,6 @@ IAM은 모든 서비스를 {{site.data.keyword.Bluemix_notm}}에 온보딩하는
 `catalog.json` 파일을 저장하십시오. 다음 절에서는 이 파일을 사용하여 Open Service Broker를 개발합니다.
 
 ## 다음 단계
+{: #next-steps}
 
 축하합니다! 카탈로그 표시 메타데이터를 추가하고, IAM에 등록한 후, 하나 이상의 가격 책정 플랜을 작성하여 서비스 오퍼링을 정의했습니다. 다음으로 내보낸 JSON을 사용하여 서비스 브로커 개발을 시작할 수 있습니다. [3단계: 서비스 브로커 개발 및 호스팅](/docs/third-party/cis3-broker.html)을 참조하십시오.

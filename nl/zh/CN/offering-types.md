@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -31,7 +31,7 @@ lastupdated: "2018-07-01"
 
 |  | Integrated Billing 服务|引荐服务|
 |---|---|---|
-|**上线**|上线通过 Provider Workbench (PWB) 和资源管理控制台进行处理。产品提供者负责开发 Open Service Broker，对其进行托管和测试，并通过一系列自助服务步骤发布产品。|上线通过 Provider Workbench 进行处理。自助服务上线过程需要大约两周时间。|
+|**上线**|上线通过 IBM Provider Workbench 和资源管理控制台进行处理。产品提供者负责开发 Open Service Broker，对其进行托管和测试，并通过一系列自助服务步骤发布产品。|上线通过 Provider Workbench 进行处理。自助服务上线过程需要大约两周时间。|
 |**部署**|由 {{site.data.keyword.Bluemix_notm}} 平台供应|仅限基于 API 的服务|
 |**计费**|在 Integrated Billing 模型中，用户收到的是包含其 IBM 产品及其集成第三方产品的一张帐单。|在引荐模型中，提供者对用户计费，并保留 100% 的收入。|
 |**示例**|[PowerAI](https://console.bluemix.net/catalog/services/powerai)|[Accern API](https://console.bluemix.net/catalog/services/accern-api)|

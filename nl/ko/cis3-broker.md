@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-23"
 
 
 ---
@@ -17,27 +17,17 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # 3단계. 서비스 브로커 개발 및 호스팅
+{: #step3-osb}
 
-리소스 관리 콘솔에서 내보낸 메타데이터를 사용하여 선택한 프로그래밍 언어로 하나 이상의 새 서비스 브로커를 빌드합니다.
+리소스 관리 콘솔에서 내보낸 메타데이터를 사용하여 선택한 프로그래밍 언어로 하나 이상의 새 서비스 브로커를 빌드할 수 있습니다.
+{:shortdesc}
 
 서비스 브로커는 서비스 라이프사이클을 관리합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼은 서비스 브로커와 상호작용하여 서비스 인스턴스(서비스 오퍼링의 인스턴스화) 및 서비스 바인딩(애플리케이션과 서비스 인스턴스 간의 연관 표시, 보통 애플리케이션이 서비스 인스턴스와 통신하는 데 사용할 신임 정보가 포함됨)을 프로비저닝하고 관리합니다. 올바른 메타데이터 값을 제공하면 요청이 수행될 때 성공적인 RESTful API 응답이 작성됩니다.
 
-리소스 관리 콘솔, {{site.data.keyword.Bluemix_notm}} 서비스 브로커 샘플 및 리소스 브로커 API 문서에서 내보낸 메타데이터의 조합을 사용하여 브로커 빌드를 시작할 수 있습니다. 브로커를 개발하려면 다음을 수행합니다.
-
-1. 플랫폼 프로비저닝 시나리오 보기
-2. OSB 스펙 보기
-2. {{site.data.keyword.Bluemix_notm}} 브로커 샘플 보기
-3. 리소스 브로커 API 문서를 사용하여 REST API 엔드포인트 로직 알아보기
-4. 리소스 관리 콘솔에서 내보낸 메타데이터를 사용하여 개발 팀에 알림
-5. {{site.data.keyword.Bluemix_notm}} 플랫폼에서 제공하는 브로커 정보 보기
-6. 개발을 최적화하기 위한 추가 권장사항 참조
-7. 브로커 호스트
-8. 브로커 테스트
+리소스 관리 콘솔, {{site.data.keyword.Bluemix_notm}} 서비스 브로커 샘플 및 리소스 브로커 API 문서에서 내보낸 메타데이터의 조합을 사용하여 브로커 빌드를 시작할 수 있습니다.
 
 ## 시작하기 전에
-
-이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. Provider Workbench의 초기 등록 및 승인을 아직 완료하지 않은 경우 [튜토리얼 시작하기](/docs/third-party/index.md)를 참조하십시오.
-{: tip}
+{: #pre-reqs}
 
 1단계를 시작했는지 확인하고 2단계를 완료했는지 확인하십시오.
 1. [서비스 문서 및 마케팅 공지사항 작성](/docs/third-party/cis1-docs-marketing.html).
@@ -45,14 +35,17 @@ lastupdated: "2018-08-21"
 
 
 ## {{site.data.keyword.Bluemix_notm}} 플랫폼 프로비저닝 시나리오 보기
+{: #scenario}
 
 {{site.data.keyword.Bluemix_notm}} 플랫폼에서 작동하는 Open Service Broker를 개발합니다. 리소스 작성이 작동하는 방식을 이해하려면 [프로비저닝 시나리오](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)를 참조하십시오.
 
 ## OSB 스펙 알아보기
+{: #learn-osb}
 
 {{site.data.keyword.Bluemix_notm}}는 Open Service Broker API(OSB) `버전 2.12` 스펙을 사용합니다. [Open Broker API 스펙](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 읽고 숙지한 후 readme 파일을 가이드로 사용하여 자세히 알아보십시오.
 
 ## {{site.data.keyword.Bluemix_notm}} 브로커 샘플 보기
+{: #samples}
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
 
@@ -60,8 +53,9 @@ lastupdated: "2018-08-21"
 
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 문서 보기
+{: #docs}
 
-서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
+서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker는 Open Service Broker 2.12 스펙을 확장합니다.
 {: tip}
@@ -128,6 +122,7 @@ OSB 스펙은 사용 안함 상태이지만 아직 삭제되지 않은 인스턴
 **참고**: 엔드포인트 사용 안함이 호출될 때 서비스 인스턴스에 대한 액세스를 사용 안함으로 설정하고 엔드포인트 사용이 호출될 때 해당 액세스를 다시 사용으로 설정하는 것은 서비스 제공자의 책임입니다.
 
 ## 내보낸 메타데이터를 사용하여 브로커 개발을 안내하는 방법 알아보기
+{: #use-metadata}
 
 리소스 관리 콘솔에서 내보낸 메타데이터를 사용자 고유의 브로커 개발을 위한 안내서로 사용할 수 있습니다. 리소스 관리 콘솔에 입력한 모든 값이 서비스를 프로비저닝하는 데 필요하지는 않습니다. 리소스 관리 콘솔에서 내보낸 메타데이터는 서비스와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 최소 프로비저닝 계약을 정의합니다. 내보낸 json에서는 다음 값을 제공해야 합니다.
 
@@ -184,6 +179,7 @@ OSB 서비스 어레이는 리소스 관리 콘솔에 추가한 오퍼링 메타
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 플랫폼에서 제공하는 브로커 정보
+{: #broker info}
 
 서비스 브로커 또는 브로커는 {{site.data.keyword.Bluemix_notm}} 플랫폼에서 다음 정보를 수신합니다.
 
@@ -208,6 +204,7 @@ Decoded:
 `PUT /v2/service_instances/:resource_instance_id` 및 `PATCH /v2/service_instances/:resource_instance_id`는 **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }` 내에서 다음 값을 받습니다.
 
 ## 추가 브로커 권장사항
+{: #more-info}
 
 ### 비동기 대 동기 오퍼레이션 사용에 대한 권장사항
 
@@ -230,6 +227,7 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 
 ## 브로커 호스트
+{: #host}
 
 브로커는 REST API 호출에 응답할 수 있는 애플리케이션의 일부로 호스팅되어야 합니다. 또한 호스트 위치는 {{site.data.keyword.Bluemix_notm}} 보안 가이드라인을 준수해야 합니다. {{site.data.keyword.Bluemix_notm}}에서 호스팅하거나, {{site.data.keyword.Bluemix_notm}}에서 공용으로 액세스할 수 있는 경우 외부에서 호스팅할 수 있습니다.
 
@@ -243,6 +241,7 @@ IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인�
 {: tip}
 
 ## 서비스 브로커를 테스트하는 방법
+{: #test}
 
 사용하려는 다른 엔드포인트에 대해 curl 명령을 실행하여 브로커의 유효성을 검증해야 합니다. 샘플 readme에서는 OSB 엔드포인트에 대해 curl을 수행하기 위한 훌륭한 지침을 제공합니다. https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 

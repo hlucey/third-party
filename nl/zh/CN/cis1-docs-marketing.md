@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-27"
 
 
 ---
@@ -25,7 +25,7 @@ lastupdated: "2018-08-21"
 ## 开始之前
 {: #prereqs}
 
-确保已完成[入门教程](/docs/third-party/index.html)，并且已批准您交付 Integrated Billing 服务。
+确保已完成[入门教程](/docs/third-party/index.html)，并且已获得批准交付 Integrated Billing 服务。
 
 ## 创建入门文档
 {: #docs}

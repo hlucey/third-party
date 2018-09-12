@@ -32,15 +32,15 @@ lastupdated: "2018-07-20"
 
 要交付 Integrated Billing 服务，您可使用 Provider Workbench、资源管理控制台和所选开发环境。请参阅[核对表](/docs/third-party/checklist.html#checklist)以帮助跟踪这些步骤。
 
+这些步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 PWB 中的初始注册和批准，请参阅：[在 {{site.data.keyword.Bluemix_notm}} 中发布第三方产品入门](/docs/third-party/index.md)
+{: tip}
+
 1. [创建文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
 2. [在资源管理控制台中定义产品{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html)。
 3. [开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。
 4. [开发认证流程](/docs/third-party/cis5-iam.html)。
 5. [测试服务](/docs/third-party/cis4-rmc-publish.html)。
 6. [公开发布服务](/docs/third-party/cis6-ga.html)。
-
-这些步骤假定您已获得批准交付 Integrated Billing 服务。如果您尚未完成 Provider Workbench 中的初始注册和批准过程，请参阅[入门教程](/docs/third-party/index.md)。
-{: tip}
 
 ## 支持
 {: #support}

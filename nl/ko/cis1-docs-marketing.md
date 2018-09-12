@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-27"
 
 
 ---
@@ -30,7 +30,7 @@ IBM Provider Workbench를 사용하여 시작하기 문서 및 마케팅 공지�
 ## 시작하기 문서 작성
 {: #docs}
 
-통합 청구 서비스를 제공하려면 {{site.data.keyword.Bluemix_notm}}의 컨텍스트에서 사용자 서비스를 사용하여 시작하는 방법을 설명하는 시작하기 문서를 제공해야 합니다. 서비스를 개발하는 동안 이 태스크를 병렬로 작업할 수 있습니다.
+통합 청구 서비스를 제공하려면 사용자가 {{site.data.keyword.Bluemix_notm}}의 컨텍스트에서 서비스를 사용하여 시작하는 방법을 설명하는 시작하기 문서를 제공해야 합니다. 서비스를 개발하는 동안 이 태스크를 병렬로 작업할 수 있습니다.
 
 1. [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오.
 2. Provider Workbench 대시보드의 오퍼링 타일에서 **태스크**를 클릭하십시오.

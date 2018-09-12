@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -22,7 +22,7 @@ lastupdated: "2018-06-29"
 
 ## {{site.data.keyword.Bluemix_notm}} 프로비져닝 계층
 
-프로비저닝 계층은 {{site.data.keyword.Bluemix_notm}} 리소스의 라이프사이클을 관리합니다. 프로비저닝 계층은 고객 계정에 있는 리스소의 라이프사이클을 제어하고 추적합니다. *리소스*는 애플리케이션 또는 서비스 인스턴스에 대해 프로비저닝되거나 예약될 수 있는 물리적 또는 논리적 컴포넌트입니다. 리소스의 예로는 데이터베이스, 계정, 프로세서, 메모리 및 스토리지 한계가 있습니다. 일반적으로 프로비저닝 계층에서 추적하는 리소스에는 연관된 사용량 메트릭과 청구가 포함되지만 항상 그렇지는 않습니다. 어떤 경우에는 리소스가 프로비저닝 계층과 연관되어 리소스 라이프사이클이 계정 라이프사이클과 함께 관리될 수 있습니다.
+프로비저닝 계층은 {{site.data.keyword.Bluemix_notm}} 리소스의 라이프사이클을 관리합니다. 프로비저닝 계층은 고객 계정에 있는 리스소의 라이프사이클을 제어하고 추적합니다. *리소스*는 애플리케이션 또는 서비스 인스턴스에 대해 프로비저닝되거나 예약될 수 있는 물리적 또는 논리적 컴포넌트입니다. 리소스의 예로는 데이터베이스, 계정, 프로세서, 메모리 및 스토리지 한계가 있습니다. 일반적으로 프로비저닝 계층에서 추적하는 리소스는 사용량 메트릭과 청구를 연관시키는 데 사용되지만 항상 그렇지는 않습니다. 어떤 경우에는 리소스가 프로비저닝 계층과 연관되어 리소스 라이프사이클이 계정 라이프사이클과 함께 관리될 수 있습니다.
 
 ### 리소스 라이프사이클 관리
 
@@ -38,36 +38,36 @@ lastupdated: "2018-06-29"
 
 ## {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management)
 
-IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증하고 {{site.data.keyword.Bluemix_notm}}에서 일관되게 모든 클라우드 리소스에 대한 액세스를 제어할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 프로비저닝 계층은 프로비저닝 계층에 대해 수행된 조치의 인증 및 권한 부여를 위해 IAM을 채택했습니다. 써드파티 오퍼링 제공자는 IAM을 사용하여 인증 플로우(OAuth)를 작성합니다. 추가 세부사항은 [IAM 개념](/docs/iam/index.html#iamoverview)을 참조하십시오.
+IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증하고 {{site.data.keyword.Bluemix_notm}}에서 일관되게 모든 클라우드 리소스에 대한 액세스를 제어할 수 있습니다. {{site.data.keyword.Bluemix_notm}} 프로비저닝 계층은 프로비저닝 계층에 대해 수행된 조치의 인증 및 권한 부여를 위해 IAM을 채택했습니다. 써드파티 오퍼링 제공자는 IAM을 사용하여 인증 플로우(OAuth)를 작성합니다. 자세한 정보는 [IAM 개념](/docs/iam/index.html#iamoverview)을 참조하십시오.
 
 오퍼링이 OIDC(OpenID Connect) 라이브러리를 사용하는 경우 IAM은 OIDC 통합을 지원합니다. OIDC는 인증 프레임워크인 OAuth 2.0 위에 있는 인증 계층으로 온보딩 프로세스를 간소화할 수 있습니다. OIDC에 대한 자세한 정보는 [OIDC(Open ID Connect)](http://openid.net/connect/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.
 
 ## {{site.data.keyword.Bluemix_notm}} 카탈로그
 
-{{site.data.keyword.Bluemix_notm}} 카탈로그는 {{site.data.keyword.Bluemix_notm}} 콘솔에 표시되는 리소스의 오퍼링 정의(설명, 기능, 이미지, URL 등)를 저장합니다. 리소스 관리 콘솔을 사용하여 서비스 필수 메타데이터의 모든 측면을 정의합니다. 이 메타데이터는 카탈로그에 공개되고 카탈로그에 표시하는 데 사용됩니다. 리소스 관리 콘솔의 **오퍼링** 및 **플랜** 페이지에서 필수 및 선택적 메타데이터 필드에 대한 자세한 정보를 볼 수 있지만 주요 항목은 여기에 포함되어 사용자의 이해를 돕습니다.
+{{site.data.keyword.Bluemix_notm}} 카탈로그는 {{site.data.keyword.Bluemix_notm}} 콘솔에 표시되는 리소스의 오퍼링 정의(설명, 기능, 이미지, URL 등)를 저장합니다. 리소스 관리 콘솔을 사용하여 서비스 필수 메타데이터의 모든 측면을 정의합니다. 이 메타데이터는 카탈로그에 공개되고 카탈로그에 표시하는 데 사용됩니다. 리소스 관리 콘솔의 **오퍼링** 및 **플랜** 페이지에서 필수 및 선택적 메타데이터 필드에 대한 자세한 정보를 볼 수 있습니다. 주요 항목은 여기에 포함되어 사용자의 이해를 돕습니다.
 
    * 서비스 이름: 서비스의 기술 이름입니다. 서비스 이름은 중요하며 올바르게 정의되어야 합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼에서 서비스를 식별하는 데 사용되는 서비스 이름과 고객이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 볼 수 있는 표시 이름을 모두 제공해야 합니다. 서비스 이름이 표시 이름은 아닙니다.
    * 서비스 표시 이름: 서비스의 사용자 친화적인 이름입니다. 예: "Compose Redis"
-   * 서비스 ID: OSB 브로커에 대한 API 호출에 사용되는 서비스의 GUID입니다. 이 이름은 고유한 값이어야 합니다.
+   * 서비스 ID: OSB 브로커에 대한 API 호출에 사용되는 서비스의 GUID입니다. 이 값은 고유해야 합니다.
    * 서비스 아이콘: 서비스 로고가 있는 SVG
    * 서비스 설명: {{site.data.keyword.Bluemix_notm}} 카탈로그 사용자 인터페이스에서 리소스 아이콘 위에 마우스를 올려 놓으면 표시되는 리소스에 대한 설명입니다. 설명을 위한 단일 문장 또는 구문을 추가할 수 있습니다.
    * 서비스 상세 설명: 카탈로그 목록 페이지에 표시되는 첫 번째 단락입니다. 자세한 설명이 되려면 최소 2개 문장을 사용하는 것이 좋습니다.
    * 문서 URL: {{site.data.keyword.Bluemix_notm}} 문서에 대한 링크입니다. 사용자가 PWB에서 작성하면 PWB에서 사용자를 위해 url 값을 생성합니다.
    * 이용 약관 URL: 사용을 위한 서비스의 이용 약관에 대한 링크입니다. GDPR 용도의 경우 기존 써드파티 서비스의 이용 약관에는 링크되지 않습니다. 대신 통합 청구 서비스의 고유 페이지를 제공해야 합니다.
    * 지시사항 URL: 문서 URL과 마찬가지로 {{site.data.keyword.Bluemix_notm}} 문서를 가리키지만 지시사항 URL은 문서를 동적으로 서비스의 대시보드에 있는 시작하기 탭으로 가져옵니다.
-   * 카테고리: 서비스를 카탈로그에 배치해야 하는 사용 가능한 {{site.data.keyword.Bluemix_notm}} 카테고리를 선택합니다.
+   * 카테고리: 서비스를 카탈로그에 배치하는 사용 가능한 {{site.data.keyword.Bluemix_notm}} 카테고리를 선택합니다.
    * 글머리 기호: 서비스에 대한 간단한 설명 스파클러
    * 매체: 서비스에 대한 화면 캡처 및 동영상
    * 서비스 플랜 이름: 각 플랜에는 기술 이름이 있습니다. 모든 소문자, 공백 없음, "-"를 포함할 수 있습니다.  예: `gold`.
    * 서비스 플랜 표시 이름: 플랜의 사용자 친화적인 이름입니다. 예: `Gold`
-   * 서비스 플랜 ID: OSB 브로커에 대한 API 호출에 사용되는 서비스 플랜의 GUID입니다. 이 이름은 고유한 값이어야 합니다. 리소스 관리 콘솔에서 이 값을 생성합니다.
+   * 서비스 플랜 ID: OSB 브로커에 대한 API 호출에 사용되는 서비스 플랜의 GUID입니다. 이 값은 고유해야 합니다. 리소스 관리 콘솔에서 이 값을 생성합니다.
    * 서비스 플랜 설명: 리소스 플랜에 대한 설명입니다. IBM Cloud 카탈로그의 리소스 세부사항 페이지에서 플랜을 선택하면 설명이 표시됩니다.
    * 서비스 플랜 글머리 기호: 서비스 플랜에 대한 간단한 설명 스파클러
 
 
 ## Open Service Broker
 
-서비스 브로커는 서비스 라이프사이클을 관리합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼은 서비스 브로커와 상호작용하여 서비스 인스턴스(서비스 오퍼링의 인스턴스화) 및 서비스 바인딩(애플리케이션과 서비스 인스턴스 간의 연관 표시, 보통 애플리케이션이 서비스 인스턴스와 통신하는 데 사용할 신임 정보가 포함됨)을 프로비저닝하고 관리합니다. 올바른 메타데이터 값을 제공하면 요청이 수행될 때 성공적인 REST API 응답이 작성됩니다.
+서비스 브로커는 서비스 라이프사이클을 관리합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼은 서비스 브로커와 상호작용하여 서비스 인스턴스(서비스 오퍼링의 인스턴스화) 및 서비스 바인딩(애플리케이션과 서비스 인스턴스 간의 연관 표시, 보통 애플리케이션이 서비스 인스턴스와 통신하는 데 사용하는 신임 정보가 포함됨)을 프로비저닝하고 관리합니다. 올바른 메타데이터 값을 제공하면 요청이 수행될 때 성공적인 REST API 응답이 작성됩니다.
 
 {{site.data.keyword.Bluemix_notm}}는 Open Service Broker API(OSB) `버전 2.12` 스펙을 사용합니다. [Open Broker API 스펙](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 읽고 숙지한 후 readme 파일을 가이드로 사용하여 자세히 알아보십시오.
 
@@ -93,7 +93,7 @@ IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증
 * **CLI**: `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]` 사용
 * **{{site.data.keyword.Bluemix_notm}} 콘솔**: 사용자가 서비스, 플랜을 선택하고 **작성** 오퍼레이션을 사용할 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} 플랫폼은 사용자가 {{site.data.keyword.Bluemix_notm}}를 사용하여 서비스 인스턴스를 작성할 수 있는 권한을 가지고 있는지 검증합니다. 이 유효성 검증이 실행되면 서비스 브로커의 프로비저닝 엔드포인트(PUT /v2/resource_instances/:resource_instance_id)가 호출됩니다. 프로비저닝이 실행될 때 다음 규칙이 충족되어야 합니다.
+{{site.data.keyword.Bluemix_notm}} 플랫폼은 사용자가 {{site.data.keyword.Bluemix_notm}}IAM을 사용하여 서비스 인스턴스를 작성할 수 있는 권한을 가지고 있는지 검증합니다. 이 유효성 검증이 실행되면 서비스 브로커의 프로비저닝 엔드포인트(PUT /v2/resource_instances/:resource_instance_id)가 시작됩니다. 프로비저닝이 실행될 때 다음 규칙이 충족되어야 합니다.
 * {{site.data.keyword.Bluemix_notm}} 컨텍스트가 컨텍스트 변수에 포함되어야 합니다.
 * `X-Broker-API-Originating-Identity`에 요청을 시작한 사용자의 IBM IAM ID가 포함됩니다.
 * 매개변수 섹션에 요청된 위치(및 서비스에 필요한 추가 매개변수)가 포함됩니다.
