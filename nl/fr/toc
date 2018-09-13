@@ -34,8 +34,6 @@ Développement de services de facturation intégrée tiers
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Open Service Broker API Reference](https://console.bluemix.net/apidocs/resource-controller)
+    [IBM Cloud Open Service Broker API Reference](https://console.bluemix.net/apidocs/ibm-cloud-osb-api)
     [IBM Cloud Usage Metering API Reference](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
-
-https://console.bluemix.net/apidocs/resource-controller

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -31,7 +31,7 @@ La liste suivante décrit les attentes pour le suivi et la soumission de l'utili
 *	{{site.data.keyword.Bluemix_notm}} est configuré pour un cycle de facturation mensuelle et l'heure est représentée au format UTC.
 *  Les fournisseurs d'offre doivent tester la soumission de l'utilisation et valider leurs résultats afin d'indiquer comment le cycle de facturation mensuelle est calculé.
 
-Voir la page décrivant comment calculer vos coûts[](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost) pour obtenir des informations d'ordre général sur la tarification.
+Pour obtenir des informations générales sur la tarification, voir [la page décrivant comment calculer vos coûts](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propriétés de configuration
 {: #configure}
@@ -48,7 +48,7 @@ Les propriétés suivantes définissent comment les soumissions d'utilisation po
 <dt>Nom de ressource</dt>
 <dd>Nom de la ressource mesurée (par exemple, stockage, instance, serveur virtuel ou octets transmis).</dd>
 <dt>Nom d'unité</dt>
-<dd>Nom descriptif de l'unité si le nom par défaut n'est pas adapté pour l'offre.</dd>
+<dd>Nom descriptif de l'unité si le nom par défaut n'est pas adapté à l'offre.</dd>
 </dl>
 
 ## Types de modèle de mesure
@@ -108,8 +108,8 @@ Formule : MAX(utilisations)
 | Jour 3 (matin) | 15             | MAX(10, 15)  | 15                    |
 | Jour 4 (soir)   | 1              | MAX(15, 1)   | 15                    |
 
-#### Moyenne de proratisation quotidienne
-Calcule l'utilisation moyenne pour chaque jour et effectue une moyenne pour l'ensemble du mois. Les moyennes de chaque jour sont ajoutées puis ce nombre est divisé par le nombre de jours actuellement transmis (au format UTC).
+#### Proratisation quotidienne - Moyenne
+Calcule l'utilisation moyenne par jour et calcule une moyenne pour le mois. Les moyennes de chaque jour sont ajoutées puis ce nombre est divisé par le nombre de jours actuellement transmis (au format UTC).
 
 Formule : total(moyenne quotidienne) / Nombre de jours transmis lors de la période de facturation
 
@@ -124,11 +124,11 @@ Prenons un mois à 30 jours :
 | Jour 2 (matin)    | 2                | 2 / 1         | (5,5 + 2) / 2                          | 3,75                                             |
 | Jour 2 (soir)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (A la fin du jour 2)                               |
 | Jour 3 à jour 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666 (A la fin du jour 15)                          |
-| Jour 15 à jour 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (A la fin du jour 30 EOD)                   |
+| Jour 15 à jour 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (A la fin du jour 30)                          |
 
 \* Situation au jour de soumission de l'utilisation.
 
-#### Valeur maximale de la proratisation quotidienne
+#### Proratisation quotidienne - Max
 Calcule l'utilisation maximale par jour et calcule une moyenne pour le mois. La valeur maximale de chaque jour est ajoutée puis ce nombre est divisé par le nombre de jours actuellement transmis (au format UTC).
 
 Formule : Total (valeur maximale quotidienne) / nombre de jours dans la période de facturation
@@ -149,7 +149,7 @@ Prenons un mois à 30 jours :
 ## Exemples d'échelle d'évaluation et de mesure
 {: #scale-examples}
 
-Vous pouvez utiliser la configuration de mise à l'échelle pour compiler la quantité d'unités différemment lors de l'envoi dans les soumissions d'utilisation, lors de l'affichage dans le tableau de bord d'utilisation ainsi que lors de l'affichage des éléments utilisés pour les calculs d'évaluation et de coût. Les exemples suivants présentent des scénarios dans lesquels ces valeurs doivent être configurées :
+Vous pouvez utiliser la configuration de mise à l'échelle pour compiler la quantité d'unités différemment lors de l'envoi dans les soumissions d'utilisation, lors de l'affichage dans le tableau de bord d'utilisation ainsi que lors de l'affichage des éléments utilisés pour les calculs d'évaluation et de coût. Les exemples suivants présentent ces scénarios :
 
 ### Vous souhaitez une granularité plus importante que ce que les utilisateurs voient
 Vous souhaitez envoyer les utilisations à un niveau plus granulaire mais vous souhaitez malgré tout afficher un nombre lisible d'éléments pour les clients.

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-21"
 # Soumission de l'utilisation pour les plans mesurés
 {: #submitusage}
 
-Vous devez toutes les heures soumettre l'utilisation pour toutes les instances de service actives. Si vous ne le faites pas, cela peut générer une perte de collecte des recettes pour IBM, provoquant ensuite une perte de revenu pour les fournisseurs d'offre.
+Vous devez toutes les heures soumettre l'utilisation pour toutes les instances de service actives. Si vous ne le faites pas, cela peut générer une perte de collecte des recettes pour IBM, pouvant ensuite provoquer une perte de revenu pour les fournisseurs d'offre.
 {:shortdesc}
 
 ## Fonctionnement du processus
@@ -47,10 +47,10 @@ Consultez les conditions préalables suivantes pour activer la fonction de mesur
 
 Reportez-vous aux conseils suivants lorsque vous utilisez le service de mesure {{site.data.keyword.Bluemix_notm}} pour soumettre des données d'utilisation de ressource :
 
-* L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure.
+* L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure. 
 * Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [actions](#actions) possibles.
 * Un enregistrement d'utilisation est identifié de manière unique par la signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Lorsqu'un tel enregistrement est traité, tout autre élément ayant la même signature est rejeté comme doublon.
-* Les interactions avec le service de mesure ne doivent pas être associées à d'autres services. Les demandes doivent être traitées individuellement même si l'opération de mesure se termine avec la mise à disposition et l'annulation de la mise à disposition de l'instance.
+* N'associez pas à d'autres services l'interaction avec le service de mesure. Les demandes doivent être traitées individuellement même si l'opération de mesure commence et se termine avec la mise à disposition et l'annulation de la mise à disposition de l'instance.
 * Les données d'utilisation des ressources doivent être soumises au service de mesure une fois par période allant de deux à 24 heures. La fréquence de soumission de vos données d'utilisation dépend de la fréquence de changement de vos mesures d'utilisation.
 * Les enregistrements d'utilisation doivent être soumis dans les deux jours suivant la prise de mesure. Les enregistrements d'utilisation plus anciens sont rejetés.
 * Une soumission réussie renvoie le code de réponse 201. Si un autre code de réponse est renvoyé, mettez à jour et renvoyez les données jusqu'à ce que le code 201 s'affiche.
@@ -150,7 +150,7 @@ Vous pouvez soumettre plusieurs enregistrements d'utilisation en utilisant l'app
 | 500 |  Essayez de soumettre à nouveau l'enregistrement d'utilisation. Si le problème persiste, contactez l'équipe de mesure BSS. |
 | 400 |  L'enregistrement d'utilisation n'est pas au format correct. Soit, la validation du schéma a échoué (les mesures des enregistrements d'utilisation sont incorrectes), soit l'heure de début et de fin ne sont pas comprises entre l'heure de mise à disposition et l'heure d'annulation de mise à disposition. Mettez à jour l'enregistrement d'utilisation et soumettez-le à nouveau.   |
 | 424  | Des problèmes ont été détectés dans les métadonnées d'instance. Mettez à jour les détails de l'instance et soumettez à nouveau l'enregistrement d'utilisation.  |
-| 404  | La définition de mesure n'a pas été intégrée. Collaborez avec l'équipe de mesure BSS pour vérifier si la ressource est intégrée puis soumettez à nouveau l'enregistrement d'utilisation.  |
+| 404  | La définition de mesure n'a pas été intégrée. Collaborez avec l'équipe de mesure BSS pour vous assurer que la ressource est intégrée puis soumettez à nouveau l'enregistrement d'utilisation.  |
 | 409  | L'enregistrement d'utilisation est un doublon. N'essayez pas de le soumettre à nouveau. |
 {: caption="Tableau 2. Code d'état et actions requises" caption-side="top"}
 {: #actions}

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ Utilisez le tableau de bord Provider Workbench pour répertorier votre type d'of
 ## Etape 3. Définir les détails de votre offre
 {: #step3}
 
-Une fois que vous avez sélectionné **Integrated billing service** comme type d'offre et que vous avez soumis le formulaire d'évaluation de disponibilité, la page est actualisée et inclut une section permettant de définir le contenu affiché sur la page des détails de catalogue dans la console {{site.data.keyword.Bluemix_notm}}. Renseignez chaque zone et soumettez le formulaire pour révision. Ce processus peut durer plusieurs jours.
+Une fois que vous avez sélectionné **Integrated billing service** comme type d'offre et que vous avez soumis le formulaire d'évaluation de disponibilité, la page est actualisée. Elle s'affiche sur la page de détails de catalogue dans la console {{site.data.keyword.Bluemix_notm}}. Renseignez chaque zone et soumettez le formulaire pour révision. Ce processus peut durer plusieurs jours.
 
 ## Etapes suivantes
 {: #next-steps}
@@ -55,6 +55,6 @@ Une fois que l'approbation est accordée, vous recevez un message électronique 
   Le message électronique inclut un lien vers l'emplacement de publication de la documentation d'initiation. Sauvegardez l'URL car vous allez l'utiliser dans la console de gestion des ressources. 
   {: tip}
 
-* Dans la console de gestion des ressources, vous intégrez votre offre dans {{site.data.keyword.Bluemix_notm}} en définissant cette dernière, en générant des plans de tarification, en activant la sécurité et en gérant le déploiement de votre offre dans différents environnements {{site.data.keyword.Bluemix_notm}}. 
+* Dans la console de gestion des ressources, intégrez votre offre à {{site.data.keyword.Bluemix_notm}} en définissant cette dernière, en créant des plans de tarification, en activant la sécurité et en gérant le déploiement de votre offre dans différents environnements {{site.data.keyword.Bluemix_notm}}. 
 
 Pour plus de détails, voir [Développement et publication d'un service de facturation intégrée](/docs/third-party/integrated-billing-service.html)

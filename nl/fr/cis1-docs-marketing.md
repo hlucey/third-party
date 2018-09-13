@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-27"
 
 
 ---
@@ -30,7 +30,7 @@ Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party/index.ht
 ## Création de votre documentation d'initiation
 {: #docs}
 
-Pour fournir un service de facturation intégrée, il vous est demandé de mettre à disposition une documentation d'initiation qui décrit comment les utilisateurs procèdent lorsqu'ils comment à utiliser votre service dans le contexte {{site.data.keyword.Bluemix_notm}}. Vous pouvez effectuer cette tâche tout en développant votre service.
+Pour fournir un service de facturation intégrée, il vous est demandé de mettre à disposition une documentation d'initiation qui décrit comment les utilisateurs procèdent lorsqu'ils commencent à utiliser votre service dans le contexte {{site.data.keyword.Bluemix_notm}}. Vous pouvez effectuer cette tâche tout en développant votre service.
 
 1. Connectez-vous à [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 2. Dans le tableau de bord Provider Workbench, cliquez sur **Tasks** dans la vignette de l'offre.

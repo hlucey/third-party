@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -17,33 +17,24 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Etape 4. Développement d'un flux d'authentification
+{: #step4-iam}
 
-Une fois que vous avez défini votre offre, la page Access Management de la console de gestion des ressources inclut votre ID client et votre valeur confidentielle {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), votre ID de service et votre clé d'API. Il est temps maintenant d'utiliser ces valeurs pour effectuer la procédure suivante :
-
-1. Dérivez votre URI de redirection en fonction du traitement de votre élément `dashboard_url`, accédez à nouveau à la console de gestion des ressources et ajoutez-le dans l'onglet IAM en vous assurant d'avoir mis à jour votre ID client.
-2. Développez le flux OAuth pour l'authentification. Vous allez utiliser vos URI de redirection, votre ID client et votre valeur confidentielle du client en tant que paramètres des API Rest IAM `token_endpoint` pour finaliser ce flux.
-3. Validez l'autorisation utilisateur :
-   1. Communiquez avec IAM afin d'obtenir un jeton d'accès à partir de votre clé d'API.
-   2. Validez l'autorisation concernant le tableau de bord de service en utilisant l'élément `authorization_endpoint` pour l'utilisateur (/v2/authz POST).
-
-Cette étape suppose que vous disposez de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.html).
-{: tip}
+Une fois que vous avez défini votre offre, la page Access Manage de la console de gestion des ressources inclut votre ID client et votre valeur confidentielle {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), votre ID service et votre clé d'API. Vous êtes maintenant prêt à utiliser ces valeurs pour développer un flux d'authentification.
+{:shortdesc}
 
 ## Avant de commencer
+{: #pre-reqs}
 
-Vérifiez que vous avez commencé l'étape 1 et avez terminé les étapes 2 et 3 :
-1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
-3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
+Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party/index.html) et de disposer de l'approbation permettant de fournir un service de facturation intégrée.
 
+## Dérivation de votre URI de redirection IAM
+{: #redirect-uri}
 
-## Dérivez votre URI de redirection IAM (console de gestion des ressources : page IAM)
+Lorsque vous définissez votre service dans la console de gestion des ressources, vous générez un ID client mais il est fort probable que vous ne disposiez pas d'un URI de redirection à ce moment là. Un ID client ayant la valeur false est créé par IAM. Tant que vous n'accédez pas à la console de gestion des ressources avec votre URI de redirection, l'ID client n'a pas la valeur true.
 
-Lorsque vous avez défini votre service dans la console de gestion des ressources, vous avez généré un ID client mais il est fort probable que vous ne disposiez pas d'un URI de redirection à ce moment là. Autrement dit, IAM a créé un ID client ayant la valeur false. Tant que vous n'accédez pas à la console de gestion des ressources avec votre URI de redirection, l'ID client n'a pas la valeur true.
+Lors de l'étape de développement précédente, vous avez développé un courtier OSB et l'avez hébergé (vous avez sans doute vu des valeurs IAM dans le code de courtier exemple). L'élément `redirect_uri` est généralement l'URL de l'hôte où se trouve l'application avec une URL supplémentaire qui peut traiter l'authentification/l'autorisation.
 
-Lors de l'étape de développement précédente, vous avez développé un courtier OSB et l'avez hébergé (vous avez sans doute vu des valeurs IAM dans le code de courtier exemple). L'élément `redirect_uri` est généralement l'URL de l'hôte dans laquelle se trouve l'application avec une URL supplémentaire qui traite l'authentification/l'autorisation.
-
- Voici quelques exemples d'URI de redirection
+ Les exemples suivants présentent les URI de redirection :
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
@@ -52,13 +43,13 @@ http://localhost:3000/auth/callback <-- for testing locally
 
 Accédez à nouveau à la console de gestion des ressources et ajoutez votre URI de redirection à l'onglet IAM :
 
-1. Connectez-vous à la console
-2. Notez votre URI de redirection
-3. Accédez à nouveau à la console de gestion des ressources
+1. Connectez-vous à la console.
+2. Notez votre URI de redirection.
+3. Accédez à nouveau à la console de gestion des ressources.
 4. Dans l'onglet **IAM**, collez votre URI de redirection dans la zone **Redirect URI**.
 5. Cliquez sur **Update Client ID** pour mettre à jour votre ID client.
 
-Vous devez maintenant avoir un ID client qui prend en compte votre URI de redirection et qui a la valeur true. Vous pouvez utiliser cet ID client dans la procédure suivante pour développer votre flux OAuth.
+Vous disposez désormais d'un ID client qui prend en compte votre URI de redirection et qui a la valeur true. Vous pouvez utiliser cet ID client dans la procédure suivante pour développer votre flux OAuth.
 
 ## Développez votre flux OAuth pour authentification
 {: #oauth}
@@ -82,7 +73,7 @@ Content-Type: application/json
 }
 ```
 
-Cette demande peut être effectuée une fois lorsque l'application est démarrée et une nouvelle fois en cas de défaillance d'`authorization_endpoint`. Vous devez pouvoir mettre en cache la valeur `authorization_endpoint` pendant une courte période et effectuer l'actualisation après l'expiration du cache ou une erreur est générée.
+Cette demande peut être effectuée une fois lorsque l'application est démarrée et une nouvelle fois en cas de défaillance d'`authorization_endpoint`. Vous pouvez désormais mettre en cache la valeur `authorization_endpoint` pendant une courte période et effectuer l'actualisation après l'expiration du cache ou une erreur est générée.
 
 
 **Authentification - Etape 1 :** Lorsqu'un utilisateur accède à votre adresse `dashboard_url`, redirigez-le vers `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
@@ -113,7 +104,7 @@ Cette demande peut être effectuée une fois lorsque l'application est démarré
   - client_secret=*[client secret]*
   - grant_type=authorization_code
   - response_type=cloud_iam
-  - redirect_uri=*[same uri as redirect_uri from step 1]*
+  - redirect_uri=*[same URI as redirect_uri from step 1]*
   - code=*[code from callback]*
 
 ```
@@ -145,17 +136,17 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-  Assurez-vous de stocker le jeton d'accès (access_token) de l'utilisateur renvoyé dans cette réponse car il sera utilisé lors de l'autorisation utilisateur suivante.
+  Assurez-vous de conserver le jeton d'accès (access_token) de l'utilisateur renvoyé dans cette réponse car il est utilisé lors de l'autorisation utilisateur suivante.
 
 Consultez l'exemple souhaité sur la page suivante : https://github.com/IBM/sample-resource-service-brokers
 
 ## Il est temps maintenant de valider l'autorisation utilisateur
 {: #validate}
 
-1. Communiquez avec IAM afin d'obtenir un jeton d'accès pour une clé d'API
-2. Validez l'autorisation concernant l'instance de service pour l'utilisateur (/v2/authz POST)
+1. Communiquez avec IAM pour obtenir un jeton d'accès pour une clé d'API.
+2. Validez l'autorisation concernant l'instance de service pour l'utilisateur (/v2/authz POST).
 
-### Autorisation - Etape 1 : Obtention d'un jeton IAM {{site.data.keyword.Bluemix_notm}} en utilisant une clé d'API.
+### Autorisation - Etape 1 : Obtention d'un jeton {{site.data.keyword.Bluemix_notm}} IAM en utilisant une clé d'API.
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
@@ -204,11 +195,11 @@ curl -k -X POST \
 
 ### Autorisation - Etape 2 : Validez l'autorisation concernant l'instance de service pour l'utilisateur (/v2/authz POST)
 
-Maintenant que nous avons authentifié l'utilisateur et que nous disposons de notre propre jeton d'accès, nous devons valider le fait que l'utilisateur peut accéder au tableau de bord de service. Nous allons tout d'abord avoir besoin d'informations incluses dans le jeton d'accès de l'utilisateur que nous allons décoder lors de l'étape 2.1. Nous allons ensuite utiliser ces informations pour appeler IAM afin de vérifier si l'utilisateur est autorisé à accéder au tableau de bord à l'étape 2.2.
+Maintenant que vous avez authentifié l'utilisateur et que vous disposez de votre propre jeton d'accès, vous devez faire en sorte que l'utilisateur puisse accéder au tableau de bord de services. Vous allez tout d'abord avoir besoin d'informations incluses dans le jeton d'accès de l'utilisateur que vous décodez à l'étape 2.1. Vous allez ensuite utiliser ces informations pour appeler IAM afin de vérifier si l'utilisateur est autorisé à accéder au tableau de bord à l'étape 2.2.
 
-**Etape 2.1** : Décodez le jeton d'accès de l'utilisateur (renvoyé lors de l'étape `**Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès`.)
-   Il s'agit d'un jeton JWT pouvant être décodé en utilisant toute bibliothèque compatible JWT. Par exemple, voir la bibliothèque incluse dans notre [code de courtier exemple](https://github.com/IBM/sample-resource-service-brokers).
-   Une fois que le jeton est décodé, le format s'affiche, comme présenté ci-dessous. Nous devons extraire les zones `iam_id` et `scope` qui seront utilisées dans l'étape suivante :
+**Etape 2.1** : Décodez le jeton d'accès de l'utilisateur (renvoyé lors de l'étape `**Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès` trouvé dans la section précédente.)
+   Le jeton d'accès est un jeton JWT pouvant être décodé en utilisant une bibliothèque compatible JWT. Par exemple, voir la bibliothèque incluse dans notre [code de courtier exemple](https://github.com/IBM/sample-resource-service-brokers).
+   Une fois que le jeton est décodé, son format est similaire à l'exemple présenté dans la section suivante. Vous extrayez les zones `iam_id` et `scope`, qui sont utilisées lors de l'étape suivante :
 
 ```
 {
@@ -265,16 +256,16 @@ curl -X POST \
 
 Consultez l'exemple souhaité sur la page suivante : https://github.com/IBM/sample-resource-service-brokers
 
-## Portée des jetons {{site.data.keyword.Bluemix_notm}} Identity and Access Management pour les utilisateurs tiers
+## Portée de jeton IAM pour les utilisateurs tiers
 {: #token_scoping}
 
-Les jetons d'accès utilisateur créés avec votre ID client peuvent uniquement être utilisés pour accéder à vos API de service. L'accès sera refusé pour les demandes effectuées auprès d'autres API de cloud utilisant ce jeton même si la règle appropriée est configurée pour l'utilisateur.
+Les jetons d'accès utilisateur créés avec votre ID client peuvent être utilisés uniquement pour accéder à vos API de service. L'accès sera refusé pour les demandes effectuées auprès d'autres API de cloud utilisant ce jeton même si la règle appropriée est configurée pour l'utilisateur.
 
-Lors de l'intégration de tiers, la portée de jeton est utilisée afin de vérifier que les jetons disposent de la portée d'accès minimale pour atteindre les objectifs de l'utilisateur. Pour faciliter cela, les jetons IAM disposent d'un accès en fonction de l'ID client ayant créé le jeton. Cela signifie que si un jeton IAM a été créé par un service tiers, un utilisateur final ne pourra pas exécuter certaines API et fonctions même si une règle appropriée est configurée pour l'utilisateur.
+Lors de l'intégration de tiers, la portée de jeton est utilisée afin de vérifier que les jetons disposent de la portée d'accès minimale requise pour atteindre les objectifs de l'utilisateur. Pour faciliter cela, l'accès aux jetons d'accès IAM dépend de l'ID client ayant créé le jeton. Si un jeton IAM a été créé par un service tiers, un utilisateur final ne peut pas exécuter certaines API et fonctions même si une règle appropriée est configurée pour l'utilisateur.
 
 L'impact sur les autorisations (tous les appels de `https://iam.bluemix.net/v2/authz`) est le suivant : il est nécessaire de transmettre des informations de `portée` dans le sujet. Ces informations se trouvent dans un jeton IAM (code base64) dans la demande de `portée`.
 
-Voici un exemple d'ajout dans l'appel d'autorisation :
+La section suivante présente un exemple d'ajout dans l'appel d'autorisation :
 ```
   [
    {  Headers
@@ -306,5 +297,6 @@ Voici un exemple d'ajout dans l'appel d'autorisation :
 S'applique à toutes les utilisations (`utilisateur, ID de service, nom de ressource de cloud`) et tous les éléments `subject.attributes` ont besoin d'une portée.
 
 ## Etapes suivantes
+{: #next-steps}
 
 Il est temps maintenant de rassembler tous les éléments ! Accédez à nouveau à la console de gestion des ressources pour publier votre service en mode de visibilité limitée et valider votre offre dans le catalogue. Voir [Publication et test de votre service](/docs/third-party/cis4-rmc-publish.html).

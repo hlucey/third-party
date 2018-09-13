@@ -25,7 +25,7 @@ Cette étape suppose que vous disposez de l'approbation permettant de fournir un
 
 ## Avant de commencer
 
-Vérifiez que vous commencé l'étape 1 et avez terminé les étapes 2, 3, 4 et 5 :
+Vérifiez que vous commencé à l'étape 1 et avez terminé les étapes 2, 3, 4 et 5 :
 1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
 3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
@@ -36,7 +36,7 @@ Vérifiez que vous commencé l'étape 1 et avez terminé les étapes 2, 3, 4 et 
 ## Enregistrement de votre démonstration
 
 1. Contactez votre interlocuteur IBM afin de connaître les exigences ainsi que les points sur lesquels vous devez mettre l'accent.
-1. Sélectionnez le logiciel d'enregistrement de votre choix (Quicktime sur macOS et Windows Media Palyer sur Windows incluent des options d'enregistrement audio et vidéo gratuites).
+1. Sélectionnez le logiciel d'enregistrement de votre choix (Quicktime sur macOS et Windows Media Player sur Windows incluent des options d'enregistrement audio et vidéo gratuites).
 2. Connectez-vous à {{site.data.keyword.Bluemix_notm}} et commencez l'enregistrement.
 
 ## Envoi de votre démonstration à IBM

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -22,7 +22,7 @@ Les services de facturation intégrée sont différents des services de référe
 
 ## Couche de mise à disposition {{site.data.keyword.Bluemix_notm}}
 
-La couche de mise à disposition gère le cycle de vie des ressources {{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition a la charge du contrôle et du suivi du cycle de vie des ressources dans un compte client. Les *ressources* sont des composants physiques et logiques pouvant être mis à disposition ou réservés pour une application ou une instance de service. Exemples de ressources : base de données,  comptes, limites de processeur, de mémoire ou de stockage. En général, les ressources suivies par la couche de mise à disposition sont conçues pour avoir une facturation et des mesures d'utilisation associées mais ce n'est pas toujours le cas. Dans la plupart des cas, les ressources peuvent être associées à la couche de mise à disposition afin de garantir que le cycle de vie des ressources peut être géré en même temps que le cycle de vie des comptes.
+La couche de mise à disposition gère le cycle de vie des ressources {{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition a la charge du contrôle et du suivi du cycle de vie des ressources dans un compte client. Les *ressources* sont des composants physiques et logiques pouvant être mis à disposition ou réservés pour une application ou une instance de service. Exemples de ressources : base de données, comptes, limites de processeur, de mémoire ou de stockage. En général, les ressources suivies par la couche de mise à disposition sont conçues de telle sorte que la facturation et les mesures d'utilisation soient associées mais ce n'est pas toujours le cas. Dans la plupart des cas, les ressources peuvent être associées à la couche de mise à disposition afin de garantir que le cycle de vie des ressources peut être géré en même temps que le cycle de vie des comptes.
 
 ### Gestion du cycle de vie des ressources
 
@@ -38,15 +38,15 @@ La couche de mise à disposition fournit des API vous permettant de gérer les �
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 
-Identity Access Management (IAM) vous permet d'authentifier de manière sécurisée et de contrôler de façon cohérente l'accès à toutes les ressources d'{{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition d'{{site.data.keyword.Bluemix_notm}} utilise IAM pour l'authentification et l'autorisation des actions effectuées dans la couche de mise à disposition. Les fournisseurs d'offre tiers utilisent IAM pour créer un flux d'authentification (OAuth). Pour plus de détails, voir [Qu'est-ce qu'IAM ?](/docs/iam/index.html#iamoverview)?
+Identity Access Management (IAM) vous permet d'authentifier de manière sécurisée et de contrôler de façon cohérente l'accès à toutes les ressources d'{{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition d'{{site.data.keyword.Bluemix_notm}} a adopté IAM pour l'authentification et l'autorisation des actions effectuées dans la couche de mise à disposition. Les fournisseurs d'offre tiers utilisent IAM pour créer un flux d'authentification (OAuth). Pour plus d'informations, voir [Qu'est-ce qu'IAM ](/docs/iam/index.html#iamoverview)?
 
 Si votre offre utilise des bibliothèques OpenID Connect (OIDC), IAM prend en charge l'intégration d'OIDC. OIDC est une couche d'authentification qui complète OAuth 2.0, structure d'autorisation, et qui peut permettre de simplifier le processus d'intégration. Pour plus d'informations sur OIDC, voir [Open ID Connect](http://openid.net/connect/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Catalogue {{site.data.keyword.Bluemix_notm}}
 
-Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre (description, fonctions, images, URL, etc.) des ressources affichées dans la console {{site.data.keyword.Bluemix_notm}}. La console de gestion des ressources permet de définir tous les aspects des métadonnées requises de votre service. Ces métadonnées sont publiées dans le catalogue et utilisées pour affichage dans le catalogue. Des informations détaillées sur les zones de métadonnées requises et facultatives sont disponibles sur les pages **Offering** et **Plan** de la console de gestion des ressources. Cependant, les éléments principaux sont décrits ci-dessous pour une meilleure compréhension.
+Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre (description, fonctions, images, URL, etc.) des ressources affichées dans la console {{site.data.keyword.Bluemix_notm}}. La console de gestion des ressources permet de définir tous les aspects des métadonnées requises de votre service. Ces métadonnées sont publiées dans le catalogue et utilisées pour affichage dans le catalogue. Des informations détaillées sur les zones de métadonnées requises et facultatives sont disponibles sur les pages **Offering** et **Plan** de la console de gestion des ressources. Les éléments principaux sont décrits ci-dessous pour une meilleure compréhension.
 
-   * Service Name : nom technique de votre service. Le nom de service est essentiel et doit être correctement défini. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le nom de service n'est pas votre nom affiché.
+   * Service Name : nom technique de votre service. Le nom de service est essentiel et doit être correctement défini. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le nom de service ne correspond pas au nom affiché. 
    * Service Display Name : nom intuitif de votre service. Par exemple, "Compose Redis"
    * Service ID : identificateur global unique de votre service utilisé dans les appels d'API de votre courtier OSB. Cette valeur doit être unique.
    * Service Icon : fichier SVG incluant votre logo de service
@@ -54,8 +54,8 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre 
    * Service Detailed Description : premier paragraphe qui s'affiche sur la page du catalogue. Pensez à utiliser au moins deux phrases pour une description détaillée.
    * Documentation URL : lien vers votre documentation {{site.data.keyword.Bluemix_notm}}. Vous deviendrez auteur dans PWB et votre valeur d'URL sera générée par PWB pour vous.
    * Terms URL: lien vers les dispositions de votre service. Pour des raisons liées au règlement RGPD, n'indiquez aucun lien vers les dispositions d'un service tiers. A la place, vous devez fournir une page unique pour un service de facturation intégrée.
-   * Instructions URL : élément similaire à l'URL de documentation. Votre documentation {{site.data.keyword.Bluemix_notm}} est désignée. Toutefois, l'URL Instructions place dynamiquement votre documentation dans un onglet Initiation du tableau de bord de votre service.
-   * Category : sélection des catégories {{site.data.keyword.Bluemix_notm}} disponibles où votre service doit être placé dans le catalogue.
+   * Instructions URL : élément similaire à l'URL de documentation. Votre documentation {{site.data.keyword.Bluemix_notm}} est désignée. Toutefois, l'URL Instructions place dynamiquement votre documentation dans un onglet Getting Started du tableau de bord de votre service.
+   * Category : sélection des catégories {{site.data.keyword.Bluemix_notm}} disponibles où se trouve votre service dans le catalogue.
    * Bullets : brèves descriptions de votre service
    * Media : captures d'écran et vidéos concernant votre service
    * Service Plan Name : chaque plan a un nom technique. Ce nom inclut des lettres en minuscules, aucun espace et peut inclure le caractère "-".  Par exemple, `gold`.
@@ -81,7 +81,7 @@ Tous les services de facturation intégrée proposant un plan mesuré doivent ut
 
 **Remarque :** vous devez automatiser la soumission d'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
 
-Pour plus d'informations sur la mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
+Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
 
 ## Scénario de mise à disposition : rassemblement de tous les éléments
 
@@ -93,10 +93,10 @@ Lorsqu'un utilisateur souhaite créer une instance de service, il peut procéder
 * **Via l'interface de ligne de commande** : Utilisation de la commande `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Via la console {{site.data.keyword.Bluemix_notm}}** : L'utilisateur peut sélectionner le service, le plan et utiliser l'opération **Créer**.
 
-La plateforme {{site.data.keyword.Bluemix_notm}} valide le fait que l'utilisateur dispose des droits lui permettant de créer l'instance de service en utilisant {{site.data.keyword.Bluemix_notm}} IAM. Une fois que cette validation a lieu, le noeud final de mise à disposition du courtier de services (PUT /v2/resource_instances/:resource_instance_id) est appelé. Lorsque la mise à disposition a lieu, les règles suivantes doivent être respectées :
+La plateforme {{site.data.keyword.Bluemix_notm}} valide le fait que l'utilisateur dispose des droits lui permettant de créer l'instance de service en utilisant {{site.data.keyword.Bluemix_notm}} IAM. Une fois que cette validation a lieu, le noeud final de mise à disposition du courtier de services (PUT /v2/resource_instances/:resource_instance_id) est démarré. Lorsque la mise à disposition a lieu, les règles suivantes doivent être respectées :
 * Le contexte {{site.data.keyword.Bluemix_notm}} doit être inclus dans la variable de contexte
-* L'élément `X-Broker-API-Originating-Identity` doit avoir l'ID IBM IAM à l'origine de la demande
-* La section des paramètres doit inclure l'emplacement demandé (et des paramètres supplémentaires requis par votre service).
+* L'élément `X-Broker-API-Originating-Identity` a l'ID IBM IAM de l'utilisateur à l'origine de la demande
+* La section des paramètres inclut l'emplacement demandé (et des paramètres supplémentaires requis par votre service).
 
 Exemple de demande de mise à disposition :
 

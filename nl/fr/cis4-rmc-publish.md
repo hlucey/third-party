@@ -16,33 +16,36 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Etape 5 : Publication et test de votre service
+# Etape 5. Publication et test de votre service
+{: #step5-pubtest}
 
-Maintenant que vos courtiers hébergés respectent la spécification OSB, vous pouvez accéder à nouveau à la console de gestion des ressources pour publier votre service dans le catalogue {{site.data.keyword.Bluemix_notm}}. Renseignez l'onglet **Deployments**, planifiez le déploiement de vos plans de service dans une ou plusieurs régions du catalogue {{site.data.keyword.Bluemix_notm}}, testez vos courtiers et pour finir, effectuez la publication dans le catalogue en mode de visibilité limitée. Une fois le déploiement effectué, testez votre offre afin de vous assurer qu'elle répond aux critères requis puis effectuez à nouveau le processus de publication, si nécessaire.
-
+Maintenant que vos courtiers hébergés respectent la spécification OSB, vous pouvez accéder à nouveau à la console de gestion des ressources pour publier votre service dans le catalogue {{site.data.keyword.Bluemix_notm}}. 
+{:shortdesc}
 
 ## Avant de commencer
+{: #pre-reqs}
 
 Pour cette procédure, vous devez disposer d'une approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.md).
 {: tip}
 
-Vérifiez que vous avez commencé l'étape 1 et avez terminé les étapes 2, 3 et 4 :
+Vérifiez que vous avez commencé à l'étape 1 et avez terminé les étapes 2, 3 et 4 :
 1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
 3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
 3. [Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
 
 ## Publication de votre service dans {{site.data.keyword.Bluemix_notm}}
+{: #publish}
 
-1. Dans la console de gestion des ressources, cliquez sur la page Deployments.
-2. Cliquez sur l'onglet **Brokers**, puis sur **Add broker**.
+1. Dans la console de gestion des ressources, cliquez sur la page **Deployments**.
+2. Cliquez sur l'onglet **Brokers** puis sur **Add broker**
 3. Cliquez sur **Manage** pour ouvrir la page Service Broker Configuration.
 4. Ajoutez votre courtier hébergé puis cliquez sur **Register broker**.
 5. Une fois l'enregistrement effectué, accédez à l'onglet **Catalog Deployments**.
 6. Cliquez sur **Add Deployment** puis sélectionnez le plan et le courtier à déployer.
-7. Sélectionnez la région et le centre de données où vous souhaitez déployer votre service, puis cliquez sur **Add**.
-8. Sur la page Deployments, consultez votre déploiement non publié, puis cliquez sur **Publish**.
-9. Sur la page Publish to the Catalog, consultez les détails de votre déploiement, puis cliquez sur **Publish**.
+7. Sélectionnez la région et le centre de données où vous souhaitez déployer votre service puis cliquez sur **Add**.
+8. Sur la page **Deployments**, consultez votre déploiement non publié puis cliquez sur **Publish**.
+9. Sur la page **Publish to the Catalog**, consultez les détails de votre déploiement puis cliquez sur **Publish**.
 
 La page Deployments doit être marquée comme complétée dans le navigateur, indiquant que les exigences minimales ont été respectées.
 
@@ -50,6 +53,7 @@ Vous êtes bloqué suite à un problème de déploiement ? Contactez votre inter
 {: tip}
 
 ## Test de votre offre déployée 
+{: #test}
 
 Etant donné que le déploiement a été effectué en mode de visibilité limitée, vous ne pouvez voir votre offre que dans le catalogue {{site.data.keyword.Bluemix_notm}} . A l'aide de la liste de contrôle ci-dessous, connectez-vous à {{site.data.keyword.Bluemix_notm}} et consultez les critères de test.
 
@@ -78,5 +82,6 @@ Si vos tests échouent, répétez les étapes précédentes pour publier et test
 
 
 ## Etapes suivantes
+{: #next-steps}
 
 Maintenant que vous disposez d'un service fonctionnel dans le catalogue, vous pouvez créer une démonstration et demander une approbation afin de pouvoir diffuser publiquement votre service. Voir : [Etape 6 : Diffusion publique de votre service](/docs/third-party/cis6-ga.html).

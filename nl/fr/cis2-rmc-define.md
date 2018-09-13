@@ -17,28 +17,19 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Etape 2. Définition de votre offre dans la console de gestion des ressources
+{: #step2-define}
 
-La console de gestion des ressources est un outil disponible sur le Web qui vous permet d'intégrer votre offre de tiers au catalogue {{site.data.keyword.Bluemix_notm}}.
-
-Maintenant que vous disposez d'une approbation vous permettant de mettre à disposition un service de facturation intégrée, vous êtes prêt à accéder à la console de gestion des ressources pour effectuer l'enregistrement, démarrer le développement de votre offre et proposer des plans de tarification :
-   1. Enregistrez votre service avec la console de gestion des ressources et validez la page Summary.
-   2. Entrez vos métadonnées de catalogue sur la page Offering.
-   3. Enregistrez votre offre avec {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). L'enregistrement génère des données d'identification de client et de service utilisées pour l'authentification de votre service.
-   4. Complétez la page Pricing, en vous assurant que votre offre de service d'{{site.data.keyword.Bluemix_notm}} propose les plans de tarification adaptés aux clients. Les plans définis incluent des données de mesure fournissant des détails d'utilisation importants.
-   5. Exportez vos métadonnées d'offre au format JSON.
-
+La console de gestion des ressources est un outil qui vous permet d'intégrer votre offre tierce au catalogue {{site.data.keyword.Bluemix_notm}}.
+Maintenant que vous êtes autorisé à mettre à disposition un service de facturation, vous êtes prêt à utiliser la console de gestion des ressources pour enregistrer votre service, commencer le développement et définir vos plans de tarification. Cette console est un outil disponible sur le Web qui vous permet de mettre à disposition votre service de facturation dans le catalogue {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 ## Avant de commencer
-
-Pour cette procédure, vous devez disposer d'une approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.html).
-{: tip}
+{: #pre-reqs}
 
 1. Vérifiez que avez commencé la tâche suivante : [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Vérifiez que vous êtes enregistré auprès d'{{site.data.keyword.Bluemix_notm}}. Dans le cas contraire, [inscrivez-vous](https://console.bluemix.net/registration) avant de continuer.
 3. Vérifiez que vous vous trouvez dans le compte correct avant de commencer à utiliser la console de gestion des ressources.
-4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}.
-
-   Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}.
+4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
   Lorsque vous enregistrez votre offre avec la console de gestion des ressources, votre nom de service {{site.data.keyword.Bluemix_notm}} doit être prêt. Le nom de service ne correspond pas au nom affiché. Il doit respecter les règles suivantes :
    - Le nom doit être entièrement en minuscule
@@ -48,6 +39,7 @@ Pour cette procédure, vous devez disposer d'une approbation permettant de fourn
    Votre nom de service doit inclure le nom de votre entreprise. Si votre entreprise a plus d'une offre, il doit inclure à la fois l'entreprise et l'offre. Par exemple, l'entreprise Compose a des offres pour Redis et Elasticsearch. {{site.data.keyword.Bluemix_notm}} peut alors inclure les noms de service suivants pour ces offres : `compose-redis` et `compose-elasticsearch`. Ces deux noms de service ont des noms associés visibles dans le catalogue {{site.data.keyword.Bluemix_notm}} : *Compose Redis* et *Compose Elasticsearch*. Une autre entreprise (FastJetMail, par exemple) peut avoir la seule offre JetMail. Dans ce cas, le nom de service sera `fastjetmail`.
 
 ## Enregistrement de votre offre
+{: #register}
 
 Pour commencer, connectez-vous et enregistrez votre offre.
 
@@ -63,6 +55,7 @@ Vous pouvez enregistrer votre progression dans la console de gestion des ressour
 {: tip}
 
 ## Saisie de vos métadonnées d'offre
+{: #offering-metadata}
 
 Sur la page **Offering**, indiquez les valeurs de métadonnées stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. De plus, certaines de ces valeurs doivent être exportées et stockées dans votre courtier de services où elles sont utilisées pour la mise à disposition et renvoyées comme partie de la réponse `catalog (GET)`. Ces valeurs permettent d'accélérer le développement d'un courtier de services dans une procédure ultérieure.
 
@@ -77,6 +70,7 @@ Votre lettre d'offre initiale inclut une URL de documentation de service génér
 {: tip}
 
 ## Enregistrement avec IAM
+{: #reg-iam}
 
 IAM est requis pour tous les services intégrés à {{site.data.keyword.Bluemix_notm}}. Voir [Qu'est-ce qu'IAM ?](/docs/iam/index.html#what-is-cloud-iam-) pour en savoir plus sur les exigences et les concepts IAM.
 
@@ -99,6 +93,7 @@ Une clé d'API vous est octroyée lorsque vous **activez IAM**. Il est primordia
 {: tip}
 
 ## Développement d'un plan de tarification
+{: #pricing-plan}
 
 Lorsque vous intégrez votre service dans {{site.data.keyword.Bluemix_notm}}, vous devez définir un plan de planification. Si vous savez de manière précise comment vous souhaitez facturer les utilisateurs pour votre service, vous pouvez indiquer ces informations dans votre plan. Toutefois, si vous ne vous êtes pas encore décidé pour un plan payant, vous pouvez commencer par activer un plan gratuit puis configurer ultérieurement un plan payant.
 
@@ -113,6 +108,7 @@ Les fournisseurs de services doivent automatiser la soumission d'utilisation hor
 {: tip}
 
 ## Exportation de vos métadonnées au format JSON
+{: #export-metadata}
 
 Maintenant que vous avez défini votre service dans la console de gestion des ressources, vous pouvez télécharger un fichier catalog.json et l'utiliser pour signaler le développement de votre courtier OSB. Le fichier catalog.json contient des métadonnées devant être hébergées dans votre courtier. Ces valeurs définissent le contrat entre le courtier et la plateforme {{site.data.keyword.Bluemix_notm}} pour les services et les plans pris en charge par votre courtier. Toutes les métadonnées de catalogue supplémentaires qui ne sont pas requises pour la mise à disposition sont stockées dans le catalogue {{site.data.keyword.Bluemix_notm}} et les mises à jour apportées à ce dernier affichent les valeurs utilisées pour le tableau de bord, telles que des liens et des icônes. De plus, les métadonnées traduites pour l'internationalisation doivent être mises à jour dans la console de gestion des ressources et non hébergées dans le courtier. Aucune des métadonnées stockées dans votre courtier ne s'affiche dans la console {{site.data.keyword.Bluemix_notm}} ou dans l'interface CLI {{site.data.keyword.Bluemix_notm}}. La console et l'interface CLI affichent les éléments définis dans la console de gestion des ressources et stockés dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
@@ -123,5 +119,6 @@ Maintenant que vous avez défini votre service dans la console de gestion des re
 Sauvegardez votre fichier `catalog.json`. Vous allez l'utiliser pour développer votre courtier OSB (Open Service Broker) dans la section suivante.
 
 ## Etapes suivantes
+{: #next-steps}
 
 Vous avez défini votre offre de service en ajoutant des métadonnées d'affichage de catalogue, en effectuant l'enregistrement avec IAM et en créant un ou plusieurs plans de tarification. Vous pouvez ensuite utiliser votre fichier JSON exporté et commencer à développer un courtier de services. Voir [Etape 3 : Développement et hébergement des courtiers de services](/docs/third-party/cis3-broker.html).

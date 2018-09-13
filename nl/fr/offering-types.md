@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -31,9 +31,9 @@ Le tableau suivant compare de manière détaillée les différentes types d'offr
 
 |  | Service de facturation intégrée  | Service de référence |
 |---|---|---|
-| **Intégration** | L'intégration est gérée via le tableau de bord PWB (Provider Workbench) et la console de gestion des ressources. Le fournisseur de l'offre est chargé de développer un courtier OSB, de l'héberger et de le tester ainsi que de publier son offre. Pour cela, il suit plusieurs procédures en libre service. | L'intégration est gérée via le tableau de bord PWB. Le processus d'intégration en libre-service dure environ deux semaines. |
+| **Intégration** | L'intégration est gérée via IBM Provider Workbench et la console de gestion des ressources. Le fournisseur de l'offre est chargé de développer un courtier OSB, de l'héberger et de le tester ainsi que de publier son offre. Pour cela, il suit plusieurs procédures en libre service. | L'intégration est gérée via le tableau de bord PWB. Le processus d'intégration en libre-service dure environ deux semaines. |
 | **Déploiement** | Le déploiement est effectué dans la plateforme {{site.data.keyword.Bluemix_notm}} | Services reposant sur une API uniquement |
-| **Facturation**  |  Dans le modèle de facturation intégrée, l'utilisateur reçoit une seule facture pour l'offre IBM et l'offre de tiers intégrée. | Dans le modèle de référence, le fournisseur facture l'utilisateur et conserve l'intégralité des recettes.  |
+| **Facturation**  |  Dans le modèle de facturation intégrée, l'utilisateur reçoit une seule facture pour l'offre IBM et l'offre de tiers intégrée. | Dans le modèle de référence, les fournisseurs facturent l'utilisateur et conservent l'intégralité des recettes.  |
 | **Exemple** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [API Accern](https://console.bluemix.net/catalog/services/accern-api) |
 {: caption="Tableau 1. Comparaison des différents types d'offre de tiers" caption-side="top"}
 

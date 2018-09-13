@@ -19,7 +19,7 @@ lastupdated: "2018-07-20"
 # Présentation : Développement d'un service de facturation intégrée
 {: #overview}
 
-Cette rubrique présente la procédure permettant de développer et de publier votre service de facturation intégrée tiers dans {{site.data.keyword.Bluemix}}.
+Cette rubrique présente la procédure permettant de développer et de publier votre service de facturation intégrée tiers dans {{site.data.keyword.Bluemix}}. 
 {:shortdesc}
 
 Une fois que vous êtes autorisé à mettre à disposition votre offre dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous allez commencer à la développer dans la console de gestion des ressources (interface utilisateur vous guidant lors de différents processus). Vous concevez vos métadonnées de catalogue, configurez les plans de facturation de service et intégrez ces données dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
@@ -32,15 +32,15 @@ Ensuite, en dehors de la console de gestion des ressources, vous effectuez le d�
 
 Pour mettre à disposition un service de facturation intégrée, utilisez Provider Workbench, la console de gestion des ressources et l'environnement de développement de votre choix. Consultez la [liste de contrôle](/docs/third-party/checklist.html#checklist) pour le suivi de ces procédures.
 
+Pour cette procédure, vous devez disposer de l'approbation vous permettant de fournir un service de facturation intégrée. Si vous n'avez pas encore effectué le processus d'enregistrement et d'approbation initial dans PWB, consultez la rubrique relative à la [publication de votre offre tierce dans {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md).
+{: tip}
+
 1. [Création de votre documentation et de vos annonces marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Définition de votre offre dans la console de gestion des ressources{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
 3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
 4. [Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
 5. [Test de votre service](/docs/third-party/cis4-rmc-publish.html).
 6. [Diffusion publique de votre service](/docs/third-party/cis6-ga.html).
-
-Pour cette procédure, vous devez disposer de l'approbation vous permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.md).
-{: tip}
 
 ## Support
 {: #support}
