@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ Verwenden Sie Provider Workbench, um Ihren Angebotstyp als integrierten Abrechnu
 ## Schritt 3. Eigene Angebotsdetails definieren
 {: #step3}
 
-Nach Auswahl des Angebotstyps **Integrierter Abrechnungsservice** und Übergabe des Formulars für die Bereitschaftsbewertung wird die Seite mit einem Abschnitt zum Definieren des Inhalts aktualisiert, der auf der Katalogdetailseite in der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt werden soll. Füllen Sie die einzelnen Felder aus und übergeben Sie das Formular zur Überprüfung. Die Durchführung des Prüfprozesses kann einige Tage in Anspruch nehmen.
+Nach Auswahl des Angebotstyps **Integrierter Abrechnungsservice** und Übergabe des Formulars für die Bereitschaftsbewertung wird die Seite mit einem Abschnitt zum Definieren des Inhalts aktualisiert. Er wird auf der Katalogdetailseite in der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt. Füllen Sie die einzelnen Felder aus und übergeben Sie das Formular zur Überprüfung. Die Durchführung des Prüfprozesses kann einige Tage in Anspruch nehmen.
 
 ## Nächste Schritte
 {: #next-steps}
@@ -55,6 +55,6 @@ Nachdem Sie die Genehmigung erhalten haben, empfangen Sie eine E-Mail, in der di
   Die E-Mail enthält den Link für die Adresse, unter der die einführende Dokumentation veröffentlicht wird. Speichern Sie die URL, da diese zum Arbeiten in der Konsole für das Ressourcenmanagement benötigt wird. 
   {: tip}
 
-* In der Konsole für das Ressourcenmanagement integrieren Sie Ihr Angebot in {{site.data.keyword.Bluemix_notm}}, indem Sie Ihr Angebot definieren, Preisstrukturpläne erstellen, die Sicherheit aktivieren und die Bereitstellung Ihres Angebots in unterschiedlichen {{site.data.keyword.Bluemix_notm}}-Umgebungen verwalten. 
+* In der Konsole für das Ressourcenmanagement müssen Sie Ihr Angebot in {{site.data.keyword.Bluemix_notm}} integrieren, indem Sie Ihr Angebot definieren, Preisstrukturpläne erstellen, die Sicherheit aktivieren und die Bereitstellung Ihres Angebots in unterschiedlichen {{site.data.keyword.Bluemix_notm}}-Umgebungen verwalten. 
 
 Weitere Einzelheiten hierzu finden Sie in [Integrierten Abrechnungsservice entwickeln und veröffentlichen](/docs/third-party/integrated-billing-service.html).

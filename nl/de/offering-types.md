@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-01"
+lastupdated: "2018-07-20"
 
 
 ---
@@ -29,9 +29,9 @@ Wenn Sie Ihr Drittanbieterangebot als Empfehlungsservice bereitstellen, dann wer
 
 Die folgende Tabelle enthält eine detaillierte Gegenüberstellung der verschiedenen Typen von Drittanbieterangeboten.
 
-|  | Integrierter Abrechnungsservice| Empfehlungsservice|
+|  | Integrierter Abrechnungsservice  | Empfehlungsservice |
 |---|---|---|
-| **Onboarding** | Das Onboarding wird über Provider Workbench (PWB) und die Konsole für das Ressourcenmanagement durchgeführt. Der Angebotsprovider ist für die Entwicklung eines Open Service Broker (OSB), das Hosten und Testen dieses OSB und die Veröffentlichung des Angebots über eine Reihe von Self-Service-Arbeitsschritten verantwortlich. | Das Onboarding wird über Provider Workbench durchgeführt. Der Self-Service-Prozess für das Onboarding nimmt ca. zwei Wochen in Anspruch. |
+| **Onboarding** | Das Onboarding wird über IBM Provider Workbench und die Konsole für das Ressourcenmanagement durchgeführt. Der Angebotsprovider ist für die Entwicklung eines Open Service Broker (OSB), das Hosten und Testen dieses OSB und die Veröffentlichung des Angebots über eine Reihe von Self-Service-Arbeitsschritten verantwortlich. | Das Onboarding wird über Provider Workbench durchgeführt. Der Self-Service-Prozess für das Onboarding nimmt ca. zwei Wochen in Anspruch. |
 | **Bereitstellung** | Bereitstellung durch die {{site.data.keyword.Bluemix_notm}}-Plattform. | Nur für API-basierte Services |
 | **Abrechnung**  | Im Modell für die integrierte Abrechnung empfängt der Benutzer eine einzige Rechnung, die sowohl für das IBM Angebot als auch das integrierte Drittanbieterangebot gilt. | Im Empfehlungsmodell erhalten Benutzer eine Rechnung des Providers, der 100 % der Einnahmen einbehält. |
 | **Beispiel** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [Accern-API](https://console.bluemix.net/catalog/services/accern-api) |

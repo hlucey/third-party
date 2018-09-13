@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -17,33 +17,24 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Schritt 4. Authentifizierungsablauf entwickeln
+{: #step4-iam}
 
-Beim Definieren Ihres Angebots haben Sie in der Ressourcenmanagementkonsole auf der Seite für das Zugriffsmanagement eine Client-ID und einen geheimen Schlüssel für {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), Ihre Service-ID und Ihren API-Schlüssel erhalten. Nun sollen diese Werte verwendet werden, um die folgenden Schritte auszuführen:
-
-1. Ableiten Ihres Weiterleitungs-URI auf Basis der Verarbeitung des Werts für `dashboard_url`, Zurückkehren zur Konsole für das Ressourcenmanagement und Hinzufügen des Werts zur Registerkarte für IAM sowie Sicherstellen der Aktualisierung Ihrer Client-ID.
-2. Entwickeln des OAuth-Ablaufs für die Authentifizierung. Sie werden die Weiterleitungs-URIs, die Client-ID und den geheimen Clientschlüssel als Parameter für die IAM-REST-APIs `token_endpoint` verwenden, um diesen Ablauf auszuführen.
-3. Validieren der Benutzerberechtigung:
-   1. Kommunizieren mit IAM zum Anfordern eines Zugriffstokens über den API-Schlüssel.
-   2. Validieren der Berechtigung des Benutzers für das Service-Dashboard mithilfe von `authorization_endpoint` (/v2/authz POST).
-
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in der Provider-Workbench noch nicht durchgeführt haben, sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.html) vertraut machen.
-{: tip}
+Beim Definieren Ihres Angebots haben Sie in der Konsole für das Ressourcenmanagement auf der Seite für das Zugriffsmanagement eine Client-ID und einen geheimen Schlüssel für {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM), Ihre Service-ID und Ihren API-Schlüssel erhalten. Nun sind Sie bereit, um mit diesen Werten einen Authentifizierungsablauf zu entwickeln.
+{:shortdesc}
 
 ## Vorbereitende Schritte
+{: #pre-reqs}
 
-Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2 und 3 abgeschlossen haben.
-1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
-2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
-3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
+Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-party/index.html) durchgearbeitet haben und über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen.
 
+## IAM-Weiterleitungs-URI ableiten
+{: #redirect-uri}
 
-## IAM-Weiterleitungs-URI (Konsole für das Ressourcenmanagement: Seite für IAM) ableiten
-
-Wenn Sie Ihren Service in der Konsole für das Ressourcenmanagement definiert haben, dann wurde eine Client-ID generiert. Hierbei ist zu beachten, dass zu diesem Zeitpunkt mit hoher Wahrscheinlichkeit kein Weiterleitungs-URI zur Verfügung steht. Dies bedeutet, dass IAM eine Client-ID erstellt hat, für die der Wert 'false' festgelegt wurde. Erst nachdem Sie mit dem Weiterleitungs-URI zur Konsole für das Ressourcenmanagement zurückgekehrt sind, verfügen Sie über eine gültige Client-ID.
+Wenn Sie Ihren Service in der Konsole für das Ressourcenmanagement definieren, dann wird eine Client-ID generiert. Hierbei ist zu beachten, dass zu diesem Zeitpunkt mit hoher Wahrscheinlichkeit kein Weiterleitungs-URI zur Verfügung steht. IAM erstellt eine Client-ID, für die der Wert 'false' festgelegt wurde. Erst nachdem Sie mit dem Weiterleitungs-URI zur Konsole für das Ressourcenmanagement zurückgekehrt sind, verfügen Sie über eine gültige Client-ID.
 
 Im vorherigen Entwicklungsschritt haben Sie einen OSB (Open Service Broker) entwickelt und gehostet. (Sie haben vermutlich IAM-Werte im Beispielcode des Brokers erkannt.) Die Weiterleitungs-URI (`redirect_uri`) stellt normalerweise die Host-URL dar, unter der die App mit einer zusätzlichen URL gespeichert ist, die zur Authentifizierung und Berechtigung verwendet wird.
 
- Im Folgenden sind Beispiele für Weiterleitungs-URIs aufgeführt
+ In den folgenden Beispielen werden Weiterleitungs-URIs dargestellt:
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
@@ -102,7 +93,7 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 #### Header:
 {: #headers1}
 
-  - Authorization: Basic *[client id]: [client secret]*
+  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -113,7 +104,7 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
   - client_secret=*[client secret]*
   - grant_type=authorization_code
   - response_type=cloud_iam
-  - redirect_uri=*[same uri as redirect_uri from step 1]*
+  - redirect_uri=*[same URI as redirect_uri from step 1]*
   - code=*[code from callback]*
 
 ```
@@ -152,8 +143,8 @@ Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.
 ## Benutzerberechtigung validieren
 {: #validate}
 
-1. Kommunizieren mit IAM zum Anfordern eines Zugriffstokens für einen API-Schlüssel.
-2. Berechtigung des Benutzers für die Serviceinstanz validieren (/v2/authz POST)
+1. Mit IAM kommunizieren, um ein Zugriffstoken für einen API-Schlüssel anzufordern.
+2. Berechtigung des Benutzers für die Serviceinstanz validieren (/v2/authz POST).
 
 ### Berechtigung - Schritt 1: {{site.data.keyword.Bluemix_notm}}-IAM-Token mit einem API-Schlüssel abrufen
 {: #iam_token_using_api_key}
@@ -163,7 +154,7 @@ Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.
 #### Header:
 {: #headers2}
 
-  - Authorization: Basic *[client id]: [client secret]*
+  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -207,7 +198,7 @@ curl -k -X POST \
 Nach der Authentifizierung des Benutzers und der Erstellung eines eigenen Zugriffstokens muss überprüft werden, ob der Benutzer auf das Service-Dashboard zugreifen kann. Zuerst müssen bestimmte Informationen, die im Zugriffstoken des Benutzers gespeichert sind, abgerufen werden. Diese Informationen werden in Schritt 2.1 entschlüsselt. Anschließend werden diese Informationen zum Aufrufen von IAM verwendet. Auf diese Weise kann geprüft werden, ob der Benutzer für den Zugriff auf das Dashboard (Schritt 2.2) berechtigt ist.
 
 **Schritt 2.1**: Zugriffstoken des Benutzers entschlüsseln (Rückgabe während `**Authentifizierung - Schritt 2:** Code eines Zugriffstokens austauschen ` oben.)
-   Hierbei handelt es sich um ein JWT-Token, das mit der JWT-kompatiblen Bibliothek entschlüsselt werden kann. Siehe hierzu die im [Beispielcode für den Broker](https://github.com/IBM/sample-resource-service-brokers) enthaltene Bibliothek.
+   Das Zugriffstoken ist ein JWT-Token, das mit einer beliebigen JWT-kompatiblen Bibliothek entschlüsselt werden kann. Siehe hierzu die im [Beispielcode für den Broker](https://github.com/IBM/sample-resource-service-brokers) enthaltene Bibliothek.
    Nach der Entschlüsselung des Tokens wird das folgende Format angezeigt. Sie müssen nun die Werte der Felder `iam_id` und `scope` extrahieren, die im nächsten Schritt verwendet werden:
 
 ```
@@ -265,7 +256,7 @@ curl -X POST \
 
 Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.com/IBM/sample-resource-service-brokers
 
-## {{site.data.keyword.Bluemix_notm}} Identity and Access Management-Token-Scoping für Drittanbieteradopter
+## IAM-Token-Scoping für Adopter anderer Anbieter
 {: #token_scoping}
 
 Die mit Ihrer Clent-ID erstellten Benutzerzugriffstokens können nur für den Zugriff auf Ihre Service-APIs verwendet werden. Mit diesem Token ausgeführte Anforderungen an andere Cloud-APIs führen zur Zugriffsverweigerung. Dies gilt auch dann, wenn für den Benutzer eine entsprechende Richtlinie konfiguriert wurde.
@@ -274,7 +265,7 @@ Im Rahmen der Drittanbieterintegration wird das Token-Scoping verwendet, um sich
 
 Die Auswirkungen auf die Berechtigungen (alle Aufrufe an `https://iam.bluemix.net/v2/authz`) bestehen darin, dass die Bereichsinformationen (`scope`) im Betreff übergeben werden müssen. Diese Informationen sind in einem IAM-Token (Base64-Codierung) im Claim `scope` enthalten.
 
-Im folgenden Beispiel wird dargestellt, welche Elemente im Berechtigungsaufruf hinzugefügt wurden:
+Im folgenden Abschnitt wird dargestellt, welche Elemente im Berechtigungsaufruf hinzugefügt werden:
 ```
   [
    {  Headers
@@ -306,5 +297,6 @@ Im folgenden Beispiel wird dargestellt, welche Elemente im Berechtigungsaufruf h
 Dies gilt für alle Verwendungen (`user, serviceId, crn`). Für alle Vorkommen von `subject.attributes` wird ein Bereich benötigt.
 
 ## Nächste Schritte
+{: #next-steps}
 
 Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Siehe hierzu: [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).

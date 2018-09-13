@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-23"
 
 
 ---
@@ -17,27 +17,17 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Schritt 3. Service-Broker entwickeln und hosten
+{: #step3-osb}
 
-Mithilfe der von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten werden Sie nun mindestens einen neuen Service-Broker in der Programmiersprache Ihrer Wahl erstellen.
+Mithilfe der von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten können Sie nun mindestens einen neuen Service-Broker in der Programmiersprache Ihrer Wahl erstellen.
+{:shortdesc}
 
 Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um so Serviceinstanzen (Instanziierung eines Serviceangebots) und Servicebindungen (Darstellung einer Zuordnung zwischen einer Anwendung und einer Serviceinstanz, in der häufig die Berechtigungsnachweise enthalten sind, die die Anwendung zur Kommunikation mit der Serviceinstanz verwendet) bereitzustellen und zu verwalten. Wenn Sie gültige Metadatenwerte angeben, dann können Sie erfolgreich eine REST-konforme API-Antwort erstellen, wenn eine Anforderung ausgeführt wird.
 
-Beginnen Sie die Erstellung Ihres Brokers, indem Sie eine Kombination aus den von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten, den von IBM bereitgestellten öffentlichen {{site.data.keyword.Bluemix_notm}}-Service-Broker-Beispielen und der API-Dokumentation für Ressourcenbroker verwenden. Zum Entwickeln Ihres Brokers werden Sie die folgenden Schritte ausführen:
+Beginnen Sie die Erstellung Ihres Brokers, indem Sie eine Kombination aus den von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten, den von IBM bereitgestellten öffentlichen {{site.data.keyword.Bluemix_notm}}-Service-Broker-Beispielen und der API-Dokumentation für Ressourcenbroker verwenden.
 
-1. Zeigen Sie das Szenario für die Plattformbereitstellung an.
-2. Lesen Sie die OSB-Spezifikation.
-2. Machen Sie sich mit den {{site.data.keyword.Bluemix_notm}}-Brokerbeispielen vertraut.
-3. Verwenden Sie die API-Dokumentation für Ressourcenbroker, um sich mit der REST-API-Endpunktlogik vertraut zu machen.
-4. Verwenden Sie die Metadaten, die Sie aus der Konsole für das Ressourcenmanagement exportiert haben, um Ihre Entwicklung zu informieren.
-5. Zeigen Sie die Brokerinformationen an, die über die {{site.data.keyword.Bluemix_notm}}-Plattform bereitgestellt wurden.
-6. Lesen Sie die zusätzlichen Empfehlungen, um Ihre Entwicklung zu optimieren.
-7. Hosten Sie Ihren Broker.
-8. Testen Sie Ihren Broker.
-
-## #Vorbereitende Schritte
-
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.md) vertraut machen.
-{: tip}
+## Vorbereitende Schritte
+{: #pre-reqs}
 
 Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und Schritt 2 abgeschlossen haben:
 1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
@@ -45,14 +35,17 @@ Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und Schritt 2 abgeschloss
 
 
 ## Szenario für {{site.data.keyword.Bluemix_notm}}-Plattformbereitstellung anzeigen
+{: #scenario}
 
-Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
+Sie werden einen Open Service Broker entwickeln, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
 
 ## Einarbeitung in OSB-Spezifikation durchführen
+{: #learn-osb}
 
 {{site.data.keyword.Bluemix_notm}} verwendet die Spezifikation für die Open Service Broker-API (OSB) `Version 2.12`. Lesen Sie die [Open Broker API-Spezifikation](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und machen Sie sich mit ihrem Inhalt vertraut. Verwenden Sie die Readme-Datei als Leitfaden für weiterführende Informationen.
 
 ## {{site.data.keyword.Bluemix_notm}}-Brokerbeispiele anzeigen
+{: #samples}
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
 
@@ -60,8 +53,9 @@ Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemi
 
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker-API-Dokumentation anzeigen
+{: #docs}
 
-Zur Entwicklung von Service-Brokern sollten Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://console.bluemix.net/apidocs/resource-controller){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, in der die Interaktion der API mit Ihren Brokern erfolgt.
+Zur Entwicklung von Service-Brokern sollten Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, in der die Interaktion der API mit Ihren Brokern erfolgt.
 
 Der {{site.data.keyword.Bluemix_notm}} Open Service Broker erweitert die Version 2.12 der Open Service Broker-Spezifikation.
 {: tip}
@@ -129,6 +123,7 @@ Die OSB-Spezifikation bietet *keine* Unterstützung für einen inaktivierten Ins
 **Hinweis**: Die Inaktivierung des Zugriffs auf die Serviceinstanz bei Aufruf des Inaktivierungsendpunkts und die erneute Aktivierung des Zugriffs bei Aufruf des Aktivierungsendpunkts liegt im Verantwortungsbereich des Service-Providers.
 
 ## Informationen zur Verwendung der exportierten Metadaten als Leitfaden für die Brokerentwicklung
+{: #use-metadata}
 
 Die von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten können als Leitfaden für die Entwicklung eines eigenen Brokers verwendet werden. Nicht alle von Ihnen an der Konsole für das Ressourcenmanagement eingegebenen Werte sind zur Bereitstellung eines Service erforderlich. Die Metadaten, die Sie aus der Konsole für das Ressourcenmanagement exportiert haben, definieren den mindestens erforderlichen Bereitstellungsvertrag zwischen Ihrem Service und der {{site.data.keyword.Bluemix_notm}}-Plattform. Ihre exportierte JSON-Datei muss die folgenden Werte enthalten:
 
@@ -185,6 +180,7 @@ Ihr OSB-Servicearray muss exakt mit den Angebotsmetadaten übereinstimmen, die S
 {: tip}
 
 ## Von der {{site.data.keyword.Bluemix_notm}}-Plattform bereitgestellte Brokerinformationen
+{: #broker info}
 
 Ihre Service-Broker oder Broker empfangen die folgenden Informationen von der {{site.data.keyword.Bluemix_notm}}-Plattform:
 
@@ -209,6 +205,7 @@ Der **Header der API-Version** lautet [2.12](https://github.com/openservicebroke
 `PUT /v2/service_instances/:resource_instance_id` und `PATCH /v2/service_instances/:resource_instance_id` empfangen den folgenden Wert in **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
 ## Zusätzliche Brokerempfehlungen
+{: #more-info}
 
 ### Empfehlungen zur Verwendung asynchroner oder synchroner Operationen
 
@@ -231,6 +228,7 @@ Eine Liste der verfügbaren Positionen finden Sie unter den [IBM Global Catalog 
 
 
 ## Eigene Broker hosten
+{: #host}
 
 Ihr Broker muss als Bestandteil einer Anwendung gehostet werden, die auf REST-API-Aufrufe reagieren kann. Ihre gehostete Position muss den {{site.data.keyword.Bluemix_notm}}-Sicherheitsrichtlinien entsprechen. Sie können das Hosting in {{site.data.keyword.Bluemix_notm}} oder extern durchführen, solange öffentlicher Zugriff über {{site.data.keyword.Bluemix_notm}} besteht.
 
@@ -244,6 +242,7 @@ Sie benötigen die gehostete Position Ihres Service-Brokers, um den nächsten Sc
 {: tip}
 
 ## Vorgehensweise zum Testen des Service-Brokers
+{: #test}
 
 Sie müssen Ihren Broker überprüfen, indem Sie die curl-Befehle für die unterschiedlichen Endpunkte ausführen, die Sie aktivieren wollen. Die Beispiel-Readme-Datei enthält hervorragende Anweisungen zur Verarbeitung Ihrer OSB-Endpunkte mit curl: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 

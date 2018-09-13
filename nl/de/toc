@@ -34,8 +34,6 @@ Integrierte Abrechnungsservices von Drittanbietern entwickeln
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [API-Referenz für IBM Cloud-Open-Service-Broker](https://console.bluemix.net/apidocs/resource-controller)
+    [API-Referenz für IBM Cloud-Open-Service-Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api)
     [API-Referenz für die IBM Cloud-Nutzungsmessung](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
-
-https://console.bluemix.net/apidocs/resource-controller

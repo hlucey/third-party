@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -62,7 +62,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
 
 ### Richtlinien für die Service-ID
 
-  Bei der Angabe der Service-ID im Feld 'id' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
+  Bei der Angabe der Service-ID im Feld 'ID' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
   * Beginnen Sie die ID mit einem alphanumerischen Zeichen.
   * Verwenden Sie die Zeichen A-Z, a-z und 0-9. Die einzigen Sonderzeichen, die Sie verwenden dürfen, sind Bindestriche (-) und Unterstreichungszeichen (_).
   * Beachten Sie die Konvention für die Kamelschreibweise, wenn die ID mehrere Wörter umfasst.
@@ -150,7 +150,7 @@ Sie können mehrere Nutzungsdatensätze übermitteln, indem Sie einen API-Aufruf
 | 500 |  Wiederholen Sie die Übermittlung des Nutzungsdatensatzes. Wenn das Problem bestehen bleibt, wenden Sie sich an das BSS-Messteam. |
 | 400 |  Der Nutzungsdatensatz weist nicht das richtige Format auf. Entweder ist die Schemaprüfung fehlgeschlagen, die Messungen in den Nutzungsdatensätzen sind falsch oder der Start- und der Endzeitpunkt liegen nicht innerhalb des Zeitraums zwischen der Bereitstellung und der Aufhebung der Bereitstellung. Aktualisieren Sie den Nutzungsdatensatz und übermitteln Sie ihn erneut.   |
 | 424  | In den Metadaten der Ressourceninstanz sind Fehler aufgetreten. Aktualisieren Sie die Details der Ressourceninstanz und übermitteln Sie den Nutzungsdatensatz erneut.  |
-| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes.  |
+| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes. |
 | 409  | Der Nutzungsdatensatz ist ein Duplikat. Versuchen Sie nicht, ihn erneut zu übermitteln. |
 {: caption="Tabelle 2. Statuscodes und erforderliche Aktionen" caption-side="top"}
 {: #actions}

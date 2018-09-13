@@ -17,28 +17,18 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Schritt 2. Angebot in der Konsole für das Ressourcenmanagement definieren
+{: #step2-define}
 
-Die Konsole für das Ressourcenmanagement ist ein webbasiertes Tool, das Sie durch die Bereitstellung Ihres Drittanbieterangebots im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
-
-Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen, sind Sie bereit, in der Konsole für das Ressourcenmanagement die Registrierung durchzuführen, mit der Entwicklung Ihres Angebots zu beginnen und Ihre Preisstrukturpläne bereitzustellen:
-   1. Registrieren Sie Ihren Service bei der Konsole für das Ressourcenmanagement und überprüfen Sie, ob die Daten auf der Zusammenfassungsseite korrekt sind.
-   2. Geben Sie Ihre Katalogmetadaten auf der Angebotsseite ein.
-   3. Registrieren Sie Ihr Angebot bei {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Bei der Registrierung werden die Berechtigungsnachweise für die Client- und die Service-ID generiert, die zur Authentifizierung Ihres Service dienen.
-   4. Füllen Sie die Preisstrukturseite aus und überprüfen Sie, dass Ihr Serviceangebot in {{site.data.keyword.Bluemix_notm}} den Kunden mit den korrekten Preisstrukturplänen angezeigt wird. Die Pläne, die Sie definieren, umfassen Messungen, in denen wichtige Nutzungsdetails enthalten sind.
-   5. Exportieren Sie Ihre Angebotsmetadaten im JSON-Format.
-
+Die Konsole für das Ressourcenmanagement ist ein Tool, das Sie durch die Bereitstellung Ihres Drittanbieterangebots im {{site.data.keyword.Bluemix_notm}}-Katalog führt. Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen, sind Sie bereit, in der Konsole für das Ressourcenmanagement die Registrierung Ihres Service durchzuführen, mit der Entwicklung zu beginnen und Ihre Preisstrukturpläne zu definieren. Die Konsole für das Ressourcenmanagement ist ein webbasiertes Tool, das Sie durch die Bereitstellung Ihres integrierten Abrechnungsservice im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
+{:shortdesc}
 
 ## Vorbereitende Schritte
-
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.html) vertraut machen.
-{: tip}
+{: #pre-reqs}
 
 1. Vergewissern Sie sich, dass Sie mit dem folgenden Schritt begonnen haben: [Schritt 1. Servicedokumentation und Vertriebsfreigabe verfassen (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Vergewissern Sie sich, dass Sie die Registrierung bei {{site.data.keyword.Bluemix_notm}} durchgeführt haben. Falls Sie diesen Schritt noch nicht ausgeführt haben, dann führen Sie die [Registrierung](https://console.bluemix.net/registration) durch, bevor Sie fortfahren.
 3. Vergewissern Sie sich, dass Sie sich im korrekten Konto befinden, bevor Sie mit dem Arbeiten in der Konsole für das Ressourcenmanagement beginnen.
-4. Bereiten Sie Ihren {{site.data.keyword.Bluemix_notm}}-Servicenamen vor.
-
-   Sie müssen sowohl einen Servicenamen angeben, der zur Identifikation des Service durch die {{site.data.keyword.Bluemix_notm}}-Plattform dient, als auch einen Anzeigenamen, der Ihren Kunden im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt wird.
+4. Bereiten Sie Ihren {{site.data.keyword.Bluemix_notm}}-Servicenamen vor. Sie müssen sowohl einen Servicenamen angeben, der zur Identifikation des Service durch die {{site.data.keyword.Bluemix_notm}}-Plattform dient, als auch einen Anzeigenamen, der Ihren Kunden im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt wird.
 
   Wenn Sie die Registrierung für Ihr Angebot bei der Konsole für das Ressourcenmanagement durchführen, dann sollten Sie Ihren {{site.data.keyword.Bluemix_notm}}-Servicenamen bereithalten. Der Servicename stimmt nicht mit dem Anzeigenamen überein. Für die Erstellung des Servicenamens gelten die folgenden Regeln:
    - Es dürfen nur Kleinbuchstaben angegeben werden.
@@ -48,6 +38,7 @@ Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigun
    Ihr Servicename muss den Namen Ihres Unternehmens enthalten. Verfügt Ihr Unternehmen über mehrere Angebote, dann muss der Servicename sowohl das Unternehmen als auch das Angebot enthalten. Beispiel: Das Unternehmen 'Compose' verfügt über Angebote für Redis und Elasticsearch. Die Servicenamen dieser Angebote in {{site.data.keyword.Bluemix_notm}} können `compose-redis` und `compose-elasticsearch` lauten. Beiden Servicenamen sind Anzeigenamen zugeordnet, die im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt werden: *Compose Redis* und *Compose Elasticsearch*. Ein anderes Unternehmen (z. B. FastJetMail) kann über nur ein Angebot mit dem Namen 'JetMail' verfügen. In diesem Fall lautet der Servicename `fastjetmail`.
 
 ## Eigenes Angebot registrieren
+{: #register}
 
 Melden Sie sich zum Einstieg an und registrieren Sie Ihr Angebot.
 
@@ -63,6 +54,7 @@ Sie können Ihre Arbeitsergebnisse in der Konsole für das Ressourcenmanagement 
 {: tip}
 
 ## Angebotsmetadaten eingeben
+{: #offering-metadata}
 
 Geben Sie auf der Seite **Angebot** die Metadatenwerte an, die im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert sind. Darüber hinaus ist bei einigen dieser Werte ein Export und die Speicherung in Ihrem Service-Broker erforderlich, in dem sie für die Bereitstellung verwendet und als Teil der `Katalog (GET)`-Antwort zurückgegeben werden. Sie verwenden diese Werte in den nachfolgenden Schritten zur raschen Entwicklung eines Service-Brokers.
 
@@ -77,6 +69,7 @@ Ihr erstes Anschreiben zu Ihrem Angebot umfasst eine URL für die Servicedokumen
 {: tip}
 
 ## Bei IAM registrieren
+{: #reg-iam}
 
 IAM ist für das Onboarding aller Services in {{site.data.keyword.Bluemix_notm}} erforderlich. Weitere Informationen hierzu finden Sie im Abschnitt [ Was ist IAM?](/docs/iam/index.html#what-is-cloud-iam-). Dort erfahren Sie mehr über die IAM-Konzepte und -Anforderungen.
 
@@ -99,6 +92,7 @@ Sie erhalten Ihren API-Schlüssel, wenn Sie **IAM aktivieren**. Es ist wichtig, 
 {: tip}
 
 ## Preisstrukturplan entwickeln
+{: #pricing-plan}
 
 Wenn Sie das Onboarding Ihres Service in {{site.data.keyword.Bluemix_notm}} durchführen, dann müssen Sie auch einen Preisstrukturplan definieren. Wenn Sie über detailliertes Wissen zur Vorgehensweise bei der Belastung von Benutzern für Ihren Service verfügen, dann können Sie diese Informationen in Ihrem Plan angeben. Wenn Sie sich jedoch noch nicht für einen gebührenpflichtigen Plan entschieden haben, dann können Sie mit der Aktivierung eines kostenfreien Plans beginnen und später einen gebührenpflichtigen Plan einrichten.
 
@@ -113,6 +107,7 @@ Service-Provider müssen die stündliche Übermittlung der Nutzungsdaten für al
 {: tip}
 
 ## Metadaten im JSON-Format exportieren
+{: #export-metadata}
 
 Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement definiert haben, können Sie die Datei mit dem Namen 'catalog.json' herunterladen und sie verwenden, um die Entwicklung Ihres Open Service Broker zu informieren. Die Datei 'catalog.json' enthält Metadaten, die im Broker gehostet werden müssen. Diese Werte definieren den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Alle zusätzlichen Katalogmetadaten, die nicht zur Bereitstellung erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden.
 
@@ -123,5 +118,6 @@ Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement defin
 Speichern Sie die Datei `catalog.json`. Sie werden sie bei der Open Service Broker-Entwicklung im nächsten Abschnitt verwenden.
 
 ## Nächste Schritte
+{: #next-steps}
 
 Gut gemacht! Sie haben Ihr Serviceangebot definiert, indem Sie die Metadaten für die Kataloganzeige hinzugefügt, die Registrierung bei IAM durchgeführt und mindestens einen Preisstrukturplan erstellt haben. Als Nächstes können Sie mithilfe der exportieren JSON-Datei mit der Entwicklung eines Service-Brokers beginnen. Weitere Informationen hierzu finden Sie in [Schritt 3: Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
