@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-28"
 
 
 ---
@@ -43,7 +43,7 @@ Utilice Provider Workbench para listar su tipo de oferta como servicio de factur
 ## Paso 3. Definir los detalles de la oferta
 {: #step3}
 
-Después de seleccionar **Servicio de facturación integrado** como tipo de oferta y de enviar el formulario de evaluación de disponibilidad, la página se renueva con una sección para definir el contenido que se muestra en la página de detalles del catálogo en la consola de {{site.data.keyword.Bluemix_notm}}. Complete cada campo y envíe el formulario para su revisión. El proceso de revisión puede tardar unos días.
+Después de seleccionar **Servicio de facturación integrado** como tipo de oferta y de enviar el formulario de evaluación de disponibilidad, la página se renueva con una sección para definir el contenido. Se visualiza en la página de detalles del catálogo en la consola de {{site.data.keyword.Bluemix_notm}}. Complete cada campo y envíe el formulario para su revisión. El proceso de revisión puede tardar unos días.
 
 ## Pasos siguientes
 {: #next-steps}
@@ -55,6 +55,6 @@ Cuando se haya aprobado su solicitud, recibirá un correo electrónico en el que
   El correo electrónico incluye el enlace al lugar en el que se publica la documentación de iniciación. Guarde el URL, ya que lo utilizará cuando trabaje en la consola de gestión de recursos. 
   {: tip}
 
-* En la consola de gestión de recursos, puede integrar su oferta en {{site.data.keyword.Bluemix_notm}} definiendo su oferta, creando planes de precios, habilitando la seguridad y gestionando el despliegue de su oferta en distintos entornos de {{site.data.keyword.Bluemix_notm}}. 
+* En la consola de gestión de recursos, integre su oferta en {{site.data.keyword.Bluemix_notm}} definiendo su oferta, creando planes de precios, habilitando la seguridad y gestionando el despliegue de su oferta en distintos entornos de {{site.data.keyword.Bluemix_notm}}. 
 
 Para obtener más detalles, consulte [Desarrollo y publicación de un servicio de facturación integrado](/docs/third-party/integrated-billing-service.html)

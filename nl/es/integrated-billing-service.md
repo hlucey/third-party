@@ -32,15 +32,15 @@ A continuación, fuera de la consola de gestión de recursos, realice el desarro
 
 Para entregar un servicio de facturación integrado, puede trabajar con el Provider Workbench, con la consola de gestión de recursos y con el entorno de desarrollo de su elección. Consulte la [lista de comprobación](/docs/third-party/checklist.html#checklist) como ayuda para seguir estos pasos.
 
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el proceso de registro y aprobación inicial en PWB, consulte: [Cómo comenzar a publicar su oferta de terceros en {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+{: tip}
+
 1. [Crear su documentación y su anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Definir su oferta en la consola de gestión de recursos{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
 3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).
 4. [Desarrollar un flujo de autenticación](/docs/third-party/cis5-iam.html).
 5. [Probar el servicio](/docs/third-party/cis4-rmc-publish.html).
 6. [Publicar el servicio a nivel público](/docs/third-party/cis6-ga.html).
-
-En estos pasos se presupone que dispone de la aprobación para suministrar un servicio de facturación integrado. Si no ha completado el proceso de registro y de aprobación inicial en el Provider Workbench, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.md)
-{: tip}
 
 ## Soporte
 {: #support}

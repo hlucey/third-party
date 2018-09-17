@@ -17,28 +17,19 @@ lastupdated: "2018-08-21"
 {:download: .download}
 
 # Paso 2. Definición de la oferta en la consola de gestión de recursos
+{: #step2-define}
 
-La consola de gestión de recursos es una herramienta basada en web que le ayuda en el proceso de suministro de su oferta de terceros en el catálogo de {{site.data.keyword.Bluemix_notm}}.
-
-Ahora que tiene la aprobación para suministrar un servicio de facturación integrado, está listo para dirigirse a la consola de gestión de recursos para registrarse, iniciar el desarrollo de su oferta y proporcionar planes de precios:
-   1. Registre el servicio con la consola de gestión de recursos y valide la página Resumen.
-   2. Especifique los metadatos del catálogo en la página Oferta.
-   3. Registre su oferta con {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). El registro genera las credenciales de ID de cliente y de ID de servicio que se utilizan para autenticar el servicio.
-   4. Complete la página Precios, asegurándose de que la oferta de servicio en {{site.data.keyword.Bluemix_notm}} ofrece los planes de precios correctos a los clientes. Los planes que defina deben incluir datos de medición que ofrezcan detalles de uso importantes.
-   5. Exporte los metadatos de la oferta en formato JSON.
-
+La consola de gestión de recursos es una herramienta que le ayuda en el proceso de suministro de su oferta de terceros en el catálogo de {{site.data.keyword.Bluemix_notm}}.
+Ahora que tiene la aprobación para suministrar un servicio de facturación integrado, está listo para utilizar la consola de gestión de recursos para registrar el servicio, iniciar el desarrollo y definir los planes de precios. La consola de gestión de recursos es una herramienta basada en web que le ayuda en el proceso de suministro del servicio de facturación integrado en el catálogo de {{site.data.keyword.Bluemix_notm}}.
+{:shortdesc}
 
 ## Antes de empezar
-
-En este paso se presupone que tiene la aprobación para suministrar un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.html).
-{: tip}
+{: #pre-reqs}
 
 1. Asegúrese de que ha comenzado en [Paso 1: Crear documentación del servicio y anuncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Asegúrese de que está registrado con {{site.data.keyword.Bluemix_notm}}. Si no es así, [regístrese](https://console.bluemix.net/registration) antes de continuar.
 3. Asegúrese de que está en la cuenta correcta cuando empiece a trabajar en la consola de gestión de recursos.
-4. Prepare su nombre de servicio de {{site.data.keyword.Bluemix_notm}}.
-
-   Debe proporcionar un nombre de servicio, que se utiliza para identificar el servicio en la plataforma {{site.data.keyword.Bluemix_notm}}, y un nombre de visualización, que es el que ven los clientes en el catálogo de {{site.data.keyword.Bluemix_notm}}.
+4. Prepare su nombre de servicio de {{site.data.keyword.Bluemix_notm}}. Debe proporcionar un nombre de servicio, que se utiliza para identificar el servicio en la plataforma {{site.data.keyword.Bluemix_notm}}, y un nombre de visualización, que es el que ven los clientes en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
   Cuando registre la oferta con la consola de gestión de recursos, tenga preparado el nombre de servicio de {{site.data.keyword.Bluemix_notm}}. El nombre de servicio no es el nombre de visualización. El nombre de servicio debe seguir estas reglas:
    - Debe estar en minúsculas
@@ -48,6 +39,7 @@ En este paso se presupone que tiene la aprobación para suministrar un servicio 
    El nombre de servicio debe incluir el nombre de la empresa. Si su empresa tiene más de una oferta, el nombre de servicio debe incluir tanto la empresa como la oferta como parte del nombre. Por ejemplo, suponga que la empresa Compose tiene ofertas para Redis y Elasticsearch. Los nombres de servicio de ejemplo en {{site.data.keyword.Bluemix_notm}} para estas ofertas serían `compose-redis` y `compose-elasticsearch`. Ambos nombres de servicio tienen nombres de visualización asociados que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}}: *Compose Redis* y *Compose Elasticsearch*. Otra empresa (por ejemplo, FastJetMail) podría tener una única oferta JetMail, en cuyo caso el nombre de servicio sería `fastjetmail`.
 
 ## Registre la oferta
+{: #register}
 
 Para empezar, inicie una sesión y registre su oferta.
 
@@ -64,6 +56,7 @@ Puede guardar el progreso en la consola de gestión de recursos y volver más ta
 {: tip}
 
 ## Especifique los metadatos de la oferta
+{: #offering-metadata}
 
 En la página **Oferta**, especifique los valores de metadatos que están almacenados en el catálogo de {{site.data.keyword.Bluemix_notm}}. Además, algunos de estos valores se tienen que exportar y almacenar en el intermediario de servicio, donde se utilizan para el suministro y se devuelven como parte de la respuesta de `catalog (GET)`. Utilizará estos valores para ayudar a iniciar el desarrollo de un intermediario de servicio en pasos posteriores.
 
@@ -79,6 +72,7 @@ La carta de la oferta inicial incluye un URL de documentación del servicio que 
 {: tip}
 
 ## Regístrese con IAM
+{: #reg-iam}
 
 IAM es necesario para todos los servicios que se incorporan a {{site.data.keyword.Bluemix_notm}}. Consulte [¿Qué es IAM?](/docs/iam/index.html#what-is-cloud-iam-) para obtener más información sobre los conceptos y los requisitos de IAM.
 
@@ -101,6 +95,7 @@ Se le proporciona una clave de API cuando **Habilita IAM**. Es muy importante qu
 {: tip}
 
 ## Desarrollo de un plan de precios
+{: #pricing-plan}
 
 Cuando incorpore el servicio en {{site.data.keyword.Bluemix_notm}}, debe definir un plan de precios. Si sabe con detalles cómo desea facturar a los usuarios por su servicio, puede especificar dicha información en el plan. Sin embargo, si aún no ha definido un plan de pago, puede empezar por habilitar un plan gratuito y configurar un plan de pago posteriormente.
 
@@ -115,6 +110,7 @@ Los proveedores de servicios deben automatizar el envío de datos de uso por hor
 {: tip}
 
 ## Exporte los metadatos como JSON
+{: #export-metadata}
 
 Ahora que ha definido el servicio dentro de la consola de gestión de recursos, puede descargar un archivo catalog.json y utilizarlo para informar sobre el desarrollo de su OSB (Open Service Broker). El archivo catalog.json contiene metadatos que deben alojarse en el intermediario. Estos valores definen el contrato entre el intermediario y la plataforma {{site.data.keyword.Bluemix_notm}} para los servicios y planes a los que da soporte el intermediario. Todos los metadatos de catálogo adicionales que no son obligatorios para el suministro se guardan en el catálogo de {{site.data.keyword.Bluemix_notm}}, y las actualizaciones en los valores de visualización del catálogo que se utilizan para mostrar elementos en el panel de control, como enlaces, iconos y metadatos convertidos i18n, se deben actualizar en la consola de gestión de recursos (no se deben alojar en el intermediario). Ninguno de los datos que se guardan en el intermediario se muestra en la consola de {{site.data.keyword.Bluemix_notm}} ni en la CLI de {{site.data.keyword.Bluemix_notm}}; la consola y la CLI devuelven lo que se ha definido dentro de la consola de gestión de recursos y guardado en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
@@ -125,5 +121,6 @@ Ahora que ha definido el servicio dentro de la consola de gestión de recursos, 
 Guarde el archivo `catalog.json`. Lo utilizará para desarrollar Open Service Broker en la sección siguiente.
 
 ## Pasos siguientes
+{: #next-steps}
 
 Va por buen camino. Ha definido la oferta de servicio añadiendo metadatos de visualización de catálogo, registrándose con IAM y creando uno o varios planes de precios. A continuación, con el JSON exportado, puede empezar a desarrollar un intermediario de servicio. Consulte el [Paso 3: Desarrollo y alojamiento de intermediarios de servicio](/docs/third-party/cis3-broker.html).

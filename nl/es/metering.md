@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-09"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -26,12 +26,12 @@ En la lista siguiente se describen las expectativas para el seguimiento y el env
 *	No es necesario que los proveedores de la oferta (terceros) envíen datos sobre uso para planes gratuitos.
 *	No es necesario que los proveedores de la oferta (terceros) envíen datos sobre uso para planes de suscripción mensual.
 *	Para los planes de medición, todos los proveedores de la oferta deben enviar datos sobre uso cada hora (para los planes Lite se deben enviar entre cada 15 minutos y 1 hora).
-*	El proveedor de la oferta es el responsable de automatizar el envío de datos sobre uso, incluida la automatización que intenta de nuevo las respuestas de error. {{site.data.keyword.Bluemix_notm}} no proporciona una función de reintento para envíos fallidos. Consulte los códigos de estado y la tabla de acciones en [Envío de registros de uso](/docs/third-party/submitusage.html#submitting-usage-records) para obtener más información.
+*	El proveedor de la oferta es el responsable de automatizar el envío de datos sobre uso, incluida la automatización que intenta de nuevo las respuestas de error. {{site.data.keyword.Bluemix_notm}} no proporciona una función de reintento para envíos fallidos. Para obtener más información, consulte los códigos de estado y la tabla de acciones en [Envío de registros de uso](/docs/third-party/submitusage.html#submitting-usage-records).
 *	Los registros de uso correspondientes al mes actual se deben enviar, a más tardar, el segundo día del mes siguiente.
-*	{{site.data.keyword.Bluemix_notm}} está configurado para un ciclo de facturación mensual y el tiempo está representado en UTC.
+*	{{site.data.keyword.Bluemix_notm}} está configurado para un ciclo de facturación mensual y el tiempo está representado en UTC (Hora Universal Coordinada).
 *  Los proveedores de la oferta deben probar el envío de datos sobre uso y validar sus resultados para informar sobre cómo se calcula el ciclo de facturación mensual.
 
-Consulte [Cómo calcular los costes](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost) para obtener información general sobre los precios.
+Para obtener información general sobre los precios, consulte [Cómo calcular los costes](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propiedades de configuración
 {: #configure}
@@ -149,7 +149,7 @@ En el caso de un mes de 30 días:
 ## Ejemplos de escalas de medición y evaluación
 {: #scale-examples}
 
-Puede utilizar la configuración de escalado para compilar la cantidad de la unidad de forma distinta entre lo que se envía en envíos de datos de uso, lo que se muestra en el panel de control de uso, y lo que se utiliza finalmente para evaluar y calcular los costes. En los ejemplos siguientes se muestran casos de ejemplo en los que se deben configurar estos valores:
+Puede utilizar la configuración de escalado para compilar la cantidad de la unidad de forma distinta entre lo que se envía en envíos de datos de uso, lo que se muestra en el panel de control de uso, y lo que se utiliza para evaluar y calcular los costes. En los ejemplos siguientes se muestran estos casos de ejemplo:
 
 ### Desea más granularidad de la que ven los usuarios
 Desea enviar datos de uso a un nivel más granular, pero desea mostrar a los clientes un número más legible.

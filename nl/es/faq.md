@@ -2,7 +2,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-28"
 
 ---
 
@@ -27,6 +27,6 @@ Para obtener más información sobre la medición, consulte [Integración de med
 ## ¿Cómo puedo generar una nueva clave de API de {{site.data.keyword.Bluemix_notm}} Identity and Access Management?
 {: #iam-creds}
 
-Se le proporciona una clave de API cuando se habilita IAM. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva. Consulte [Gestionar claves de API de ID de servicio](/docs/iam/serviceid_keys.html#serviceidapikeys) para obtener más información. 
+Se le proporciona una clave de API cuando se habilita IAM. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva. Para obtener más información, consulte [Gestión de claves de API de ID de servicio](/docs/iam/serviceid_keys.html#serviceidapikeys). 
 
 

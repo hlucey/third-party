@@ -16,12 +16,14 @@ lastupdated: "2018-08-21"
 {:tip: .tip}
 {:download: .download}
 
-# Paso 5: Publicación y prueba del servicio
+# Paso 5. Publicación y prueba del servicio
+{: #step5-pubtest}
 
-Ahora que tiene el intermediario o intermediarios alojados que cumplen la especificación OSB, puede volver a la consola de gestión de recursos para publicar el servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}. Complete el separador **Despliegues**: planifique el despliegue de los planes de servicio en una o varias regiones del catálogo de {{site.data.keyword.Bluemix_notm}}, pruebe el intermediario o intermediarios y, finalmente, publique el servicio en el catálogo en modalidad de visibilidad limitada. Después de desplegarla correctamente, pruebe la oferta para asegurarse de que cumple los criterios necesarios y repita el proceso de publicación si es necesario.
-
+Ahora que tiene el intermediario o intermediarios alojados que cumplen la especificación OSB, puede volver a la consola de gestión de recursos para publicar el servicio en el catálogo de {{site.data.keyword.Bluemix_notm}}. 
+{:shortdesc}
 
 ## Antes de empezar
+{: #pre-reqs}
 
 En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.md).
 {: tip}
@@ -33,16 +35,17 @@ Asegúrese de que ha comenzado el paso 1 y ha completado los pasos 2, 3 y 4:
 3. [Desarrollar un flujo de autenticación](/docs/third-party/cis5-iam.html).
 
 ## Publique su servicio en {{site.data.keyword.Bluemix_notm}}
+{: #publish}
 
-1. En la consola de gestión de recursos, pulse la página Despliegues.
+1. En la consola de gestión de recursos, pulse la página **Despliegues**.
 2. Pulse el separador **Intermediarios** y pulse **Añadir intermediario**.
 3. Pulse **Gestionar** para abrir la página Configuración del intermediario de servicios.
 4. Añada su intermediario alojado y pulse **Registrar intermediario**.
 5. Después de registrarlo correctamente, vaya al separador **Despliegues del catálogo**.
 6. Pulse **Añadir despliegue** y seleccione el plan y el intermediario que desea desplegar.
 7. Seleccione la región y el centro de datos en los que desea desplegar el servicio y pulse **Añadir**.
-8. En la página Despliegues, revise el despliegue no publicado y pulse **Publicar**.
-9. En la página Publicar en el catálogo, revise los detalles del despliegue y pulse **Publicar**.
+8. En la página **Despliegues**, revise el despliegue no publicado y pulse **Publicar**.
+9. En la página **Publicar en el catálogo**, revise los detalles del despliegue y pulse **Publicar**.
 
 Ahora la página Despliegues debería estar marcada como completada en el área de navegación, lo que indica que ha pasado los requisitos mínimos.
 
@@ -50,6 +53,7 @@ Ahora la página Despliegues debería estar marcada como completada en el área 
 {: tip}
 
 ## Pruebe la oferta desplegada 
+{: #test}
 
 Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede ver la oferta en el catálogo de {{site.data.keyword.Bluemix_notm}}. Con la lista de comprobación siguiente, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y siga los pasos de los criterios de prueba.
 
@@ -78,5 +82,6 @@ Si no pasa todas las pruebas, repita los pasos anteriores para publicar el servi
 
 
 ## Pasos siguientes
+{: #next-steps}
 
 Ahora que tiene un servicio funcional en el catálogo, puede crear una demostración y solicitar aprobación para publicar su servicio a nivel público. Consulte [Paso 6: Publicación del servicio a nivel público](/docs/third-party/cis6-ga.html).

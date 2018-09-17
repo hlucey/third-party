@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-06-21" 
+lastupdated: "2018-08-30" 
 
 ---
 
@@ -18,7 +18,7 @@ lastupdated: "2018-06-21"
 # Envío de datos de uso para planes de medición
 {: #submitusage}
 
-Es necesario que envíe datos de uso correspondientes a todas las instancias de servicio activas cada hora. El hecho de no informar sobre el uso podría suponer una pérdida de ingresos para IBM, lo que a su vez provocaría la pérdida de ingresos para los proveedores de la oferta.
+Es necesario que envíe datos de uso correspondientes a todas las instancias de servicio activas cada hora. El hecho de no informar sobre el uso podría suponer una pérdida de ingresos para IBM, lo que puede provocar una pérdida de ingresos para los proveedores de la oferta.
 {:shortdesc}
 
 ## Cómo funciona el proceso
@@ -47,18 +47,18 @@ Revise los siguientes requisitos previos para habilitar la medición del servici
 
 Consulte las directrices siguientes cuando utilice el servicio de medición de {{site.data.keyword.Bluemix_notm}} para enviar datos de uso del recurso:
 
-* La hora de inicio y la hora de finalización representan el intervalo de tiempo durante el que se han recopilado las mediciones. Los tiempos no dependen de la hora en la que se envía el registro de uso a las API de medición.
+* La hora de inicio y la hora de finalización representan el intervalo de tiempo durante el que se han recopilado las mediciones. Los tiempos no dependen de la hora a la que se envía el registro de uso a las API de medición.
 * Los registros de uso representan hechos. No actualice el registro de uso después de crearlo. Se especifica una ubicación cuando se crea correctamente un registro de uso. Si se devuelve un código de error, consulte las [acciones](#actions) que es posible que tenga que llevar a cabo.
 * Un registro de uso se identifica de forma exclusiva mediante la firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Cuando se procesa un registro de uso, cualquier otro registro de uso con la misma firma se rechaza como duplicado.
-* Las interacciones con el servicio de medición no se deben combinar con ningún otro servicio. Las solicitudes se deben manejar individualmente, aunque la medición se inicie y finalice con el suministro y el cese de suministro de la instancia.
+* No combine la interacción con el servicio de medición con ningún otro servicio. Las solicitudes se deben manejar individualmente, aunque la medición se inicie y finalice con el suministro y el cese de suministro de la instancia.
 * Los datos de uso del recurso deben enviarse al servicio de medición una vez cada 2-24 horas. La frecuencia con la que envíen datos de uso dependerá de la frecuencia con la que cambian las métricas de uso.
 * Los registros de uso se deben enviar en un plazo de dos días desde el momento en que se ha completado la medición. Los registros de uso más antiguos se rechazan.
 * Un envío correcto devuelve el código de respuesta 201. Si se devuelve algún otro código de respuesta, actualice y vuelva a enviar los datos hasta que reciba el código 201.
 
 Estas son las prácticas recomendadas para enviar el uso:
 
-* Se recomienda que los proveedores de servicio envíen datos de uso cada hora para que el usuario final no vea un retraso enorme entre el momento en que se ha consumido el recurso y el momento en el que el coste se ve reflejado en su cuenta.
-* Vuelva a intentar el envío de registros de uso únicamente si se ha producido una anomalía real en la solicitud anterior. No vuelva a enviar registros de uso que se hayan aceptado correctamente.
+* Se recomienda que los proveedores de servicio envíen datos de uso cada hora para que el usuario no vea un retraso enorme entre el momento en el que se ha consumido el recurso y el momento en el que el coste se ve reflejado en su cuenta.
+* Vuelva a intentar el envío de registros de uso únicamente si se produce una anomalía real en la solicitud anterior. No vuelva a someter los registros de uso que se han aceptado correctamente.
 
 ### Directrices sobre ID de servicio
 

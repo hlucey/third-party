@@ -25,7 +25,7 @@ En este paso se presupone que se ha aprobado que suministre un servicio de factu
 
 ## Antes de empezar
 
-Asegúrese de que ha iniciado el Paso 1 y ha completado los pasos 2, 3, 4 y 5:
+Asegúrese de que ha iniciado el paso 1 y ha completado los pasos 2, 3, 4 y 5:
 1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
 3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).

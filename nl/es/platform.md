@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-06-29"
+lastupdated: "2018-08-30"
 
 
 ---
@@ -18,11 +18,11 @@ lastupdated: "2018-06-29"
 
 # Cómo utilizan la plataforma {{site.data.keyword.Bluemix_notm}} los servicios de facturación integrados
 
-Los servicios de facturación integrados son distintos de los servicios de referencia. Un servicio de facturación integrado utiliza la plataforma {{site.data.keyword.Bluemix_notm}} para la autenticación, el acceso, el suministro, la medición y la facturación. En este tema encontrará una visión general de los componentes de la plataforma que utilizará el servicio de facturación integrado.
+Los servicios de facturación integrados son distintos de los servicios de referencia. Un servicio de facturación integrado utiliza la plataforma {{site.data.keyword.Bluemix_notm}} para la autenticación, el acceso, el suministro, la medición y la facturación. En este tema encontrará una visión general de los componentes de la plataforma que utiliza el servicio de facturación integrado.
 
 ## La capa de suministro de {{site.data.keyword.Bluemix_notm}}
 
-La capa de suministro gestiona el ciclo de vida de los recursos de {{site.data.keyword.Bluemix_notm}}. La capa de suministro es la responsable de controlar y realizar un seguimiento del ciclo de vida de los recursos en una cuenta de cliente. Los *recursos* son componentes físicos o lógicos que se pueden suministrar o reservar para una aplicación o instancia de servicio. Los ejemplos de recursos incluyen base de datos, cuentas y límites de procesador, memoria, y almacenamiento. En general, los recursos de los que la capa de suministro realiza un seguimiento están pensados para tener métricas de uso y métodos de facturación asociados, pero no siempre es así. En algunos casos, el recurso puede estar asociado a la capa de suministro para garantizar que el ciclo de vida del recurso se puede gestionar junto con el ciclo de vida de la cuenta.
+La capa de suministro gestiona el ciclo de vida de los recursos de {{site.data.keyword.Bluemix_notm}}. La capa de suministro es la responsable de controlar y realizar un seguimiento del ciclo de vida de los recursos en una cuenta de cliente. Los *recursos* son componentes físicos o lógicos que se pueden suministrar o reservar para una aplicación o instancia de servicio. Los ejemplos de recursos incluyen límites almacenamiento, base de datos, cuentas, procesador y memoria. En general, los recursos de los que la capa de suministro realiza un seguimiento están pensados para asociar métricas de uso y métodos de facturación, pero no siempre es así. En algunos casos, el recurso puede estar asociado a la capa de suministro para garantizar que el ciclo de vida del recurso se puede gestionar junto con el ciclo de vida de la cuenta.
 
 ### Gestión del ciclo de vida de un recurso
 
@@ -38,40 +38,40 @@ La capa de suministro proporciona varias API para ayudarle a gestionar los sigui
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 
-Identity Access Management (IAM) le permite autenticar usuarios de forma segura y controlar el acceso a todos los recursos de la nube de forma coherente en {{site.data.keyword.Bluemix_notm}}. La capa de suministro de {{site.data.keyword.Bluemix_notm}} ha adoptado IAM para la autenticación y autorización de acciones emprendidas sobre la capa de suministro. Los proveedores de ofertas de terceros utilizan IAM para crear un flujo de autenticación (OAuth). Para obtener más detalles, consulte [¿Qué es IAM?](/docs/iam/index.html#iamoverview)?
+Identity Access Management (IAM) le permite autenticar usuarios de forma segura y controlar el acceso a todos los recursos de la nube de forma coherente en {{site.data.keyword.Bluemix_notm}}. La capa de suministro de {{site.data.keyword.Bluemix_notm}} ha adoptado IAM para la autenticación y autorización de acciones que se emprenden sobre la capa de suministro. Los proveedores de ofertas de terceros utilizan IAM para crear un flujo de autenticación (OAuth). Para obtener más información, consulte [¿Qué es IAM?](/docs/iam/index.html#iamoverview)?
 
 Si su oferta utiliza bibliotecas de OpenID Connect (OIDC), IAM da soporte a la integración de OIDC. OIDC es una capa de autenticación en la parte superior de OAuth 2.0, una infraestructura de autorización, y puede ayudar a simplificar el proceso de incorporación. Para obtener más información sobre OIDC, consulte [Open ID Connect](http://openid.net/connect/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Catálogo de {{site.data.keyword.Bluemix_notm}}
 
-El catálogo de {{site.data.keyword.Bluemix_notm}} almacena las definiciones de la oferta (descripción, características, imágenes, URL, etc.) de los recursos que se muestran en la consola de {{site.data.keyword.Bluemix_notm}}. La consola de gestión de recursos se utiliza para definir todos los aspectos de los metadatos necesarios del servicio. Estos metadatos se publican en el catálogo y son los que se visualizan en el catálogo. Encontrará información detallada sobre los campos de metadatos obligatorios y opcionales de las páginas **Oferta** y **Plan** de la consola de gestión de recursos, pero aquí se incluyen los elementos clave para agilizar el proceso de aprendizaje.
+El catálogo de {{site.data.keyword.Bluemix_notm}} almacena las definiciones de la oferta (descripción, características, imágenes, URL, etc.) de los recursos que se muestran en la consola de {{site.data.keyword.Bluemix_notm}}. La consola de gestión de recursos se utiliza para definir todos los aspectos de los metadatos necesarios del servicio. Estos metadatos se publican en el catálogo y son los que se visualizan en el catálogo. Encontrará información detallada sobre los campos de metadatos obligatorios y opcionales de las páginas **Oferta** y **Plan** de la consola de gestión de recursos. Aquí se incluyen los elementos clave para agilizar el proceso de aprendizaje.
 
    * Nombre de servicio: nombre técnico del servicio. El nombre de servicio es muy importante y se debe definir correctamente. Debe proporcionar un nombre de servicio, que se utiliza para identificar el servicio en la plataforma {{site.data.keyword.Bluemix_notm}}, y un nombre de visualización, que es el que ven los clientes en el catálogo de {{site.data.keyword.Bluemix_notm}}. El nombre de servicio no es el nombre de visualización.
    * Nombre de visualización del servicio: nombre descriptivo de usuario para el servicio. Por ejemplo, "Compose Redis"
-   * ID de servicio: GUID del servicio que se utiliza en las llamadas de API al intermediario OSB. Debe ser un valor exclusivo.
+   * ID de servicio: GUID del servicio que se utiliza en las llamadas de API al intermediario OSB. Este valor debe ser exclusivo.
    * Icono del servicio: SVG con el logotipo del servicio
    * Descripción del servicio: la descripción del recurso que se muestra cuando se pasa el ratón por encima del icono del recurso en la interfaz de usuario del catálogo de {{site.data.keyword.Bluemix_notm}}. Puede añadir una única frase a la descripción.
    * Descripción detallada del servicio: el primer párrafo que aparece en la página de listado del catálogo. Considere la posibilidad de utilizar al menos dos frases en el caso de una descripción detallada.
-   * URL de la documentación: un enlace a la documentación de {{site.data.keyword.Bluemix_notm}}. Se crea en PWB, y este generará automáticamente el valor de url.
+   * URL de la documentación: un enlace a la documentación de {{site.data.keyword.Bluemix_notm}}. Se crea en PWB, y este genera automáticamente el valor de url.
    * URL de términos: un enlace a los términos y condiciones del servicio para su uso. Tenga en cuenta que, para fines de GDPR, no enlace con los términos y condiciones de servicios de terceros. En su lugar, debe proporcionar una página exclusiva para un servicio de facturación integrado.
-   * URL de instrucciones: de forma similar al URL de documentación, apuntará a la documentación de {{site.data.keyword.Bluemix_notm}}; sin embargo, el URL de instrucciones extraerá de forma dinámica la documentación en un separador Iniciación del panel de control del servicio.
-   * Categoría: selección de las categorías disponibles de {{site.data.keyword.Bluemix_notm}} en las que se debe colocar el servicio en el catálogo.
+   * URL de instrucciones: de forma similar al URL de documentación, apuntará a la documentación de {{site.data.keyword.Bluemix_notm}}; sin embargo, el URL de instrucciones extrae de forma dinámica la documentación en un separador Iniciación del panel de control del servicio.
+   * Categoría: selección de las categorías disponibles de {{site.data.keyword.Bluemix_notm}} en las que se coloca el servicio en el catálogo.
    * Viñetas: pequeños puntos con descripciones del servicio
    * Medios: capturas de pantalla y vídeos sobre el servicio
    * Nombre del plan de servicio: cada plan tiene un nombre técnico. Debe estar en minúsculas, sin espacios y puede incluir "-".  Por ejemplo, `gold`.
    * Nombre de visualización del plan de servicio: nombre descriptivo del plan. Por ejemplo, `Gold`
-   * ID del plan de servicio: GUID para el plan de servicio que se utiliza en las llamadas de API al intermediario OSB. Debe ser un valor exclusivo. La consola de gestión de recursos generará automáticamente este valor.
+   * ID del plan de servicio: GUID para el plan de servicio que se utiliza en las llamadas de API al intermediario OSB. Este valor debe ser exclusivo. La consola de gestión de recursos genera este valor.
    * Descripción del plan de servicio: la descripción del plan del recurso. La descripción se visualiza después de que se seleccione un plan en la página de detalles del recurso en el catálogo de IBM Cloud
    * Viñetas del plan de servicio: breves puntos descriptivos sobre el plan de servicio
 
 
 ## Open Service Broker
 
-Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con intermediarios de servicio para suministrar y gestionar instancias de servicio (una instancia de una oferta de servicio) y enlaces de servicio (la representación de una asociación entre una aplicación y una instancia de servicio, que a menudo contiene las credenciales que utilizará la aplicación para comunicarse con la instancia de servicio). Al proporcionar valores de metadatos válidos se creará una respuesta de API REST correcta cuando se realice una solicitud.
+Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con intermediarios de servicio para suministrar y gestionar instancias de servicio (una instancia de una oferta de servicio) y enlaces de servicio (la representación de una asociación entre una aplicación y una instancia de servicio, que a menudo incluye las credenciales que utiliza la aplicación para comunicarse con la instancia de servicio). Al proporcionar valores de metadatos válidos se crea una respuesta de API REST correcta cuando se realiza una solicitud.
 
 {{site.data.keyword.Bluemix_notm}} utiliza la API de la especificación Open Service Broker (OSB) `versión 2.12`. Examine y familiarícese con la [especificación de la API Open Broker](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") y utilice el archivo readme como guía para obtener más información.
 
-Cuando el controlador de recursos recibe una solicitud para suministrar un recurso, llama a OSB para validar el tipo de servicio, la oferta, los planes y la disponibilidad de las regiones. El controlador de recursos también valida la visibilidad del plan asociado con la cuenta del cliente. {{site.data.keyword.Bluemix_notm}} ofrece ejemplos de intermediario y documentación sobre la API que amplían la especificación OSB. Encontrará más detalles sobre el desarrollo y el alojamiento del intermediario a medida que siga los pasos detallados de desarrollo e incorporación de la facturación integrada.
+Cuando el controlador de recursos recibe una solicitud para suministrar un recurso, llama a OSB para validar el tipo de servicio, la oferta, los planes y la disponibilidad de las regiones. El controlador de recursos también valida la visibilidad del plan que está asociado con la cuenta del cliente. {{site.data.keyword.Bluemix_notm}} ofrece ejemplos de intermediario y documentación sobre la API que amplían la especificación OSB. Encontrará más detalles sobre el desarrollo y el alojamiento del intermediario a medida que siga los pasos detallados de desarrollo e incorporación de la facturación integrada.
 
 ## Servicio de medición de {{site.data.keyword.Bluemix_notm}}
 
@@ -93,10 +93,10 @@ Cuando un usuario desea crear una instancia de servicio, puede iniciarla de una 
 * **CLI**: con `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Consola de {{site.data.keyword.Bluemix_notm}}**: el usuario puede seleccionar el servicio y el plan y utilizar la operación **Crear**.
 
-La plataforma {{site.data.keyword.Bluemix_notm}} valida que el usuario tiene permiso para crear la instancia de servicio utilizando {{site.data.keyword.Bluemix_notm}} IAM. Después de que se produzca esta validación, se invoca el punto final de suministro del intermediario de servicio (PUT /v2/resource_instances/:resource_instance_id). Cuando se produce el suministro, se deben cumplir las siguientes reglas:
+La plataforma {{site.data.keyword.Bluemix_notm}} valida que el usuario tiene permiso para crear la instancia de servicio mediante {{site.data.keyword.Bluemix_notm}} IAM. Después de que se produzca esta validación, se inicia el punto final de suministro del intermediario de servicio (PUT /v2/resource_instances/:resource_instance_id). Cuando se produce el suministro, se deben cumplir las siguientes reglas:
 * Se debe incluir el contexto {{site.data.keyword.Bluemix_notm}} en la variable context
-* `X-Broker-API-Originating-Identity` debe tener el ID de IAM de IBM del usuario que ha iniciado la solicitud
-* La sección parameters debe incluir la ubicación solicitada (y los parámetros adicionales que necesite el servicio).
+* `X-Broker-API-Originating-Identity` tiene el ID de IAM de IBM del usuario que ha iniciado la solicitud
+* La sección parameters incluye la ubicación solicitada (y más parámetros que necesita el servicio).
 
 Solicitud de suministro de ejemplo:
 
@@ -131,7 +131,7 @@ En el ejemplo anterior, puede ver los metadatos que se devuelven en el parámetr
 
 * **"account_id"**: devuelve el ID de la cuenta de {{site.data.keyword.Bluemix_notm}} que suministra la instancia del servicio.
 
-* **crn**: cuando un cliente suministra su servicio en {{site.data.keyword.Bluemix_notm}}, se crea una instancia de servicio y esta instancia se identifica mediante su nombre de recurso de {{site.data.keyword.Bluemix_notm}} (CRN). El CRN se utiliza en todos los aspectos de la interacción con {{site.data.keyword.Bluemix_notm}}, incluidos suministro, enlace (creación de credenciales y puntos finales), medición, visualización del panel de control y control de acceso. Desde una perspectiva de proveedor de la oferta, el CRN se puede tratar en gran medida como una serie opaca que se utiliza con las API de {{site.data.keyword.Bluemix_notm}}. También se puede descomponer utilizando la estructura siguiente:
+* **crn**: cuando un cliente suministra su servicio en {{site.data.keyword.Bluemix_notm}}, se crea una instancia de servicio y esta instancia se identifica mediante su nombre de recurso de {{site.data.keyword.Bluemix_notm}} (CRN). El CRN se usa en todos los aspectos de la interacción con {{site.data.keyword.Bluemix_notm}}, incluidos suministro, enlace (creación de credenciales y puntos finales), medición, visualización del panel de control y control de acceso. Desde una perspectiva de proveedor de la oferta, el CRN se puede tratar en gran medida como una serie opaca que se utiliza con las API de {{site.data.keyword.Bluemix_notm}}. También se puede descomponer utilizando la estructura siguiente:
 
    ```
    crn:version:cname:ctype:service-name:location:scope:service-instance:resource-type:resource
