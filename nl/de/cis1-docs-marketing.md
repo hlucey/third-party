@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -52,5 +52,6 @@ Zusätzlich zur einführenden Dokumentation müssen Sie auch den Marketing-Inhal
 Nach der Übergabe der Serviceankündigung überprüft ein IBM Marketing-Manager die Ankündigung und genehmigt sie. Anschließend wird sie über die entsprechenden Kanäle veröffentlicht, nachdem Ihr Service freigegeben wurde.
 
 ## Nächste Schritte
+{: #next-steps}
 
 Nachdem Sie nun die Tasks zum Erstellen Ihrer einführenden Dokumentation und der Serviceankündigung begonnen haben, sind Sie bereit zum Definieren Ihres Angebots in der Konsole für das Ressourcenmanagement. Weitere Informationen hierzu finden Sie in [Schritt 2: Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -67,9 +67,13 @@ In der folgenden Tabelle werden die verfügbaren Messungsmodelle dargestellt.
 {: caption="Tabelle 1. Messungsmodell" caption-side="top"}
 
 ### Beispiele
+{: #examples}
+
 Beachten Sie, dass die im Dashboard vorhandene Menge in den folgenden Beispielen sich auf den Wert vor der Übermittlung der nächsten Nutzung, jedoch nach der Verarbeitung der aktuellen Nutzung bezieht.
 
 #### Standardmäßige Hinzufügung
+{: #standard-add}
+
 Berechnen Sie die Nutzungsdaten für den gesamten Monat.
 
 Formel: ADD(usages)
@@ -83,6 +87,8 @@ Formel: ADD(usages)
 | Tag 4 (Nacht)   | 5             | 20 + 5      | 25                    |
 
 #### Standardmäßiger Durchschnitt
+{: #standard-average}
+
 Berechnen Sie den Durchschnitt der Nutzungsdaten für den gesamten Monat. Beachten Sie hierbei, dass die Übermittlung von Nullnutzungsdaten ebenfalls bei der Berechnung des Durchschnitts berücksichtigt wird.
 
 Formel: AVG(usages)
@@ -96,6 +102,8 @@ Formel: AVG(usages)
 | Tag 4 (Nacht)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Standardmäßiges Maximum
+{: #standard-max}
+
 Berechnen Sie das Maximum der Nutzungsdaten für den gesamten Monat.
 
 Formel: MAX(usages)
@@ -109,6 +117,8 @@ Formel: MAX(usages)
 | Tag 4 (Nacht)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Durchschnittliche anteilmäßige Verrechnung pro Tag
+{: #proration-average}
+
 Berechnen Sie die durchschnittlichen Nutzungsdaten für jeden Tag und den Durchschnitt für den Monat. Der Durchschnitt für jeden Tag wird addiert und durch die Anzahl der bereits verstrichenen Tage (in koordinierter Weltzeit) dividiert.
 
 Formel: Summation(daily average) / Anzahl der verstrichenen Tage im Abrechnungszeitraum
@@ -129,6 +139,8 @@ Beispiel für einen Monat mit 30 Tagen:
 \* Wie für denselben Tag angezeigt, an dem die Nutzungsdaten übermittelt wurden.
 
 #### Maximale anteilmäßige Verrechnung pro Tag
+{: #daily-proration}
+
 Berechnen Sie den Maximalwert der Nutzungsdaten pro Tag und den Durchschnitt für den Monat. Der Maximalwert der einzelnen Tage wird addiert und durch die Anzahl der bereits verstrichenen Tage (in koordinierter Weltzeit) dividiert.
 
 Formel: Summation(daily max) / Anzahl der verstrichenen Tage im Abrechnungszeitraum
@@ -152,16 +164,22 @@ Beispiel für einen Monat mit 30 Tagen:
 Sie können die Skalierungskonfiguration verwenden, um die Einheitenmenge anders als bei der Übermittlung von Nutzungsdaten, bei der Anzeige im Nutzungsdashboard und anders als die verwendeten Daten für die Bewertung und Kostenberechnungen zu kompilieren. In den folgenden Beispielen werden diese Szenarios dargestellt:
 
 ### Sie möchten einen höheren Detaillierungsgrad als in der Benutzeranzeige verwenden
+{: #users}
+
 Sie möchten Nutzungsdaten mit einem höheren Detaillierungsgrad senden, für Kunden jedoch einen einfacher lesbaren numerischen Wert darstellen.
 
 Beispiel: Sie möchten den Datenverkehr einer Instanz in Byte messen und den aggregierten Wert in Megabyte anzeigen. Hierzu fügen Sie eine `Skalierung` von 1024 zur Konfiguration für die **Messung** hinzu.
 
 ### Sie möchten einen höheren Detaillierungsgrad als bei der Preisstrukturkonfiguration verwenden
+{: #pricing-configuration}
+
 Sie legen für Ihre Metriken einen Preis nach der Formel EuroX / Gigabyte fest, möchten die Übermittlung jedoch in Megabyte durchführen. Wenn der Preis für Ihre Metrik nach der Formel Euro1 / Gigabyte festgelegt wird, der Benutzer jedoch 0,5 Megabyte verwendet, dann wird 1 Euro berechnet, da Ihre Preisstruktur auf einer Abrechnung pro Gigabyte basiert. Sie fügen eine `Skalierung` von 1024 zur Konfiguration für die **Bewertung** hinzu und geben für `clip` den Wert `true` an.
 
 Diese Einstellung gilt, wenn der Preis für Ihre Metrik auch nach der Formel EuroX pro 100 API-Aufrufe (oder einer anderen Paketgröße) berechnet wird.
 
 ### Sie möchten die Skalierung sowohl auf Messungs- als auch auf Bewertungsebene durchführen
+{: #metering-rating}
+
 Sie können eine Skalierung sowohl zur Messungs- als auch zur Bewertungskonfiguration hinzufügen. Wenn die Übermittlung in Byte erfolgen soll, die Werte für den Benutzer jedoch in Megabyte angezeigt werden sollen, dann konfigurieren Sie die Messungsskalierung mit 1024. Wird der Preis für die Metrik in Gigabyte angegeben, dann müssen Sie auch die Bewertungsskalierung mit 1024 konfigurieren.
 
 ## Preisstaffelungsmodelle

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ In den folgenden Schritten wird der Prozess zur Übermittlung von Nutzungsdaten 
 {: #metering_guidelines}
 
 ### Übermittlungsrichtlinien
+{: #submission-guidelines}
 
 Beachten Sie bei Verwendung des {{site.data.keyword.Bluemix_notm}}-Messservice zur Übermittlung der Ressourcennutzungsdaten die folgenden Richtlinien:
 
@@ -61,6 +62,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
 * Wiederholen Sie die Übermittlung der Nutzungsdatensätze nur, wenn bei der vorherigen Anforderung ein echter Fehler aufgetreten ist. Nutzungsdatensätze, die erfolgreich akzeptiert wurden, dürfen nicht erneut übermittelt werden.
 
 ### Richtlinien für die Service-ID
+{: #id-guidelines}
 
   Bei der Angabe der Service-ID im Feld 'ID' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
   * Beginnen Sie die ID mit einem alphanumerischen Zeichen.
@@ -69,6 +71,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Vergewissern Sie sich, dass die ID maximal 50 Zeichen lang ist.
 
 ### Richtlinien für Ressourcennamen
+{: #resource-name}
 
   Bei der Angabe des Ressourcennamens im Feld 'resources.name' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
 
@@ -77,6 +80,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Verwenden Sie als erstes Zeichen im Namen einen Großbuchstaben.
 
 ### Richtlinien für Ressourceneinheitennamen
+{: #resource-unti}
 
   Bei der Angabe des Ressourceneinheitennamens im Feld 'resources.unit.name' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
 
@@ -84,6 +88,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Geben Sie alle Buchstaben des Namens in Großschreibung an.
   
 ### Richtlinien für Ressourceneinheitenquantität
+{: #unit-quantity}
 
   Bei der Angabe des Ressourcenmengentyps im Feld 'resources.unit.quantityType' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
   
@@ -91,6 +96,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Geben Sie alle Buchstaben des Mengentyps in Großschreibung an.
   
 ### Richtlinien für die Aggregations-ID
+{: #aggregation}
 
   Bei der Angabe der Aggregations-ID im Feld 'aggregations.id' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
 
@@ -99,6 +105,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Vergewissern Sie sich, dass diese ID mit dem Wert im Feld 'aggregations.unit' beginnt bzw. mit diesem Wert übereinstimmt. Beispiel: Sie können für 'aggregations.id' den Wert **API_CALLS_PER_MONTH** und für 'aggregations.unit' den Wert **API_CALLS** angeben.
 
 ### Richtlinien für Aggregationseinheiten
+{: #aggregation-unit}
 
   Bei der Angabe der Aggregationseinheit im Feld 'aggregations.unit' der Ressourcendefinition müssen Sie die folgenden Richtlinien beachten:
    
@@ -107,10 +114,12 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
   * Vergewissern Sie sich, dass der Einheitenname, den Sie im Feld 'aggregations.unit' angeben, ein Aggregat des Einheitennamens darstellt, den Sie im Feld 'resources.unit.name' angeben.
   
 ### Richtlinien für Aggregationsgruppen
+{: #aggregation-group}
 
   Sie müssen im Feld 'aggregations.aggregationGroup' in der Ressourcendefinition Kleinbuchstaben verwenden.
   
 ### Richtlinien für Aggregationsformeln
+{: #aggregation-formula}
 
   Wenn Sie im Feld 'aggregations.formula' in der Ressourcendefinition Rechenoperationen in der Formel verwenden wollen, dann müssen Sie die Ressourceneinheit als Operanden und einen arithmetischen Infixausdruck in der Funktion der Formel verwenden. Sie können beispielsweise die folgende Formel verwenden, um Byte in Megabyte umzuwandeln:
   ```
@@ -150,7 +159,7 @@ Sie können mehrere Nutzungsdatensätze übermitteln, indem Sie einen API-Aufruf
 | 500 |  Wiederholen Sie die Übermittlung des Nutzungsdatensatzes. Wenn das Problem bestehen bleibt, wenden Sie sich an das BSS-Messteam. |
 | 400 |  Der Nutzungsdatensatz weist nicht das richtige Format auf. Entweder ist die Schemaprüfung fehlgeschlagen, die Messungen in den Nutzungsdatensätzen sind falsch oder der Start- und der Endzeitpunkt liegen nicht innerhalb des Zeitraums zwischen der Bereitstellung und der Aufhebung der Bereitstellung. Aktualisieren Sie den Nutzungsdatensatz und übermitteln Sie ihn erneut.   |
 | 424  | In den Metadaten der Ressourceninstanz sind Fehler aufgetreten. Aktualisieren Sie die Details der Ressourceninstanz und übermitteln Sie den Nutzungsdatensatz erneut.  |
-| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes. |
+| 404  | Für die Messungsdefinition wurde kein Onboarding durchgeführt. Wenden Sie sich an das BSS-Messteam und lassen Sie überprüfen, ob für die Ressource ein Onboarding durchgeführt wurde. Wiederholen Sie anschließend die Übermittlung des Nutzungsdatensatzes.  |
 | 409  | Der Nutzungsdatensatz ist ein Duplikat. Versuchen Sie nicht, ihn erneut zu übermitteln. |
 {: caption="Tabelle 2. Statuscodes und erforderliche Aktionen" caption-side="top"}
 {: #actions}

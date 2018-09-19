@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -25,7 +25,7 @@ lastupdated: "2018-08-28"
 ## 开始之前
 {: #pre-reqs}
 
-确保已完成[入门教程](/docs/third-party/index.html)，并且已获得批准交付 Integrated Billing 服务。
+确保已完成[入门教程](/docs/third-party/index.html)，并且已获得交付 Integrated Billing 服务的许可。
 
 ## 派生 IAM 重定向 URI
 {: #redirect-uri}
@@ -89,6 +89,7 @@ Content-Type: application/json
 **认证 - 步骤 2：**用代码交换访问令牌调用
 
 ### POST <token_endpoint>
+{: #post}
 
 #### 头：
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### 授权 - 步骤 2：验证是否授予用户对服务实例的权限 (/v2/authz POST)
+{: #step-2-authorization}
 
 现在，您已认证用户并拥有自己的访问令牌，接下来需要验证用户是否能够访问服务仪表板。首先，您需要用户访问令牌中包含的一些信息，在步骤 2.1 中将对该令牌解码。然后，在步骤 2.2 中，使用这些信息来调用 IAM，以检查用户是否有权访问仪表板。
 

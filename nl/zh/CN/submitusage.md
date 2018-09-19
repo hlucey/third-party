@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ lastupdated: "2018-08-30"
 {: #metering_guidelines}
 
 ### 提交准则
+{: #submission-guidelines}
 
 使用 {{site.data.keyword.Bluemix_notm}} 计量服务来提交资源使用量数据时，请参阅以下准则：
 
@@ -61,6 +62,7 @@ lastupdated: "2018-08-30"
 * 仅当先前请求确实失败时，才重试提交使用量记录。不要重新提交已成功接受的使用量记录。
 
 ### 服务标识准则
+{: #id-guidelines}
 
   使用资源定义中的标识字段来指定服务标识时，必须遵循以下准则：
   * 标识以字母数字字符开头。
@@ -69,6 +71,7 @@ lastupdated: "2018-08-30"
   * 确保标识的最大长度为 50 个字符。
 
 ### 资源名称准则
+{: #resource-name}
 
   使用资源定义中的 resources.name 字段来指定资源名称时，必须遵循以下准则：
 
@@ -77,6 +80,7 @@ lastupdated: "2018-08-30"
   * 名称的第一个字符大写。
 
 ### 资源单位名称准则
+{: #resource-unti}
 
   使用资源定义中的 resources.unit.name 字段来指定资源单位名称时，必须遵循以下准则：
 
@@ -84,6 +88,7 @@ lastupdated: "2018-08-30"
   * 名称的所有字母均为大写。
   
 ### 资源单位数量准则
+{: #unit-quantity}
 
   使用资源定义中的 resources.unit.quantityType 字段来指定资源单位数量类型时，必须遵循以下准则：
   
@@ -91,6 +96,7 @@ lastupdated: "2018-08-30"
   * 数量类型的所有字母均为大写。
   
 ### 聚集标识准则
+{: #aggregation}
 
   使用资源定义中的 aggregations.id 字段来指定聚集标识时，必须遵循以下准则：
 
@@ -99,6 +105,7 @@ lastupdated: "2018-08-30"
   * 确保此标识以 aggregations.unit 的值开头或与此值相匹配。例如，可以为 aggregations.id 指定 **API_CALLS_PER_MONTH**，为 aggregations.unit 指定 **API_CALLS**。
 
 ### 聚集单位准则
+{: #aggregation-unit}
 
   使用资源定义中的 aggregations.unit 字段来指定聚集单位时，必须遵循以下准则：
    
@@ -107,10 +114,12 @@ lastupdated: "2018-08-30"
   * 确保在 aggregations.unit 字段中指定的单位名称是在 resources.unit.name 字段中指定的单位名称的聚集。
   
 ### 聚集组准则
+{: #aggregation-group}
 
   对于资源定义中的 aggregations.aggregationGroup 字段，必须使用小写字母。
   
 ### 聚集公式准则
+{: #aggregation-formula}
 
   对于资源定义中的 aggregations.formula 字段，如果要在公式中使用算术运算，那么必须使用资源单位作为一个操作数，并在公式函数中使用中缀算术表达式。例如，可以使用以下公式将字节转换为兆字节：
   ```

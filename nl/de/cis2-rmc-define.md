@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-31"
 
 
 ---
@@ -19,13 +19,14 @@ lastupdated: "2018-08-21"
 # Schritt 2. Angebot in der Konsole für das Ressourcenmanagement definieren
 {: #step2-define}
 
-Die Konsole für das Ressourcenmanagement ist ein Tool, das Sie durch die Bereitstellung Ihres Drittanbieterangebots im {{site.data.keyword.Bluemix_notm}}-Katalog führt. Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen, sind Sie bereit, in der Konsole für das Ressourcenmanagement die Registrierung Ihres Service durchzuführen, mit der Entwicklung zu beginnen und Ihre Preisstrukturpläne zu definieren. Die Konsole für das Ressourcenmanagement ist ein webbasiertes Tool, das Sie durch die Bereitstellung Ihres integrierten Abrechnungsservice im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
+Die Konsole für das Ressourcenmanagement ist ein Tool, das Sie durch die Bereitstellung Ihres Drittanbieterangebots im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
+Nachdem Sie nun über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen, sind Sie bereit, in der Konsole für das Ressourcenmanagement die Registrierung Ihres Service durchzuführen, mit der Entwicklung zu beginnen und Ihre Preisstrukturpläne zu definieren. Die Konsole für das Ressourcenmanagement ist ein webbasiertes Tool, das Sie durch die Bereitstellung Ihres integrierten Abrechnungsservice im {{site.data.keyword.Bluemix_notm}}-Katalog führt.
 {:shortdesc}
 
 ## Vorbereitende Schritte
 {: #pre-reqs}
 
-1. Vergewissern Sie sich, dass Sie mit dem folgenden Schritt begonnen haben: [Schritt 1. Servicedokumentation und Vertriebsfreigabe verfassen (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Vergewissern Sie sich, dass Sie mit dem folgenden Schritt beginnen: [Schritt 1. Servicedokumentation und Vertriebsfreigabe verfassen (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Vergewissern Sie sich, dass Sie die Registrierung bei {{site.data.keyword.Bluemix_notm}} durchgeführt haben. Falls Sie diesen Schritt noch nicht ausgeführt haben, dann führen Sie die [Registrierung](https://console.bluemix.net/registration) durch, bevor Sie fortfahren.
 3. Vergewissern Sie sich, dass Sie sich im korrekten Konto befinden, bevor Sie mit dem Arbeiten in der Konsole für das Ressourcenmanagement beginnen.
 4. Bereiten Sie Ihren {{site.data.keyword.Bluemix_notm}}-Servicenamen vor. Sie müssen sowohl einen Servicenamen angeben, der zur Identifikation des Service durch die {{site.data.keyword.Bluemix_notm}}-Plattform dient, als auch einen Anzeigenamen, der Ihren Kunden im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt wird.
@@ -35,7 +36,7 @@ Die Konsole für das Ressourcenmanagement ist ein Tool, das Sie durch die Bereit
    - Es dürfen keine Leerzeichen im Namen enthalten sein. Bindestriche (`-`) sind hingegen zulässig.
    - Es dürfen nur weniger als 32 Zeichen angegeben werden.
 
-   Ihr Servicename muss den Namen Ihres Unternehmens enthalten. Verfügt Ihr Unternehmen über mehrere Angebote, dann muss der Servicename sowohl das Unternehmen als auch das Angebot enthalten. Beispiel: Das Unternehmen 'Compose' verfügt über Angebote für Redis und Elasticsearch. Die Servicenamen dieser Angebote in {{site.data.keyword.Bluemix_notm}} können `compose-redis` und `compose-elasticsearch` lauten. Beiden Servicenamen sind Anzeigenamen zugeordnet, die im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt werden: *Compose Redis* und *Compose Elasticsearch*. Ein anderes Unternehmen (z. B. FastJetMail) kann über nur ein Angebot mit dem Namen 'JetMail' verfügen. In diesem Fall lautet der Servicename `fastjetmail`.
+   Ihr Servicename muss den Namen Ihres Unternehmens enthalten. Verfügt Ihr Unternehmen über mehrere Angebote, dann muss der Servicename sowohl das Unternehmen als auch das Angebot enthalten. Beispiel: Das Unternehmen 'Compose' verfügt über Angebote für Redis und Elasticsearch. Die Servicenamen dieser Angebote in {{site.data.keyword.Bluemix_notm}} können `compose-redis` und `compose-elasticsearch` lauten. Beide Servicenamen enthalten zugeordnete Anzeigenamen, die im {{site.data.keyword.Bluemix_notm}}-Katalog angezeigt werden: *Compose Redis* und *Compose Elasticsearch*. Ein anderes Unternehmen (z. B. FastJetMail) kann über nur das einzelne Angebot mit dem Namen 'JetMail' verfügen. In diesem Fall lautet der Servicename `fastjetmail`.
 
 ## Eigenes Angebot registrieren
 {: #register}
@@ -47,23 +48,23 @@ Melden Sie sich zum Einstieg an und registrieren Sie Ihr Angebot.
 2. Rufen Sie das Dashboard der Konsole für das Ressourcenmanagement auf: [https://console.bluemix.net/onboarding/dashboard](https://console.bluemix.net/onboarding/dashboard){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 3. Klicken Sie auf **Neue Ressource**, um Ihre Ressource hinzuzufügen.
 4. Fügen Sie den Wert für **Ressourcenname** hinzu. Dieser Wert gibt den eindeutigen {{site.data.keyword.Bluemix_notm}}-Servicenamen an, den Sie im vorherigen Abschnitt abgeleitet haben.
-5. An diesem Punkt innerhalb des Prozesses ist nicht davon auszugehen, dass Sie bereits über einen gehosteten Service-Broker verfügen. Wählen Sie also im Feld **Ist Ihr Broker bereit für den Import?** die Antwort **Nein** aus. Sie werden in den nachfolgenden Schritten durch die Erstellung eines Brokers geführt und dann wieder zur Konsole für das Ressourcenmanagement zurückkehren, um Ihren Broker zu importieren, nachdem die Entwicklung und das Hosten durchgeführt wurde.
+5. Es ist nicht davon auszugehen, dass Sie bereits über einen gehosteten Service-Broker verfügen. Wählen Sie also im Feld **Ist Ihr Broker bereit für den Import?** die Antwort **Nein** aus. Sie werden in den nachfolgenden Schritten durch die Erstellung eines Brokers geführt und dann wieder zur Konsole für das Ressourcenmanagement zurückkehren, um Ihren Broker zu importieren, nachdem die Entwicklung und das Hosten durchgeführt wurde.
 7. Nach der Übergabe wird die Seite **Zusammenfassung** aufgerufen. Geben Sie alle zusätzlich *erforderlichen* Werte ein und klicken Sie dann auf **Speichern**.
 
-Sie können Ihre Arbeitsergebnisse in der Konsole für das Ressourcenmanagement speichern und zu einem späteren Zeitpunkt zu diesen Ergebnissen zurückkehren, um weitere Informationen hinzuzufügen. Die Konsole für das Ressourcenmanagement wurde so konzipiert, dass Sie Unterstützung bei der Verwaltung des Lebenszyklus Ihres Service erhalten. Deswegen ist es unerheblich, wenn Sie zum momentanen Zeitpunkt nicht alle Antworten auf die in den Feldern gestellten Fragen haben.
+Sie können Ihre Arbeitsergebnisse in der Konsole für das Ressourcenmanagement speichern und zu einem späteren Zeitpunkt zu diesen Ergebnissen zurückkehren, um weitere Informationen hinzuzufügen. Die Konsole für das Ressourcenmanagement wurde so konzipiert, dass Sie Unterstützung bei der Verwaltung des Lebenszyklus Ihres Service erhalten. Deshalb ist es in Ordnung, wenn Sie noch nicht alle Antworten auf die in den Feldern gestellten Fragen haben.
 {: tip}
 
 ## Angebotsmetadaten eingeben
 {: #offering-metadata}
 
-Geben Sie auf der Seite **Angebot** die Metadatenwerte an, die im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert sind. Darüber hinaus ist bei einigen dieser Werte ein Export und die Speicherung in Ihrem Service-Broker erforderlich, in dem sie für die Bereitstellung verwendet und als Teil der `Katalog (GET)`-Antwort zurückgegeben werden. Sie verwenden diese Werte in den nachfolgenden Schritten zur raschen Entwicklung eines Service-Brokers.
+Geben Sie auf der Seite **Angebot** die Metadatenwerte an, die im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert sind. Darüber hinaus ist bei einigen dieser Werte ein Export und die Speicherung in Ihrem Service-Broker erforderlich, in dem sie für die Bereitstellung verwendet und als Teil der `Katalog (GET)`-Antwort zurückgegeben werden. Verwenden Sie diese Werte in den nachfolgenden Schritten, um rasch einen Service-Broker zu entwickeln.
 
 1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Angebot** und dann auf die Registerkarte für die **Listenseite**. Auf der **Listenseite** werden die Metadaten definiert, die im Service-Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Angebots angezeigt werden. Geben Sie alle erforderlichen Werte an und klicken Sie dann auf **Speichern**. Die Konsole für das Ressourcenmanagement führt eine Erstregistrierung Ihres Service bei {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) durch. Daraufhin wird eine Benachrichtigung angezeigt, in der Sie darüber informiert werden, dass Ihr Service bei IAM registriert wurde. Später werden Sie weitere Aktionen mit IAM ausführen.
 2. Klicken Sie auf der Seite 'Angebot' auf die Registerkarte **Einstellungen**.
-   1. Geben Sie an, ob für Ihr Angebot die Option **Werden Planänderungen unterstützt?** aktiviert werden soll. Der Standardwert lautet **Nein**. Wenn Sie **Ja** angeben, dann müssen Sie Open Service Broker so erweitern, dass Planänderungen für bereitgestellte Instanzen unterstützt werden. Wenn Ihr Angebot mehrere Pläne unterstützt und wenn Sie möchten, dass Benutzer die Pläne für eine vorhandene bereitgestellte Instanz ändern können, dann müssen Sie die Funktion aktivieren, über die Benutzer ihre Serviceinstanz aktualisieren können. Weitere Details finden Sie unter dem Endpunkt `/v2/service_instances/{instance_id} PATCH` in der [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
-   2. Geben Sie an, ob für Ihren Service die Option **Bindung möglich** aktiviert werden soll. Der Standardwert ist **Nein**. Wählen Sie **Ja** aus, wenn Ihr Service in {{site.data.keyword.Bluemix_notm}} an Anwendungen gebunden werden kann. Wenn eine Bindung möglich ist, dann muss der Service API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückgeben können. Bei der Entwicklung eines Service, für den eine Bindung möglich ist, müssen Sie die Informationen im Abschnitt zu den [bindefähigen Operationen in der Open Service Broker-API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") beachten.
+   1. Geben Sie an, ob für Ihr Angebot die Option **Werden Planänderungen unterstützt?** zulässig sein soll. Der Standardwert lautet **Nein**. Wenn Sie **Ja** angeben, dann müssen Sie Open Service Broker so erweitern, dass Planänderungen für bereitgestellte Instanzen unterstützt werden. Wenn Ihr Angebot mehrere Pläne unterstützt und wenn Sie möchten, dass Benutzer die Pläne für eine vorhandene bereitgestellte Instanz ändern, müssen Sie die Funktion aktivieren, über die Benutzer ihre Serviceinstanz aktualisieren können. Weitere Details finden Sie unter dem Endpunkt `/v2/service_instances/{instance_id} PATCH` in der [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+   2. Geben Sie an, ob für Ihren Service die Option **Bindable** gelten soll. Der Standardwert ist **Nein**. Wählen Sie **Ja** aus, wenn Ihr Service in {{site.data.keyword.Bluemix_notm}} an Anwendungen gebunden werden kann. Wenn eine Bindung möglich sein soll, muss der Service API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückgeben können. Bei der Entwicklung eines Service, für den eine Bindung möglich ist, müssen Sie die Informationen im Abschnitt zu den [bindefähigen Operationen in der Open Service Broker-API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") beachten.
    3. Geben Sie die Werte in den zusätzlich erforderlichen Feldern an und klicken Sie dann auf **Speichern**.
-3. Auf der Seite 'Angebot' wird nun ein Häkchen in der Navigation angezeigt, das angibt, dass Sie die Mindestanforderungen beim Ausfüllen dieser Seite erfüllt haben. Wird die Seite weiterhin als unvollständig ausgewiesen, dann müssen Sie sie erneut öffnen und auf unvollständig ausgefüllte *erforderliche* Felder überprüfen.
+3. Auf der Seite 'Angebot' wird nun ein Häkchen in der Navigation angezeigt, das angibt, dass Sie die Mindestanforderungen beim Ausfüllen dieser Seite erfüllt haben. Wird die Seite weiterhin als unvollständig ausgewiesen, müssen Sie sie erneut öffnen und auf unvollständig ausgefüllte *erforderliche* Felder überprüfen.
 
 Ihr erstes Anschreiben zu Ihrem Angebot umfasst eine URL für die Servicedokumentation, die von Provider Workbench generiert wurde. Sie müssen diese URL in den Feldern **Dokumentations-URL** und **Anweisungs-URL** eingeben.
 {: tip}
@@ -80,13 +81,13 @@ Die Konsole für das Ressourcenmanagement generiert die folgenden IAM-Werte:
    - Geheimer Clientschlüssel (generiert und nicht gespeichert)
 
 Der Service-Provider muss folgende Daten angeben:
-   - Weiterleitungs-URI (Nach der OSB-Entwicklung kehren Sie zur Konsole für das Ressourcenmanagement zurück. Sie können den Weiterleitungs-URI aus der Position des gehosteten Service-Brokers ableiten.)
+   - Weiterleitungs-URI (Nach der OSB-Entwicklung kehren Sie zur Konsole für das Ressourcenmanagement zurück. Sie leiten den Weiterleitungs-URI aus der Position des gehosteten Service-Brokers ab.)
 
 1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Zugriffsmanagement**.
 2. Klicken Sie auf **IAM aktivieren**. Die Konsole für das Ressourcenmanagement registriert Ihren Service bei IAM und erstellt die Service-ID, die Richtlinie und einen API-Schlüssel für Sie. Darüber hinaus wird eine unvollständige Client-ID und ein unvollständiger geheimer Schlüssel erstellt. Die Client-ID muss anhand Ihres Weiterleitungs-URI aktualisiert werden, nachdem dieser zur Verfügung steht.
 3. Klicken Sie auf **Status**, um den aktuellen Status Ihrer IAM-Aktivierung anzuzeigen.
 
-**Hinweis**: Sie müssen zu einem späteren Zeitpunkt die IAM-Seite erneut aufrufen, um den `Weiterleitungs-URI` anzugeben. Dieser Wert steht erst dann zur Verfügung, wenn Sie bestimmte zusätzliche Entwicklungsschritte ausgeführt haben, um einen Authentifizierungsablauf zu erstellen. In nachfolgenden Schritten werden Sie durch die Erkennung des Wertes für den Weiterleitungs-URI geführt.
+**Anmerkung**: Sie müssen zu einem späteren Zeitpunkt die IAM-Seite erneut aufrufen, um den `Weiterleitungs-URI` anzugeben. Dieser Wert steht erst dann zur Verfügung, wenn Sie bestimmte zusätzliche Entwicklungsschritte ausgeführt haben, um einen Authentifizierungsablauf zu erstellen. In nachfolgenden Schritten werden Sie durch die Erkennung des Wertes für den Weiterleitungs-URI geführt.
 
 Sie erhalten Ihren API-Schlüssel, wenn Sie **IAM aktivieren**. Es ist wichtig, dass Sie den API-Schlüssel speichern. Der Wert wird nicht erneut angezeigt. Wenn Sie den API-Schlüssel verlieren, dann können Sie ihn löschen und einen neuen API-Schlüssel erstellen: [API-Schlüssel für Service-ID verwalten](/docs/iam/serviceid_keys.html#serviceidapikeys)
 {: tip}
@@ -94,7 +95,7 @@ Sie erhalten Ihren API-Schlüssel, wenn Sie **IAM aktivieren**. Es ist wichtig, 
 ## Preisstrukturplan entwickeln
 {: #pricing-plan}
 
-Wenn Sie das Onboarding Ihres Service in {{site.data.keyword.Bluemix_notm}} durchführen, dann müssen Sie auch einen Preisstrukturplan definieren. Wenn Sie über detailliertes Wissen zur Vorgehensweise bei der Belastung von Benutzern für Ihren Service verfügen, dann können Sie diese Informationen in Ihrem Plan angeben. Wenn Sie sich jedoch noch nicht für einen gebührenpflichtigen Plan entschieden haben, dann können Sie mit der Aktivierung eines kostenfreien Plans beginnen und später einen gebührenpflichtigen Plan einrichten.
+Wenn Sie das Onboarding Ihres Service in {{site.data.keyword.Bluemix_notm}} durchführen, dann müssen Sie auch einen Preisstrukturplan definieren. Wenn Sie über detailliertes Wissen zur Vorgehensweise bei der Belastung von Benutzern für Ihren Service verfügen, dann können Sie diese Informationen in Ihrem Plan angeben. Wenn Sie sich jedoch noch nicht für einen gebührenpflichtigen Plan entschieden haben, können Sie mit der Aktivierung eines kostenlosen Plans beginnen und später einen gebührenpflichtigen Plan einrichten.
 
 1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Preisstruktur**.
 2. Klicken Sie auf **Plan hinzufügen**, um einen neuen Planeintrag zu erstellen, und klicken Sie dann auf **Plan bearbeiten**, um den Plan zu bearbeiten.
@@ -109,7 +110,7 @@ Service-Provider müssen die stündliche Übermittlung der Nutzungsdaten für al
 ## Metadaten im JSON-Format exportieren
 {: #export-metadata}
 
-Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement definiert haben, können Sie die Datei mit dem Namen 'catalog.json' herunterladen und sie verwenden, um die Entwicklung Ihres Open Service Broker zu informieren. Die Datei 'catalog.json' enthält Metadaten, die im Broker gehostet werden müssen. Diese Werte definieren den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Alle zusätzlichen Katalogmetadaten, die nicht zur Bereitstellung erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden.
+Nachdem Sie Ihren Service nun in der Konsole für das Ressourcenmanagement definiert haben, können Sie die Datei mit dem Namen 'catalog.json' herunterladen und sie verwenden, um die Entwicklung Ihres Open Service Broker zu informieren. Die Datei 'catalog.json' enthält Metadaten, die im Broker gehostet werden müssen. Diese Werte definieren den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Alle zusätzlichen Katalogmetadaten, die für die Bereitstellung nicht erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden.
 
 1. Öffnen Sie in der Konsole für das Ressourcenmanagement die Seite **Bereitstellungen**.
 2. Klicken Sie auf **Verwalten**.

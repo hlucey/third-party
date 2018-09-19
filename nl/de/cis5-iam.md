@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -89,6 +89,7 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 **Authentifizierung - Schritt 2:** Code für Aufruf eines Zugriffstokens austauschen
 
 ### POST <token_endpoint>
+{: #post}
 
 #### Header:
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### Berechtigung - Schritt 2: Berechtigung des Benutzers für die Serviceinstanz validieren (/v2/authz POST)
+{: #step-2-authorization}
 
 Nach der Authentifizierung des Benutzers und der Erstellung eines eigenen Zugriffstokens muss überprüft werden, ob der Benutzer auf das Service-Dashboard zugreifen kann. Zuerst müssen bestimmte Informationen, die im Zugriffstoken des Benutzers gespeichert sind, abgerufen werden. Diese Informationen werden in Schritt 2.1 entschlüsselt. Anschließend werden diese Informationen zum Aufrufen von IAM verwendet. Auf diese Weise kann geprüft werden, ob der Benutzer für den Zugriff auf das Dashboard (Schritt 2.2) berechtigt ist.
 

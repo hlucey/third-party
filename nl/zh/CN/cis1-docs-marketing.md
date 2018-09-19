@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -25,7 +25,7 @@ lastupdated: "2018-08-27"
 ## 开始之前
 {: #prereqs}
 
-确保已完成[入门教程](/docs/third-party/index.html)，并且已获得批准交付 Integrated Billing 服务。
+确保已完成[入门教程](/docs/third-party/index.html)，并且已获得交付 Integrated Billing 服务的许可。
 
 ## 创建入门文档
 {: #docs}
@@ -52,5 +52,6 @@ lastupdated: "2018-08-27"
 提交服务公告后，IBM 市场营销经理将对其进行复查并批准，然后在您发布服务后，将该公告发布到相应的渠道。
 
 ## 后续步骤
+{: #next-steps}
 
 现在，您已启动用于创建入门文档和服务公告的任务，因此您已准备好在资源管理控制台中定义产品。请参阅[步骤 2：在资源管理控制台中定义产品](/docs/third-party/cis2-rmc-define.html)。

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-23"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -22,9 +22,9 @@ lastupdated: "2018-08-23"
 通过使用从资源管理控制台中导出的元数据，您可使用所选编程语言构建一个或多个新的服务代理程序。
 {:shortdesc}
 
-服务代理程序用于管理服务的生命周期。{{site.data.keyword.Bluemix_notm}} 平台与服务代理程序进行交互，以供应和管理服务实例（服务产品的实例化）和服务绑定（应用程序与服务实例之间的关联的表示，通常包含应用程序将用于与服务实例进行通信的凭证）。提供有效的元数据值将在执行请求时创建成功的 RESTful API 响应。
+服务代理程序用于管理服务的生命周期。{{site.data.keyword.Bluemix_notm}} 平台会与服务代理程序进行交互，以供应和管理服务实例（服务产品实例化）和服务绑定（代表应用程序与服务实例之间的一种关联，通常包含应用程序在与服务实例进行通信时使用的凭证）。提供有效的元数据值会在执行请求时创建成功的 RESTful API 响应。
 
-您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来开始构建代理程序。
+您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来构建代理程序。
 
 ## 开始之前
 {: #pre-reqs}
@@ -37,7 +37,7 @@ lastupdated: "2018-08-23"
 ## 查看 {{site.data.keyword.Bluemix_notm}} 平台供应方案
 {: #scenario}
 
-您将开发与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
+您要开发的是与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
 
 ## 熟悉 OSB 规范
 {: #learn-osb}
@@ -49,13 +49,13 @@ lastupdated: "2018-08-23"
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
 
-**注：**样本并不代表所有语言。例如，如果您需要样本 Python 代理程序，那么应该能够通过搜索 Google 来找到 Cloud Foundry 样本。您可能需要调整此样本来满足 OSB 需求。
+**注：**样本并不代表所有语言。例如，如果您需要样本 Python 代理程序，那么可以搜索 Google 来找到 Cloud Foundry 样本。您可能需要调整此样本来满足 OSB 需求。
 
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文档
 {: #docs}
 
-应该在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它将如何与代理程序进行交互。
+可以在了解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 的基础上开发服务代理程序。熟悉代理程序 API，了解它如何与代理程序进行交互。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 扩展了 Open Service Broker 2.12 规范。
 {: tip}
@@ -65,8 +65,8 @@ lastupdated: "2018-08-23"
 服务代理程序必须提供 REST API 使用的一组标准元数据值，并且 {{site.data.keyword.Bluemix_notm}} 代理程序必须包含用于以下 REST API 端点/路径的逻辑：
 
 <dl>
-  <dt>目录 (GET)</dt>
-  <dd>返回代理程序中包含的目录元数据。有许多其他未返回的目录元数据值 - 这些值仅在资源管理控制台中添加并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。</dd>
+  <dt>catalog (GET)</dt>
+  <dd>返回代理程序中包含的目录元数据。有许多其他目录元数据值未返回。这些值仅在资源管理控制台中添加并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。</dd>
   <dt>资源实例 (PUT)</dt>
   <dd>供应服务实例</dd>
   <dt>资源实例 (DELETE)</dt>
@@ -75,7 +75,7 @@ lastupdated: "2018-08-23"
   <dd>更新服务实例。</dd>
 </dl>
 
-**关于目录 (GET) 的注释**：此端点定义代理程序与 {{site.data.keyword.Bluemix_notm}} 平台（用于代理程序支持的服务和套餐）之间的合同。此端点返回存储在代理程序中的目录元数据。这些值定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。在供应时非必需的其他所有目录元数据都将存储在 {{site.data.keyword.Bluemix_notm}}“目录”中，并且对用于呈现仪表板的目录显示值（如链接、图标和 i18n 转换的元数据）的任何更新都应在资源管理控制台中进行更新，而不在代理程序中存放。代理程序中存储的任何元数据都不会显示在 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 中；控制台和 CLI 将返回在资源管理控制台内设置并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的内容。下面是目录 (GET) 应该返回的最少必需值：
+**关于 catalog (GET) 的注释**：此端点定义代理程序与 {{site.data.keyword.Bluemix_notm}} 平台（用于代理程序支持的服务和套餐）之间的合同。此端点返回存储在代理程序中的目录元数据。这些值定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。供应时不需要的所有其他目录元数据都存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。对用于呈现仪表板的目录显示值（如链接、图标和 i18n 转换的元数据）的任何更新都必须在资源管理控制台中进行，而不在代理程序中存放。代理程序中存储的任何元数据都不会显示在 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 中。控制台和 CLI 会返回在资源管理控制台内设置并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的内容。以下部分显示了 catalog (GET) 将返回的最少必需值：
 
 ```
 {
@@ -100,7 +100,7 @@ lastupdated: "2018-08-23"
 
 ### 可绑定服务的必需端点逻辑
 
-如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，那么必须能够将 API 端点和凭证返回给服务使用者。可绑定服务必须使用 Open Service Broker 规范中的可绑定操作，并实现以下端点/路径：
+如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，那么必须将 API 端点和凭证返回给服务使用者。可绑定服务必须使用 Open Service Broker 规范中的可绑定操作，并实现以下端点/路径：
 
 <dl>
   <dt>绑定和凭证 (PUT)</dt>
@@ -111,7 +111,7 @@ lastupdated: "2018-08-23"
 
 ### 必需的 {{site.data.keyword.Bluemix_notm}} 扩展端点
 
-OSB 规范*不*支持禁用但尚未删除的实例状态。为了使 {{site.data.keyword.Bluemix_notm}} 能够支持可能遇到导致帐户暂挂（但尚未取消）的计费中断或其他情况的客户，{{site.data.keyword.Bluemix_notm}} 定义了扩展 API 端点，允许禁用和重新启用服务实例。**需要**以下端点扩展：
+OSB 规范*不支持已禁用但尚未删除的实例状态。客户可能会遇到计费中断或导致帐户暂挂（但尚未取消）的其他情况，为了使 {{site.data.keyword.Bluemix_notm}} 能够为这些客户提供支持，{{site.data.keyword.Bluemix_notm}} 定义了扩展 API 端点来允许禁用和重新启用服务实例。以下端点扩展是**必需的**：
 
 <dl>
   <dt>启用和禁用实例 (GET)</dt>
@@ -120,12 +120,12 @@ OSB 规范*不*支持禁用但尚未删除的实例状态。为了使 {{site.dat
   <dd>允许启用或禁用服务实例。</dd>
 </dl>
 
-**注**：调用禁用端点时禁用对服务实例的访问，以及调用启用端点时重新启用对服务实例的访问，是服务提供者的责任。
+**注**：在禁用端点启动时禁用对服务实例的访问，以及在启用端点启动时重新启用对服务实例的访问，是服务提供者的责任。
 
 ## 了解如何使用导出的元数据来指导代理程序开发
 {: #use-metadata}
 
-从资源管理控制台导出的元数据可以用作开发您自己的代理程序的指南。并非输入到资源管理控制台中的所有值都需要用于供应服务。从资源管理控制台导出的元数据定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。导出的 JSON 应该提供以下值：
+从资源管理控制台导出的元数据可以用作开发您自己的代理程序的指南。并非输入到资源管理控制台中的所有值都需要用于供应服务。从资源管理控制台导出的元数据定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。导出的 JSON 提供以下值：
 
 ```
 {
@@ -176,17 +176,17 @@ services :
 ```
 
 
-OSB 服务数组必须与添加到资源管理控制台中的产品元数据完全相同。要确保在 OSB 与资源管理控制台之间进行一对一奇偶性校验，请务必将从资源管理控制台下载的 `catalog.json` 中的服务数组与代理程序中的实际服务数组进行比较。所有服务和套餐标识及名称都必须匹配。
+OSB 服务数组必须与添加到资源管理控制台中的产品元数据相同。要确保能够在 OSB 与资源管理控制台之间进行一对一奇偶性校验，请务必将您从资源管理控制台下载的 `catalog.json` 中的服务数组与代理程序中的实际服务数组进行比较。所有服务和套餐标识及名称都必须匹配。
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 平台提供的代理程序信息
 {: #broker info}
 
-服务代理程序将从 {{site.data.keyword.Bluemix_notm}} 平台接收以下信息：
+服务代理程序会从 {{site.data.keyword.Bluemix_notm}} 平台接收以下信息：
 
 ### X-Broker-API-Originating-Identity
 
-**用户身份头**将通过 API 源身份头提供。此请求头将包含用户的 {{site.data.keyword.Bluemix_notm}} IAM 身份。IAM 身份将为 base64 编码。{{site.data.keyword.Bluemix_notm}} 支持单个认证域：`IBMid`。`IBMid` 域使用 IBM 标识唯一标识 (IUI) 来标识 {{site.data.keyword.Bluemix_notm}} 中的用户身份。此 IUI 是服务提供者的不透明字符串。
+**用户身份头**通过 API 源身份头来提供。此请求头包含用户的 {{site.data.keyword.Bluemix_notm}} IAM 身份。IAM 身份为 base64 编码。{{site.data.keyword.Bluemix_notm}} 支持单个认证域：`IBMid`。`IBMid` 域使用 IBM 标识唯一标识 (IUI) 来标识 {{site.data.keyword.Bluemix_notm}} 中的用户身份。此 IUI 是服务提供者的不透明字符串。
 
 示例：
 
@@ -198,31 +198,31 @@ Decoded:
 
 ### API 版本头
 
-**API 版本头**将为 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。例如：`X-Broker-Api-Version: 2.12`。
+**API 版本头**为 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。例如：`X-Broker-Api-Version: 2.12`。
 
 ### 资源实例 (PUT) body.context 和资源实例 (PATCH) body.context
 
-`PUT /v2/service_instances/:resource_instance_id` 和 `PATCH /v2/service_instances/:resource_instance_id` 将在 **body.context** 中接收到以下值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
+`PUT /v2/service_instances/:resource_instance_id` 和 `PATCH /v2/service_instances/:resource_instance_id` 会在 **body.context** 中接收以下值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
 ## 其他代理程序建议
 {: #more-info}
 
 ### 有关使用异步与同步操作的建议
 
-OSB API 支持同步和异步操作方式。如果操作需要的时间将少于 10 秒，那么建议使用同步响应。否则，应使用异步操作方式。OSB 规范中包含有关此内容的更多信息。
+OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10 秒，那么建议使用同步响应。否则，必须使用异步操作方式。有关更多信息，请参阅 OSB 规范。
 
-如果在尝试供应实例时异步操作需要的时间少于 10 秒，那么平台将超时。
+如果在供应实例时异步操作需要的时间少于 10 秒，那么平台将超时。
 {: tip}
 
 ### 管理不同位置代理程序的建议
 
-用户了解其云服务的位置对于等待时间、可用性和数据存储位置非常重要。
+用户必须了解其云服务的位置，才能确定等待时间、可用性和数据存储位置。
 
-在 {{site.data.keyword.Bluemix_notm}} 上供应服务实例时，用户将提供的其中一个必需参数是要供应该服务实例的位置。某些服务可能支持在多个位置进行供应。例如，数据库服务可支持在所有 {{site.data.keyword.Bluemix_notm}} 区域中供应，也可以支持子集。
+在 {{site.data.keyword.Bluemix_notm}} 上供应服务实例时，用户提供的其中一个必需参数是要供应该服务实例的位置。某些服务可能支持在多个位置进行供应。例如，数据库服务可能支持在所有 {{site.data.keyword.Bluemix_notm}} 区域中供应，也可能支持在部分地区中供应。
 
-如果第三方基于 API 的服务在其他云中实现并公开在 {{site.data.keyword.Bluemix_notm}} 中，那么该位置应该指示该服务在其他云中的位置。
+如果基于第三方 API 的服务在另一个云中实施，并在 {{site.data.keyword.Bluemix_notm}} 中公开，那么该位置会指示该服务在其他云中的位置。
 
-上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实现一个 OSB 代理程序，但是您可根据部署策略和要为服务支持的位置，选择具有多个代理程序。在资源管理控制台工具中，您已建立服务/套餐/位置元组与将为该元组提供操作的代理程序之间的映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
+上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实施一个 OSB 代理程序，但您可根据部署策略和要为服务提供支持的位置，选择实施多个代理程序。在资源管理控制台工具中，您已在服务/套餐/位置元组与为该元组提供操作的代理程序之间建立映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
 
 有关可用位置的列表，请查阅 [IBM 全球目录位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义其他位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
 
@@ -230,24 +230,24 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间将少于
 ## 托管代理程序
 {: #host}
 
-代理程序必须作为可响应 REST API 调用的应用程序的一部分进行托管。托管位置必须符合 {{site.data.keyword.Bluemix_notm}} 安全准则。您可以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，也可以在外部进行托管，只要可从 {{site.data.keyword.Bluemix_notm}} 本身公开访问托管位置即可。
+代理程序必须作为可响应 REST API 调用的应用程序的一部分进行托管。托管位置必须符合 {{site.data.keyword.Bluemix_notm}} 安全准则。可以在 {{site.data.keyword.Bluemix_notm}} 中进行托管，也可以在外部进行托管，只要可从 {{site.data.keyword.Bluemix_notm}} 本身公开访问托管位置即可。
 
 要在 IBM 外部托管代理程序，必须确保该位置符合以下安全准则：
 - 必须遵循传输层安全性 (TLS) 协议 V1.2
 - 必须在可通过公用因特网访问的有效 HTTPS 端点上进行托管
 
-如果要在 {{site.data.keyword.Bluemix_notm}} 中进行托管，可以在此处找到有关使用 Containers (Kubernetes) 创建应用程序的信息：[内部采用者 - 用法信息](/docs/containers/cs_internal.html#cs_internal)。
+如果要在 {{site.data.keyword.Bluemix_notm}} 中进行托管，可以在以下位置查找有关使用 Containers (Kubernetes) 创建应用程序的信息：[内部采用者 - 使用信息](/docs/containers/cs_internal.html#cs_internal)。
 
-您将需要服务代理程序的托管位置才能完成下一步。移动到下一步时，确保已具有与应用程序关联的 URL 和凭证。
+您需要有服务代理程序的托管位置才能完成下一步。进行下一步时，请确保已具有与应用程序相关联的 URL 和凭证。
 {: tip}
 
 ## 如何测试服务的代理程序
 {: #test}
 
-您应该通过对要启用的不同端点运行 curl 命令来验证代理程序。样本自述文件提供了有关对 OSB 端点运行 curl 的极佳指导信息：https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+要验证代理程序，您必须对要启用的不同端点运行 curl 命令。有关对 OSB 端点运行 curl 命令的最佳指导信息，请参阅样本自述文件：https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 
 ### 如何对服务代理程序运行 curl
-
+{: #curl-broker}
 使用以下示例来测试代理程序 curl 响应：
 
 ```
@@ -264,5 +264,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## 后续步骤
+{: #next-steps}
 
-您已掌握了一些重要技能！您刚才已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：开发认证流程](/docs/third-party/cis5-iam.html)。
+您已掌握了一些重要技能！您已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：开发认证流程](/docs/third-party/cis5-iam.html)。

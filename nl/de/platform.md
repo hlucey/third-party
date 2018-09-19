@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -17,14 +17,17 @@ lastupdated: "2018-08-30"
 {:download: .download}
 
 # Vorgehensweise zur Verwendung der {{site.data.keyword.Bluemix_notm}}-Plattform durch integrierte Abrechnungsservices
+{: #how-it-works}
 
 Integrierte Abrechnungsservices unterscheiden sich von Empfehlungsservices. Ein integrierter Abrechnungsservice verwendet die {{site.data.keyword.Bluemix_notm}}-Plattform zur Authentifizierung, für den Zugriff, die Bereitstellung, die Messung und die Abrechnung. Im vorliegenden Abschnitt wird ein allgemeiner Überblick über die Plattformkomponenten gegeben, die von Ihrem integrierten Abrechnungsservice verwendet werden.
 
 ## {{site.data.keyword.Bluemix_notm}}-Bereitstellungsebene
+{: #provisioning-layer}
 
 Die Bereitstellungsebene verwaltet den Lebenszyklus von {{site.data.keyword.Bluemix_notm}}-Ressourcen. Die Bereitstellungsebene ist für die Steuerung und Überwachung des Lebenszyklus von Ressourcen in einem Kundenkonto verantwortlich. Bei *Ressourcen* handelt es sich um physische und logische Komponenten, die für eine Anwendung oder eine Serviceinstanz bereitgestellt oder reserviert werden können. Zu den Beispielen für Ressourcen gehören Datenbanken und Konten, Prozessoren, Speicher und Speichergrenzwerte. Im Allgemeinen dienen Ressourcen, die in der Bereitstellungsebene überwacht werden, der Zuordnung von Nutzungsmetriken und Abrechnungen, dies ist jedoch nicht zwingend erforderlich. In bestimmten Fällen kann die Ressource der Bereitstellungsebene zugeordnet werden, um sicherzustellen, dass der Lebenszyklus der Ressource zusammen mit dem Lebenszyklus des Kontos verwaltet werden kann.
 
 ### Verwaltung des Lebenszyklus von Ressourcen
+{: #lifecycle}
 
 Die Bereitstellungsebene stellt allgemeine APIs zur Verfügung, mit denen der Lebenszyklus von Ressourcen von der Bereitstellung (Instanzerstellung) über die Bindung (Erstellung der Zugriffsberechtigungsnachweise) und die Aufhebung der Bindung (Entfernung des Zugriffs) bis hin zur Aufhebung der Bereitstellung (Instanzlöschung) gesteuert werden kann. Darüber hinaus stellt die {{site.data.keyword.Bluemix_notm}}-Plattform CLIs und eine Benutzerschnittstelle zur Verwaltung des Lebenszyklus dieser Ressourcen bereit, sodass Sie keine eigenen Verwaltungsfunktionen erstellen müssen.
 
@@ -37,12 +40,14 @@ Die Bereitstellungsebene stellt APIs zur Verfügung, mit denen Sie die folgenden
 * Aufhebung der Bereitstellung
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
+{: #iam}
 
 Identity Access Management (IAM) ermöglicht Ihnen die sichere Authentifizierung von Benutzern und die einheitliche Steuerung des Zugriffs auf alle Cloudressourcen in {{site.data.keyword.Bluemix_notm}}. Die {{site.data.keyword.Bluemix_notm}}-Bereitstellungsebene hat IAM für die Authentifizierung und Berechtigung von Aktionen ausgewählt, die für die Bereitstellungsebene ausgeführt werden. Provider von Drittanbieterangeboten verwenden IAM zur Erstellung eines Authentifizierungsablaufs (OAuth). Weitere Informationen hierzu finden Sie in [Was ist IAM?](/docs/iam/index.html#iamoverview).
 
 Wenn Ihr Angebot OIDC-Bibliotheken (OpenID Connect) verwendet, dann unterstützt IAM die OIDC-Integration. Bei OIDC handelt es sich um eine Authentifizierungsebene, die auf dem Berechtigungsframework OAuth 2.0 basiert und zur Vereinfachung des Onboarding-Prozesses beitragen kann. Weitere Informationen zu OIDC finden Sie in [OpenID Connect](http://openid.net/connect/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## {{site.data.keyword.Bluemix_notm}}-Katalog
+{: #catalog}
 
 Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebotsdefinitionen (Beschreibung, Funktionen, Bilder, URLs usw.) der Ressourcen, die an der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt werden. Die Konsole für das Ressourcenmanagement wird zum Definieren aller Aspekte der erforderlichen Metadaten Ihres Service verwendet. Diese Metadaten werden im Katalog veröffentlicht und für die Anzeige im Katalog verwendet. Ausführliche Informationen zu den erforderlichen und optionalen Metadatenfeldern finden Sie auf den Seiten **Angebot** und **Plan** der Konsole für das Ressourcenmanagement. Hier werden jedoch die wichtigsten Elemente aufgeführt, um Ihnen einen raschen Einstieg zu ermöglichen.
 
@@ -51,14 +56,14 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebot
    * Service-ID: Die GUID für Ihren Service, die in API-Aufrufen an den Open Service Broker (OSB) verwendet wird. Dieser Wert muss eindeutig sein.
    * Servicesymbol: Ein SVG-Element mit Ihrem Servicelogo.
    * Servicebeschreibung: Die Beschreibung der Ressource, die angezeigt wird, wenn Sie den Mauszeiger über das Ressourcensymbol in der Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Katalogs bewegen. Sie können für die Beschreibung einen einzelnen Satz oder Ausdruck hinzufügen.
-   * Detaillierte Servicebeschreibung: Der erste Abschnitt, der auf der Kataloglistenseite aufgeführt wird. Sie sollten mindestens zwei Sätze als detaillierte Beschreibung angeben.
+   * Detaillierte Servicebeschreibung: Der erste Abschnitt, der auf der Kataloglistenseite aufgeführt wird. Ziehen Sie als detaillierte Beschreibung mindestens zwei Sätze in Betracht. 
    * Dokumentations-URL: Ein Link zu Ihrer {{site.data.keyword.Bluemix_notm}}-Dokumentation. Diese Informationen werden in Provider Workbench (PWB) verfasst und Ihr URL-Wert wird von PWB generiert.
    * Bedingungs-URL: Ein Link zu den Bedingungen für die Nutzung Ihres Service. Beachten Sie dabei, dass für GDPR-Zwecke kein Link zu den vorhandenen Bedingungen für Drittanbieterservices hergestellt werden darf. Stattdessen müssen Sie eine eindeutige Seite für einen integrierten Abrechnungsservice bereitstellen.
    * Anweisungs-URL: Ähnlich wie bei der Dokumentations-URL wird hier auf Ihre {{site.data.keyword.Bluemix_notm}}-Dokumentation verwiesen. Die Anweisungs-URL überführt Ihre Dokumentation jedoch dynamisch auf die Registerkarte 'Einführung' Ihres Service-Dashboards.
    * Kategorie: Die Auswahl der verfügbaren {{site.data.keyword.Bluemix_notm}}-Kategorien, unter denen Ihr Service in den Katalog aufgenommen wird.
    * Listenpunkte: Kurze beschreibende Highlights zu Ihrem Service.
    * Medien: Screenshots und Videos zu Ihrem Service.
-   * Name des Serviceplans: Jeder Plan verfügt über einen technischen Namen. Der Name wird vollständig in Kleinschreibung und ohne Leerzeichen eingegeben. Er darf jedoch das Zeichen "-" enthalten.  Beispiel: `gold`.
+   * Name des Serviceplans: Jeder Plan verfügt über einen technischen Namen. Der Name wird vollständig in Kleinschreibung und ohne Leerzeichen eingegeben. Er darf jedoch das Zeichen "-" enthalten. Beispiel: `gold`.
    * Anzeigename des Serviceplans: Der benutzerfreundliche Name des Plans. Beispiel: `Gold`
    * Serviceplan-ID: Die GUID für Ihren Serviceplan, die in API-Aufrufen an den Open Service Broker verwendet wird. Dieser Wert muss eindeutig sein. Die Konsole für das Ressourcenmanagement generiert diesen Wert für Sie.
    * Serviceplanbeschreibung: Die Beschreibung des Ressourcenplans. Die Beschreibung wird angezeigt, nachdem Sie einen Plan auf der Ressourcendetailseite im IBM Cloud-Katalog ausgewählt haben.
@@ -66,6 +71,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebot
 
 
 ## Open Service Broker
+{: #open-service}
 
 Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um Serviceinstanzen (Instanziierung eines Serviceangebots) und Servicebindungen (Darstellung einer Zuordnung zwischen einer Anwendung und einer Serviceinstanz, die häufig die Berechtigungsnachweise enthält, die von der Anwendung zur Kommunikation mit der Serviceinstanz verwendet werden) bereitzustellen und zu verwalten. Wenn Sie gültige Metadatenwerte angeben, dann können Sie erfolgreich eine REST-API-Antwort erstellen, wenn eine Anforderung ausgeführt wird.
 
@@ -74,6 +80,7 @@ Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.
 Wenn der Resource Controller eine Anforderung zur Bereitstellung einer Ressource empfängt, dann wird der Open Service Broker aufgerufen, um den Servicetyp, das Angebot, die Pläne und die Regionenverfügbarkeit zu überprüfen. Der Resource Controller überprüft außerdem die Sichtbarkeit des Plans, der dem Kundenkonto zugeordnet ist. {{site.data.keyword.Bluemix_notm}} stellt Brokerbeispiele und API-Dokumentation zur Verfügung, mit denen die OSB-Spezifikation erweitert werden kann. Weitere Einzelheiten zur Entwicklung sowie zum Hosting Ihres Brokers erhalten Sie, während Sie die detaillierten Schritte zur Entwicklung des Onboardings für die integrierte Abrechnung ausführen.
 
 ## {{site.data.keyword.Bluemix_notm}}-Messservice
+{: #metering-service}
 
 Wenn für einen Service ein Plan mit Nutzungsmessung angeboten wird, werden die Gebühren von {{site.data.keyword.Bluemix_notm}}-Benutzern auf Basis des Ressourcenvolumens berechnet, das von den Benutzern genutzt wird. Für {{site.data.keyword.Bluemix_notm}}-Benutzer, die Datenbankservices nutzen, werden die Gebühren beispielsweise auf Basis der Speicherkapazität berechnet, die von den Anwendungen der Benutzer verbraucht wird. Die Übermittlung von Nutzungsdaten ist erforderlich, um die Nutzungsdaten in einen Datensatz umzuwandeln, auf dessen Basis die Belastung erfolgen kann.
 
@@ -124,6 +131,7 @@ Beispiel für Bereitstellungsanforderung:
 ```
 
 ### {{site.data.keyword.Bluemix_notm}}-Parameter `context` verstehen
+{: #parameter}
 
 Im vorherigen Beispiel wurden die Metadaten dargestellt, die im Parameter `context` zurückgegeben werden. Der Bereitstellungskontext für {{site.data.keyword.Bluemix_notm}} gibt Folgendes zurück:
 
@@ -143,9 +151,9 @@ Im vorherigen Beispiel wurden die Metadaten dargestellt, die im Parameter `conte
    crn:v1:bluemix:public:compose-redis:us-south:a/46aa677e-e83f-4d17-a2b6-5b752564477c:416d769b-682d-4833-8bd7-5ef8778e5b52::
    ```
 
-   Im vorliegenden Beispiel ist diese Instanz von `compose-redis` Teil des {{site.data.keyword.Bluemix_notm}}-Kontos mit der ID `46aa677e-e83f-4d17-a2b6-5b752564477c`. Die eindeutige ID für die Instanz lautet `416d769b-682d-4833-8bd7-5ef8778e5b52` und die Instanz wird in der Region `us-south` (Vereinigte Staaten (Süden)) des öffentlichen {{site.data.keyword.Bluemix_notm}}-Systems gehostet.
+   Im vorliegenden Beispiel ist diese Instanz von `compose-redis` Teil des {{site.data.keyword.Bluemix_notm}}-Kontos mit ID. Die eindeutige ID für die Instanz lautet `416d769b-682d-4833-8bd7-5ef8778e5b52` und die Instanz wird in der Region `us-south` (Vereinigte Staaten (Süden)) des öffentlichen {{site.data.keyword.Bluemix_notm}}-Systems gehostet.
 
-* **resource_group_crn**: Gibt die Ressourcengruppe zurück, in der die Serviceinstanz enthalten ist. Weitere Einzelheiten finden Sie in [Ressourcengruppen verwalten](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: Gibt die Ressourcengruppe zurück, die die Serviceinstanz beinhaltet. Weitere Einzelheiten finden Sie in [Ressourcengruppen verwalten](/docs/resources/resourcegroups.html).
 
-   **Hinweis**: Angebotsprovider müssen mit einigen speziellen Ausnahmen den Ressourcengruppen-CRN (`resource_group_crn`) nicht berücksichtigen. Wenden Sie sich an den zuständigen IBM Ansprechpartner für Ihren Anwendungsfall, bevor Sie dieses Feld verwenden.
+   **Anmerkung**: Angebotsprovider müssen von einigen speziellen Ausnahmen abgesehen den Ressourcengruppen-CRN (`resource_group_crn`) nicht berücksichtigen. Wenden Sie sich an den zuständigen IBM Ansprechpartner für Ihren Anwendungsfall, bevor Sie dieses Feld verwenden.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -26,15 +26,15 @@ lastupdated: "2018-07-20"
 |任务|子任务|描述
 |环境|
 |------| ----------| ------------|-----|
-|了解有关 {{site.data.keyword.Bluemix}} 平台的信息。|☐ 我了解供应层、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)、目录、Open Service Broker 和计量服务如何一起协作。|与 {{site.data.keyword.Bluemix_notm}} 引荐服务不同，Integrated Billing 服务使用 {{site.data.keyword.Bluemix_notm}} 平台来创建、绑定和删除服务实例以及收取服务实例的费用。[了解](/docs/third-party/platform.html#what-is-the-ibm-cloud-platform-)组成该平台的关键组成部分的信息以快速开始开发。|文档|
+|了解有关 {{site.data.keyword.Bluemix}} 平台的信息。|☐ 我了解供应层、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)、目录、Open Service Broker 和计量服务如何一起协作。|与 {{site.data.keyword.Bluemix_notm}} 引荐服务不同，Integrated Billing 服务使用 {{site.data.keyword.Bluemix_notm}} 平台来创建、绑定和删除服务实例以及收取服务实例的费用。[了解](/docs/third-party/platform.html#how-it-works)组成该平台的关键组成部分的信息以快速开始开发。|文档|
 |在 {{site.data.keyword.Bluemix_notm}} Provider Workbench 中注册您的产品。| ☐ 我完成了内容任务。<br><br>☐ 我收到了批准，可将我的产品作为 Integrated Billing 服务发布。<br><br> ☐ 我收到了一封电子邮件，其中包含我的文档 URL 值。<br><br> |第一步是向 Provider Workbench 注册您的产品。有关更多详细信息，请参阅[入门教程](/docs/third-party/index.html#get-started)。|Provider Workbench|
 |发布 {{site.data.keyword.Bluemix_notm}} 文档。|☐ 我已在 Provider Workbench 中启动指导任务。<br><br>☐ 我收到了`文档 URL`。<br><br> ☐ 我已成功发布文档。<br><br> |我们知道您在自己 Web 站点上托管的第三方文档非常棒。但是，现在您要在 {{site.data.keyword.Bluemix_notm}} 中交付 Integrated Billing 服务，因此您需要交付针对 {{site.data.keyword.Bluemix_notm}} Integrated Billing 体验定制的文档。有关更多详细信息，请参阅[创建文档](/docs/third-party/cis1-docs-marketing.html#docs)。|Provider Workbench|
 |发布市场营销公告。|☐ 我已在 Provider Workbench 中启动市场营销任务。<br><br>  ☐ 我已成功发布市场营销公告。<br><br>  |创建市场营销宣传材料，以通过 {{site.data.keyword.Bluemix_notm}} 新闻稿和社交媒体渠道公告您服务的可用性。有关更多详细信息，请参阅[创建市场营销公告](/docs/third-party/cis1-docs-marketing.html#announcement)。|Provider Workbench|
 |在资源管理控制台中注册您的产品。|☐ 我已将唯一且有意义的 `service-name` 定义为资源名称。<br><br>  ☐ 我已在资源管理控制台中成功验证我有记录。<br><br>  |您可使用资源管理控制台来创建唯一的产品。有关更多详细信息，请参阅[注册产品的步骤](/docs/third-party/cis2-rmc-define.html#register)。|资源管理控制台|
 |完成资源管理控制台中的“产品”页面。|☐ 使用在 Provider Workbench 产品电子邮件中提供的值，我已正确设置文档 URL 和指示信息 URL。<br><br>  ☐ 我已提供指向唯一“服务条款”页面的 URL，该页面中不包含计费或付费条款。<br><br>  ☐ 我了解并正确指定了是否**支持套餐更改？**已启用。☐ 我了解并正确指定了我的服务是否可绑定。|在资源管理控制台中提供 {{site.data.keyword.Bluemix_notm}} 磁贴上显示的目录元数据。有关更多详细信息，请参阅[输入产品元数据的步骤](/docs/third-party/cis2-rmc-define.html#offering-metadata)。|资源管理控制台|
 |完成资源管理控制台中的“访问管理”页面。|☐ 我已成功启用 IAM。<br><br>  ☐ 我已保存为我创建的一次性生成的 IAM API 密钥，并且我了解该 API 密钥不会存储在资源管理控制台中，因此日后我无法检索该密钥。<br><br> ☐ 我了解在开发并托管 Open Service Broker，然后派生重定向 URI 之后，才能完成“访问管理”页面。<br><br> ☐ 托管 Open Service Broker 之后，我返回到 IAM 页面，并成功完成了该页面。|在资源管理控制台中向 {{site.data.keyword.Bluemix_notm}} IAM 注册您的产品。通过 IAM，您可以在整个 {{site.data.keyword.Bluemix_notm}} 平台上安全地对两个平台服务的用户进行认证并一致地控制对资源的访问权。有关更多详细信息，请参阅[向 IAM 注册的步骤](/docs/third-party/cis2-rmc-define.html#reg-iam)。|资源管理控制台|
-|在资源管理控制台中开发一个或多个价格套餐。|☐ 我已提供具有唯一名称的免费套餐。<br><br>  ☐（可选）我与 IBM 代表合作，定义了付费套餐（预订或计量），并且我了解必须除去缺省预订套餐，才能创建计量套餐。<br><br> ☐（可选）我了解需要我托管并开发自动提交每小时使用量的功能。|您将如何对您的服务收费？资源管理控制台提供免费套餐或付费套餐。有关更多详细信息，请参阅[制定价格套餐的步骤](/docs/third-party/cis2-rmc-define.html#develop-a-pricing-plan-rmc-pricing-page-)。|资源管理控制台|
-|从资源管理控制台中导出目录元数据。|☐ 我了解在资源管理控制台的“产品”和“定价”页面中提供的某些元数据必须导出并在 Open Service Broker 中提供。<br><br>  ☐ 我已从“部署”页面中获取 `catalog.json` 文件，并且已准备好将服务数组映射到 Open Service Broker 中的元数据。<br><br> |现在，您已在资源管理控制台中定义服务，因此可以下载 `catalog.json` 文件，并将其用于通知 Open Service Broker 的开发。有关更多详细信息，请参阅[导出元数据的步骤](/docs/third-party/cis2-rmc-define.html#export metadata)。|资源管理控制台|
+|在资源管理控制台中开发一个或多个价格套餐。|☐ 我已提供具有唯一名称的免费套餐。<br><br>  ☐（可选）我与 IBM 代表合作，定义了付费套餐（预订或计量），并且我了解必须除去缺省预订套餐，才能创建计量套餐。<br><br> ☐（可选）我了解需要我托管并开发自动提交每小时使用量的功能。|您将如何对您的服务收费？资源管理控制台提供免费套餐或付费套餐。有关更多详细信息，请参阅[制定价格套餐的步骤](/docs/third-party/cis2-rmc-define.html#pricing-plan)。|资源管理控制台|
+|从资源管理控制台中导出目录元数据。|☐ 我了解在资源管理控制台的“产品”和“定价”页面中提供的某些元数据必须导出并在 Open Service Broker 中提供。<br><br>  ☐ 我已从“部署”页面中获取 `catalog.json` 文件，并且已准备好将服务数组映射到 Open Service Broker 中的元数据。<br><br> |现在，您已在资源管理控制台中定义服务，因此可以下载 `catalog.json` 文件，并将其用于通知 Open Service Broker 的开发。有关更多详细信息，请参阅[导出元数据的步骤](/docs/third-party/cis2-rmc-define.html#export-metadata)。|资源管理控制台|
 {: caption="表 1. 定义 Integrated Billing 服务" caption-side="top"}
 
 ## 开发服务

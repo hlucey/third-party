@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-31"
 
 
 ---
@@ -22,7 +22,7 @@ lastupdated: "2018-07-20"
 
 将第三方产品作为 Integrated Billing 服务交付，意味着用户可以从 {{site.data.keyword.Bluemix_notm}} 控制台的“目录详细信息”页面上列出的不同 IBM 价格套餐中进行选择。此外，用户可以自动创建第三方产品的实例。
 
-将第三方产品作为引荐服务交付时，会将用户从 {{site.data.keyword.Bluemix_notm}} 控制台中的“目录详细信息”页面定向到您的 Web 站点。在您的 Web 站点中，用户可创建帐户并获取相应的凭证，以编程方式将您的第三方产品连接到用户在 {{site.data.keyword.Bluemix_notm}} 上构建的应用程序时，需要这些凭证。
+将第三方产品作为引荐服务交付时，会将用户从 {{site.data.keyword.Bluemix_notm}} 控制台中的“目录详细信息”页面定向到您的 Web 站点。在您的 Web 站点中，用户可创建帐户并获取相应的凭证，这些凭证是以编程方式将您的第三方产品连接到用户在 {{site.data.keyword.Bluemix_notm}} 上构建的应用程序时所必需的。
 
 ## 比较产品类型
 {: #compare}

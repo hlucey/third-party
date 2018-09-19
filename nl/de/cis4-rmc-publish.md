@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -25,10 +25,10 @@ Nachdem Sie nun über die gehosteten Broker verfügen, die der OSB-Spezifikation
 ## Vorbereitende Schritte
 {: #pre-reqs}
 
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.md) vertraut machen.
+Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Wenn Sie die Erstregistrierung und die Genehmigung in Provider Workbench nicht durchgeführt haben, lesen Sie die Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.md).
 {: tip}
 
-Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2, 3 und 4 abgeschlossen haben.
+Vergewissern Sie sich, dass Sie Schritt 1 starten und die Schritte 2, 3 und 4 abgeschlossen haben.
 1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
 2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
@@ -44,7 +44,7 @@ Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2, 3 und
 5. Rufen Sie nach erfolgreicher Registrierung die Registerkarte **Katalogbereitstellungen** auf.
 6. Klicken Sie auf **Bereitstellung hinzufügen** und wählen Sie den Plan und den Broker aus, die bereitgestellt werden sollen.
 7. Wählen Sie die Region und das Rechenzentrum aus, in denen Ihr Service bereitgestellt werden soll, und klicken Sie dann auf **Hinzufügen**.
-8. Überprüfen Sie auf der Seite **Bereitstellungen** die nicht veröffentlichte Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
+8. Überprüfen Sie auf der Seite **Bereitstellungen** die nicht veröffentlichte Bereitstellung und klicken Sie auf **Veröffentlichen**.
 9. Überprüfen Sie auf der Seite für die **Veröffentlichung im Katalog** die Details Ihrer Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
 
 Die Seite 'Bereitstellungen' muss nun in der Navigation als vollständig markiert sein. Dies bedeutet, dass Sie die Mindestanforderungen erfüllt haben.
@@ -55,14 +55,16 @@ Tritt bei der Bereitstellung ein Fehler auf, der sich nicht beheben lässt? Wend
 ## Bereitgestelltes Angebot testen 
 {: #test}
 
-Da Sie die Bereitstellung im Modus für eingeschränkte Sichtbarkeit durchgeführt haben, können nur Sie selbst das Angebot im {{site.data.keyword.Bluemix_notm}}-Katalog anzeigen. Melden Sie sich mithilfe der folgenden Prüfliste bei {{site.data.keyword.Bluemix_notm}} an und arbeiten Sie die Testkriterien ab.
+Da Sie die Bereitstellung im Modus für eingeschränkte Sichtbarkeit durchgeführt haben, können nur Sie selbst das Angebot im {{site.data.keyword.Bluemix_notm}}-Katalog anzeigen. Melden Sie sich mithilfe der im folgenden Abschnitt enthaltenen Prüfliste bei {{site.data.keyword.Bluemix_notm}} an und arbeiten Sie die Testkriterien ab.
 
 1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und verwenden Sie dazu Ihre IBMid.
 2. Vergewissern Sie sich, dass Sie sich im richtigen Konto befinden (das gleiche Konto, das Sie zur Erstellung des Service verwendet haben).
 3. Klicken Sie im Header auf den Link für **Katalog** und suchen Sie nach Ihrem Angebot.
-4. Verwenden Sie als Nächstes die folgende Prüfliste, um Ihren Service zu überprüfen.
+4. Verwenden Sie als Nächstes die im folgenden Abschnitt enthaltene Prüfliste, um Ihren Service zu überprüfen.
 
 ### Prüfliste - Eigenen Service testen
+{: #test-your-service}
+
 1. Überprüfen Sie die Authentifizierung über das Dashboard der Serviceinstanz.
 2. Der Katalog wird korrekt angezeigt (Import aus dem Broker wird korrekt in der Konsole für das Ressourcenmanagement angezeigt).
 3. Die Bereitstellung funktioniert. Sie können eine Serviceinstanz im Plan Ihrer Wahl erstellen.
@@ -70,15 +72,15 @@ Da Sie die Bereitstellung im Modus für eingeschränkte Sichtbarkeit durchgefüh
 5. Die Bindung funktioniert. Sie können auf **Verbindungen** klicken und eine Verbindung zwischen Ihrem Service und einer anderen Anwendung herstellen.
 6. Die Aufhebung der Bindung funktioniert. Sie können die Verbindung Ihres Service beenden und die Verbindung löschen.
 7. Erstellung eines Serviceschlüssels / Löschung eines Serviceschlüssels. Sie können auf **Berechtigungsnachweise** klicken und einen Serviceschlüssel generieren und dann diesen Serviceschlüssel wieder löschen.
-8. Testen Sie `plan_changeable`, wenn mehrere Pläne unterstützt werden. Wenn Sie diese Funktion aktivieren, indem Sie 'Ja' angeben, dann müssen Sie den Open Service Broker erweitern, sodass Planänderungen für bereitgestellte Instanzen unterstützt werden. Wenn Ihr Angebot mehrere Pläne unterstützt und wenn Sie möchten, dass Benutzer die Pläne für eine bereitgestellte Instanz ändern können, dann müssen Sie die Funktion aktivieren, über die Benutzer ihre Serviceinstanz aktualisieren können. Weitere Einzelheiten hierzu finden Sie unter dem /v2/service_instances/{instance_id} PATCH-Endpunkt in der Open Service Broker-API v2.12  - Patch - Es wird angezeigt, dass der Benutzer den Plan für die bereitgestellte Instanz ändern kann. Um den Test durchzuführen, müssen Sie den Plan einer vorhandenen bereitgestellten Serviceinstanz ändern.
-9. Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit IBM Cloud Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch nicht zum Abbruch) führen können, hat IBM Cloud erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Die folgenden Endpunkterweiterungen sind **ERFORDERLICH**. Arbeiten Sie mit Ihrem IBM Ansprechpartner zusammen und lassen Sie die Aktivierungs- und Inaktivierungsendpunkte testen:
+8. Testen Sie `plan_changeable`, wenn mehrere Pläne unterstützt werden. Wenn Sie diese Funktion aktivieren, indem Sie 'Ja' angeben, müssen Sie den Open Service Broker erweitern, sodass Planänderungen für bereitgestellte Instanzen unterstützt werden. Wenn Ihr Angebot mehrere Pläne unterstützt und wenn Sie möchten, dass Benutzer die Pläne für eine vorhandene bereitgestellte Instanz ändern, müssen Sie die Funktion aktivieren, über die Benutzer ihre Serviceinstanz aktualisieren können. Weitere Einzelheiten hierzu finden Sie unter dem /v2/service_instances/{instance_id} PATCH-Endpunkt in der Open Service Broker-API v2.12  - Patch - Es wird angezeigt, dass der Benutzer den Plan für die bereitgestellte Instanz ändern kann. Um den Test durchzuführen, müssen Sie den Plan einer vorhandenen bereitgestellten Serviceinstanz ändern.
+9. Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit IBM Cloud Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch nicht zum Abbruch) führen können, definiert IBM Cloud erweiterte API-Endpunkte, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Die folgenden Endpunkterweiterungen sind **erforderlich**. Arbeiten Sie mit Ihrem IBM Ansprechpartner zusammen und lassen Sie die Aktivierungs- und Inaktivierungsendpunkte testen:
    - Instanzen aktivieren und inaktivieren (GET): Status - Gibt den Status Ihrer Serviceinstanz zurück.
    - Instanzen aktivieren und inaktivieren (PUT): Ermöglicht das Aktivieren oder Inaktivieren einer Serviceinstanz.
 10. Testen der Übermittlung von Nutzungsdaten bei Unterstützung von Plänen mit Nutzungsmessung. Für alle Pläne mit Nutzungsmessung müssen Sie Folgendes überprüfen:
    - Sie können die Nutzungs-API mit curl bearbeiten und es können korrekte Preisstrukturdaten auf Basis der Nutzung zurückgegeben werden.
    - Sie können demonstrieren, dass Sie die automatisierte stündliche Übermittlung von Nutzungsdaten aktiviert haben, sodass alle Benutzer unterstützt werden, die eine Instanz Ihres Service bereitstellen.
 
-Verlaufen die Tests nicht erfolgreich, dann müssen Sie die vorangegangenen Schritte wiederholen, um Ihren Service zu veröffentlichen und erneut zu testen. Dieser Vorgang muss so lange wiederholt werden, bis er erfolgreich abgeschlossen werden kann.
+Verlaufen die Tests nicht erfolgreich, müssen Sie die vorangegangenen Schritte wiederholen, um Ihren Service zu veröffentlichen und erneut zu testen. Dieser Vorgang muss so lange wiederholt werden, bis er erfolgreich abgeschlossen werden kann.
 
 
 ## Nächste Schritte

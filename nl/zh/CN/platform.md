@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -17,14 +17,17 @@ lastupdated: "2018-08-30"
 {:download: .download}
 
 # Integrated Billing 服务如何使用 {{site.data.keyword.Bluemix_notm}} 平台
+{: #how-it-works}
 
 Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用 {{site.data.keyword.Bluemix_notm}} 平台进行认证、访问、供应、计量和计费。本主题提供了 Integrated Billing 服务使用的平台组件的高级别概述。
 
 ## {{site.data.keyword.Bluemix_notm}} 供应层
+{: #provisioning-layer}
 
 供应层用于管理 {{site.data.keyword.Bluemix_notm}} 资源的生命周期。供应层负责控制和跟踪客户帐户中资源的生命周期。*资源*是一种物理或逻辑组件，可以针对应用程序或服务实例进行供应或保留。例如，资源包括数据库、帐户、处理器、内存以及存储限制。通常，由供应层跟踪的资源旨在关联使用量度量值和帐单，但并不一定总是如此。在某些情况下，资源可能会与供应层相关联，以确保资源生命周期可与帐户生命周期一起进行管理。
 
 ### 资源生命周期管理
+{: #lifecycle}
 
 供应层提供公共 API，用于控制资源从供应（创建实例）、绑定（创建访问凭证）、取消绑定（除去访问权）一直到取消供应（删除实例）的整个生命周期。此外，{{site.data.keyword.Bluemix_notm}} 平台还提供了可以管理这些资源的生命周期的 CLI 和 UI，您无需创建自己的管理工具。
 
@@ -37,12 +40,14 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 * 取消供应
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
+{: #iam}
 
 通过 Identity and Access Management (IAM)，您可以在整个 {{site.data.keyword.Bluemix_notm}} 上安全地对用户进行认证并一致地控制对所有云资源的访问权。{{site.data.keyword.Bluemix_notm}} 供应层采用了 IAM 来对针对供应层执行的操作进行认证和授权。第三方产品提供者使用 IAM 来创建认证流程 (OAuth)。有关更多信息，请参阅[什么是 IAM？](/docs/iam/index.html#iamoverview)
 
 如果您的产品使用的是 OpenID Connect (OIDC) 库，那么 IAM 支持 OIDC 集成。OIDC 是基于 OAuth 2.0 的认证层，这是一个授权框架，可以帮助简化上线过程。有关 OIDC 的更多信息，请参阅 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## {{site.data.keyword.Bluemix_notm}} 目录
+{: #catalog}
 
 {{site.data.keyword.Bluemix_notm}}“目录”将存储显示在 {{site.data.keyword.Bluemix_notm}} 控制台中的资源的产品定义（描述、功能、图像和 URL 等）。资源管理控制台用于定义服务必需元数据的所有方面。此元数据将发布到目录并用于显示在目录中。您可以在资源管理控制台中的**产品**和**套餐**页面中找到有关必需和可选元数据字段的详细信息。此处包含的关键项可让您快速了解这些信息。
 
@@ -51,7 +56,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
    * 服务标识：在对 OSB 代理程序发出的 API 调用中使用的服务的 GUID。此值必须唯一。
    * 服务图标：具有服务徽标的 SVG
    * 服务描述：将光标悬停在 {{site.data.keyword.Bluemix_notm}}“目录”用户界面中的“资源”图标上时显示的资源描述。可以为描述添加单个语句或短语。
-   * 服务详细描述：目录列表页面中显示的第一段。请考虑至少对详细描述使用两个语句。
+   * 服务详细描述：目录列表页面中显示的第一段。在详细描述中，请至少使用两个句子。
    * 文档 URL：{{site.data.keyword.Bluemix_notm}} 文档的链接。您将在 PWB 中进行编写，并且 URL 值将由 PWB 为您生成。
    * 条款 URL：服务使用条款和条件的链接。请注意，对于 GDPR 用途，不要链接到现有第三方服务的条款和条件。您必须为 Integrated Billing 服务提供唯一页面。
    * 指示信息 URL：类似于“文档 URL”，也会将您指向 {{site.data.keyword.Bluemix_notm}} 文档；但是，“指示信息 URL”会将文档动态拉取到服务仪表板的“入门”选项卡中。
@@ -66,6 +71,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
 
 ## Open Service Broker
+{: #open-service}
 
 服务代理程序用于管理服务的生命周期。{{site.data.keyword.Bluemix_notm}} 平台与服务代理程序进行交互，以供应和管理服务实例（服务产品的实例化）和服务绑定（应用程序与服务实例之间的关联的表示，通常包含应用程序将用于与服务实例进行通信的凭证）。提供有效的元数据值将在执行请求时创建成功的 REST API 响应。
 
@@ -74,6 +80,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 资源控制器接收到供应资源的请求时，将调用 OSB 来验证服务类型、产品、套餐和区域可用性。资源控制器还会验证与客户帐户关联的套餐的可视性。{{site.data.keyword.Bluemix_notm}} 提供了用于扩展 OSB 规范的代理程序样本和 API 文档。浏览详细的 Integrated Billing 上线开发步骤时，可以找到有关开发和托管代理程序的更多详细信息。
 
 ## {{site.data.keyword.Bluemix_notm}} 计量服务
+{: #metering-service}
 
 如果服务提供计量套餐，那么将根据 {{site.data.keyword.Bluemix_notm}} 用户使用的资源量向其收费。例如，对于使用数据库服务的 {{site.data.keyword.Bluemix_notm}} 用户，可能会根据其应用程序使用的存储量对这些用户收费。必须执行使用量提交，才能将使用量转换为可收费记录。
 
@@ -124,6 +131,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 ```
 
 ### 了解 {{site.data.keyword.Bluemix_notm}} `context` 参数
+{: #parameter}
 
 在先前的示例中，您可以看到在 `context` 参数中返回的元数据。{{site.data.keyword.Bluemix_notm}} 的供应上下文返回了以下内容：
 
@@ -143,9 +151,9 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
    crn:v1:bluemix:public:compose-redis:us-south:a/46aa677e-e83f-4d17-a2b6-5b752564477c:416d769b-682d-4833-8bd7-5ef8778e5b52::
    ```
 
-   在此样本中，此 `compose-redis` 实例属于标识为 `46aa677e-e83f-4d17-a2b6-5b752564477c` 的 {{site.data.keyword.Bluemix_notm}} 帐户，此实例的唯一标识为 `416d769b-682d-4833-8bd7-5ef8778e5b52`，并且此实例在公共 {{site.data.keyword.Bluemix_notm}} 的 `us-south` 区域中进行托管。
+   在此样本中，此 `compose-redis` 实例属于标识为 46aa677e-e83f-4d17-a2b6-5b752564477c 的 {{site.data.keyword.Bluemix_notm}} 帐户。该实例的唯一标识为 `416d769b-682d-4833-8bd7-5ef8778e5b52`，并且该实例在公共 {{site.data.keyword.Bluemix_notm}} 的 `us-south` 区域进行托管。
 
 * **resource_group_crn**：返回包含服务实例的资源组。有关更多详细信息，请参阅[管理资源组](/docs/resources/resourcegroups.html)。
 
-   **注**：除了非常独特的情况之外，产品提供者不应关注 `resource_group_crn`。在使用该字段之前，请就您的用例向 IBM 代表进行咨询。
+   **注**：除特殊情况外，产品提供者并不关心 `resource_group_crn`。在使用该字段之前，请就您的用例向 IBM 代表进行咨询。
 
