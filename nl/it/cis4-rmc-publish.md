@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -25,7 +25,7 @@ Ora che hai uno o più broker ospitati che soddisfano la specifica OSB, puoi tor
 ## Prima di iniziare
 {: #pre-reqs}
 
-Questo passo presuppone che tu abbia ricevuto l'approvazione per fornire un servizio di fatturazione integrato. Se non hai ancora completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[Esercitazione introduttiva](/docs/third-party/index.md).
+Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali nel Provider Workbench, consulta l'[Esercitazione introduttiva](/docs/third-party/index.md).
 {: tip}
 
 Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
@@ -47,7 +47,7 @@ Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
 8. Dalla pagina **Deployments**, riesamina la tua distribuzione non ancora pubblicata e fai clic su **Publish**.
 9. Dalla pagina **Publish to the Catalog**, riesamina i dettagli della tua distribuzione e fai clic su **Publish**.
 
-La pagina Deployments dovrebbe ora essere contrassegnata come completa nella navigazione, a indicare che hai soddisfatto i requisiti minimi.
+La pagina Deployments deve ora essere contrassegnata come completa nella navigazione, a indicare che hai soddisfatto i requisiti minimi.
 
 Sei bloccato su un errore di distribuzione? Contatta il tuo rappresentante IBM per assistenza.
 {: tip}
@@ -55,14 +55,16 @@ Sei bloccato su un errore di distribuzione? Contatta il tuo rappresentante IBM p
 ## Verifica la tua offerta distribuita 
 {: #test}
 
-Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo tu puoi vedere la tua offerta nel catalogo {{site.data.keyword.Bluemix_notm}}. Utilizzando l'elenco di controllo qui di seguito, esegui l'accesso {{site.data.keyword.Bluemix_notm}} e procedi con i criteri di verifica.
+Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo tu puoi vedere la tua offerta nel catalogo {{site.data.keyword.Bluemix_notm}}. Utilizzando l'elenco di controllo nella seguente sezione, esegui l'accesso {{site.data.keyword.Bluemix_notm}} e procedi con i criteri di verifica.
 
 1. Esegui l'accesso a {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno") con il tuo ID IBM.
 2. Assicurati di essere nell'account corretto (lo stesso account che hai utilizzato per creare il servizio)
 3. Fai clic sul link **Catalog** nell'intestazione e cerca la tua offerta.
-4. Utilizza quindi l'elenco di controllo qui di seguito per convalidare il tuo servizio.
+4. Utilizza quindi l'elenco di controllo nella seguente sezione per convalidare il tuo servizio.
 
 ### Elenco di controllo - verifica il tuo servizio
+{: #test-your-service}
+
 1. Convalida l'autenticazione dal dashboard dell'istanza del servizio
 2. Il catalogo viene visualizzato correttamente (l'importazione dal broker viene visualizzata correttamente nella console di gestione delle risorse)
 3. Il provisioning funziona - puoi creare un'istanza del servizio nel piano che hai scelto
@@ -70,8 +72,8 @@ Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo
 5. Il bind funziona - puoi fare clic su **Connections** e connettere il tuo servizio a un'altra applicazione
 6. L'annullamento del bind funziona - puoi disconnettere il tuo servizio ed eliminare la connessione.
 7. Crea una chiave di servizio / Elimina la chiave di servizio - puoi fare clic su **Credentials** e generare una chiave di servizio e quindi eliminarla.
-8. Verifica `plan_changeable` se supporti più piani. Se abiliti tale opzione impostando Yes, dovrai estendere il tuo Open Service Broker per supportare le modifiche di piano per le istanze di cui è stato eseguito il provisioning. Se la tua offerta supporta più piani, e desideri che gli utenti possano modificare i piani per un'istanza di cui è stato eseguito il provisioning, dovrai abilitare la capacità degli utenti di aggiornare la loro istanza del servizio. Per ulteriori dettagli, vedi l'endpoint /v2/service_instances/{instance_id} PATCH nella API Open Service Broker v2.12  - Patch - visualizza che l'utente può modificare il piano sull'istanza di cui è stato eseguito il provisioning. Per eseguire la verifica, esegui un passaggio del piano su un'istanza del servizio di cui è stato eseguito il provisioning esistente.
-9. La specifica OSB non supporta uno stato di istanza disabilitata ma non ancora eliminata. Perché IBM Cloud supporti i clienti che potrebbero riscontrare un'interruzione della fatturazione o altre situazioni che comportano una sospensione dell'account (ma non ancora l'annullamento), IBM Cloud ha definito degli endpoint API estesi che consentono la disabilitazione e la riabilitazione delle istanze del servizio. Le seguenti estensioni di endpoint sono **OBBLIGATORIE**; coopera con il tuo rappresentante IBM e chiedigli di verificare i tuoi endpoint di abilitazione e disabilitazione:
+8. Verifica `plan_changeable` se supporti più piani. Se abiliti tale opzione impostando Yes, devi estendere il tuo Open Service Broker per supportare le modifiche di piano per le istanze di cui è stato eseguito il provisioning. Se la tua offerta supporta più piani, e desideri che gli utenti possano modificare i piani per un'istanza di cui è stato eseguito il provisioning, devi abilitare la capacità degli utenti di aggiornare la loro istanza del servizio. Per ulteriori dettagli, vedi l'endpoint /v2/service_instances/{instance_id} PATCH nella API Open Service Broker v2.12  - Patch - visualizza che l'utente può modificare il piano sull'istanza di cui è stato eseguito il provisioning. Per eseguire la verifica, esegui un passaggio del piano su un'istanza del servizio di cui è stato eseguito il provisioning esistente.
+9. La specifica OSB non supporta uno stato di istanza disabilitata ma non ancora eliminata. Perché IBM Cloud supporti i clienti che potrebbero riscontrare un'interruzione della fatturazione o altre situazioni che comportano una sospensione dell'account (ma non ancora l'annullamento), IBM Cloud definisce degli endpoint API estesi che consentono la disabilitazione e la riabilitazione delle istanze del servizio. Le seguenti estensioni dell'endpoint sono **OBBLIGATORIE**. Coopera con il tuo rappresentante IBM e chiedigli di verificare i tuoi endpoint di abilitazione e disabilitazione: 
    - abilitare e disabilitare le istanze (GET): stato - restituisce lo stato della tua istanza del servizio.
    - abilitare e disabilitare le istanze (PUT): ti consente di abilitare o disabilitare un'istanza del servizio.
 10. Verifica l'inoltro dell'utilizzo se supporti dei piani a consumo. Per qualsiasi piano con utilizzo a consumo devi convalidare quanto segue:

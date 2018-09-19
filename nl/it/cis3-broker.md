@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-23"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -22,9 +22,9 @@ lastupdated: "2018-08-23"
 Utilizzando i metadati che hai esportato dalla console di gestione delle risorse, puoi creare uno o più nuovi broker dei servizi nel linguaggio di programmazione che preferisci.
 {:shortdesc}
 
-I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker dei servizi per il provisioning e la gestione delle istanze del servizio (un'istanziazione di un'offerta di servizi) e dei bind del servizio (la rappresentazione di un'associazione tra un'applicazione e un'istanza del servizio, che spesso contengono le credenziali che l'applicazione utilizzerà per comunicare con l'istanza del servizio). Fornire valori di metadati validi consente di creare una risposta API RESTful con esito positivo quando viene effettuata una richiesta.
+I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker dei servizi per il provisioning e la gestione delle istanze del servizio (un'istanziazione di un'offerta di servizi) e dei bind del servizio (la rappresentazione di un'associazione tra un'applicazione e un'istanza del servizio, che spesso contengono le credenziali che l'applicazione utilizza per comunicare con l'istanza del servizio). Fornire valori di metadati validi consente di creare una risposta API RESTful con esito positivo quando viene effettuata una richiesta.
 
-Puoi iniziare a creare il tuo broker utilizzando una combinazione dei metadati che hai esportato dalla console di gestione delle risorse, i nostri esempi di broker dei servizi {{site.data.keyword.Bluemix_notm}} pubblici e la documentazione dell'API Resource Broker.
+Puoi creare il tuo broker utilizzando una combinazione dei metadati che hai esportato dalla console di gestione delle risorse, i nostri esempi di broker dei servizi {{site.data.keyword.Bluemix_notm}} pubblici e la documentazione dell'API Resource Broker.
 
 ## Prima di iniziare
 {: #pre-reqs}
@@ -37,7 +37,7 @@ Assicurati di aver iniziato il passo 1 e completato il passo 2:
 ## Visualizza il nostro scenario di provisioning della piattaforma {{site.data.keyword.Bluemix_notm}}
 {: #scenario}
 
-Svilupperai un OSB (Open Service Broker) che funziona con la piattaforma {{site.data.keyword.Bluemix_notm}}. Vedi il nostro [Scenario di provisioning](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) per comprendere come funziona la creazione delle risorse.
+Stai sviluppando un OSB (Open Service Broker) che funziona con la piattaforma {{site.data.keyword.Bluemix_notm}}. Vedi il nostro [Scenario di provisioning](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) per comprendere come funziona la creazione delle risorse.
 
 ## Acquisisci familiarità con la specifica OSB
 {: #learn-osb}
@@ -49,13 +49,13 @@ Svilupperai un OSB (Open Service Broker) che funziona con la piattaforma {{site.
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
 
-**Nota:** in un esempio non vengono rappresentati tutti i linguaggi. Se hai bisogno di un broker Python di esempio, dovresti riuscire a trovare un esempio di Cloud Foundry cercando su Google. Potresti dover adattare questo esempio per soddisfare i requisiti OSB.
+**Nota:** in un esempio non vengono rappresentati tutti i linguaggi. Se hai bisogno di un broker Python di esempio, puoi trovare un esempio di Cloud Foundry cercando su Google. Potresti dover adattare questo esempio per soddisfare i requisiti OSB.
 
 
 ## Visualizza la nostra documentazione API {{site.data.keyword.Bluemix_notm}} Open Service Broker
 {: #docs}
 
-I broker dei servizi dovrebbero essere sviluppati avendo già una conoscenza dell'[API {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Acquisisci familiarità con l'API Broker e scopri in che modo interagirà con i tuoi broker.
+I broker dei servizi possono essere sviluppati avendo già una conoscenza dell'[API {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Acquisisci familiarità con l'API Broker e scopri in che modo interagisce con i tuoi broker.
 
 L'{{site.data.keyword.Bluemix_notm}} Open Service Broker estende la specifica di Open Service Broker 2.12.
 {: tip}
@@ -66,7 +66,7 @@ I broker dei servizi devono fornire un insieme standard di valori di metadati ch
 
 <dl>
   <dt>catalog (GET)</dt>
-  <dd>Restituisce i metadati del catalogo inclusi nel tuo broker. Esistono molti altri valori di metadati del catalogo che non vengono restituiti: questi valori vengono aggiunti esclusivamente all'interno della console di gestione delle risorse e memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}.</dd>
+  <dd>Restituisce i metadati del catalogo inclusi nel tuo broker. Molti altri valori di metadati del catalogo non vengono restituiti: questi valori vengono aggiunti esclusivamente all'interno della console di gestione delle risorse e memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>resource instances (PUT)</dt>
   <dd>Esegue il provisioning della tua istanza del servizio.</dd>
   <dt>resource instances (DELETE)</dt>
@@ -75,7 +75,7 @@ I broker dei servizi devono fornire un insieme standard di valori di metadati ch
   <dd>Aggiorna la tua istanza del servizio.</dd>
 </dl>
 
-**Nota su catalog (GET)**: questo endpoint definisce il contratto tra il broker e la piattaforma {{site.data.keyword.Bluemix_notm}} per i servizi e i piani supportati dal broker. Questo endpoint restituisce i metadati del catalogo memorizzati all'interno del tuo broker. Questi valori definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Tutti i metadati del catalogo aggiuntivi non necessari per il provisioning vengono memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}} e qualsiasi aggiornamento ai valori di visualizzazione del catalogo utilizzati per il rendering del tuo dashboard come link, icone e metadati tradotti i18n deve essere aggiornato nella console di gestione delle risorse e non ospitato nel tuo broker. Nessuno dei metadati memorizzati nel tuo broker viene visualizzato nella console {{site.data.keyword.Bluemix_notm}} o nella CLI {{site.data.keyword.Bluemix_notm}}; la console e la CLI restituiranno ciò che è stato impostato con la console di gestione delle risorse e memorizzato nel catalogo {{site.data.keyword.Bluemix_notm}}. Questi sono i valori minimi richiesti che catalog (GET) deve restituire:
+**Nota su catalog (GET)**: questo endpoint definisce il contratto tra il broker e la piattaforma {{site.data.keyword.Bluemix_notm}} per i servizi e i piani supportati dal broker. Questo endpoint restituisce i metadati del catalogo memorizzati all'interno del tuo broker. Questi valori definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Tutti i metadati del catalogo aggiuntivi che non sono richiesti per il provisioning sono memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}. Gli eventuali aggiornamenti ai valori di visualizzazione del catalogo utilizzati per riprodurre il tuo dashboard come link, icone e metadati tradotti in i18n devono essere aggiornati nella console di gestione delle risorse e non ospitati nel tuo broker. Nessuno dei metadati archiviati nel tuo broker viene visualizzato nella console {{site.data.keyword.Bluemix_notm}} o nella CLI {{site.data.keyword.Bluemix_notm}}. La console e la CLI restituiscono quello che era stato impostato nella console di gestione delle risorse e archiviato nel catalogo {{site.data.keyword.Bluemix_notm}}. La seguente sezione mostra i valori minimi richiesti che il catalogo (GET) restituirà:
 
 ```
 {
@@ -100,7 +100,7 @@ I broker dei servizi devono fornire un insieme standard di valori di metadati ch
 
 ### Logica di endpoint richiesta per i servizi associabili
 
-Se il tuo servizio può essere associato alle applicazioni in {{site.data.keyword.Bluemix_notm}}, deve essere in grado di restituire credenziali ed endpoint API agli utenti del tuo servizio. Un servizio associabile deve utilizzare le operazioni associabili nella specifica Open Service Broker e implementare i seguenti endpoint/percorsi:
+Se il tuo servizio può essere associato alle applicazioni in {{site.data.keyword.Bluemix_notm}}, deve restituire credenziali ed endpoint API agli utenti del tuo servizio. Un servizio associabile deve utilizzare le operazioni associabili nella specifica Open Service Broker e implementare i seguenti endpoint/percorsi:
 
 <dl>
   <dt>bindings and credentials (PUT)</dt>
@@ -111,7 +111,7 @@ Se il tuo servizio può essere associato alle applicazioni in {{site.data.keywor
 
 ### Endpoint di estensione {{site.data.keyword.Bluemix_notm}} richiesti
 
-La specifica OSB *non* supporta uno stato di istanza disabilitato e non ancora lo stato di istanza eliminato. Affinché {{site.data.keyword.Bluemix_notm}} possa supportare i clienti che potrebbero subire una interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora la cancellazione), {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
+La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora eliminata. Affinché {{site.data.keyword.Bluemix_notm}} possa supportare i clienti che potrebbero subire una interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora la cancellazione), {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
 
 <dl>
   <dt>enable and disable instances (GET)</dt>
@@ -120,12 +120,12 @@ La specifica OSB *non* supporta uno stato di istanza disabilitato e non ancora l
   <dd>Ti consente di abilitare o disabilitare un'istanza del servizio.</dd>
 </dl>
 
-**Nota**: è responsabilità del provider di servizi disabilitare l'accesso all'istanza del servizio quando viene richiamato l'endpoint di disabilitazione e riabilitare tale accesso quando viene richiamato l'endpoint di abilitazione.
+**Nota**: è responsabilità del provider di servizi disabilitare l'accesso all'istanza del servizio quando viene avviato l'endpoint di disabilitazione e riabilitare tale accesso quando viene avviato l'endpoint di abilitazione.
 
 ## Scopri come utilizzare i metadati esportati per guidare lo sviluppo del tuo broker
 {: #use-metadata}
 
-I metadati che hai esportato dalla console di gestione delle risorse possono essere utilizzati come guida per lo sviluppo del tuo broker. Non tutti i valori immessi nella console di gestione delle risorse sono necessari per eseguire il provisioning di un servizio. I metadati esportati dalla console di gestione delle risorse definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Il tuo json esportato dovrebbe fornire i seguenti valori:
+I metadati che hai esportato dalla console di gestione delle risorse possono essere utilizzati come guida per lo sviluppo del tuo broker. Non tutti i valori immessi nella console di gestione delle risorse sono necessari per eseguire il provisioning di un servizio. I metadati esportati dalla console di gestione delle risorse definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Il tuo JSON esportato fornisce i seguenti valori:
 
 ```
 {
@@ -176,17 +176,17 @@ services :
 ```
 
 
-Il tuo array di servizi OSB deve essere esattamente uguale ai metadati dell'offerta che hai aggiunto alla console di gestione delle risorse. Per garantire la parità uno a uno tra l'OSB e la console di gestione delle risorse, è fondamentale confrontare l'array di servizi nel `catalog.json` scaricato dalla console di gestione delle risorse con l'effettivo array di servizi nel tuo broker. Tutti i nomi e gli ID dei servizi e dei piani devono corrispondere.
+Il tuo array di servizi OSB deve essere uguale ai metadati dell'offerta che hai aggiunto alla console di gestione delle risorse. Per garantire la parità uno a uno tra l'OSB e la console di gestione delle risorse, è fondamentale confrontare l'array di servizi nel `catalog.json` scaricato dalla console di gestione delle risorse con l'effettivo array di servizi nel tuo broker. Tutti i nomi e gli ID dei servizi e dei piani devono corrispondere.
 {: tip}
 
 ## Informazioni del broker fornite dalla piattaforma {{site.data.keyword.Bluemix_notm}}
 {: #broker info}
 
-Il tuo broker dei servizi riceverà le seguenti informazioni dalla piattaforma {{site.data.keyword.Bluemix_notm}}:
+Il tuo broker dei servizi riceve le seguenti informazioni dalla piattaforma {{site.data.keyword.Bluemix_notm}}:
 
 ### X-Broker-API-Originating-Identity
 
-L'**intestazione dell'identità utente** verrà fornita tramite un'intestazione di identità di origine API. Questa intestazione di richiesta includerà l'identità {{site.data.keyword.Bluemix_notm}} IAM dell'utente. L'identità IAM sarà codificata in base64. {{site.data.keyword.Bluemix_notm}} supporta un'unica area di autenticazione: `IBMid`. L'area di autenticazione `IBMid` utilizza un IUI (IBMid Unique ID) per identificare l'identità dell'utente in {{site.data.keyword.Bluemix_notm}}. Questo IUI è una stringa opaca per il provider di servizi.
+L'**intestazione dell'identità utente** viene fornita tramite un'intestazione di identità di origine API. Questa intestazione di richiesta include l'identità {{site.data.keyword.Bluemix_notm}} IAM dell'utente. L'identità IAM è codificata in base64. {{site.data.keyword.Bluemix_notm}} supporta un'unica area di autenticazione: `IBMid`. L'area di autenticazione `IBMid` utilizza un IUI (IBMid Unique ID) per identificare l'identità dell'utente in {{site.data.keyword.Bluemix_notm}}. Questo IUI è una stringa opaca per il provider di servizi.
 
 Esempio:
 
@@ -198,31 +198,31 @@ Decoded:
 
 ### Versione dell'intestazione API
 
-L'**intestazione della versione API** sarà [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Ad esempio: `X-Broker-Api-Version: 2.12`.
+L'**intestazione della versione API** è [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Ad esempio: `X-Broker-Api-Version: 2.12`.
 
 ### resource instance (PUT) body.context and resource instance (PATCH) body.context
 
-`PUT /v2/service_instances/:resource_instance_id` e `PATCH /v2/service_instances/:resource_instance_id` riceveranno il seguente valore all'interno di **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
+`PUT /v2/service_instances/:resource_instance_id` e `PATCH /v2/service_instances/:resource_instance_id` ricevono il seguente valore all'interno di **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
 ## Ulteriori suggerimenti sul broker
 {: #more-info}
 
 ### Suggerimenti sull'utilizzo delle operazioni asincrone e sincrone
 
-L'API OSB supporta entrambe le modalità di operazione sincrone e asincrone. Se le tue operazioni richiedono meno di 10 secondi, sono consigliate le risposte sincrone.  In caso contrario, devi utilizzare la modalità di operazione asincrona.  Ulteriori informazioni sono disponibili nella specifica OSB.
+L'API OSB supporta entrambe le modalità di operazione sincrone e asincrone. Se le tue operazioni richiedono meno di 10 secondi, sono consigliate le risposte sincrone. In caso contrario, devi utilizzare la modalità di operazione asincrona. Ulteriori informazioni sono disponibili nella specifica OSB.
 
-Se l'operazione asincrona impiega meno di 10 secondi durante il tentativo di eseguire il provisioning di un'istanza, la piattaforma andrà in timeout.
+Se l'operazione asincrona impiega meno di 10 secondi quando stati eseguendo il provisioning di un'istanza, la piattaforma andrà in timeout.
 {: tip}
 
 ### Suggerimenti per la gestione dei broker nelle diverse ubicazioni
 
 È importante che gli utenti comprendano l'ubicazione dei loro servizi cloud per la latenza, la disponibilità e la residenza dei dati.
 
-Quando si esegue il provisioning delle istanze del servizio su {{site.data.keyword.Bluemix_notm}}, uno dei parametri obbligatori che gli utenti forniranno è l'ubicazione in cui desiderano che venga eseguito il provisioning dell'istanza del servizio. Alcuni servizi possono supportare il provisioning in più ubicazioni. Ad esempio, un servizio di database può supportare il provisioning in tutte le regioni {{site.data.keyword.Bluemix_notm}} o in un sottoinsieme.
+Quando si esegue il provisioning delle istanze del servizio su {{site.data.keyword.Bluemix_notm}}, uno dei parametri obbligatori che gli utenti forniscono è l'ubicazione in cui desiderano che venga eseguito il provisioning dell'istanza del servizio. Alcuni servizi possono supportare il provisioning in più ubicazioni. Ad esempio, un servizio di database può supportare il provisioning in tutte le regioni {{site.data.keyword.Bluemix_notm}} o in un sottoinsieme.
 
-Se il tuo servizio basato su API di terze parti è implementato in un altro cloud ed esposto in {{site.data.keyword.Bluemix_notm}}, l'ubicazione deve indicare l'ubicazione del servizio nell'altro cloud.
+Se il tuo servizio basato su API di terze parti è implementato in un altro cloud ed esposto in {{site.data.keyword.Bluemix_notm}}, l'ubicazione indica l'ubicazione del servizio nell'altro cloud.
 
-Durante l'incorporamento in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB, ma hai la possibilità di avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio.  All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestirà le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
+Durante l'onboarding in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB, ma hai la possibilità di avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio.  All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestisce le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
 
 Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede ulteriori ubicazioni da definire nel catalogo globale, consulta il team di incorporamento {{site.data.keyword.Bluemix_notm}}.
 
@@ -244,10 +244,10 @@ Avrai bisogno dell'ubicazione ospitata del tuo broker dei servizi per completare
 ## Come verificare il tuo broker dei servizi
 {: #test}
 
-Dovresti convalidare il tuo broker eseguendo i comandi curl sui diversi endpoint che stai abilitando. Il readme di esempio fornisce delle indicazioni eccellenti per il curl dei tuoi endpoint OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+Devi convalidare il tuo broker eseguendo i comandi curl sui diversi endpoint che stai abilitando. Il file readme di esempio fornisce delle indicazioni eccellenti per il curl dei tuoi endpoint OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
 
 ### Come eseguire il curl del tuo broker dei servizi
-
+{: #curl-broker}
 Utilizza il seguente esempio per verificare la risposta curl dei tuoi broker:
 
 ```
@@ -264,5 +264,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Passi successivi
+{: #next-steps}
 
-Ottimo lavoro! Hai appena creato e ospitato un broker dei servizi che soddisfa la specifica OSB. Consulta [Passo 4: Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
+Ottimo lavoro! Hai creato e ospitato un broker dei servizi che soddisfa la specifica OSB. Consulta [Passo 4: Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).

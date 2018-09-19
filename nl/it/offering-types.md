@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-08-31"
 
 
 ---
@@ -27,13 +27,13 @@ Quando distribuisci la tua offerta di terze parti come un servizio di riferiment
 ## Confronto dei tipi di offerta
 {: #compare}
 
-La seguente tabella fornisce un confronto dettagliato dei tipi di offerta di terze parti. 
+La seguente tabella fornisce un confronto dettagliato dei tipi di offerta di terze parti.
 
 |  | Servizio di fatturazione integrato  | Servizio di riferimento |
 |---|---|---|
 | **Onboarding** | L'onboarding viene gestito tramite l'IBM Provider Workbench e la console di gestione delle risorse. Il provider dell'offerta è responsabile dello sviluppo di un OSB (Open Service Broker), del suo hosting, della sua verifica e della loro offerta tramite una serie di passi self-service. | L'onboarding viene gestito tramite il Provider Workbench. Il processo di onboarding self-service richiede circa due settimane. |
-| **Distribuzione** | Fornita dalla piattaforma {{site.data.keyword.Bluemix_notm}}  | Solo servizi basati sull'API |
-| **Fatturazione**  |  Nel modello di fatturazione integrato, l'utente riceve una sola fattura per l'offerta IBM e per la loro offerta integrata di terze parti. | Nel modello di riferimento, il provider emette fattura per l'utente e tiene il 100% del ricavo. |
+| **Distribuzione** | Fornita dalla piattaforma {{site.data.keyword.Bluemix_notm}} | Solo servizi basati sull'API |
+| **Fatturazione**  |  Nel modello di fatturazione integrato, l'utente riceve una sola fattura per l'offerta IBM e per la loro offerta integrata di terze parti. | Nel modello di riferimento, il provider emette fattura per l'utente e tiene il 100% del ricavo.  |
 | **Esempio** | [PowerAI](https://console.bluemix.net/catalog/services/powerai) | [Accern API](https://console.bluemix.net/catalog/services/accern-api) |
-{: caption="Tabella 1. Confronto di tipi di offerta di terze parti " caption-side="top"}
+{: caption="Tabella 1. Confronto di tipi di offerta di terze parti" caption-side="top"}
 

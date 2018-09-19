@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ Riesamina i seguenti prerequisiti per abilitare la misurazione per il tuo serviz
 {: #metering_guidelines}
 
 ### Linee guida per l'inoltro
+{: #submission-guidelines}
 
 Fai riferimento alle seguenti linee guida quando utilizzi il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per inoltrare i dati di utilizzo delle risorse:
 
@@ -61,6 +62,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
 * Ritenta l'inoltro dei record di utilizzo solo se si è verificato un errore effettivo con la richiesta precedente. Non inoltrare nuovamente i record di utilizzo che erano stati accettati correttamente.
 
 ### Linee guida per gli ID servizio
+{: #id-guidelines}
 
   Devi attenerti alle seguenti linee guida quando specifichi l'ID servizio utilizzando il campo ID nella definizione della risorsa:
   * Inizia l'ID con un carattere alfanumerico.
@@ -69,6 +71,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Assicurati che la lunghezza massima dell'ID sia di 50 caratteri.
 
 ### Linee guida per i nomi risorsa
+{: #resource-name}
 
   Devi attenerti alle seguenti linee guida quando specifichi il nome risorsa utilizzando il campo resources.name nella definizione della risorsa:
 
@@ -77,6 +80,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Metti in maiuscolo il primo carattere del nome.
 
 ### Linee guida per i nomi di unità risorsa
+{: #resource-unti}
 
   Devi attenerti alle seguenti linee guida quando specifichi il nome di unità risorsa utilizzando il campo resources.unit.name nella definizione della risorsa:
 
@@ -84,6 +88,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Metti in maiuscole tutte le lettere del nome.
   
 ### Linee guida per la quantità di unità risorsa
+{: #unit-quantity}
 
   Devi attenerti alle seguenti linee guida quando specifichi il tipo di quantità della risorsa utilizzando il campo resources.unit.quantityType nella definizione della risorsa:
   
@@ -91,6 +96,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Metti in maiuscole tutte le lettere del tipo di quantità.
   
 ### Linee guida per gli ID aggregazione
+{: #aggregation}
 
   Devi attenerti alle seguenti linee guida quando specifichi l'ID aggregazione utilizzando il campo aggregations.id nella definizione della risorsa:
 
@@ -99,6 +105,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Assicurati che questo ID inizi con, o corrisponda al, valore di aggregations.unit. Ad esempio, puoi specificare **API_CALLS_PER_MONTH** per aggregations.id e specificare **API_CALLS** per aggregations.unit.
 
 ### Linee guida per le unità aggregazione
+{: #aggregation-unit}
 
   Devi attenerti alle seguenti linee guida quando specifichi l'unità aggregazione utilizzando il campo aggregations.unit nella definizione della risorsa:
    
@@ -107,10 +114,12 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
   * Assicurati che il nome unità da te specificato nel campo aggregations.unit sia un aggregato del nome unità da te specificato nel campo resources.unit.name.
   
 ### Linee guida per i gruppi aggregazione
+{: #aggregation-group}
 
   Devi utilizzare i caratteri minuscoli per il campo aggregations.aggregationGroup nella definizione della risorsa.
   
 ### Linee guida per le formule aggregazione
+{: #aggregation-formula}
 
   Per il campo aggregations.formula nella definizione della risorsa, se vuoi utilizzare operazioni aritmetiche nella formula, devi utilizzare l'unità di risorsa come un operando e utilizzare un'espressione aritmetica infissa nella funzione della formula. Ad esempio, puoi utilizzare la seguente formula per convertire i Byte in Megabyte:
   ```

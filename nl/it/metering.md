@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -67,9 +67,13 @@ La seguente tabella mostra i modelli di misurazione disponibili:
 {: caption="Tabella 1. Modello di misurazione" caption-side="top"}
 
 ### Esempi
+{: #examples}
+
 Nota che la quantità nel dashboard in ciascuno dei seguenti esempi è antecedente all'inoltro dell'utilizzo successivo ma posteriore all'elaborazione dell'utilizzo corrente.
 
 #### Aggiunta standard
+{: #standard-add}
+
 Calcola gli utilizzi per l'intero mese.
 
 Formula: ADD(utilizzi)
@@ -83,6 +87,8 @@ Formula: ADD(utilizzi)
 | Giorno 4 (notte)   | 5             | 20 + 5      | 25                    |
 
 #### Media standard
+{: #standard-average}
+
 Calcola la media degli utilizzi per l'intero mese. Nota che nella media si tiene conto anche dell'inoltro di un utilizzo zero.
 
 Formula: AVG(utilizzi)
@@ -96,6 +102,8 @@ Formula: AVG(utilizzi)
 | Giorno 4 (notte)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Massimo standard
+{: #standard-max}
+
 Calcola il massimo degli utilizzi per l'intero mese.
 
 Formula: MAX(utilizzi)
@@ -109,6 +117,8 @@ Formula: MAX(utilizzi)
 | Giorno 4 (notte)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Media proporzionale giornaliera
+{: #proration-average}
+
 Calcola l'utilizzo medio per ogni giorno e ne calcola la media per il mese. La media di ogni giorno viene sommata e divisa per il numero di giorni attualmente trascorso (in UTC).
 
 Formula: Summation(media giornaliera) / numero di giorni trascorsi nel periodo di fatturazione
@@ -129,6 +139,8 @@ Dato un mese di 30 giorni:
 \* Come visto nello stesso giorno di quando è stato inoltrato l'utilizzo.
 
 #### Massimo proporzionale giornaliero
+{: #daily-proration}
+
 Calcola l'utilizzo massimo per ogni giorno e ne calcola la media per il mese. Il massimo di ogni giorno viene sommato e diviso per il numero di giorni attualmente trascorso (in UTC).
 
 Formula: Summation(massimo giornaliero) / numero di giorni trascorsi nel periodo di fatturazione
@@ -152,16 +164,22 @@ Dato un mese di 30 giorni:
 Puoi utilizzare la configurazione di ridimensionamento per compilare la quantità unitaria differentemente da quello che viene inviato negli inoltri dell'utilizzo a quello che viene visualizzato nel dashboard di utilizzo e quello che viene utilizzato per i calcoli di valutazione e costo. I seguenti esempi illustrano questi scenari:
 
 ### Desideri avere una maggiore granularità rispetto a quella che gli utenti vedono
+{: #users}
+
 Vuoi inviare gli utilizzi a un livello più granulare ma vuoi mostrare ai clienti un numero più leggibile.
 
 Ad esempio, potresti voler misurare il traffico di un'istanza in byte e volere i valori aggregati in megabyte. Per eseguire tale operazioni, aggiungi una `scale` di 1024 alla configurazione **metering**.
 
 ### Desideri avere una maggiore granularità rispetto a quella che ha la tua configurazione dei prezzi
+{: #pricing-configuration}
+
 Stabilisci il prezzo delle tue metriche come $X / gigabyte, ma vuoi eseguirne l'invio in megabyte. Se il prezzo della tua metrica è stabilito a $1 / gigabyte ma un utente utilizza 0,5 megabyte, gli viene addebitato $1 poiché il tuo prezzo è per gigabyte. Aggiungi una `scale` di 1024 alla configurazione **rating** e imposti `clip` su `true`.
 
 Questo vale anche se il prezzo della tua metrica viene stabilito come $X per 100 chiamate API (o altra dimensione di pacchetto).
 
 ### Vuoi eseguire un ridimensionamento sia al livello di misurazione che a quello di valutazione
+{: #metering-rating}
+
 Puoi aggiungere un ridimensionamento in entrambe le configurazioni di misurazione e valutazione. Se vuoi eseguire l'invio in byte ma visualizzare i megabyte all'utente, configuri il ridimensionamento della misurazione a 1024. Se il tuo prezzo di metrica è in gigabyte, puoi anche configurare il ridimensionamento della valutazione in modo che sia 1024.
 
 ## Modelli di prezzi

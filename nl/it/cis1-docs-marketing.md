@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -52,5 +52,6 @@ Oltre alla tua documentazione introduttiva, devi creare anche il contenuto di ma
 Dopo aver inviato il tuo comunicato del servizio, un responsabile del marketing di IBM lo esamina e approva, quindi lo pubblica nei canali appropriati dopo che il tuo servizio è stato rilasciato.
 
 ## Passi successivi
+{: #next-steps}
 
 Ora che sono state avviate le attività per creare la tua documentazione introduttiva e il comunicato del servizio, sei pronto a definire la tua offerta nella console di gestione delle risorse. Consulta [Passo 2: Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).

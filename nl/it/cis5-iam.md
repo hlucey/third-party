@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -27,7 +27,7 @@ Quando definisci la tua offerta, la pagina Access Manage della console di gestio
 
 Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
-## Ricava l'URI di reindirizzamento IAM 
+## Ricava l'URI di reindirizzamento IAM
 {: #redirect-uri}
 
 Quando definisci il tuo servizio nella console di gestione delle risorse, generi un ID client, ma è probabile che in quel momento non disponevi di un URI di reindirizzamento. Un ID client che è impostato su false viene creato da IAM. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
@@ -89,6 +89,7 @@ Questa richiesta può essere eseguita dopo che l'applicazione è stata avvitata 
 **Autenticazione - Passo 2:** scambia il codice per una chiamata al token di accesso
 
 ### POST <token_endpoint>
+{: #post}
 
 #### Intestazioni:
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### Autorizzazione - Passo 2: convalida l'autorizzazione per l'utente all'istanza del servizio (/v2/authz POST)
+{: #step-2-authorization}
 
 Ora che hai autenticato l'utente e disponi del tuo token di accesso, devi convalidare che l'utente sia in grado di accedere al dashboard del servizio. Innanzitutto, ti servono alcune informazioni incluse nel token di accesso dell'utente che decodifichi nel passo 2.1. Quindi, utilizza tali informazioni per richiamare IAM per verificare se l'utente è autorizzato ad accedere al dashboard nel passo 2.2.
 
