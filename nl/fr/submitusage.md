@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,10 +44,11 @@ Consultez les conditions préalables suivantes pour activer la fonction de mesur
 {: #metering_guidelines}
 
 ### Conseils de soumission
+{: #submission-guidelines}
 
 Reportez-vous aux conseils suivants lorsque vous utilisez le service de mesure {{site.data.keyword.Bluemix_notm}} pour soumettre des données d'utilisation de ressource :
 
-* L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure. 
+* L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure.
 * Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [actions](#actions) possibles.
 * Un enregistrement d'utilisation est identifié de manière unique par la signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Lorsqu'un tel enregistrement est traité, tout autre élément ayant la même signature est rejeté comme doublon.
 * N'associez pas à d'autres services l'interaction avec le service de mesure. Les demandes doivent être traitées individuellement même si l'opération de mesure commence et se termine avec la mise à disposition et l'annulation de la mise à disposition de l'instance.
@@ -61,6 +62,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
 * Soumettez à nouveau les enregistrements d'utilisation uniquement si un échec est survenu dans la demande précédente. Ne soumettez pas à nouveau les enregistrements d'utilisation déjà acceptés.
 
 ### Instructions d'ID de service
+{: #id-guidelines}
 
   Vous devez suivre ces instructions lorsque vous spécifiez l'ID de service en utilisant la zone d'ID dans la définition de ressource :
   * Le premier caractère de l'ID doit être alphanumérique.
@@ -69,6 +71,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Vérifiez que l'ID comporte au maximum 50 caractères.
 
 ### Instructions de nom de ressource
+{: #resource-name}
 
   Vous devez suivrez ces instructions lorsque vous spécifiez le nom de la ressources en utilisant la zone resources.name dans la définition de ressource :
 
@@ -77,6 +80,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Utilisez une majuscule pour la première lettre du nom.
 
 ### Instructions concernant le nom d'unité de ressource
+{: #resource-unti}
 
   Vous devez suivre ces instructions lorsque vous spécifiez le nom d'unité de ressource en utilisant la zone resources.unit.name dans la définition de ressource :
 
@@ -84,6 +88,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Utilisez des majuscules pour toutes les lettres du nom.
   
 ### Instructions concernant la quantité d'unités de ressource
+{: #unit-quantity}
 
   Vous devez suivre ces instructions lorsque vous spécifiez le type de quantité de ressource en utilisant la zone resources.unit.quantityType dans la définition de ressource :
   
@@ -91,6 +96,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Utilisez des majuscules pour toutes les lettres du type de quantité.
   
 ### Instructions d'ID d'agrégation
+{: #aggregation}
 
   Vous devez suivre ces instructions lorsque vous spécifiez l'ID d'agrégation en utilisant la zone aggregations.id dans la définition de ressource :
 
@@ -99,6 +105,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Vérifiez que cet ID commence par la valeur de l'élément aggregations.unit ou correspond à cette dernière. Par exemple, vous pouvez spécifier **API_CALLS_PER_MONTH** pour aggregations.id et spécifier **API_CALLS** pour aggregations.unit.
 
 ### Instructions d'unité d'agrégation
+{: #aggregation-unit}
 
   Vous devez suivre ces instructions lorsque vous spécifiez l'unité d'agrégation en utilisant la zone aggregations.unit dans la définition de ressource :
    
@@ -107,10 +114,12 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
   * Vérifiez que le nom d'unité spécifié dans la zone aggregations.unit est le nom d'unité spécifié dans la zone resources.unit.name.
   
 ### Instructions de groupe d'agrégation
+{: #aggregation-group}
 
   Vous devez utiliser des lettres minuscules pour la zone aggregations.aggregationGroup dans la définition de ressource.
   
 ### Instructions de formule d'agrégation
+{: #aggregation-formula}
 
   Pour la zone aggregations.formula dans la définition de ressource, si vous souhaitez utiliser des opérations arithmétiques dans la formule, vous devez utiliser l'unité de ressource en tant qu'opérande et une expression arithmétique infixe dans la fonction de la formule. Par exemple, vous pouvez indiquer la formule suivante pour convertir des octets en mégaoctets :
   ```

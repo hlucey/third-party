@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-08-31"
 
 
 ---
@@ -26,7 +26,7 @@ Ahora que tiene la aprobación para suministrar un servicio de facturación inte
 ## Antes de empezar
 {: #pre-reqs}
 
-1. Asegúrese de que ha comenzado en [Paso 1: Crear documentación del servicio y anuncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Asegúrese de que empieza trabajando en [Paso 1: Crear documentación del servicio y anuncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
 2. Asegúrese de que está registrado con {{site.data.keyword.Bluemix_notm}}. Si no es así, [regístrese](https://console.bluemix.net/registration) antes de continuar.
 3. Asegúrese de que está en la cuenta correcta cuando empiece a trabajar en la consola de gestión de recursos.
 4. Prepare su nombre de servicio de {{site.data.keyword.Bluemix_notm}}. Debe proporcionar un nombre de servicio, que se utiliza para identificar el servicio en la plataforma {{site.data.keyword.Bluemix_notm}}, y un nombre de visualización, que es el que ven los clientes en el catálogo de {{site.data.keyword.Bluemix_notm}}.
@@ -36,7 +36,7 @@ Ahora que tiene la aprobación para suministrar un servicio de facturación inte
    - No puede incluir espacios, pero se puede incluir guiones (`-`)
    - Debe tener menos de 32 caracteres
 
-   El nombre de servicio debe incluir el nombre de la empresa. Si su empresa tiene más de una oferta, el nombre de servicio debe incluir tanto la empresa como la oferta como parte del nombre. Por ejemplo, suponga que la empresa Compose tiene ofertas para Redis y Elasticsearch. Los nombres de servicio de ejemplo en {{site.data.keyword.Bluemix_notm}} para estas ofertas serían `compose-redis` y `compose-elasticsearch`. Ambos nombres de servicio tienen nombres de visualización asociados que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}}: *Compose Redis* y *Compose Elasticsearch*. Otra empresa (por ejemplo, FastJetMail) podría tener una única oferta JetMail, en cuyo caso el nombre de servicio sería `fastjetmail`.
+   El nombre de servicio debe incluir el nombre de la empresa. Si su empresa tiene más de una oferta, el nombre de servicio debe incluir tanto la empresa como la oferta como parte del nombre. Por ejemplo, suponga que la empresa Compose tiene ofertas para Redis y Elasticsearch. Los nombres de servicio de ejemplo en {{site.data.keyword.Bluemix_notm}} para estas ofertas serían `compose-redis` y `compose-elasticsearch`. Ambos nombres de servicio incluyen nombres de visualización asociados que se muestran en el catálogo de {{site.data.keyword.Bluemix_notm}}: *Compose Redis* y *Compose Elasticsearch*. Otra empresa (por ejemplo, FastJetMail) podría tener una única oferta JetMail, en cuyo caso el nombre de servicio debe ser `fastjetmail`.
 
 ## Registre la oferta
 {: #register}
@@ -49,24 +49,24 @@ Para empezar, inicie una sesión y registre su oferta.
 2. Vaya al panel de control de la consola de gestión de recursos:  [ https://console.bluemix.net/onboarding/dashboard ](https://console.bluemix.net/onboarding/dashboard){: new_window}  ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 3. Pulse **Nuevo recurso** para añadir el recurso.
 4. Añada el **Nombre de recurso**. Este valor es el nombre de servicio de {{site.data.keyword.Bluemix_notm}} exclusivo que ha obtenido en la sección anterior.
-5. En este punto del proceso, no se espera que tenga un intermediario de servicio alojado; seleccione **No** en el campo **¿Está el intermediario preparado para la exportación?**. Le guiaremos por el proceso de creación de un intermediario en pasos posteriores, y volverá a la consola de gestión de recursos para importar el intermediario después de que se haya desarrollado y alojado.
+5. No se espera que tenga un intermediario de servicio alojado; seleccione **No** en el campo **¿Está el intermediario preparado para la importación?**. Le guiaremos por el proceso de creación de un intermediario en pasos posteriores, y volverá a la consola de gestión de recursos para importar el intermediario después de que se haya desarrollado y alojado.
 7. Después de enviarlo, aparecerá la página **Resumen**. Complete los valores *obligatorios* adicionales y pulse **Guardar**.
 
-Puede guardar el progreso en la consola de gestión de recursos y volver más tarde para añadir más información. La consola de gestión de recursos está diseñada para ayudarle a gestionar el ciclo de vida de su servicio, por lo que no pasa nada si no tiene todas las respuestas para todos los campos de inmediato.
+Puede guardar el progreso en la consola de gestión de recursos y volver más tarde para añadir más información. La consola de gestión de recursos está diseñada para ayudarle a gestionar el ciclo de vida de su servicio. No pasa nada si no tiene todas las respuestas para todos los campos de inmediato.
 {: tip}
 
 ## Especifique los metadatos de la oferta
 {: #offering-metadata}
 
-En la página **Oferta**, especifique los valores de metadatos que están almacenados en el catálogo de {{site.data.keyword.Bluemix_notm}}. Además, algunos de estos valores se tienen que exportar y almacenar en el intermediario de servicio, donde se utilizan para el suministro y se devuelven como parte de la respuesta de `catalog (GET)`. Utilizará estos valores para ayudar a iniciar el desarrollo de un intermediario de servicio en pasos posteriores.
+En la página **Oferta**, especifique los valores de metadatos que están almacenados en el catálogo de {{site.data.keyword.Bluemix_notm}}. Además, algunos de estos valores se tienen que exportar y almacenar en el intermediario de servicio, donde se utilizan para el suministro y se devuelven como parte de la respuesta de `catalog (GET)`. Utilice estos valores para ayudar a iniciar el desarrollo de un intermediario de servicio en pasos posteriores.
 
 1. En la consola de gestión de recursos, pulse la página **Oferta** y pulse el separador **Página de listado**. La **Página de listado** define
-los metadatos que se muestran en el panel de control del servicio de la oferta de {{site.data.keyword.Bluemix_notm}}. Complete todos los valores necesarios y pulse **Guardar**. La consola de gestión de recursos hará un registro inicial de su servicio con {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Se mostrará una notificación que indica que el servicio se ha registrado con IAM. Más adelante volverá a trabajar con IAM.
+los metadatos que se muestran en el panel de control del servicio de la oferta de {{site.data.keyword.Bluemix_notm}}. Complete todos los valores necesarios y pulse **Guardar**. La consola de gestión de recursos hace un registro inicial de su servicio con {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Se mostrará una notificación que indica que el servicio se ha registrado con IAM. Más adelante volverá a trabajar con IAM.
 2. En la página Oferta, pulse el separador **Valores**.
-   1. Especifique si su oferta permitirá **Cambios de plan**. El valor predeterminado es **No**. Si especifica **Sí**, debe ampliar Open Service Broker para que dé soporte a cambios de plan para las instancias suministradas. Si la oferta da soporte a varios planes y desea que los usuarios puedan cambiar sus planes para una instancia suministrada, deberá habilitar la capacidad de los usuarios para actualizar su instancia de servicio. Para ver más detalles, consulte el punto final `/v2/service_instances/{instance_id} PATCH` en la [API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
-   2. Especifique si el servicio se podrá **Enlazar**. El valor predeterminado es **No**. Seleccione **Sí** si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}. Si se puede enlazar, debe poder devolver los puntos finales de API y las credenciales a los consumidores del servicio. Cuando se desarrolla un servicio enlazable, se deben utilizar las [operaciones enlazables en la API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window}![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+   1. Especifique si su oferta permite **Cambios de plan**. El valor predeterminado es **No**. Si especifica **Sí**, debe ampliar Open Service Broker para que dé soporte a cambios de plan para las instancias suministradas. Si la oferta da soporte a varios planes y desea que los usuarios cambien sus planes para una instancia suministrada, deberá habilitar la capacidad de los usuarios para actualizar su instancia de servicio. Para ver más detalles, consulte el punto final `/v2/service_instances/{instance_id} PATCH` en la [API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
+   2. Especifique si el servicio se puede **Enlazar**. El valor predeterminado es **No**. Seleccione **Sí** si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}. Si se puede enlazar, debe devolver los puntos finales de API y las credenciales a los consumidores del servicio. Cuando se desarrolla un servicio enlazable, se deben utilizar las [operaciones enlazables en la API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window}![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
    3. Complete los campos necesarios adicionales y pulse **Guardar**.
-3. Ahora la página Oferta debería tener una marca de selección en la navegación, lo que indica que ha pasado los requisitos mínimos para completar esta página. Si la página aún está marcada como incompleta, debe volver a abrir la página y comprobar si hay campos *obligatorios* incompletos.
+3. Ahora la página Oferta tiene una marca de selección en la navegación, lo que indica que ha pasado los requisitos mínimos para completar esta página. Si la página aún está marcada como incompleta, debe volver a abrir la página y comprobar si hay campos *obligatorios* incompletos.
 
 La carta de la oferta inicial incluye un URL de documentación del servicio que genera la aplicación Provider Workbench. Debe especificar dicho URL en los campos **URL de documentación** y **URL de instrucciones**
 {: tip}
@@ -83,7 +83,7 @@ La consola de gestión de recursos genera los siguientes valores de IAM:
    - Secreto de cliente (generado, no almacenado)
 
 El proveedor de servicios tiene que proporcionar:
-   - URI de redirección (volverá a la consola de gestión de recursos después de haber desarrollado su OSB. Podrá obtener el URI de redirección a partir de la ubicación del intermediario de servicio alojado).
+   - URI de redirección (volverá a la consola de gestión de recursos después de haber desarrollado su OSB. Obtenga el URI de redirección a partir de la ubicación del intermediario de servicio alojado).
 
 1. En la consola de gestión de recursos, pulse la página **Gestión de acceso**.
 2. Pulse **Habilitar IAM**. La consola de gestión de recursos registra el servicio con IAM, crea el ID de servicio y la política y crea una clave de API. También crea un ID de cliente y secreto incompletos. El ID de cliente se debe actualizar con el URI de redirección después de que lo obtenga.
@@ -104,7 +104,7 @@ Cuando incorpore el servicio en {{site.data.keyword.Bluemix_notm}}, debe definir
    * **Plan gratuito**: todas las ofertas pueden tener un plan Lite gratuito, que permite a los usuarios probar el servicio de forma gratuita. Los planes gratuitos utilizan el valor *Lite* para el **Nombre de visualización** y *lite* para el **Nombre programático**. Especifique **Sí** en **¿Este plan es gratuito?**. Pulse **Guardar**. El plan se publica en el catálogo de {{site.data.keyword.Bluemix_notm}}.
    * **Plan de suscripción**: especifique **No** en **¿Este plan es gratuito?**. Complete los campos obligatorios. Deje las **Medidas de precios** predeterminadas. Se ofrecen estas medidas predeterminadas para que cobre a los usuarios una tarifa mensual única. Pulse **Guardar**. El plan se publica en el catálogo de {{site.data.keyword.Bluemix_notm}}. Guarde el mandato curl de ejemplo para enviar datos sobre uso.
    * **Plan de medición**: especifique **No** en **¿Este plan es gratuito?**. Complete los campos obligatorios. *Suprima* la medida de suscripción de **Métricas de precios** predeterminada. Pulse **Añadir otra métrica**, complete la página **Añadir métrica de precios** y pulse ** Añadir métrica**. Pulse **Guardar**. El plan se publica en el catálogo de {{site.data.keyword.Bluemix_notm}}. Guarde el mandato curl de ejemplo para enviar datos sobre uso. Para obtener ayuda para seleccionar las métricas correctas, consulte [Integración de mediciones](/docs/third-party/metering.html).
-3. Ahora la página **Precios** debería estar marcada como completada, lo que indica que ha pasado los requisitos mínimos para completar esta página.
+3. Ahora la página **Precios** está marcada como completada, lo que indica que ha pasado los requisitos mínimos para completar esta página.
 
 Los proveedores de servicios deben automatizar el envío de datos de uso por hora para todos los planes de medición. Para obtener más información, consulte [Envío de datos sobre uso para planes de medición](/docs/third-party/submitusage.html)
 {: tip}
@@ -112,7 +112,7 @@ Los proveedores de servicios deben automatizar el envío de datos de uso por hor
 ## Exporte los metadatos como JSON
 {: #export-metadata}
 
-Ahora que ha definido el servicio dentro de la consola de gestión de recursos, puede descargar un archivo catalog.json y utilizarlo para informar sobre el desarrollo de su OSB (Open Service Broker). El archivo catalog.json contiene metadatos que deben alojarse en el intermediario. Estos valores definen el contrato entre el intermediario y la plataforma {{site.data.keyword.Bluemix_notm}} para los servicios y planes a los que da soporte el intermediario. Todos los metadatos de catálogo adicionales que no son obligatorios para el suministro se guardan en el catálogo de {{site.data.keyword.Bluemix_notm}}, y las actualizaciones en los valores de visualización del catálogo que se utilizan para mostrar elementos en el panel de control, como enlaces, iconos y metadatos convertidos i18n, se deben actualizar en la consola de gestión de recursos (no se deben alojar en el intermediario). Ninguno de los datos que se guardan en el intermediario se muestra en la consola de {{site.data.keyword.Bluemix_notm}} ni en la CLI de {{site.data.keyword.Bluemix_notm}}; la consola y la CLI devuelven lo que se ha definido dentro de la consola de gestión de recursos y guardado en el catálogo de {{site.data.keyword.Bluemix_notm}}.
+Ahora que ha definido el servicio dentro de la consola de gestión de recursos, puede descargar un archivo catalog.json y utilizarlo para informar sobre el desarrollo de su OSB (Open Service Broker). El archivo catalog.json contiene metadatos que deben alojarse en el intermediario. Estos valores definen el contrato entre el intermediario y la plataforma {{site.data.keyword.Bluemix_notm}} para los servicios y planes a los que da soporte el intermediario. Todos los metadatos de catálogo adicionales que no son necesarios para el suministro se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}. Las actualizaciones de los valores de visualización del catálogo que se utilizan para representar el panel de control como enlaces, iconos y metadatos convertidos i18n se deben actualizar en la consola de gestión de recursos y no alojarse en el intermediario. Ninguno de los metadatos almacenados en el intermediario se muestra en la consola de {{site.data.keyword.Bluemix_notm}} ni en la CLI de {{site.data.keyword.Bluemix_notm}}. La consola y la CLI devuelven lo que se ha definido en la consola de gestión de recursos y almacenado en el catálogo de {{site.data.keyword.Bluemix_notm}}.
 
 1. En la consola de gestión de recursos, abra la página **Despliegues**.
 2. Pulse **Gestionar**.

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ Revise los siguientes requisitos previos para habilitar la medición del servici
 {: #metering_guidelines}
 
 ### Directrices de envío
+{: #submission-guidelines}
 
 Consulte las directrices siguientes cuando utilice el servicio de medición de {{site.data.keyword.Bluemix_notm}} para enviar datos de uso del recurso:
 
@@ -61,6 +62,7 @@ Estas son las prácticas recomendadas para enviar el uso:
 * Vuelva a intentar el envío de registros de uso únicamente si se produce una anomalía real en la solicitud anterior. No vuelva a someter los registros de uso que se han aceptado correctamente.
 
 ### Directrices sobre ID de servicio
+{: #id-guidelines}
 
   Debe seguir estas directrices cuando especifique el ID de servicio utilizando el campo de ID en la definición del recurso:
   * El ID debe comenzar por un carácter alfanumérico.
@@ -69,6 +71,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Asegúrese de que la longitud máxima del ID sea de 50 caracteres.
 
 ### Directrices sobre el nombre del recurso
+{: #resource-name}
 
   Debe seguir estas directrices cuando especifique el nombre del recurso utilizando el campo resources.name en la definición del recurso:
 
@@ -77,6 +80,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * El primer carácter del nombre debe estar en mayúsculas.
 
 ### Directrices sobre el nombre de la unidad del recurso
+{: #resource-unti}
 
   Debe seguir estas directrices cuando especifique el nombre de la unidad del recurso utilizando el campo resources.unit.name en la definición del recurso:
 
@@ -84,6 +88,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Especifique en mayúsculas todas las letras del nombre.
   
 ### Directrices sobre la cantidad de unidades de recursos
+{: #unit-quantity}
 
   Debe seguir estas directrices cuando especifique del tipo de cantidad del recurso utilizando el campo resources.unit.quantityType en la definición del recurso:
   
@@ -91,6 +96,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Especifique en mayúsculas todas las letras del tipo de cantidad.
   
 ### Directrices sobre el ID de agregación
+{: #aggregation}
 
   Debe seguir estas directrices cuando especifique el ID de agregación utilizando el campo aggregations.id en la definición del recurso:
 
@@ -99,6 +105,7 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Asegúrese de que este ID comienza por el valor de aggregations.unit o que coincide con el mismo. Por ejemplo, puede especificar **LLAMADAS_API_AL_MES** para aggregations.id y especificar **LLAMADAS_API** para aggregations.unit.
 
 ### Directrices sobre la unidad de agregación
+{: #aggregation-unit}
 
   Debe seguir estas directrices cuando especifique la unidad de agregación utilizando el campo aggregations.unit en la definición del recurso:
    
@@ -107,10 +114,12 @@ Estas son las prácticas recomendadas para enviar el uso:
   * Asegúrese de que el nombre de unidad que especifique en el campo aggregations.unit sea un agregado del nombre de unidad que especifique en el campo resources.unit.name.
   
 ### Directrices sobre el grupo de agregación
+{: #aggregation-group}
 
   Debe utilizar letras minúsculas para el campo aggregations.aggregationGroup en la definición del recurso.
   
 ### Directrices sobre la fórmula de agregación
+{: #aggregation-formula}
 
   Para el campo aggregations.formula de la definición del recurso, si desea utilizar operaciones aritméticas en la fórmula, debe utilizar la unidad de recurso como un operando y una expresión aritmética infix en la función de la fórmula. Por ejemplo, puede utilizar la fórmula siguiente para convertir Bytes a Megabytes:
   ```

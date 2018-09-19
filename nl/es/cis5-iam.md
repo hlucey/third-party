@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -89,6 +89,7 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 **Autenticación - Paso 2:** intercambie el código para una llamada de señal de acceso
 
 ### PUBLIQUE (POST) <token_endpoint>
+{: #post}
 
 #### Cabeceras:
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### Autorización - Paso 2: valide la autorización del usuario en la instancia de servicio (/v2/authz POST)
+{: #step-2-authorization}
 
 Ahora que ha autenticado al usuario y que tiene su propia señal de acceso, tiene que comprobar que el usuario puede acceder al panel de control del servicio. En primer lugar, necesita algunos fragmentos de información que están incluidos en la señal de acceso del usuario, que va a decodificar en el paso 2.1. A continuación, utilice dicha información para llamar a IAM para comprobar si el usuario tiene autorización para acceder al panel de control en el paso 2.2.
 

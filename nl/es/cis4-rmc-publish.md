@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-21"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -28,7 +28,7 @@ Ahora que tiene el intermediario o intermediarios alojados que cumplen la especi
 En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.md).
 {: tip}
 
-Asegúrese de que ha comenzado el paso 1 y ha completado los pasos 2, 3 y 4:
+Asegúrese de que ha iniciado el paso 1 y completado los pasos 2, 3 y 4:
 1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
 2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
 3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).
@@ -47,7 +47,7 @@ Asegúrese de que ha comenzado el paso 1 y ha completado los pasos 2, 3 y 4:
 8. En la página **Despliegues**, revise el despliegue no publicado y pulse **Publicar**.
 9. En la página **Publicar en el catálogo**, revise los detalles del despliegue y pulse **Publicar**.
 
-Ahora la página Despliegues debería estar marcada como completada en el área de navegación, lo que indica que ha pasado los requisitos mínimos.
+La página Despliegues debería estar marcada como completada en el área de navegación, lo que indica que ha superado los requisitos mínimos.
 
 ¿Se ha quedado estancado en un error de despliegue? Póngase en contacto con el representante de IBM para obtener ayuda.
 {: tip}
@@ -55,14 +55,16 @@ Ahora la página Despliegues debería estar marcada como completada en el área 
 ## Pruebe la oferta desplegada 
 {: #test}
 
-Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede ver la oferta en el catálogo de {{site.data.keyword.Bluemix_notm}}. Con la lista de comprobación siguiente, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y siga los pasos de los criterios de prueba.
+Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede ver la oferta en el catálogo de {{site.data.keyword.Bluemix_notm}}. Con la lista de comprobación de la siguiente sección, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y siga los pasos de los criterios de prueba.
 
 1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con su IBMid.
 2. Asegúrese de que está en la cuenta correcta (la misma cuenta que ha utilizado para crear el servicio)
 3. Pulse el enlace **Catálogo** en la cabecera y busque la oferta.
-4. A continuación, utilice la lista de comprobación siguiente para validar el servicio.
+4. A continuación, utilice la lista de comprobación de la sección siguiente para validar el servicio.
 
 ### Lista de comprobación - Probar el servicio
+{: #test-your-service}
+
 1. Valide la autenticación en el panel de control de la instancia de servicio
 2. El catálogo se visualiza correctamente (Importar desde intermediario se muestra correctamente en la consola de gestión de recursos)
 3. El suministro funciona - puede crear una instancia de servicio en el plan que desee
@@ -70,8 +72,8 @@ Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede
 5. El enlace funciona - puede pulsar **Conexiones** y conectar el servicio a otra aplicación
 6. La opción de desenlazar funciona - puede desconectar el servicio y suprimir la conexión.
 7. Crear clave de servicio / Suprimir clave de servicio - puede pulsar **Credenciales** y generar una clave de servicio, y luego suprimir dicha clave.
-8. Pruebe `plan_changeable` si da soporte a varios planes. Si habilita esta opción (la establece en Sí), tendrá que ampliar Open Service Broker para que dé soporte a cambios en el plan para las instancias suministradas. Si la oferta da soporte a varios planes y desea que los usuarios puedan cambiar sus planes para una instancia suministrada, deberá habilitar la capacidad de los usuarios para actualizar su instancia de servicio. Para ver más información, compruebe que el punto final /v2/service_instances/{instance_id} PATCH de Open Service Broker API v2.12  - Parche - muestra que el usuario puede cambiar el plan en la instancia suministrada. Para probarlo, conmute el plan en una instancia de servicio suministrada existente.
-9. La especificación OSB no da soporte a un estado de instancia inhabilitada, pero aún no suprimida. Para que IBM Cloud dé soporte a los clientes que experimenten un vencimiento de facturación u otra situación que pueda dar lugar a la suspensión de la cuenta (pero no cancelación), IBM Cloud ha definido puntos finales de API ampliados que permiten inhabilitar y volver a habilitar instancias de servicio. Las siguientes extensiones de punto final son **OBLIGATORIAS**; póngase en contacto con el representante de IBM para que compruebe que puede habilitar e inhabilitar puntos finales:
+8. Pruebe `plan_changeable` si da soporte a varios planes. Si habilita esta opción (la establece en Sí), tendrá que ampliar Open Service Broker para que dé soporte a cambios en el plan para las instancias suministradas. Si la oferta da soporte a varios planes y desea que los usuarios cambien sus planes para una instancia suministrada, deberá habilitar la capacidad de los usuarios para actualizar su instancia de servicio. Para ver más información, compruebe que el punto final /v2/service_instances/{instance_id} PATCH de Open Service Broker API v2.12  - Parche - muestra que el usuario puede cambiar el plan en la instancia suministrada. Para probarlo, conmute el plan en una instancia de servicio suministrada existente.
+9. La especificación OSB no da soporte a un estado de instancia inhabilitada, pero aún no suprimida. Para que IBM Cloud dé soporte a los clientes que pueden experimentar un vencimiento de facturación u otra situación que pueda dar lugar a la suspensión de la cuenta (pero no cancelación), IBM Cloud define puntos finales de API ampliados que permiten inhabilitar y volver a habilitar instancias de servicio. Las siguientes extensiones de punto final son **OBLIGATORIAS**. Trabaje con su representante de IBM para que compruebe que puede habilitar e inhabilitar puntos finales:
    - habilitar e inhabilitar instancias (GET): estado - devuelve el estado de la instancia de servicio.
    - habilitar e inhabilitar (PUT): le permite habilitar o inhabilitar una instancia de servicio.
 10. Pruebe el envío de datos uso si da soporte a planes de medición. Para cualquier plan con uso medido, debe validar lo siguiente:

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -89,6 +89,7 @@ Cette demande peut être effectuée une fois lorsque l'application est démarré
 **Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès
 
 ### POST <token_endpoint>
+{: #post}
 
 #### En-têtes :
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### Autorisation - Etape 2 : Validez l'autorisation concernant l'instance de service pour l'utilisateur (/v2/authz POST)
+{: #step-2-authorization}
 
 Maintenant que vous avez authentifié l'utilisateur et que vous disposez de votre propre jeton d'accès, vous devez faire en sorte que l'utilisateur puisse accéder au tableau de bord de services. Vous allez tout d'abord avoir besoin d'informations incluses dans le jeton d'accès de l'utilisateur que vous décodez à l'étape 2.1. Vous allez ensuite utiliser ces informations pour appeler IAM afin de vérifier si l'utilisateur est autorisé à accéder au tableau de bord à l'étape 2.2.
 

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -67,9 +67,13 @@ Le tableau suivant présente les modèles de mesure disponibles.
 {: caption="Tableau 1. Modèle de mesure" caption-side="top"}
 
 ### Exemples
+{: #examples}
+
 Notez que la quantité indiquée dans le tableau de bord de chacun des exemples suivants correspond à la situation avant que l'utilisation suivante ne soit soumise mais après le traitement de l'utilisation en cours.
 
 #### Ajout standard
+{: #standard-add}
+
 Calcul des utilisations pour l'ensemble du mois
 
 Formule : ADD(utilisations)
@@ -83,6 +87,8 @@ Formule : ADD(utilisations)
 | Jour 4 (soir)   | 5             | 20 + 5      | 25                    |
 
 #### Moyenne standard
+{: #standard-average}
+
 Calcule la moyenne des utilisations pour l'ensemble du mois. La soumission d'une utilisation égale à zéro est prise en compte lors du calcul de la moyenne.
 
 Formule : AVG(utilisations)
@@ -96,6 +102,8 @@ Formule : AVG(utilisations)
 | Jour 4 (soir)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Valeur maximale standard
+{: #standard-max}
+
 Calcule la valeur maximale des utilisations pour l'ensemble du mois.
 
 Formule : MAX(utilisations)
@@ -109,6 +117,8 @@ Formule : MAX(utilisations)
 | Jour 4 (soir)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Proratisation quotidienne - Moyenne
+{: #proration-average}
+
 Calcule l'utilisation moyenne par jour et calcule une moyenne pour le mois. Les moyennes de chaque jour sont ajoutées puis ce nombre est divisé par le nombre de jours actuellement transmis (au format UTC).
 
 Formule : total(moyenne quotidienne) / Nombre de jours transmis lors de la période de facturation
@@ -129,6 +139,8 @@ Prenons un mois à 30 jours :
 \* Situation au jour de soumission de l'utilisation.
 
 #### Proratisation quotidienne - Max
+{: #daily-proration}
+
 Calcule l'utilisation maximale par jour et calcule une moyenne pour le mois. La valeur maximale de chaque jour est ajoutée puis ce nombre est divisé par le nombre de jours actuellement transmis (au format UTC).
 
 Formule : Total (valeur maximale quotidienne) / nombre de jours dans la période de facturation
@@ -152,16 +164,22 @@ Prenons un mois à 30 jours :
 Vous pouvez utiliser la configuration de mise à l'échelle pour compiler la quantité d'unités différemment lors de l'envoi dans les soumissions d'utilisation, lors de l'affichage dans le tableau de bord d'utilisation ainsi que lors de l'affichage des éléments utilisés pour les calculs d'évaluation et de coût. Les exemples suivants présentent ces scénarios :
 
 ### Vous souhaitez une granularité plus importante que ce que les utilisateurs voient
+{: #users}
+
 Vous souhaitez envoyer les utilisations à un niveau plus granulaire mais vous souhaitez malgré tout afficher un nombre lisible d'éléments pour les clients.
 
 Par exemple, vous pouvez mesurer le trafic d'une instance en octets et avoir les valeurs agrégées en mégaoctets. Pour cela, ajoutez une `échelle` de 1024 à la configuration de **mesure**.
 
 ### Vous souhaitez une granularité plus importante que celle de votre configuration de tarification
+{: #pricing-configuration}
+
 La tarification des prix est effectuée sous la forme X $ / gigaoctet mais vous souhaitez envoyer ces données en mégaoctets. Si votre mesure est tarifiée sous la forme 1 $ / gigaoctets mais qu'un utilisateur utilise 0,5 mégaoctet, il est facturé 1 $ car votre tarification s'effectue par gigaoctet. Ajoutez une `échelle` de 1024 à la configuration d'**évaluation** et attribuez la valeur `true` à `clip`.
 
 La valeur true est conservée si votre mesure est également tarifée sous la forme suivante : X $ par 100 appels d'API (ou autre taille de paquet).
 
 ### Vous souhaitez effectuer la mise à l'échelle aux niveaux de mesure et d'évaluation
+{: #metering-rating}
+
 Vous pouvez ajouter la mise à l'échelle pour les configurations de mesure et d'évaluation. Si vous souhaitez effectuer l'envoi en octets mais que l'affichage pour l'utilisateur s'effectue en mégaoctets, attribuez la valeur 1024 à l'échelle de mesure. Si votre tarif de mesure est en gigaoctets, vous pouvez également attribuer la valeur 1024 à l'échelle d'évaluation.
 
 ## Modèles de tarification

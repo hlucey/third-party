@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -67,9 +67,13 @@ En la tabla siguiente se muestran los modelos de medición disponibles.
 {: caption="Tabla 1. Modelo de medición" caption-side="top"}
 
 ### Ejemplos
+{: #examples}
+
 Observe que la cantidad que aparece en el panel de control de cada uno de los siguientes ejemplos es anterior a que se envíen los siguientes datos de uso, pero posterior a que se procesen los datos de uso actual.
 
 #### Suma estándar
+{: #standard-add}
+
 Calcular los datos de uso de todo el mes.
 
 Fórmula: ADD(datos uso)
@@ -83,6 +87,8 @@ Fórmula: ADD(datos uso)
 | Día 4 (noche)   | 5             | 20 + 5      | 25                    |
 
 #### Promedio estándar
+{: #standard-average}
+
 Calcular el promedio de los datos de uso de todo el mes. Tenga en cuenta que el envío de un uso cero también cuenta en el promedio.
 
 Fórmula: AVG(datos uso)
@@ -96,6 +102,8 @@ Fórmula: AVG(datos uso)
 | Día 4 (noche)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Máximo estándar
+{: #standard-max}
+
 Calcular el máximo de los datos de uso de todo el mes.
 
 Fórmula: MAX(datos uso)
@@ -109,6 +117,8 @@ Fórmula: MAX(datos uso)
 | Día 4 (noche)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Promedio de prorrateo diario
+{: #proration-average}
+
 Calcular el uso promedio de cada día y calcular el promedio del mes. El promedio de cada día se suma y se divide por el número de días que han pasado (en UTC).
 
 Fórmula: Suma(promedio diario) / Número de días que han pasado del periodo de facturación
@@ -129,6 +139,8 @@ En el caso de un mes de 30 días:
 \* Datos observados en el mismo día que cuando se enviaron los datos de uso.
 
 #### Máximo de prorrateo diario
+{: #daily-proration}
+
 Calcular el uso máximo de cada día y calcular el promedio correspondiente al mes. El máximo de cada día se suma y se divide por el número de días que han pasado (en UTC).
 
 Fórmula: Suma(máximo diario) / Número de días que han pasado del periodo de facturación
@@ -152,16 +164,22 @@ En el caso de un mes de 30 días:
 Puede utilizar la configuración de escalado para compilar la cantidad de la unidad de forma distinta entre lo que se envía en envíos de datos de uso, lo que se muestra en el panel de control de uso, y lo que se utiliza para evaluar y calcular los costes. En los ejemplos siguientes se muestran estos casos de ejemplo:
 
 ### Desea más granularidad de la que ven los usuarios
+{: #users}
+
 Desea enviar datos de uso a un nivel más granular, pero desea mostrar a los clientes un número más legible.
 
 Por ejemplo, supongamos que desea medir el tráfico de la instancia en bytes y desea sumar los valores en megabytes. Para ello, añada una `escala` de 1024 a la configuración de la **medición**.
 
 ### Desea más granularidad de la que ofrece la configuración de precios
+{: #pricing-configuration}
+
 El precio de la métrica se calcula como X $ / gigabyte, pero desea enviarlo en megabytes. Si el precio de la métrica es de 1 $ / gigabyte, pero un usuario utiliza 0,5 megabytes, se le cobra 1 $, ya que el precio es por gigabyte. Puede añadir una escala (`scale`) de 1024 a la configuración de evaluación (**rating**) y definir `clip` como `true`.
 
 Esto también se aplica si el precio de la métrica es de X $ por 100 llamadas a API (u otro tamaño de paquete).
 
 ### Desea escalar a nivel de medición y de evaluación
+{: #metering-rating}
+
 Puede añadir escalado a las configuraciones de medición y de evaluación. Si desea enviar los datos en bytes pero mostrarlos en megabytes al usuario, configure la escala de medición de 1024. Si el precio de la métrica está en gigabytes, también puede configurar la escala de evaluación para que sea 1024.
 
 ## Modelos de precios

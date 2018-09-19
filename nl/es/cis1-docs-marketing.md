@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -52,5 +52,6 @@ Además de la documentación de iniciación, también es necesario que cree cont
 Después de enviar el anuncio del servicio, un gestor de marketing de IBM lo revisa y lo aprueba y, luego, lo publica en los canales adecuados cuando el servicio está disponible.
 
 ## Pasos siguientes
+{: #next-steps}
 
 Ahora que ha iniciado las tareas para crear la documentación de iniciación y el anuncio del servicio, está listo para definir la oferta en la consola de gestión de recursos. Consulte el [Paso 2: Definición de la oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).

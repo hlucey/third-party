@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -17,14 +17,17 @@ lastupdated: "2018-08-30"
 {:download: .download}
 
 # Cómo utilizan la plataforma {{site.data.keyword.Bluemix_notm}} los servicios de facturación integrados
+{: #how-it-works}
 
 Los servicios de facturación integrados son distintos de los servicios de referencia. Un servicio de facturación integrado utiliza la plataforma {{site.data.keyword.Bluemix_notm}} para la autenticación, el acceso, el suministro, la medición y la facturación. En este tema encontrará una visión general de los componentes de la plataforma que utiliza el servicio de facturación integrado.
 
 ## La capa de suministro de {{site.data.keyword.Bluemix_notm}}
+{: #provisioning-layer}
 
 La capa de suministro gestiona el ciclo de vida de los recursos de {{site.data.keyword.Bluemix_notm}}. La capa de suministro es la responsable de controlar y realizar un seguimiento del ciclo de vida de los recursos en una cuenta de cliente. Los *recursos* son componentes físicos o lógicos que se pueden suministrar o reservar para una aplicación o instancia de servicio. Los ejemplos de recursos incluyen límites almacenamiento, base de datos, cuentas, procesador y memoria. En general, los recursos de los que la capa de suministro realiza un seguimiento están pensados para asociar métricas de uso y métodos de facturación, pero no siempre es así. En algunos casos, el recurso puede estar asociado a la capa de suministro para garantizar que el ciclo de vida del recurso se puede gestionar junto con el ciclo de vida de la cuenta.
 
 ### Gestión del ciclo de vida de un recurso
+{: #lifecycle}
 
 La capa de suministro proporciona API comunes para controlar el ciclo de vida de los recursos desde el suministro (creación de una instancia), pasando por el enlace (creación de credenciales de acceso) y el desenlace (eliminación del acceso), hasta el desaprovisionamiento (supresión de una instancia). Además, la plataforma {{site.data.keyword.Bluemix_notm}} proporciona varias CLI y una interfaz de usuario que puede gestionar el ciclo de vida de estos recursos que no requieren que cree sus propias instalaciones.
 
@@ -37,12 +40,14 @@ La capa de suministro proporciona varias API para ayudarle a gestionar los sigui
 * Desaprovisionamiento
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
+{: #iam}
 
 Identity Access Management (IAM) le permite autenticar usuarios de forma segura y controlar el acceso a todos los recursos de la nube de forma coherente en {{site.data.keyword.Bluemix_notm}}. La capa de suministro de {{site.data.keyword.Bluemix_notm}} ha adoptado IAM para la autenticación y autorización de acciones que se emprenden sobre la capa de suministro. Los proveedores de ofertas de terceros utilizan IAM para crear un flujo de autenticación (OAuth). Para obtener más información, consulte [¿Qué es IAM?](/docs/iam/index.html#iamoverview)?
 
 Si su oferta utiliza bibliotecas de OpenID Connect (OIDC), IAM da soporte a la integración de OIDC. OIDC es una capa de autenticación en la parte superior de OAuth 2.0, una infraestructura de autorización, y puede ayudar a simplificar el proceso de incorporación. Para obtener más información sobre OIDC, consulte [Open ID Connect](http://openid.net/connect/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Catálogo de {{site.data.keyword.Bluemix_notm}}
+{: #catalog}
 
 El catálogo de {{site.data.keyword.Bluemix_notm}} almacena las definiciones de la oferta (descripción, características, imágenes, URL, etc.) de los recursos que se muestran en la consola de {{site.data.keyword.Bluemix_notm}}. La consola de gestión de recursos se utiliza para definir todos los aspectos de los metadatos necesarios del servicio. Estos metadatos se publican en el catálogo y son los que se visualizan en el catálogo. Encontrará información detallada sobre los campos de metadatos obligatorios y opcionales de las páginas **Oferta** y **Plan** de la consola de gestión de recursos. Aquí se incluyen los elementos clave para agilizar el proceso de aprendizaje.
 
@@ -58,7 +63,7 @@ El catálogo de {{site.data.keyword.Bluemix_notm}} almacena las definiciones de 
    * Categoría: selección de las categorías disponibles de {{site.data.keyword.Bluemix_notm}} en las que se coloca el servicio en el catálogo.
    * Viñetas: pequeños puntos con descripciones del servicio
    * Medios: capturas de pantalla y vídeos sobre el servicio
-   * Nombre del plan de servicio: cada plan tiene un nombre técnico. Debe estar en minúsculas, sin espacios y puede incluir "-".  Por ejemplo, `gold`.
+   * Nombre del plan de servicio: cada plan tiene un nombre técnico. Debe estar en minúsculas, sin espacios y puede incluir "-". Por ejemplo, `gold`.
    * Nombre de visualización del plan de servicio: nombre descriptivo del plan. Por ejemplo, `Gold`
    * ID del plan de servicio: GUID para el plan de servicio que se utiliza en las llamadas de API al intermediario OSB. Este valor debe ser exclusivo. La consola de gestión de recursos genera este valor.
    * Descripción del plan de servicio: la descripción del plan del recurso. La descripción se visualiza después de que se seleccione un plan en la página de detalles del recurso en el catálogo de IBM Cloud
@@ -66,6 +71,7 @@ El catálogo de {{site.data.keyword.Bluemix_notm}} almacena las definiciones de 
 
 
 ## Open Service Broker
+{: #open-service}
 
 Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con intermediarios de servicio para suministrar y gestionar instancias de servicio (una instancia de una oferta de servicio) y enlaces de servicio (la representación de una asociación entre una aplicación y una instancia de servicio, que a menudo incluye las credenciales que utiliza la aplicación para comunicarse con la instancia de servicio). Al proporcionar valores de metadatos válidos se crea una respuesta de API REST correcta cuando se realiza una solicitud.
 
@@ -74,6 +80,7 @@ Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La p
 Cuando el controlador de recursos recibe una solicitud para suministrar un recurso, llama a OSB para validar el tipo de servicio, la oferta, los planes y la disponibilidad de las regiones. El controlador de recursos también valida la visibilidad del plan que está asociado con la cuenta del cliente. {{site.data.keyword.Bluemix_notm}} ofrece ejemplos de intermediario y documentación sobre la API que amplían la especificación OSB. Encontrará más detalles sobre el desarrollo y el alojamiento del intermediario a medida que siga los pasos detallados de desarrollo e incorporación de la facturación integrada.
 
 ## Servicio de medición de {{site.data.keyword.Bluemix_notm}}
+{: #metering-service}
 
 Si un servicio ofrece un plan de medición, se factura a los usuarios de {{site.data.keyword.Bluemix_notm}} en función de la cantidad de recursos que utilizan. Por ejemplo, se puede facturar a los usuarios de {{site.data.keyword.Bluemix_notm}} que utilizan servicios de base de datos en función de la cantidad de almacenamiento que utilizan sus aplicaciones. Para poder convertir el uso en un registro facturable se deben enviar datos sobre uso.
 
@@ -124,6 +131,7 @@ Solicitud de suministro de ejemplo:
 ```
 
 ### Visión general del parámetro {{site.data.keyword.Bluemix_notm}} `context`
+{: #parameter}
 
 En el ejemplo anterior, puede ver los metadatos que se devuelven en el parámetro `context`. El contexto de suministro de {{site.data.keyword.Bluemix_notm}} devuelve lo siguiente:
 
@@ -143,9 +151,9 @@ En el ejemplo anterior, puede ver los metadatos que se devuelven en el parámetr
    crn:v1:bluemix:public:compose-redis:us-south:a/46aa677e-e83f-4d17-a2b6-5b752564477c:416d769b-682d-4833-8bd7-5ef8778e5b52::
    ```
 
-   En este ejemplo, esta instancia de `compose-redis` forma parte de la cuenta de {{site.data.keyword.Bluemix_notm}} con el id `46aa677e-e83f-4d17-a2b6-5b752564477c`, el id exclusivo de la instancia es `416d769b-682d-4833-8bd7-5ef8778e5b52` y la instancia está alojada en la región `us-south` de {{site.data.keyword.Bluemix_notm}} público.
+   En este ejemplo, la instancia de `compose-redis` forma parte de una cuenta de {{site.data.keyword.Bluemix_notm}} con ID. El ID único de la instancia es `416d769b-682d-4833-8bd7-5ef8778e5b52` y la instancia se aloja en la región `us-south` de {{site.data.keyword.Bluemix_notm}} público.
 
-* **resource_group_crn**: devuelve que grupo de recursos que contiene la instancia de servicio. Para obtener más información, consulte [Gestión de grupos de recursos](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: Devuelve el grupo de recursos que contiene la instancia de servicio. Para obtener más información, consulte [Gestión de grupos de recursos](/docs/resources/resourcegroups.html).
 
-   **Nota**: los proveedores de ofertas no deben preocuparse por `resource_group_crn`, excepto en casos muy específicos. Consulte a su representante de IBM antes de utilizar este campo.
+   **Nota**: Los proveedores de ofertas no se preocupan por `resource_group_crn`, excepto en casos muy específicos. Consulte a su representante de IBM antes de utilizar este campo.
 

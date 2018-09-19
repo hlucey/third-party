@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -52,5 +52,6 @@ Outre la documentation d'initiation, il vous est également demandé de créer d
 Une fois que vous avez soumis votre annonce de service, un responsable marketing IBM le révise, l'approuve puis le publie sur les canaux appropriés une fois votre service publié.
 
 ## Etapes suivantes
+{: #next-steps}
 
 Maintenant que vous avez démarré les tâches pour la création de la documentation d'initiation et l'annonce de service, vous êtes prêt à définir votre offre dans la console de gestion de ressources. Voir [Etape 2 : Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-30"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -17,14 +17,17 @@ lastupdated: "2018-08-30"
 {:download: .download}
 
 # Comment les services de facturation intégrée utilisent-ils la plateforme {{site.data.keyword.Bluemix_notm}} ?
+{: #how-it-works}
 
 Les services de facturation intégrée sont différents des services de référence. Un service de facturation intégrée utilise la plateforme {{site.data.keyword.Bluemix_notm}} pour l'authentification, l'accès, la mise à disposition, les opérations de mesure et la facturation. Cette rubrique présente de manière détaillée les composants de plateforme utilisés par votre service de facturation intégrée.
 
 ## Couche de mise à disposition {{site.data.keyword.Bluemix_notm}}
+{: #provisioning-layer}
 
 La couche de mise à disposition gère le cycle de vie des ressources {{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition a la charge du contrôle et du suivi du cycle de vie des ressources dans un compte client. Les *ressources* sont des composants physiques et logiques pouvant être mis à disposition ou réservés pour une application ou une instance de service. Exemples de ressources : base de données, comptes, limites de processeur, de mémoire ou de stockage. En général, les ressources suivies par la couche de mise à disposition sont conçues de telle sorte que la facturation et les mesures d'utilisation soient associées mais ce n'est pas toujours le cas. Dans la plupart des cas, les ressources peuvent être associées à la couche de mise à disposition afin de garantir que le cycle de vie des ressources peut être géré en même temps que le cycle de vie des comptes.
 
 ### Gestion du cycle de vie des ressources
+{: #lifecycle}
 
 La couche de mise à disposition fournit des API communes afin de contrôler le cycle de vie des ressources composé des étapes suivantes : mise à disposition (création d'une instance), liaison (création de données d'identification d'accès), annulation de la liaison (retrait d'accès), annulation de la mise à disposition (suppression d'une instance). De plus, la plateforme {{site.data.keyword.Bluemix_notm}} fournit des interfaces CLI et une interface utilisateur qui peuvent gérer le cycle de vie des ressources pour lesquelles il n'est pas nécessaire de créer vos propres fonctions.
 
@@ -37,16 +40,18 @@ La couche de mise à disposition fournit des API vous permettant de gérer les �
 * Annulation de la mise à disposition
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
+{: #iam}
 
 Identity Access Management (IAM) vous permet d'authentifier de manière sécurisée et de contrôler de façon cohérente l'accès à toutes les ressources d'{{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition d'{{site.data.keyword.Bluemix_notm}} a adopté IAM pour l'authentification et l'autorisation des actions effectuées dans la couche de mise à disposition. Les fournisseurs d'offre tiers utilisent IAM pour créer un flux d'authentification (OAuth). Pour plus d'informations, voir [Qu'est-ce qu'IAM ](/docs/iam/index.html#iamoverview)?
 
 Si votre offre utilise des bibliothèques OpenID Connect (OIDC), IAM prend en charge l'intégration d'OIDC. OIDC est une couche d'authentification qui complète OAuth 2.0, structure d'autorisation, et qui peut permettre de simplifier le processus d'intégration. Pour plus d'informations sur OIDC, voir [Open ID Connect](http://openid.net/connect/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Catalogue {{site.data.keyword.Bluemix_notm}}
+{: #catalog}
 
 Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre (description, fonctions, images, URL, etc.) des ressources affichées dans la console {{site.data.keyword.Bluemix_notm}}. La console de gestion des ressources permet de définir tous les aspects des métadonnées requises de votre service. Ces métadonnées sont publiées dans le catalogue et utilisées pour affichage dans le catalogue. Des informations détaillées sur les zones de métadonnées requises et facultatives sont disponibles sur les pages **Offering** et **Plan** de la console de gestion des ressources. Les éléments principaux sont décrits ci-dessous pour une meilleure compréhension.
 
-   * Service Name : nom technique de votre service. Le nom de service est essentiel et doit être correctement défini. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le nom de service ne correspond pas au nom affiché. 
+   * Service Name : nom technique de votre service. Le nom de service est essentiel et doit être correctement défini. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}. Le nom de service ne correspond pas au nom affiché.
    * Service Display Name : nom intuitif de votre service. Par exemple, "Compose Redis"
    * Service ID : identificateur global unique de votre service utilisé dans les appels d'API de votre courtier OSB. Cette valeur doit être unique.
    * Service Icon : fichier SVG incluant votre logo de service
@@ -58,7 +63,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre 
    * Category : sélection des catégories {{site.data.keyword.Bluemix_notm}} disponibles où se trouve votre service dans le catalogue.
    * Bullets : brèves descriptions de votre service
    * Media : captures d'écran et vidéos concernant votre service
-   * Service Plan Name : chaque plan a un nom technique. Ce nom inclut des lettres en minuscules, aucun espace et peut inclure le caractère "-".  Par exemple, `gold`.
+   * Service Plan Name : chaque plan a un nom technique. Ce nom inclut des lettres en minuscules, aucun espace et peut inclure le caractère "-". Par exemple, `gold`.
    * Service Plan Display Name : nom intuitif du plan. Par exemple, `Gold`
    * Service Plan ID : identificateur global unique de votre plan de service utilisé dans les appels d'API de votre courtier OSB. Cette valeur doit être unique. La console de gestion des ressources génère cette valeur pour vous.
    * Service Plan Description : description du plan de ressources. Cette description s'affiche une fois que vous avez sélectionné un plan sur la page des détails de ressources dans le catalogue IBM Cloud
@@ -66,6 +71,7 @@ Le catalogue {{site.data.keyword.Bluemix_notm}} stocke les définitions d'offre 
 
 
 ## Open Service Broker
+{: #open-service}
 
 Les courtiers de services gèrent le cycle de vie des services. La plateforme {{site.data.keyword.Bluemix_notm}} interagit avec les courtiers de services pour mettre à disposition et gérer des instances de service (instanciation d'une offre de service) et des liaisons de service (représentation d'une association entre une application et une instance de service, qui contient souvent les données d'identification utilisées par l'application pour communiquer avec l'instance de service). Le fait de mettre à disposition des valeurs de métadonnées valides crée une réponse d'API REST lors d'une demande.
 
@@ -74,6 +80,7 @@ Les courtiers de services gèrent le cycle de vie des services. La plateforme {{
 Lorsque le contrôleur de ressources reçoit une demande de mise à disposition d'une ressource, il appelle votre courtier OSB afin de valider la disponibilité des régions, des plans, de l'offre et du type de service. Le contrôleur de ressources valide également la visibilité du plan associé au compte client. {{site.data.keyword.Bluemix_notm}} fournit des exemples de courtier et des documents d'API qui étendent la spécification OSB. Vous pouvez trouver plus d'informations sur le développement et l'hébergement de votre courtier lorsque vous parcourez les procédures détaillées de développement d'intégration de facturation.
 
 ## Service de mesure {{site.data.keyword.Bluemix_notm}}
+{: #metering-service}
 
 Si un service inclut un plan mesuré, les utilisateurs {{site.data.keyword.Bluemix_notm}} sont facturés en fonction de la quantité de ressources qu'ils utilisent. Par exemple, les utilisateurs {{site.data.keyword.Bluemix_notm}} ayant recours à des services de base de données peuvent être facturés en fonction de la quantité de stockage utilisée par leurs applications. La soumission de l'utilisation doit être effectuée de telle sorte que l'utilisation soit convertie en enregistrement facturable.
 
@@ -124,6 +131,7 @@ Exemple de demande de mise à disposition :
 ```
 
 ### Description du paramètre `context` {{site.data.keyword.Bluemix_notm}}
+{: #parameter}
 
 Dans l'exemple précédent, vous pouvez voir les métadonnées renvoyées dans le paramètre `context`. Le contexte de mise à disposition d'{{site.data.keyword.Bluemix_notm}} renvoie les éléments suivants :
 
@@ -143,9 +151,9 @@ Dans l'exemple précédent, vous pouvez voir les métadonnées renvoyées dans l
    crn:v1:bluemix:public:compose-redis:us-south:a/46aa677e-e83f-4d17-a2b6-5b752564477c:416d769b-682d-4833-8bd7-5ef8778e5b52::
    ```
 
-   Dans cet exemple, cette instance `compose-redis` fait partie du compte {{site.data.keyword.Bluemix_notm}} ayant l'ID `46aa677e-e83f-4d17-a2b6-5b752564477c`, l'ID unique de l'instance est `416d769b-682d-4833-8bd7-5ef8778e5b52` et l'instance est hébergée dans la région `us-south` de l'élément {{site.data.keyword.Bluemix_notm}} public.
+   Dans cet exemple, cette instance `compose-redis` fait partie du compte {{site.data.keyword.Bluemix_notm}} ayant l'ID. L'ID unique de l'instance est `416d769b-682d-4833-8bd7-5ef8778e5b52` et cette dernière est hébergée dans la région `us-south` de l'élément {{site.data.keyword.Bluemix_notm}} public.
 
-* **resource_group_crn** : renvoie le groupe de ressources contenant l'instance de service. Pour plus de détails, voir [Gestion des groupes de ressources](/docs/resources/resourcegroups.html).
+* **resource_group_crn** : renvoie le groupe de ressources incluant l'instance de service. Pour plus de détails, voir [Gestion des groupes de ressources](/docs/resources/resourcegroups.html).
 
-   **Remarque** : Les fournisseurs de services ne sont pas concernés par le paramètre `resource_group_crn` sauf dans de très rares circonstances. Contactez votre interlocuteur IBM à propos de votre cas d'utilisation avant d'utiliser cette zone.
+   **Remarque** : Les fournisseurs de services ne sont pas concernés par le paramètre `resource_group_crn` sauf dans de rares circonstances. Contactez votre interlocuteur IBM avant d'utiliser cette zone.
 
