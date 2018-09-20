@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -46,11 +46,11 @@ Revise os pré-requisitos a seguir para ativar a medição para seu serviço:
 {: #metering_guidelines}
 
 ### Diretrizes de envio
+{: #submission-guidelines}
 
 Consulte as diretrizes a seguir ao usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para enviar dados de uso de recurso:
 
-* O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. 
-Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
+* O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
 * Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, veja as [ações](#actions) que você pode ter que tomar.
 * Um registro de uso é identificado com exclusividade pela assinatura ` account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando um registro de uso é processado, qualquer outro registro de uso com a mesma assinatura é rejeitado como uma duplicata.
 * Não combine a interação com o serviço de medição com quaisquer outros serviços. As solicitações devem ser tratadas
@@ -67,6 +67,7 @@ horário do consumo do recurso e o horário no qual o custo é refletido nas con
 solicitação anterior. Não reenvie os registros de uso que foram aceitos com êxito.
 
 ### Diretrizes de ID do serviço
+{: #id-guidelines}
 
   Deve-se seguir essas diretrizes ao especificar o ID do serviço usando o campo de ID na definição de recurso:
   * Inicie o ID com um caractere alfanumérico.
@@ -75,6 +76,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Assegure-se de que o comprimento máximo do ID seja 50 caracteres.
 
 ### Diretrizes de nome do recurso
+{: #resource-name}
 
   Deve-se seguir estas diretrizes ao especificar o nome do recurso usando o campo resources.name na definição de recurso:
 
@@ -83,6 +85,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Altere para letras maiúsculas o primeiro caractere do nome.
 
 ### Diretrizes de nome da unidade de recurso
+{: #resource-unti}
 
   Deve-se seguir estas diretrizes ao especificar o nome da unidade de recurso usando o campo resources.unit.name na definição do recurso:
 
@@ -90,6 +93,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Altere para letras maiúsculas todas as letras do nome.
   
 ### Diretrizes de quantidade da unidade de recurso
+{: #unit-quantity}
 
   Deve-se seguir estas diretrizes ao especificar o tipo de quantidade de recursos usando o campo resources.unit.quantityType na definição de recurso:
   
@@ -97,6 +101,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Altere para letras maiúsculas todas as letras do tipo de quantidade.
   
 ### Diretrizes de ID de agregação
+{: #aggregation}
 
   Deve-se seguir estas diretrizes ao especificar o ID de agregação usando o campo aggregations.id na definição de recurso:
 
@@ -105,6 +110,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Assegure-se de que esse ID inicie com ou corresponda ao valor de aggregations.unit. Por exemplo, é possível especificar **API_CALLS_PER_MONTH** para aggregations.id e especificar **API_CALLS** para aggregations.unit.
 
 ### Diretrizes de unidade de agregação
+{: #aggregation-unit}
 
   Deve-se seguir estas diretrizes ao especificar a unidade de agregação usando o campo aggregations.unit na definição de recurso:
    
@@ -113,10 +119,12 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
   * Assegure-se de que o nome da unidade especificado no campo aggregations.unit seja uma agregação do nome da unidade especificado no campo resources.unit.name.
   
 ### Diretrizes de grupo de agregação
+{: #aggregation-group}
 
   Deve-se usar letras minúsculas para o campo aggregations.aggregationGroup na definição de recurso.
   
 ### Diretrizes de fórmula de agregação
+{: #aggregation-formula}
 
   Para o campo aggregations.formula na definição de recurso, se você desejar usar operações aritméticas na fórmula, deve-se usar a unidade de recurso como um operando e usar uma expressão aritmética infix na função da fórmula. Por exemplo, é possível usar a fórmula a seguir para converter Bytes em Megabytes:
   ```

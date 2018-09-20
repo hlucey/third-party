@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-27"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -54,5 +54,6 @@ serviço por meio do newsletter do {{site.data.keyword.Bluemix_notm}} e dos cana
 Depois que você envia seu anúncio de serviço, um gerente de marketing da IBM revisa e aprova e, em seguida, publica nos canais apropriados após a liberação do serviço.
 
 ## Próximas Etapas
+{: #next-steps}
 
 Agora que iniciou as tarefas para criar a documentação de introdução e o anúncio de serviço, você está pronto para definir sua oferta no console de gerenciamento de recurso. Veja [Etapa 2: definindo sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).

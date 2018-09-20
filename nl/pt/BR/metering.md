@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 ---
 
@@ -26,8 +26,7 @@ A lista a seguir descreve as expectativas para rastreamento e envio de uso:
 *	Os provedores de oferta de terceiro não precisam enviar o uso para os planos grátis.
 *	Os provedores de oferta de terceiro não precisam enviar o uso para os planos de assinatura mensais.
 *	Para planos medidos, todos os provedores de oferta devem enviar o uso por hora (os planos Lite devem ser enviados a cada 15 minutos até 1 hora).
-*	O provedor de oferta é responsável por automatizar o envio de uso, incluindo a automação que tenta respostas de falha novamente. 
-O {{site.data.keyword.Bluemix_notm}} não fornece uma função de nova tentativa para envios com falha. Para obter mais
+*	O provedor de oferta é responsável por automatizar o envio de uso, incluindo a automação que tenta respostas de falha novamente. O {{site.data.keyword.Bluemix_notm}} não fornece uma função de nova tentativa para envios com falha. Para obter mais
 informações, consulte os códigos de status e a tabela de ações em
 [Enviando registros de uso](/docs/third-party/submitusage.html#submitting-usage-records).
 *	Os registros de uso do mês atual devem ser enviados, o mais tardar, até o dia 2 do mês seguinte.
@@ -73,9 +72,13 @@ total de dias para o mês (preço diário). |
 {: caption="Tabela 1. Modelo de medição" caption-side="top"}
 
 ### Exemplos
+{: #examples}
+
 Observe que a quantidade no painel em cada um dos exemplos a seguir é antes que o próximo uso seja enviado, mas depois que o uso atual for processado.
 
 #### Inclusão padrão
+{: #standard-add}
+
 Calcule os usos para o mês inteiro.
 
 Fórmula: ADD (usos)
@@ -89,6 +92,8 @@ Fórmula: ADD (usos)
 | Dia 4 (noite)   | 5             | 20 + 5      | 25                    |
 
 #### Média padrão
+{: #standard-average}
+
 Calcule a média dos usos para o mês inteiro. Observe que enviar um uso zero também conta para a média.
 
 Fórmula: AVG (usos)
@@ -102,6 +107,8 @@ Fórmula: AVG (usos)
 | Dia 4 (noite)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
 
 #### Máximo padrão
+{: #standard-max}
+
 Calcule o máximo dos usos para o mês inteiro.
 
 Fórmula: MAX (usos)
@@ -115,6 +122,8 @@ Fórmula: MAX (usos)
 | Dia 4 (noite)   | 1              | MAX(15, 1)   | 15                    |
 
 #### Média de rateio diária
+{: #proration-average}
+
 Calcule o uso médio para cada dia e calcule a média para o mês. A média de cada dia é somada e dividida pelo número de dias atualmente passados (em UTC).
 
 Fórmula: adição (média diária) / Número de dias passados no período de faturamento
@@ -135,6 +144,8 @@ Dado um mês de 30 dias:
 \* Conforme visto no mesmo dia que o momento em que o uso foi enviado.
 
 #### Máximo de rateio Diário
+{: #daily-proration}
+
 Calcule o uso máximo por dia e calcule a média para o mês. O máximo de cada dia é somado e dividido pelo número de dias atualmente passados (em UTC).
 
 Fórmula: adição (máximo diário)/número de dias passados no período de faturamento
@@ -159,17 +170,23 @@ Dado um mês de 30 dias:
 em envios de uso para o que é exibido no Painel de uso e o que é usado para os cálculos de classificação e de custo. Os exemplos a seguir demonstram esses cenários:
 
 ### Você deseja mais granularidade do que os usuários veem
+{: #users}
+
 Você deseja enviar usos a um nível mais granular, mas deseja mostrar aos clientes um número mais legível.
 
 Por exemplo, você pode desejar medir o tráfego de uma instância em bytes e desejar os valores agregados em megabytes. Para fazer isso, inclua um `scale` de 1024 na configuração de **medição**.
 
 ### Você deseja mais granularidade do que a sua configuração de precificação tem
+{: #pricing-configuration}
+
 Você precifica suas métricas como US$ X/gigabyte, mas deseja enviá-las em megabytes. Se a métrica for precificada em
 US$ 1/gigabyte, mas um usuário usar 0,5 megabytes, será cobrado US$ 1 porque a precificação é por gigabyte. Você inclui um `scale` de 1024 na configuração de **classificação** e configura `clip` como `true`.
 
 Isso retém true caso sua métrica também seja precificada como US$ X por 100 chamadas API (ou algum outro tamanho de pacote).
 
 ### Você deseja escalar os níveis de medição e de classificação
+{: #metering-rating}
+
 É possível incluir o ajuste de escala nas configurações de medição e de classificação. Se desejar enviar em bytes, mas mostrar megabytes para o usuário, você configurará a escala de medição para 1024. Se o preço da métrica estiver em gigabytes, você também configurará a escala de classificação para 1024.
 
 ## Modelos de precificação
@@ -180,11 +197,10 @@ A tabela a seguir fornece informações detalhadas sobre os modelos de precifica
 | Modelo          | Descrição | Cálculo | Exemplo (5000 quantity) |
 |:-----------------|:-------------|:----------- |:---------------------|
 | Linear         | Multiplique o preço unitário por recurso (P) pela quantidade de uso (Q) para obter a quantia total (T)  | P*Q    | P=$1 T = 1 * 5000 = $5000        |
-| Rateio      | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. 
-O total de encargos envolve o acúmulo dos encargos para todos os dias do mês.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
+| Rateio      | Multiplique o preço unitário diário por recurso (P) pela quantidade de uso diário (Q) para obter a quantia diária total. O total de encargos envolve o acúmulo dos encargos para todos os dias do mês.         | T = (pd * Q1) + ... + (Pd *Qn)     | <ul><li>P = US$ 30</li><li>Pd (preço diário) = US$ 30/30 = US$ 1 (supondo 30 dias em um mês)</li><li>T1 = US$ 1 * 1 = US$ 1</li><li>T2 = US$ 1 * 0 = US$ 0</li><li>Tn = 1 * 1 = US$ 1</li><li>T = US$ 1 + US$ 0 +...+US$ 1 = US$ 5000</li></ul>     |
 | Camada simples (camada granular)  | Um modelo P*Q no qual o preço unitário para todo o consumo é determinado pela
-camada em que a quantidade se encaixa. | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
+camada em que a quantidade se encaixa.           | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
 | Camada graduada (camada da etapa)   | O preço por unidade varia conforme a quantidade consumida se move para diferentes camadas predefinidas. O encargo total envolve acumular os encargos das camadas anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1 = 1000, P1 = US$ 1, T1 = 1*1000</li><li>Q2 = 1500, P2 = US$ 0,9, T2 = 0,9*1500</li><li>Q3 = 10000, P3 = US$ 0,75, T3 = 0,75*2500</li><li>T = 1000 + 1350 + 1875 = US$ 4225</li></ul>          |
-| Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até" que não varia dentro do bloco | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
+| Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até" que não varia dentro do bloco     | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
 
 

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -35,8 +35,7 @@ Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party/i
 Ao definir o serviço no console de gerenciamento de recurso, um identificador de cliente é gerado, mas observe que
 provavelmente você não tem um URI de redirecionamento no momento. Um identificador de cliente configurado como false é criado pelo IAM. Até você retornar ao console de gerenciamento de recurso com o URI de redirecionamento, não terá um identificador de cliente true.
 
-A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um OSB e hospedou-o (você provavelmente viu valores do IAM no código do broker de amostra). 
-O `redirect_uri` é geralmente a URL do host em que o app reside com alguma URL adicional que pode
+A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um OSB e hospedou-o (você provavelmente viu valores do IAM no código do broker de amostra). O `redirect_uri` é geralmente a URL do host em que o app reside com alguma URL adicional que pode
 manipular a autenticação/autorização.
 
  Os exemplos a seguir mostram URIs redirecionarem:
@@ -78,8 +77,7 @@ Content-Type: application/json
 }
 ```
 
-Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e novamente se o `authorization_endpoint` falhar. 
-Agora você é capaz de armazenar em cache o valor `authorization_endpoint` por um curto período de tempo e
+Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e novamente se o `authorization_endpoint` falhar. Agora você é capaz de armazenar em cache o valor `authorization_endpoint` por um curto período de tempo e
 atualizar após a expiração do cache ou a localização de um erro.
 
 
@@ -96,6 +94,7 @@ atualizar após a expiração do cache ou a localização de um erro.
 **Autenticação - Etapa 2:** troque o código para uma chamada de token de acesso
 
 ### POST <token_endpoint>
+{: #post}
 
 #### Cabeçalhos:
 {: #headers1}
@@ -198,15 +197,14 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Nota:** esse token é válido por uma hora e pode ser reutilizado quantas vezes forem necessárias durante o prazo de uma hora. 
-É altamente recomendável que esse token seja armazenado em cache para evitar fazer essa solicitação para cada acesso ao `dashboard_url`.
+**Nota:** esse token é válido por uma hora e pode ser reutilizado quantas vezes forem necessárias durante o prazo de uma hora. É altamente recomendável que esse token seja armazenado em cache para evitar fazer essa solicitação para cada acesso ao `dashboard_url`.
 
 
 ### Autorização - Etapa 2: validar a autorização para o usuário para a instância de serviço (/v2/authz POST)
+{: #step-2-authorization}
 
 Agora que você autenticou o usuário e tem o seu próprio token de acesso, é necessário validar que o usuário é capaz de acessar
-o painel de serviço. Primeiro, são necessárias algumas informações que estão incluídas no token de acesso do usuário decodificado na etapa 2.1. 
-Em seguida, use essas informações para chamar o IAM para verificar se o usuário está autorizado a acessar o painel na etapa 2.2.
+o painel de serviço. Primeiro, são necessárias algumas informações que estão incluídas no token de acesso do usuário decodificado na etapa 2.1. Em seguida, use essas informações para chamar o IAM para verificar se o usuário está autorizado a acessar o painel na etapa 2.2.
 
 **Etapa 2.1**: decodifique o token de acesso do usuário (retornado durante `**Authentication - Step 2:** Exchange the code for an access token` localizado na seção anterior.)
    O token de acesso é um token JWT que pode ser decodificado usando qualquer biblioteca compatível com JWT. Por exemplo, veja a biblioteca incluída em nosso [código do broker de amostra](https://github.com/IBM/sample-resource-service-brokers).
