@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -37,13 +37,14 @@ lastupdated: "2018-08-30"
 
 서비스에 측정을 사용하려면 다음 전제조건을 검토하십시오.
 
-* 리소스 플랜의 모든 부과 가능한 메트릭에 대한 가격으로 가격 책정 카탈로그가 업데이트됩니다.
+* 리소스 플랜의 모든 부과 가능한 메트릭에 대한 가격으로 가격 카탈로그가 업데이트됩니다.
 * 리소스의 모든 플랜에 대한 측정 및 등급 지정 정의가 검증되고 온보드됩니다.
 
 ## 사용량 제출을 위한 가이드라인 
 {: #metering_guidelines}
 
 ### 제출 가이드라인
+{: #submission-guidelines}
 
 {{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 리소스 사용량 데이터를 제출할 때 다음 가이드라인을 참조하십시오.
 
@@ -61,6 +62,7 @@ lastupdated: "2018-08-30"
 * 이전 요청에 대한 실제 실패가 있는 경우에만 사용량 레코드 제출을 재시도하십시오. 승인된 사용량 레코드는 다시 제출하지 마십시오.
 
 ### 서비스 ID 가이드라인
+{: #id-guidelines}
 
   리소스 정의의 ID 필드를 사용하여 서비스 ID를 지정할 때 다음 가이드라인을 따라야 합니다.
   * ID는 영숫자 문자로 시작되어야 합니다.
@@ -69,6 +71,7 @@ lastupdated: "2018-08-30"
   * ID의 최대 길이가 50자인지 확인하십시오.
 
 ### 리소스 이름 가이드라인
+{: #resource-name}
 
   리소스 정의의 resources.name 필드를 사용하여 리소스 이름을 지정할 때 다음 가이드라인을 따라야 합니다.
 
@@ -77,6 +80,7 @@ lastupdated: "2018-08-30"
   * 이름의 첫 번째 문자는 대문자를 사용하십시오.
 
 ### 리소스 단위 이름 가이드라인
+{: #resource-unti}
 
   리소스 정의의 resources.unit.name 필드를 사용하여 리소스 단위 이름을 지정할 때 다음 가이드라인을 따라야 합니다.
 
@@ -84,6 +88,7 @@ lastupdated: "2018-08-30"
   * 이름의 모든 문자를 대문자로 사용하십시오.
   
 ### 리소스 단위 수량 가이드라인
+{: #unit-quantity}
 
   리소스 정의의 resources.unit.quantityType 필드를 사용하여 리소스 수량 유형을 지정할 때 다음 가이드라인을 따라야 합니다.
   
@@ -91,6 +96,7 @@ lastupdated: "2018-08-30"
   * 수량 유형의 모든 문자를 대문자로 사용하십시오.
   
 ### 집계 ID 가이드라인
+{: #aggregation}
 
   리소스 정의의 aggregations.id 필드를 사용하여 집계 ID를 지정할 때 다음 가이드라인을 따라야 합니다.
 
@@ -99,6 +105,7 @@ lastupdated: "2018-08-30"
   * 이 ID가 aggregations.unit 값으로 시작하거나 이와 일치하는지 확인하십시오. 예를 들어 aggregations.id에 **API_CALLS_PER_MONTH**를 지정하고 aggregations.unit에 **API_CALLS**를 지정하십시오.
 
 ### 집계 단위 가이드라인
+{: #aggregation-unit}
 
   리소스 정의의 aggregations.unit 필드를 사용하여 집계 단위를 지정할 때 다음 가이드라인을 따라야 합니다.
    
@@ -107,10 +114,12 @@ lastupdated: "2018-08-30"
   * aggregations.unit에서 지정한 단위 이름이 resources.unit.name 필드에 지정한 집계 단위 이름인지 확인하십시오.
   
 ### 집계 그룹 가이드라인
+{: #aggregation-group}
 
   리소스 정의의 aggregations.aggregationGroup 필드에 소문자를 사용해야 합니다.
   
 ### 집계 공식 가이드라인
+{: #aggregation-formula}
 
   리소스 정의의 aggregations.formula 필드의 경우 공식에 산술 연산을 사용하려면 리소스 단위를 하나의 피연산자로 사용하고 공식 함수에서 산술 연산식을 사용해야 합니다. 예를 들어, 다음 공식을 사용하여 바이트를 메가바이트로 변환할 수 있습니다.
   ```
