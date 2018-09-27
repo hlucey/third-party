@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-09-05"
 
 
 ---
@@ -89,6 +89,7 @@ Content-Type: application/json
 **鑑別 - 步驟 2：**交換存取記號的代碼
 
 ### POST <token_endpoint>
+{: #post}
 
 #### 標頭：
 {: #headers1}
@@ -194,6 +195,7 @@ curl -k -X POST \
 
 
 ### 授權 - 步驟 2：驗證使用者的服務實例授權 (/v2/authz POST)
+{: #step-2-authorization}
 
 既然您已鑑別使用者並且具有自己的存取記號，就需要驗證使用者可以存取服務儀表板。首先，您需要使用者存取記號中所含的一些資訊，使用者存取記號將在步驟 2.1 解碼。然後，在步驟 2.2 使用該資訊來呼叫 IAM，確認使用者是否獲得授權存取儀表板。
 

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-08-30" 
+lastupdated: "2018-09-05" 
 
 ---
 
@@ -44,6 +44,7 @@ lastupdated: "2018-08-30"
 {: #metering_guidelines}
 
 ### 提交準則
+{: #submission-guidelines}
 
 當您使用 {{site.data.keyword.Bluemix_notm}} 計量服務來提交資源用量資料時，請參閱下列準則：
 
@@ -61,6 +62,7 @@ lastupdated: "2018-08-30"
 * 只有在前一個要求發生真正的失敗時，才重試提交用量記錄。請不要重新提交已順利接受的用量記錄。
 
 ### 服務 ID 準則
+{: #id-guidelines}
 
   當您使用資源定義中的 ID 欄位來指定服務 ID 時，必須遵循這些準則：
   * ID 開頭使用英數字元。
@@ -69,6 +71,7 @@ lastupdated: "2018-08-30"
   * 確定 ID 的長度上限是 50 個字元。
 
 ### 資源名稱準則
+{: #resource-name}
 
   當您使用資源定義中的 resources.name 欄位來指定資源名稱時，必須遵循這些準則：
 
@@ -77,6 +80,7 @@ lastupdated: "2018-08-30"
   * 將名稱的第一個字元大寫。
 
 ### 資源單位名稱準則
+{: #resource-unti}
 
   當您使用資源定義中的 resources.unit.name 欄位來指定資源單位名稱時，必須遵循這些準則：
 
@@ -84,6 +88,7 @@ lastupdated: "2018-08-30"
   * 將名稱的所有字母大寫。
   
 ### 資源單位數量準則
+{: #unit-quantity}
 
   當您使用資源定義中的 resources.unit.quantityType 欄位來指定資源單位數量類型時，必須遵循這些準則：
   
@@ -91,6 +96,7 @@ lastupdated: "2018-08-30"
   * 將數量類型的所有字母大寫。
   
 ### 聚集 ID 準則
+{: #aggregation}
 
   當您使用資源定義中的 aggregations.id 欄位來指定聚集 ID 時，必須遵循這些準則：
 
@@ -99,6 +105,7 @@ lastupdated: "2018-08-30"
   * 確定此 ID 開頭為 aggregations.unit 的值或與之相符。例如，您可以針對 aggregations.id 指定 **API_CALLS_PER_MONTH**，並針對 aggregations.unit 指定 **API_CALLS**。
 
 ### 聚集單位準則
+{: #aggregation-unit}
 
   當您使用資源定義中的 aggregations.unit 欄位來指定聚集單位時，必須遵循這些準則：
    
@@ -107,10 +114,12 @@ lastupdated: "2018-08-30"
   * 確定您在 aggregations.unit 欄位中指定的單位名稱，是您在 resources.unit.name 欄位中指定的單位名稱聚集。
   
 ### 聚集群組準則
+{: #aggregation-group}
 
   您必須在資源定義中，針對 aggregations.aggregationGroup 欄位使用小寫字母。
   
 ### 聚集公式準則
+{: #aggregation-formula}
 
   對於資源定義中的 aggregations.formula 欄位，如果您要在公式中使用算術運算，則必須使用資源單位作為一個運算元，並在公式的函數中使用中綴的算術表示式。例如，您可以使用下列公式將「位元組」轉換為 MB：
   ```
