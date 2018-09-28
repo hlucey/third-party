@@ -2,7 +2,7 @@
 {:topicgroup: .topicgroup}
 
 {: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html"}
-써드파티 통합 청구 서비스 개발
+서드파티 통합 청구 서비스 개발
 
     {: .navgroup id="learn"}
     index.md
