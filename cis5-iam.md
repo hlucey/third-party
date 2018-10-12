@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -155,7 +155,6 @@ See the example in our sample brokers: https://github.com/IBM/sample-resource-se
 #### Headers:
 {: #headers2}
 
-  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -173,7 +172,7 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam.bluemix.net/identity/token"
 ```
 {: codeblock}
 
