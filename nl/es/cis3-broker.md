@@ -55,7 +55,7 @@ Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.da
 ## Vea la documentación de nuestra API de Open Service Broker de {{site.data.keyword.Bluemix_notm}}
 {: #docs}
 
-Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento de la [{{site.data.keyword.Bluemix_notm}}API de Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
+Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento de la [API de {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker amplía la especificación Open Service Broker 2.12.
 {: tip}
