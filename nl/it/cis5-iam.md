@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-12"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -27,7 +27,7 @@ Quando definisci la tua offerta, la pagina Access Manage della console di gestio
 
 Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
-## Ricava l'URI di reindirizzamento IAM 
+## Ricava l'URI di reindirizzamento IAM
 {: #redirect-uri}
 
 Quando definisci il tuo servizio nella console di gestione delle risorse, generi un ID client, ma è probabile che in quel momento non disponevi di un URI di reindirizzamento. Un ID client che è impostato su false viene creato da IAM. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
@@ -234,7 +234,8 @@ Ora che hai autenticato l'utente e disponi del tuo token di accesso, devi conval
 ```
 curl -X POST \
   -H "Accept: application/json" \
-  -H "Authorization: <token di accesso dal passo 1>" \
+  -H "Content-Type: application/json" \
+  -H "Authorization: <access token from step 1>" \
   -d '[ \
     { \
       "subject" : \
