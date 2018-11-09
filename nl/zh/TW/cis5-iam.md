@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-12"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -233,6 +233,7 @@ curl -k -X POST \
 ```
 curl -X POST \
   -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
   -H "Authorization: <access token from step 1>" \
   -d '[ \
     { \
