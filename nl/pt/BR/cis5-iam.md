@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-12"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -19,9 +19,7 @@ lastupdated: "2018-10-12"
 # Etapa 4. Desenvolvendo um fluxo de autenticação
 {: #step4-iam}
 
-Ao definir a oferta, a página Gerenciar acesso no console de gerenciamento de recursos lista o identificador de cliente e o
-segredo, o ID do serviço e a chave API do Identity and Access Management (IAM) do {{site.data.keyword.Bluemix_notm}}. Agora
-você está pronto para usar esses valores para desenvolver um fluxo de autenticação.
+Ao definir a oferta, a página Gerenciar acesso no console de gerenciamento de recursos lista o identificador de cliente e o segredo, o ID do serviço e a chave API do Identity and Access Management (IAM) do {{site.data.keyword.Bluemix_notm}}. Agora você está pronto para usar esses valores para desenvolver um fluxo de autenticação.
 {:shortdesc}
 
 ## Antes de começar
@@ -32,11 +30,9 @@ Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party/i
 ## Derive o URI de redirecionamento do IAM
 {: #redirect-uri}
 
-Ao definir o serviço no console de gerenciamento de recurso, um identificador de cliente é gerado, mas observe que
-provavelmente você não tem um URI de redirecionamento no momento. Um identificador de cliente configurado como false é criado pelo IAM. Até você retornar ao console de gerenciamento de recurso com o URI de redirecionamento, não terá um identificador de cliente true.
+Ao definir o serviço no console de gerenciamento de recurso, um identificador de cliente é gerado, mas observe que provavelmente você não tem um URI de redirecionamento no momento. Um identificador de cliente configurado como false é criado pelo IAM. Até você retornar ao console de gerenciamento de recurso com o URI de redirecionamento, não terá um identificador de cliente true.
 
-A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um OSB e hospedou-o (você provavelmente viu valores do IAM no código do broker de amostra). O `redirect_uri` é geralmente a URL do host em que o app reside com alguma URL adicional que pode
-manipular a autenticação/autorização.
+A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um OSB e hospedou-o (você provavelmente viu valores do IAM no código do broker de amostra). O `redirect_uri` é geralmente a URL do host em que o app reside com alguma URL adicional que pode manipular a autenticação/autorização.
 
  Os exemplos a seguir mostram URIs redirecionarem:
 
@@ -77,8 +73,7 @@ Content-Type: application/json
 }
 ```
 
-Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e novamente se o `authorization_endpoint` falhar. Agora você é capaz de armazenar em cache o valor `authorization_endpoint` por um curto período de tempo e
-atualizar após a expiração do cache ou a localização de um erro.
+Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e novamente se o `authorization_endpoint` falhar. Agora você é capaz de armazenar em cache o valor `authorization_endpoint` por um curto período de tempo e atualizar após a expiração do cache ou a localização de um erro.
 
 
 **Autenticação - Etapa 1:** quando um usuário navegar para o seu `dashboard_url`, redirecione o navegador para `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
@@ -99,7 +94,7 @@ atualizar após a expiração do cache ou a localização de um erro.
 #### Cabeçalhos:
 {: #headers1}
 
-  - Autorização: básica *[client id]:[client segredo]*
+  - Autorização: básica *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -142,8 +137,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-  Certifique-se de armazenar o access_token do usuário retornado nessa resposta, pois ele será usado durante a autorização do
-usuário em seguida.
+  Certifique-se de armazenar o access_token do usuário retornado nessa resposta, pois ele será usado durante a autorização do usuário em seguida.
 
 Veja o exemplo em nossos brokers de amostra: https://github.com/IBM/sample-resource-service-brokers
 
@@ -202,12 +196,9 @@ curl -k -X POST \
 ### Autorização - Etapa 2: validar a autorização para o usuário para a instância de serviço (/v2/authz POST)
 {: #step-2-authorization}
 
-Agora que você autenticou o usuário e tem o seu próprio token de acesso, é necessário validar que o usuário é capaz de acessar
-o painel de serviço. Primeiro, são necessárias algumas informações que estão incluídas no token de acesso do usuário decodificado na etapa 2.1. Em seguida, use essas informações para chamar o IAM para verificar se o usuário está autorizado a acessar o painel na etapa 2.2.
+Agora que você autenticou o usuário e tem o seu próprio token de acesso, é necessário validar que o usuário é capaz de acessar o painel de serviço. Primeiro, são necessárias algumas informações que estão incluídas no token de acesso do usuário decodificado na etapa 2.1. Em seguida, use essas informações para chamar o IAM para verificar se o usuário está autorizado a acessar o painel na etapa 2.2.
 
-**Etapa 2.1**: decodifique o token de acesso do usuário (retornado durante `**Authentication - Step 2:** Exchange the code for an access token` localizado na seção anterior.)
-   O token de acesso é um token JWT que pode ser decodificado usando qualquer biblioteca compatível com JWT. Por exemplo, veja a biblioteca incluída em nosso [código do broker de amostra](https://github.com/IBM/sample-resource-service-brokers).
-   Depois que o token é decodificado, o formato é conforme mostrado na seção a seguir; você extrai os campos `iam_id` e `scope`, que são usados na próxima etapa:
+**Etapa 2.1**: decodifique o token de acesso do usuário (retornado durante `**Authentication - Step 2:** Exchange the code for an access token` localizado na seção anterior.) O token de acesso é um token JWT que pode ser decodificado usando qualquer biblioteca compatível com JWT. Por exemplo, veja a biblioteca incluída em nosso [código do broker de amostra](https://github.com/IBM/sample-resource-service-brokers). Depois que o token é decodificado, o formato é conforme mostrado na seção a seguir; você extrai os campos `iam_id` e `scope`, que são usados na próxima etapa:
 
 ```
 {
@@ -241,6 +232,7 @@ o painel de serviço. Primeiro, são necessárias algumas informações que est�
 ```
 curl -X POST \
   -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
   -H "Authorization: <access token from step 1>" \
   -d '[ \
     { \
@@ -267,14 +259,9 @@ Veja o exemplo em nossos brokers de amostra: https://github.com/IBM/sample-resou
 ## Escagem de Token do IAM para Adotivos de Terce
 {: #token_scoping}
 
-Os tokens de acesso de usuário que são criados com o identificador de cliente podem ser usados apenas para
-acessar as APIs de serviço. As solicitações para as outras APIs de nuvem que usam esse token resultam em acesso negado, mesmo se o
-usuário tem uma política apropriada configurada.
+Os tokens de acesso de usuário que são criados com o identificador de cliente podem ser usados apenas para acessar as APIs de serviço. As solicitações para as outras APIs de nuvem que usam esse token resultam em acesso negado, mesmo se o usuário tem uma política apropriada configurada.
 
-Como parte da integração de terceiro, o escopo do token está sendo usado para assegurar que os tokens tenham o escopo de
-acesso mínimo necessário para realizar os objetivos do usuário. Para facilitar isso, o acesso aos tokens do IAM é baseado no
-identificador de cliente que criou o token. Se um token do IAM foi criado por um serviço de terceiro, um usuário final não poderá
-executar determinadas APIs e funções, mesmo que o usuário tenha uma política apropriada configurada.
+Como parte da integração de terceiro, o escopo do token está sendo usado para assegurar que os tokens tenham o escopo de acesso mínimo necessário para realizar os objetivos do usuário. Para facilitar isso, o acesso aos tokens do IAM é baseado no identificador de cliente que criou o token. Se um token do IAM foi criado por um serviço de terceiro, um usuário final não poderá executar determinadas APIs e funções, mesmo que o usuário tenha uma política apropriada configurada.
 
 O impacto em autorizações (todas as chamadas para `https://iam.bluemix.net/v2/authz`) é a necessidade de passar informações de `scope` no assunto. Essas informações estão contidas em um token do IAM (codificado em base64) na solicitação de `scope`.
 
