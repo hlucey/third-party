@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html"}
+{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html" path="third-party"}
 開發協力廠商整合式計費服務
 
     {: .navgroup id="learn"}
