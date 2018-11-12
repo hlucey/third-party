@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-10-12"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -234,6 +234,7 @@ Nach der Authentifizierung des Benutzers und der Erstellung eines eigenen Zugrif
 ```
 curl -X POST \
   -H "Accept: application/json" \
+  -H "Content-Type: application/json" \
   -H "Authorization: <access token from step 1>" \
   -d '[ \
     { \
@@ -260,7 +261,7 @@ Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.
 ## IAM-Token-Scoping für Adopter anderer Anbieter
 {: #token_scoping}
 
-Die mit Ihrer Clent-ID erstellten Benutzerzugriffstokens können nur für den Zugriff auf Ihre Service-APIs verwendet werden. Mit diesem Token ausgeführte Anforderungen an andere Cloud-APIs führen zur Zugriffsverweigerung. Dies gilt auch dann, wenn für den Benutzer eine entsprechende Richtlinie konfiguriert wurde.
+Die mit Ihrer Client-ID erstellten Benutzerzugriffstokens können nur für den Zugriff auf Ihre Service-APIs verwendet werden. Mit diesem Token ausgeführte Anforderungen an andere Cloud-APIs führen zur Zugriffsverweigerung. Dies gilt auch dann, wenn für den Benutzer eine entsprechende Richtlinie konfiguriert wurde.
 
 Im Rahmen der Drittanbieterintegration wird das Token-Scoping verwendet, um sicherzustellen, dass die Token über den mindestens erforderlichen Zugriffsbereich verfügen, um die Benutzerziele erreichen zu können. Hierzu erhalten IAM-Tokens den Zugriff auf Basis der Client-ID, mit der das Token erstellt wurde. Wurde ein IAM-Token mit einem Service eines anderen Anbieters erstellt, dann ist ein Endbenutzer nicht in der Lage, bestimmte APIs und Funktionen auszuführen. Dies gilt auch dann, wenn für den Benutzer eine entsprechende Richtlinie konfiguriert wurde.
 
