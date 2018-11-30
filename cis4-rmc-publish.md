@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -25,7 +25,7 @@ Now that you have your hosted broker or brokers that meet the OSB specification,
 ## Before you begin
 {: #pre-reqs}
 
-This step assumes that you're approved to deliver an integrated billing service. If you did not complete the initial registration and approval in Provider Workbench, see the [Getting started tutorial](/docs/third-party/index.md).
+This step assumes that you're approved to deliver an integrated billing service. If you didn't complete the initial registration and approval in Provider workbench, see the [Getting started tutorial](/docs/third-party/index.md).
 {: tip}
 
 Ensure that you start step 1 and completed steps 2, 3, and 4:
@@ -45,9 +45,9 @@ Ensure that you start step 1 and completed steps 2, 3, and 4:
 6. Click **Add Deployment** and select the plan and the broker you want to deploy.
 7. Select the Region and Data Center where you want to deploy your service to and click **Add**.
 8. From the **Deployments** page, review your unpublished deployment and click **Publish**.
-9. From the **Publish to the Catalog** page, review the details of your deployment and click **Publish**.
+9. From the **Publish to the Catalog** page, review the details of your deployment, and click **Publish**.
 
-The Deployments page must now be marked complete in the navigation, indicating that you've passed the minimum requirements.
+The Deployments page must now be marked complete in the navigation, indicating that you passed the minimum requirements.
 
 Stuck on a deployment failure? Contact your IBM representative for help.
 {: tip}
@@ -55,9 +55,9 @@ Stuck on a deployment failure? Contact your IBM representative for help.
 ## Test your deployed offering 
 {: #test}
 
-Because you deployed in limited visibility mode, only you can see your offering in the {{site.data.keyword.Bluemix_notm}} catalog. Using the checklist in the following section, log into {{site.data.keyword.Bluemix_notm}} and work through the test criteria.
+Because you deployed in limited visibility mode, only you can see your offering in the {{site.data.keyword.Bluemix_notm}} catalog. Using the checklist in the following section, log in to {{site.data.keyword.Bluemix_notm}} and work through the test criteria.
 
-1. Log in to {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") with your IBMid.
+1. Log in to [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") with your IBMid.
 2. Ensure that you are in the correct account (the same account you used to create the service)
 3. Click the **Catalog** link in the header, and search for your offering.
 4. Next, use the checklist in the following section to validate your service.

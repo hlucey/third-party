@@ -55,20 +55,20 @@ You now have a Client ID that understands your Redirect URI and is set to true! 
 {: #oauth}
 
 
-**Authentication - Step 0:** Find IAM regional endpoint for UI login closer to your deployed application by calling `https://iam.bluemix.net/identity/.well-known/openid-configuration`.
+**Authentication - Step 0:** Find IAM regional endpoint for UI login closer to your deployed application by calling `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   Make sure to store the user's access_token returned in this response as it is used during user authorization next.
 
-See the example in our sample brokers: https://github.com/IBM/sample-resource-service-brokers
+See the example in our [sample brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Now it's time to validate the user authorization
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 Now that you authenticated the user and have your own access token, you need to validate that the user is able to access the service dashboard. First, you need a few pieces of information that are included in the user's access token that you decode in step 2.1. Then, you use that information to call IAM to check whether the user is authorized to access the dashboard in step 2.2.
 
 **Step 2.1**: Decode the user's access token (returned during `**Authentication - Step 2:** Exchange the code for an access token ` found in the preceding section.)
-   The access token is a JWT token that can be decoded by using any JWT-compliant library. For example, see the library included in our [sample broker code](https://github.com/IBM/sample-resource-service-brokers).
+   The access token is a JWT token that can be decoded by using any JWT-compliant library. For example, see the library included in our [sample broker code](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
    After the token is decoded, the format is as shown in the following section; you extract the `iam_id` and `scope` fields, which are used in the next step:
 
 ```
@@ -218,7 +220,7 @@ Now that you authenticated the user and have your own access token, you need to 
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 See the example in our sample brokers: https://github.com/IBM/sample-resource-service-brokers
@@ -265,7 +267,7 @@ User access tokens that are created with your Client ID can only be used to acce
 
 As part of third-party integration, token scoping is being used to ensure that tokens have the minimal access scope that is needed to accomplish the user's goals. To facilitate this, IAM tokens access is based on the Client ID that created the token. If an IAM token was created by a third-party service, an end user can't run certain APIs and functions, even if the user has an appropriate policy configured.
 
-The impact on authorizations (all calls to `https://iam.bluemix.net/v2/authz`) is the need to pass down `scope` information in the subject. This information is contained inside an IAM token (base64 encoded) in the `scope` claim.
+The impact on authorizations (all calls to `https://iam.cloud.ibm.com/v2/authz`) is the need to pass down `scope` information in the subject. This information is contained inside an IAM token (base64 encoded) in the `scope` claim.
 
 The following section is an example of what is added in the authorization call:
 ```

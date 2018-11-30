@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -131,7 +131,7 @@ The following are best practices for submitting usage:
 
 {{site.data.keyword.Bluemix_notm}} users are charged based on the amount of resources that they use. For example, users that use database services might be charged based on the amount of storage that their applications use.
 
-To use the {{site.data.keyword.Bluemix_notm}} metering service to report usage data, implement the metering service API to report usage data of your offering. See the [public API documentation](https://ibm-bluemix-docs.github.io/usage-submission/) for more details.  
+To use the {{site.data.keyword.Bluemix_notm}} metering service to report usage data, implement the metering service API to report usage data of your offering. See the [public API documentation](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") for more details.  
 
 You're required to automate hourly usage submission by using the metering service API. You can host your automated submission on any valid HTTPs endpoint that is accessible on the public internet.
 {: tip}

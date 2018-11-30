@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # How integrated billing services use the {{site.data.keyword.Bluemix_notm}} platform
@@ -86,23 +88,24 @@ If a service offers a metered plan, {{site.data.keyword.Bluemix_notm}} users are
 
 All integrated billing services that offer a metered plan must use the {{site.data.keyword.Bluemix_notm}} metering service to report usage data.
 
-**Note:** You’re required to automate hourly usage submission by using metering service API if you offer a metered plan.
+You’re required to automate hourly usage submission by using the metering service API if you offer a metered plan.
+{: important}
 
 For more information on metering, see: [Metering integration](/docs/third-party/metering.html#meteringintera). For more information on submitting metered usage, see: [Submitting usage for metered plans](/docs/third-party/submitusage.html#submitusage)
 
 ## Provisioning scenario: Pulling it all together
 
-Now let's pull all of the concepts that are previously described together and look at an example of how service instance creation works by using the {{site.data.keyword.Bluemix_notm}} platform.
+Now let's pull all of the concepts together and look at an example of how service instance creation works by using the {{site.data.keyword.Bluemix_notm}} platform.
 
 ![Provisioning scenario](images/flow-am.svg "How the platform handles service instance creation")
 
-When a user wants to create a service instance, they can initiate it in one of two ways:
+When a user wants to create a service instance, they can create it in one of two ways:
 * **CLI**: Using `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **{{site.data.keyword.Bluemix_notm}} console**: The user can select the service, plan, and use the **Create** operation.
 
 The {{site.data.keyword.Bluemix_notm}} platform validates that the user has permission to create the service instance by using {{site.data.keyword.Bluemix_notm}} IAM. After this validation occurs, your service broker's provision endpoint (PUT /v2/resource_instances/:resource_instance_id) is started. When provisioning occurs, the following rules must be met:
 * The {{site.data.keyword.Bluemix_notm}} context is included in the context variable
-* The `X-Broker-API-Originating-Identity` has the IBM IAM ID of the user that initiated the request
+* The `X-Broker-API-Originating-Identity` has the IBM IAM ID of the user that started the request
 * The parameters section includes the requested location (and more parameters that are required by your service).
 
 Example provision request:
@@ -155,5 +158,6 @@ In the previous example, you can see the metadata returned in the `context` para
 
 * **resource_group_crn**: Returns the resource group that includes the service instance. For more details, see [Managing resource groups](/docs/resources/resourcegroups.html).
 
-   **Note**: Offering providers aren't concerned with the `resource_group_crn` except in unique circumstances. Consult your IBM representative on your use case before you use that field.
+   Offering providers aren't concerned with the `resource_group_crn` except in unique circumstances. Consult your IBM representative on your use case before you use that field.
+   {: note}
 

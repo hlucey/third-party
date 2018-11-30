@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -24,15 +24,15 @@ This topic introduces you to the steps that are required to develop and publish 
 
 After you're approved to deliver your offering in the {{site.data.keyword.Bluemix_notm}} catalog, you start developing your offering in the resource management console, a guided UI experience. You design your catalog metadata, set up the service pricing plans, and integrate with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
-Next, outside of the resource management console, you perform code development to build and host a new open service broker (starter broker samples and API docs are provided), and you use IAM to develop an authentication flow. After you complete these steps, you return to the resource management console to deploy your service to the catalog in a limited visibility mode that allows you to test and validate multiple deliverable requirements. When you are ready, and your offering meets all requirements, your service becomes fully visible in the {{site.data.keyword.Bluemix_notm}} catalog!
+Next, outside of the resource management console, you perform code development to build and host a new open service broker. Starter broker samples and API docs are provided, and you use IAM to develop an authentication flow. After you complete these steps, you return to the resource management console to deploy your service to the catalog in a limited visibility mode where you can test and validate deliverable requirements. When you're ready, and your offering meets all requirements, your service becomes fully visible in the {{site.data.keyword.Bluemix_notm}} catalog!
 
 
 ## How the process works
 {: #process}
 
-To deliver an integrated billing service, you work with the Provider Workbench, the resource management console, and the development environment of your choice. See the [checklist](/docs/third-party/checklist.html#checklist) to help track these steps.
+To deliver an integrated billing service, you work with the Provider workbench, the resource management console, and the development environment of your choice. See the [checklist](/docs/third-party/checklist.html#checklist) to help track these steps.
 
-These steps assume that you are approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+These steps assume that you're approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
 {: tip}
 
 1. [Create your documentation and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
@@ -45,7 +45,7 @@ These steps assume that you are approved to deliver an Integrated Billing servic
 ## Support
 {: #support}
 
-Integrated billing services require third-party offering providers to provide their own support model. Your IBM representative can help to enable your support model and ensure that if a user opens a ticket with {{site.data.keyword.Bluemix_notm}} support, the ticket is routed to the third-party support site.
+Integrated billing services require third-party offering providers to provide their own support model. Your IBM representative can help you to enable your support model and ensure that if a user opens a ticket with {{site.data.keyword.Bluemix_notm}} support, the ticket is routed to the third-party support site.
 
 ## Continuous updates
 {: #maintain}

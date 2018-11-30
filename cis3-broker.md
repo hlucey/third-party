@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Step 3. Developing and hosting your service brokers
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 By using the metadata you exported from the resource management console, you can build one or more new service brokers in the programming language of your choice.
 {:shortdesc}
 
-Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with service brokers to provision and manage service instances (an instantiation of a service offering) and service bindings (The representation of an association between an application and a service instance, which often contain the credentials that the application uses to communicate with the service instance). Providing valid metadata values create a successful RESTful API Response when a Request is performed.
+Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with service brokers to provision and manage service instances and service bindings. You can provide valid metadata values to create a successful RESTful API Response when a Request is performed.
 
 You can build your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation.
 
@@ -49,24 +50,24 @@ You're developing an Open Service Broker that works with the {{site.data.keyword
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
-**Note:** Not all languages are represented by a sample. If you need a sample Python broker for example, you can find a Cloud Foundry sample by searching Google. You might need to adjust this sample to meet the OSB requirements.
-
+Not all languages are represented by a sample. If you need a sample Python broker for example, you can find a Cloud Foundry sample by searching Google. You might need to adjust this sample to meet the OSB requirements.
+{: note}
 
 ## View our {{site.data.keyword.Bluemix_notm}} Open Service Broker API Documentation
 {: #docs}
 
-Service brokers can be developed with an understanding of the [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Become familiar with the Broker API, and how it interacts with your broker or brokers.
+Service brokers can be developed with an understanding of the [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Become familiar with the Broker API, and how it interacts with your broker or brokers.
 
 The {{site.data.keyword.Bluemix_notm}} Open Service Broker extends the Open Service Broker 2.12 specification.
 {: tip}
 
 ### Required endpoint logic for all service brokers
 
-Service brokers must provide a standard set of metadata values that are consumed by REST APIs, and {{site.data.keyword.Bluemix_notm}} brokers must contain logic for the following REST API endpoints/paths:
+Service brokers must provide a standard set of metadata values that are consumed by REST APIs, and {{site.data.keyword.Bluemix_notm}} brokers must have logic for the following REST API endpoints/paths:
 
 <dl>
   <dt>catalog (GET)</dt>
-  <dd>Returns your catalog metadata included in your broker. Many additional catalog metadata values aren't returned - these values are added exclusively within resource management console and stored within the {{site.data.keyword.Bluemix_notm}} Catalog.</dd>
+  <dd>Returns your catalog metadata included in your broker. Many extra catalog metadata values aren't returned - these values are added exclusively within resource management console and stored within the {{site.data.keyword.Bluemix_notm}} Catalog.</dd>
   <dt>resource instances (PUT)</dt>
   <dd>Provisions your service instance</dd>
   <dt>resource instances (DELETE)</dt>
@@ -119,7 +120,8 @@ The OSB specification doesn't* support a disabled instance state, but not yet de
   <dd>Allows you to enable or disable a service instance.</dd>
 </dl>
 
-**Note**: It's the service provider's responsibility to disable access to the service instance when the disable endpoint is started and to re-enable that access when the enable endpoint is started.
+It's the service provider's responsibility to disable access to the service instance when the disable endpoint starts and to re-enable that access when the enable endpoint is started.
+{: note}
 
 ## Learn how to use the exported metadata to guide your broker development
 {: #use-metadata}
@@ -206,11 +208,11 @@ The **API version header** is [2.12](https://github.com/openservicebrokerapi/ser
 ## Additional broker recommendations
 {: #more-info}
 
-### Recommendations on using asynchronous vs synchronous operations
+### Recommendations on using asynchronous instead of synchronous operations
 
 The OSB API supports both synchronous and asynchronous modes of operation. If your operations are going to take less than 10 seconds, then synchronous responses are recommended. Otherwise, you must use the asynchronous mode of operation. More information is contained in the OSB specification.
 
-If your async operation takes less than 10 seconds when you're provisioning an instance, the platform will timeout.
+If your async operation takes less than 10 seconds when you're provisioning an instance, the platform will time out.
 {: tip}
 
 ### Recommendations for managing brokers across locations
@@ -221,7 +223,7 @@ When you're provisioning service instances on {{site.data.keyword.Bluemix_notm}}
 
 If your third-party API-based service is implemented in another cloud and exposed into {{site.data.keyword.Bluemix_notm}}, the location indicates the service's location in the other cloud.
 
-When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker, but you have the option to have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
+When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
 
 For a list of available locations, consult the [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires additional locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 
@@ -229,11 +231,11 @@ For a list of available locations, consult the [IBM Global Catalog Locations](ht
 ## Host your brokers
 {: #host}
 
-Your broker must be hosted as part of an application that can respond to REST API calls. And your hosted location must meet {{site.data.keyword.Bluemix_notm}} security guidelines. You might be hosted in {{site.data.keyword.Bluemix_notm}}, or it can be hosted externally, so long as it's publicly accessible from {{site.data.keyword.Bluemix_notm}} itself.
+Your broker must be hosted as part of an application that can respond to REST API calls. And your hosted location must meet {{site.data.keyword.Bluemix_notm}} security guidelines. You might be hosted in {{site.data.keyword.Bluemix_notm}}, or it can be hosted externally, if it's publicly accessible from {{site.data.keyword.Bluemix_notm}} itself.
 
 To host your broker outside of IBM, you must ensure that it meets the following security guidelines:
 - Must follow Transport Layer Security (TLS) protocol version 1.2
-- Must be hosted on a valid HTTPs endpoint that is accessible on the public Internet
+- Must be hosted on a valid HTTPs endpoint that is accessible on the public internet
 
 If you want to host in {{site.data.keyword.Bluemix_notm}}, you can find information about creating an app by using Containers (Kubernetes) here: [Internal Adopters - Usage information](/docs/containers/cs_internal.html#cs_internal).
 
@@ -243,7 +245,7 @@ You'll need the hosted location of your service broker to complete the next step
 ## How to test your service's broker
 {: #test}
 
-You must be validating your broker by running curl commands against the different endpoints you're enabling. The sample readme file provides excellent guidance for curling your OSB endpoints: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+You must be validating your broker by running curl commands against the different endpoints you're enabling. The sample readme file provides excellent guidance for curling your OSB endpoints: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
 ### How to curl your service's broker
 {: #curl-broker}

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -31,7 +31,7 @@ The following list describes the expectations for tracking and submitting usage:
 *	{{site.data.keyword.Bluemix_notm}} is configured for a monthly billing cycle and time is represented in Coordinated Universal Time (UTC).
 *  Offering providers must test usage submission and validate their results to inform how the monthly billing cycle is calculated.
 
-For general information about pricing, see [How to calculate your costs](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+For general information about pricing, see [How to calculate your costs](/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Configuration properties
 {: #configure}
@@ -85,6 +85,7 @@ Formula: ADD(usages)
 | Day 2 (morning) | 5             | 10 + 5      | 15                    |
 | Day 3 (morning) | 5             | 15 + 5      | 20                    |
 | Day 4 (night)   | 5             | 20 + 5      | 25                    |
+{: caption="Table 2. Monthly usage calculations" caption-side="top"}
 
 #### Standard Average
 {: #standard-average}
@@ -100,6 +101,7 @@ Formula: AVG(usages)
 | Day 2 (morning) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Day 3 (morning) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Day 4 (night)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Table 3. Average monthly usage calculations" caption-side="top"}
 
 #### Standard Max
 {: #standard-max}
@@ -115,6 +117,7 @@ Formula: MAX(usages)
 | Day 2 (morning) | 0              | MAX(10, 0)   | 10                    |
 | Day 3 (morning) | 15             | MAX(10, 15)  | 15                    |
 | Day 4 (night)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Table 4. Maximum monthly usage calculations" caption-side="top"}
 
 #### Daily proration Average
 {: #proration-average}
@@ -135,6 +138,7 @@ Given a 30-day month:
 | Day 2 (night)      | 5                | (2 + 5) / 2   | (5.5 + 3.5) / 2                        | 4.5 (On Day 2 EOD)                               |
 | Day 3 to Day 15    | 1                | 1 / 1         | (5.5 + 3.5 + (1 + 13)  / 15            | 1.4666  (On Day 15 EOD)                          |
 | Day 15 to Day 30   | 0                | 0 / 1         | (5.5 + 3.5 + (1 \* 12) + (0  \* 15) / 30 | 0.7333  (On Day 30 EOD)                          |
+{: caption="Table 5. Average usage per day and monthly average calculations" caption-side="top"}
 
 \* As seen on the same day as when the usage was submitted.
 
@@ -155,6 +159,7 @@ Given a 30-day month:
 | Day 1 (night)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Day 2 to Day 15  | 1              | MAX(1)    | (1 + 1 + ...) / day            | 1                      |
 | Day 15 to Day 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / day | < 1                    |
+{: caption="Table 6. Maximum usage per day and monthly average calculations" caption-side="top"}
 
 \* As seen on the same day as when the usage was submitted.
 
@@ -194,4 +199,5 @@ The following table provides detailed information about the pricing models that 
 | Simple tier (granular tier)  | A P*Q model in which the unit price for all consumption is determined by the tier the quantity falls into.           | <ul><li>If Q is <=Q1, T=P1*Q</li><li>If Q1 < Q <=Q2, T=P2*Q</li><li>If Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1=1000, P1=$1</li><li>Q2=2500, P2=$0.9</li><li>Q3=10000, P3=$0.75</li><li>T=$0.75*5000=$3750</li></ul>              |
 | Graduated tier (step tier)   | The price per unit varies as the quantity consumed moves into different predefined tiers. The total charge involves cumulating the charges from the previous tiers           | <ul><li>T1=P1*Q (0 < Q</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=$0.9, T2=0.9*1500</li><li>Q3=10000, P3=$0.75, T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
 | Block tier (up to)           | The total amount that is charged is established by an "up to" quantity that doesn't vary within the block     | <ul><li>If Q is <=Q1, T=T1</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1=1000, T1=$0</li><li>Q2=2500, T2=2500</li><li>Q3=10000, T3=$4500</li><li>T=$4500</li></ul>            |
+{: caption="Table 7. Pricing models" caption-side="top"}
 

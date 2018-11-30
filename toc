@@ -34,6 +34,6 @@ Developing third-party integrated billing services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Open Service Broker API Reference](https://console.bluemix.net/apidocs/ibm-cloud-osb-api)
+    [IBM Cloud Open Service Broker API Reference](https://cloud.ibm.com/apidocs/ibm-cloud-osb-api)
     [IBM Cloud Usage Metering API Reference](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
