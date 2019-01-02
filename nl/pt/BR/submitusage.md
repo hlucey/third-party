@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -136,7 +136,7 @@ solicitação anterior. Não reenvie os registros de uso que foram aceitos com �
 
 Os usuários do {{site.data.keyword.Bluemix_notm}} são cobrados com base na quantia de recursos que eles usam. Por exemplo, os usuários que usam serviços de banco de dados podem ser cobrados com base na quantia de armazenamento que os seus aplicativos usam.
 
-Para usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para relatar dados de uso, implemente a API de serviço de medição para relatar os dados de uso de sua oferta. Veja a [documentação da API pública](https://ibm-bluemix-docs.github.io/usage-submission/) para obter mais detalhes.  
+Para usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para relatar dados de uso, implemente a API de serviço de medição para relatar os dados de uso de sua oferta. Consulte a [documentação da API pública](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") para obter mais detalhes.  
 
 É necessário automatizar o envio de uso por hora usando a API de serviço de medição. É possível hospedar seu envio automatizado em qualquer terminal HTTPs válido que esteja acessível na Internet pública.
 {: tip}

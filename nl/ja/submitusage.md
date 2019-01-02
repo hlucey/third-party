@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -131,7 +131,7 @@ lastupdated: "2018-09-05"
 
 {{site.data.keyword.Bluemix_notm}} ユーザーは、使用したリソース量に基づいて課金されます。 例えば、データベース・サービスを使用するユーザーは、アプリケーションが使用するストレージの量に基づいて課金される可能性があります。
 
-{{site.data.keyword.Bluemix_notm}} 計量サービスを使用して使用量データを報告するには、計量サービス API を実装してオファリングの使用量データを報告します。 詳しくは、[public API documentation](https://ibm-bluemix-docs.github.io/usage-submission/) を参照してください。  
+{{site.data.keyword.Bluemix_notm}} 計量サービスを使用して使用量データを報告するには、計量サービス API を実装してオファリングの使用量データを報告します。 詳しくは、[public API documentation](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。  
 
 計量サービス API を使用して、毎時の使用量送信を自動化する必要があります。 自動化送信は、公衆インターネットでアクセスできる任意の有効 HTTPS エンドポイントでホストできます。
 {: tip}

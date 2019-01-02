@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 통합 청구 서비스에서 {{site.data.keyword.Bluemix_notm}} 플랫폼을 사용하는 방법
@@ -86,17 +88,18 @@ IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증
 
 측정량 기반 플랜을 제공하는 모든 통합 청구 서비스는 {{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 사용량 데이터를 보고해야 합니다.
 
-**참고:** 측정량 기반 플랜을 제공하는 경우 측정 서비스 API를 사용하여 시간별 사용량 제출을 자동화해야 합니다.
+측정량 기반 플랜을 제공하는 경우 측정 서비스 API를 사용하여 시간별 사용량 제출을 자동화해야 합니다.
+{: important}
 
 측정에 대한 자세한 정보는 [측정 통합](/docs/third-party/metering.html#meteringintera)을 참조하십시오. 측정된 사용량 제출에 대한 자세한 정보는 [측정량 기반 플랜을 위한 사용량 제출](/docs/third-party/submitusage.html#submitusage)을 참조하십시오.
 
 ## 프로비저닝 시나리오: 모두 함께 가져오기
 
-이제 이전에 설명한 개념을 모두 함께 가져와서 {{site.data.keyword.Bluemix_notm}} 플랫폼을 사용하여 서비스 인스턴스를 작성하는 방법에 대한 예제를 살펴봅니다.
+이제 개념을 모두 함께 가져와서 {{site.data.keyword.Bluemix_notm}} 플랫폼을 사용하여 서비스 인스턴스를 작성하는 방법에 대한 예제를 살펴봅니다.
 
 ![프로비저닝 시나리오](images/flow-am.svg "플랫폼에서 서비스 인스턴스 작성을 처리하는 방법")
 
-서비스 인스턴스를 작성하려는 경우 다음 두 방법 중 하나로 시작할 수 있습니다.
+서비스 인스턴스를 작성하려는 경우 다음 두 방법 중 하나로 작성할 수 있습니다.
 * **CLI**: `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]` 사용
 * **{{site.data.keyword.Bluemix_notm}} 콘솔**: 사용자가 서비스, 플랜을 선택하고 **작성** 오퍼레이션을 사용할 수 있습니다.
 
@@ -155,5 +158,6 @@ IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증
 
 * **resource_group_crn**: 서비스 인스턴스가 포함된 리소스 그룹을 리턴합니다. 추가 세부사항은 [리스소 그룹 관리](/docs/resources/resourcegroups.html)를 참조하십시오.
 
-   **참고**: 오퍼링 제공자는 고유한 환경을 제외하고는 `resource_group_crn`을 다루지 않아야 합니다. 해당 필드를 사용하기 전에 IBM 담당자에게 사용자 유스 케이스에 대해 문의하십시오.
+   오퍼링 제공자는 고유한 환경을 제외하고는 `resource_group_crn`을 다루지 않아야 합니다. 해당 필드를 사용하기 전에 IBM 담당자에게 사용자 유스 케이스에 대해 문의하십시오.
+   {: note}
 

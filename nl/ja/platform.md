@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 統合請求サービスによる {{site.data.keyword.Bluemix_notm}} プラットフォームの使用方法
@@ -86,13 +88,14 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
 
 従量制プランを提供するすべての統合請求サービスは、使用量データを報告するために {{site.data.keyword.Bluemix_notm}} 計量サービスを使用する必要があります。
 
-**注:** 従量制プランを提供する場合は、計量サービス API を使用して毎時の使用量の送信を自動化する必要があります。
+従量制プランを提供する場合は、計量サービス API を使用して、毎時の使用量の送信を自動化する必要があります。
+{: important}
 
 計量について詳しくは、[計量の統合](/docs/third-party/metering.html#meteringintera)を参照してください。 計量される使用量の送信について詳しくは、[従量制プランの使用量の送信](/docs/third-party/submitusage.html#submitusage)を参照してください。
 
 ## プロビジョニング・シナリオ: すべてをまとめる
 
-次に、前述のすべての概念をまとめ、{{site.data.keyword.Bluemix_notm}} プラットフォームを使用してサービス・インスタンスの作成がどのように機能するかについての例を見てみます。
+次に、すべての概念をまとめ、{{site.data.keyword.Bluemix_notm}} プラットフォームを使用してサービス・インスタンスの作成がどのように機能するかについての例を見てみます。
 
 ![プロビジョニング・シナリオ](images/flow-am.svg "プラットフォームがサービス・インスタンスの作成をどのように処理するか")
 
@@ -155,5 +158,6 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
 
 * **resource_group_crn**: サービス・インスタンスを含むリソース・グループを返します。 詳しくは、[リソース・グループの管理](/docs/resources/resourcegroups.html)を参照してください。
 
-   **注**: オファリング・プロバイダーは、固有の状況を除き、`resource_group_crn` に関係していません。そのフィールドを使用する前に、ご自身のユース・ケースについて IBM 担当員に相談してください。
+   オファリング・プロバイダーは、固有の状況を除き、`resource_group_crn` に関係していません。 そのフィールドを使用する前に、ご自身のユース・ケースについて IBM 担当員に相談してください。
+   {: note}
 

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -57,7 +57,7 @@ lastupdated: "2018-09-05"
 
 제한된 가시성 모드로 배치했으므로 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 오퍼링을 볼 수만 있습니다. 다음 섹션의 체크리스트를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인한 후 테스트 기준에 대한 작업을 수행하십시오.
 
-1. IBM ID를 사용하여 {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![외부 작업 링크](../icons/launch-glyph.svg "외부 작업 링크")에 로그인하십시오.
+1. IBM ID를 사용하여 [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 로그인하십시오.
 2. 올바른 계정(서비스를 작성하는 데 사용한 계정과 동일한 계정)이 있는지 확인하십시오.
 3. 헤더에서 **카탈로그** 링크를 클릭하고 오퍼링을 검색하십시오.
 4. 그런 다음 다음 섹션의 체크리스트를 사용하여 서비스의 유효성을 검증하십시오.

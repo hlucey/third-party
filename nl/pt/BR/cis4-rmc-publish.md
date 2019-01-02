@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -25,7 +25,7 @@ Agora que você tem seu broker ou brokers hospedados que atendem à especificaç
 ## Antes de começar
 {: #pre-reqs}
 
-Essa etapa assume que você foi aprovado para entregar um serviço de faturamento integrado. Se você não concluiu o registro inicial e a aprovação no Provider Workbench, consulte o [Tutorial de introdução](/docs/third-party/index.md).
+Essa etapa assume que você foi aprovado para entregar um serviço de faturamento integrado. Se você não concluiu o registro inicial e a aprovação no ambiente de trabalho do Provedor, consulte o [Tutorial de introdução](/docs/third-party/index.md).
 {: tip}
 
 Assegure-se de iniciar a etapa 1 e de que concluiu as etapas 2, 3 e 4:
@@ -45,9 +45,9 @@ Assegure-se de iniciar a etapa 1 e de que concluiu as etapas 2, 3 e 4:
 6. Clique em ** Incluir implementação** e selecione o plano e o broker que você deseja implementar.
 7. Selecione a Região e o Data center no qual você deseja implementar seu serviço e clique em **Incluir**.
 8. Na página **Implementações**, revise sua implementação não publicada e clique em **Publicar**.
-9. Na página **Publicar no catálogo**, revise os detalhes de sua implementação e clique em **Publicar**.
+9. Na página **Publicar no Catálogo**, revise os detalhes de sua implementação e clique em **Publicar**.
 
-A página Implementações agora deve ser marcada como concluída na navegação, indicando que você passou pelos requisitos mínimos.
+A página Implementações deve agora ser marcada como concluída na navegação, indicando que você passou os requisitos mínimos.
 
 Preso em uma falha de implementação? Entre em contato com seu representante IBM para obter ajuda.
 {: tip}
@@ -57,7 +57,7 @@ Preso em uma falha de implementação? Entre em contato com seu representante IB
 
 Como a implementação foi no modo de visibilidade limitada, somente você pode ver a sua oferta no catálogo do {{site.data.keyword.Bluemix_notm}}. Usando a lista de verificação na seção a seguir, efetue login no {{site.data.keyword.Bluemix_notm}} e trabalhe por meio dos critérios de teste.
 
-1. Efetue login no {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com seu IBMid.
+1. Efetue login no [ {{site.data.keyword.Bluemix_notm}} ](https://cloud.ibm.com){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com seu IBMid.
 2. Assegure-se de que você esteja na conta correta (a mesma conta usada para criar o serviço)
 3. Clique no link **Catálogo** no cabeçalho e procure sua oferta.
 4. Em seguida, use a lista de verificação na seção a seguir para validar seu serviço.

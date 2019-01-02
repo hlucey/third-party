@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -36,14 +36,14 @@ lastupdated: "2018-08-28"
 
 Provider Workbench を使用して、統合請求サービスとしてオファリング・タイプをリストします。
 
-1. [Provider Workbench ダッシュボード](https://www.ibm.com/marketplace/workbench/provider/dashboard)から、オファリング・タイル上の**「Tasks」**をクリックします。
+1. [Provider Workbench ダッシュボード](https://www.ibm.com/marketplace/workbench/provider/dashboard){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") から、オファリング・タイル上の**「Tasks」**をクリックします。
 2. **「Filter」**メニューから**「{{site.data.keyword.Bluemix_notm}} listing tasks」**を選択して、{{site.data.keyword.Bluemix_notm}} タスクのみを表示するようにフィルタリングします。
 3. コンテキスト・タスク・タイルで**「Start」**をクリックし、準備状況の評価フォームを入力します。 オファリング・タイプとして**「Integrated billing service」**を選択して、最後の質問に回答します。
 
 ## ステップ 3. オファリング詳細の定義
 {: #step3}
 
-オファリング・タイプとして**「Integrated billing service」**を選択し、準備状況の評価フォームを送信すると、ページが更新されて、コンテンツを定義するためのセクションが表示されます。 それは {{site.data.keyword.Bluemix_notm}} コンソールのカタログ詳細ページに表示されます。各フィールドを入力し、レビューのためのフォームを送信します。 レビュー・プロセスには数日間かかる可能性があります。
+オファリング・タイプとして**「Integrated billing service」**を選択し、準備状況の評価フォームを送信すると、ページが更新されて、コンテンツを定義するためのセクションが表示されます。 それは {{site.data.keyword.Bluemix_notm}} コンソールのカタログ詳細ページに表示されます。 各フィールドを入力し、レビューのためのフォームを送信します。 レビュー・プロセスには数日間かかる可能性があります。
 
 ## 次のステップ
 {: #next-steps}
@@ -57,4 +57,4 @@ Provider Workbench を使用して、統合請求サービスとしてオファ�
 
 * リソース管理コンソールで、オファリングを定義し、料金プランを作成し、セキュリティーを有効にし、さまざまな {{site.data.keyword.Bluemix_notm}} 環境へのオファリングのデプロイメントを管理して、オファリングを {{site.data.keyword.Bluemix_notm}} に統合します。 
 
-詳細については、[統合請求サービスの作成および公開](/docs/third-party/integrated-billing-service.html) を参照してください。
+詳しくは、[統合請求サービスの作成および公開](/docs/third-party/integrated-billing-service.html)を参照してください。 

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -131,7 +131,7 @@ lastupdated: "2018-09-05"
 
 {{site.data.keyword.Bluemix_notm}} 사용자는 사용하는 리소스의 양에 따라 요금이 부과됩니다. 예를 들어, 데이터베이스 서비스를 사용하는 사용자는 사용자 애플리케이션이 사용하는 스토리지의 양에 따라 요금이 부과될 수 있습니다.
 
-{{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 사용량 데이터를 보고하려면 오퍼링의 사용량 데이터를 보고하는 측정 서비스 API를 구현하십시오. 추가 세부사항은 [공용 API 문서](https://ibm-bluemix-docs.github.io/usage-submission/)를 참조하십시오.  
+{{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 사용량 데이터를 보고하려면 오퍼링의 사용량 데이터를 보고하는 측정 서비스 API를 구현하십시오. 세부사항은 [공용 API 문서](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오.  
 
 측정 서비스 API를 사용하여 시간별 사용량 제출을 자동화해야 합니다. 공용 인터넷에서 액세스할 수 있는 올바른 HTTP 엔드포인트에서 자동화된 제출을 호스팅할 수 있습니다다.
 {: tip}

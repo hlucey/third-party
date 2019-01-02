@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Etapa 3. Desenvolvendo e hospedando os brokers de serviço
@@ -23,9 +24,7 @@ Ao usar os metadados exportados do console de gerenciamento de recurso, é poss�
 brokers de serviço na linguagem de programação de sua escolha.
 {:shortdesc}
 
-Os brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{site.data.keyword.Bluemix_notm}} interage com os brokers de serviço
-para fornecer e gerenciar instâncias de serviços (uma instanciação de uma oferta de serviços) e ligações de serviços (a representação de uma associação entre um aplicativo e uma instância de serviços, que geralmente incluem
-as credenciais que o aplicativo usa para se comunicar com a instância de serviços). O fornecimento de valores de metadados válidos cria uma Resposta de API RESTful bem-sucedida quando uma Solicitação é executada.
+Os brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{site.data.keyword.Bluemix_notm}} interage com brokers de serviço para provisionar e gerenciar as instâncias de serviço e as ligações de serviço. É possível fornecer valores de metadados válidos para criar uma Resposta de API RESTful bem-sucedida quando uma Solicitação é executada.
 
 É possível construir seu broker usando uma combinação dos metadados exportados do console de gerenciamento de recursos, nossas amostras do broker de serviço público do {{site.data.keyword.Bluemix_notm}} e a documentação da API do Broker de Recurso.
 
@@ -52,25 +51,24 @@ O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broke
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
 
-**Nota:** nem todas as linguagens são representadas por uma amostra. Se for necessário um broker Python de amostra, por exemplo, será possível localizar uma amostra do Cloud Foundry procurando o Google. Talvez seja necessário ajustar essa amostra para atender aos requisitos do OSB.
-
+Nem todos os idiomas são representados por uma amostra. Se for necessário um broker Python de amostra, por exemplo, será possível localizar uma amostra do Cloud Foundry procurando o Google. Talvez seja necessário ajustar essa amostra para atender aos requisitos do OSB.
+{: note}
 
 ## Visualize nossa documentação do Open Service Broker API do {{site.data.keyword.Bluemix_notm}}
 {: #docs}
 
-Os brokers de serviço podem ser desenvolvidos com um entendimento da [API Open Service Broker do {{site.data.keyword.Bluemix_notm}}](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window}
-![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Familiarize-se com a API do Broker e como ela interage com os seus brokers.
+Os brokers de serviço podem ser desenvolvidos com um entendimento da [API do Open Service Broker do {{site.data.keyword.Bluemix_notm}}](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window}![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Familiarize-se com a API do Broker e como ela interage com os seus brokers.
 
 O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especificação do Open Service Broker 2.12.
 {: tip}
 
 ### Lógica de terminal necessária para todos os brokers de serviço
 
-Os brokers de serviço devem fornecer um conjunto padrão de valores de metadados que são consumidos pelas APIs de REST e os brokers do {{site.data.keyword.Bluemix_notm}} devem conter a lógica para os terminais/caminhos da API de REST a seguir:
+Os brokers de serviço devem fornecer um conjunto padrão de valores de metadados que são consumidos pelas APIs REST, e os brokers do {{site.data.keyword.Bluemix_notm}} devem ter lógica para os terminais/caminhos da API REST a seguir:
 
 <dl>
   <dt>catálogo (GET)</dt>
-  <dd>Retorna os metadados do catálogo incluídos em seu broker. Muitos valores de metadados do catálogo adicionais não são retornados - esses valores são incluídos exclusivamente dentro do console de gerenciamento de recursos e armazenados no Catálogo do {{site.data.keyword.Bluemix_notm}}.</dd>
+  <dd>Retorna os metadados do catálogo incluídos em seu broker. Muitos valores de metadados do catálogo extras não são retornados - esses valores são incluídos exclusivamente dentro do console de gerenciamento de recurso e armazenados no Catálogo do {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>instâncias de recurso (PUT)</dt>
   <dd>Provisionar sua instância de serviço</dd>
   <dt>instâncias de recurso (DELETE)</dt>
@@ -124,7 +122,8 @@ A especificação do OSB não* suporta um estado de instância desativado, mas a
   <dd>Permite ativar ou desativar uma instância de serviço.</dd>
 </dl>
 
-**Nota**: é responsabilidade do provedor de serviços desativar o acesso à instância de serviço quando o terminal de desativação é iniciado e reativar esse acesso quando o terminal de ativação é iniciado.
+É responsabilidade do provedor de serviços desativar o acesso à instância de serviço quando o terminal de desativação se inicia e reativar esse acesso quando o terminal de ativação é iniciado.
+{: note}
 
 ## Aprenda como usar os metadados exportados para guiar seu desenvolvimento do broker
 {: #use-metadata}
@@ -213,11 +212,11 @@ O **cabeçalho da versão da API** é
 ## Recomendações adicionais do broker
 {: #more-info}
 
-### Recomendações sobre o uso de operações assíncronas vs. síncronas
+### Recomendações sobre o uso assíncrono em vez de operações síncronas
 
 O OSB API suporta os modos síncrono e assíncrono de operação. Se suas operações forem levar menos de 10 segundos, as respostas síncronas serão recomendadas. Caso contrário, deve-se usar o modo assíncrono da operação. Mais informações estão contidas na especificação do OSB.
 
-Se a operação assíncrona demorar menos de 10 segundos quando você estiver fornecendo uma instância, a plataforma atingirá o tempo limite.
+Se a sua operação assíncrona levar menos de 10 segundos quando você estiver provisionando uma instância, a plataforma atingirá o tempo limite.
 {: tip}
 
 ### Recomendações para gerenciar brokers em locais
@@ -228,7 +227,7 @@ Quando você está provisionando instâncias de serviço no {{site.data.keyword.
 
 Se seu serviço baseado em API de terceiros for implementado em outra nuvem e exposto no {{site.data.keyword.Bluemix_notm}}, o local indicará o local do serviço na outra nuvem.
 
-Quando você está integrado ao {{site.data.keyword.Bluemix_notm}}, deve implementar pelo menos um broker do OSB, mas você tem a opção de ter mais de um broker, dependendo de sua estratégia de implementação e dos locais que deseja suportar para seu serviço. Na ferramenta do console de gerenciamento de recursos, você estabeleceu o mapeamento entre a tupla de serviço/plano/local e o broker que atende as operações para
+Quando você se integra ao {{site.data.keyword.Bluemix_notm}}, deve implementar pelo menos um broker do OSB. É possível ter mais de um broker, dependendo de sua estratégia de implementação e dos locais que deseja suportar para seu serviço. Na ferramenta do console de gerenciamento de recursos, você estabeleceu o mapeamento entre a tupla de serviço/plano/local e o broker que atende as operações para
 essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
 
 Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se seu serviço precisar que locais adicionais sejam definidos no Catálogo Global, consulte a equipe de migração do {{site.data.keyword.Bluemix_notm}}.
@@ -237,11 +236,11 @@ Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo gl
 ## Hospeda seus brokers
 {: #host}
 
-Seu broker deve ser hospedado como parte de um aplicativo que pode responder às chamadas API de REST. E seu local hospedado deve atender às diretrizes de segurança do {{site.data.keyword.Bluemix_notm}}. Você pode ser hospedado no {{site.data.keyword.Bluemix_notm}} ou pode ser hospedado externamente, contanto que esteja acessível publicamente no próprio {{site.data.keyword.Bluemix_notm}}.
+Seu broker deve ser hospedado como parte de um aplicativo que pode responder às chamadas API de REST. E seu local hospedado deve atender às diretrizes de segurança do {{site.data.keyword.Bluemix_notm}}. Você pode ser hospedado no {{site.data.keyword.Bluemix_notm}} ou pode ser hospedado externamente, se ele estiver publicamente acessível por meio do próprio {{site.data.keyword.Bluemix_notm}}.
 
 Para hospedar seu broker fora da IBM, deve-se assegurar de que ele atenda às diretrizes de segurança a seguir:
 - Deve seguir o protocolo de Segurança da Camada de Transporte (TLS) versão 1.2
-- Deve ser hospedado em um terminal de HTTPs válido que está acessível na Internet pública
+- Deve ser hospedado em um terminal HTTPs válido que esteja acessível na Internet pública
 
 Se desejar hospedar no {{site.data.keyword.Bluemix_notm}}, será possível localizar informações sobre a criação de um app usando Contêineres (Kubernetes) aqui: [Adotantes internos - Informações de uso](/docs/containers/cs_internal.html#cs_internal).
 
@@ -251,7 +250,7 @@ Será necessário o local hospedado de seu broker de serviço para concluir a pr
 ## Como testar o broker do seu serviço
 {: #test}
 
-Deve-se validar seu broker executando comandos curl nos diferentes terminais que você está ativando. O arquivo leia-me de amostra fornece uma excelente orientação para efetuar curl em seus terminais OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+Deve-se validar seu broker executando comandos curl nos diferentes terminais que você está ativando. O arquivo leia-me de amostra fornece uma excelente orientação para curling de seus terminais do OSB: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Ícone do link externo](../icons/launch-glyph.svg "Ícone do link externo")
 
 ### Como curl o broker do seu serviço
 {: #curl-broker}

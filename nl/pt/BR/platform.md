@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Como os serviços de faturamento integrado usam a plataforma {{site.data.keyword.Bluemix_notm}}
@@ -89,28 +91,25 @@ O {{site.data.keyword.Bluemix_notm}} usa a especificação do Open Service Broke
 
 Quando o controlador de recurso recebe uma solicitação para provisionar um recurso, ele chama o seu OSB para validar o tipo de serviço, a oferta, os planos e a disponibilidade de regiões. O controlador de recurso também valida a visibilidade do plano associado à conta do cliente. O {{site.data.keyword.Bluemix_notm}} fornece amostras do broker e docs de API que ampliam a especificação de OSB. É possível localizar mais detalhes sobre como desenvolver e hospedar seu broker à medida que você percorre as etapas detalhadas de desenvolvimento integrado do faturamento integrado.
 
-## {{site.data.keyword.Bluemix_notm}}  Serviço de medição
+## {{site.data.keyword.Bluemix_notm}} Serviço de medição
 {: #metering-service}
 
 Se um serviço oferece um plano medido, os usuários do {{site.data.keyword.Bluemix_notm}} são cobrados com base na quantia de recursos que eles usam. Por exemplo, os usuários do {{site.data.keyword.Bluemix_notm}} que usam serviços de banco de dados podem ser cobrados com base na quantia de armazenamento que seus aplicativos usam. O envio de uso deve ocorrer para que o uso seja convertido em um registro debitável.
 
 Todos os serviços de faturamento integrado que oferecem um plano medido devem usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para relatar dados de uso.
 
-**Nota:** será necessário automatizar o envio de uso por hora usando a API de serviço de medição
-se você oferecer um plano medido.
+Será necessário automatizar o envio de uso por hora usando a API de serviço de medição, se você oferecer um plano medidor.
+{: important}
 
-Para obter mais informações sobre a medição, consulte:
-[Integração da medição](/docs/third-party/metering.html#meteringintera). Para obter mais informações sobre como
-enviar o uso medido, consulte: [Enviando o uso para os planos medidos](/docs/third-party/submitusage.html#submitusage)
+Para obter mais informações sobre a medição, consulte: [Integração da medição](/docs/third-party/metering.html#meteringintera). Para obter mais informações sobre como enviar o uso medido, consulte: [Enviando o uso para os planos medidos](/docs/third-party/submitusage.html#submitusage)
 
 ## Cenário de Provisão: Puxando tudo junto
 
-Agora, vamos reunir todos os conceitos descritos anteriormente e verificar um exemplo de como a criação de instância de
-serviço funciona usando a plataforma {{site.data.keyword.Bluemix_notm}}.
+Agora, vamos reunir todos os conceitos e ver um exemplo de como a criação da instância de serviço funciona usando a plataforma {{site.data.keyword.Bluemix_notm}}.
 
 ![Cenário de fornecimento](images/flow-am.svg "Como a plataforma manipula a criação de instância de serviço")
 
-Quando um usuário deseja criar uma instância de serviço, eles podem iniciá-la de uma de duas maneiras:
+Quando um usuário deseja criar uma instância de serviço, ele pode criá-lo de uma de duas maneiras:
 * **CLI**: usando `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Console do {{site.data.keyword.Bluemix_notm}}**: o usuário pode selecionar o serviço, planejar e usar a operação **Criar**.
 
@@ -172,5 +171,6 @@ fornecimento, a ligação (criando as credenciais e os terminais), a medição, 
 
 * **resource_group_crn**: retorna o grupo de recursos que inclui a instância de serviço. Para obter mais detalhes, veja [Gerenciando grupos de recursos](/docs/resources/resourcegroups.html).
 
-   **Nota**: os provedores de ofertas não estão relacionados com o `resource_group_crn`, exceto em circunstâncias exclusivas. Consulte seu representante IBM sobre seu caso de uso antes de usar esse campo.
+   Os provedores de ofertas não estão preocupados com o `resource_group_crn`, exceto em circunstâncias exclusivas. Consulte seu representante IBM sobre seu caso de uso antes de usar esse campo.
+   {: note}
 

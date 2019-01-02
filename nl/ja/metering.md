@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -31,7 +31,7 @@ lastupdated: "2018-09-05"
 *	{{site.data.keyword.Bluemix_notm}} は、月次請求処理サイクル用に構成されており、時刻は協定世界時 (UTC) で表されます。
 *  オファリング・プロバイダーは、使用量送信をテストし、その結果を検証して月次請求処理サイクルの計算方法を通知する必要があります。
 
-料金に関する一般的な情報については、[コストの計算方法](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost)を参照してください。 
+料金に関する一般的な情報については、[コストの計算方法](/docs/billing-usage/estimating_costs.html#cost)を参照してください。 
 
 ## 構成プロパティー
 {: #configure}
@@ -85,6 +85,7 @@ lastupdated: "2018-09-05"
 | Day 2 (morning) | 5             | 10 + 5      | 15                    |
 | Day 3 (morning) | 5             | 15 + 5      | 20                    |
 | Day 4 (night)   | 5             | 20 + 5      | 25                    |
+{: caption="表 2. 月々の使用量の計算" caption-side="top"}
 
 #### Standard Average
 {: #standard-average}
@@ -100,6 +101,7 @@ lastupdated: "2018-09-05"
 | Day 2 (morning) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Day 3 (morning) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Day 4 (night)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="表 3. 月々の使用量の平均の計算" caption-side="top"}
 
 #### Standard Max
 {: #standard-max}
@@ -115,6 +117,7 @@ lastupdated: "2018-09-05"
 | Day 2 (morning) | 0              | MAX(10, 0)   | 10                    |
 | Day 3 (morning) | 15             | MAX(10, 15)  | 15                    |
 | Day 4 (night)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="表 4. 月々の使用量の最大の計算" caption-side="top"}
 
 #### Daily proration Average
 {: #proration-average}
@@ -135,6 +138,7 @@ lastupdated: "2018-09-05"
 | Day 2 (night)      | 5                | (2 + 5) / 2   | (5.5 + 3.5) / 2                        | 4.5 (Day 2 の EOD)                               |
 | Day 3 から Day 15    | 1                | 1 / 1         | (5.5 + 3.5 + (1 + 13)  / 15            | 1.4666  (Day 15 の EOD)                          |
 | Day 15 から Day 30   | 0                | 0 / 1         | (5.5 + 3.5 + (1 \* 12) + (0  \* 15) / 30 | 0.7333  (Day 30 の EOD)                          |
+{: caption="表 5. 1 日当たりの使用量の平均と月々の平均の計算" caption-side="top"}
 
 \* 使用量が送信された日と同日に確認。
 
@@ -155,6 +159,7 @@ lastupdated: "2018-09-05"
 | Day 1 (night)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Day 2 から Day 15  | 1              | MAX(1)    | (1 + 1 + ...) / day            | 1                      |
 | Day 15 から Day 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / day | < 1                    |
+{: caption="表 6. 1 日当たりの最大使用量と月々の平均の計算" caption-side="top"}
 
 \* 使用量が送信された日と同日に確認。
 
@@ -194,5 +199,5 @@ lastupdated: "2018-09-05"
 | Simple tier (granular tier)  | 全消費量の単価が、数量が分類される層によって決まる P*Q モデル。           | <ul><li>Q が <=Q1 の場合、T=P1*Q</li><li>Q1 < Q <=Q2 の場合、T=P2*Q</li><li>Q2 < Q <=Q3 の場合、T=P3*Q</li></ul>     |   <ul><li>Q1=1000、P1=$1</li><li>Q2=2500、P2=$0.9</li><li>Q3=10000、P3=$0.75</li><li>T=$0.75*5000=$3750</li></ul>              |
 | Graduated tier (step tier)   | 1 単位当たりの料金は、消費量が、さまざまな事前定義層に移動するにつれて変化します。 合計請求額の計算では、前の層からの請求額の累積を行います。           | <ul><li>T1=P1*Q (0 < Q</li><li>Q1 < Q <=Q2 の場合、T=T2</li><li>Q2 < Q <=Q3 の場合、T=T3</li></ul>     | <ul><li>Q1=1000、P1=$1、T1=1*1000</li><li>Q2=1500、P2=$0.9、T2=0.9*1500</li><li>Q3=10000、P3=$0.75、T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
 | Block tier (up to)           | 請求される合計金額は、ブロック内で変化しない「上限 (up to)」量によって確立されます     | <ul><li>Q が <=Q1 の場合、T=T1</li><li>Q1 < Q <=Q2 の場合、T=T2</li><li>Q2 < Q <=Q3 の場合、T=T3</li></ul>    |  <ul><li>Q1=1000、T1=$0</li><li>Q2=2500、T2=2500</li><li>Q3=10000、T3=$4500</li><li>T=$4500</li></ul>            |
-
+{: caption="表 7. 料金モデル" caption-side="top"}
 

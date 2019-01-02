@@ -55,20 +55,20 @@ http://localhost:3000/auth/callback <-- for testing locally
 {: #oauth}
 
 
-**認証 - ステップ 0:** `https://iam.bluemix.net/identity/.well-known/openid-configuration` を呼び出して、デプロイしたアプリケーションに最も近い UI ログイン用の IAM 地域エンドポイントを見つけます。
+**認証 - ステップ 0:** `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration` を呼び出して、デプロイしたアプリケーションに最も近い UI ログイン用の IAM 地域エンドポイントを見つけます。
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -94,7 +94,7 @@ Content-Type: application/json
 #### ヘッダー:
 {: #headers1}
 
-  - Authorization: Basic *[client id]: [client secret]*
+  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   この応答で返されるユーザーの access_token は、次のユーザー許可で使用されるため、必ず保管してください。
 
-次のサンプル・ブローカーにある例を参照してください: https://github.com/IBM/sample-resource-service-brokers
+[サンプル・ブローカー](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") の例を参照してください。
 
 ## ユーザー許可の検証
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 ユーザーを認証し、独自のアクセス・トークンを取得したので、次に、ユーザーがサービス・ダッシュボードにアクセスできることを確認する必要があります。 最初に、ステップ 2.1 でデコードするユーザーのアクセス・トークンに含まれているいくつかの情報が必要になります。 次に、ステップ 2.2 で、その情報を使用して IAM を呼び出し、ユーザーがダッシュボードにアクセスする権限を持っているかどうかを確認します。
 
 **ステップ 2.1**: (前のセクションの `認証 - ステップ 2: アクセス・トークン呼び出しのためのコードの交換`で返された) ユーザーのアクセス・トークンをデコードします。
-   アクセス・トークンは、任意の JWT 準拠ライブラリーを使用してデコードできる JWT トークンです。 例えば、[sample broker code](https://github.com/IBM/sample-resource-service-brokers) に含まれているライブラリーを参照してください。
+   アクセス・トークンは、任意の JWT 準拠ライブラリーを使用してデコードできる JWT トークンです。 例えば、[sample broker code](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") に含まれているライブラリーを参照してください。
    トークンがデコードされた後、フォーマットは次のセクションで示されているようになります。次のステップで使用される `iam_id` フィールドと `scope` フィールドを抽出します。
 
 ```
@@ -218,7 +220,7 @@ curl -k -X POST \
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 次のサンプル・ブローカーにある例を参照してください: https://github.com/IBM/sample-resource-service-brokers
@@ -265,7 +267,7 @@ curl -X POST \
 
 サード・パーティー統合の一部として、ユーザーの目的を実現するのに必要な最小アクセス・スコープをトークンが持っていることを確認するために、トークンのスコープ指定が使用されています。 これを可能にするために、IAM トークンのアクセス権限は、トークンを作成したクライアント ID に基づきます。 IAM トークンがサード・パーティー・サービスによって作成された場合、エンド・ユーザーは、構成済みの適切なポリシーを持っていたとしても、特定の API および機能を実行できません。
 
-許可へのインパクト (`https://iam.bluemix.net/v2/authz` へのすべての呼び出し) は、サブジェクトでの `scope` 情報の受け渡しが必要になることです。 この情報は、IAM トークン (base64 エンコード) 内の `scope` クレームに含まれています。
+許可へのインパクト (`https://iam.cloud.ibm.com/v2/authz` へのすべての呼び出し) は、サブジェクトでの `scope` 情報の受け渡しが必要になることです。 この情報は、IAM トークン (base64 エンコード) 内の `scope` クレームに含まれています。
 
 以下のセクションは、許可呼び出しに追加されるものの例です。
 ```

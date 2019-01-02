@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # 3단계. 서비스 브로커 개발 및 호스팅
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 리소스 관리 콘솔에서 내보낸 메타데이터를 사용하여 선택한 프로그래밍 언어로 하나 이상의 새 서비스 브로커를 빌드할 수 있습니다.
 {:shortdesc}
 
-서비스 브로커는 서비스 라이프사이클을 관리합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼은 서비스 브로커와 상호작용하여 서비스 인스턴스(서비스 오퍼링의 인스턴스화) 및 서비스 바인딩(애플리케이션과 서비스 인스턴스 간의 연관 표시, 보통 애플리케이션이 서비스 인스턴스와 통신하는 데 사용할 인증 정보가 포함됨)을 프로비저닝하고 관리합니다. 올바른 메타데이터 값을 제공하면 요청이 수행될 때 성공적인 RESTful API 응답이 작성됩니다.
+서비스 브로커는 서비스 라이프사이클을 관리합니다. {{site.data.keyword.Bluemix_notm}} 플랫폼은 서비스 브로커와 상호작용하여 서비스 인스턴스 및 서비스 바인딩을 프로비저닝하고 관리합니다. 요청이 수행될 때 성공적인 RESTful API 응답을 작성하도록 올바른 메타데이터 값을 제공할 수 있습니다.
 
 리소스 관리 콘솔, {{site.data.keyword.Bluemix_notm}} 서비스 브로커 샘플 및 리소스 브로커 API 문서에서 내보낸 메타데이터의 조합을 사용하여 브로커를 빌드할 수 있습니다.
 
@@ -49,20 +50,20 @@ lastupdated: "2018-09-05"
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
 
-**참고:** 샘플에서 모든 언어가 표시되지는 않습니다. 예를 들어, 샘플 Python 브로커가 필요한 경우 Google을 검색하여 Cloud Foundry 샘플을 찾을 수 있어야 합니다. OSB 요구사항을 충족하려면 이 샘플을 조정해야 합니다.
-
+샘플에서 모든 언어가 표시되지는 않습니다. 예를 들어, 샘플 Python 브로커가 필요한 경우 Google을 검색하여 Cloud Foundry 샘플을 찾을 수 있어야 합니다. OSB 요구사항을 충족하려면 이 샘플을 조정해야 합니다.
+{: note}
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 문서 보기
 {: #docs}
 
-서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
+서비스 브로커는 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 대한 이해를 바탕으로 개발되어야 합니다. 브로커 API 및 브로커 API가 브로커와 상호작용하는 방식을 숙지하십시오.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker는 Open Service Broker 2.12 스펙을 확장합니다.
 {: tip}
 
 ### 모든 서비스 브로커에 대한 필수 엔드포인트 로직
 
-서비스 브로커는 REST API에서 사용하는 메타데이터 값의 표준 세트를 제공해야 하며 {{site.data.keyword.Bluemix_notm}} 브로커에는 다음 REST API 엔드포인트/경로에 대한 로직이 포함되어야 합니다.
+서비스 브로커는 REST API에서 이용하는 메타데이터 값의 표준 세트를 제공해야 하며 {{site.data.keyword.Bluemix_notm}} 브로커에는 다음 REST API 엔드포인트/경로에 대한 로직이 있어야 합니다.
 
 <dl>
   <dt>카탈로그(GET)</dt>
@@ -119,7 +120,8 @@ OSB 스펙은 사용 안함 상태이지만 아직 삭제되지 않은 인스턴
   <dd>서비스 인스턴스를 사용 또는 사용 안함으로 설정할 수 있습니다.</dd>
 </dl>
 
-**참고**: 엔드포인트 사용 안함을 시작할 때 서비스 인스턴스에 대한 액세스를 사용 안함으로 설정하고 엔드포인트 사용을 사용할 때 해당 액세스를 다시 사용으로 설정하는 것은 서비스 제공자의 책임입니다.
+사용 안함 엔드포인트가 시작될 때 서비스 인스턴스에 대한 액세스를 사용 안함으로 설정하고 사용 엔드포인트가 시작될 때 해당 액세스를 다시 사용으로 설정하는 것은 서비스 제공자의 책임입니다.
+{: note}
 
 ## 내보낸 메타데이터를 사용하여 브로커 개발을 안내하는 방법 알아보기
 {: #use-metadata}
@@ -206,9 +208,9 @@ Decoded:
 ## 추가 브로커 권장사항
 {: #more-info}
 
-### 비동기 대 동기 오퍼레이션 사용에 대한 권장사항
+### 동기 대신 비동기 오퍼레이션 사용에 대한 권장사항
 
-OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니다. 오퍼레이션에 걸리는 시간이 10초 미만인 경우 동기 응답이 권장됩니다.  그렇지 않으면 비동기 모드의 오퍼레이션을 사용해야 합니다.  자세한 정보는 OSB 스펙에 포함되어 있습니다.
+OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니다. 오퍼레이션에 걸리는 시간이 10초 미만인 경우 동기 응답이 권장됩니다. 그렇지 않으면 비동기 모드의 오퍼레이션을 사용해야 합니다. 자세한 정보는 OSB 스펙에 포함되어 있습니다.
 
 인스턴스를 프로비저닝하는 중에 비동기 오퍼레이션에 10초 미만이 걸리는 경우 플랫폼이 제한시간 초과됩니다.
 {: tip}
@@ -221,7 +223,7 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 서드파티 API 기반 서비스가 다른 클라우드에서 구현되고 {{site.data.keyword.Bluemix_notm}}에 노출되는 경우 위치는 다른 클라우드에 있는 서비스의 위치를 표시해야 합니다.
 
-{{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 최소 하나의 OSB 브로커를 구현해야 하지만, 배치 전략과 서비스를 지원하고자 하는 위치에 따라 둘 이상의 브로커를 사용할 수 있는 옵션이 있습니다.  리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
+{{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 하나 이상의 OSB 브로커를 구현해야 합니다. 배치 전략 및 서비스에 대해 지원할 위치에 따라 둘 이상의 브로커가 있을 수 있습니다. 리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
 
 사용 가능한 위치 목록은 [IBM 글로벌 카탈로그 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스에서 글로벌 카탈로그에 추가 위치를 정의해야 하는 경우 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
 
@@ -229,11 +231,11 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 ## 브로커 호스트
 {: #host}
 
-브로커는 REST API 호출에 응답할 수 있는 애플리케이션의 일부로 호스팅되어야 합니다. 또한 호스트 위치는 {{site.data.keyword.Bluemix_notm}} 보안 가이드라인을 준수해야 합니다. {{site.data.keyword.Bluemix_notm}}에서 호스팅하거나, {{site.data.keyword.Bluemix_notm}}에서 공용으로 액세스할 수 있는 경우 외부에서 호스팅할 수 있습니다.
+브로커는 REST API 호출에 응답할 수 있는 애플리케이션의 일부로 호스팅되어야 합니다. 또한 호스트 위치는 {{site.data.keyword.Bluemix_notm}} 보안 가이드라인을 준수해야 합니다. {{site.data.keyword.Bluemix_notm}}에서 호스팅되거나, {{site.data.keyword.Bluemix_notm}} 자체에서 공용으로 액세스할 수 있는 경우 외부에서 호스팅될 수 있습니다.
 
 IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인을 충족해야 합니다.
 - TLS(Transport Layer Security) 프로토콜 버전 1.2를 준수해야 함
-- 공용 인터넷에서 액세스할 수 있는 올바른 HTTP 엔드포인트에 호스팅되어야 함
+- 공용 인터넷에서 액세스할 수 있는 올바른 HTTP 엔드포인트에서 호스팅되어야 함
 
 {{site.data.keyword.Bluemix_notm}}에서 호스팅하려는 경우 컨테이너(Kubernetes)를 사용하여 앱을 작성하는 방법에 대한 정보는 다음에 있습니다. [내부 채택자 - 사용 정보](/docs/containers/cs_internal.html#cs_internal).
 
@@ -243,7 +245,7 @@ IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인�
 ## 서비스 브로커를 테스트하는 방법
 {: #test}
 
-사용하려는 다른 엔드포인트에 대해 curl 명령을 실행하여 브로커의 유효성을 검증해야 합니다. 샘플 readme 파일에서는 OSB 엔드포인트에 대해 curl을 수행하기 위한 훌륭한 지침을 제공합니다. https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+사용하려는 다른 엔드포인트에 대해 curl 명령을 실행하여 브로커의 유효성을 검증해야 합니다. 샘플 readme 파일에서는 OSB 엔드포인트에 대해 curl을 수행하기 위한 우수한 지침을 제공합니다. [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")
 
 ### 서비스 브로커에 대해 curl을 수행하는 방법
 {: #curl-broker}

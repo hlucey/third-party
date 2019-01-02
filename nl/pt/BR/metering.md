@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -35,7 +35,7 @@ Hora Universal Coordenada (UTC).
 *  Os provedores de ofertas devem testar o envio de uso e validar seus resultados para informar como o ciclo de faturamento mensal é calculado.
 
 Para obter informações gerais sobre precificação, consulte
-[Como calcular os custos](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+[Como calcular os custos](/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propriedades de Configuração
 {: #configure}
@@ -90,6 +90,7 @@ Fórmula: ADD (usos)
 | Dia 2 (manhã) | 5             | 10 + 5      | 15                    |
 | Dia 3 (manhã) | 5             | 15 + 5      | 20                    |
 | Dia 4 (noite)   | 5             | 20 + 5      | 25                    |
+{: caption="Tabela 2. Cálculos de uso mensal" caption-side="top"}
 
 #### Média padrão
 {: #standard-average}
@@ -105,6 +106,7 @@ Fórmula: AVG (usos)
 | Dia 2 (manhã) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Dia 3 (manhã) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Dia 4 (noite)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Tabela 3. Média de cálculos mensais de uso" caption-side="top"}
 
 #### Máximo padrão
 {: #standard-max}
@@ -120,6 +122,7 @@ Fórmula: MAX (usos)
 | Dia 2 (manhã) | 0              | MAX (10, 0)   | 10                    |
 | Dia 3 (manhã) | 15             | MAX (10, 15)  | 15                    |
 | Dia 4 (noite)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Tabela 4. Cálculos máximos de uso mensais" caption-side="top"}
 
 #### Média de rateio diária
 {: #proration-average}
@@ -140,6 +143,7 @@ Dado um mês de 30 dias:
 | Dia 2 (noite)      | 5                | (2 + 5) / 2   | (5.5 + 3.5) / 2                        | 4.5 (No Dia 2 EOD)                               |
 | Dia 3 ao Dia 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1.4666 (No Dia 15 EOD)                          |
 | Dia 15 ao Dia 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (no dia 30 - final do dia)                          |
+{: caption="Tabela 5. Média de uso de cálculos por dia e mensais" caption-side="top"}
 
 \* Conforme visto no mesmo dia que o momento em que o uso foi enviado.
 
@@ -160,6 +164,7 @@ Dado um mês de 30 dias:
 | Dia 1 (noite)    | 1              | MAX (0, 1) | 1 / 1                          | 1                      |
 | Dia 2 ao Dia 15  | 1              | MAX (1)    | (1 + 1 +...) / day            | 1                      |
 | Dia 15 ao Dia 30 | 0              | MAX (0)    | (1 + (1 * 14) + 0 + ...) / day | < 1                    |
+{: caption="Tabela 6. Uso máximo por dia e cálculos médios mensais" caption-side="top"}
 
 \* Conforme visto no mesmo dia que o momento em que o uso foi enviado.
 
@@ -202,5 +207,5 @@ A tabela a seguir fornece informações detalhadas sobre os modelos de precifica
 camada em que a quantidade se encaixa.           | <ul><li>Se Q for <=Q1, T=P1*Q</li><li>Se Q1 < Q <=Q2, T=P2*Q</li><li>Se Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1 = 1000, P1 = US$ 1</li><li>Q2 = 2500, P2 = US$ 0,9</li><li>Q3 = 10000, P3 = US$ 0,75</li><li>T = US$ 0,75 * 5000 = US$ 3750</li></ul>              |
 | Camada graduada (camada da etapa)   | O preço por unidade varia conforme a quantidade consumida se move para diferentes camadas predefinidas. O encargo total envolve acumular os encargos das camadas anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1 = 1000, P1 = US$ 1, T1 = 1*1000</li><li>Q2 = 1500, P2 = US$ 0,9, T2 = 0,9*1500</li><li>Q3 = 10000, P3 = US$ 0,75, T3 = 0,75*2500</li><li>T = 1000 + 1350 + 1875 = US$ 4225</li></ul>          |
 | Camada de bloco (até)           | A quantia total cobrada é estabelecida por uma quantidade "até" que não varia dentro do bloco     | <ul><li>Se Q for <=Q1, T=T1</li><li>Se Q1 < Q <=Q2, T=T2</li><li>Se Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1 = 1000, T1 = US$ 0</li><li>Q2 = 2500, T2 = 2500</li><li>Q3 = 10000, T3 = US$ 4500</li><li>T = US$ 4500</li></ul>            |
-
+{: caption="Tabela 7. Modelos de precificação" caption-side="top"}
 

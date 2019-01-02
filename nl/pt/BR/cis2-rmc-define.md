@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-31"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-08-31"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Etapa 2. Definindo a oferta no console de gerenciamento de recurso
@@ -30,7 +31,7 @@ catálogo do {{site.data.keyword.Bluemix_notm}}.
 {: #pre-reqs}
 
 1. Certifique-se de começar a trabalhar na [Etapa 1: criar docs de serviço e anúncio de marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
-2. Assegure-se de estar registrado no  {{site.data.keyword.Bluemix_notm}}. Se não, [registre](https://console.bluemix.net/registration) antes de continuar.
+2. Assegure-se de estar registrado no  {{site.data.keyword.Bluemix_notm}}. Se não, [registre-se](https://cloud.ibm.com/registration){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") antes de continuar.
 3. Assegure-se de que você esteja na conta correta quando começar a trabalhar no console de gerenciamento de recurso.
 4. Prepare o nome do serviço do {{site.data.keyword.Bluemix_notm}}. Deve-se fornecer um nome de serviço que seja usado para identificar o serviço pela plataforma {{site.data.keyword.Bluemix_notm}} e um nome de exibição que seus clientes veem no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
@@ -47,12 +48,12 @@ catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 Para começar, efetue login e registre sua oferta.
 
-1. Efetue login no {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com seu ID do {{site.data.keyword.Bluemix_notm}}.
+1. Efetue login no [ {{site.data.keyword.Bluemix_notm}} ](https://cloud.ibm.com){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo") com seu ID do {{site.data.keyword.Bluemix_notm}}.
    **Aviso**: é crítico que você esteja na conta correta do {{site.data.keyword.Bluemix_notm}}. Se você tiver mais de uma conta, assegure-se de alternar para a correta.
-2. Acesse o painel do console de gerenciamento de recurso: [ https://console.bluemix.net/onboarding/dashboard](https://console.bluemix.net/onboarding/dashboard){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+2. Acesse o [painel do console de gerenciamento de recurso](https://cloud.ibm.com/onboarding/dashboard){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 3. Clique em **Novo recurso** para incluir seu recurso.
 4. Inclua seu  ** Nome do recurso **. Esse valor é o seu nome do serviço exclusivo do {{site.data.keyword.Bluemix_notm}} que você derivou na seção anterior.
-5. Nós não esperamos que você tenha um broker de serviço hospedado existente. Selecione **Não** para o campo **O broker está pronto para importação?**. Nós o guiaremos através da criação de um broker em etapas posteriores e você retornará para o console de gerenciamento de recursos para importar seu broker após ele ser desenvolvido e hospedado.
+5. Nós não esperamos que você tenha um broker de serviço hospedado existente. Selecione **Não** para o campo **O broker está pronto para importação?** . Nós o guiaremos através da criação de um broker em etapas posteriores e você retornará para o console de gerenciamento de recursos para importar seu broker após ele ser desenvolvido e hospedado.
 7. Depois de enviar, você será levado para a página **Resumo**. Conclua quaisquer valores *necessários* adicionais e clique em **Salvar**.
 
 É possível salvar o progresso no console de gerenciamento de recurso e voltar mais tarde para incluir mais informações. O console de gerenciamento de recursos foi projetado para ajudá-lo a gerenciar o ciclo de vida de seu serviço. Tudo bem se você não tiver todas as respostas para todos os campos imediatamente.
@@ -63,20 +64,20 @@ Para começar, efetue login e registre sua oferta.
 
 Na página **Oferta**, forneça os valores de metadados que são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Além disso, alguns desses valores precisam ser exportados e armazenados em seu broker de serviço no qual eles são usados para fornecimento e retornados como parte da Resposta `catalog (GET)`. Use esses valores para ajudar a iniciar o desenvolvimento de um broker de serviço em etapas posteriores.
 
-1. No console de gerenciamento de recurso, clique na página **Oferta** e clique na guia **Página de listagem**. A **Página de listagem** define os metadados que são exibidos no painel de serviço de sua oferta do {{site.data.keyword.Bluemix_notm}}. Conclua todos os valores necessários e clique em **Salvar**. O console de gerenciamento de recursos faz um registro inicial de seu serviço com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Uma notificação de que seu serviço foi registrado com o IAM é exibida. Você fará muito mais com o IAM mais tarde.
+1. No console de gerenciamento de recurso, clique na página **Oferta** e clique na guia **Página de listagem**. A **Página de listagem** define os metadados que são exibidos no painel de serviço de sua oferta do {{site.data.keyword.Bluemix_notm}}. Conclua todos os valores necessários e clique em **Salvar**. O console de gerenciamento de recursos faz um registro inicial de seu serviço com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Uma notificação de que seu serviço foi registrado com o IAM é exibida. É possível fazer mais com o IAM mais tarde.
 2. Na página Oferta, clique na guia **Configurações**.
-   1. Especifique se sua oferta permite **Mudanças no plano sejam suportadas?**. O padrão é **Não**. Se você especificar **Sim**, será necessário estender o Open Service Broker para suportar mudanças de plano para instâncias provisionadas. Se sua oferta suportar diversos planos e você desejar que os usuários mudem os planos para uma instância provisionada existente, será necessário ativar a capacidade para que os usuários atualizem suas instâncias de serviço. Para obter mais detalhes, veja o terminal `/v2/service_instances/{instance_id} PATCH` no [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
+   1. Especifique se sua oferta permite **Mudanças de plano suportadas?** O padrão é **Não**. Se você especificar **Sim**, será necessário estender o Open Service Broker para suportar mudanças de plano para instâncias provisionadas. Se a sua oferta suportar muitos planos e você desejar que os usuários mudem os planos para uma instância provisionada existente, será necessário ativar o recurso para que os usuários atualizem sua instância de serviço. Para obter mais detalhes, veja o terminal `/v2/service_instances/{instance_id} PATCH` no [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
    2. Especifique se seu serviço é  ** Bindable **. O padrão é **Não**. Selecione **Sim** se o seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}. Se ele for de ligação, deverá retornar os terminais e as credenciais da API para seus consumidores de serviço. Quando você desenvolve um serviço de ligação, deve-se usar as [operações de ligação na API do Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
    3. Preencha os campos obrigatórios adicionais e clique em **Salvar**.
 3. A página Oferta agora tem uma marca de seleção na navegação, indicando que você passou pelos requisitos mínimos para concluir essa página. Se a página ainda estiver marcada como incompleta, você deverá reabrir a página e verificar se há campos *obrigatórios* incompletos.
 
-Sua carta de oferta inicial inclui uma URL de documentação de serviço que foi gerada pelo Provider Workbench. Deve-se inserir essa URL nos campos **URL da documentação** e **URL de instruções**
+Sua carta de oferta inicial inclui uma URL de documentação de serviço que foi gerada pelo ambiente de trabalho do Provedor. Deve-se inserir essa URL nos campos **URL da documentação** e **URL de instruções**
 {: tip}
 
 ## Registrar com o IAM
 {: #reg-iam}
 
-O IAM é necessário para todos os serviços a serem integrados no {{site.data.keyword.Bluemix_notm}}. Veja [O que é IAM?](/docs/iam/index.html#what-is-cloud-iam-) para saber mais sobre os conceitos e os requisitos do IAM.
+O IAM é necessário para todos os serviços que estão integrados ao {{site.data.keyword.Bluemix_notm}}. Veja [O que é IAM?](/docs/iam/index.html#what-is-cloud-iam-) para saber mais sobre os conceitos e os requisitos do IAM.
 
 O console de gerenciamento de recurso gera os valores do IAM a seguir:
    - ID do serviço (gerado e armazenado)
@@ -91,7 +92,8 @@ O provedor de serviços precisa fornecer:
 2. Clique em **Ativar o IAM**. O console de gerenciamento de recurso registra seu serviço com o IAM, cria seu ID de serviço e Política e cria uma Chave API para você. Além disso, ele cria um ID de cliente e um Segredo incompletos. O ID do Cliente deve ser atualizado com seu URI de redirecionamento após você obtê-lo.
 3. Clique em **Status** para ver o estado atual de sua ativação do IAM.
 
-**Nota**: é necessário voltar para a página IAM posteriormente para fornecer seu `URI de Redirecionamento`. Você não terá esse valor até executar algum desenvolvimento adicional para construir um fluxo de autenticação. As etapas posteriores ajudarão a guiá-lo ao discernir o valor do URI de redirecionamento.
+É necessário voltar para a página do IAM posteriormente para fornecer seu `URI de redirecionamento`. Você não terá esse valor até que faça algum desenvolvimento adicional para construir um fluxo de autenticação. As etapas posteriores ajudarão a guiá-lo ao discernir o valor do URI de redirecionamento.
+{: note}
 
 Você recebe sua Chave API ao **Ativar o IAM**. É crítico que você salve a Chave API. O valor não é mostrado novamente. Se você perder a sua chave API, será possível excluir a chave e criar uma nova: [Gerenciar chaves API do ID do serviço](/docs/iam/serviceid_keys.html#serviceidapikeys)
 {: tip}
@@ -103,9 +105,9 @@ Ao integrar seu serviço ao {{site.data.keyword.Bluemix_notm}}, deve-se definir 
 
 1. No console de gerenciamento de recurso, clique na página **Precificação**.
 2. Clique em **Incluir plano** para criar uma nova entrada de plano e clique em **Editar plano** para editar o plano.
-   * **Plano grátis**: todas as ofertas podem ter um plano Lite que seja livre de encargos, permitindo que os usuários experimentem o seu serviço. Os planos grátis usam *Lite* para o **Nome de exibição** e *lite* para o **Nome programático**. Especifique **Sim** para **Este plano é grátis?**. Clique **Salvar.** Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}.
-   * **Plano de assinatura**: especifique **Não** para **Este plano é grátis?**. Preencha os campos requeridos. Deixe a métrica  ** Métricas de Precificação **  padrão. Essa métrica padrão é fornecida para você usar para cobrar os usuários por uma taxa mensal única. Clique **Salvar.** Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}. Salve o comando curl de amostra para enviar o uso.
-   * **Plano medido**: especifique **Não** para **Este plano é grátis?**. Preencha os campos requeridos. *Exclua* a métrica de assinatura padrão **Métricas de precificação**. Clique em **Incluir outra métrica**, conclua a página **Incluir métrica de precificação** e clique em **Incluir métrica**. Clique **Salvar.** Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}. Salve o comando curl de amostra para enviar o uso. Para ajudar a selecionar as métricas certas, veja [Integração de medição](/docs/third-party/metering.html).
+   * **Plano grátis**: todas as ofertas podem ter um plano Lite que seja livre de encargos, permitindo que os usuários experimentem o seu serviço. Os planos grátis usam *Lite* para o **Nome de exibição** e *lite* para o **Nome programático**. Especifique **Sim** para **Este plano é grátis?**. Clique em **Salvar**. Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}.
+   * **Plano de assinatura**: especifique **Não** para **Este plano é grátis?**. Preencha os campos requeridos. Deixe a métrica  ** Métricas de Precificação **  padrão. Essa métrica padrão é fornecida para você usar para cobrar os usuários por uma taxa mensal única. Clique em **Salvar**. Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}. Salve o comando curl de amostra para enviar o uso.
+   * **Plano medido**: especifique **Não** para **Este plano é grátis?**. Preencha os campos requeridos. *Exclua* a métrica de assinatura padrão **Métricas de precificação**. Clique em **Incluir outra métrica**, conclua a página **Incluir métrica de precificação** e clique em **Incluir métrica**. Clique em **Salvar**. Seu plano é publicado no catálogo do {{site.data.keyword.Bluemix_notm}}. Salve o comando curl de amostra para enviar o uso. Para ajudar a selecionar as métricas certas, veja [Integração de medição](/docs/third-party/metering.html).
 3. A página **Precificação** agora está marcada como concluída, indicando que você passou pelos requisitos mínimos para concluir essa página.
 
 Os provedores de serviços precisam automatizar o envio de uso por hora para todos os planos medidos. Para obter mais informações, veja: [Enviando o uso para planos medidos](/docs/third-party/submitusage.html)
@@ -114,7 +116,7 @@ Os provedores de serviços precisam automatizar o envio de uso por hora para tod
 ## Exportar seus metadados como JSON
 {: #export-metadata}
 
-Agora que você definiu seu serviço no console de gerenciamento de recurso, é possível fazer download de um arquivo catalog.json e usá-lo para informar o desenvolvimento de seu Open Service Broker. O catalog.json contém metadados que devem ser hospedados em seu broker. Esses valores definem o contrato entre o broker e a plataforma {{site.data.keyword.Bluemix_notm}} para os serviços e planos suportados pelo broker. Todos os metadados do catálogo adicionais que não são necessários para fornecimento são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Quaisquer atualizações nos valores de exibição do catálogo que são usados para renderizar seus painéis, como links, ícones e metadados convertidos do i18n, são atualizadas no console de gerenciamento de recursos e não são hospedadas em seu broker. Nenhum dos metadados armazenados em seu broker é exibido no console do {{site.data.keyword.Bluemix_notm}} ou na CLI do {{site.data.keyword.Bluemix_notm}}. O console e a CLI retornam o que foi configurado dentro do console de gerenciamento de recursos e armazenado no catálogo do {{site.data.keyword.Bluemix_notm}}.
+Agora que você definiu seu serviço no console de gerenciamento de recurso, é possível fazer download de um arquivo catalog.json e usá-lo para informar o desenvolvimento de seu Open Service Broker. O catalog.json contém metadados que devem ser hospedados no broker. Esses valores definem o contrato entre o broker e a plataforma {{site.data.keyword.Bluemix_notm}} para os serviços e planos suportados pelo broker. Todos os metadados do catálogo adicionais que não são necessários para fornecimento são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Quaisquer atualizações nos valores de exibição do catálogo que são usadas para renderizar seu painel, como links, ícones e metadados convertidos i18n, são atualizadas no console de gerenciamento de recurso. Eles não estão hospedados em seu corretor. Nenhum dos metadados armazenados em seu broker é exibido no console do {{site.data.keyword.Bluemix_notm}} ou na CLI do {{site.data.keyword.Bluemix_notm}}. O console e a CLI retornam o que foi configurado dentro do console de gerenciamento de recursos e armazenado no catálogo do {{site.data.keyword.Bluemix_notm}}.
 
 1. No console de gerenciamento de recurso, abra a página **Implementações**.
 2. Clique em **Gerenciar**.

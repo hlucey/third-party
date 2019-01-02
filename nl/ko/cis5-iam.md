@@ -55,20 +55,20 @@ http://localhost:3000/auth/callback <-- for testing locally
 {: #oauth}
 
 
-**인증 - 0단계:** `https://iam.bluemix.net/identity/.well-known/openid-configuration`을 호출하여 개발한 애플리케이션에 가까운 UI 로그인의 IAM 지역 엔드포인트를 찾으십시오.
+**인증 - 0단계:** `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`을 호출하여 배치된 애플리케이션에 가까운 UI 로그인을 위한 IAM 지역 엔드포인트를 찾으십시오.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   다음 사용자 권한 부여 중에 사용되므로 이 응답에서 리턴된 사용자의 access_token을 저장하십시오.
 
-샘플 브로커의 예제를 확인하십시오(https://github.com/IBM/sample-resource-service-brokers).
+[샘플 브로커](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")의 예제를 참조하십시오.
 
 ## 사용자 권한의 유효성 검증 시작
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 사용자를 인증하고 고유 액세스 토큰을 가지고 있으므로 사용자가 서비스 대시보드에 액세스할 수 있는지 검증해야 합니다. 먼저 2.1단계에서 디코드할 사용자 액세스 토큰에 있는 몇 가지 정보가 필요합니다. 그런 다음, 이 정보로 IAM을 호출하여 사용자가 단계 2.2의 대시보드에 액세스할 권한이 있는지 여부를 확인합니다.
 
 **2.1단계**: 사용자 액세스 토큰(이전 섹션에 있는 `**인증 - 2단계:** 액세스 토큰에 대한 코드 교환` 중에 리턴됨)을 디코드하십시오.
-   액세스 토큰은 JWT 호환 라이브러리를 사용하여 디코드할 수 있는 JWT 토큰입니다. 예를 들어, [샘플 브로커 코드](https://github.com/IBM/sample-resource-service-brokers)에 있는 라이브러리를 참조하십시오.
+   액세스 토큰은 JWT 호환 라이브러리를 사용하여 디코드할 수 있는 JWT 토큰입니다. 예를 들어, [샘플 브로커 코드](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 포함된 라이브러리를 참조하십시오.
    토큰이 디코드되면 형식은 다음 섹션에 표시된 것과 같습니다. 다음 단계에서 사용되는 `iam_id` 및 `scope` 필드를 추출합니다.
 
 ```
@@ -218,7 +220,7 @@ curl -k -X POST \
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 샘플 브로커의 예제를 확인하십시오(https://github.com/IBM/sample-resource-service-brokers).
@@ -265,7 +267,7 @@ curl -X POST \
 
 서드파티 통합의 일부로서 토큰 범위는 토큰에 사용자의 목표를 달성하는 데 필요한 최소 액세스 범위가 있는지 확인하는 데 사용됩니다. 이를 용이하게 하기 위해 IAM 토큰 액세스는 토큰을 작성한 클라이언트 ID를 기준으로 합니다. IAM 토큰이 서드파티 서비스에 의해 작성된 경우 사용자가 적절한 정책을 구성했더라도 일반 사용자가 특정 API 및 기능을 실행할 수 없습니다.
 
-권한(`https://iam.bluemix.net/v2/authz`에 대한 모든 호출)에 대한 영향은 이 주제의 `scope` 정보를 전달해야 하는지로 알 수 있습니다. 이 정보는 `scope` 항에 있는 IAM 토큰(base64 인코딩)에 포함되어 있습니다.
+권한(`https://iam.cloud.ibm.com/v2/authz`에 대한 모든 호출)에 대한 영향은 이 주제의 `scope` 정보를 전달해야 하는지로 알 수 있습니다. 이 정보는 `scope` 항에 있는 IAM 토큰(base64 인코딩)에 포함되어 있습니다.
 
 다음 섹션은 권한 부여 호출에 추가된 항목의 예입니다.
 ```
