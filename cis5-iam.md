@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Note:** This token is valid for one hour, and can be reused as many times as needed during the one hour time frame. It is highly recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
+**Note:** This token is valid for 1 hour, and can be reused as many times as needed during the 1 hour time frame. It is highly recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
 
 
 ### Authorization - Step 2: Validate authorization for the user to the service instance (/v2/authz POST)
@@ -263,7 +263,7 @@ See the example in our sample brokers: https://github.com/IBM/sample-resource-se
 ## IAM token scoping for third-party adopters
 {: #token_scoping}
 
-User access tokens that are created with your Client ID can only be used to access your service APIs. Requests to other cloud APIs that use this token results in access denied, even if the user has an appropriate policy configured.
+User access tokens that are created with your Client ID can be used only to access your service APIs. Requests to other cloud APIs that use this token results in access denied, even if the user has an appropriate policy configured.
 
 As part of third-party integration, token scoping is being used to ensure that tokens have the minimal access scope that is needed to accomplish the user's goals. To facilitate this, IAM tokens access is based on the Client ID that created the token. If an IAM token was created by a third-party service, an end user can't run certain APIs and functions, even if the user has an appropriate policy configured.
 
@@ -303,4 +303,4 @@ This is applicable to all usages (`user, serviceId, crn`) and all `subject.attri
 ## Next steps
 {: #next-steps}
 
-Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. See: [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
+Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. For more information, see [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
