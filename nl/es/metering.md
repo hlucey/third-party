@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -31,7 +31,7 @@ En la lista siguiente se describen las expectativas para el seguimiento y el env
 *	{{site.data.keyword.Bluemix_notm}} está configurado para un ciclo de facturación mensual y el tiempo está representado en UTC (Hora Universal Coordinada).
 *  Los proveedores de la oferta deben probar el envío de datos sobre uso y validar sus resultados para informar sobre cómo se calcula el ciclo de facturación mensual.
 
-Para obtener información general sobre los precios, consulte [Cómo calcular los costes](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+Para obtener información general sobre los precios, consulte [Cómo calcular los costes](/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propiedades de configuración
 {: #configure}
@@ -85,6 +85,7 @@ Fórmula: ADD(datos uso)
 | Día 2 (mañana) | 5             | 10 + 5      | 15                    |
 | Día 3 (mañana) | 5             | 15 + 5      | 20                    |
 | Día 4 (noche)   | 5             | 20 + 5      | 25                    |
+{: caption="Tabla 2. Cálculos de uso mensual" caption-side="top"}
 
 #### Promedio estándar
 {: #standard-average}
@@ -100,6 +101,7 @@ Fórmula: AVG(datos uso)
 | Día 2 (mañana) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Día 3 (mañana) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Día 4 (noche)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Tabla 3. Cálculos de uso mensual promedio" caption-side="top"}
 
 #### Máximo estándar
 {: #standard-max}
@@ -115,6 +117,7 @@ Fórmula: MAX(datos uso)
 | Día 2 (mañana) | 0              | MAX(10, 0)   | 10                    |
 | Día 3 (mañana) | 15             | MAX(10, 15)  | 15                    |
 | Día 4 (noche)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Tabla 4. Cálculos de uso mensual máximo" caption-side="top"}
 
 #### Promedio de prorrateo diario
 {: #proration-average}
@@ -135,6 +138,7 @@ En el caso de un mes de 30 días:
 | Día 2 (noche)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (Día 2 EOD)                               |
 | Día 3 a Día 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666  (Día 15 EOD)                          |
 | Día 15 a Día 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (Día 30 EOD)                          |
+{: caption="Tabla 5. Cálculos de uso promedio al día y de promedio mensual" caption-side="top"}
 
 \* Datos observados en el mismo día que cuando se enviaron los datos de uso.
 
@@ -155,6 +159,7 @@ En el caso de un mes de 30 días:
 | Día 1 (noche)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Día 2 a Día 15  | 1              | MAX(1)    | (1 + 1 + ...) / día            | 1                      |
 | Día 15 a Día 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / día | < 1                    |
+{: caption="Tabla 6. Cálculos de uso máximo al día y de promedio mensual" caption-side="top"}
 
 \* Datos observados en el mismo día que cuando se enviaron los datos de uso.
 
@@ -194,5 +199,5 @@ En la tabla siguiente se proporciona información detallada sobre los modelos de
 | Nivel simple (nivel granular)  | Modelo A P*Q en el que el precio unitario de todo el consumo se determina según el nivel al que pertenece la cantidad.           | <ul><li>Si Q es <=Q1, T=P1*Q</li><li>Si Q1 < Q <=Q2, T=P2*Q</li><li>Si Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1=1000, P1=1 $</li><li>Q2=2500, P2=0,9 $</li><li>Q3=10000, P3=0,75 $</li><li>T=0,75 $*5000=3750 $</li></ul>              |
 | Nivel graduado (nivel de paso)   | El precio por unidad varía a medida que la cantidad consumida se mueve entre diferentes niveles predefinidos. El cargo total implica sumar los cargos correspondientes a los niveles anteriores           | <ul><li>T1=P1*Q (0 < Q</li><li>Si Q1 < Q <=Q2, T=T2</li><li>Si Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=0,9 $, T2=0,9*1500</li><li>Q3=10000, P3=0,75 $, T3=0,75*2500</li><li>T=1000 +1350+1875=4225 $</li></ul>          |
 | Nivel de bloque (hasta)           | La cantidad total facturada se establece mediante una cantidad "hasta" que no varía dentro del bloque     | <ul><li>Si Q es <=Q1, T=T1</li><li>Si Q1 < Q <=Q2, T=T2</li><li>Si Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1=1000, T1=0 $</li><li>Q2=2500, T2=2500</li><li>Q3=10000, T3=4500 $</li><li>T=4500 $</li></ul>            |
-
+{: caption="Tabla 7. Modelos de precios" caption-side="top"}
 

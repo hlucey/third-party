@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Paso 3. Desarrollo y alojamiento de intermediarios de servicio
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 Utilizando los metadatos que ha exportado desde la consola de gestión de recursos, puede crear uno o varios intermediarios de servicio nuevos en el lenguaje de programación que elija.
 {:shortdesc}
 
-Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con intermediarios de servicio para suministrar y gestionar instancias de servicio (una instancia de una oferta de servicio) y enlaces de servicio (la representación de una asociación entre una aplicación y una instancia de servicio, que a menudo contiene las credenciales que utiliza la aplicación para comunicarse con la instancia de servicio). Al proporcionar valores de metadatos válidos se crea una respuesta de API RESTful correcta cuando se realice una solicitud.
+Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La plataforma {{site.data.keyword.Bluemix_notm}} interactúa con los intermediarios de servicio para suministrar y gestionar instancias de servicio y enlaces de servicio. Puede especificar valores de metadatos válidos para crear una respuesta de API RESTful correcta cuando se realice una solicitud.
 
 Puede crear el intermediario utilizando una combinación de los metadatos que ha exportado desde la consola de gestión de recursos, nuestros ejemplos de intermediarios de servicio públicos de {{site.data.keyword.Bluemix_notm}} y la documentación de la API del intermediario de recursos.
 
@@ -49,24 +50,24 @@ Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.da
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 
-**Nota:** no todos los lenguajes están representados mediante un ejemplo. Si necesita, por ejemplo, un ejemplo de intermediario Python, puede encontrar un ejemplo de Cloud Foundry buscando en Google. Es posible que tenga que ajustar este ejemplo para que se ajuste a sus requisitos de OSB.
-
+No todos los lenguajes están representados mediante un ejemplo. Si necesita, por ejemplo, un ejemplo de intermediario Python, puede encontrar un ejemplo de Cloud Foundry buscando en Google. Es posible que tenga que ajustar este ejemplo para que se ajuste a sus requisitos de OSB.
+{: note}
 
 ## Vea la documentación de nuestra API de Open Service Broker de {{site.data.keyword.Bluemix_notm}}
 {: #docs}
 
-Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento de la [API de {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
+Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento de la [API de {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Familiarícese con la API de intermediario y con la forma en que interactúa con el intermediario o los intermediarios.
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker amplía la especificación Open Service Broker 2.12.
 {: tip}
 
 ### Lógica de punto final necesaria para todos los intermediarios de servicio
 
-Los intermediarios de servicio deben proporcionar un conjunto estándar de valores de metadatos que consumen las API REST, y los intermediarios de {{site.data.keyword.Bluemix_notm}} deben contener lógica para los siguientes puntos finales/vías de acceso de la API REST:
+Los intermediarios de servicio deben proporcionar un conjunto estándar de valores de metadatos que consumen las API REST, y los intermediarios de {{site.data.keyword.Bluemix_notm}} deben tener lógica para los siguientes puntos finales/vías de acceso de la API REST:
 
 <dl>
   <dt>catálogo (GET)</dt>
-  <dd>Devuelve los metadatos de catálogo incluidos en el intermediario. Hay muchos valores de metadatos de catálogo adicionales que no se devuelven; estos valores se añaden exclusivamente en la consola de gestión de recursos y se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}.</dd>
+  <dd>Devuelve los metadatos de catálogo incluidos en el intermediario. Hay otros valores de metadatos de catálogo que no se devuelven; estos valores se añaden exclusivamente en la consola de gestión de recursos y se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>instancias de recursos (PUT)</dt>
   <dd>Suministra la instancia de servicio</dd>
   <dt>instancias de recursos (DELETE)</dt>
@@ -119,7 +120,8 @@ La especificación OSB no* da soporte a un estado de instancia inhabilitada, per
   <dd>Le permite habilitar o inhabilitar una instancia de servicio.</dd>
 </dl>
 
-**Nota **: es responsabilidad del proveedor del servicio inhabilitar el acceso a la instancia de servicio cuando se inicia una inhabilitación del punto final y volver a habilitar dicho acceso cuando se inicia una habilitación del punto final.
+Es responsabilidad del proveedor del servicio inhabilitar el acceso a la instancia de servicio cuando se inicia una inhabilitación del punto final y volver a habilitar dicho acceso cuando se inicia una habilitación del punto final.
+{: note}
 
 ## Cómo utilizar los metadatos exportados como guía en el desarrollo del intermediario
 {: #use-metadata}
@@ -206,7 +208,7 @@ La **cabecera de la versión de API** es [2.12](https://github.com/openservicebr
 ## Recomendaciones adicionales sobre el intermediario
 {: #more-info}
 
-### Recomendaciones sobre el uso de operaciones síncronas frente a asíncronas
+### Recomendaciones sobre el uso de operaciones síncronas en lugar de operaciones asíncronas
 
 La API OSB da soporte a las modalidades de operación síncronas y asíncronas. Si las operaciones van a tardar menos de 10 segundos, se recomiendan las operaciones síncronas. De lo contrario, debe utilizar la modalidad de operación asíncrona. Encontrará más información en la especificación de OSB.
 
@@ -221,7 +223,7 @@ Cuando suministra instancias de servicio en {{site.data.keyword.Bluemix_notm}}, 
 
 Si el servicio basado en API de terceros se implementa en otra nube y se expone en {{site.data.keyword.Bluemix_notm}}, la ubicación indica la ubicación del servicio en la otra nube.
 
-Al realizar la incorporación a {{site.data.keyword.Bluemix_notm}}, debe implementar al menos un intermediario OSB, pero tiene la opción de tener más de un intermediario, en función de la estrategia de despliegue y de las ubicaciones a las que desea dar soporte para el servicio. Dentro de la herramienta de la consola de gestión de recursos, se establece la correlación entre la combinación de servicio/plan/ubicación y el intermediario que da servicio a las operaciones de dicha combinación. Las opciones típicas serían definir un solo intermediario para dar servicio a todas las ubicaciones para el servicio o definir un intermediario por ubicación; la elección corresponde al proveedor del servicio.
+Al realizar la incorporación a {{site.data.keyword.Bluemix_notm}}, debe implementar al menos un intermediario OSB. Tiene la opción de tener más de un intermediario, en función de la estrategia de despliegue y de las ubicaciones a las que desea dar soporte para el servicio. Dentro de la herramienta de la consola de gestión de recursos, se establece la correlación entre la combinación de servicio/plan/ubicación y el intermediario que da servicio a las operaciones de dicha combinación. Las opciones típicas serían definir un solo intermediario para dar servicio a todas las ubicaciones para el servicio o definir un intermediario por ubicación; la elección corresponde al proveedor del servicio.
 
 Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del catálogo global de IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Si el servicio requiere que se definan más ubicaciones en el catálogo global, póngase en contacto con el equipo de incorporación de {{site.data.keyword.Bluemix_notm}}.
 
@@ -229,11 +231,11 @@ Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del
 ## Alojamiento de los intermediarios
 {: #host}
 
-El intermediario debe estar alojado como parte de una aplicación que pueda responder a las llamadas de API REST. Y su ubicación alojada debe cumplir las directrices de seguridad de {{site.data.keyword.Bluemix_notm}}. Puede alojarse en {{site.data.keyword.Bluemix_notm}} o se puede alojar externamente, siempre que sea accesible públicamente desde el propio {{site.data.keyword.Bluemix_notm}}.
+El intermediario debe estar alojado como parte de una aplicación que pueda responder a las llamadas de API REST. Y su ubicación alojada debe cumplir las directrices de seguridad de {{site.data.keyword.Bluemix_notm}}. Puede alojarse en {{site.data.keyword.Bluemix_notm}} o se puede alojar externamente, si es accesible públicamente desde el propio {{site.data.keyword.Bluemix_notm}}.
 
 Para alojar el intermediario fuera de IBM, debe asegurarse de que cumple las siguientes directrices de seguridad:
 - Debe seguir el protocolo Transport Layer Security (TLS) versión 1.2
-- Debe estar alojado en un punto final HTTPs válido que sea accesible en Internet público
+- Debe estar alojado en un punto final HTTPs válido que sea accesible en internet público
 
 Si desea alojar en {{site.data.keyword.Bluemix_notm}}, encontrará información sobre cómo crear una app utilizando Containers (Kubernetes) aquí: [Adoptadores internos - Información de uso](/docs/containers/cs_internal.html#cs_internal).
 
@@ -243,7 +245,7 @@ Necesitará la ubicación alojada del intermediario de servicio para completar e
 ## Cómo probar el intermediario del servicio
 {: #test}
 
-Debe validar el intermediario ejecutando mandatos curl sobre los distintos puntos finales que va a habilitar. El archivo readme de ejemplo ofrece una guía excelente para preparar los puntos finales OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+Debe validar el intermediario ejecutando mandatos curl sobre los distintos puntos finales que va a habilitar. El archivo readme de ejemplo contiene una excelente guía para preparar los puntos finales OSB: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 
 ### Cómo preparar el intermediario del servicio
 {: #curl-broker}

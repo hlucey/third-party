@@ -55,20 +55,20 @@ Ahora tiene un ID de cliente que entiende el URI de redirección y que está est
 {: #oauth}
 
 
-**Autenticación - Paso 0:** busque el punto final regional de IAM correspondiente al inicio de sesión en la interfaz de usuario que esté más cerca de la aplicación desplegado; para ello realice una llamada a `https://iam.bluemix.net/identity/.well-known/openid-configuration`.
+**Autenticación - Paso 0:** busque el punto final regional de IAM correspondiente al inicio de sesión en la interfaz de usuario que esté más cerca de la aplicación desplegada; para ello, realice una llamada a `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   Asegúrese de almacenar el valor de access_token del usuario devuelto en esta respuesta, ya que se utiliza a continuación durante la autorización del usuario.
 
-Consulte el ejemplo de nuestros intermediarios de ejemplo: https://github.com/IBM/sample-resource-service-brokers
+Consulte el ejemplo en nuestros [intermediarios de ejemplo](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
 ## Ahora es el momento de validar la autorización de usuario
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 Ahora que ha autenticado al usuario y que tiene su propia señal de acceso, tiene que comprobar que el usuario puede acceder al panel de control del servicio. En primer lugar, necesita algunos fragmentos de información que están incluidos en la señal de acceso del usuario, que va a decodificar en el paso 2.1. A continuación, utilice dicha información para llamar a IAM para comprobar si el usuario tiene autorización para acceder al panel de control en el paso 2.2.
 
 **Paso 2.1**: decodifique la señal de acceso del usuario (devuelta durante ` ** Autenticación - Paso 2: ** intercambiar el código para una señal de acceso` que se encuentra en la sección anterior).
-   La señal de acceso es una señal JWT que se puede decodificar utilizando cualquier biblioteca compatible con JWT. Por ejemplo, consulte la biblioteca que se incluye en nuestro [código de intermediario de ejemplo](https://github.com/IBM/sample-resource-service-brokers).
+   La señal de acceso es una señal JWT que se puede decodificar utilizando cualquier biblioteca compatible con JWT. Por ejemplo, consulte la biblioteca incluida en nuestro [código de intermediario de ejemplo](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
    Una vez decodificada la señal, el formato se muestra en la sección siguiente; se extraen los campos `iam_id` y `scope`, que se utilizan en el paso siguiente:
 
 ```
@@ -218,7 +220,7 @@ Ahora que ha autenticado al usuario y que tiene su propia señal de acceso, tien
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 Consulte el ejemplo de nuestros intermediarios de ejemplo: https://github.com/IBM/sample-resource-service-brokers
@@ -265,7 +267,7 @@ Las señales de acceso de usuario que se crean con el ID de cliente solo se pued
 
 Como parte de la integración de terceros, se utiliza una definición de ámbito de señales para garantizar que las señales tienen el ámbito de acceso mínimo que se necesita para cumplir los objetivos del usuario. Para facilitar esta tarea, el acceso a las señales de IAM se basa en el ID de cliente que ha creado la señal. Si un servicio de terceros ha creado una señal de IAM, un usuario final no puede ejecutar determinadas API y funciones, aunque el usuario tenga configurada una política adecuada.
 
-El impacto sobre las autorizaciones (todas las llamadas a `https://iam.bluemix.net/v2/authz`) es la necesidad de pasar información de la variable `scope` en el asunto. Esta información está contenida dentro de una señal de IAM (codificada en base64) en la variable `scope`.
+El impacto sobre las autorizaciones (todas las llamadas a `https://iam.cloud.ibm.com/v2/authz`) es la necesidad de pasar información de la variable `scope` en el asunto. Esta información está contenida dentro de una señal de IAM (codificada en base64) en la variable `scope`.
 
 La sección siguiente es un ejemplo de lo que se añade en la llamada de autorización:
 ```

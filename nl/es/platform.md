@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Cómo utilizan la plataforma {{site.data.keyword.Bluemix_notm}} los servicios de facturación integrados
@@ -86,17 +88,18 @@ Si un servicio ofrece un plan de medición, se factura a los usuarios de {{site.
 
 Todos los servicios de facturación integrados que ofrecen un plan de medición utilizan el servicio de medición de {{site.data.keyword.Bluemix_notm}} para notificar los datos sobre uso.
 
-**Nota:** debe automatizar el envío de datos de uso por hora mediante la API del servicio de medición si ofrece un plan de medición.
+Es necesario automatizar el envío de uso por hora utilizando la API de servicio de medición si ofrece un plan de medición.
+{: important}
 
 Para obtener más información sobre la medición, consulte: [Integración de mediciones](/docs/third-party/metering.html#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos sobre uso para planes de medición](/docs/third-party/submitusage.html#submitusage)
 
 ## Caso de ejemplo de suministro: combinación de todos los elementos
 
-Ahora vamos a combinar todos los conceptos que se han descrito anteriormente y examinaremos un ejemplo de cómo funciona la creación de una instancia de servicio con la plataforma {{site.data.keyword.Bluemix_notm}}.
+Ahora vamos a combinar todos los conceptos y examinaremos un ejemplo de cómo funciona la creación de una instancia de servicio con la plataforma {{site.data.keyword.Bluemix_notm}}.
 
 ![Caso de ejemplo de suministro](images/flow-am.svg "Cómo gestiona la plataforma la creación de instancias de un servicio")
 
-Cuando un usuario desea crear una instancia de servicio, puede iniciarla de una de las dos maneras siguientes:
+Cuando un usuario desea crear una instancia de servicio, puede crearla de una de las dos maneras siguientes:
 * **CLI**: con `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Consola de {{site.data.keyword.Bluemix_notm}}**: el usuario puede seleccionar el servicio y el plan y utilizar la operación **Crear**.
 
@@ -155,5 +158,6 @@ En el ejemplo anterior, puede ver los metadatos que se devuelven en el parámetr
 
 * **resource_group_crn**: Devuelve el grupo de recursos que contiene la instancia de servicio. Para obtener más información, consulte [Gestión de grupos de recursos](/docs/resources/resourcegroups.html).
 
-   **Nota**: Los proveedores de ofertas no se preocupan por `resource_group_crn`, excepto en casos muy específicos. Consulte a su representante de IBM antes de utilizar este campo.
+   Los proveedores de ofertas no se preocupan por `resource_group_crn`, excepto en casos muy específicos. Consulte a su representante de IBM antes de utilizar este campo.
+   {: note}
 

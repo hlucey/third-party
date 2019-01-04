@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -131,7 +131,7 @@ Estas son las prácticas recomendadas para enviar el uso:
 
 Se factura a los usuarios de {{site.data.keyword.Bluemix_notm}} en función de la cantidad de recursos que utilicen. Por ejemplo, se puede facturar a los usuarios que utilizan servicios de base de datos en función de la cantidad de almacenamiento que utilizan sus aplicaciones.
 
-Para utilizar el servicio de medición de {{site.data.keyword.Bluemix_notm}} para informar sobre los datos de uso, implemente la API del servicio de medición para informar sobre los datos de uso de la oferta. Consulte la [documentación de la API pública](https://ibm-bluemix-docs.github.io/usage-submission/) para ver más detalles.  
+Para utilizar el servicio de medición de {{site.data.keyword.Bluemix_notm}} para informar sobre los datos de uso, implemente la API del servicio de medición para informar sobre los datos de uso de la oferta. Consulte la [documentación de API pública](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") para obtener más información.  
 
 Debe automatizar el envío de uso por hora utilizando la API del servicio de medición. Puede alojar su envío automatizado en cualquier punto final de HTTPs válido que sea accesible en Internet público.
 {: tip}

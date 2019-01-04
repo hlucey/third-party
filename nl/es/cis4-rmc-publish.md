@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -25,7 +25,7 @@ Ahora que tiene el intermediario o intermediarios alojados que cumplen la especi
 ## Antes de empezar
 {: #pre-reqs}
 
-En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si aún no ha completado el proceso de registro y aprobación inicial en Provider Workbench, consulte la [Guía de aprendizaje de iniciación](/docs/third-party/index.md).
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el registro y aprobación iniciales en el entorno de trabajo de Provider, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.md).
 {: tip}
 
 Asegúrese de que ha iniciado el paso 1 y completado los pasos 2, 3 y 4:
@@ -57,7 +57,7 @@ La página Despliegues debería estar marcada como completada en el área de nav
 
 Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede ver la oferta en el catálogo de {{site.data.keyword.Bluemix_notm}}. Con la lista de comprobación de la siguiente sección, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y siga los pasos de los criterios de prueba.
 
-1. Inicie una sesión en {{site.data.keyword.Bluemix_notm}}: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con su IBMid.
+1. Inicie una sesión en [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo") con su IBMid.
 2. Asegúrese de que está en la cuenta correcta (la misma cuenta que ha utilizado para crear el servicio)
 3. Pulse el enlace **Catálogo** en la cabecera y busque la oferta.
 4. A continuación, utilice la lista de comprobación de la sección siguiente para validar el servicio.
