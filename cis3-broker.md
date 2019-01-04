@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,20 +63,20 @@ The {{site.data.keyword.Bluemix_notm}} Open Service Broker extends the Open Serv
 
 ### Required endpoint logic for all service brokers
 
-Service brokers must provide a standard set of metadata values that are consumed by REST APIs, and {{site.data.keyword.Bluemix_notm}} brokers must have logic for the following REST API endpoints/paths:
+Service brokers must provide a standard set of metadata values that are consumed by REST APIs, and {{site.data.keyword.Bluemix_notm}} brokers must have logic for the following REST API endpoints or paths:
 
 <dl>
   <dt>catalog (GET)</dt>
   <dd>Returns your catalog metadata included in your broker. Many extra catalog metadata values aren't returned - these values are added exclusively within resource management console and stored within the {{site.data.keyword.Bluemix_notm}} Catalog.</dd>
   <dt>resource instances (PUT)</dt>
-  <dd>Provisions your service instance</dd>
+  <dd>Provisions your service instance.</dd>
   <dt>resource instances (DELETE)</dt>
   <dd>Deprovisions your service instance.</dd>
   <dt>resource instances (PATCH)</dt>
   <dd>Updates your service instance.</dd>
 </dl>
 
-**Note on catalog (GET)**: This endpoint defines the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. This endpoint returns the catalog metadata stored within your broker. These values define the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. All additional catalog metadata that isn't required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata must be updated in the resource management console, and not housed in your broker. None of metadata stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog. The following section shows the minimal required values that catalog (GET) will return:
+**Note on catalog (GET)**: This endpoint defines the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. This endpoint returns the catalog metadata stored within your broker. These values define the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. All additional catalog metadata that isn't required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata must be updated in the resource management console, and not housed in your broker. None of metadata stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog. The following section shows the minimal required values that catalog (GET) returns:
 
 ```
 {
@@ -100,7 +100,7 @@ Service brokers must provide a standard set of metadata values that are consumed
 
 ### Required endpoints logic for bindable services
 
-If your service can be bound to applications in {{site.data.keyword.Bluemix_notm}}, it must be return API endpoints and credentials to your service consumers. A bindable service must use the bindable operations in the Open Service Broker specification, and implement the following endpoints/paths:
+If your service can be bound to applications in {{site.data.keyword.Bluemix_notm}}, it must be return API endpoints and credentials to your service consumers. A bindable service must use the bindable operations in the Open Service Broker specification, and implement the following endpoints or paths:
 
 <dl>
   <dt>bindings and credentials (PUT)</dt>
@@ -111,7 +111,7 @@ If your service can be bound to applications in {{site.data.keyword.Bluemix_notm
 
 ### Required {{site.data.keyword.Bluemix_notm}} extension endpoints
 
-The OSB specification doesn't* support a disabled instance state, but not yet deleted instance state. In order for {{site.data.keyword.Bluemix_notm}} to support customers that might experience a billing lapse or other situations that result in an account suspension (but not yet cancellation), {{site.data.keyword.Bluemix_notm}} defined the extended API endpoints that allow service instances to be disabled and re-enabled. The following endpoint extensions are **required**:
+The OSB specification doesn't* support a disabled instance state, but not yet deleted instance state. In order for {{site.data.keyword.Bluemix_notm}} to support customers that might experience a billing lapse or other situations that result in an account suspension (but not yet cancellation), {{site.data.keyword.Bluemix_notm}} defined the extended API endpoints that allow service instances to be disabled and reenabled. The following endpoint extensions are **required**:
 
 <dl>
   <dt>enable and disable instances (GET)</dt>
@@ -120,7 +120,7 @@ The OSB specification doesn't* support a disabled instance state, but not yet de
   <dd>Allows you to enable or disable a service instance.</dd>
 </dl>
 
-It's the service provider's responsibility to disable access to the service instance when the disable endpoint starts and to re-enable that access when the enable endpoint is started.
+It's the service provider's responsibility to disable access to the service instance when the disable endpoint starts and to reenable that access when the enable endpoint is started.
 {: note}
 
 ## Learn how to use the exported metadata to guide your broker development
@@ -225,7 +225,7 @@ If your third-party API-based service is implemented in another cloud and expose
 
 When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
 
-For a list of available locations, consult the [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires additional locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
+For a list of available locations, consult the [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 
 
 ## Host your brokers
