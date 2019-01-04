@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-29"
 You can deliver your third-party offering as an integrated billing service or a referral service in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-Delivering your third-party offering as an integrated billing service means users can select from different IBM pricing plans that are listed on your catalog details page in the {{site.data.keyword.Bluemix_notm}} console. Additionally, users can automatically create an instance of your third-party offering.
+Delivering your third-party offering as an integrated billing service means that users can select from different IBM pricing plans that are listed on your catalog details page in the {{site.data.keyword.Bluemix_notm}} console. Additionally, users can automatically create an instance of your third-party offering.
 
 When you deliver your third-party offering as a referral service, users are directed to your website from the catalog details page in the {{site.data.keyword.Bluemix_notm}} console. From your website, users create accounts and get the appropriate credentials. These credentials are needed to programmatically connect your third-party offering to an app they're building on {{site.data.keyword.Bluemix_notm}}.
 
