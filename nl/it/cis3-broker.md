@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Passo 3. Sviluppa e ospita i tuoi broker dei servizi
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 Utilizzando i metadati che hai esportato dalla console di gestione delle risorse, puoi creare uno o più nuovi broker dei servizi nel linguaggio di programmazione che preferisci.
 {:shortdesc}
 
-I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker dei servizi per il provisioning e la gestione delle istanze del servizio (un'istanziazione di un'offerta di servizi) e dei bind del servizio (la rappresentazione di un'associazione tra un'applicazione e un'istanza del servizio, che spesso contengono le credenziali che l'applicazione utilizza per comunicare con l'istanza del servizio). Fornire valori di metadati validi consente di creare una risposta API RESTful con esito positivo quando viene effettuata una richiesta.
+I broker dei servizi gestiscono il ciclo di vita dei servizi. La piattaforma {{site.data.keyword.Bluemix_notm}} interagisce con i broker di servizio per eseguire il provisioning e la gestione delle istanze del servizio e delle associazioni mediante bind del servizio. Puoi fornire dei valori di metadati validi per creare una risposta API RESTful con esito positivo quando viene effettuata una richiesta.
 
 Puoi creare il tuo broker utilizzando una combinazione dei metadati che hai esportato dalla console di gestione delle risorse, i nostri esempi di broker dei servizi {{site.data.keyword.Bluemix_notm}} pubblici e la documentazione dell'API Resource Broker.
 
@@ -49,24 +50,24 @@ Stai sviluppando un OSB (Open Service Broker) che funziona con la piattaforma {{
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
 
-**Nota:** in un esempio non vengono rappresentati tutti i linguaggi. Se hai bisogno di un broker Python di esempio, puoi trovare un esempio di Cloud Foundry cercando su Google. Potresti dover adattare questo esempio per soddisfare i requisiti OSB.
-
+Non tutti i linguaggi sono rappresentati da un esempio. Se hai bisogno di un broker Python di esempio, puoi trovare un esempio di Cloud Foundry cercando su Google. Potresti dover adattare questo esempio per soddisfare i requisiti OSB.
+{: note}
 
 ## Visualizza la nostra documentazione API {{site.data.keyword.Bluemix_notm}} Open Service Broker
 {: #docs}
 
-I broker dei servizi possono essere sviluppati avendo già una conoscenza dell'[API {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Acquisisci familiarità con l'API Broker e scopri in che modo interagisce con i tuoi broker.
+I broker dei servizi possono essere sviluppati avendo già una conoscenza dell'[API {{site.data.keyword.Bluemix_notm}} Open Service Broker](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Acquisisci familiarità con l'API Broker e scopri in che modo interagisce con i tuoi broker.
 
 L'{{site.data.keyword.Bluemix_notm}} Open Service Broker estende la specifica di Open Service Broker 2.12.
 {: tip}
 
 ### Logica dell'endpoint richiesta per tutti i broker dei servizi
 
-I broker dei servizi devono fornire un insieme standard di valori di metadati che vengono utilizzati dalle API REST e i broker {{site.data.keyword.Bluemix_notm}} devono contenere la logica per i seguenti endpoint/percorsi dell'API REST:
+I broker dei servizi devono fornire un insieme standard di valori di metadati che vengono utilizzati dalle API REST e i broker {{site.data.keyword.Bluemix_notm}} devono avere la logica per i seguenti endpoint/percorsi dell'API REST:
 
 <dl>
   <dt>catalog (GET)</dt>
-  <dd>Restituisce i metadati del catalogo inclusi nel tuo broker. Molti altri valori di metadati del catalogo non vengono restituiti: questi valori vengono aggiunti esclusivamente all'interno della console di gestione delle risorse e memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}.</dd>
+  <dd>Restituisce i metadati del catalogo inclusi nel tuo broker. Molti valori di metadati del catalogo supplementari non vengono restituiti - questi valori vengono aggiunti esclusivamente all'interno della console di gestione delle risorse e memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>resource instances (PUT)</dt>
   <dd>Esegue il provisioning della tua istanza del servizio.</dd>
   <dt>resource instances (DELETE)</dt>
@@ -111,7 +112,7 @@ Se il tuo servizio può essere associato alle applicazioni in {{site.data.keywor
 
 ### Endpoint di estensione {{site.data.keyword.Bluemix_notm}} richiesti
 
-La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora eliminata. Affinché {{site.data.keyword.Bluemix_notm}} possa supportare i clienti che potrebbero subire una interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora la cancellazione), {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
+La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora eliminata. Affinché {{site.data.keyword.Bluemix_notm}} possa supportare i clienti che potrebbero subire una interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora l'annullamento, {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
 
 <dl>
   <dt>enable and disable instances (GET)</dt>
@@ -120,7 +121,8 @@ La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora e
   <dd>Ti consente di abilitare o disabilitare un'istanza del servizio.</dd>
 </dl>
 
-**Nota**: è responsabilità del provider di servizi disabilitare l'accesso all'istanza del servizio quando viene avviato l'endpoint di disabilitazione e riabilitare tale accesso quando viene avviato l'endpoint di abilitazione.
+È responsabilità del provider di servizi disabilitare l'accesso all'istanza del servizio quando viene avviato l'endpoint di disabilitazione e riabilitare tale accesso quando viene avviato l'endpoint di abilitazione.
+{: note}
 
 ## Scopri come utilizzare i metadati esportati per guidare lo sviluppo del tuo broker
 {: #use-metadata}
@@ -207,11 +209,11 @@ L'**intestazione della versione API** è [2.12](https://github.com/openservicebr
 ## Ulteriori suggerimenti sul broker
 {: #more-info}
 
-### Suggerimenti sull'utilizzo delle operazioni asincrone e sincrone
+### Suggerimenti sull'utilizzo delle operazioni asincrone invece di quelle sincrone
 
 L'API OSB supporta entrambe le modalità di operazione sincrone e asincrone. Se le tue operazioni richiedono meno di 10 secondi, sono consigliate le risposte sincrone. In caso contrario, devi utilizzare la modalità di operazione asincrona. Ulteriori informazioni sono disponibili nella specifica OSB.
 
-Se l'operazione asincrona impiega meno di 10 secondi quando stati eseguendo il provisioning di un'istanza, la piattaforma andrà in timeout.
+Se l'operazione asincrona impiega meno di 10 secondi quando stai eseguendo il provisioning di un'istanza, la piattaforma andrà in timeout.
 {: tip}
 
 ### Suggerimenti per la gestione dei broker nelle diverse ubicazioni
@@ -222,7 +224,7 @@ Quando si esegue il provisioning delle istanze del servizio su {{site.data.keywo
 
 Se il tuo servizio basato su API di terze parti è implementato in un altro cloud ed esposto in {{site.data.keyword.Bluemix_notm}}, l'ubicazione indica l'ubicazione del servizio nell'altro cloud.
 
-Durante l'onboarding in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB, ma hai la possibilità di avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio.  All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestisce le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
+Durante l'onboarding in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB. Puoi avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio. All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestisce le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
 
 Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede ulteriori ubicazioni da definire nel catalogo globale, consulta il team di incorporamento {{site.data.keyword.Bluemix_notm}}.
 
@@ -230,11 +232,11 @@ Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](htt
 ## Ospita i tuoi broker
 {: #host}
 
-Il tuo broker deve essere ospitato come parte di un'applicazione in grado di rispondere alle chiamate API REST. Inoltre, la tua ubicazione ospitata deve soddisfare le linee guida di sicurezza di {{site.data.keyword.Bluemix_notm}}. Può essere ospitato in {{site.data.keyword.Bluemix_notm}} oppure esternamente, purché sia pubblicamente accessibile da {{site.data.keyword.Bluemix_notm}} stesso.
+Il tuo broker deve essere ospitato come parte di un'applicazione in grado di rispondere alle chiamate API REST. Inoltre, la tua ubicazione ospitata deve soddisfare le linee guida di sicurezza di {{site.data.keyword.Bluemix_notm}}. Può essere ospitato in {{site.data.keyword.Bluemix_notm}} oppure esternamente, se è pubblicamente accessibile da {{site.data.keyword.Bluemix_notm}} stesso.
 
 Per ospitare il tuo broker al di fuori di IBM, devi assicurarti che soddisfi le seguenti linee guida di sicurezza:
 - Deve seguire il protocollo TLS (Transport Layer Security) versione 1.2
-- Deve essere ospitato su un endpoint HTTPs valido accessibile sull'Internet pubblico
+- Deve essere ospitato su un endpoint HTTPs valido accessibile sull'internet pubblico
 
 Se vuoi ospitarlo in {{site.data.keyword.Bluemix_notm}}, puoi trovare informazioni sulla creazione di un'applicazione utilizzando i contenitori (Kubernetes) al seguente link: [Internal Adopters - Usage information](/docs/containers/cs_internal.html#cs_internal).
 
@@ -244,7 +246,7 @@ Avrai bisogno dell'ubicazione ospitata del tuo broker dei servizi per completare
 ## Come verificare il tuo broker dei servizi
 {: #test}
 
-Devi convalidare il tuo broker eseguendo i comandi curl sui diversi endpoint che stai abilitando. Il file readme di esempio fornisce delle indicazioni eccellenti per il curl dei tuoi endpoint OSB: https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+Devi convalidare il tuo broker eseguendo i comandi curl sui diversi endpoint che stai abilitando. Il file readme di esempio fornisce delle indicazioni eccellenti per il curl dei tuoi endpoint OSB: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
 
 ### Come eseguire il curl del tuo broker dei servizi
 {: #curl-broker}

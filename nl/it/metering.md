@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -31,7 +31,7 @@ Il seguente elenco descrive le aspettative per la traccia e l'inoltro dell'utili
 *	{{site.data.keyword.Bluemix_notm}} è configurato per un ciclo di fatturazione mensile e l'ora è rappresentata in Coordinated Universal Time (UTC).
 *  I provider di offerte devono verificare l'inoltro dell'utilizzo e convalidare i loro risultati per informare della modalità di calcolo del ciclo di fatturazione mensile.
 
-Per informazioni generali sui prezzi, consulta [Come calcolare i tuoi costi](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+Per informazioni generali sui prezzi, consulta [Come calcolare i tuoi costi](/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Proprietà di configurazione
 {: #configure}
@@ -85,6 +85,7 @@ Formula: ADD(utilizzi)
 | Giorno 2 (mattina) | 5             | 10 + 5      | 15                    |
 | Giorno 3 (mattina) | 5             | 15 + 5      | 20                    |
 | Giorno 4 (notte)   | 5             | 20 + 5      | 25                    |
+{: caption="Tabella 2. Calcoli dell'utilizzo mensile" caption-side="top"}
 
 #### Media standard
 {: #standard-average}
@@ -100,6 +101,7 @@ Formula: AVG(utilizzi)
 | Giorno 2 (mattina) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Giorno 3 (mattina) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Giorno 4 (notte)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Tabella 3. Calcoli dell'utilizzo mensile medio" caption-side="top"}
 
 #### Massimo standard
 {: #standard-max}
@@ -115,6 +117,7 @@ Formula: MAX(utilizzi)
 | Giorno 2 (mattina) | 0              | MAX(10, 0)   | 10                    |
 | Giorno 3 (mattina) | 15             | MAX(10, 15)  | 15                    |
 | Giorno 4 (notte)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Tabella 4. Calcoli dell'utilizzo mensile massimo" caption-side="top"}
 
 #### Media proporzionale giornaliera
 {: #proration-average}
@@ -135,6 +138,7 @@ Dato un mese di 30 giorni:
 | Giorno 2 (notte)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (il giorno 2 fine giornata)                               |
 | Dal giorno 3 al giorno 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666  (il giorno 15 fine giornata)                          |
 | Dal giorno 15 al giorno 30   | 0                | 0 / 1         | (5.5 + 3.5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (il giorno 30 fine giornata)                          |
+{: caption="Tabella 5. Utilizzo medio giornaliero e calcoli medi mensili" caption-side="top"}
 
 \* Come visto nello stesso giorno di quando è stato inoltrato l'utilizzo.
 
@@ -155,6 +159,7 @@ Dato un mese di 30 giorni:
 | Giorno 1 (notte)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Dal giorno 2 al giorno 15  | 1              | MAX(1)    | (1 + 1 + ...) / giorno            | 1                      |
 | Dal giorno 15 al giorno 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / giorno | < 1                    |
+{: caption="Tabella 6. Utilizzo massimo giornaliero e calcoli medi mensili" caption-side="top"}
 
 \* Come visto nello stesso giorno di quando è stato inoltrato l'utilizzo.
 
@@ -194,5 +199,5 @@ La seguente tabella fornisce informazioni dettagliate sui modelli di determinazi
 | Simple tier (granular tier)  | Un modello P*Q in cui il prezzo unitario per tutto il consumo è determinato dal livello in cui rientra la quantità.           | <ul><li>If Q is <=Q1, T=P1*Q</li><li>If Q1 < Q <=Q2, T=P2*Q</li><li>If Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1=1000, P1=$1</li><li>Q2=2500, P2=$0.9</li><li>Q3=10000, P3=$0.75</li><li>T=$0.75*5000=$3750</li></ul>              |
 | Graduated tier (step tier)   | Il prezzo per unità varia man mano che la quantità consumata si sposta in livelli predefiniti differenti. L'addebito totale comporta l'accumulo degli addebiti dai livelli precedenti           | <ul><li>T1=P1*Q (0 < Q</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=$0.9, T2=0.9*1500</li><li>Q3=10000, P3=$0.75, T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
 | Block tier (up to)           | L'importo totale addebitato è stabilito da una quantità "fino a" che non varia nel blocco     | <ul><li>If Q is <=Q1, T=T1</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1=1000, T1=$0</li><li>Q2=2500, T2=2500</li><li>Q3=10000, T3=$4500</li><li>T=$4500</li></ul>            |
-
+{: caption="Tabella 7. Modelli di prezzo" caption-side="top"}
 

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -19,7 +19,7 @@ lastupdated: "2018-09-05"
 # Passo 1. Crea la tua documentazione e il comunicato di marketing
 {: #content-tasks}
 
-Puoi utilizzare IBM Provider Workbench per creare la tua documentazione introduttiva e il comunicato di marketing.
+Puoi utilizzare il workbench IBM Provider per creare la tua documentazione introduttiva e il comunicato di marketing.
 {:shortdesc}
 
 ## Prima di iniziare
@@ -32,8 +32,8 @@ Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/i
 
 Per distribuire un servizio di fatturazione integrato, devi fornire una documentazione introduttiva che descrive come gli utenti iniziano ad utilizzare il tuo servizio nel contesto di {{site.data.keyword.Bluemix_notm}}. Puoi lavorare su questa attività in parallelo mentre sviluppi il tuo servizio.
 
-1. Accedi a [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
-2. Dal dashboard di Provider Workbench, fai clic su **Tasks** nel tuo tile dell'offerta.
+1. Accedi al [workbench Provider](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+2. Dal dashboard del workbench Provider, fai clic su **Tasks** nel tuo tile dell'offerta.
 3. Filtra per un elenco di attività IBM Cloud e fai clic su **Start** nel tile dell'attività Guidance.
 4. Segui il flusso di lavoro dell'attività Guidance per pubblicare la tua documentazione introduttiva nell'applicazione del documento {{site.data.keyword.Bluemix_notm}}.
 
@@ -44,8 +44,8 @@ I tuoi metadati del catalogo devono essere collegati al tuo URL della documentaz
 
 Oltre alla tua documentazione introduttiva, devi creare anche il contenuto di marketing per annunciare la disponibilità del tuo servizio tramite la newsletter di {{site.data.keyword.Bluemix_notm}} e i canali di social media. Puoi lavorare su questa attività in parallelo mentre sviluppi il tuo servizio.
 
-1. Accedi a [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
-2. Dal dashboard di Provider Workbench, fai clic su **Tasks** nel tuo tile dell'offerta.
+1. Accedi al [workbench Provider](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+2. Dal dashboard del workbench Provider, fai clic su **Tasks** nel tuo tile dell'offerta.
 3. Filtra per un elenco di attività IBM Cloud e fai clic su **Start** nel tile dell'attività Marketing.
 4. Segui il flusso di lavoro dell'attività Marketing per creare e inviare il tuo comunicato del servizio.
 

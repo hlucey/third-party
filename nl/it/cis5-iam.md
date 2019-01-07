@@ -27,7 +27,7 @@ Quando definisci la tua offerta, la pagina Access Manage della console di gestio
 
 Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
-## Ricava l'URI di reindirizzamento IAM
+## Ricava l'URI di reindirizzamento IAM 
 {: #redirect-uri}
 
 Quando definisci il tuo servizio nella console di gestione delle risorse, generi un ID client, ma è probabile che in quel momento non disponevi di un URI di reindirizzamento. Un ID client che è impostato su false viene creato da IAM. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
@@ -38,7 +38,7 @@ La buona notizia è che nel passo di sviluppo precedente hai sviluppato un OSB e
 
 ```
 https://myapp.bluemix.net/integrate/auth/callback
-http://localhost:3000/auth/callback <-- per l'esecuzione di test in locale
+http://localhost:3000/auth/callback <-- for testing locally
 ```
 
 Ritorna alla console di gestione delle risorse e aggiungi il tuo URI di reindirizzamento alla scheda IAM.
@@ -55,20 +55,20 @@ Hai ora un ID client che capisce il tuo URI di reindirizzamento ed è impostato 
 {: #oauth}
 
 
-**Autenticazione - Passo 0:** trova l'endpoint regionale IAM per l'accesso all'IU più vicina alla tua applicazione distribuita richiamando `https://iam.bluemix.net/identity/.well-known/openid-configuration`.
+**Autenticazione - Passo 0:** trova l'endpoint regionale IAM per l'accesso all'IU più vicina alla tua applicazione distribuita richiamando `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   Assicurati di archiviare l'access_token dell'utente restituito in questa risposta poiché viene utilizzato successivamente durante l'autorizzazione dell'utente.
 
-Vedi l'esempio nei nostri broker di esempio: https://github.com/IBM/sample-resource-service-brokers
+Vedi l'esempio nei nostri [broker di esempio](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
 ## Ora è il momento di convalidare l'autorizzazione utente
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 Ora che hai autenticato l'utente e disponi del tuo token di accesso, devi convalidare che l'utente sia in grado di accedere al dashboard del servizio. Innanzitutto, ti servono alcune informazioni incluse nel token di accesso dell'utente che decodifichi nel passo 2.1. Quindi, utilizza tali informazioni per richiamare IAM per verificare se l'utente è autorizzato ad accedere al dashboard nel passo 2.2.
 
 **Passo 2.1**: decodifica il token di accesso dell'utente (restituito durante `**Autenticazione - Passo 2:** Scambia il codice per un token di accesso ` che si trovano nella precedente sezione).
-   Il token di accesso è un token JWT che può essere decodificato utilizzando una qualsiasi libreria conforme a JWT. Ad esempio, vedi la libreria inclusa nel nostro [codice broker di esempio](https://github.com/IBM/sample-resource-service-brokers).
+   Il token di accesso è un token JWT che può essere decodificato utilizzando una qualsiasi libreria conforme a JWT. Ad esempio, vedi la libreria inclusa nel nostro [codice broker di esempio](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
    Dopo che il token è stato decodificato, il formato è quello mostrato nella seguente sezione; estrai i campi `iam_id` e `scope`, che vengono utilizzati nel passo successivo:
 
 ```
@@ -218,7 +220,7 @@ Ora che hai autenticato l'utente e disponi del tuo token di accesso, devi conval
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -250,10 +252,10 @@ curl -X POST \
       { \
         "crn" : "<CRN dell'istanza della risorsa>" \
       }, \
-      action : <il tuo nome servizio> + ".dashboard.view" \
+      action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 Vedi l'esempio nei nostri broker di esempio: https://github.com/IBM/sample-resource-service-brokers
@@ -265,14 +267,14 @@ I token di accesso utente creati con il tuo ID client possono essere utilizzati 
 
 Come parte dell'integrazione di terze parti, la definizione dell'ambito del token viene utilizzata per garantire che i token dispongano dell'ambito di accesso minimo necessario per raggiungere gli obiettivi dell'utente. Per facilitare ciò, i token IAM hanno un accesso basato sull'ID client che ha creato il token. Se un token IAM è stato creato da un servizio di terze parti, un utente finale non può eseguire alcune API e funzioni, anche se dispone di una politica appropriata configurata.
 
-L'impatto sulle autorizzazioni (tutte le chiamate a `https://iam.bluemix.net/v2/authz`) è la necessità di trasmettere le informazioni sull'ambito (`scope`) nell'oggetto. Queste informazioni sono contenute all'interno di un token IAM (con codifica base64) nell'attestazione `scope`.
+L'impatto sulle autorizzazioni (tutte le chiamate a `https://iam.cloud.ibm.com/v2/authz`) è la necessità di trasmettere le informazioni sull'ambito (`scope`) nell'oggetto. Queste informazioni sono contenute all'interno di un token IAM (con codifica base64) nell'attestazione `scope`.
 
 La seguente sezione è un esempio di cosa viene aggiunto nella chiamata di autorizzazione:
 ```
   [
-   {  Intestazioni
-   `Authorization` -> un token jwt che rappresenta un servizio di terze parti e/o un dashboard
-   `Transaction-ID` -> "un guid univoco ci consente di agevolare la traccia della richiesta end-to-end"
+   {  Headers
+   `Authorization` -> a jwt token representing a 3rd party service and/or dashboard
+   `Transaction-ID` -> "a unique guid lets us help trace the request end to end"
    `Accept` -> `application/vnd.authz.v2+json`
    `Content-Type` -> `application/json`
 

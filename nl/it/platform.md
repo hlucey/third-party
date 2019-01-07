@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # In che modo i servizi di fatturazione integrati utilizzano la piattaforma {{site.data.keyword.Bluemix_notm}}
@@ -24,7 +26,7 @@ I servizi di fatturazione integrati sono diversi dai servizi di riferimento. Un 
 ## Livello di provisioning {{site.data.keyword.Bluemix_notm}}
 {: #provisioning-layer}
 
-Il livello di provisioning gestisce il ciclo di vita delle risorse {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning è responsabile del controllo e della traccia del ciclo di vita delle risorse in un account del cliente. Le *risorse* sono componenti fisici o logici di cui è possibile eseguire il provisioning, o che possono essere riservati, per un'istanza dell'applicazione o del servizio. Esempi di risorse includono database, account, processore, memoria e limiti di archiviazione. In generale, è previsto che alle risorse tracciate dal livello di provisioning siano associate delle metriche di utilizzo e una fatturazione, ma non è sempre così. In alcuni casi, la risorsa può essere associata al livello di provisioning per garantire che il ciclo di vita della risorsa possa essere gestito insieme al ciclo di vita dell'account.
+Il livello di provisioning gestisce il ciclo di vita delle risorse {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning è responsabile del controllo e della traccia del ciclo di vita delle risorse in un account del cliente. Le *risorse* sono componenti fisici o logici di cui è possibile eseguire il provisioning, o che possono essere riservati, per un'istanza dell'applicazione o del servizio. Esempi di risorse includono database, account, processore, memoria e limiti di archiviazione. In generale, è previsto che alle risorse tracciate dal livello di provisioning siano associate delle metriche di utilizzo e una fatturazione ma non è sempre così. In alcuni casi, la risorsa può essere associata al livello di provisioning per garantire che il ciclo di vita della risorsa possa essere gestito insieme al ciclo di vita dell'account.
 
 ### Gestione del ciclo di vita della risorsa
 {: #lifecycle}
@@ -86,17 +88,18 @@ Se un servizio offre un piano a consumo, l'addebito a carico degli utenti {{site
 
 Tutti i servizi di fatturazione integrati che offrono un piano a consumo devono utilizzare il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per notificare i dati di utilizzo.
 
-**Nota:** devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione, se offri un piano a consumo.
+Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione, se offri un piano a consumo.
+{: important}
 
 Per ulteriori informazioni sulla misurazione, vedi: [Integrazione della misurazione](/docs/third-party/metering.html#meteringintera). Per ulteriori informazioni sull'inoltro dell'utilizzo a consumo, vedi [Inoltro dell'utilizzo per i piani a consumo](/docs/third-party/submitusage.html#submitusage)
 
 ## Scenario di provisioning: assemblaggio di tutti i concetti
 
-Mettiamo ora insieme tutti i concetti descritti precedentemente e guardiamo un esempio di come funziona la creazione di un'istanza del servizio utilizzando la piattaforma {{site.data.keyword.Bluemix_notm}}.
+Mettiamo ora insieme tutti i concetti e guardiamo un esempio di come funziona la creazione di un'istanza del servizio utilizzando la piattaforma {{site.data.keyword.Bluemix_notm}}.
 
 ![Scenario di provisioning](images/flow-am.svg "Modo in cui la piattaforma gestisce la creazione dell'istanza del servizio")
 
-Quando un utente desidera creare un'istanza del servizio, può iniziare tale attività in uno dei seguenti due modi:
+Quando un utente desidera creare un'istanza del servizio, può farlo in uno dei seguenti due modi:
 * **CLI**: utilizzando `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **Console {{site.data.keyword.Bluemix_notm}}**: l'utente può selezionare il piano del servizio e utilizzare l'operazione **Crea**.
 
@@ -151,9 +154,10 @@ Nell'esempio precedente, puoi vedere i metadati restituiti nel parametro `contex
    crn:v1:bluemix:public:compose-redis:us-south:a/46aa677e-e83f-4d17-a2b6-5b752564477c:416d769b-682d-4833-8bd7-5ef8778e5b52::
    ```
 
-   In questo esempio, questa istanza `compose-redis` fa parte dell'account {{site.data.keyword.Bluemix_notm}} con ID. L'ID univoco per l'istanza è `416d769b-682d-4833-8bd7-5ef8778e5b52` e l'istanza è ospitata nella regione `us-south` di {{site.data.keyword.Bluemix_notm}} pubblico. 
+   In questo esempio, questa istanza `compose-redis` fa parte dell'account {{site.data.keyword.Bluemix_notm}} con ID. L'ID univoco per l'istanza è `416d769b-682d-4833-8bd7-5ef8778e5b52` e l'istanza è ospitata nella regione `us-south` di {{site.data.keyword.Bluemix_notm}} pubblico.
 
 * **resource_group_crn**: restituisce il gruppo di risorse che include l'istanza del servizio. Per ulteriori dettagli, vedi [Gestione dei gruppi di risorse](/docs/resources/resourcegroups.html).
 
-   **Nota**: i provider di offerte non devono preoccuparsi del `resource_group_crn`, tranne in circostanze eccezionali. Consulta il tuo rappresentante IBM sul tuo caso di utilizzo prima di utilizzare tale campo.
+   I provider di offerte non devono preoccuparsi del `resource_group_crn`, tranne in circostanze eccezionali. Consulta il tuo rappresentante IBM sul tuo caso di utilizzo prima di utilizzare tale campo.
+   {: note}
 

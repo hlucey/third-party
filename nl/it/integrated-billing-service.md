@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -24,13 +24,13 @@ Questo argomento ti presenta i passi necessari per sviluppare e pubblicare il tu
 
 Dopo che hai ricevuto l'approvazione a distribuire la tua offerta nel catalogo di {{site.data.keyword.Bluemix_notm}}, inizi a sviluppare la tua offerta nella console di gestione delle risorse, un'esperienza IU guidata. Progetti i tuoi metadati del catalogo, configuri i piani di prezzi dei servizi ed esegui l'integrazione con {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). 
 
-Successivamente, al di fuori della console di gestione delle risorse, esegui lo sviluppo del codice per creare e ospitare un nuovo Open Service Broker (sono forniti documenti API ed esempi del broker iniziali) e utilizzi IAM per sviluppare un flusso di autenticazione. Dopo che hai completato questa procedura, ritorni alla console di gestione delle risorse per distribuire il tuo servizio al catalogo in una modalità di visibilità limitata che ti consente di verificare e convalidare più requisiti distribuibili. Quando sei pronto e la tua offerta soddisfa tutti i requisiti, il tuo servizio diventa completamente visibile nel catalogo di {{site.data.keyword.Bluemix_notm}}!
+Successivamente, al di fuori della console di gestione delle risorse, esegui lo sviluppo del codice per creare e ospitare un nuovo OSB (Open Service Broker). Sono forniti documenti API ed esempi del broker iniziali e utilizzi IAM per sviluppare un flusso di autenticazione. Dopo che hai completato questa procedura, ritorni alla console di gestione delle risorse per distribuire il tuo servizio al catalogo in una modalità di visibilità limitata dove puoi verificare e convalidare i requisiti distribuibili. Quando sei pronto, e la tua offerta soddisfa tutti i requisiti, il tuo servizio diventa completamente visibile nel catalogo di {{site.data.keyword.Bluemix_notm}}!
 
 
 ## Come funziona il processo
 {: #process}
 
-Per fornire un servizio di fatturazione integrato, utilizzi il Provider Workbench, la console di gestione delle risorse e l'ambiente di sviluppo di tua scelta. Consulta l'[elenco di controllo](/docs/third-party/checklist.html#checklist) per tracciare questa procedura.
+Per fornire un servizio di fatturazione integrato, utilizzi il workbench Provider, la console di gestione delle risorse e l'ambiente di sviluppo di tua scelta. Consulta l'[elenco di controllo](/docs/third-party/checklist.html#checklist) per tracciare questa procedura.
 
 Questi passi presuppongono che tu abbia ricevuto l'approvazione per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali in PWB, vedi [Introduzione alla pubblicazione della tua offerta di terze parti in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
 {: tip}

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -131,7 +131,7 @@ Di seguito sono riportate le procedure ottimali per l'inoltro dell'utilizzo:
 
 L'addebito a carico degli utenti {{site.data.keyword.Bluemix_notm}} è basato sulla quantità di risorse che utilizzano. Ad esempio, l'addebito a carico degli utenti che utilizzano i servizi database potrebbe essere basato sulla quantità di archiviazione utilizzata dalle loro applicazioni.
 
-Per utilizzare il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per notificare i dati di utilizzo, implementa l'API del servizio di misurazione per notificare i dati di utilizzo della tua offerta. Per ulteriori dettagli, vedi la [documentazione dell'API pubblica](https://ibm-bluemix-docs.github.io/usage-submission/).  
+Per utilizzare il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per notificare i dati di utilizzo, implementa l'API del servizio di misurazione per notificare i dati di utilizzo della tua offerta. Per ulteriori dettagli, vedi la [documentazione dell'API pubblica](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").  
 
 Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione. Puoi ospitare il tuo inoltro automatizzato su qualsiasi endpoint HTTPs valido accessibile su internet pubblica.
 {: tip}
