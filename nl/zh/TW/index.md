@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -28,7 +28,7 @@ lastupdated: "2018-08-28"
 
 在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中登錄供應項目。
 
-1. 從 Provider Workbench 詳細資料頁面中，按一下**將新供應項目上線**，然後完成登錄表單。
+1. 從 Provider Workbench 詳細資料頁面，按一下**將新供應項目上線**，然後完成登錄表單。
 2. 檢查您的收件匣中是否有確認登錄的電子郵件。
 
 ## 步驟 2. 列出供應項目類型
@@ -36,9 +36,9 @@ lastupdated: "2018-08-28"
 
 使用 Provider Workbench 將您的供應項目類型列為整合式計費服務。
 
-1. 從 [Provider Workbench 儀表板](https://www.ibm.com/marketplace/workbench/provider/dashboard)中，按一下您供應項目磚上的**作業**。
-2. 從**過濾**功能表中選取 **{{site.data.keyword.Bluemix_notm}} 列出作業**，僅過濾 {{site.data.keyword.Bluemix_notm}} 作業。
-3. 按一下「內容」作業磚中的**開始**，並完成整備評量表單。選取**整合式計費服務**作為供應項目類型，以回答最後一個問題。
+1. 從 [Provider Workbench 儀表板](https://www.ibm.com/marketplace/workbench/provider/dashboard){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，按一下供應項目磚上的**作業**。
+2. 從**過濾**功能表選取 **{{site.data.keyword.Bluemix_notm}} 列出作業**，僅過濾顯示 {{site.data.keyword.Bluemix_notm}} 作業。
+3. 按一下「內容作業」磚中的**開始**，並完成整備評量表單。回答最後一個問題時選取**整合式計費服務**作為供應項目類型。
 
 ## 步驟 3. 定義供應項目詳細資料
 {: #step3}
@@ -52,9 +52,9 @@ lastupdated: "2018-08-28"
 
 * 在 Provider Workbench 中，您可以建立入門文件及行銷內容。
 
-  電子郵件會包含入門文件發佈位置的鏈結。請儲存該 URL，因為您在資源管理主控台中工作時會使用它。
+  電子郵件會包含入門文件發佈位置的鏈結。請儲存該 URL，因為您在資源管理主控台工作時會使用它。
   {: tip}
 
-* 在資源管理主控台中，定義供應項目、建置定價方案、啟用安全，以及管理不同 {{site.data.keyword.Bluemix_notm}} 環境中您供應項目的部署，以將供應項目整合至 {{site.data.keyword.Bluemix_notm}}。 
+* 在資源管理主控台定義供應項目、建置定價方案、啟用安全，以及管理不同 {{site.data.keyword.Bluemix_notm}} 環境的供應項目部署，以將供應項目整合至 {{site.data.keyword.Bluemix_notm}}。 
 
-如需詳細資料，請參閱[開發及發佈整合式計費服務](/docs/third-party/integrated-billing-service.html)
+如需詳細資料，請參閱[開發及發佈整合式計費服務](/docs/third-party/integrated-billing-service.html)。 

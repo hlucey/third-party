@@ -225,7 +225,7 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 {{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 하나 이상의 OSB 브로커를 구현해야 합니다. 배치 전략 및 서비스에 대해 지원할 위치에 따라 둘 이상의 브로커가 있을 수 있습니다. 리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
 
-사용 가능한 위치 목록은 [IBM 글로벌 카탈로그 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스에서 글로벌 카탈로그에 추가 위치를 정의해야 하는 경우 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
+사용 가능한 위치 목록은 [IBM Global Catalog 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스에서 Global Catalog에 추가 위치를 정의해야 하는 경우 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
 
 
 ## 브로커 호스트

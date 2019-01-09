@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-09-04"
 
 
 ---
@@ -37,7 +37,7 @@ lastupdated: "2018-09-05"
 3. 過濾 IBM Cloud 列出作業，然後按一下「指引」作業磚中的**開始**。
 4. 遵循「指引」作業工作流程，在 {{site.data.keyword.Bluemix_notm}} 文件應用程式中發佈您的入門文件。
 
-您的型錄 meta 資料必須鏈結至已發佈的文件 URL。在資源管理主控台中定義供應項目，包括將 URL 值新增至**供應項目**標籤的 `documentationURL` meta 資料及 `instructionsURL` 欄位中。
+您的型錄 meta 資料必須鏈結至已發佈的文件 URL。在資源管理主控台定義供應項目，包括將 URL 值新增至**供應項目**標籤的 `documentationURL` meta 資料及 `instructionsURL` 欄位中。
 
 ## 建立服務公告
 {: #announcement}
@@ -54,4 +54,4 @@ lastupdated: "2018-09-05"
 ## 後續步驟
 {: #next-steps}
 
-既然您已開始建立入門文件及服務公告的作業，就可以在資源管理主控台中定義您的供應項目。請參閱[步驟 2：在資源管理主控台中定義供應項目](/docs/third-party/cis2-rmc-define.html)。
+既然您已開始建立入門文件及服務公告的作業，就可以在資源管理主控台定義您的供應項目。請參閱[步驟 2：在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。

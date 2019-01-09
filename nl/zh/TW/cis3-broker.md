@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # 步驟 3. 開發及管理服務分配管理系統
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 藉由使用從資源管理主控台匯出的 meta 資料，您可以用選擇的程式設計語言建置一個以上的新服務分配管理系統。
 {:shortdesc}
 
-服務分配管理系統可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與服務分配管理系統互動，以佈建及管理服務實例（服務供應項目的實例化）和服務連結（應用程式與服務實例之間的關聯表示法，其中通常包含應用程式用來與服務實例進行通訊的認證）。提供有效的 meta 資料值會在執行「要求」時建立成功的「RESTful API 回應」。
+服務分配管理系統可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與服務分配管理系統互動，以佈建及管理服務實例和服務連結。您可以提供有效的 meta 資料值，以在執行「要求」時，建立成功的「RESTful API 回應」。
 
 您可以使用下列項目的組合來建置分配管理系統：從資源管理主控台匯出的 meta 資料、我們的公用 {{site.data.keyword.Bluemix_notm}} 服務分配管理系統範例，以及 Resource Broker API 文件。
 
@@ -31,7 +32,7 @@ lastupdated: "2018-09-05"
 
 確定您已開始步驟 1 並完成步驟 2：
 1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在資源管理主控台中定義供應項目](/docs/third-party/cis2-rmc-define.html)。
+2. [在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。
 
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} 平台佈建情境
@@ -49,24 +50,24 @@ lastupdated: "2018-09-05"
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
 
-**附註：**並非所有語言都有範例表示。例如，如果您需要範例 Python 分配管理系統，可以搜尋 Google，找到 Cloud Foundry 範例。您可能需要調整此範例，以符合 OSB 需求。
-
+並非所有語言都有提供範例。例如，如果您需要範例 Python 分配管理系統，可以搜尋 Google，找到 Cloud Foundry 範例。您可能需要調整此範例，以符合 OSB 需求。
+{: note}
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文件
 {: #docs}
 
-若是瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，即可開發服務分配管理系統。請熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
+若是瞭解 [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，即可開發服務分配管理系統。請熟悉 Broker API，以及它如何與一個以上的分配管理系統互動。
 
 {{site.data.keyword.Bluemix_notm}} Open Service Broker 延伸了 Open Service Broker 2.12 規格。
 {: tip}
 
 ### 所有服務分配管理系統的必要端點邏輯
 
-服務分配管理系統必須提供 REST API 所使用的一組標準 meta 資料值，而 {{site.data.keyword.Bluemix_notm}} 分配管理系統必須包含下列 REST API 端點/路徑的邏輯：
+服務分配管理系統必須提供 REST API 所耗用的一組標準 meta 資料值，而 {{site.data.keyword.Bluemix_notm}} 分配管理系統必須要有下列 REST API 端點/路徑的邏輯：
 
 <dl>
   <dt>型錄 (GET)</dt>
-  <dd>傳回分配管理系統中所含的型錄 meta 資料。有許多其他型錄 meta 資料值未傳回，這些值只會新增在資源管理主控台內，並儲存在「{{site.data.keyword.Bluemix_notm}} 型錄」內。</dd>
+  <dd>傳回分配管理系統中所含的型錄 meta 資料。有許多額外型錄 meta 資料值未傳回，這些值只會新增在資源管理主控台內，並儲存在「{{site.data.keyword.Bluemix_notm}} 型錄」內。</dd>
   <dt>資源實例 (PUT)</dt>
   <dd>佈建服務實例</dd>
   <dt>資源實例 (DELETE)</dt>
@@ -119,7 +120,8 @@ OSB 規格不*支援已停用但尚未刪除的實例狀態。為了讓 {{site.d
   <dd>可讓您啟用或停用服務實例。</dd>
 </dl>
 
-**附註**：服務提供者必須負責在停用端點啟動時，停用對服務實例的存取權，並且在啟用端點啟動時，重新啟用該存取權。
+服務提供者必須負責在停用端點啟動時，停用對服務實例的存取權，並且在啟用端點啟動時，重新啟用該存取權。
+{: note}
 
 ## 瞭解如何使用匯出的 meta 資料來引導分配管理系統開發
 {: #use-metadata}
@@ -175,7 +177,7 @@ services :
 ```
 
 
-您的 OSB 服務陣列必須與您新增至資源管理主控台的供應項目 meta 資料相同。為了確保 OSB 與資源管理主控台之間的一對一同位性，您必須比較從資源管理主控台下載之 `catalog.json` 中的服務陣列，與分配管理系統中的實際服務陣列。所有服務及方案 ID 和名稱都必須相符。
+您的 OSB services 陣列必須與您新增至資源管理主控台的供應項目 meta 資料相同。為了確保 OSB 與資源管理主控台之間的一對一同位性，您必須比較從資源管理主控台下載之 `catalog.json` 中的 services 陣列，與分配管理系統中的實際 services 陣列。所有服務及方案 ID 和名稱都必須相符。
 {: tip}
 
 ## {{site.data.keyword.Bluemix_notm}} 平台提供的分配管理系統資訊
@@ -206,7 +208,7 @@ Decoded:
 ## 其他分配管理系統建議
 {: #more-info}
 
-### 使用非同步與同步作業的建議
+### 使用非同步作業而不使用同步作業的建議
 
 OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10 秒的時間，則建議使用同步回應。否則，您必須使用非同步作業模式。相關資訊包含在 OSB 規格中。
 
@@ -221,7 +223,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 
 如果協力廠商 API 型服務實作在另一個雲端中，並公開至 {{site.data.keyword.Bluemix_notm}} 中，則位置會指出服務在其他雲端中的位置。
 
-在 {{site.data.keyword.Bluemix_notm}} 上線時，您必須實作至少一個 OSB 分配管理系統，但您可以根據部署策略及服務要支援的位置，選擇實作多個分配管理系統。在資源管理主控台工具內，您已建立服務/方案/位置值組與處理該值組作業之分配管理系統間的對映。一般選項會是定義單一分配管理系統來處理服務的所有位置，或定義每個位置的分配管理系統；此選項取決於服務提供者。
+在 {{site.data.keyword.Bluemix_notm}} 上線時，您必須實作至少一個 OSB 分配管理系統。您可以根據部署策略以及您要為服務提供支援的位置，實作多個分配管理系統。在資源管理主控台工具內，您已建立服務/方案/位置值組與處理該值組作業之分配管理系統間的對映。一般選項會是定義單一分配管理系統來處理服務的所有位置，或定義每個位置的分配管理系統；此選項取決於服務提供者。
 
 如需可用位置的清單，請參閱 [IBM 全球型錄位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。如果您的服務需要在「全球型錄」中定義其他位置，請諮詢 {{site.data.keyword.Bluemix_notm}} 上線團隊。
 
@@ -243,7 +245,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 ## 如何測試服務的分配管理系統
 {: #test}
 
-您必須對您要啟用的不同端點執行 curl 指令，以驗證分配管理系統。範例 Readme 檔提供對 OSB 端點進行 curl 處理的絕佳指引：https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+您必須對您要啟用的不同端點執行 curl 指令，以驗證分配管理系統。範例 Readme 檔提供對 OSB 端點進行 curl 處理的絕佳指引：[https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
 
 ### 如何對服務的分配管理系統進行 curl 處理
 {: #curl-broker}

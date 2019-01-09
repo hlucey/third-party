@@ -19,7 +19,7 @@ lastupdated: "2018-09-04"
 # 步驟 4. 開發鑑別流程
 {: #step4-iam}
 
-當您定義供應項目時，資源管理主控台中的「存取管理」頁面會列出您的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 用戶端 ID 及密碼、服務 ID 和 API 金鑰。現在，您可以使用那些值來開發鑑別流程。
+當您定義供應項目時，資源管理主控台的「存取管理」頁面會列出您的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 用戶端 ID 及密碼、服務 ID 和 API 金鑰。現在，您可以使用那些值來開發鑑別流程。
 {:shortdesc}
 
 ## 開始之前
@@ -30,7 +30,7 @@ lastupdated: "2018-09-04"
 ## 衍生 IAM 重新導向 URI
 {: #redirect-uri}
 
-當您在資源管理主控台中定義服務時，會產生用戶端 ID，但請注意，您在當時可能沒有「重新導向 URI」。IAM 會建立設為 false 的「用戶端 ID」。在您使用「重新導向 URI」回到資源管理主控台之前，不會有真正的「用戶端 ID」。
+當您在資源管理主控台定義服務時，會產生用戶端 ID，但請注意，您在當時可能沒有「重新導向 URI」。IAM 會建立設為 false 的「用戶端 ID」。在您使用「重新導向 URI」回到資源管理主控台之前，不會有真正的「用戶端 ID」。
 
 好消息是在前一個開發步驟中，您已開發並管理 OSB（您可能已在範例分配管理系統程式碼中看到 IAM 值）。`redirect_uri` 通常是應用程式所在的主機 URL，以及可處理鑑別/授權的某個其他 URL。
 
@@ -55,20 +55,20 @@ http://localhost:3000/auth/callback <-- for testing locally
 {: #oauth}
 
 
-**鑑別 - 步驟 0：**呼叫 `https://iam.bluemix.net/identity/.well-known/openid-configuration`，以尋找較接近已部署應用程式之使用者介面登入的 IAM 地區端點。
+**鑑別 - 步驟 0：**呼叫 `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`，以尋找較接近已部署應用程式之使用者介面登入的 IAM 地區端點。
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   請務必儲存此回應中所傳回的使用者 access_token，因為下次使用者授權期間會使用它。
 
-請參閱範例分配管理系統中的範例：https://github.com/IBM/sample-resource-service-brokers
+請參閱[範例分配管理系統](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中的範例。
 
 ## 立即驗證使用者授權
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 既然您已鑑別使用者並且具有自己的存取記號，就需要驗證使用者可以存取服務儀表板。首先，您需要使用者存取記號中所含的一些資訊，使用者存取記號將在步驟 2.1 解碼。然後，在步驟 2.2 使用該資訊來呼叫 IAM，確認使用者是否獲得授權存取儀表板。
 
 **步驟 2.1**：將使用者的存取記號解碼（在前一段找到的`**鑑別 - 步驟 2：**交換存取記號的代碼`期間所傳回。）
-   存取記號是一個 JWT 記號，可以使用任何遵循 JWT 的程式庫來解碼。例如，請參閱[範例分配管理系統程式碼](https://github.com/IBM/sample-resource-service-brokers)中所含的程式庫。將記號解碼之後，格式顯示於下一節；請擷取 `iam_id` 及 `scope` 欄位，在下個步驟中會使用它們：
+   存取記號是一個 JWT 記號，可以使用任何遵循 JWT 的程式庫來解碼。例如，請參閱[範例分配管理系統程式碼](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中所包含的程式庫。將記號解碼之後，格式顯示於下一節；請擷取 `iam_id` 及 `scope` 欄位，在下個步驟中會使用它們：
 
 ```
 {
@@ -217,7 +219,7 @@ curl -k -X POST \
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -252,7 +254,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 請參閱範例分配管理系統中的範例：https://github.com/IBM/sample-resource-service-brokers
@@ -264,7 +266,7 @@ curl -X POST \
 
 在協力廠商整合期間，將會使用記號範圍，確保記號具有完成使用者目標所需的最小存取範圍。為了方便此作業，IAM 記號存取會以建立記號的用戶端 ID 為基礎。如果 IAM 記號是由協力廠商服務所建立，則一般使用者將無法執行某些 API 和功能，即使使用者已配置適當的原則也一樣。
 
-對授權的影響（所有 `https://iam.bluemix.net/v2/authz` 呼叫）就是，需要在主旨中傳遞 `scope` 資訊。此資訊包含在 `scope` 宣告的 IAM 記號（base64 編碼）內。
+對授權的影響（對 `https://iam.cloud.ibm.com/v2/authz` 的所有呼叫）就是需要在主旨中傳遞 `scope` 資訊。此資訊包含在 `scope` 宣告的 IAM 記號（base64 編碼）內。
 
 下節是已在授權呼叫中新增之內容的範例：
 ```

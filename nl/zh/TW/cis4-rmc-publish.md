@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -25,19 +25,19 @@ lastupdated: "2018-09-05"
 ## 開始之前
 {: #pre-reqs}
 
-此步驟假設您已獲准提供整合式計費服務。如果您尚未在 Provider Workbench 中完成起始登錄及核准，請參閱[入門指導教學](/docs/third-party/index.md)。
+此步驟假設您已獲准提供整合式計費服務。如果您未在 Provider Workbench 中完成起始登錄及核准，請參閱[入門指導教學](/docs/third-party/index.md)。
 {: tip}
 
 請確定您已開始步驟 1，並完成步驟 2、3 及 4：
 1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在資源管理主控台中定義供應項目](/docs/third-party/cis2-rmc-define.html)。
+2. [在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。
 3. [開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。
 3. [開發鑑別流程](/docs/third-party/cis5-iam.html)。
 
 ## 將服務發佈至 {{site.data.keyword.Bluemix_notm}}
 {: #publish}
 
-1. 從資源管理主控台中，按一下**部署**頁面。
+1. 從資源管理主控台按一下**部署**頁面。
 2. 按一下**分配管理系統**標籤，然後按一下**新增分配管理系統**
 3. 按一下**管理**，以開啟「服務分配管理系統配置」頁面。
 4. 新增受管理分配管理系統，然後按一下**登錄分配管理系統**。
@@ -57,7 +57,7 @@ lastupdated: "2018-09-05"
 
 因為您是以受限可見性模式部署，所以只能在 {{site.data.keyword.Bluemix_notm}} 型錄中看到您的供應項目。使用下一節中的核對清單，登入 {{site.data.keyword.Bluemix_notm}}，並完成測試準則。
 
-1. 使用 IBM ID 登入 {{site.data.keyword.Bluemix_notm}}：[https://console.bluemix.net](https://console.bluemix.net){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
+1. 使用您的 IBM ID 登入 [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 2. 確定您在正確的帳戶中（用來建立服務的相同帳戶）
 3. 按一下標頭中的**型錄**鏈結，然後搜尋您的供應項目。
 4. 接著，使用下一節中的核對清單來驗證服務。

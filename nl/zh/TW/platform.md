@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # 整合式計費服務如何使用 {{site.data.keyword.Bluemix_notm}} 平台
@@ -86,23 +88,24 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 
 提供計量方案的所有整合式計費服務，都必須使用 {{site.data.keyword.Bluemix_notm}} 計量服務來報告用量資料。
 
-**附註：**如果您提供計量方案，則需要使用計量服務 API 自動執行每小時用量提交。
+如果您提供計量方案，則需要使用計量服務 API 自動執行每小時用量提交。
+{: important}
 
 如需計量的相關資訊，請參閱：[計量整合](/docs/third-party/metering.html#meteringintera)。如需提交計量用量的相關資訊，請參閱[提交計量方案的用量](/docs/third-party/submitusage.html#submitusage)
 
 ## 佈建情境：組合在一起
 
-現在，讓我們將所有先前所述的概念組合在一起，並查看如何使用 {{site.data.keyword.Bluemix_notm}} 平台來建立服務實例的範例。
+現在，讓我們將所有概念集合在一起，並查看如何使用 {{site.data.keyword.Bluemix_notm}} 平台來建立服務實例的範例。
 
 ![佈建情境](images/flow-am.svg "平台如何處理服務實例建立")
 
-當使用者想要建立服務實例時，可以使用下列兩種方式之一來起始它：
+當使用者想要建立服務實例時，可以使用下列兩種方式之一來建立：
 * **CLI**：使用 `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **{{site.data.keyword.Bluemix_notm}} 主控台**：使用者可以選取服務、規劃並使用**建立**作業。
 
 {{site.data.keyword.Bluemix_notm}} 平台會驗證使用者是否有權使用 {{site.data.keyword.Bluemix_notm}} IAM 來建立服務實例。進行這項驗證之後，即會啟動服務分配管理系統的佈建端點 (PUT /v2/resource_instances/:resource_instance_id)。進行佈建時，必須符合下列規則：
 * {{site.data.keyword.Bluemix_notm}} 環境定義包括在環境定義變數中
-* `X-Broker-API-Originating-Identity` 具有已起始要求之使用者的 IBM IAM ID
+* `X-Broker-API-Originating-Identity` 具有起始該要求之使用者的 IBM IAM ID
 * parameters 區段包含所要求的位置（以及服務所需的其他參數）。
 
 範例佈建要求：
@@ -155,5 +158,6 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 
 * **resource_group_crn**：傳回包含服務實例的資源群組。如需詳細資料，請參閱[管理資源群組](/docs/resources/resourcegroups.html)。
 
-   **附註**：供應項目提供者與 `resource_group_crn` 無關，但在特殊情況下除外。使用該欄位之前，請向 IBM 業務代表諮詢您的使用案例。
+   供應項目提供者與 `resource_group_crn` 無關，但在特殊情況下除外。使用該欄位之前，請向 IBM 業務代表諮詢您的使用案例。
+   {: note}
 

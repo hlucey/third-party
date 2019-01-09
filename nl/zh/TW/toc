@@ -34,6 +34,6 @@
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
-    [IBM Cloud Open Service Broker API 參考資料](https://console.bluemix.net/apidocs/ibm-cloud-osb-api)
+    [IBM Cloud Open Service Broker API 參考資料](https://cloud.ibm.com/apidocs/ibm-cloud-osb-api)
     [IBM Cloud Usage Metering API 參考資料](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
