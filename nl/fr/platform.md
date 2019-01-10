@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Comment les services de facturation intégrée utilisent-ils la plateforme {{site.data.keyword.Bluemix_notm}} ?
@@ -86,13 +88,14 @@ Si un service inclut un plan mesuré, les utilisateurs {{site.data.keyword.Bluem
 
 Tous les services de facturation intégrée proposant un plan mesuré doivent utiliser le service de mesure {{site.data.keyword.Bluemix_notm}} pour transmettre les données d'utilisation.
 
-**Remarque :** vous devez automatiser la soumission d'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
+Vous devez automatiser la soumission de l'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
+{: important}
 
 Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
 
 ## Scénario de mise à disposition : rassemblement de tous les éléments
 
-En prenant en compte tous les concepts décrits précédemment, examinons le processus de création d'instance de service via la plateforme {{site.data.keyword.Bluemix_notm}}.
+En prenant en compte tous les concepts, examinons le processus de création d'instance de service via la plateforme {{site.data.keyword.Bluemix_notm}}.
 
 ![Scénario de mise à disposition](images/flow-am.svg "Traitement de la création d'instance de service par la plateforme")
 
@@ -155,5 +158,6 @@ Dans l'exemple précédent, vous pouvez voir les métadonnées renvoyées dans l
 
 * **resource_group_crn** : renvoie le groupe de ressources incluant l'instance de service. Pour plus de détails, voir [Gestion des groupes de ressources](/docs/resources/resourcegroups.html).
 
-   **Remarque** : Les fournisseurs de services ne sont pas concernés par le paramètre `resource_group_crn` sauf dans de rares circonstances. Contactez votre interlocuteur IBM avant d'utiliser cette zone.
+   Les fournisseurs de services ne sont pas concernés par le paramètre `resource_group_crn` sauf dans de rares circonstances. Contactez votre interlocuteur IBM avant d'utiliser cette zone.
+   {: note}
 

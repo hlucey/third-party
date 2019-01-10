@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -47,7 +47,7 @@ Vérifiez que vous avez commencé à l'étape 1 et avez terminé les étapes 2, 
 8. Sur la page **Deployments**, vérifiez votre déploiement non publié puis cliquez sur **Publish**.
 9. Sur la page **Publish to the Catalog**, consultez les détails de votre déploiement puis cliquez sur **Publish**.
 
-La page Deployments doit être marquée comme complétée dans le navigateur, indiquant que les exigences minimales ont été respectées.
+La page Deployments doit être marquée comme complétée dans la navigation, indiquant que les exigences minimales ont été respectées.
 
 Vous êtes bloqué suite à un problème de déploiement ? Contactez votre interlocuteur IBM pour obtenir de l'aide.
 {: tip}
@@ -57,7 +57,7 @@ Vous êtes bloqué suite à un problème de déploiement ? Contactez votre inter
 
 Etant donné que le déploiement a été effectué en mode de visibilité limitée, vous seul pouvez voir votre offre dans le catalogue {{site.data.keyword.Bluemix_notm}}. En suivant la liste de contrôle de la section ci-dessous, connectez-vous à {{site.data.keyword.Bluemix_notm}} et appliquez les critères de test.
 
-1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} : [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec votre IBMid.
+1. Connectez-vous à [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec votre IBMid.
 2. Vérifiez que vous utilisez le compte approprié (même compte que celui utilisé pour la création du service)
 3. Cliquez sur le lien **Catalog** dans l'en-tête puis recherchez votre offre.
 4. Utilisez ensuite la liste de contrôle de la section suivante pour valider votre service.

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-08-31"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-08-31"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Etape 2. Définition de votre offre dans la console de gestion des ressources
@@ -27,7 +28,7 @@ Maintenant que vous êtes autorisé à mettre à disposition un service de factu
 {: #pre-reqs}
 
 1. Vérifiez que avez commencé la tâche [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
-2. Vérifiez que vous êtes enregistré auprès d'{{site.data.keyword.Bluemix_notm}}. Dans le cas contraire, [inscrivez-vous](https://console.bluemix.net/registration) avant de continuer.
+2. Vérifiez que vous êtes enregistré auprès d'{{site.data.keyword.Bluemix_notm}}. Dans le cas contraire, [inscrivez-vous](https://cloud.ibm.com/registration){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avant de continuer.
 3. Vérifiez que vous vous trouvez dans le compte correct avant de commencer à utiliser la console de gestion des ressources.
 4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
@@ -43,9 +44,9 @@ Maintenant que vous êtes autorisé à mettre à disposition un service de factu
 
 Pour commencer, connectez-vous et enregistrez votre offre.
 
-1. Connectez-vous à {{site.data.keyword.Bluemix_notm}} : [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec votre ID {{site.data.keyword.Bluemix_notm}}.
+1. Connectez-vous à [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avec votre ID {{site.data.keyword.Bluemix_notm}}.
    **Avertissement** : Il est primordial d'être dans le compte {{site.data.keyword.Bluemix_notm}} approprié. Si vous avez plusieurs comptes, vérifiez que vous accédez au compte souhaité.
-2. Accédez au tableau de bord de la console de gestion des ressources : [https://console.bluemix.net/onboarding/dashboard](https://console.bluemix.net/onboarding/dashboard){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+2. Accédez au [tableau de bord de la console de gestion des ressources](https://cloud.ibm.com/onboarding/dashboard){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 3. Cliquez sur **New Resource** pour ajouter votre ressource.
 4. Renseignez la zone **Resource name**. Cette valeur est votre nom de service {{site.data.keyword.Bluemix_notm}} unique extrait à la section précédente.
 5. Nous ne attendons pas à ce que vous ayez un courtier de services hébergé existant. Sélectionnez **No** pour la zone **Is your broker ready for import?**. Nous allons vous guider lors du processus de création de courtier. Vous accédez ensuite à la console de gestion des ressources pour importer votre courtier une fois qu'il est développé et hébergé.
@@ -59,7 +60,7 @@ Vous pouvez enregistrer votre progression dans la console de gestion des ressour
 
 Sur la page **Offering**, indiquez les valeurs de métadonnées stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. De plus, certaines de ces valeurs doivent être exportées et stockées dans votre courtier de services où elles sont utilisées pour la mise à disposition et renvoyées comme partie de la réponse `catalog (GET)`. En utilisant ces valeurs, vous pouvez développer plus rapidement un courtier de services dans une procédure ultérieure.
 
-1. Dans la console de gestion des ressources, cliquez sur la page **Offering** puis sur l'onglet **Listing Page**. ****Dans cet onglet, vous pouvez définir les métadonnées affichées dans votre tableau de bord de services de l'offre {{site.data.keyword.Bluemix_notm}}. Renseignez toutes les valeurs requises puis cliquez sur **Save**. La console de gestion des ressources effectue un enregistrement initial de votre service dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Une notification indiquant que votre service a été enregistré avec IAM s'affiche. Vous allez effectuer des actions supplémentaires avec IAM ultérieurement.
+1. Dans la console de gestion des ressources, cliquez sur la page **Offering** puis sur l'onglet **Listing Page**. ****Dans cet onglet, vous pouvez définir les métadonnées affichées dans votre tableau de bord de services de l'offre {{site.data.keyword.Bluemix_notm}}. Renseignez toutes les valeurs requises puis cliquez sur **Save**. La console de gestion des ressources effectue un enregistrement initial de votre service dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Une notification indiquant que votre service a été enregistré avec IAM s'affiche. Vous pouvez effectuer des actions supplémentaires avec IAM ultérieurement.
 2. Sur la page Offering, cliquez sur l'onglet **Settings**.
    1. Activez ou désactivez l'option **Plan changes supported?** pour votre offre. La valeur par défaut est **No**. Si vous indiquez **Yes**, vous devez étendre votre courtier OSB pour prendre en charge des modifications de plan pour les instances mises à disposition. Si votre offre prend en charge plusieurs plans et que vous souhaitez que les utilisateurs puissent en changer pour une instance mise à disposition existante, vous devez faire en sorte que ces derniers puissent mettre à jour leur instance de service. Pour plus de détails, voir le noeud final `/v2/service_instances/{instance_id} PATCH` dans [l'API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
    2. Activez ou désactivez l'option **Bindable** pour votre service. La valeur par défaut est **No**. Sélectionnez **Yes** si votre service peut être lié à des applications dans {{site.data.keyword.Bluemix_notm}}. Le cas échéant, il doit renvoyer des données d'identification et des noeuds finaux d'API à vos consommateurs de service. Lorsque vous développez un service pouvant être lié, vous devez utiliser les [opérations pouvant être liées dans l'API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
@@ -84,10 +85,11 @@ Le fournisseur de services doit fournir :
    - L'URI de redirection (vous accédez à nouveau à la console de gestion des ressources une fois que vous avez développé votre courtier OSB. Vous pouvez dériver cet URI à partir de l'emplacement du courtier de services hébergé)
 
 1. Dans la console de gestion des ressources, cliquez sur la page **Access Management**.
-2. Cliquez sur **Enable IAM**. La console de gestion des ressources enregistre votre service auprès d'IAM, crée votre règle et ID de service puis crée une clé d'API pour vous. Elle crée également un ID client et une valeur confidentielle incomplets. L'ID client doit être mis à jour avec votre URI de redirection. 
+2. Cliquez sur **Enable IAM**. La console de gestion des ressources enregistre votre service auprès d'IAM, crée votre règle et ID de service puis crée une clé d'API pour vous. Elle crée également un ID client et une valeur confidentielle incomplets. L'ID client doit être mis à jour avec votre URI de redirection.
 3. Cliquez sur **Status** pour voir l'état en cours de votre activation IAM.
 
-**Remarque** : vous devez accéder ultérieurement à nouveau à la page IAM pour indiquer votre `URI de redirection`. Vous ne disposez pas de cette valeur tant que vous n'avez pas effectué de tâches de développement supplémentaires pour générer un flux d'authentification. Les étapes ultérieures vous permettent de définir votre valeur d'URI de redirection.
+Vous devez accéder ultérieurement à nouveau à la page IAM pour indiquer votre `URI de redirection`. Vous ne disposez pas de cette valeur tant que vous n'avez pas effectué de tâches de développement supplémentaires pour générer un flux d'authentification. Les étapes ultérieures vous permettent de définir votre valeur d'URI de redirection.
+{: note}
 
 Une clé d'API vous est octroyée lorsque vous **activez IAM**. Il est primordial de la sauvegarder. Cette valeur ne s'affiche pas à nouveau. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle : [Gestion des clés d'API d'ID de service](/docs/iam/serviceid_keys.html#serviceidapikeys)
 {: tip}
@@ -110,7 +112,7 @@ Les fournisseurs de services doivent automatiser la soumission d'utilisation hor
 ## Exportation de vos métadonnées au format JSON
 {: #export-metadata}
 
-Maintenant que vous avez défini votre service dans la console de gestion des ressources, vous pouvez télécharger un fichier catalog.json et l'utiliser pour signaler le développement de votre courtier OSB. Le fichier catalog.json contient des métadonnées devant être hébergées dans votre courtier. Ces valeurs définissent le contrat entre le courtier et la plateforme {{site.data.keyword.Bluemix_notm}} pour les services et les plans pris en charge par votre courtier. Toutes les métadonnées de catalogue supplémentaires qui ne sont pas requises pour la mise à disposition sont stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. Les mises à jour apportées à ce dernier affichent les valeurs utilisées pour le tableau de bord, telles que des liens et des icônes. De plus, les métadonnées traduites pour l'internationalisation sont mises à jour dans la console de gestion des ressources et non hébergées dans le courtier. Aucune des métadonnées stockées dans votre courtier ne s'affiche dans la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. La console et l'interface CLI affichent les éléments définis dans la console de gestion des ressources et stockés dans le catalogue {{site.data.keyword.Bluemix_notm}}.
+Maintenant que vous avez défini votre service dans la console de gestion des ressources, vous pouvez télécharger un fichier catalog.json et l'utiliser pour signaler le développement de votre courtier OSB. Le fichier catalog.json contient des métadonnées devant être hébergées dans votre courtier. Ces valeurs définissent le contrat entre le courtier et la plateforme {{site.data.keyword.Bluemix_notm}} pour les services et les plans pris en charge par votre courtier. Toutes les métadonnées de catalogue supplémentaires qui ne sont pas requises pour la mise à disposition sont stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. Les mises à jour apportées à ce dernier affichent les valeurs utilisées pour le tableau de bord, telles que des liens et des icônes. De plus, les métadonnées traduites pour l'internationalisation sont mises à jour dans la console de gestion des ressources. Elles ne sont pas hébergées dans le courtier. Aucune des métadonnées stockées dans votre courtier ne s'affiche dans la console {{site.data.keyword.Bluemix_notm}} ou l'interface de ligne de commande {{site.data.keyword.Bluemix_notm}}. La console et l'interface CLI affichent les éléments définis dans la console de gestion des ressources et stockés dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
 1. Dans la console de gestion des ressources, ouvrez la page **Deployments**.
 2. Cliquez sur **Manage**.

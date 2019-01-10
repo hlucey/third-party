@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 ---
 
@@ -31,7 +31,7 @@ La liste suivante décrit les attentes pour le suivi et la soumission de l'utili
 *	{{site.data.keyword.Bluemix_notm}} est configuré pour un cycle de facturation mensuelle et l'heure est représentée au format UTC.
 *  Les fournisseurs d'offre doivent tester la soumission de l'utilisation et valider leurs résultats afin d'indiquer comment le cycle de facturation mensuelle est calculé.
 
-Pour obtenir des informations générales sur la tarification, voir [la page décrivant comment calculer vos coûts](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+Pour obtenir des informations générales sur la tarification, voir [la page décrivant comment calculer vos coûts](/docs/billing-usage/estimating_costs.html#cost). 
 
 ## Propriétés de configuration
 {: #configure}
@@ -85,6 +85,7 @@ Formule : ADD(utilisations)
 | Jour 2 (matin) | 5             | 10 + 5      | 15                    |
 | Jour 3 (matin) | 5             | 15 + 5      | 20                    |
 | Jour 4 (soir)   | 5             | 20 + 5      | 25                    |
+{: caption="Tableau 2. Calculs de l'utilisation mensuelle" caption-side="top"}
 
 #### Moyenne standard
 {: #standard-average}
@@ -100,6 +101,7 @@ Formule : AVG(utilisations)
 | Jour 2 (matin) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Jour 3 (matin) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Jour 4 (soir)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Tableau 3. Calculs de l'utilisation mensuelle moyenne" caption-side="top"}
 
 #### Valeur maximale standard
 {: #standard-max}
@@ -115,6 +117,7 @@ Formule : MAX(utilisations)
 | Jour 2 (matin) | 0              | MAX(10, 0)   | 10                    |
 | Jour 3 (matin) | 15             | MAX(10, 15)  | 15                    |
 | Jour 4 (soir)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Tableau 4. Calculs de l'utilisation mensuelle maximale" caption-side="top"}
 
 #### Proratisation quotidienne - Moyenne
 {: #proration-average}
@@ -135,6 +138,7 @@ Prenons un mois à 30 jours :
 | Jour 2 (soir)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (A la fin du jour 2)                               |
 | Jour 3 à jour 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666 (A la fin du jour 15)                          |
 | Jour 15 à jour 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (A la fin du jour 30)                          |
+{: caption="Tableau 5. Utilisation moyenne par jour et calculs de l'utilisation moyenne mensuelle" caption-side="top"}
 
 \* Situation au jour de soumission de l'utilisation.
 
@@ -155,6 +159,7 @@ Prenons un mois à 30 jours :
 | Jour 1 (soir)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Jour 2 à jour 15  | 1              | MAX(1)    | (1 + 1 + ...) / jour            | 1                      |
 | Jour 15 à jour 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / jour | < 1                    |
+{: caption="Tableau 6. Utilisation maximale par jour et calculs de l'utilisation moyenne mensuelle" caption-side="top"}
 
 \* Situation au jour de soumission de l'utilisation.
 
@@ -194,5 +199,5 @@ Le tableau suivant inclut des informations détaillées sur les modèles de tari
 | Niveau simple (niveau granulaire)  | Modèle P*Q dans lequel le prix unitaire de l'ensemble de la consommation est déterminé par le niveau de la quantité.           | <ul><li>Si Q est < = Q1, T = P1*Q</li><li>Si Q1 < Q < = Q2, T = P2*Q</li><li>Si Q2 < Q < = Q3, T = P3*Q</li></ul>     |   <ul><li>Q1 = 1 000, P1 = 1 $</li><li>Q2 = 2 500, P2 = 0,9 $</li><li>Q3 = 10 000, P3 = 0,75 $</li><li>T = 0,75 $ * 5 000 = 3 750 $</li></ul>              |
 | Niveau gradué (niveau d'étape)   | Le prix par unité varie lorsque la quantité utilisée transite dans les différents niveaux prédéfinis. La facturation totale implique le cumul à partir des niveaux précédents           | <ul><li>T1 = P1*Q (0 < Q</li><li>Si Q1 < Q < = Q2, T = T2</li><li>Si Q2 < Q < = Q3, T = T3</li></ul>     | <ul><li>Q1 = 1 000, P1 = 1 $, T1 = 1*1 000</li><li>Q2 = 1 500, P2 = 0,9 $, T2 = 0,9*1 500</li><li>Q3 = 10 000, P3 = 0,75 $, T3 = 0,75*2 500</li><li>T = 1 000 + 1 350 + 1 875 = 4 225 $</li></ul>          |
 | Niveau de bloc (quantité maximale)           | Le montant total facturé est établi en fonction d'une quantité maximale qui ne varie pas dans le bloc     | <ul><li>Si Q < = Q1, T = T1</li><li>Si Q1 < Q < = Q2, T = T2</li><li>Si Q2 < Q < = Q3, T = T3</li></ul>    |  <ul><li>Q1 = 1 000, T1 = 0 $</li><li>Q2 = 2 500, T2 = 2 500</li><li>Q3 = 10 000, T3 = 4 500 $</li><li>T = 4 500 $</li></ul>            |
-
+{: caption="Tableau 7. Modèles de tarification" caption-side="top"}
 

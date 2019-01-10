@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-07-20"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -24,7 +24,7 @@ Cette rubrique présente la procédure permettant de développer et de publier v
 
 Une fois que vous êtes autorisé à mettre à disposition votre offre dans le catalogue {{site.data.keyword.Bluemix_notm}}, vous allez commencer à la développer dans la console de gestion des ressources (interface utilisateur vous guidant lors de différents processus). Vous concevez vos métadonnées de catalogue, configurez les plans de facturation de service et intégrez ces données dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
 
-Ensuite, en dehors de la console de gestion des ressources, vous effectuez le développement du code pour générer et héberger un nouveau courtier OSB (des exemples de courtier de démarrage et des documents d'API sont fournis) et vous utilisez IAM pour développer un flux d'authentification. Une fois ces étapes effectuées, vous accédez à nouveau à la console de gestion des ressources pour déployer votre service dans le catalogue en mode de visibilité limitée. Ainsi, vous pouvez tester et valider plusieurs exigences en matière de mise à disposition. Lorsque vous êtes prêt et que votre offre respecte toutes les exigences, votre service devient entièrement visible dans le catalogue {{site.data.keyword.Bluemix_notm}}.
+Ensuite, en dehors de la console de gestion des ressources, vous effectuez le développement du code pour générer et héberger un nouveau courtier OSB. Des exemples de courtier de démarrage et des documents d'API sont fournis et vous utilisez IAM pour développer un flux d'authentification. Une fois ces étapes effectuées, vous accédez à nouveau à la console de gestion des ressources pour déployer votre service dans le catalogue en mode de visibilité limitée. Ainsi, vous pouvez tester et valider plusieurs exigences en matière de mise à disposition. Lorsque vous êtes prêt et que votre offre respecte toutes les exigences, votre service devient entièrement visible dans le catalogue {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Fonctionnement du processus

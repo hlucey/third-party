@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2018
 
-lastupdated: "2018-09-05" 
+lastupdated: "2018-09-04" 
 
 ---
 
@@ -56,7 +56,7 @@ Reportez-vous aux conseils suivants lorsque vous utilisez le service de mesure {
 * Les enregistrements d'utilisation doivent être soumis dans les deux jours suivant la prise de mesure. Les enregistrements d'utilisation plus anciens sont rejetés.
 * Une soumission réussie renvoie le code de réponse 201. Si un autre code de réponse est renvoyé, mettez à jour et renvoyez les données jusqu'à ce que le code 201 s'affiche.
 
-Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de l'utilisation :
+Vous trouverez ci-dessous les meilleures pratiques pour la soumission de l'utilisation :
 
 * Il est recommandé que les fournisseurs de services soumettent l'utilisation toutes les heures afin que le délai entre l'utilisation des ressources et l'heure à laquelle cette donnée apparaît dans les comptes de l'utilisateur ne soit pas trop long.
 * Soumettez à nouveau les enregistrements d'utilisation uniquement si un échec est survenu dans la demande précédente. Ne soumettez pas à nouveau les enregistrements d'utilisation déjà acceptés.
@@ -131,7 +131,7 @@ Vous trouverez ci-dessous les meilleures pratiques en matière de soumission de 
 
 Les utilisateurs {{site.data.keyword.Bluemix_notm}} sont facturés en fonction de la quantité de ressources qu'ils utilisent. Par exemple, les utilisateurs ayant recours à des services de base de données peuvent être facturés en fonction de la quantité de stockage utilisée par leurs applications.
 
-Pour utiliser le service de mesure {{site.data.keyword.Bluemix_notm}} afin de signaler des données d'utilisation, implémentez l'API de service de mesure afin de signaler les données d'utilisation de votre offre. Pour plus de détails, voir la [documentation sur l'API publique](https://ibm-bluemix-docs.github.io/usage-submission/).  
+Pour utiliser le service de mesure {{site.data.keyword.Bluemix_notm}} afin de signaler des données d'utilisation, implémentez l'API de service de mesure afin de signaler les données d'utilisation de votre offre. Pour plus de détails, consultez la [documentation de l'API publique](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").  
 
 Il vous est demandé d'automatiser la soumission d'utilisation horaire en utilisant l'API de service de mesure. Vous pouvez héberger votre soumission automatique sur tout noeud final HTTPs valide accessible sur le réseau Internet public.
 {: tip}

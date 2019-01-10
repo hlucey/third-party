@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -57,7 +57,7 @@ lastupdated: "2018-09-05"
 
 由于您是以有限可视性方式进行部署的，因此只能在 {{site.data.keyword.Bluemix_notm}}“目录”中看到您的产品。使用以下部分中的核对表，登录到 {{site.data.keyword.Bluemix_notm}}，并完成所有测试条件。
 
-1. 使用 IBM 标识登录到 {{site.data.keyword.Bluemix_notm}}：[https://console.bluemix.net](https://console.bluemix.net){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
+1. 使用 IBM 标识登录到 [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 2. 确保您位于正确的帐户中（与用于创建服务的帐户相同）。
 3. 单击标题中的**目录**链接，然后搜索您的产品。
 4. 接下来，使用以下部分中的核对表来验证您的服务。

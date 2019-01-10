@@ -55,20 +55,20 @@ Vous disposez désormais d'un ID client qui prend en compte votre URI de redirec
 {: #oauth}
 
 
-**Authentification - Etape 0 :** Recherchez un noeud final régional IAM pour la connexion d'interface utilisateur proche de votre application déployée en appelant `https://iam.bluemix.net/identity/.well-known/openid-configuration`.
+**Authentification - Etape 0 :** Recherchez un noeud final régional IAM pour la connexion d'interface utilisateur proche de votre application déployée en appelant `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration`.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   Assurez-vous de conserver le jeton d'accès (access_token) de l'utilisateur renvoyé dans cette réponse car il est utilisé lors de l'autorisation utilisateur suivante.
 
-Consultez l'exemple souhaité sur la page suivante : https://github.com/IBM/sample-resource-service-brokers
+Consultez l'exemple souhaité dans nos [courtiers exemple](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
 ## Il est temps maintenant de valider l'autorisation utilisateur
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -199,7 +201,7 @@ curl -k -X POST \
 Maintenant que vous avez authentifié l'utilisateur et que vous disposez de votre propre jeton d'accès, vous devez faire en sorte que l'utilisateur puisse accéder au tableau de bord de services. Vous allez tout d'abord avoir besoin d'informations incluses dans le jeton d'accès de l'utilisateur que vous décodez à l'étape 2.1. Vous allez ensuite utiliser ces informations pour appeler IAM afin de vérifier si l'utilisateur est autorisé à accéder au tableau de bord à l'étape 2.2.
 
 **Etape 2.1** : Décodez le jeton d'accès de l'utilisateur (renvoyé lors de l'étape `**Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès` trouvé dans la section précédente.)
-   Le jeton d'accès est un jeton JWT pouvant être décodé en utilisant une bibliothèque compatible JWT. Par exemple, voir la bibliothèque incluse dans notre [code de courtier exemple](https://github.com/IBM/sample-resource-service-brokers).
+   Le jeton d'accès est un jeton JWT pouvant être décodé en utilisant une bibliothèque compatible JWT. Consultez, par exemple, la bibliothèque incluse dans notre [code de courtier exemple](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
    Une fois que le jeton est décodé, son format est similaire à l'exemple présenté dans la section suivante. Vous extrayez les zones `iam_id` et `scope`, qui sont utilisées lors de l'étape suivante :
 
 ```
@@ -218,7 +220,7 @@ Maintenant que vous avez authentifié l'utilisateur et que vous disposez de votr
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 Consultez l'exemple souhaité sur la page suivante : https://github.com/IBM/sample-resource-service-brokers
@@ -265,7 +267,7 @@ Les jetons d'accès utilisateur créés avec votre ID client peuvent être utili
 
 Lors de l'intégration de tiers, la portée de jeton est utilisée afin de vérifier que les jetons disposent de la portée d'accès minimale requise pour atteindre les objectifs de l'utilisateur. Pour faciliter cela, l'accès aux jetons d'accès IAM dépend de l'ID client ayant créé le jeton. Si un jeton IAM a été créé par un service tiers, un utilisateur final ne peut pas exécuter certaines API et fonctions même si une règle appropriée est configurée pour l'utilisateur.
 
-L'impact sur les autorisations (tous les appels de `https://iam.bluemix.net/v2/authz`) est le suivant : il est nécessaire de transmettre des informations de `portée` dans le sujet. Ces informations se trouvent dans un jeton IAM (code base64) dans la demande de `portée`.
+L'impact sur les autorisations (tous les appels de `https://iam.cloud.ibm.com/v2/authz`) est le suivant : il est nécessaire de transmettre des informations de `portée` dans le sujet. Ces informations se trouvent dans un jeton IAM (code base64) dans la demande de `portée`.
 
 La section suivante présente un exemple d'ajout dans l'appel d'autorisation :
 ```

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2015, 2018
-lastupdated: "2018-08-28"
+lastupdated: "2018-11-14"
 
 
 ---
@@ -36,7 +36,7 @@ lastupdated: "2018-08-28"
 
 使用 Provider Workbench 将产品类型列为 Integrated Billing 服务。
 
-1. 在 [Provider Workbench 仪表板](https://www.ibm.com/marketplace/workbench/provider/dashboard)中，单击产品磁贴上的**任务**。
+1. 在 [Provider Workbench 仪表板](https://www.ibm.com/marketplace/workbench/provider/dashboard){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中，单击产品磁贴上的**任务**。
 2. 从**过滤**菜单中选择 **{{site.data.keyword.Bluemix_notm}} 任务列表**以仅针对 {{site.data.keyword.Bluemix_notm}} 任务进行过滤。
 3. 单击“内容”任务磁贴中的**启动**，然后完成就绪性评估表单。通过选择 **Integrated Billing 服务**作为产品类型来回答最后一个问题。
 
@@ -57,4 +57,4 @@ lastupdated: "2018-08-28"
 
 * 在资源管理控制台中，通过定义产品，构建价格套餐，启用安全性以及在不同 {{site.data.keyword.Bluemix_notm}} 环境中管理产品的部署，将产品集成到 {{site.data.keyword.Bluemix_notm}} 中。 
 
-有关更多详细信息，请参阅[开发和发布 Integrated Billing 服务](/docs/third-party/integrated-billing-service.html)
+有关更多详细信息，请参阅[开发和发布 Integrated Billing 服务](/docs/third-party/integrated-billing-service.html)。 

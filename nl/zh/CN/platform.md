@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018
-lastupdated: "2018-09-05"
+lastupdated: "2018-11-29"
 
 
 ---
@@ -14,6 +14,8 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Integrated Billing 服务如何使用 {{site.data.keyword.Bluemix_notm}} 平台
@@ -86,17 +88,18 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
 所有提供计量套餐的 Integrated Billing 服务都必须使用 {{site.data.keyword.Bluemix_notm}} 计量服务来报告使用量数据。
 
-**注：**如果提供计量套餐，那么您需要使用计量服务 API 来自动提交每小时使用量。
+如果提供计量套餐，那么您需要使用计量服务 API 来自动提交每小时使用量。
+{: important}
 
 有关计量的更多信息，请参阅：[计量集成](/docs/third-party/metering.html#meteringintera)。有关提交计量使用量的更多信息，请参阅：[提交计量套餐的使用量](/docs/third-party/submitusage.html#submitusage)
 
 ## 供应方案：融会贯通
 
-现在，我们将把先前描述的所有概念融会贯通，并查看有关如何使用 {{site.data.keyword.Bluemix_notm}} 平台来创建服务实例的示例。
+现在，我们将所有概念集中在一起，并查看有关如何使用 {{site.data.keyword.Bluemix_notm}} 平台来创建服务实例的示例。
 
 ![供应方案](images/flow-am.svg "平台如何处理服务实例创建")
 
-用户要创建服务实例时，可以通过以下两种方式之一来启动此操作：
+用户要创建服务实例时，可以通过以下两种方式之一来进行创建：
 * **CLI**：使用 `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`
 * **{{site.data.keyword.Bluemix_notm}} 控制台**：用户可以选择服务和套餐并使用**创建**操作。
 
@@ -155,5 +158,6 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
 * **resource_group_crn**：返回包含服务实例的资源组。有关更多详细信息，请参阅[管理资源组](/docs/resources/resourcegroups.html)。
 
-   **注**：除特殊情况外，产品提供者并不关心 `resource_group_crn`。在使用该字段之前，请就您的用例向 IBM 代表进行咨询。
+   除特殊情况外，产品提供者并不关心 `resource_group_crn`。在使用该字段之前，请就您的用例向 IBM 代表进行咨询。
+   {: note}
 

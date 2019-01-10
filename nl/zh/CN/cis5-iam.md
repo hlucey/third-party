@@ -55,20 +55,20 @@ http://localhost:3000/auth/callback <-- for testing locally
 {: #oauth}
 
 
-**认证 - 步骤 0：**通过调用 `https://iam.bluemix.net/identity/.well-known/openid-configuration` 来找到离已部署应用程序更近的 UI 登录的 IAM 区域端点。
+**认证 - 步骤 0：**通过调用 `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration` 来找到离已部署应用程序更近的 UI 登录的 IAM 区域端点。
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   确保存储此响应中返回的用户 access_token，因为在接下来用户授权期间将使用此项。
 
-请参阅样本代理程序中的示例：https://github.com/IBM/sample-resource-service-brokers
+请参阅[样本代理程序](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中的示例。
 
 ## 下面将验证用户授权
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -198,7 +200,8 @@ curl -k -X POST \
 
 现在，您已认证用户并拥有自己的访问令牌，接下来需要验证用户是否能够访问服务仪表板。首先，您需要用户访问令牌中包含的一些信息，在步骤 2.1 中将对该令牌解码。然后，在步骤 2.2 中，使用这些信息来调用 IAM，以检查用户是否有权访问仪表板。
 
-**步骤 2.1**：对用户的访问令牌（在上一部分中所述的`**认证 - 步骤 2：**用代码交换访问令牌`期间返回）解码。访问令牌是可使用任何兼容 JWT 的库进行解码的 JWT 令牌。例如，请参阅[样本代理程序代码](https://github.com/IBM/sample-resource-service-brokers)中包含的库。对令牌解码后，其格式如以下部分中所示；您需要抽取 `iam_id` 和 `scope` 字段，以在下一步中使用：
+**步骤 2.1**：对用户的访问令牌（在上一部分中所述的`**认证 - 步骤 2：**用代码交换访问令牌`期间返回）解码。访问令牌是可使用任何兼容 JWT 的库进行解码的 JWT 令牌。例如，请参阅[样本代理程序代码](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中包含的库。
+   对令牌解码后，其格式如以下部分中所示；您需要抽取 `iam_id` 和 `scope` 字段，以在下一步中使用：
 
 ```
 {
@@ -216,7 +219,7 @@ curl -k -X POST \
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -251,7 +254,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 请参阅样本代理程序中的示例：https://github.com/IBM/sample-resource-service-brokers
@@ -263,7 +266,7 @@ curl -X POST \
 
 作为第三方集成的一部分，令牌作用域限定用于确保令牌具有实现用户目标所需的最小访问作用域。为了帮助达到此目的，IAM 令牌的访问权将基于创建令牌的客户机标识。如果 IAM 令牌是由第三方服务创建的，那么最终用户将无法运行某些 API 和功能，即使该用户已配置相应的策略也是如此。
 
-对授权的影响（对 `https://iam.bluemix.net/v2/authz` 的所有调用）需要在主题中向下传递 `scope` 信息。此信息包含在 `scope` 声明中的 IAM 令牌（base64 编码）内。
+对授权的影响（对 `https://iam.cloud.ibm.com/v2/authz` 的所有调用）需要在主题中向下传递 `scope` 信息。此信息包含在 `scope` 声明中的 IAM 令牌（base64 编码）内。
 
 以下部分是在授权调用中添加的内容的示例：
 ```
