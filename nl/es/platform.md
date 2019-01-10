@@ -31,7 +31,7 @@ La capa de suministro gestiona el ciclo de vida de los recursos de {{site.data.k
 ### Gestión del ciclo de vida de un recurso
 {: #lifecycle}
 
-La capa de suministro proporciona API comunes para controlar el ciclo de vida de los recursos desde el suministro (creación de una instancia), pasando por el enlace (creación de credenciales de acceso) y el desenlace (eliminación del acceso), hasta el desaprovisionamiento (supresión de una instancia). Además, la plataforma {{site.data.keyword.Bluemix_notm}} proporciona varias CLI y una interfaz de usuario que puede gestionar el ciclo de vida de estos recursos que no requieren que cree sus propias instalaciones.
+La capa de suministro proporciona API comunes para controlar el ciclo de vida de los recursos desde el suministro (creación de una instancia), pasando por el enlace (creación de credenciales de acceso) y el desenlace (eliminación del acceso), hasta la anulación del suministro (supresión de una instancia). Además, la plataforma {{site.data.keyword.Bluemix_notm}} proporciona varias CLI y una interfaz de usuario que puede gestionar el ciclo de vida de estos recursos que no requieren que cree sus propias instalaciones.
 
 La capa de suministro proporciona varias API para ayudarle a gestionar los siguientes elementos del ciclo de vida del recurso:
 * Suministro
@@ -39,7 +39,7 @@ La capa de suministro proporciona varias API para ayudarle a gestionar los sigui
 * Enlace
 * Claves del recurso
 * Desenlace
-* Desaprovisionamiento
+* Anulación de suministro
 
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}

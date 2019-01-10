@@ -200,7 +200,7 @@ curl -k -X POST \
 
 Ahora que ha autenticado al usuario y que tiene su propia señal de acceso, tiene que comprobar que el usuario puede acceder al panel de control del servicio. En primer lugar, necesita algunos fragmentos de información que están incluidos en la señal de acceso del usuario, que va a decodificar en el paso 2.1. A continuación, utilice dicha información para llamar a IAM para comprobar si el usuario tiene autorización para acceder al panel de control en el paso 2.2.
 
-**Paso 2.1**: decodifique la señal de acceso del usuario (devuelta durante ` ** Autenticación - Paso 2: ** intercambiar el código para una señal de acceso` que se encuentra en la sección anterior).
+**Paso 2.1**: decodifique la señal de acceso del usuario (devuelta durante `** Autenticación - Paso 2:** intercambiar el código para una señal de acceso` que se encuentra en la sección anterior).
    La señal de acceso es una señal JWT que se puede decodificar utilizando cualquier biblioteca compatible con JWT. Por ejemplo, consulte la biblioteca incluida en nuestro [código de intermediario de ejemplo](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
    Una vez decodificada la señal, el formato se muestra en la sección siguiente; se extraen los campos `iam_id` y `scope`, que se utilizan en el paso siguiente:
 
