@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Nota:** esse token é válido por uma hora e pode ser reutilizado quantas vezes forem necessárias durante o prazo de uma hora. É altamente recomendável que esse token seja armazenado em cache para evitar fazer essa solicitação para cada acesso ao `dashboard_url`.
+**Nota:** esse token é válido por 1 hora e pode ser reutilizado quantas vezes forem necessárias durante o prazo de 1 hora. É altamente recomendável que esse token seja armazenado em cache para evitar fazer essa solicitação para cada acesso ao `dashboard_url`.
 
 
 ### Autorização - Etapa 2: validar a autorização para o usuário para a instância de serviço (/v2/authz POST)
@@ -263,7 +263,7 @@ Veja o exemplo em nossos brokers de amostra: https://github.com/IBM/sample-resou
 ## Escagem de Token do IAM para Adotivos de Terce
 {: #token_scoping}
 
-Os tokens de acesso de usuário que são criados com o identificador de cliente podem ser usados apenas para acessar as APIs de serviço. As solicitações para as outras APIs de nuvem que usam esse token resultam em acesso negado, mesmo se o usuário tem uma política apropriada configurada.
+Os tokens de acesso de usuário criados com seu ID de cliente podem ser usados apenas para acessar suas APIs de serviço. As solicitações para as outras APIs de nuvem que usam esse token resultam em acesso negado, mesmo se o usuário tem uma política apropriada configurada.
 
 Como parte da integração de terceiro, o escopo do token está sendo usado para assegurar que os tokens tenham o escopo de acesso mínimo necessário para realizar os objetivos do usuário. Para facilitar isso, o acesso aos tokens do IAM é baseado no identificador de cliente que criou o token. Se um token do IAM foi criado por um serviço de terceiro, um usuário final não poderá executar determinadas APIs e funções, mesmo que o usuário tenha uma política apropriada configurada.
 
@@ -303,4 +303,4 @@ Isso é aplicável a todos os usos (`user, serviceId, crn`) e todos os `subject.
 ## Próximas Etapas
 {: #next-steps}
 
-Agora é hora de reunir tudo! Retorne para o console de gerenciamento de recurso para publicar seu serviço em visibilidade limitada e validar sua oferta no catálogo. Veja: [Publicando e testando seu serviço](/docs/third-party/cis4-rmc-publish.html).
+Agora é hora de reunir tudo! Retorne para o console de gerenciamento de recurso para publicar seu serviço em visibilidade limitada e validar sua oferta no catálogo. Para obter mais informações, consulte [Publicando e testando seu serviço](/docs/third-party/cis4-rmc-publish.html).

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -64,21 +64,20 @@ O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especifica
 
 ### Lógica de terminal necessária para todos os brokers de serviço
 
-Os brokers de serviço devem fornecer um conjunto padrão de valores de metadados que são consumidos pelas APIs REST, e os brokers do {{site.data.keyword.Bluemix_notm}} devem ter lógica para os terminais/caminhos da API REST a seguir:
+Os brokers de serviço devem fornecer um conjunto padrão de valores de metadados que são consumidos por APIs de REST e os brokers do {{site.data.keyword.Bluemix_notm}} devem ter lógica para os terminais ou caminhos da API de REST a seguir:
 
 <dl>
   <dt>catálogo (GET)</dt>
   <dd>Retorna os metadados do catálogo incluídos em seu broker. Muitos valores de metadados do catálogo extras não são retornados - esses valores são incluídos exclusivamente dentro do console de gerenciamento de recurso e armazenados no Catálogo do {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>instâncias de recurso (PUT)</dt>
-  <dd>Provisionar sua instância de serviço</dd>
+  <dd>Provisiona sua instância de serviço.</dd>
   <dt>instâncias de recurso (DELETE)</dt>
   <dd>Desprovisões sua instância de serviço.</dd>
   <dt>instâncias de recurso (PATCH)</dt>
   <dd>Atualiza sua instância de serviço.</dd>
 </dl>
 
-**Nota sobre catálogo (GET)**: esse terminal define o contrato entre o broker e a plataforma {{site.data.keyword.Bluemix_notm}} para os serviços e planos suportados pelo broker. Esse terminal retorna os metadados do catálogo armazenados em seu broker. Esses valores definem o contrato de fornecimento mínimo entre seu serviço e a plataforma {{site.data.keyword.Bluemix_notm}}. Todos os metadados do catálogo adicionais que não são necessários para fornecimento são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Quaisquer atualizações nos valores de exibição do catálogo que são usados para renderizar seus painéis, como links, ícones e metadados convertidos do i18n, devem ser atualizadas no console de gerenciamento de recursos e não hospedadas no broker. Nenhum dos metadados armazenados em seu broker é exibido no console do {{site.data.keyword.Bluemix_notm}} ou na CLI do {{site.data.keyword.Bluemix_notm}}. O console e a CLI retornam o que foi configurado dentro do console de gerenciamento de recursos e armazenado no catálogo do {{site.data.keyword.Bluemix_notm}}. A seção a seguir mostra os valores mínimos necessários que o catálogo (GET)
-retornará:
+**Nota sobre catálogo (GET)**: esse terminal define o contrato entre o broker e a plataforma {{site.data.keyword.Bluemix_notm}} para os serviços e planos suportados pelo broker. Esse terminal retorna os metadados do catálogo armazenados em seu broker. Esses valores definem o contrato de fornecimento mínimo entre seu serviço e a plataforma {{site.data.keyword.Bluemix_notm}}. Todos os metadados do catálogo adicionais que não são necessários para fornecimento são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Quaisquer atualizações nos valores de exibição do catálogo que são usados para renderizar seus painéis, como links, ícones e metadados convertidos do i18n, devem ser atualizadas no console de gerenciamento de recursos e não hospedadas no broker. Nenhum dos metadados armazenados em seu broker é exibido no console do {{site.data.keyword.Bluemix_notm}} ou na CLI do {{site.data.keyword.Bluemix_notm}}. O console e a CLI retornam o que foi configurado dentro do console de gerenciamento de recursos e armazenado no catálogo do {{site.data.keyword.Bluemix_notm}}. A seção a seguir mostra os valores mínimos necessários retornados pelo catálogo (GET):
 
 ```
 {
@@ -102,7 +101,7 @@ retornará:
 
 ### Lógica de terminais necessários para serviços ligáveis
 
-Se seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}, ele deverá retornar terminais e credenciais de API para seus consumidores de serviço. Um serviço bindable deve usar as operações ligáveis na especificação do Open Service Broker e implementar os terminais/caminhos a seguir:
+Se seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}, ele deverá retornar terminais e credenciais de API para seus consumidores de serviço. Um serviço que permite ligação deve usar as operações que permitem ligação na especificação Open Service Broker e implementar os terminais ou os caminhos a seguir:
 
 <dl>
   <dt>ligações e credenciais (PUT)</dt>
@@ -113,7 +112,7 @@ Se seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_no
 
 ### Terminais de extensão  {{site.data.keyword.Bluemix_notm}}  necessários
 
-A especificação do OSB não* suporta um estado de instância desativado, mas ainda não excluiu o estado da instância. Para que o {{site.data.keyword.Bluemix_notm}} suporte clientes que possam sofrer um lapso de faturamento ou outras situações que resultem em uma suspensão de conta (mas ainda não um cancelamento), o {{site.data.keyword.Bluemix_notm}} definiu os terminais de API estendidos que permitem que instâncias de serviço sejam desativadas e reativadas. As extensões de terminal a seguir são **necessárias**:
+A especificação do OSB não* suporta um estado de instância desativado, mas ainda não excluiu o estado da instância. Para que o {{site.data.keyword.Bluemix_notm}} suporte os clientes que talvez passem por uma expiração de faturamento ou outras situações que resultem em uma suspensão de conta (mas ainda não o cancelamento), o {{site.data.keyword.Bluemix_notm}} definiu os terminais de API estendidos que permitem que instâncias de serviço sejam desativadas e reativadas. As extensões de terminal a seguir são **necessárias**:
 
 <dl>
   <dt>ativar e desativar instâncias (GET)</dt>
@@ -122,7 +121,7 @@ A especificação do OSB não* suporta um estado de instância desativado, mas a
   <dd>Permite ativar ou desativar uma instância de serviço.</dd>
 </dl>
 
-É responsabilidade do provedor de serviços desativar o acesso à instância de serviço quando o terminal de desativação se inicia e reativar esse acesso quando o terminal de ativação é iniciado.
+É responsabilidade do provedor de serviços desativar o acesso à instância de serviço quando o terminal de desativação é iniciado e reativar esse acesso quando o terminal de ativação é iniciado.
 {: note}
 
 ## Aprenda como usar os metadados exportados para guiar seu desenvolvimento do broker
@@ -230,7 +229,7 @@ Se seu serviço baseado em API de terceiros for implementado em outra nuvem e ex
 Quando você se integra ao {{site.data.keyword.Bluemix_notm}}, deve implementar pelo menos um broker do OSB. É possível ter mais de um broker, dependendo de sua estratégia de implementação e dos locais que deseja suportar para seu serviço. Na ferramenta do console de gerenciamento de recursos, você estabeleceu o mapeamento entre a tupla de serviço/plano/local e o broker que atende as operações para
 essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
 
-Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se seu serviço precisar que locais adicionais sejam definidos no Catálogo Global, consulte a equipe de migração do {{site.data.keyword.Bluemix_notm}}.
+Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o serviço precisar que mais locais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Hospeda seus brokers

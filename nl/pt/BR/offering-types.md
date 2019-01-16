@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-29"
 É possível entregar a sua oferta de terceiro como um serviço de faturamento integrado ou um serviço de indicação no {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-A entrega de sua oferta de terceiros como um serviço de faturamento integrado significa que os usuários podem selecionar dentre diferentes planos de precificação da IBM que estão listados na página de detalhes do catálogo no console do {{site.data.keyword.Bluemix_notm}}. Além disso, os usuários podem criar automaticamente uma instância de sua oferta de terceiro.
+A entrega de sua oferta de terceiro como um serviço de faturamento integrado significa que os usuários podem selecionar dentre os diferentes planos de precificação da IBM que estão listados na página de detalhes do catálogo no console do {{site.data.keyword.Bluemix_notm}}. Além disso, os usuários podem criar automaticamente uma instância de sua oferta de terceiro.
 
 Quando você entrega sua oferta de terceiro como um serviço de indicação, os usuários são direcionados para seu website por meio da página de detalhes do catálogo no console do {{site.data.keyword.Bluemix_notm}}. Em seu website, os usuários criam contas e obtêm as credenciais apropriadas. Essas credenciais são necessárias para conectar programaticamente sua oferta de terceiro a um app que eles estão construindo no {{site.data.keyword.Bluemix_notm}}.
 
