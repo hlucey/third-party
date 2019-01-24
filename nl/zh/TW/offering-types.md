@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-29"
 您可以在 {{site.data.keyword.Bluemix}} 中將協力廠商供應項目提供為整合式計費服務或轉介服務。
 {:shortdesc}
 
-將協力廠商供應項目提供為整合式計費服務，表示使用者可以在 {{site.data.keyword.Bluemix_notm}} 主控台的型錄詳細資料頁面上，選取所列出的不同 IBM 定價方案。此外，使用者也可以自動建立協力廠商供應項目的實例。
+將協力廠商供應項目提供為整合式計費服務，表示使用者可以從 {{site.data.keyword.Bluemix_notm}} 主控台之型錄詳細資料頁面上所列的不同 IBM 定價方案當中進行選取。此外，使用者也可以自動建立協力廠商供應項目的實例。
 
 當您將協力廠商供應項目提供為轉介服務時，會將使用者從 {{site.data.keyword.Bluemix_notm}} 主控台的型錄詳細資料頁面，導向您的網站。使用者可以從您的網站建立帳戶，並取得適當的認證。需要有這些認證，才能以程式設計方式將您的協力廠商供應項目連接至其於 {{site.data.keyword.Bluemix_notm}} 上建置的應用程式。
 

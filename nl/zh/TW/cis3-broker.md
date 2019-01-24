@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,20 +63,20 @@ lastupdated: "2018-11-29"
 
 ### 所有服務分配管理系統的必要端點邏輯
 
-服務分配管理系統必須提供 REST API 所耗用的一組標準 meta 資料值，而 {{site.data.keyword.Bluemix_notm}} 分配管理系統必須要有下列 REST API 端點/路徑的邏輯：
+服務分配管理系統必須提供 REST API 所耗用的一組標準 meta 資料值，而 {{site.data.keyword.Bluemix_notm}} 分配管理系統必須要有下列 REST API 端點或路徑的邏輯：
 
 <dl>
   <dt>型錄 (GET)</dt>
   <dd>傳回分配管理系統中所含的型錄 meta 資料。有許多額外型錄 meta 資料值未傳回，這些值只會新增在資源管理主控台內，並儲存在「{{site.data.keyword.Bluemix_notm}} 型錄」內。</dd>
   <dt>資源實例 (PUT)</dt>
-  <dd>佈建服務實例</dd>
+  <dd>佈建服務實例。</dd>
   <dt>資源實例 (DELETE)</dt>
   <dd>取消佈建服務實例。</dd>
   <dt>資源實例 (PATCH)</dt>
   <dd>更新服務實例。</dd>
 </dl>
 
-**型錄 (GET) 的附註**：此端點定義分配管理系統與分配管理系統所支援服務及方案之 {{site.data.keyword.Bluemix_notm}} 平台間的合約。此端點會傳回分配管理系統內所儲存的型錄 meta 資料。這些值定義服務與 {{site.data.keyword.Bluemix_notm}} 平台之間的最低佈建合約。佈建不需要的所有其他型錄 meta 資料，都會儲存在 {{site.data.keyword.Bluemix_notm}} 型錄內。用來呈現儀表板的任何型錄顯示值更新（例如鏈結、圖示及 i18n 已翻譯 meta 資料）都必須更新在資源管理主控台中，而不是儲藏在分配管理系統中。儲存在分配管理系統中的 meta 資料都不會顯示在 {{site.data.keyword.Bluemix_notm}} 主控台或 {{site.data.keyword.Bluemix_notm}} CLI 中。主控台及 CLI 會傳回資源管理主控台內所設定並儲存在 {{site.data.keyword.Bluemix_notm}} 型錄中的內容。下列區段顯示型錄 (GET) 將會傳回的最小必要值：
+**型錄 (GET) 的附註**：此端點定義分配管理系統與分配管理系統所支援服務及方案之 {{site.data.keyword.Bluemix_notm}} 平台間的合約。此端點會傳回分配管理系統內所儲存的型錄 meta 資料。這些值定義服務與 {{site.data.keyword.Bluemix_notm}} 平台之間的最低佈建合約。佈建不需要的所有其他型錄 meta 資料，都會儲存在 {{site.data.keyword.Bluemix_notm}} 型錄內。用來呈現儀表板的任何型錄顯示值更新（例如鏈結、圖示及 i18n 已翻譯 meta 資料）都必須更新在資源管理主控台中，而不是儲藏在分配管理系統中。儲存在分配管理系統中的 meta 資料都不會顯示在 {{site.data.keyword.Bluemix_notm}} 主控台或 {{site.data.keyword.Bluemix_notm}} CLI 中。主控台及 CLI 會傳回資源管理主控台內所設定並儲存在 {{site.data.keyword.Bluemix_notm}} 型錄中的內容。下列區段顯示型錄 (GET) 傳回的最小必要值：
 
 ```
 {
@@ -100,7 +100,7 @@ lastupdated: "2018-11-29"
 
 ### 可連結服務的必要端點邏輯
 
-如果服務可以連結至 {{site.data.keyword.Bluemix_notm}} 中的應用程式，則其必須將 API 端點及認證傳回給服務消費者。可連結服務必須使用 Open Service Broker 規格中的可連結作業，並實作下列端點/路徑：
+如果服務可以連結至 {{site.data.keyword.Bluemix_notm}} 中的應用程式，則其必須將 API 端點及認證傳回給服務消費者。可連結服務必須使用 Open Service Broker 規格中的可連結作業，並實作下列端點或路徑：
 
 <dl>
   <dt>連結及認證 (PUT)</dt>

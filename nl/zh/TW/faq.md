@@ -19,7 +19,7 @@ lastupdated: "2018-08-28"
 
 ## 方案有哪些不同的計量選項？
 {: #metering}
-{: #faq}
+{: faq}
 
 {{site.data.keyword.Bluemix}} 支援多種模型以便聚集供應項目用量。供應項目提供者會測量已佈建實例的各種度量值，並將這些測量值提交給計量服務。分級服務會根據供應項目提供者所選擇的模型，將已提交的用量聚集到不同的儲存區（實例、資源群組及帳戶）。方案中所有度量值的聚集及分級模型包含在方案的計量及分級定義文件中。
 
@@ -30,7 +30,7 @@ lastupdated: "2018-08-28"
 
 ## 如何產生新的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management API 金鑰？
 {: #iam-creds}
-{: #faq}
+{: faq}
 
 當您啟用 IAM 時，就會提供「API 金鑰」給您。您務必要儲存「API 金鑰」。此值不會再次顯示。如果您遺失「API 金鑰」，則可以刪除該金鑰，然後建立新的金鑰。如需相關資訊，請參閱[管理服務 ID API 金鑰](/docs/iam/serviceid_keys.html#serviceidapikeys)。 
 

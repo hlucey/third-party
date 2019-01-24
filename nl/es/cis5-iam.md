@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -94,7 +94,7 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 #### Cabeceras:
 {: #headers1}
 
-  - Authorization: Basic *[client id]: [client secret]*
+  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Nota:** esta señal es válida durante una hora y se puede volver a utilizar tantas veces como sea necesario durante el intervalo de tiempo de una hora. Se recomienda encarecidamente almacenar esta señal en memoria caché para evitar realizar esta solicitud para cada acceso a `dashboard_url`.
+**Nota:** esta señal es válida durante 1 hora y se puede volver a utilizar tantas veces como sea necesario durante el intervalo de tiempo de 1 hora. Se recomienda encarecidamente almacenar esta señal en memoria caché para evitar realizar esta solicitud para cada acceso a `dashboard_url`.
 
 
 ### Autorización - Paso 2: valide la autorización del usuario en la instancia de servicio (/v2/authz POST)
@@ -303,4 +303,4 @@ Esto se aplica a todos los usos (`user, serviceId, crn`) y todos los `subject.at
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora es el momento de aunar todos estos elementos. Vuelva a la consola de gestión de recursos para publicar el servicio con visibilidad limitada y para validar la oferta en el catálogo. Consulte: [Publicación y prueba del servicio](/docs/third-party/cis4-rmc-publish.html).
+Ahora es el momento de aunar todos estos elementos. Vuelva a la consola de gestión de recursos para publicar el servicio con visibilidad limitada y para validar la oferta en el catálogo. Para obtener más información, consulte [Publicación y prueba del servicio](/docs/third-party/cis4-rmc-publish.html).

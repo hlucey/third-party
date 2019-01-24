@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,20 +63,20 @@ Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento 
 
 ### Lógica de punto final necesaria para todos los intermediarios de servicio
 
-Los intermediarios de servicio deben proporcionar un conjunto estándar de valores de metadatos que consumen las API REST, y los intermediarios de {{site.data.keyword.Bluemix_notm}} deben tener lógica para los siguientes puntos finales/vías de acceso de la API REST:
+Los intermediarios de servicio deben proporcionar un conjunto estándar de valores de metadatos que consumen las API REST, y los intermediarios de {{site.data.keyword.Bluemix_notm}} deben tener lógica para los siguientes puntos finales o vías de acceso de la API REST:
 
 <dl>
   <dt>catálogo (GET)</dt>
   <dd>Devuelve los metadatos de catálogo incluidos en el intermediario. Hay otros valores de metadatos de catálogo que no se devuelven; estos valores se añaden exclusivamente en la consola de gestión de recursos y se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>instancias de recursos (PUT)</dt>
-  <dd>Suministra la instancia de servicio</dd>
+  <dd>Suministra la instancia de servicio.</dd>
   <dt>instancias de recursos (DELETE)</dt>
   <dd>Anula el suministro de la instancia de servicio.</dd>
   <dt>instancias de recursos (PATCH)</dt>
   <dd>Actualiza la instancia de servicio.</dd>
 </dl>
 
-**Nota sobre el catálogo (GET)**: este punto final define el contrato entre el intermediario y la plataforma {{site.data.keyword.Bluemix_notm}} en lo que respecta a los servicios y planes a los que el intermediario da soporte. Este punto final devuelve los metadatos de catálogo almacenados en el intermediario. Estos valores definen el contrato de suministro mínimo entre el servicio y la plataforma {{site.data.keyword.Bluemix_notm}}. Todos los metadatos de catálogo adicionales que no son necesarios para el suministro se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}. Las actualizaciones de los valores de visualización del catálogo que se utilizan para representar el panel de control como enlaces, iconos y metadatos convertidos i18n se deben actualizar en la consola de gestión de recursos y no alojarse en el intermediario. Ninguno de los metadatos almacenados en el intermediario se muestra en la consola de {{site.data.keyword.Bluemix_notm}} ni en la CLI de {{site.data.keyword.Bluemix_notm}}. La consola y la CLI devuelven lo que se ha definido en la consola de gestión de recursos y almacenado en el catálogo de {{site.data.keyword.Bluemix_notm}}. La sección siguiente muestra los valores mínimos necesarios que devolverá el catálogo (GET):
+**Nota sobre el catálogo (GET)**: este punto final define el contrato entre el intermediario y la plataforma {{site.data.keyword.Bluemix_notm}} en lo que respecta a los servicios y planes a los que el intermediario da soporte. Este punto final devuelve los metadatos de catálogo almacenados en el intermediario. Estos valores definen el contrato de suministro mínimo entre el servicio y la plataforma {{site.data.keyword.Bluemix_notm}}. Todos los metadatos de catálogo adicionales que no son necesarios para el suministro se almacenan en el catálogo de {{site.data.keyword.Bluemix_notm}}. Las actualizaciones de los valores de visualización del catálogo que se utilizan para representar el panel de control como enlaces, iconos y metadatos convertidos i18n se deben actualizar en la consola de gestión de recursos y no alojarse en el intermediario. Ninguno de los metadatos almacenados en el intermediario se muestra en la consola de {{site.data.keyword.Bluemix_notm}} ni en la CLI de {{site.data.keyword.Bluemix_notm}}. La consola y la CLI devuelven lo que se ha definido en la consola de gestión de recursos y almacenado en el catálogo de {{site.data.keyword.Bluemix_notm}}. La sección siguiente muestra los valores mínimos necesarios que devuelve el catálogo (GET):
 
 ```
 {
@@ -100,7 +100,7 @@ Los intermediarios de servicio deben proporcionar un conjunto estándar de valor
 
 ### Lógica de los puntos finales necesarios para servicios que se pueden enlazar
 
-Si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}, debe poder devolver los puntos finales de la API y las credenciales a los consumidores del servicio. Un servicio que se puede enlazar debe utilizar las operaciones enlazables de la especificación Open Service Broker y debe utilizar los siguientes puntos finales/vías de acceso:
+Si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}, debe poder devolver los puntos finales de la API y las credenciales a los consumidores del servicio. Un servicio que se puede enlazar debe utilizar las operaciones enlazables de la especificación Open Service Broker y debe utilizar los siguientes puntos finales o vías de acceso:
 
 <dl>
   <dt>enlaces y credenciales (PUT)</dt>

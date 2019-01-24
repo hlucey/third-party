@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -94,7 +94,7 @@ Content-Type: application/json
 #### ヘッダー:
 {: #headers1}
 
-  - Authorization: Basic *[client id]:[client secret]*
+  - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
@@ -303,4 +303,4 @@ curl -X POST \
 ## 次のステップ
 {: #next-steps}
 
-次に、すべての事項をまとめます。 リソース管理コンソールに戻り、限定表示モードでサービスを公開して、カタログでオファリングを確認します。 [サービスの公開およびテスト](/docs/third-party/cis4-rmc-publish.html)を参照。
+次に、すべての事項をまとめます。 リソース管理コンソールに戻り、限定表示モードでサービスを公開して、カタログでオファリングを確認します。 詳しくは、[サービスの公開およびテスト](/docs/third-party/cis4-rmc-publish.html)を参照してください。

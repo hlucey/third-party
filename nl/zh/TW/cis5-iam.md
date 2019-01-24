@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -302,4 +302,4 @@ curl -X POST \
 ## 後續步驟
 {: #next-steps}
 
-該將所有項目組合在一起了！回到資源管理主控台，以受限可見性發佈您的服務，並在型錄中驗證您的供應項目。請參閱：[發佈及測試服務](/docs/third-party/cis4-rmc-publish.html)。
+該將所有項目組合在一起了！回到資源管理主控台，以受限可見性發佈您的服務，並在型錄中驗證您的供應項目。如需相關資訊，請參閱[發佈及測試服務](/docs/third-party/cis4-rmc-publish.html)。
