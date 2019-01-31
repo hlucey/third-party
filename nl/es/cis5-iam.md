@@ -94,7 +94,7 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 #### Cabeceras:
 {: #headers1}
 
-  - Authorization: Basic *[client id]:[client secret]*
+  - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 
