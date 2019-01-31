@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,7 +63,7 @@ L'{{site.data.keyword.Bluemix_notm}} Open Service Broker estende la specifica di
 
 ### Logica dell'endpoint richiesta per tutti i broker dei servizi
 
-I broker dei servizi devono fornire un insieme standard di valori di metadati che vengono utilizzati dalle API REST e i broker {{site.data.keyword.Bluemix_notm}} devono avere la logica per i seguenti endpoint/percorsi dell'API REST:
+I broker dei servizi devono fornire un insieme standard di valori di metadati che vengono utilizzati dalle API REST e i broker {{site.data.keyword.Bluemix_notm}} devono avere la logica per i seguenti endpoint o percorsi dell'API REST:
 
 <dl>
   <dt>catalog (GET)</dt>
@@ -76,7 +76,7 @@ I broker dei servizi devono fornire un insieme standard di valori di metadati ch
   <dd>Aggiorna la tua istanza del servizio.</dd>
 </dl>
 
-**Nota su catalog (GET)**: questo endpoint definisce il contratto tra il broker e la piattaforma {{site.data.keyword.Bluemix_notm}} per i servizi e i piani supportati dal broker. Questo endpoint restituisce i metadati del catalogo memorizzati all'interno del tuo broker. Questi valori definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Tutti i metadati del catalogo aggiuntivi che non sono richiesti per il provisioning sono memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}. Gli eventuali aggiornamenti ai valori di visualizzazione del catalogo utilizzati per riprodurre il tuo dashboard come link, icone e metadati tradotti in i18n devono essere aggiornati nella console di gestione delle risorse e non ospitati nel tuo broker. Nessuno dei metadati archiviati nel tuo broker viene visualizzato nella console {{site.data.keyword.Bluemix_notm}} o nella CLI {{site.data.keyword.Bluemix_notm}}. La console e la CLI restituiscono quello che era stato impostato nella console di gestione delle risorse e archiviato nel catalogo {{site.data.keyword.Bluemix_notm}}. La seguente sezione mostra i valori minimi richiesti che il catalogo (GET) restituirà:
+**Nota su catalog (GET)**: questo endpoint definisce il contratto tra il broker e la piattaforma {{site.data.keyword.Bluemix_notm}} per i servizi e i piani supportati dal broker. Questo endpoint restituisce i metadati del catalogo memorizzati all'interno del tuo broker. Questi valori definiscono il contratto di provisioning minimo tra il tuo servizio e la piattaforma {{site.data.keyword.Bluemix_notm}}. Tutti i metadati del catalogo aggiuntivi che non sono richiesti per il provisioning sono memorizzati nel catalogo {{site.data.keyword.Bluemix_notm}}. Gli eventuali aggiornamenti ai valori di visualizzazione del catalogo utilizzati per riprodurre il tuo dashboard come link, icone e metadati tradotti in i18n devono essere aggiornati nella console di gestione delle risorse e non ospitati nel tuo broker. Nessuno dei metadati archiviati nel tuo broker viene visualizzato nella console {{site.data.keyword.Bluemix_notm}} o nella CLI {{site.data.keyword.Bluemix_notm}}. La console e la CLI restituiscono quello che era stato impostato nella console di gestione delle risorse e archiviato nel catalogo {{site.data.keyword.Bluemix_notm}}. La seguente sezione mostra i valori minimi richiesti restituiti da catalog (GET):
 
 ```
 {
@@ -101,7 +101,7 @@ I broker dei servizi devono fornire un insieme standard di valori di metadati ch
 
 ### Logica di endpoint richiesta per i servizi associabili
 
-Se il tuo servizio può essere associato alle applicazioni in {{site.data.keyword.Bluemix_notm}}, deve restituire credenziali ed endpoint API agli utenti del tuo servizio. Un servizio associabile deve utilizzare le operazioni associabili nella specifica Open Service Broker e implementare i seguenti endpoint/percorsi:
+Se il tuo servizio può essere associato alle applicazioni in {{site.data.keyword.Bluemix_notm}}, deve restituire credenziali ed endpoint API agli utenti del tuo servizio. Un servizio associabile deve utilizzare le operazioni associabili nella specifica Open Service Broker e implementare i seguenti endpoint o percorsi:
 
 <dl>
   <dt>bindings and credentials (PUT)</dt>
@@ -112,7 +112,7 @@ Se il tuo servizio può essere associato alle applicazioni in {{site.data.keywor
 
 ### Endpoint di estensione {{site.data.keyword.Bluemix_notm}} richiesti
 
-La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora eliminata. Affinché {{site.data.keyword.Bluemix_notm}} possa supportare i clienti che potrebbero subire una interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora l'annullamento, {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
+La specifica OSB non* supporta uno stato di istanza disabilitata ma non ancora eliminata. Affinché {{site.data.keyword.Bluemix_notm}} supporti i clienti che potrebbero subire un'interruzione della fatturazione o altre situazioni che comportano la sospensione dell'account (ma non ancora l'annullamento), {{site.data.keyword.Bluemix_notm}} ha definito endpoint API estesi che consentono di disabilitare e riabilitare le istanze del servizio. Le seguenti estensioni dell'endpoint sono **obbligatorie**:
 
 <dl>
   <dt>enable and disable instances (GET)</dt>
@@ -226,7 +226,7 @@ Se il tuo servizio basato su API di terze parti è implementato in un altro clou
 
 Durante l'onboarding in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB. Puoi avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio. All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestisce le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
 
-Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede ulteriori ubicazioni da definire nel catalogo globale, consulta il team di incorporamento {{site.data.keyword.Bluemix_notm}}.
+Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede più ubicazioni da definire nel catalogo globale, consulta il team di onboarding {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Ospita i tuoi broker

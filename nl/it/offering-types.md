@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-29"
 Puoi distribuire un'offerta di terze parti come un servizio di fatturazione integrato o di riferimento in {{site.data.keyword.Bluemix}}.
 {:shortdesc}
 
-La distribuzione della tua offerta di terze parti come un servizio di fatturazione integrato significa che gli utenti possono scegliere tra diversi piani dei prezzi IBM elencati nella tua pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Inoltre, gli utenti possono automaticamente creare un'istanza della tua offerta di terze parti.
+La distribuzione della tua offerta di terze parti come un servizio di fatturazione integrato indica che gli utenti possono scegliere tra diversi piani dei prezzi IBM elencati nella tua pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Inoltre, gli utenti possono automaticamente creare un'istanza della tua offerta di terze parti.
 
 Quando distribuisci la tua offerta di terze parti come un servizio di riferimento, gli utenti vengono indirizzati al tuo sito web dalla pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Dal tuo sito web, gli utenti creano gli account e ottengono le credenziali appropriate. Queste credenziali sono necessarie per collegare in modo programmatico la tua offerta di terze parti a un'applicazione che stanno creando in {{site.data.keyword.Bluemix_notm}}.
 

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,13 +63,13 @@ Les courtiers de services peuvent être développés en prenant en compte l'[{{s
 
 ### Logique de noeud final requise pour tous les courtiers de services
 
-Les courtiers de services doivent fournir un ensemble standard de valeurs de métadonnées utilisées par les API REST. De plus, les courtiers {{site.data.keyword.Bluemix_notm}} doivent inclure la logique pour les noeuds finaux/chemins d'API REST suivants :
+Les courtiers de services doivent fournir un ensemble standard de valeurs de métadonnées utilisées par les API REST. De plus, les courtiers {{site.data.keyword.Bluemix_notm}} doivent inclure la logique pour les noeuds finaux ou les chemins d'API REST suivants :
 
 <dl>
   <dt>catalog (GET)</dt>
   <dd>Renvoie vos métadonnées de catalogue incluses dans votre courtier. Un grand nombre de valeurs de métadonnées de catalogue supplémentaires n'est pas renvoyé. Ces valeurs sont ajoutées exclusivement dans la console de gestion des ressources et stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}.</dd>
   <dt>resource instances (PUT)</dt>
-  <dd>Met à disposition votre instance de service</dd>
+  <dd>Met à disposition votre instance de service.</dd>
   <dt>resource instances (DELETE)</dt>
   <dd>Annule la mise à disposition de votre instance de service.</dd>
   <dt>resource instances (PATCH)</dt>
@@ -101,7 +101,7 @@ Les courtiers de services doivent fournir un ensemble standard de valeurs de mé
 
 ### Logique des noeuds finaux requis pour les services pouvant être liés
 
-Si votre service peut être lié à des applications dans {{site.data.keyword.Bluemix_notm}}, il doit renvoyer des données d'identification et des noeuds finaux d'API à vos consommateurs de service. Un service pouvant être lié doit utiliser les opérations pouvant être liées dans la spécification Open Service Broker et implémenter les noeuds finaux/chemins suivants :
+Si votre service peut être lié à des applications dans {{site.data.keyword.Bluemix_notm}}, il doit renvoyer des données d'identification et des noeuds finaux d'API à vos consommateurs de service. Un service pouvant être lié doit utiliser les opérations pouvant être liées dans la spécification Open Service Broker et implémenter les noeuds finaux ou les chemins suivants :
 
 <dl>
   <dt>bindings and credentials (PUT)</dt>
@@ -202,7 +202,7 @@ Decoded:
 
 La **version d'en-tête d'API** est [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Par exemple : `X-Broker-Api-Version: 2.12`.
 
-### resource instance (PUT) body.context and resource instance (PATCH) body.context
+### resource instance (PUT) body.context et resource instance (PATCH) body.context
 
 `PUT /v2/service_instances/:resource_instance_id` and `PATCH /v2/service_instances/:resource_instance_id` receive the following value within **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 

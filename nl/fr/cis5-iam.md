@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Remarque :** Ce jeton est valide pendant une heure et peut être réutilisé autant de fois que nécessaire pendant cette période. Il est fortement recommandé de mettre en cache ce jeton afin d'éviter d'effectuer cette demande pour chaque accès à l'élément `dashboard_url`.
+**Remarque :** ce jeton est valide pendant une heure et peut être réutilisé autant de fois que nécessaire pendant cette période. Il est fortement recommandé de le mettre en cache afin d'éviter d'effectuer cette demande pour chaque accès à l'élément `dashboard_url`.
 
 
 ### Autorisation - Etape 2 : Validez l'autorisation concernant l'instance de service pour l'utilisateur (/v2/authz POST)
@@ -303,4 +303,4 @@ S'applique à toutes les utilisations (`utilisateur, ID de service, nom de resso
 ## Etapes suivantes
 {: #next-steps}
 
-Il est temps maintenant de rassembler tous les éléments ! Accédez à nouveau à la console de gestion des ressources pour publier votre service en mode de visibilité limitée et valider votre offre dans le catalogue. Voir [Publication et test de votre service](/docs/third-party/cis4-rmc-publish.html).
+Il est temps maintenant de rassembler tous les éléments ! Accédez à nouveau à la console de gestion des ressources pour publier votre service en mode de visibilité limitée et valider votre offre dans le catalogue. Pour plus d'informations, voir [Publication et test de votre service](/docs/third-party/cis4-rmc-publish.html).

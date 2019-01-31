@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -27,7 +27,7 @@ Quando definisci la tua offerta, la pagina Access Manage della console di gestio
 
 Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
-## Ricava l'URI di reindirizzamento IAM 
+## Ricava l'URI di reindirizzamento IAM
 {: #redirect-uri}
 
 Quando definisci il tuo servizio nella console di gestione delle risorse, generi un ID client, ma è probabile che in quel momento non disponevi di un URI di reindirizzamento. Un ID client che è impostato su false viene creato da IAM. Finché non ritorni alla console di gestione delle risorse con il tuo URI di reindirizzamento, non avrai un vero ID client.
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Nota:** questo token è valido per un'ora e può essere riutilizzato il numero di volte necessario durante il periodo di tempo di un'ora. Si consiglia vivamente di memorizzare nella cache questo token per evitare di eseguire questa richiesta per ogni accesso al `dashboard_url`.
+**Nota:** questo token è valido per 1 ora e può essere riutilizzato tutte le volte che è necessario durante il periodo di tempo di 1 ora. Si consiglia vivamente di memorizzare nella cache questo token per evitare di eseguire questa richiesta per ogni accesso al `dashboard_url`.
 
 
 ### Autorizzazione - Passo 2: convalida l'autorizzazione per l'utente all'istanza del servizio (/v2/authz POST)
@@ -303,4 +303,4 @@ Ciò è applicabile a tutti gli utilizzi (`user, serviceId, crn`) e tutti i `sub
 ## Passi successivi
 {: #next-steps}
 
-Ora è il momento di mettere tutto insieme. Ritorna alla console di gestione delle risorse per pubblicare il tuo servizio in modalità di visibilità limitata e convalidare la tua offerta nel catalogo. Vedi [Pubblicazione e verifica del tuo servizio](/docs/third-party/cis4-rmc-publish.html).
+Ora è il momento di mettere tutto insieme. Ritorna alla console di gestione delle risorse per pubblicare il tuo servizio in modalità di visibilità limitata e convalidare la tua offerta nel catalogo. Per ulteriori informazioni, vedi [Pubblicazione e verifica del tuo servizio](/docs/third-party/cis4-rmc-publish.html).
