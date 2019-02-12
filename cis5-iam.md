@@ -37,7 +37,7 @@ The good news is that in the previous development step, you developed an OSB and
  The following examples show redirect URIs:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
