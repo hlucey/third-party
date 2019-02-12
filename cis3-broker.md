@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -225,7 +225,7 @@ If your third-party API-based service is implemented in another cloud and expose
 
 When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
 
-For a list of available locations, consult the [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
+For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 
 
 ## Host your brokers
