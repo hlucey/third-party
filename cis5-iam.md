@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ When you define your offering, the Access Manage page in the resource management
 {:shortdesc}
 
 ## Before you begin
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-Make sure that you completed the [getting started tutorial](/docs/third-party/index.html), and you're approved to deliver an integrated billing service.
+Make sure that you completed the [getting started tutorial](/docs/third-party?topic=third-party-get-started#get-started), and you're approved to deliver an integrated billing service.
 
 ## Derive your IAM redirect URI
 {: #redirect-uri}
@@ -89,7 +89,7 @@ This request can be done once when the application is started and again if the `
 **Authentication - Step 2:** Exchange the code for an access token calling
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### Headers:
 {: #headers1}
@@ -151,6 +151,7 @@ See the example in our [sample brokers](https://github.com/IBM/sample-resource-s
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### Headers:
 {: #headers2}
@@ -258,7 +259,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-See the example in our sample brokers: https://github.com/IBM/sample-resource-service-brokers
+See the example in our [sample brokers](https://github.com/IBM/sample-resource-service-brokers).
 
 ## IAM token scoping for third-party adopters
 {: #token_scoping}
@@ -301,6 +302,6 @@ The following section is an example of what is added in the authorization call:
 This is applicable to all usages (`user, serviceId, crn`) and all `subject.attributes` need a scope.
 
 ## Next steps
-{: #next-steps}
+{: #cis5-test}
 
-Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. For more information, see [Publishing and testing your service](/docs/third-party/cis4-rmc-publish.html).
+Now it's time to pull everything together! Return to the resource management console to publish your service in limited visibility and validate your offering in the catalog. For more information, see [Publishing and testing your service](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).

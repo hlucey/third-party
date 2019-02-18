@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Now that you have your hosted broker or brokers that meet the OSB specification,
 {:shortdesc}
 
 ## Before you begin
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-This step assumes that you're approved to deliver an integrated billing service. If you didn't complete the initial registration and approval in Provider workbench, see the [Getting started tutorial](/docs/third-party/index.md).
+This step assumes that you're approved to deliver an integrated billing service. If you didn't complete the initial registration and approval in Provider workbench, see the [Getting started tutorial](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
 Ensure that you start step 1 and completed steps 2, 3, and 4:
-1. [Author service docs and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
-2. [Define your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
-3. [Develop and host your service brokers](/docs/third-party/cis3-broker.html).
-3. [Develop an authentication flow](/docs/third-party/cis5-iam.html).
+1. [Author service docs and marketing announcement](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Define your offering in the resource management console](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Develop and host your service brokers](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [Develop an authentication flow](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Publish your service to {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ Stuck on a deployment failure? Contact your IBM representative for help.
 {: tip}
 
 ## Test your deployed offering 
-{: #test}
+{: #publish-test}
 
 Because you deployed in limited visibility mode, only you can see your offering in the {{site.data.keyword.Bluemix_notm}} catalog. Using the checklist in the following section, log in to {{site.data.keyword.Bluemix_notm}} and work through the test criteria.
 
@@ -84,6 +84,6 @@ If your tests are unsuccessful, repeat the previous steps to publish your servic
 
 
 ## Next steps
-{: #next-steps}
+{: #release}
 
-Now that you have a functional service in the catalog, you can build a Demo and ask for approval to publicly release your service. See: [Step 6: Publicly release your service](/docs/third-party/cis6-ga.html).
+Now that you have a functional service in the catalog, you can build a Demo and ask for approval to publicly release your service. See: [Step 6: Publicly release your service](/docs/third-party?topic=third-party-public-releasing#public-releasing).

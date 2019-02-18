@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # How integrated billing services use the {{site.data.keyword.Bluemix_notm}} platform
@@ -44,7 +43,7 @@ The provisioning layer provides APIs to help you manage the following elements o
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) enables you to securely authenticate users and control access to all cloud resources consistently across {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.Bluemix_notm}} provisioning layer adopted IAM for authentication and authorization of actions that are taken against the provisioning layer. Third-party offering providers use IAM to create an authentication flow (OAuth). For more information, see [What is IAM](/docs/iam/index.html#iamoverview)?
+Identity Access Management (IAM) enables you to securely authenticate users and control access to all cloud resources consistently across {{site.data.keyword.Bluemix_notm}}. The {{site.data.keyword.Bluemix_notm}} provisioning layer adopted IAM for authentication and authorization of actions that are taken against the provisioning layer. Third-party offering providers use IAM to create an authentication flow (OAuth). For more information, see [What is IAM](/docs/iam?topic=iam-iamoverview#iamoverview)?
 
 If your offering uses OpenID Connect (OIDC) libraries, IAM supports OIDC integration. OIDC is an authentication layer on top of OAuth 2.0, an authorization framework and can help simplify the onboarding process. For more information on OIDC, see [Open ID Connect](http://openid.net/connect/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
@@ -88,12 +87,12 @@ If a service offers a metered plan, {{site.data.keyword.Bluemix_notm}} users are
 
 All integrated billing services that offer a metered plan must use the {{site.data.keyword.Bluemix_notm}} metering service to report usage data.
 
-You’re required to automate hourly usage submission by using the metering service API if you offer a metered plan.
-{: important}
+You’re required to automate hourly usage submission by using metering service API if you offer a metered plan.
 
-For more information on metering, see: [Metering integration](/docs/third-party/metering.html#meteringintera). For more information on submitting metered usage, see: [Submitting usage for metered plans](/docs/third-party/submitusage.html#submitusage)
+For more information on metering, see: [Metering integration](/docs/third-party?topic=third-party-meteringintera#meteringintera). For more information on submitting metered usage, see: [Submitting usage for metered plans](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Provisioning scenario: Pulling it all together
+{: #provision2}
 
 Now let's pull all of the concepts together and look at an example of how service instance creation works by using the {{site.data.keyword.Bluemix_notm}} platform.
 
@@ -156,7 +155,7 @@ In the previous example, you can see the metadata returned in the `context` para
 
    In this sample, this `compose-redis` instance is part of {{site.data.keyword.Bluemix_notm}} account with ID. The unique ID for the instance is `416d769b-682d-4833-8bd7-5ef8778e5b52`, and the instance is hosted in the `us-south` region of the public {{site.data.keyword.Bluemix_notm}}.
 
-* **resource_group_crn**: Returns the resource group that includes the service instance. For more details, see [Managing resource groups](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: Returns the resource group that includes the service instance. For more details, see [Managing resource groups](/docs/resources?topic=resources-rgs#rgs).
 
    Offering providers aren't concerned with the `resource_group_crn` except in unique circumstances. Consult your IBM representative on your use case before you use that field.
    {: note}

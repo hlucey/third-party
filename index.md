@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 In this tutorial, we introduce the IBM Provider workbench and walk through the process of registering your third-party offering as an integrated billing service.
 {:shortdesc}
 
-You can deliver a third-party offering in {{site.data.keyword.Bluemix}} either as an integrated billing service or a referral service. This tutorial focuses on the integrated billing service option. To learn more about the referral service option, see [Third-party offering types](/docs/third-party/offering-types.html).
+You can deliver a third-party offering in {{site.data.keyword.Bluemix}} either as an integrated billing service or a referral service. This tutorial focuses on the integrated billing service option. To learn more about the referral service option, see [Third-party offering types](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
 
 ## Step 1. Register your offering
@@ -46,7 +46,7 @@ Use the Provider workbench to list your offering type as an integrated billing s
 After you select **Integrated billing service** as your offering type and submit the readiness assessment form, the page is refreshed with a section for defining the content. It's displayed on your catalog details page in the {{site.data.keyword.Bluemix_notm}} console. Complete each field and submit the form for review. The review process can take a few days.
 
 ## Next steps
-{: #next-steps}
+{: #gs-next-steps}
 
 When you're approved, you receive an email that outlines your next steps:
 
@@ -57,4 +57,4 @@ When you're approved, you receive an email that outlines your next steps:
 
 * In the resource management console, integrate your offering into {{site.data.keyword.Bluemix_notm}} by defining your offering, building pricing plans, enabling security, and managing the deployment of your offering in different {{site.data.keyword.Bluemix_notm}} environments. 
 
-For more details, see [Developing and publishing an integrated billing service](/docs/third-party/integrated-billing-service.html). 
+For more details, see [Developing and publishing an integrated billing service](/docs/third-party?topic=third-party-overview#overview). 

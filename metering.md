@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ The following list describes the expectations for tracking and submitting usage:
 *	Third-party offering providers don't need to submit usage for free plans.
 *	Third-party offering providers don't need to submit usage for monthly subscription plans.
 *	For metered plans, all offering providers must submit usage hourly (Lite plans must submit every 15 minutes to 1 hour).
-*	The offering provider is responsible for automating usage submission, including automation that tries failure responses again. {{site.data.keyword.Bluemix_notm}} doesn't provide a retry function for failed submissions. For more information, see the status codes and actions table in [Submitting usage records](/docs/third-party/submitusage.html#submitting-usage-records).
+*	The offering provider is responsible for automating usage submission, including automation that tries failure responses again. {{site.data.keyword.Bluemix_notm}} doesn't provide a retry function for failed submissions. For more information, see the status codes and actions table in [Submitting usage records](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	Usage records for the current month must be submitted, at the latest, by the 2nd of the following month.
 *	{{site.data.keyword.Bluemix_notm}} is configured for a monthly billing cycle and time is represented in Coordinated Universal Time (UTC).
 *  Offering providers must test usage submission and validate their results to inform how the monthly billing cycle is calculated.
 
-For general information about pricing, see [How to calculate your costs](/docs/billing-usage/estimating_costs.html#cost). 
+For general information about pricing, see [How to calculate your costs](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Configuration properties
 {: #configure}

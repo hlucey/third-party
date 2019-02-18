@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -25,9 +25,9 @@ Now that you're approved to deliver an integrated billing service, you're ready 
 {:shortdesc}
 
 ## Before you begin
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. Ensure that you start working on [Step 1: Author service docs and marketing announcement (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Ensure that you start working on [Step 1: Author service docs and marketing announcement (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks).
 2. Ensure that you're registered with {{site.data.keyword.Bluemix_notm}}. If not, [register](https://cloud.ibm.com/registration){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon") before proceeding.
 3. Ensure that you are in the correct account when you begin working in the resource management console.
 4. Prepare your {{site.data.keyword.Bluemix_notm}} service name. You must provide both a service name that is used to identify the service by the {{site.data.keyword.Bluemix_notm}} platform, and a display name that your customers see in the {{site.data.keyword.Bluemix_notm}} catalog.
@@ -73,7 +73,7 @@ Your initial offering letter includes a service documentation URL that was gener
 ## Register with IAM
 {: #reg-iam}
 
-IAM is required for all services that are onboarded into {{site.data.keyword.Bluemix_notm}}. See [ What is IAM?](/docs/iam/index.html#what-is-cloud-iam-) to learn more about IAM concepts and requirements.
+IAM is required for all services that are onboarded into {{site.data.keyword.Bluemix_notm}}. See [ What is IAM?](/docs/iam?topic=iam-iamoverview#iamoverview) to learn more about IAM concepts and requirements.
 
 The resource management console generates the following IAM values:
    - Service ID (generated and stored)
@@ -91,7 +91,7 @@ The service provider needs to provide:
 You need to come back to the IAM page later to provide your `Redirect URI`. You won't have this value until you do some additional development to build an authentication flow. Later steps help guide you through discerning your Redirect URI value.
 {: note}
 
-You’re given your API Key when you **Enable IAM**. It’s critical that you save the API Key. The value isn’t shown again. If you lose your API Key, you can delete the key and create a new one: [Manage service ID API keys](/docs/iam/serviceid_keys.html#serviceidapikeys)
+You’re given your API Key when you **Enable IAM**. It’s critical that you save the API Key. The value isn’t shown again. If you lose your API Key, you can delete the key and create a new one: [Manage service ID API keys](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys).
 {: tip}
 
 ## Develop a pricing plan
@@ -103,10 +103,10 @@ When you onboard your service into {{site.data.keyword.Bluemix_notm}}, you must 
 2. Click **Add plan** to create a new plan entry and click **Edit plan** to edit the plan.
    * **Free plan**: All offerings can have one Lite plan that is free of charge, allowing users to try out your service. Free plans use *Lite* for the **Display Name** and *lite* for the **Programmatic Name**. Specify **Yes** for **Is this plan free?**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog.
    * **Subscription plan**: Specify **No** for **Is this plan free?**. Complete the required fields. Leave the default **Pricing metrics** metric. This default metric is provided for you to use to charge users a one-time monthly fee. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage.
-   * **Metered plan**: Specify **No** for **Is this plan free?**. Complete the required fields. *Delete* the default **Pricing metrics** subscription metric. Click **Add another metric**, complete the **Add pricing metric** page, and click **Add metric**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage. For help selecting the right metrics, see [Metering integration](/docs/third-party/metering.html).
+   * **Metered plan**: Specify **No** for **Is this plan free?**. Complete the required fields. *Delete* the default **Pricing metrics** subscription metric. Click **Add another metric**, complete the **Add pricing metric** page, and click **Add metric**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage. For help selecting the right metrics, see [Metering integration](/docs/third-party?topic=third-party-content-tasks#content-tasks).
 3. The **Pricing** page is now be marked complete, indicating that you passed the minimum requirements to complete this page.
 
-Service providers are required to automate hourly usage submission for all metered plans. For more information, see: [Submitting usage for metered plans](/docs/third-party/submitusage.html)
+Service providers are required to automate hourly usage submission for all metered plans. For more information, see: [Submitting usage for metered plans](/docs/third-party?topic=third-party-submitusage#submitusage).
 {: tip}
 
 ## Export your metadata as JSON
@@ -121,6 +121,6 @@ Now that you defined your service within the resource management console, you ca
 Save your `catalog.json` file. You’ll use it in to develop your Open Service Broker in the next section.
 
 ## Next steps
-{: #next-steps}
+{: #cis2-next-steps}
 
-Way to go! You defined your service offering by adding catalog display metadata, by registering with IAM, and by creating one or more pricing plans. Next, you can take your exported JSON and begin developing a service broker. See [Step 3: Developing and hosting service brokers](/docs/third-party/cis3-broker.html).
+Way to go! You defined your service offering by adding catalog display metadata, by registering with IAM, and by creating one or more pricing plans. Next, you can take your exported JSON and begin developing a service broker. See [Step 3: Developing and hosting service brokers](/docs/third-party?topic=third-party-step3-osb#step3-osb).

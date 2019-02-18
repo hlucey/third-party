@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-04" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -28,9 +28,9 @@ The following steps outline the process for submitting usage:
 
 1. Submit an initial usage test through the Usage Submission REST API tool to validate that your metered plans are correctly configured.
 2. Automate continuous hourly submission to the Usage Submission Rest API tool for each metered plan. You can host these automated submissions wherever you want as long as standard SSO is supported.
-2. The usage records are aggregated based on the metering model, and the total quantity is displayed on the Usage Dashboard in the {{site.data.keyword.Bluemix_notm}} console.
-3. The aggregated unit quantity from the metering process is used, the cost is applied, and the amount that the user owes for the service instance is calculated.
-4. At the end of the month, the final calculated cost is the amount that is generated for the user.
+3. The usage records are aggregated based on the metering model, and the total quantity is displayed on the Usage Dashboard in the {{site.data.keyword.Bluemix_notm}} console.
+4. The aggregated unit quantity from the metering process is used, the cost is applied, and the amount that the user owes for the service instance is calculated.
+5. At the end of the month, the final calculated cost is the amount that is generated for the user.
 
 ## Prerequisites
 {: #prereqs}
@@ -49,7 +49,7 @@ Review the following prerequisites for enabling metering for your service:
 Refer to the following guidelines when you use the {{site.data.keyword.Bluemix_notm}} metering service to submit resource usage data:
 
 * The start time and end time represent the time range during which the measures were collected. The times aren't dependent on the time at which the usage record is submitted to the metering APIs.
-* Usage records are facts. Don't update the usage record after you create it. A location is specified when you successfully create a usage record. If an error code is returned, see the [actions](#actions) that you might have to take.
+* Usage records are facts. Don't update the usage record after you create it. A location is specified when you successfully create a usage record. If an error code is returned, see the [actions](/docs/third-party?topic=third-party-submitusage#actions) that you might have to take.
 * A usage record is uniquely identified by the signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. When a usage record is processed, any other usage record with the same signature is rejected as a duplicate.
 * Don't combine the interaction with the metering service with any other services. The requests must be handled individually even if the metering starts and ends with provisioning and de-provisioning of the instance.
 * The resource usage data must be submitted to the metering service once every 2 - 24 hours. How often you submit your usage data depends on how often your usage metrics change.

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ You can use the IBM Provider workbench to create your getting started documentat
 {:shortdesc}
 
 ## Before you begin
-{: #prereqs}
+{: #marketing-prereqs}
 
-Make sure that you completed the [getting started tutorial](/docs/third-party/index.html), and you're approved to deliver an integrated billing service.
+Make sure that you completed the [getting started tutorial](/docs/third-party?topic=third-party-get-started#get-started), and you're approved to deliver an integrated billing service.
 
 ## Create your getting started documentation
-{: #docs}
+{: #gs-docs}
 
 To deliver an integrated billing service, you're required to provide getting started documentation that describes how users get started with using your service in the context of {{site.data.keyword.Bluemix_notm}}. You can work on this task in parallel while you develop your service.
 
@@ -54,4 +54,4 @@ After you submit your service announcement, an IBM marketing manager reviews and
 ## Next steps
 {: #next-steps}
 
-Now that you've started the tasks for creating your getting started documentation and service announcement, you're ready to define your offering in the resource management console. See [Step 2: Defining your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
+Now that you've started the tasks for creating your getting started documentation and service announcement, you're ready to define your offering in the resource management console. See [Step 2: Defining your offering in the resource management console](/docs/third-party?topic=third-party-step2-define#step2-define).

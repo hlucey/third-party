@@ -28,17 +28,17 @@ Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemi
 You can build your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation.
 
 ## Before you begin
-{: #pre-reqs}
+{: #broker-pre-reqs}
 
 Ensure that you start step 1 and completed step 2:
-1. [Author service docs and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
-2. [Define your offering in the resource management console](/docs/third-party/cis2-rmc-define.html).
+1. [Author service docs and marketing announcement](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Define your offering in the resource management console](/docs/third-party?topic=third-party-step2-define#step2-define).
 
 
 ## View our {{site.data.keyword.Bluemix_notm}} platform provisioning scenario
 {: #scenario}
 
-You're developing an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) to gain an understanding of how resource creation works.
+You're developing an Open Service Broker that works with the {{site.data.keyword.Bluemix_notm}} platform. See our [Provisioning scenario](/docs/third-party?topic=third-party-how-it-works#provision2) to gain an understanding of how resource creation works.
 
 ## Become familiar with the OSB specification
 {: #learn-osb}
@@ -62,6 +62,7 @@ The {{site.data.keyword.Bluemix_notm}} Open Service Broker extends the Open Serv
 {: tip}
 
 ### Required endpoint logic for all service brokers
+{: #endpoint-sb}
 
 Service brokers must provide a standard set of metadata values that are consumed by REST APIs, and {{site.data.keyword.Bluemix_notm}} brokers must have logic for the following REST API endpoints or paths:
 
@@ -99,6 +100,7 @@ Service brokers must provide a standard set of metadata values that are consumed
 ```
 
 ### Required endpoints logic for bindable services
+{: #bindable}
 
 If your service can be bound to applications in {{site.data.keyword.Bluemix_notm}}, it must be return API endpoints and credentials to your service consumers. A bindable service must use the bindable operations in the Open Service Broker specification, and implement the following endpoints or paths:
 
@@ -110,6 +112,7 @@ If your service can be bound to applications in {{site.data.keyword.Bluemix_notm
 </dl>
 
 ### Required {{site.data.keyword.Bluemix_notm}} extension endpoints
+{: #docs} 
 
 The OSB specification doesn't* support a disabled instance state, but not yet deleted instance state. In order for {{site.data.keyword.Bluemix_notm}} to support customers that might experience a billing lapse or other situations that result in an account suspension (but not yet cancellation), {{site.data.keyword.Bluemix_notm}} defined the extended API endpoints that allow service instances to be disabled and reenabled. The following endpoint extensions are **required**:
 
@@ -186,6 +189,7 @@ Your OSB services array must be the same as the offering metadata you added to t
 Your service broker or brokers receive the following information from the {{site.data.keyword.Bluemix_notm}} platform:
 
 ### X-Broker-API-Originating-Identity
+{: #x-broker}
 
 The **user identity header** is provided via an API originating identity header. This request header includes the user's {{site.data.keyword.Bluemix_notm}} IAM Identity. The IAM Identity is base64 encoded. {{site.data.keyword.Bluemix_notm}} supports a single authentication realm: `IBMid`. The `IBMid` realm uses an IBMid Unique ID (IUI) to identify the user's identity in {{site.data.keyword.Bluemix_notm}}. This IUI is an opaque string to the service provider.
 
@@ -198,10 +202,12 @@ Decoded:
 ```
 
 ### API header version
+{: #api-header}
 
 The **API version header** is [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). For example: `X-Broker-Api-Version: 2.12`.
 
 ### resource instance (PUT) body.context and resource instance (PATCH) body.context
+{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` and `PATCH /v2/service_instances/:resource_instance_id` receive the following value within **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
@@ -209,6 +215,7 @@ The **API version header** is [2.12](https://github.com/openservicebrokerapi/ser
 {: #more-info}
 
 ### Recommendations on using asynchronous instead of synchronous operations
+{: #asynch-ops}
 
 The OSB API supports both synchronous and asynchronous modes of operation. If your operations are going to take less than 10 seconds, then synchronous responses are recommended. Otherwise, you must use the asynchronous mode of operation. More information is contained in the OSB specification.
 
@@ -216,6 +223,7 @@ If your async operation takes less than 10 seconds when you're provisioning an i
 {: tip}
 
 ### Recommendations for managing brokers across locations
+{: #managing-broker}
 
 It's important for users to understand the location of their cloud services for latency, availability, and data residency.
 
@@ -225,7 +233,7 @@ If your third-party API-based service is implemented in another cloud and expose
 
 When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
 
-For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
+For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 
 
 ## Host your brokers
@@ -237,13 +245,13 @@ To host your broker outside of IBM, you must ensure that it meets the following 
 - Must follow Transport Layer Security (TLS) protocol version 1.2
 - Must be hosted on a valid HTTPs endpoint that is accessible on the public internet
 
-If you want to host in {{site.data.keyword.Bluemix_notm}}, you can find information about creating an app by using Containers (Kubernetes) here: [Internal Adopters - Usage information](/docs/containers/cs_internal.html#cs_internal).
+If you want to host in {{site.data.keyword.Bluemix_notm}}, you can find information about creating an app by using Containers (Kubernetes) here: [Internal Adopters - Usage information](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 You'll need the hosted location of your service broker to complete the next step. Have the URL and credentials that are associated with your app ready when you move to the next step.
 {: tip}
 
 ## How to test your service's broker
-{: #test}
+{: #broker-test}
 
 You must be validating your broker by running curl commands against the different endpoints you're enabling. The sample readme file provides excellent guidance for curling your OSB endpoints: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
@@ -265,6 +273,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Next steps
-{: #next-steps}
+{: #cis3-next-steps}
 
-You have some serious skills! You built and hosted a service broker that meets the OSB specification. See [Step 4: Developing an authentication flow](/docs/third-party/cis5-iam.html).
+You have some serious skills! You built and hosted a service broker that meets the OSB specification. See [Step 4: Developing an authentication flow](/docs/third-party?topic=third-party-step4-iam#step4-iam).

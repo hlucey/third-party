@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ Next, outside of the resource management console, you perform code development t
 ## How the process works
 {: #process}
 
-To deliver an integrated billing service, you work with the Provider workbench, the resource management console, and the development environment of your choice. See the [checklist](/docs/third-party/checklist.html#checklist) to help track these steps.
+To deliver an integrated billing service, you work with the Provider workbench, the resource management console, and the development environment of your choice. See the [checklist](/docs/third-party?topic=third-party-checklist#checklist) to help track these steps.
 
-These steps assume that you're approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+These steps assume that you're approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started)
 {: tip}
 
-1. [Create your documentation and marketing announcement](/docs/third-party/cis1-docs-marketing.html).
-2. [Define your offering in the resource management console {{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
-3. [Develop and host your service brokers](/docs/third-party/cis3-broker.html).
-4. [Develop an authentication flow](/docs/third-party/cis5-iam.html).
-5. [Test your service](/docs/third-party/cis4-rmc-publish.html).
-6. [Publicly release your service](/docs/third-party/cis6-ga.html).
+1. [Create your documentation and marketing announcement](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Define your offering in the resource management console {{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Develop and host your service brokers](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Develop an authentication flow](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Test your service](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [Publicly release your service](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## Support
 {: #support}
