@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-05"
+  years: 2018, 2019
+lastupdated: "2019-02-12"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Schritt 3. Service-Broker entwickeln und hosten
@@ -22,7 +23,7 @@ lastupdated: "2018-09-05"
 Mithilfe der von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten können Sie nun mindestens einen neuen Service-Broker in der Programmiersprache Ihrer Wahl erstellen.
 {:shortdesc}
 
-Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um so Serviceinstanzen (Instanziierung eines Serviceangebots) und Servicebindungen (Darstellung einer Zuordnung zwischen einer Anwendung und einer Serviceinstanz, in der häufig die Berechtigungsnachweise enthalten sind, die die Anwendung zur Kommunikation mit der Serviceinstanz verwendet) bereitzustellen und zu verwalten. Durch Angeben gültiger Metadatenwerte wird erfolgreich eine REST-konforme API-Antwort erstellt, wenn eine Anforderung ausgeführt wird.
+Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.Bluemix_notm}}-Plattform interagiert mit Service-Brokern, um Serviceinstanzen und Servicebindungen bereitzustellen und zu verwalten. Sie können gültige Metadatenwerte bereitstellen, um eine REST-konforme API-Antwort zu erstellen, wenn eine Anforderung ausgeführt wird.
 
 Sie erstellen Ihren Broker, indem Sie eine Kombination aus den von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten, den von IBM bereitgestellten öffentlichen {{site.data.keyword.Bluemix_notm}}-Service-Broker-Beispielen und der API-Dokumentation für Ressourcenbroker verwenden.
 
@@ -49,33 +50,33 @@ Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemi
 
 [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link")
 
-**Hinweis:** Nicht für alle Sprachen steht ein Beispiel zur Verfügung. Wenn Sie beispielsweise einen Python-Beispielbroker benötigen, können Sie über Google ein Cloud Foundry-Beispiel suchen. Dieses Beispiel muss möglicherweise angepasst werden, um die OSB-Anforderungen zu erfüllen.
-
+Es wird nicht für alle Sprachen ein Beispiel bereitgestellt. Wenn Sie beispielsweise einen Python-Beispielbroker benötigen, können Sie über Google ein Cloud Foundry-Beispiel suchen. Dieses Beispiel muss möglicherweise angepasst werden, um die OSB-Anforderungen zu erfüllen.
+{: note}
 
 ## {{site.data.keyword.Bluemix_notm}} Open Service Broker-API-Dokumentation anzeigen
 {: #docs}
 
-Wenn Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://console.bluemix.net/apidocs/ibm-cloud-osb-api){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen, können Sie Service-Broker entwickeln. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, wie die API mit Ihren Brokern interagiert.
+Wenn Sie über Kenntnisse zum Thema [{{site.data.keyword.Bluemix_notm}} Open Service Broker-API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") verfügen, können Sie Service-Broker entwickeln. Machen Sie sich mit der Broker-API und der Art und Weise vertraut, wie die API mit Ihren Brokern interagiert.
 
 Der {{site.data.keyword.Bluemix_notm}} Open Service Broker erweitert die Version 2.12 der Open Service Broker-Spezifikation.
 {: tip}
 
 ### Erforderliche Endpunktlogik für alle Service-Broker
 
-Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden. Außerdem müssen {{site.data.keyword.Bluemix_notm}}-Broker Logik für die folgenden REST-API-Endpunkte und -Pfade enthalten:
+Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden, und {{site.data.keyword.Bluemix_notm}}-Broker müssen über Logik für die folgenden REST-API-Endpunkte und -Pfade verfügen:
 
 <dl>
   <dt>Katalog (GET)</dt>
   <dd>Gibt die Katalogmetadaten zurück, die in Ihrem Broker enthalten sind. Viele zusätzliche Katalogmetadatenwerte werden nicht zurückgegeben. Diese Werte werden ausschließlich in der Konsole für das Ressourcenmanagement hinzugefügt und im {{site.data.keyword.Bluemix_notm}} gespeichert.</dd>
   <dt>Ressourceninstanzen (PUT)</dt>
-  <dd>Bereitstellung Ihrer Serviceinstanz</dd>
+  <dd>Stellt Ihre Serviceinstanz bereit.</dd>
   <dt>Ressourceninstanzen (DELETE)</dt>
-  <dd>Aufheben der Bereitstellung Ihrer Serviceinstanz</dd>
+  <dd>Hebt die Bereitstellung Ihrer Serviceinstanz auf.</dd>
   <dt>Ressourceninstanzen (PATCH)</dt>
-  <dd>Aktualisierung Ihrer Serviceinstanz</dd>
+  <dd>Aktualisiert Ihre Serviceinstanz.</dd>
 </dl>
 
-**Hinweis zu 'Katalog (GET)'**: Dieser Endpunkt definiert den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Dieser Endpunkt gibt die Katalogmetadaten zurück, die in Ihrem Broker gespeichert sind. Diese Werte definieren den mindestens erforderlichen Bereitstellungsvertrag zwischen Ihrem Service und der {{site.data.keyword.Bluemix_notm}}-Plattform. Alle zusätzlichen Katalogmetadaten, die für die Bereitstellung nicht erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden. Der folgende Abschnitt zeigt die mindestens erforderlichen Werte an, die 'catalog (GET)' zurückgibt:
+**Hinweis zu 'Katalog (GET)'**: Dieser Endpunkt definiert den Vertrag zwischen dem Broker und der {{site.data.keyword.Bluemix_notm}}-Plattform für die Services und Pläne, die vom Broker unterstützt werden. Dieser Endpunkt gibt die Katalogmetadaten zurück, die in Ihrem Broker gespeichert sind. Diese Werte definieren den mindestens erforderlichen Bereitstellungsvertrag zwischen Ihrem Service und der {{site.data.keyword.Bluemix_notm}}-Plattform. Alle zusätzlichen Katalogmetadaten, die für die Bereitstellung nicht erforderlich sind, werden im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert. Alle Aktualisierungen an den Kataloganzeigewerten, die zur Darstellung Ihres Dashboards verwendet werden (z. B. Links, Symbole und mit i18n umgesetzte Metadaten) müssen in der Konsole für das Ressourcenmanagement aktualisiert werden und dürfen nicht in Ihrem Broker abgelegt werden. Keine der in Ihrem Broker gespeicherten Metadaten werden in der {{site.data.keyword.Bluemix_notm}}-Konsole oder der {{site.data.keyword.Bluemix_notm}}-CLI angezeigt. Die Konsole und die CLI geben die Daten zurück, die in der Konsole für das Ressourcenmanagement festgelegt und im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert wurden. Der folgende Abschnitt zeigt die mindestens erforderlichen Werte an, die 'Katalog (GET)' zurückgibt:
 
 ```
 {
@@ -100,18 +101,18 @@ Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, di
 
 ### Erforderliche Endpunktlogik für bindefähige Services
 
-Wenn Ihr Service an Anwendungen in {{site.data.keyword.Bluemix_notm}} gebunden werden kann, muss er API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückzugeben. Ein bindefähiger Service muss die bindefähigen Operationen in der Open Service Broker-Spezifikation verwenden und die folgenden Endpunkte und Pfade implementieren:
+Wenn Ihr Service an Anwendungen in {{site.data.keyword.Bluemix_notm}} gebunden werden kann, muss er API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückzugeben. Ein bindefähiger Service muss die bindefähigen Operationen in der Open Service Broker-Spezifikation verwenden und die folgenden Endpunkte oder Pfade implementieren:
 
 <dl>
   <dt>Bindungen und Berechtigungsnachweise (PUT)</dt>
-  <dd>Bindung Ihrer Serviceinstanz an eine Anwendung.</dd>
+  <dd>Bindet Ihre Serviceinstanz an eine Anwendung.</dd>
   <dt>Bindungen und Berechtigungsnachweise (DEL)</dt>
-  <dd>Aufheben der Bindung Ihrer Serviceinstanz an eine Anwendung.</dd>
+  <dd>Hebt die Bindung Ihrer Serviceinstanz an eine Anwendung auf.</dd>
 </dl>
 
 ### Erforderliche {{site.data.keyword.Bluemix_notm}}-Erweiterungsendpunkte
 
-Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit {{site.data.keyword.Bluemix_notm}} Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (nicht jedoch zum Abbruch) führen können, hat {{site.data.keyword.Bluemix_notm}} erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Folgende Endpunkterweiterungen sind **erforderlich**:
+Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit {{site.data.keyword.Bluemix_notm}} Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch noch nicht zu seiner Stornierung) führen können, hat {{site.data.keyword.Bluemix_notm}} erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Folgende Endpunkterweiterungen sind **erforderlich**:
 
 <dl>
   <dt>Instanzen aktivieren und inaktivieren (GET)</dt>
@@ -120,7 +121,8 @@ Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Insta
   <dd>Ermöglicht das Aktivieren oder Inaktivieren einer Serviceinstanz.</dd>
 </dl>
 
-**Anmerkung**: Die Inaktivierung des Zugriffs auf die Serviceinstanz bei Aufruf des Inaktivierungsendpunkts und die erneute Aktivierung des Zugriffs bei Aufruf des Aktivierungsendpunkts liegt im Verantwortungsbereich des Service-Providers.
+Die Inaktivierung des Zugriffs auf die Serviceinstanz bei Aufruf des Inaktivierungsendpunkts und die erneute Aktivierung des Zugriffs bei Aufruf des Aktivierungsendpunkts ist Aufgabe des Service-Providers.
+{: note}
 
 ## Informationen zur Verwendung der exportierten Metadaten als Leitfaden für die Brokerentwicklung
 {: #use-metadata}
@@ -207,11 +209,11 @@ Der **Header der API-Version** lautet [2.12](https://github.com/openservicebroke
 ## Zusätzliche Brokerempfehlungen
 {: #more-info}
 
-### Empfehlungen zur Verwendung asynchroner oder synchroner Operationen
+### Empfehlungen zur Verwendung asynchroner anstelle synchroner Operationen
 
 Die OSB-API unterstützt sowohl den synchronen als auch den asynchronen Betriebsmodus. Wenn die Operationen weniger als 10 Sekunden in Anspruch nehmen, werden synchrone Antworten empfohlen. Andernfalls müssen Sie den asynchronen Betriebsmodus verwenden. Weitere Informationen sind in der OSB-Spezifikation enthalten.
 
-Wenn die asynchrone Operation beim Bereitstellen einer Instanz weniger als 10 Sekunden dauert, tritt auf der Plattform eine Zeitlimitüberschreitung auf.
+Wenn die asynchrone Operation beim Bereitstellen einer Instanz weniger als 10 Sekunden dauert, tritt auf der Plattform eine Zeitlimitüberschreitung ein.
 {: tip}
 
 ### Empfehlungen für die positionsübergreifende Verwaltung von Brokern
@@ -222,21 +224,21 @@ Wenn Sie in {{site.data.keyword.Bluemix_notm}} Serviceinstanzen bereitstellen, s
 
 Wenn Ihr API-basierter Drittanbieterservice in einer anderen Cloud implementiert wurde und in {{site.data.keyword.Bluemix_notm}} zugänglich gemacht wurde, gibt die Position die Position des Service in der anderen Cloud an.
 
-Beim Integrieren in {{site.data.keyword.Bluemix_notm}} müssen Sie mindestens einen OSB-Broker implementieren. Sie haben jedoch die Option, abhängig von Ihrer Bereitstellungsstrategie und den Positionen, die Sie für Ihren Service unterstützen wollen, mit mehreren Brokern zu arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
+Beim {{site.data.keyword.Bluemix_notm}}-Onboarding müssen Sie mindestens einen OSB-Broker implementieren. Sie können je nach Bereitstellungsstrategie und den Standorten, die für Ihren Service unterstützt werden sollen, mit mehreren Brokern arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
 
-Eine Liste der verfügbaren Positionen finden Sie unter den [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service zusätzliche Positionen im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
+Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
 
 
 ## Eigene Broker hosten
 {: #host}
 
-Ihr Broker muss als Bestandteil einer Anwendung gehostet werden, die auf REST-API-Aufrufe reagieren kann. Ihre gehostete Position muss den {{site.data.keyword.Bluemix_notm}}-Sicherheitsrichtlinien entsprechen. Sie können das Hosting in {{site.data.keyword.Bluemix_notm}} oder extern durchführen, solange öffentlicher Zugriff über {{site.data.keyword.Bluemix_notm}} besteht.
+Ihr Broker muss als Bestandteil einer Anwendung gehostet werden, die auf REST-API-Aufrufe reagieren kann. Ihre gehostete Position muss den {{site.data.keyword.Bluemix_notm}}-Sicherheitsrichtlinien entsprechen. Sie können das Hosting in {{site.data.keyword.Bluemix_notm}} oder extern durchführen, wenn ein öffentlicher Zugriff über {{site.data.keyword.Bluemix_notm}} selbst besteht.
 
-Zum IBM externen Hosten des Brokers müssen Sie sicherstellen, dass die folgenden Sicherheitsrichtlinien erfüllt sind:
+Zum IBM externen Hosten des Brokers müssen Sie sicherstellen, dass der Broker den folgenden Sicherheitsrichtlinien entspricht:
 - Einhaltung des TLS-Protokolls (Transport Layer Security) Version 1.2
 - Hosting auf einem gültigen HTTPS-Endpunkt, auf den über das öffentliche Internet zugegriffen werden kann
 
-Wenn das Hosting in {{site.data.keyword.Bluemix_notm}} durchgeführt werden soll, können Sie im Folgenden Informationen zum Erstellen einer App mithilfe von Containern (Kubernetes) lesen: [Interne Adopter - Nutzungsinformationen](/docs/containers/cs_internal.html#cs_internal).
+Wenn das Hosting in {{site.data.keyword.Bluemix_notm}} durchgeführt werden soll, sind die Informationen zum Erstellen einer App mithilfe von Containern (Kubernetes) im Abschnitt zum Thema [Interne Adopter - Nutzungsinformationen](/docs/containers/cs_internal.html#cs_internal) hilfreich.
 
 Sie benötigen die gehostete Position Ihres Service-Brokers, um den nächsten Schritt ausführen zu können. Halten Sie die URL und die Berechtigungsnachweise Ihrer App bereit, bevor Sie mit dem nächsten Schritt fortfahren.
 {: tip}
@@ -244,7 +246,7 @@ Sie benötigen die gehostete Position Ihres Service-Brokers, um den nächsten Sc
 ## Vorgehensweise zum Testen des Service-Brokers
 {: #test}
 
-Sie müssen Ihren Broker überprüfen, indem Sie die curl-Befehle für die unterschiedlichen Endpunkte ausführen, die Sie aktivieren wollen. Die Beispiel-Readme-Datei enthält hervorragende Anweisungen zur Verarbeitung Ihrer OSB-Endpunkte mit 'curl': https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md
+Sie müssen Ihren Broker überprüfen, indem Sie die curl-Befehle für die unterschiedlichen Endpunkte ausführen, die Sie aktivieren wollen. Die Readme-Beispieldatei enthält hervorragende Anweisungen zur Verarbeitung Ihrer OSB-Endpunkte mit 'curl': [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ### Vorgehensweise zur Bearbeitung des Service-Brokers mit curl
 {: #curl-broker}

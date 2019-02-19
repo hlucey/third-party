@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -30,15 +30,15 @@ Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-par
 ## IAM-Weiterleitungs-URI ableiten
 {: #redirect-uri}
 
-Wenn Sie Ihren Service in der Konsole für das Ressourcenmanagement definieren, dann wird eine Client-ID generiert. Hierbei ist zu beachten, dass zu diesem Zeitpunkt mit hoher Wahrscheinlichkeit kein Weiterleitungs-URI zur Verfügung steht. IAM erstellt eine Client-ID, für die der Wert 'false' festgelegt wurde. Erst nachdem Sie mit dem Weiterleitungs-URI zur Konsole für das Ressourcenmanagement zurückgekehrt sind, verfügen Sie über eine gültige Client-ID.
+Wenn Sie Ihren Service in der Konsole für das Ressourcenmanagement definieren, dann wird eine Client-ID generiert. Hierbei ist zu beachten, dass zu diesem Zeitpunkt mit hoher Wahrscheinlichkeit kein Weiterleitungs-URI zur Verfügung steht. IAM erstellt eine Client-ID, für die der Wert 'false' festgelegt wurde. Erst nachdem Sie mit der Weiterleitungs-URI zur Konsole für das Ressourcenmanagement zurückgekehrt sind, verfügen Sie über eine gültige Client-ID.
 
 Im vorherigen Entwicklungsschritt haben Sie einen OSB (Open Service Broker) entwickelt und gehostet. (Sie haben vermutlich IAM-Werte im Beispielcode des Brokers erkannt.) Die Weiterleitungs-URI (`redirect_uri`) stellt normalerweise die Host-URL dar, unter der die App mit einer zusätzlichen URL gespeichert ist, die zur Authentifizierung und Berechtigung verwendet wird.
 
  In den folgenden Beispielen werden Weiterleitungs-URIs dargestellt:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
-http://localhost:3000/auth/callback <-- for testing locally
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
+http://localhost:3000/auth/callback <-- für lokale Tests
 ```
 
 Kehren Sie zur Konsole für das Ressourcenmanagement zurück und fügen Sie den Weiterleitungs-URI zur Registerkarte für IAM hinzu:
@@ -55,20 +55,20 @@ Nun verfügen Sie über eine Client-ID, die Ihren Weiterleitungs-URI erkennt und
 {: #oauth}
 
 
-**Authentifizierung - Schritt 0:** Suchen Sie den regionalen IAM-Endpunkt für die Anmeldung an der Benutzerschnittstelle, der sich näher an der von Ihnen bereitgestellten Anwendung befindet. Rufen Sie hierzu `https://iam.bluemix.net/identity/.well-known/openid-configuration` auf.
+**Authentifizierung - Schritt 0:** Suchen Sie den regionalen IAM-Endpunkt für die Anmeldung an der Benutzerschnittstelle, der sich näher an der von Ihnen bereitgestellten Anwendung befindet. Rufen Sie hierzu `https://iam.cloud.ibm.com/identity/.well-known/openid-configuration` auf.
 
 ```
 curl -X GET \
-  https://iam.bluemix.net/identity/.well-known/openid-configuration
+  https://iam.cloud.ibm.com/identity/.well-known/openid-configuration
 ```
 
 ```
 HTTP/1.1 200 OK
 Content-Type: application/json
 {
-  "issuer": "https://iam.bluemix.net/identity",
-  "authorization_endpoint": "https://iam-region2.bluemix.net/identity/authorize",
-  "token_endpoint": "https://iam-region2.bluemix.net/identity/token",
+  "issuer": "https://iam.cloud.ibm.com/identity",
+  "authorization_endpoint": "https://iam-region2.cloud.ibm.com/identity/authorize",
+  "token_endpoint": "https://iam-region2.cloud.ibm.com/identity/token",
 ...
 }
 ```
@@ -119,7 +119,7 @@ curl -k -X POST \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "code=<code-from-the-callback>" \
   --data-urlencode "redirect_uri=<redirect_uri>" \
-  "https://iam-region2.bluemix.net/identity/token"
+  "https://iam-region2.cloud.ibm.com/identity/token"
 ```
 {: codeblock}
 
@@ -139,7 +139,7 @@ curl -k -X POST \
 
   Vergewissern Sie sich, dass das Zugriffstoken (access_token) des Benutzers, das in dieser Antwort zurückgegeben wurde, gespeichert wird. Es wird bei der nachfolgenden Benutzerberechtigung benötigt.
 
-Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.com/IBM/sample-resource-service-brokers
+Orientieren Sie sich an dem Beispiel im Abschnitt zu den [Beispielbrokern für IBM](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
 ## Benutzerberechtigung validieren
 {: #validate}
@@ -172,7 +172,9 @@ curl -k -X POST \
   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
   --data-urlencode "response_type=cloud_iam" \
   --data-urlencode "apikey=<apikey>" \
-  "https://iam.bluemix.net/identity/token"
+  "https://iam.cloud.ibm.com/identity/token"
+
+
 ```
 {: codeblock}
 
@@ -190,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Hinweis:** Dieses Token besitzt eine Gültigkeitszeitdauer von einer Stunde und kann innerhalb des einstündigen Zeitrahmens beliebig oft wiederverwendet werden. Es wird dringend empfohlen, dieses Token im Cache zwischenzuspeichern, um zu vermeiden, dass diese Anforderung bei jedem Zugriff auf die Dashboard-URL (`dashboard_url`) wiederholt werden muss.
+**Hinweis:** Dieses Token besitzt eine Gültigkeitsdauer von einer Stunde und kann innerhalb des einstündigen Zeitrahmens beliebig oft wiederverwendet werden. Es wird dringend empfohlen, dieses Token im Cache zwischenzuspeichern, um zu vermeiden, dass diese Anforderung bei jedem Zugriff auf die Dashboard-URL (`dashboard_url`) wiederholt werden muss.
 
 
 ### Berechtigung - Schritt 2: Berechtigung des Benutzers für die Serviceinstanz validieren (/v2/authz POST)
@@ -199,7 +201,7 @@ curl -k -X POST \
 Nach der Authentifizierung des Benutzers und der Erstellung eines eigenen Zugriffstokens muss überprüft werden, ob der Benutzer auf das Service-Dashboard zugreifen kann. Zuerst müssen bestimmte Informationen, die im Zugriffstoken des Benutzers gespeichert sind, abgerufen werden. Diese Informationen werden in Schritt 2.1 entschlüsselt. Anschließend werden diese Informationen zum Aufrufen von IAM verwendet. Auf diese Weise kann geprüft werden, ob der Benutzer für den Zugriff auf das Dashboard (Schritt 2.2) berechtigt ist.
 
 **Schritt 2.1**: Zugriffstoken des Benutzers entschlüsseln (Rückgabe während `**Authentifizierung - Schritt 2:** Code eines Zugriffstokens austauschen ` oben.)
-   Das Zugriffstoken ist ein JWT-Token, das mit einer beliebigen JWT-kompatiblen Bibliothek entschlüsselt werden kann. Siehe hierzu die im [Beispielcode für den Broker](https://github.com/IBM/sample-resource-service-brokers) enthaltene Bibliothek.
+   Das Zugriffstoken ist ein JWT-Token, das mit einer beliebigen JWT-kompatiblen Bibliothek entschlüsselt werden kann. Siehe hierzu die im [Beispielbrokercode](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") enthaltene Bibliothek.
    Nach der Entschlüsselung des Tokens wird das folgende Format angezeigt. Sie müssen nun die Werte der Felder `iam_id` und `scope` extrahieren, die im nächsten Schritt verwendet werden:
 
 ```
@@ -218,7 +220,7 @@ Nach der Authentifizierung des Benutzers und der Erstellung eines eigenen Zugrif
   },
   "iat": 1522114004,
   "exp": 1522117604,
-  "iss": "https://iam.bluemix.net/identity",
+  "iss": "https://iam.cloud.ibm.com/identity",
   "grant_type": "urn:ibm:params:oauth:grant-type:apikey",
   "scope": "openid <your serviceName>",
   "client_id": "bx",
@@ -253,7 +255,7 @@ curl -X POST \
       action : <your service name> + ".dashboard.view" \
     } \
   ]' \
-  https://iam.bluemix.net/v2/authz
+  https://iam.cloud.ibm.com/v2/authz
 ```
 
 Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.com/IBM/sample-resource-service-brokers
@@ -265,7 +267,7 @@ Die mit Ihrer Client-ID erstellten Benutzerzugriffstokens können nur für den Z
 
 Im Rahmen der Drittanbieterintegration wird das Token-Scoping verwendet, um sicherzustellen, dass die Token über den mindestens erforderlichen Zugriffsbereich verfügen, um die Benutzerziele erreichen zu können. Hierzu erhalten IAM-Tokens den Zugriff auf Basis der Client-ID, mit der das Token erstellt wurde. Wurde ein IAM-Token mit einem Service eines anderen Anbieters erstellt, dann ist ein Endbenutzer nicht in der Lage, bestimmte APIs und Funktionen auszuführen. Dies gilt auch dann, wenn für den Benutzer eine entsprechende Richtlinie konfiguriert wurde.
 
-Die Auswirkungen auf die Berechtigungen (alle Aufrufe an `https://iam.bluemix.net/v2/authz`) bestehen darin, dass die Bereichsinformationen (`scope`) im Betreff übergeben werden müssen. Diese Informationen sind in einem IAM-Token (Base64-Codierung) im Claim `scope` enthalten.
+Die Auswirkungen auf die Berechtigungen (alle Aufrufe an `https://iam.cloud.ibm.com/v2/authz`) bestehen darin, dass die Bereichsinformationen (`scope`) im Betreff übergeben werden müssen. Diese Informationen sind in einem IAM-Token (Base64-Codierung) im Claim `scope` enthalten.
 
 Im folgenden Abschnitt wird dargestellt, welche Elemente im Berechtigungsaufruf hinzugefügt werden:
 ```
@@ -301,4 +303,4 @@ Dies gilt für alle Verwendungen (`user, serviceId, crn`). Für alle Vorkommen v
 ## Nächste Schritte
 {: #next-steps}
 
-Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Siehe hierzu: [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).
+Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Weitere Informationen finden Sie in [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).

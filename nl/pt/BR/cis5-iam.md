@@ -37,8 +37,8 @@ A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um
  Os exemplos a seguir mostram URIs redirecionarem:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
-http://localhost:3000/auth/callback <-- para testar localmente
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
+http://localhost:3000/auth/callback <-- for testing locally
 ```
 
 Retorne para o console de gerenciamento de recursos e inclua o URI de redirecionamento na guia IAM:
