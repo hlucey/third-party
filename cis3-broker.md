@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-02-20"
 
 
 ---
@@ -112,7 +112,7 @@ If your service can be bound to applications in {{site.data.keyword.Bluemix_notm
 </dl>
 
 ### Required {{site.data.keyword.Bluemix_notm}} extension endpoints
-{: #docs} 
+{: #extension} 
 
 The OSB specification doesn't* support a disabled instance state, but not yet deleted instance state. In order for {{site.data.keyword.Bluemix_notm}} to support customers that might experience a billing lapse or other situations that result in an account suspension (but not yet cancellation), {{site.data.keyword.Bluemix_notm}} defined the extended API endpoints that allow service instances to be disabled and reenabled. The following endpoint extensions are **required**:
 
