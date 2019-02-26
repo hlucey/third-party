@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-05"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -14,6 +14,7 @@ lastupdated: "2018-09-05"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
 {:download: .download}
 
 # Vorgehensweise zur Verwendung der {{site.data.keyword.Bluemix_notm}}-Plattform durch integrierte Abrechnungsservices
@@ -42,7 +43,7 @@ Die Bereitstellungsebene stellt APIs zur Verfügung, mit denen Sie die folgenden
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) ermöglicht Ihnen die sichere Authentifizierung von Benutzern und die einheitliche Steuerung des Zugriffs auf alle Cloudressourcen in {{site.data.keyword.Bluemix_notm}}. Die {{site.data.keyword.Bluemix_notm}}-Bereitstellungsebene hat IAM für die Authentifizierung und Berechtigung von Aktionen ausgewählt, die für die Bereitstellungsebene ausgeführt werden. Provider von Drittanbieterangeboten verwenden IAM zur Erstellung eines Authentifizierungsablaufs (OAuth). Weitere Informationen hierzu finden Sie in [Was ist IAM?](/docs/iam/index.html#iamoverview).
+Identity Access Management (IAM) ermöglicht Ihnen die sichere Authentifizierung von Benutzern und die einheitliche Steuerung des Zugriffs auf alle Cloudressourcen in {{site.data.keyword.Bluemix_notm}}. Die {{site.data.keyword.Bluemix_notm}}-Bereitstellungsebene hat IAM für die Authentifizierung und Berechtigung von Aktionen ausgewählt, die für die Bereitstellungsebene ausgeführt werden. Provider von Drittanbieterangeboten verwenden IAM zur Erstellung eines Authentifizierungsablaufs (OAuth). Weitere Informationen hierzu finden Sie in [Was ist IAM?](/docs/iam?topic=iam-iamoverview#iamoverview).
 
 Wenn Ihr Angebot OIDC-Bibliotheken (OpenID Connect) verwendet, dann unterstützt IAM die OIDC-Integration. Bei OIDC handelt es sich um eine Authentifizierungsebene, die auf dem Berechtigungsframework OAuth 2.0 basiert und zur Vereinfachung des Onboarding-Prozesses beitragen kann. Weitere Informationen zu OIDC finden Sie in [OpenID Connect](http://openid.net/connect/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
@@ -56,7 +57,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebot
    * Service-ID: Die GUID für Ihren Service, die in API-Aufrufen an den Open Service Broker (OSB) verwendet wird. Dieser Wert muss eindeutig sein.
    * Servicesymbol: Ein SVG-Element mit Ihrem Servicelogo.
    * Servicebeschreibung: Die Beschreibung der Ressource, die angezeigt wird, wenn Sie den Mauszeiger über das Ressourcensymbol in der Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Katalogs bewegen. Sie können für die Beschreibung einen einzelnen Satz oder Ausdruck hinzufügen.
-   * Detaillierte Servicebeschreibung: Der erste Abschnitt, der auf der Kataloglistenseite aufgeführt wird. Ziehen Sie als detaillierte Beschreibung mindestens zwei Sätze in Betracht. 
+   * Detaillierte Servicebeschreibung: Der erste Abschnitt, der auf der Kataloglistenseite aufgeführt wird. Ziehen Sie als detaillierte Beschreibung mindestens zwei Sätze in Betracht.
    * Dokumentations-URL: Ein Link zu Ihrer {{site.data.keyword.Bluemix_notm}}-Dokumentation. Diese Informationen werden in Provider Workbench (PWB) verfasst und Ihr URL-Wert wird von PWB generiert.
    * Bedingungs-URL: Ein Link zu den Bedingungen für die Nutzung Ihres Service. Beachten Sie dabei, dass für GDPR-Zwecke kein Link zu den vorhandenen Bedingungen für Drittanbieterservices hergestellt werden darf. Stattdessen müssen Sie eine eindeutige Seite für einen integrierten Abrechnungsservice bereitstellen.
    * Anweisungs-URL: Ähnlich wie bei der Dokumentations-URL wird hier auf Ihre {{site.data.keyword.Bluemix_notm}}-Dokumentation verwiesen. Die Anweisungs-URL überführt Ihre Dokumentation jedoch dynamisch auf die Registerkarte 'Einführung' Ihres Service-Dashboards.
@@ -86,23 +87,24 @@ Wenn für einen Service ein Plan mit Nutzungsmessung angeboten wird, werden die 
 
 Alle integrierten Abrechnungsservices mit einem Plan mit Nutzungsmessung müssen den {{site.data.keyword.Bluemix_notm}}-Messservice verwenden, um die Nutzungsdaten zu melden.
 
-**Hinweis:** Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten möchten.
+Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten. 
 
-Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party/metering.html#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie im Abschnitt [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party/submitusage.html#submitusage).
+Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage). 
 
 ## Bereitstellungsszenario: Zusammenfassung
+{: #provision2}
 
-Im Folgenden sollen alle zuvor beschriebenen Konzepte zusammengefasst und es soll anhand eines Beispiels betrachtet werden, wie die Erstellung von Serviceinstanzen über die {{site.data.keyword.Bluemix_notm}}-Plattform ausgeführt wird.
+Im Folgenden werden alle Konzepte zusammengefasst und es wird anhand eines Beispiels betrachtet, wie Serviceinstanzen mithilfe der {{site.data.keyword.Bluemix_notm}}-Plattform erstellt werden können.
 
-![Bereitstellungsszenario](images/flow-am.svg "Vorgehensweise der Plattform bei der Erstellung von Serviceinstanzen")
+![Bereitstellungsszenario](images/flow-am.svg "Abläufe auf der Plattform beim Erstellen von Serviceinstanzen")
 
-Wenn ein Benutzer eine Serviceinstanz erstellen möchte, dann kann dieser Erstellungsprozess auf die beiden folgenden Arten eingeleitet werden:
+Wenn ein Benutzer eine Serviceinstanz erstellen möchte, stehen die folgenden Vorgehensweisen zur Auswahl:
 * **CLI**: Verwendung von `ibmcloud cli [ ibmcloud resource service-instance-create NAME SERVICE_NAME SERVICE_PLAN_NAME LOCATION ]`.
 * **{{site.data.keyword.Bluemix_notm}}-Konsole**: Der Benutzer kann den Service und den Plan auswählen und anschließend die Operation **Erstellen** ausführen.
 
 Auf der {{site.data.keyword.Bluemix_notm}}-Plattform wird überprüft, ob der Benutzer über die erforderliche Berechtigung zur Erstellung der Serviceinstanz mithilfe von {{site.data.keyword.Bluemix_notm}} IAM verfügt. Nach Abschluss der Überprüfung wird der Bereitstellungsendpunkt des Service-Brokers (PUT /v2/resource_instances/:resource_instance_id) gestartet. Bei der Bereitstellung müssen die folgenden Regeln beachtet werden:
 * Der {{site.data.keyword.Bluemix_notm}}-Kontext ist in der Kontextvariablen enthalten.
-* `X-Broker-API-Originating-Identity` ist die IBM IAM-ID des Benutzers zugeordnet, der die Anforderung abgesetzt hat.
+* `X-Broker-API-Originating-Identity` ist die IBM IAM-ID des Benutzers zugeordnet, der die Anforderung gestartet hat.
 * Der Abschnitt für die Parameter enthält die erforderliche Position (sowie zusätzliche Parameter, die für den Service erforderlich sind).
 
 Beispiel für Bereitstellungsanforderung:
@@ -153,7 +155,8 @@ Im vorherigen Beispiel wurden die Metadaten dargestellt, die im Parameter `conte
 
    Im vorliegenden Beispiel ist diese Instanz von `compose-redis` Teil des {{site.data.keyword.Bluemix_notm}}-Kontos mit ID. Die eindeutige ID für die Instanz lautet `416d769b-682d-4833-8bd7-5ef8778e5b52` und die Instanz wird in der Region `us-south` (Vereinigte Staaten (Süden)) des öffentlichen {{site.data.keyword.Bluemix_notm}}-Systems gehostet.
 
-* **resource_group_crn**: Gibt die Ressourcengruppe zurück, die die Serviceinstanz beinhaltet. Weitere Einzelheiten finden Sie in [Ressourcengruppen verwalten](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: Gibt die Ressourcengruppe zurück, die die Serviceinstanz beinhaltet. Weitere Einzelheiten finden Sie in [Ressourcengruppen verwalten](/docs/resources?topic=resources-rgs#rgs).
 
-   **Anmerkung**: Angebotsprovider müssen von einigen speziellen Ausnahmen abgesehen den Ressourcengruppen-CRN (`resource_group_crn`) nicht berücksichtigen. Wenden Sie sich an den zuständigen IBM Ansprechpartner für Ihren Anwendungsfall, bevor Sie dieses Feld verwenden.
+   Angebotsprovider müssen von einigen speziellen Ausnahmen abgesehen den Ressourcengruppen-CRN (`resource_group_crn`) nicht berücksichtigen. Wenden Sie sich an den zuständigen IBM Ansprechpartner für Ihren Anwendungsfall, bevor Sie dieses Feld verwenden.
+   {: note}
 

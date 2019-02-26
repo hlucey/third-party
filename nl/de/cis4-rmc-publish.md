@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-05"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Nachdem Sie nun über die gehosteten Broker verfügen, die der OSB-Spezifikation
 {:shortdesc}
 
 ## Vorbereitende Schritte
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Wenn Sie die Erstregistrierung und die Genehmigung in Provider Workbench nicht durchgeführt haben, lesen Sie die Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.md).
+Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Wenn Sie Erstregistrierung und Genehmigung in der Provider-Workbench nicht durchgeführt haben, ziehen Sie das [Lernprogramm 'Einführung'](/docs/third-party/index.md?topic=third-party-get-started#get-started) zurate.
 {: tip}
 
 Vergewissern Sie sich, dass Sie Schritt 1 starten und die Schritte 2, 3 und 4 abgeschlossen haben.
-1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
-2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
-3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
-3. [Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [Authentifizierungsablauf entwickeln](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Eigenen Service in {{site.data.keyword.Bluemix_notm}} veröffentlichen
 {: #publish}
@@ -47,17 +47,17 @@ Vergewissern Sie sich, dass Sie Schritt 1 starten und die Schritte 2, 3 und 4 ab
 8. Überprüfen Sie auf der Seite **Bereitstellungen** die nicht veröffentlichte Bereitstellung und klicken Sie auf **Veröffentlichen**.
 9. Überprüfen Sie auf der Seite für die **Veröffentlichung im Katalog** die Details Ihrer Bereitstellung und klicken Sie dann auf **Veröffentlichen**.
 
-Die Seite 'Bereitstellungen' muss nun in der Navigation als vollständig markiert sein. Dies bedeutet, dass Sie die Mindestanforderungen erfüllt haben.
+Die Seite 'Bereitstellungen' muss nun in der Navigation als vollständig markiert sein. Dies bedeutet, dass die Mindestanforderungen erfüllt werden.
 
 Tritt bei der Bereitstellung ein Fehler auf, der sich nicht beheben lässt? Wenden Sie sich an den zuständigen IBM Ansprechpartner, um Hilfe anzufordern.
 {: tip}
 
 ## Bereitgestelltes Angebot testen 
-{: #test}
+{: #publish-test}
 
 Da Sie die Bereitstellung im Modus für eingeschränkte Sichtbarkeit durchgeführt haben, können nur Sie selbst das Angebot im {{site.data.keyword.Bluemix_notm}}-Katalog anzeigen. Melden Sie sich mithilfe der im folgenden Abschnitt enthaltenen Prüfliste bei {{site.data.keyword.Bluemix_notm}} an und arbeiten Sie die Testkriterien ab.
 
-1. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an: [https://console.bluemix.net](https://console.bluemix.net){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") und verwenden Sie dazu Ihre IBMid.
+1. Melden Sie sich bei [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") mit Ihrer IBMid an.
 2. Vergewissern Sie sich, dass Sie sich im richtigen Konto befinden (das gleiche Konto, das Sie zur Erstellung des Service verwendet haben).
 3. Klicken Sie im Header auf den Link für **Katalog** und suchen Sie nach Ihrem Angebot.
 4. Verwenden Sie als Nächstes die im folgenden Abschnitt enthaltene Prüfliste, um Ihren Service zu überprüfen.
@@ -84,6 +84,6 @@ Verlaufen die Tests nicht erfolgreich, müssen Sie die vorangegangenen Schritte 
 
 
 ## Nächste Schritte
-{: #next-steps}
+{: #release}
 
-Nachdem Sie nun über einen funktionsbereiten Service im Katalog verfügen, können Sie eine Demo erstellen und die Genehmigung anfordern, um Ihren Service öffentlich freigeben zu können. Weitere Informationen hierzu finden Sie in [Schritt 6: Eigenen Service öffentlich freigeben](/docs/third-party/cis6-ga.html).
+Nachdem Sie nun über einen funktionsbereiten Service im Katalog verfügen, können Sie eine Demo erstellen und die Genehmigung anfordern, um Ihren Service öffentlich freigeben zu können. Weitere Informationen hierzu finden Sie in [Schritt 6: Eigenen Service öffentlich freigeben](/docs/third-party?topic=third-party-public-releasing#public-releasing).

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 Dans ce tutoriel, nous allons présenter IBM Provider Workbench ainsi que le processus d'enregistrement de votre offre de tiers en tant que service de facturation intégrée.
 {:shortdesc}
 
-Vous pouvez mettre à disposition une offre de tiers dans {{site.data.keyword.Bluemix}}, soit en tant que service de facturation intégrée, soit en tant que service de référence. Ce tutoriel présente principalement l'option de service de facturation intégrée. Pour en savoir plus sur l'option de service de référence, voir [Types d'offre de tiers](/docs/third-party/offering-types.html).
+Vous pouvez mettre à disposition une offre de tiers dans {{site.data.keyword.Bluemix}}, soit en tant que service de facturation intégrée, soit en tant que service de référence. Ce tutoriel présente principalement l'option de service de facturation intégrée. Pour en savoir plus sur l'option de service de référence, voir [Types d'offre de tiers](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
 
 ## Etape 1. Enregistrer votre offre
@@ -46,7 +46,7 @@ Utilisez le tableau de bord Provider Workbench pour répertorier votre type d'of
 Une fois que vous avez sélectionné **Integrated billing service** comme type d'offre et que vous avez soumis le formulaire d'évaluation de disponibilité, la page est actualisée. Elle s'affiche sur la page de détails de catalogue dans la console {{site.data.keyword.Bluemix_notm}}. Renseignez chaque zone et soumettez le formulaire pour révision. Ce processus peut durer plusieurs jours.
 
 ## Etapes suivantes
-{: #next-steps}
+{: #gs-next-steps}
 
 Une fois que l'approbation est accordée, vous recevez un message électronique présentant les étapes suivantes :
 
@@ -57,4 +57,4 @@ Une fois que l'approbation est accordée, vous recevez un message électronique 
 
 * Dans la console de gestion des ressources, intégrez votre offre à {{site.data.keyword.Bluemix_notm}} en définissant cette dernière, en créant des plans de tarification, en activant la sécurité et en gérant le déploiement de votre offre dans différents environnements {{site.data.keyword.Bluemix_notm}}. 
 
-Pour plus de détails, voir [Développement et publication d'un service de facturation intégrée](/docs/third-party/integrated-billing-service.html). 
+Pour plus de détails, voir [Développement et publication d'un service de facturation intégrée](/docs/third-party?topic=third-party-overview#overview). 

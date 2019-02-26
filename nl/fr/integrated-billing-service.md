@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ Ensuite, en dehors de la console de gestion des ressources, vous effectuez le d�
 ## Fonctionnement du processus
 {: #process}
 
-Pour mettre à disposition un service de facturation intégrée, utilisez Provider Workbench, la console de gestion des ressources et l'environnement de développement de votre choix. Consultez la [liste de contrôle](/docs/third-party/checklist.html#checklist) pour le suivi de ces procédures.
+Pour mettre à disposition un service de facturation intégrée, utilisez Provider Workbench, la console de gestion des ressources et l'environnement de développement de votre choix. Consultez la [liste de contrôle](/docs/third-party?topic=third-party-checklist#checklist) pour le suivi de ces procédures.
 
-Pour cette procédure, vous devez disposer de l'approbation vous permettant de fournir un service de facturation intégrée. Si vous n'avez pas encore effectué le processus d'enregistrement et d'approbation initial dans PWB, consultez la rubrique relative à la [publication de votre offre tierce dans {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md).
+Pour cette procédure, vous devez disposer de l'approbation vous permettant de fournir un service de facturation intégrée. Si vous n'avez pas encore effectué le processus d'enregistrement et d'approbation initial dans PWB, consultez la rubrique relative à la [publication de votre offre tierce dans {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
-1. [Création de votre documentation et de vos annonces marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Définition de votre offre dans la console de gestion des ressources{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
-3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
-4. [Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
-5. [Test de votre service](/docs/third-party/cis4-rmc-publish.html).
-6. [Diffusion publique de votre service](/docs/third-party/cis6-ga.html).
+1. [Création de votre documentation et de vos annonces marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Définition de votre offre dans la console de gestion des ressources{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Développement et hébergement de vos courtiers de services](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Développement d'un flux d'authentification](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Test de votre service](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [Diffusion publique de votre service](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## Support
 {: #support}

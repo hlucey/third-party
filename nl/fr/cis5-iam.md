@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ Une fois que vous avez défini votre offre, la page Access Manage de la console 
 {:shortdesc}
 
 ## Avant de commencer
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party/index.html) et de disposer de l'approbation permettant de fournir un service de facturation intégrée.
+Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party?topic=third-party-get-started#get-started) et de disposer de l'approbation permettant de fournir un service de facturation intégrée.
 
 ## Dérivation de votre URI de redirection IAM
 {: #redirect-uri}
@@ -37,7 +37,7 @@ Lors de l'étape de développement précédente, vous avez développé un courti
  Les exemples suivants présentent les URI de redirection :
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
@@ -89,7 +89,7 @@ Cette demande peut être effectuée une fois lorsque l'application est démarré
 **Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### En-têtes :
 {: #headers1}
@@ -151,6 +151,7 @@ Consultez l'exemple souhaité dans nos [courtiers exemple](https://github.com/IB
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### En-têtes :
 {: #headers2}
@@ -258,7 +259,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-Consultez l'exemple souhaité sur la page suivante : https://github.com/IBM/sample-resource-service-brokers
+Consultez l'exemple souhaité dans nos [courtiers exemple](https://github.com/IBM/sample-resource-service-brokers).
 
 ## Portée de jeton IAM pour les utilisateurs tiers
 {: #token_scoping}
@@ -301,6 +302,6 @@ La section suivante présente un exemple d'ajout dans l'appel d'autorisation :
 S'applique à toutes les utilisations (`utilisateur, ID de service, nom de ressource de cloud`) et tous les éléments `subject.attributes` ont besoin d'une portée.
 
 ## Etapes suivantes
-{: #next-steps}
+{: #cis5-test}
 
-Il est temps maintenant de rassembler tous les éléments ! Accédez à nouveau à la console de gestion des ressources pour publier votre service en mode de visibilité limitée et valider votre offre dans le catalogue. Pour plus d'informations, voir [Publication et test de votre service](/docs/third-party/cis4-rmc-publish.html).
+Il est temps maintenant de rassembler tous les éléments ! Accédez à nouveau à la console de gestion des ressources pour publier votre service en mode de visibilité limitée et valider votre offre dans le catalogue. Pour plus d'informations, voir [Publication et test de votre service](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).

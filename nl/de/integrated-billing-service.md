@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-07-20"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -24,28 +24,28 @@ In diesem Abschnitt werden die Schritte beschrieben, die erforderlich sind, um I
 
 Nachdem Sie die Genehmigung zur Bereitstellung Ihres Angebots im {{site.data.keyword.Bluemix_notm}}-Katalog erhalten haben, können Sie mit der Entwicklung des Angebots in der Ressourcenmanagementkonsole, einer menügeführten Benutzerschnittstelle, beginnen. Sie können Katalogmetadaten entwerfen, Preisstrukturpläne für den Service festlegen und die Integration mit {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) konfigurieren. 
 
-Als nächsten Schritt führen Sie außerhalb der Ressourcenmanagementkonsole die Codeentwicklung durch, um einen neuen Open Service Broker zu erstellen und zu hosten (Broker-Beispiele für den Einstieg und API-Docs werden bereitgestellt), und Sie verwenden IAM um einen Authentifizierungsablauf zu entwickeln. Nach Abschluss dieser Schritte rufen Sie die Ressourcenmanagementkonsole erneut auf, um den Service im Katalog im Modus für eingeschränkte Sichtbarkeit bereitzustellen. Dieser Modus ermöglicht Ihnen das Testen und Validieren mehrerer Bereitstellungsanforderungen. Nach Abschluss dieser Arbeitsschritte ist Ihr Service, wenn alle Anforderungen erfüllt sind, im {{site.data.keyword.Bluemix_notm}}-Katalog vollständig sichtbar.
+Als nächsten Schritt führen Sie außerhalb der Ressourcenmanagementkonsole die Codeentwicklung durch, um einen neuen Open Service Broker zu erstellen und zu hosten. Broker-Beispiele für den Einstieg und API-Docs werden bereitgestellt und Sie verwenden IAM, um einen Authentifizierungsablauf zu entwickeln. Rufen Sie anschließend die Ressourcenmanagementkonsole erneut auf, um den Service im Katalog im Modus für eingeschränkte Sichtbarkeit bereitzustellen. In diesem Modus können Sie die Erfüllung von Bereitstellungsanforderungen testen und überprüfen. Wenn Sie dies erledigt haben und Ihr Angebot alle Anforderungen erfüllt, wird Ihr Service im {{site.data.keyword.Bluemix_notm}}-Katalog vollständig sichtbar!
 
 
 ## Ablauf des Prozesses
 {: #process}
 
-Zur Bereitstellung eines integrierten Abrechnungsservice arbeiten Sie mit der Provider Workbench (PWB), der Ressourcenmanagementkonsole und Ihrer bevorzugten Entwicklungsumgebung. Verwenden Sie die [Prüfliste](/docs/third-party/checklist.html#checklist), um diese Schritte zu überwachen.
+Zur Bereitstellung eines integrierten Abrechnungsservice arbeiten Sie mit der Provider-Workbench (PWB), der Ressourcenmanagementkonsole und Ihrer bevorzugten Entwicklungsumgebung. Verwenden Sie die [Prüfliste](/docs/third-party?topic=third-party-checklist#checklist), um diese Schritte zu überwachen.
 
-Bei diesen Schritten wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in Provider Workbench (PWB) noch nicht durchgeführt haben, dann sollten Sie sich mit den Informationen im Abschnitt mit der [Einführung zum Veröffentlichen Ihres Drittanbieterangebots in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md) vertraut machen.
+Bei diesen Schritten wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Sollten Sie die Erstregistrierung und die Genehmigung in der Provider-Workbench noch nicht abgeschlossen haben, sollten Sie sich mit den Informationen im Abschnitt mit der [Einführung zum Veröffentlichen Ihres Drittanbieterangebots in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started) vertraut machen.
 {: tip}
 
-1. [Dokumentation und Vertriebsfreigabe erstellen](/docs/third-party/cis1-docs-marketing.html).
-2. [Angebot in der {{site.data.keyword.Bluemix_notm}}-Ressourcenmanagementkonsole definieren](/docs/third-party/cis2-rmc-define.html).
-3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
-4. [Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).
-5. [Service testen](/docs/third-party/cis4-rmc-publish.html).
-6. [Service öffentlich freigeben](/docs/third-party/cis6-ga.html).
+1. [Dokumentation und Vertriebsfreigabe erstellen](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Angebot in der Konsole für das Ressourcenmanagement definieren{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Authentifizierungsablauf entwickeln](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Service testen](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [Service öffentlich freigeben](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## Unterstützung
 {: #support}
 
-Für integrierte Abrechnungsservices ist es erforderlich, dass die Drittanbieter des Angebots ein eigenes Unterstützungsmodell bereitstellen. Der zuständige IBM Ansprechpartner kann bei der Aktivierung des Unterstützungsmodells helfen und sicherstellen, dass beim Öffnen eines {{site.data.keyword.Bluemix_notm}}-Support-Tickets durch einen Benutzer dieses Ticket an die Unterstützungssite des Drittanbieters weitergeleitet wird.
+Für integrierte Abrechnungsservices ist es erforderlich, dass die Drittanbieter des Angebots ein eigenes Unterstützungsmodell bereitstellen. Der zuständige IBM Ansprechpartner kann bei der Aktivierung des Unterstützungsmodells helfen und sicherstellen, dass beim Öffnen eines {{site.data.keyword.Bluemix_notm}}-Support-Tickets durch einen Benutzer das betreffende Ticket an die Unterstützungssite des Drittanbieters weitergeleitet wird.
 
 ## Fortlaufende Aktualisierungen
 {: #maintain}

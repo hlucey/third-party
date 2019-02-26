@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-05"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -21,26 +21,26 @@ lastupdated: "2018-09-05"
 
 Sind Sie bereit, live zu gehen? Haben Sie Ihren Service mit eingeschränkter Sichtbarkeit getestet? In diesem Fall können Sie nun die Vertriebsfreigabe vorbereiten. Service-Provider müssen ein Video aufzeichnen, in dem gezeigt wird, dass der fertiggestellte Service alle Anforderungen erfüllt. Die Übergabe an IBM erfolgt per E-Mail. Ihre Demo wird von IBM überprüft, bevor die endgültige Genehmigung für die Veröffentlichung erteilt werden kann. Die Aufzeichnungen werden jeden Dienstag überprüft. Eine Entscheidung oder Feedback erfolgt am darauffolgenden Donnerstag. Aus diesem Grund sollten Sie genügend Zeit für die Vorbereitung des Go-Live-Datums einplanen.
 
-Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Wenn Sie die Erstregistrierung und die Genehmigung in Provider Workbench nicht durchgeführt haben, lesen Sie die Informationen im [Lernprogramm 'Einführung'](/docs/third-party/index.html).
+Bei diesem Schritt wird davon ausgegangen, dass Sie bereits über die Genehmigung zum Bereitstellen eines integrierten Abrechnungsservice verfügen. Wenn Sie die Erstregistrierung und die Genehmigung in Provider Workbench nicht durchgeführt haben, lesen Sie die Informationen im [Lernprogramm 'Einführung'](/docs/third-party?topic=third-party-get-started#get-started).
 {: tip}
 
 ## Vorbereitende Schritte
 {: #before-you-begin}
 
 Vergewissern Sie sich, dass Sie mit Schritt 1 begonnen und die Schritte 2, 3, 4 und 5 abgeschlossen haben:
-1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
-2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
-3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party/cis3-broker.html).
-3. [Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).
-3. [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html)
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Eigene Service-Broker entwickeln und hosten](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Authentifizierungsablauf entwickeln](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Eigenen Service veröffentlichen und testen](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)
 
 
 ## Demo aufzeichnen
 {: #demo}
 
 1. Erarbeiten Sie gemeinsam mit dem zuständigen IBM Ansprechpartner die Anforderungen und die Vorgaben für die Demonstration.
-1. Verwenden Sie die Aufzeichnungssoftware Ihrer Wahl (Quicktime unter Mac OS und Windows Media Player unter Windows bieten beide kostenfreie Funktionen zur Erstellung von Video- und Audioaufzeichnungen an).
-2. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und beginnen Sie mit der Aufzeichnung.
+2. Verwenden Sie die Aufzeichnungssoftware Ihrer Wahl (Quicktime unter Mac OS und Windows Media Player unter Windows bieten beide kostenfreie Funktionen zur Erstellung von Video- und Audioaufzeichnungen an).
+3. Melden Sie sich bei {{site.data.keyword.Bluemix_notm}} an und beginnen Sie mit der Aufzeichnung.
 
 ## Demo an IBM senden
 {: #send-demo}

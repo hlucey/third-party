@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ La liste suivante décrit les attentes pour le suivi et la soumission de l'utili
 *	Les fournisseurs d'offre tiers n'ont pas besoin de soumettre l'utilisation pour les plans gratuits.
 *	Les fournisseurs d'offre tiers n'ont pas besoin de soumettre l'utilisation pour les plans d'abonnement mensuels.
 *	Pour les plans mesurés, tous les fournisseurs d'offre doivent soumettre une utilisation horaire (pour les plans Lite, la soumission doit s'effectuer à une périodicité de 15 minutes à une heure).
-*	Le fournisseur d'offre est chargé d'automatiser la soumission de l'utilisation, notamment l'automatisation de nouvelles tentatives suite à des échecs. {{site.data.keyword.Bluemix_notm}} ne fournit pas de fonction de nouvelle tentative pour les soumissions n'ayant pas abouti. Pour plus d'informations, consultez le tableau des codes d'état et d'actions à la section [Soumission des enregistrements d'utilisation](/docs/third-party/submitusage.html#submitting-usage-records).
+*	Le fournisseur d'offre est chargé d'automatiser la soumission de l'utilisation, notamment l'automatisation de nouvelles tentatives suite à des échecs. {{site.data.keyword.Bluemix_notm}} ne fournit pas de fonction de nouvelle tentative pour les soumissions n'ayant pas abouti. Pour plus d'informations, consultez le tableau des codes d'état et d'actions à la section [Soumission des enregistrements d'utilisation](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	Les enregistrements d'utilisation pour le mois en cours doivent être soumis au plus tard le 2 du mois suivant.
 *	{{site.data.keyword.Bluemix_notm}} est configuré pour un cycle de facturation mensuelle et l'heure est représentée au format UTC.
 *  Les fournisseurs d'offre doivent tester la soumission de l'utilisation et valider leurs résultats afin d'indiquer comment le cycle de facturation mensuelle est calculé.
 
-Pour obtenir des informations générales sur la tarification, voir [la page décrivant comment calculer vos coûts](/docs/billing-usage/estimating_costs.html#cost). 
+Pour obtenir des informations générales sur la tarification, voir [la page décrivant comment calculer vos coûts](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Propriétés de configuration
 {: #configure}

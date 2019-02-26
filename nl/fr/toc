@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html" path="third-party"}
+{: .toc subcollection="third-party" audience="platform" href="/docs/third-party?topic=third-party-get-started#get-started" path="third-party"}
 Développement de services de facturation intégrée tiers
 
     {: .navgroup id="learn"}

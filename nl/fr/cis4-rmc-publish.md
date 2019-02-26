@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Maintenant que vos courtiers hébergés respectent la spécification OSB, vous p
 {:shortdesc}
 
 ## Avant de commencer
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-Pour cette étape, vous devez disposer de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.md).
+Pour cette étape, vous devez disposer de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
 Vérifiez que vous avez commencé à l'étape 1 et avez terminé les étapes 2, 3 et 4 :
-1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
-3. [Développement et hébergement de vos courtiers de services](/docs/third-party/cis3-broker.html).
-3. [Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).
+1. [Création de documents de service et d'annonce marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Développement et hébergement de vos courtiers de services](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [Développement d'un flux d'authentification](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Publication de votre service dans {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ Vous êtes bloqué suite à un problème de déploiement ? Contactez votre inter
 {: tip}
 
 ## Test de votre offre déployée 
-{: #test}
+{: #publish-test}
 
 Etant donné que le déploiement a été effectué en mode de visibilité limitée, vous seul pouvez voir votre offre dans le catalogue {{site.data.keyword.Bluemix_notm}}. En suivant la liste de contrôle de la section ci-dessous, connectez-vous à {{site.data.keyword.Bluemix_notm}} et appliquez les critères de test.
 
@@ -84,6 +84,6 @@ Si vos tests échouent, répétez les étapes précédentes pour publier et test
 
 
 ## Etapes suivantes
-{: #next-steps}
+{: #release}
 
-Maintenant que vous disposez d'un service fonctionnel dans le catalogue, vous pouvez créer une démonstration et demander une approbation afin de pouvoir diffuser publiquement votre service. Voir : [Etape 6 : Diffusion publique de votre service](/docs/third-party/cis6-ga.html).
+Maintenant que vous disposez d'un service fonctionnel dans le catalogue, vous pouvez créer une démonstration et demander une approbation afin de pouvoir diffuser publiquement votre service. Voir : [Etape 6 : Diffusion publique de votre service](/docs/third-party?topic=third-party-public-releasing#public-releasing).

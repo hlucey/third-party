@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ Vous pouvez utiliser IBM Provider Workbench pour créer votre documentation d'in
 {:shortdesc}
 
 ## Avant de commencer
-{: #prereqs}
+{: #marketing-prereqs}
 
-Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party/index.html) et de disposer de l'approbation permettant de fournir un service de facturation intégrée.
+Assurez-vous d'avoir suivi le [tutoriel d'initiation](/docs/third-party?topic=third-party-get-started#get-started) et de disposer de l'approbation permettant de fournir un service de facturation intégrée.
 
 ## Création de votre documentation d'initiation
-{: #docs}
+{: #gs-docs}
 
 Pour fournir un service de facturation intégrée, il vous est demandé de mettre à disposition une documentation d'initiation qui décrit comment les utilisateurs procèdent lorsqu'ils commencent à utiliser votre service dans le contexte {{site.data.keyword.Bluemix_notm}}. Vous pouvez effectuer cette tâche tout en développant votre service.
 
@@ -54,4 +54,4 @@ Une fois que vous avez soumis votre annonce de service, un responsable marketing
 ## Etapes suivantes
 {: #next-steps}
 
-Maintenant que vous avez démarré les tâches pour la création de la documentation d'initiation et l'annonce de service, vous êtes prêt à définir votre offre dans la console de gestion de ressources. Voir [Etape 2 : Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
+Maintenant que vous avez démarré les tâches pour la création de la documentation d'initiation et l'annonce de service, vous êtes prêt à définir votre offre dans la console de gestion de ressources. Voir [Etape 2 : Définition de votre offre dans la console de gestion des ressources](/docs/third-party?topic=third-party-step2-define#step2-define).

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # Comment les services de facturation intégrée utilisent-ils la plateforme {{site.data.keyword.Bluemix_notm}} ?
@@ -44,7 +43,7 @@ La couche de mise à disposition fournit des API vous permettant de gérer les �
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) vous permet d'authentifier de manière sécurisée et de contrôler de façon cohérente l'accès à toutes les ressources d'{{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition d'{{site.data.keyword.Bluemix_notm}} a adopté IAM pour l'authentification et l'autorisation des actions effectuées dans la couche de mise à disposition. Les fournisseurs d'offre tiers utilisent IAM pour créer un flux d'authentification (OAuth). Pour plus d'informations, voir [Qu'est-ce qu'IAM ](/docs/iam/index.html#iamoverview)?
+Identity Access Management (IAM) vous permet d'authentifier de manière sécurisée et de contrôler de façon cohérente l'accès à toutes les ressources d'{{site.data.keyword.Bluemix_notm}}. La couche de mise à disposition d'{{site.data.keyword.Bluemix_notm}} a adopté IAM pour l'authentification et l'autorisation des actions effectuées dans la couche de mise à disposition. Les fournisseurs d'offre tiers utilisent IAM pour créer un flux d'authentification (OAuth). Pour plus d'informations, voir [Qu'est-ce qu'IAM ](/docs/iam?topic=iam-iamoverview#iamoverview)?
 
 Si votre offre utilise des bibliothèques OpenID Connect (OIDC), IAM prend en charge l'intégration d'OIDC. OIDC est une couche d'authentification qui complète OAuth 2.0, structure d'autorisation, et qui peut permettre de simplifier le processus d'intégration. Pour plus d'informations sur OIDC, voir [Open ID Connect](http://openid.net/connect/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
 
@@ -89,11 +88,11 @@ Si un service inclut un plan mesuré, les utilisateurs {{site.data.keyword.Bluem
 Tous les services de facturation intégrée proposant un plan mesuré doivent utiliser le service de mesure {{site.data.keyword.Bluemix_notm}} pour transmettre les données d'utilisation.
 
 Vous devez automatiser la soumission de l'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
-{: important}
 
-Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage)
+Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party?topic=third-party-meteringintera#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Scénario de mise à disposition : rassemblement de tous les éléments
+{: #provision2}
 
 En prenant en compte tous les concepts, examinons le processus de création d'instance de service via la plateforme {{site.data.keyword.Bluemix_notm}}.
 
@@ -156,7 +155,7 @@ Dans l'exemple précédent, vous pouvez voir les métadonnées renvoyées dans l
 
    Dans cet exemple, cette instance `compose-redis` fait partie du compte {{site.data.keyword.Bluemix_notm}} ayant l'ID. L'ID unique de l'instance est `416d769b-682d-4833-8bd7-5ef8778e5b52` et cette dernière est hébergée dans la région `us-south` de l'élément {{site.data.keyword.Bluemix_notm}} public.
 
-* **resource_group_crn** : renvoie le groupe de ressources incluant l'instance de service. Pour plus de détails, voir [Gestion des groupes de ressources](/docs/resources/resourcegroups.html).
+* **resource_group_crn** : renvoie le groupe de ressources incluant l'instance de service. Pour plus de détails, voir [Gestion des groupes de ressources](/docs/resources?topic=resources-rgs#rgs).
 
    Les fournisseurs de services ne sont pas concernés par le paramètre `resource_group_crn` sauf dans de rares circonstances. Contactez votre interlocuteur IBM avant d'utiliser cette zone.
    {: note}

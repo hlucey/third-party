@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-05" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -28,9 +28,9 @@ In den folgenden Schritten wird der Prozess zur Übermittlung von Nutzungsdaten 
 
 1. Übermitteln Sie über das REST-API-Tool für die Nutzungsdatenübermittlung eine Testmeldung für die Nutzungsdaten, um zu überprüfen, ob Ihre Pläne mit Nutzungsmessung korrekt konfiguriert wurden.
 2. Automatisieren Sie die fortlaufende stündliche Übermittlung an das REST-API-Tool für die Nutzungsdatenübermittlung für jeden Plan mit Nutzungsmessung. Sie können diese automatisierten Übermittlungen an einer beliebigen Position hosten, solange diese Position die SSO-Standardfunktionen unterstützt.
-2. Die Nutzungsdatensätze werden auf Basis des Messungsmodells aggregiert und die Gesamtmenge wird im Nutzungsdashboard an der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt.
-3. Die aggregierte Einheitenmenge aus dem Messungsprozess wird verwendet, die Kosten werden angewendet und der Betrag, den der Benutzer für die Serviceinstanz schuldet, wird berechnet.
-4. Am Monatsende wird der für den Benutzer generierte Betrag auf Basis der abschließenden berechneten Kosten ermittelt.
+3. Die Nutzungsdatensätze werden auf Basis des Messungsmodells aggregiert und die Gesamtmenge wird im Nutzungsdashboard an der {{site.data.keyword.Bluemix_notm}}-Konsole angezeigt.
+4. Die aggregierte Einheitenmenge aus dem Messungsprozess wird verwendet, die Kosten werden angewendet und der Betrag, den der Benutzer für die Serviceinstanz schuldet, wird berechnet.
+5. Am Monatsende wird der für den Benutzer generierte Betrag auf Basis der abschließenden berechneten Kosten ermittelt.
 
 ## Voraussetzungen
 {: #prereqs}
@@ -49,7 +49,7 @@ In den folgenden Schritten wird der Prozess zur Übermittlung von Nutzungsdaten 
 Beachten Sie bei Verwendung des {{site.data.keyword.Bluemix_notm}}-Messservice zur Übermittlung der Ressourcennutzungsdaten die folgenden Richtlinien:
 
 * Der Start- und der Endzeitpunkt legen den Zeitbereich fest, innerhalb dessen die Messungen erfasst werden. Die Zeitangaben sind nicht von der Zeit abhängig, zu der der Nutzungsdatensatz an die Messungs-APIs übermittelt wurde.
-* Nutzungsdatensätze werden als Fakten eingestuft. Aus diesem Grund dürfen Nutzungsdatensätze nach ihrer Erstellung nicht mehr aktualisiert werden. Eine Position wird angegeben, wenn Sie die Erstellung eines Nutzungsdatensatzes erfolgreich abgeschlossen haben. Wird ein Fehlercode zurückgegeben, dann informieren Sie sich über die [Aktionen](#actions), die möglicherweise ausgeführt werden müssen.
+* Nutzungsdatensätze werden als Fakten eingestuft. Aus diesem Grund dürfen Nutzungsdatensätze nach ihrer Erstellung nicht mehr aktualisiert werden. Eine Position wird angegeben, wenn Sie die Erstellung eines Nutzungsdatensatzes erfolgreich abgeschlossen haben. Wird ein Fehlercode zurückgegeben, dann informieren Sie sich über die [Aktionen](/docs/third-party?topic=third-party-submitusage#actions), die möglicherweise ausgeführt werden müssen.
 * Ein Nutzungsdatensatz wird durch die Signatur `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end` eindeutig identifiziert. Wenn ein Nutzungsdatensatz verarbeitet wird, dann werden alle anderen Nutzungsdatensätze mit derselben Signatur als Duplikate zurückgewiesen.
 * Die Interaktionen mit dem Messservice dürfen nicht mit anderen Services kombiniert werden. Die Anforderungen müssen auch dann einzeln verarbeitet werden, wenn die Messung mit der Bereitstellung der Instanz beginnt und mit der Aufhebung der Bereitstellung endet.
 * Die Ressourcennutzungsdaten müssen in einem Intervall von 2 bis 24 Stunden an den Messservice übermittelt werden. Die Häufigkeit der Übermittlung Ihrer Nutzungsdaten ist davon abhängig, wie oft die Nutzungsmetriken geändert werden.
@@ -131,7 +131,7 @@ Im Folgenden werden die Best Practices zur Übermittlung der Nutzungsdaten aufge
 
 Die Gebühren von {{site.data.keyword.Bluemix_notm}}-Benutzer werden auf Basis des Ressourcenvolumens berechnet, das von den Benutzern genutzt wird. Für Benutzer, die Datenbankservices nutzen, werden die Gebühren beispielsweise auf Basis der Speicherkapazität berechnet, die von den Anwendungen der Benutzer verbraucht wird.
 
-Um den {{site.data.keyword.Bluemix_notm}}-Messservice zum Melden von Nutzungsdaten zu verwenden, müssen Sie die API des Messservice zum Melden von Nutzungsdaten Ihres Angebots implementieren. Weitere Einzelheiten hierzu finden Sie im Abschnitt zur [Dokumentation der öffentlichen API](https://ibm-bluemix-docs.github.io/usage-submission/).  
+Um den {{site.data.keyword.Bluemix_notm}}-Messservice zum Melden von Nutzungsdaten zu verwenden, müssen Sie die API des Messservice zum Melden von Nutzungsdaten Ihres Angebots implementieren. Weitere Informationen finden Sie in der [öffentlichen API-Dokumentation](https://ibm-bluemix-docs.github.io/usage-submission/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").  
 
 Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren. Sie können die automatisierte Übermittlung auf jedem gültigen HTTPS-Endpunkt hosten, auf den über das öffentliche Internet zugegriffen werden kann.
 {: tip}

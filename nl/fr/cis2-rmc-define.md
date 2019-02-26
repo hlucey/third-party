@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -25,9 +25,9 @@ Maintenant que vous êtes autorisé à mettre à disposition un service de factu
 {:shortdesc}
 
 ## Avant de commencer
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. Vérifiez que avez commencé la tâche [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party/cis1-docs-marketing.html).
+1. Vérifiez que avez commencé la tâche [Etape 1 : Création de documents de service et d'annonce marketing (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks).
 2. Vérifiez que vous êtes enregistré auprès d'{{site.data.keyword.Bluemix_notm}}. Dans le cas contraire, [inscrivez-vous](https://cloud.ibm.com/registration){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe") avant de continuer.
 3. Vérifiez que vous vous trouvez dans le compte correct avant de commencer à utiliser la console de gestion des ressources.
 4. Préparez votre nom de service {{site.data.keyword.Bluemix_notm}}. Vous devez indiquer un nom de service permettant à la plateforme {{site.data.keyword.Bluemix_notm}} d'identifier le service ainsi que le nom que vos clients voient dans le catalogue {{site.data.keyword.Bluemix_notm}}.
@@ -73,7 +73,7 @@ Votre lettre d'offre initiale inclut une URL de documentation de service génér
 ## Enregistrement avec IAM
 {: #reg-iam}
 
-IAM est requis pour tous les services intégrés à {{site.data.keyword.Bluemix_notm}}. Voir [Qu'est-ce qu'IAM ?](/docs/iam/index.html#what-is-cloud-iam-) pour en savoir plus sur les exigences et les concepts IAM.
+IAM est requis pour tous les services intégrés à {{site.data.keyword.Bluemix_notm}}. Voir [Qu'est-ce qu'IAM ?](/docs/iam?topic=iam-iamoverview#iamoverview) pour en savoir plus sur les exigences et les concepts IAM.
 
 La console de gestion des ressources génère les valeurs IAM suivantes :
    - ID de service (élément généré et stocké)
@@ -91,7 +91,7 @@ Le fournisseur de services doit fournir :
 Vous devez accéder ultérieurement à nouveau à la page IAM pour indiquer votre `URI de redirection`. Vous ne disposez pas de cette valeur tant que vous n'avez pas effectué de tâches de développement supplémentaires pour générer un flux d'authentification. Les étapes ultérieures vous permettent de définir votre valeur d'URI de redirection.
 {: note}
 
-Une clé d'API vous est octroyée lorsque vous **activez IAM**. Il est primordial de la sauvegarder. Cette valeur ne s'affiche pas à nouveau. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle : [Gestion des clés d'API d'ID de service](/docs/iam/serviceid_keys.html#serviceidapikeys)
+Une clé d'API vous est octroyée lorsque vous **activez IAM**. Il est primordial de la sauvegarder. Cette valeur ne s'affiche pas à nouveau. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle ([Gestion des clés d'API d'ID de service](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)).
 {: tip}
 
 ## Développement d'un plan de tarification
@@ -103,10 +103,10 @@ Lorsque vous intégrez votre service dans {{site.data.keyword.Bluemix_notm}}, vo
 2. Cliquez sur **Add plan** pour créer une entrée de plan puis cliquez sur **Edit plan** pour modifier le plan.
    * **Free plan** : Toutes les offres peuvent avoir un plan Lite qui est gratuit, permettant aux utilisateurs de tester votre service. Pour les plans gratuits, la valeur *Lite* est indiquée pour l'option **Display Name** et la valeur *lite* pour l'option **Programmatic Name**. Indiquez **Yes** pour **Is this plan free?**. Cliquez sur **Save**. Votre plan est publié dans le catalogue {{site.data.keyword.Bluemix_notm}}.
    * **Subscription plan** : Indiquez **No** pour l'option **Is this plan free?**. Renseignez les zones obligatoires. Conservez la valeur **Pricing metrics** par défaut. Cette mesure par défaut est fournie afin que vous puissiez facturer les utilisateurs une fois par mois. Cliquez sur **Save**. Votre plan est publié dans le catalogue {{site.data.keyword.Bluemix_notm}}. Sauvegardez la commande curl exemple pour soumettre l'utilisation.
-   * **Metered plan** : Indiquez **No** pour l'option **Is this plan free?**. Renseignez les zones obligatoires. *Supprimez* la valeur d'abonnement **Pricing metrics** par défaut. Cliquez sur **Add another metric**, complétez la page **Add pricing metric** puis cliquez sur **Add metric**. Cliquez sur **Save**. Votre plan est publié dans le catalogue {{site.data.keyword.Bluemix_notm}}. Sauvegardez la commande curl exemple pour soumettre l'utilisation. Pour obtenir de l'aide en matière de sélection des mesures appropriées, voir [Intégration des mesures](/docs/third-party/metering.html).
+   * **Metered plan** : Indiquez **No** pour l'option **Is this plan free?**. Renseignez les zones obligatoires. *Supprimez* la valeur d'abonnement **Pricing metrics** par défaut. Cliquez sur **Add another metric**, complétez la page **Add pricing metric** puis cliquez sur **Add metric**. Cliquez sur **Save**. Votre plan est publié dans le catalogue {{site.data.keyword.Bluemix_notm}}. Sauvegardez la commande curl exemple pour soumettre l'utilisation. Pour obtenir de l'aide en matière de sélection des mesures appropriées, voir [Intégration des mesures](/docs/third-party?topic=third-party-content-tasks#content-tasks).
 3. La page **Pricing** est désormais marquée comme complète, indiquant que vous avez respecté les exigences minimales requises pour cette page.
 
-Les fournisseurs de services doivent automatiser la soumission d'utilisation horaire pour tous les plans mesurés. Pour plus d'informations, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html)
+Les fournisseurs de services doivent automatiser la soumission d'utilisation horaire pour tous les plans mesurés. Pour plus d'informations, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party?topic=third-party-submitusage#submitusage).
 {: tip}
 
 ## Exportation de vos métadonnées au format JSON
@@ -121,6 +121,6 @@ Maintenant que vous avez défini votre service dans la console de gestion des re
 Sauvegardez votre fichier `catalog.json`. Vous allez l'utiliser pour développer votre courtier OSB (Open Service Broker) dans la section suivante.
 
 ## Etapes suivantes
-{: #next-steps}
+{: #cis2-next-steps}
 
-Vous avez défini votre offre de service en ajoutant des métadonnées d'affichage de catalogue, en effectuant l'enregistrement avec IAM et en créant un ou plusieurs plans de tarification. Vous pouvez ensuite utiliser votre fichier JSON exporté et commencer à développer un courtier de services. Voir [Etape 3 : Développement et hébergement des courtiers de services](/docs/third-party/cis3-broker.html).
+Vous avez défini votre offre de service en ajoutant des métadonnées d'affichage de catalogue, en effectuant l'enregistrement avec IAM et en créant un ou plusieurs plans de tarification. Vous pouvez ensuite utiliser votre fichier JSON exporté et commencer à développer un courtier de services. Voir [Etape 3 : Développement et hébergement des courtiers de services](/docs/third-party?topic=third-party-step3-osb#step3-osb).

@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-04" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -28,9 +28,9 @@ La procédure suivante présente le processus de soumission d'utilisation :
 
 1. Soumettez un test d'utilisation initiale en utilisant l'outil d'API REST de soumission d'utilisation afin de valider que vos plans mesurés sont correctement configurés.
 2. Automatisez la soumission horaire continue dans l'outil d'API REST de soumission d'utilisation pour chaque plan mesuré. Vous pouvez héberger ces soumissions automatisées tant que l'élément SSO standard est pris en charge.
-2. Les enregistrements d'utilisation sont regroupés en fonction du modèle de mesure et la quantité totale s'affiche sur le tableau de bord d'utilisation dans la console {{site.data.keyword.Bluemix_notm}}.
-3. La quantité d'unités agrégées à partir du processus de mesure est utilisée, le coût est appliqué et la quantité appartenant à l'utilisateur pour l'instance de service est calculée.
-4. A la fin du mois, le coût calculé final correspond à la quantité générée pour l'utilisateur.
+3. Les enregistrements d'utilisation sont regroupés en fonction du modèle de mesure et la quantité totale s'affiche sur le tableau de bord d'utilisation dans la console {{site.data.keyword.Bluemix_notm}}.
+4. La quantité d'unités agrégées à partir du processus de mesure est utilisée, le coût est appliqué et la quantité appartenant à l'utilisateur pour l'instance de service est calculée.
+5. A la fin du mois, le coût calculé final correspond à la quantité générée pour l'utilisateur.
 
 ## Prérequis
 {: #prereqs}
@@ -49,7 +49,7 @@ Consultez les conditions préalables suivantes pour activer la fonction de mesur
 Reportez-vous aux conseils suivants lorsque vous utilisez le service de mesure {{site.data.keyword.Bluemix_notm}} pour soumettre des données d'utilisation de ressource :
 
 * L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure.
-* Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [actions](#actions) possibles.
+* Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [actions](/docs/third-party?topic=third-party-submitusage#actions) possibles.
 * Un enregistrement d'utilisation est identifié de manière unique par la signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Lorsqu'un tel enregistrement est traité, tout autre élément ayant la même signature est rejeté comme doublon.
 * N'associez pas à d'autres services l'interaction avec le service de mesure. Les demandes doivent être traitées individuellement même si l'opération de mesure commence et se termine avec la mise à disposition et l'annulation de la mise à disposition de l'instance.
 * Les données d'utilisation des ressources doivent être soumises au service de mesure une fois par période allant de deux à 24 heures. La fréquence de soumission de vos données d'utilisation dépend de la fréquence de changement de vos mesures d'utilisation.

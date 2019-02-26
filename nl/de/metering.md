@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-05"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ In der folgenden Liste finden Sie eine Beschreibung der Erwartungen, die bei der
 *	Provider von Drittanbieterangeboten müssen für kostenfreie Pläne keine Nutzungsdaten übermitteln.
 *	Provider von Drittanbieterangeboten müssen für monatliche Abonnementpläne keine Nutzungsdaten übermitteln.
 *	Für Pläne mit Nutzungsmessung müssen alle Angebotsprovider stündliche Nutzungsdaten übermitteln (Lite-Pläne müssen Daten in Intervallen zwischen 15 Minuten und 1 Stunde übermitteln).
-*	Der Angebotsprovider ist für die Automatisierung der Übermittlung der Nutzungsdaten verantwortlich. Hierzu zählt auch die Automatisierung von erneuten Versuchen nach einer fehlgeschlagenen Antwort. {{site.data.keyword.Bluemix_notm}} stellt keine Wiederholungsfunktion für fehlgeschlagene Übermittlungen bereit. Weitere Informationen finden Sie in der Tabelle für die Statuscodes und Aktionen im Abschnitt [Nutzungsdatensätze übermitteln](/docs/third-party/submitusage.html#submitting-usage-records).
+*	Der Angebotsprovider ist für die Automatisierung der Übermittlung der Nutzungsdaten verantwortlich. Hierzu zählt auch die Automatisierung von erneuten Versuchen nach einer fehlgeschlagenen Antwort. {{site.data.keyword.Bluemix_notm}} stellt keine Wiederholungsfunktion für fehlgeschlagene Übermittlungen bereit. Weitere Informationen finden Sie in der Tabelle für die Statuscodes und Aktionen im Abschnitt [Nutzungsdatensätze übermitteln](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	Die Nutzungsdatensätze für den aktuellen Monat müssen spätestens zum 2. des Folgemonats übermittelt werden.
 *	{{site.data.keyword.Bluemix_notm}} ist für einen monatlichen Abrechnungszyklus konfiguriert. Die Zeit wird als Angabe in koordinierter Weltzeit (UTC; Coordinated Universal Time) dargestellt.
 *  Angebotsprovider müssen die Übermittlung von Nutzungsdaten testen und die entsprechenden Ergebnisse überprüfen, um Informationen zur Berechnung des monatlichen Abrechnungszyklus bereitzustellen.
 
-Allgemeine Informationen zur Preisstruktur finden Sie in [Vorgehensweise zur Kostenberechnung](https://console.bluemix.net/docs/billing-usage/estimating_costs.html#cost). 
+Allgemeine Informationen zur Preisstruktur finden Sie in [Vorgehensweise zur Kostenberechnung](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Konfigurationseigenschaften
 {: #configure}
@@ -85,6 +85,7 @@ Formel: ADD(usages)
 | Tag 2 (Morgen) | 5             | 10 + 5      | 15                    |
 | Tag 3 (Morgen) | 5             | 15 + 5      | 20                    |
 | Tag 4 (Nacht)   | 5             | 20 + 5      | 25                    |
+{: caption="Tabelle 2. Monatliche Nutzungsberechnungen" caption-side="top"}
 
 #### Standardmäßiger Durchschnitt
 {: #standard-average}
@@ -100,6 +101,7 @@ Formel: AVG(usages)
 | Tag 2 (Morgen) | 5             | (4 + 0 + 5) / 3         | 3                     |
 | Tag 3 (Morgen) | 3             | (4 + 0 + 5 + 3) / 4     | 3                     |
 | Tag 4 (Nacht)   | 3             | (4 + 0 + 5 + 3 + 3) / 5 | 3                     |
+{: caption="Tabelle 3. Monatliche Nutzungsberechnungen - Durchschnitt" caption-side="top"}
 
 #### Standardmäßiges Maximum
 {: #standard-max}
@@ -115,6 +117,7 @@ Formel: MAX(usages)
 | Tag 2 (Morgen) | 0              | MAX(10, 0)   | 10                    |
 | Tag 3 (Morgen) | 15             | MAX(10, 15)  | 15                    |
 | Tag 4 (Nacht)   | 1              | MAX(15, 1)   | 15                    |
+{: caption="Tabelle 4. Monatliche Nutzungsberechnungen - Maximum" caption-side="top"}
 
 #### Durchschnittliche anteilmäßige Verrechnung pro Tag
 {: #proration-average}
@@ -135,6 +138,7 @@ Beispiel für einen Monat mit 30 Tagen:
 | Tag 2 (Nacht)      | 5                | (2 + 5) / 2   | (5,5 + 3,5) / 2                        | 4,5 (am Ende des zweiten Tages)                               |
 | Tag 3 bis Tag 15    | 1                | 1 / 1         | (5,5 + 3,5 + (1 + 13)  / 15            | 1,4666  (am Ende des 15. Tages)                          |
 | Tag 15 bis Tag 30   | 0                | 0 / 1         | (5,5 + 3,5 + (1 \* 12) + (0  \* 15) / 30 | 0,7333  (am Ende des 30. Tages)                          |
+{: caption="Tabelle 5. Berechnung der durchschnittlichen Nutzung pro Tag und Monat" caption-side="top"}
 
 \* Wie für denselben Tag angezeigt, an dem die Nutzungsdaten übermittelt wurden.
 
@@ -155,6 +159,7 @@ Beispiel für einen Monat mit 30 Tagen:
 | Tag 1 (Nacht)    | 1              | MAX(0, 1) | 1 / 1                          | 1                      |
 | Tag 2 bis Tag 15  | 1              | MAX(1)    | (1 + 1 + ...) / Tag            | 1                      |
 | Tag 15 bis Tag 30 | 0              | MAX(0)    | (1 + (1 * 14) + 0 + ...) / Tag | < 1                    |
+{: caption="Tabelle 6. Berechnung der maximalen Nutzung pro Tag und des monatlichen Durchschnitts" caption-side="top"}
 
 \* Wie für denselben Tag angezeigt, an dem die Nutzungsdaten übermittelt wurden.
 
@@ -194,5 +199,5 @@ Die folgende Tabelle enthält ausführliche Informationen zu den Preisstaffelung
 | Einfache Preisstufe (differenzierte Preisstufe)  | Ein P*Q-Modell, in dem der Einzelpreis für die gesamte Nutzung anhand der Preisstufe für die Menge ermittelt wird.           | <ul><li>Wenn Q gleich <=Q1, T=P1*Q ist</li><li>Wenn Q1 < Q <=Q2, T=P2*Q</li><li>Wenn Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1=1000, P1=$1</li><li>Q2=2500, P2=$0.9</li><li>Q3=10000, P3=$0.75</li><li>T=$0.75*5000=$3750</li></ul>              |
 | Gestaffelte Preisstufe (schrittweise Preisstufe)   | Der Stückpreis variiert, wenn die genutzte Menge in verschiedene vordefinierte Preisstufen verschoben wird. Die Gesamtgebühr umfasst die Kumulierung der Gebühren aus den vorherigen Preisstufen           | <ul><li>T1=P1*Q (0 < Q</li><li>Wenn Q1 < Q <=Q2, T=T2</li><li>Wenn Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=$0.9, T2=0.9*1500</li><li>Q3=10000, P3=$0.75, T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
 | Blockpreisstufe (bis zu)           | Der belastete Gesamtbetrag wird anhand einer Maximalmenge festgelegt, die innerhalb des Blocks nicht variiert     | <ul><li>Wenn Q gleich <=Q1, T=T1</li><li>Wenn Q1 < Q <=Q2, T=T2</li><li>Wenn Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1=1000, T1=$0</li><li>Q2=2500, T2=2500</li><li>Q3=10000, T3=$4500</li><li>T=$4500</li></ul>            |
-
+{: caption="Tabelle 7. Preismodelle" caption-side="top"}
 
