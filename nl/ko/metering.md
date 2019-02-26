@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ lastupdated: "2018-11-29"
 *	서드파티 오퍼링 제공자는 무료 플랜의 경우 사용량을 제출할 필요가 없습니다.
 *	서드파티 오퍼링 제공자는 월별 구독 플랜의 경우 사용량을 제출할 필요가 없습니다.
 *	측정량 기반 플랜의 경우 모든 오퍼링 제공자는 시간별 사용량을 제출해야 합니다(Lite 플랜은 15분에서 1시간마다 제출해야 함).
-*	오퍼링 제공자는 실패 응답을 다시 시도하는 자동화를 포함하여 사용량 제출을 자동화해야 합니다. {{site.data.keyword.Bluemix_notm}}는 실패한 제출에 대한 재시도 기능을 제공하지 않습니다. 자세한 정보는 [사용량 레코드 제출](/docs/third-party/submitusage.html#submitting-usage-records)의 상태 코드 및 조치 테이블을 참조하십시오.
+*	오퍼링 제공자는 실패 응답을 다시 시도하는 자동화를 포함하여 사용량 제출을 자동화해야 합니다. {{site.data.keyword.Bluemix_notm}}는 실패한 제출에 대한 재시도 기능을 제공하지 않습니다. 자세한 정보는 [사용량 레코드 제출](/docs/third-party?topic=third-party-submitusage#usage-records)의 상태 코드 및 조치 테이블을 참조하십시오.
 *	현재 달의 사용량 레코드는 늦어도 다음 달 2일까지 제출해야 합니다.
 *	{{site.data.keyword.Bluemix_notm}}는 월별 청구 주기에 맞게 구성되며 시간은 협정 세계시(UTC)로 표시됩니다.
 *  오퍼링 제공자는 사용량 제출을 테스트하고 월별 청구 주기를 계산하는 방법을 알려주는 결과를 검증해야 합니다.
 
-가격에 대한 일반 정보는 [비용 계산 방법](/docs/billing-usage/estimating_costs.html#cost)을 참조하십시오. 
+가격에 대한 일반 정보는 [비용 계산 방법](/docs/billing-usage?topic=billing-usage-cost#cost)을 참조하십시오. 
 
 ## 구성 특성
 {: #configure}

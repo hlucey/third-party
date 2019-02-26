@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 In questa esercitazione, introduciamo il workbench IBM Provider e illustriamo il processo di registrazione della tua offerta di terze parti come un servizio di fatturazione integrato.
 {:shortdesc}
 
-Puoi distribuire un'offerta di terze parti in {{site.data.keyword.Bluemix}} come un servizio di fatturazione integrato o di riferimento. Questa esercitazione si focalizza sull'opzione del servizio di fatturazione integrato. Per ulteriori informazioni sull'opzione del servizio di riferimento, consulta [Tipi di offerta di terze parti](/docs/third-party/offering-types.html).
+Puoi distribuire un'offerta di terze parti in {{site.data.keyword.Bluemix}} come un servizio di fatturazione integrato o di riferimento. Questa esercitazione si focalizza sull'opzione del servizio di fatturazione integrato. Per ulteriori informazioni sull'opzione del servizio di riferimento, consulta [Tipi di offerta di terze parti](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
 
 ## Passo 1. Registra la tua offerta
@@ -46,7 +46,7 @@ Utilizza il workbench Provider per elencare il tuo tipo di offerta come un servi
 Dopo aver selezionato **Integrated billing service** come tuo tipo di offerta e inviato il modulo di valutazione della disponibilità, la pagina viene aggiornata con una sezione per la definizione del contenuto. Viene visualizzato nella tua pagina dei dettagli del catalogo nella console {{site.data.keyword.Bluemix_notm}}. Compila tutti i campi e invia il modulo per la revisione. Il processo di revisione può richiedere alcuni giorni.
 
 ## Passi successivi
-{: #next-steps}
+{: #gs-next-steps}
 
 Una volta che hai ottenuto l'approvazione, ricevi un'email che illustra i tuoi prossimi passi:
 
@@ -57,4 +57,4 @@ Una volta che hai ottenuto l'approvazione, ricevi un'email che illustra i tuoi p
 
 * Nella console di gestione delle risorse, integra la tua offerta in {{site.data.keyword.Bluemix_notm}} definendola, creando i piani dei prezzi, abilitando la sicurezza e gestendo la distribuzione della tua offerta in diversi ambienti {{site.data.keyword.Bluemix_notm}}. 
 
-Per ulteriori dettagli, consulta [Sviluppo e pubblicazione di un servizio di fatturazione integrato](/docs/third-party/integrated-billing-service.html). 
+Per ulteriori dettagli, consulta [Sviluppo e pubblicazione di un servizio di fatturazione integrato](/docs/third-party?topic=third-party-overview#overview). 

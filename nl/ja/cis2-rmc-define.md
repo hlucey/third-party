@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -25,9 +25,9 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 始める前に
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. [ステップ 1: サービス文書とマーケティング発表の作成 (PWB)](/docs/third-party/cis1-docs-marketing.html)の作業を必ず開始しておいてください。
+1. [ステップ 1: サービス文書とマーケティング発表の作成 (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks)の作業を必ず開始しておいてください。
 2. {{site.data.keyword.Bluemix_notm}} に登録済みであることを確認します。 未登録の場合は、進める前に、[登録](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") します。
 3. リソース管理コンソールでの作業の開始時に正しいアカウントを使用していることを確認します。
 4. {{site.data.keyword.Bluemix_notm}} サービス名を準備します。 {{site.data.keyword.Bluemix_notm}} プラットフォームがサービスの識別に使用するサービス名と、{{site.data.keyword.Bluemix_notm}} カタログで顧客に表示される表示名の両方を指定する必要があります。
@@ -62,7 +62,7 @@ lastupdated: "2018-11-29"
 
 1. リソース管理コンソールから、**「オファリング (Offering)」**ページをクリックし、**「リスト・ページ (Listing Page)」**タブをクリックします。 **「リスト・ページ (Listing Page)」**では、{{site.data.keyword.Bluemix_notm}} オファリングのサービス・ダッシュボードに表示されるメタデータを定義します。 すべての必須値を入力して**「保存」**をクリックします。 リソース管理コンソールは、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) へのサービスの初期登録を行います。 サービスが IAM に登録されたことを示す通知が表示されます。 IAM では、後でさらに多くの操作を実行できます。
 2. 「オファリング (Offering)」ページから、**「設定」**タブをクリックします。
-   1. オファリングで**「プラン変更のサポート (Plan changes supported?)」**を許可するかどうかを指定します。 デフォルトは**「いいえ」**です。**「はい」**を指定する場合は、プロビジョン済みインスタンスのプラン変更をサポートするように Open Service Broker を拡張する必要があります。 オファリングで多数のプランがサポートされていて、ユーザーが既存のプロビジョン済みインスタンスのプランを変更する場合は、ユーザーが自分のサービス・インスタンスを更新できるようにする必要があります。詳しくは、[Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `/v2/service_instances/{instance_id} PATCH` のエンドポイントを参照してください。
+   1. オファリングで**「プラン変更のサポート (Plan changes supported?)」**を許可するかどうかを指定します。 デフォルトは**「いいえ」**です。**「はい」**を指定する場合は、プロビジョン済みインスタンスのプラン変更をサポートするように Open Service Broker を拡張する必要があります。 オファリングで多数のプランがサポートされていて、ユーザーが既存のプロビジョン済みインスタンスのプランを変更する場合は、ユーザーが自分のサービス・インスタンスを更新できるようにする必要があります。 詳しくは、[Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `/v2/service_instances/{instance_id} PATCH` のエンドポイントを参照してください。
    2. サービスを**「バインド可能」**にするかどうかを指定します。 デフォルトは**「いいえ」**です。サービスを {{site.data.keyword.Bluemix_notm}} 内のアプリケーションにバインドできる場合は、**「はい」**を選択します。 バインド可能の場合は、API エンドポイントと資格情報をサービス・コンシューマーに戻せなければなりません。 バインド可能なサービスを開発する際には、[Open Service Broker API v2.12 のバインド可能な操作](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用してください。
    3. その他の必須フィールドを入力し、**「保存」**をクリックします。
 3. 「オファリング (Offering)」ページのナビゲーションに、このページを完成するための最小要件を満たしたことを示すチェック・マークが示されています。 このページが不完全とマークされている場合は、ページを再度開いて、不完全な*必須* フィールドがあるかチェックしてください。
@@ -73,7 +73,7 @@ lastupdated: "2018-11-29"
 ## IAM への登録
 {: #reg-iam}
 
-{{site.data.keyword.Bluemix_notm}} にオンボードされるすべてのサービスに、IAM が必要です。IAM の概念と要件の詳細については、[IAM とは?](/docs/iam/index.html#what-is-cloud-iam-) を参照してください。
+{{site.data.keyword.Bluemix_notm}} にオンボードされるすべてのサービスに、IAM が必要です。 IAM の概念と要件の詳細については、[IAM とは?](/docs/iam?topic=iam-iamoverview#iamoverview) を参照してください。
 
 リソース管理コンソールは、以下の IAM 値を生成します。
    - サービス ID (生成され、保管されます)
@@ -88,10 +88,10 @@ lastupdated: "2018-11-29"
 2. **「IAM の有効化 (Enable IAM)」**をクリックします。 リソース管理コンソールは、サービスを IAM に登録し、サービス ID とポリシーを作成し、API キーを作成します。 さらに、完全ではないクライアント ID とクライアント秘密鍵を作成します。 クライアント ID は、取得後にリダイレクト URI で更新する必要があります。
 3. **「状況」**をクリックして、IAM 有効化の現行状態を確認します。
 
-後で IAM ページに戻って、`リダイレクト URI` を指定する必要があります。 さらに開発を行って認証フローを構築するまで、この値は入手できません。後続のステップでリダイレクト URI 値の判別方法を説明します。
+後で IAM ページに戻って、`リダイレクト URI` を指定する必要があります。 さらに開発を行って認証フローを構築するまで、この値は入手できません。 後続のステップでリダイレクト URI 値の判別方法を説明します。
 {: note}
 
-**IAM を有効化**すると、API キーが付与されます。 API キーは必ず保存してください。 この値は、二度と表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます ([サービス ID の API キーの管理 (Manage service ID API keys)](/docs/iam/serviceid_keys.html#serviceidapikeys) を参照)。
+**IAM を有効化**すると、API キーが付与されます。 API キーは必ず保存してください。 この値は、二度と表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます ([サービス ID の API キーの管理 (Manage service ID API keys)](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys) を参照)。
 {: tip}
 
 ## 料金プランの開発
@@ -103,16 +103,16 @@ lastupdated: "2018-11-29"
 2. **「プランの追加 (Add plan)」**をクリックして新しいプラン項目を作成し、**「プランの編集 (Edit plan)」**をクリックしてプランを編集します。
    * **無料プラン**: すべてのオファリングは、無料のライト・プランを 1 つ提供できます。これにより、ユーザーがサービスを試すことができます。 無料プランは、**「表示名 (Display Name)」**に*ライト*、**「プログラム名 (Programmatic Name)」**に *lite* を使用します。 **「このプランは無料ですか? (Is this plan free?)」**に**「はい」**を指定します。 **「保存」**をクリックします。 プランが {{site.data.keyword.Bluemix_notm}} カタログに公開されます。
    * **サブスクリプション・プラン**: **「このプランは無料ですか? (Is this plan free?)」**に**「いいえ」**を指定します。 必要なフィールドを入力します。 デフォルトの**「料金メトリック (Pricing metrics)」**のメトリックのままにします。 このデフォルト・メトリックは、一回限りの月額料金をユーザーに課金するために提供されています。 **「保存」**をクリックします。 プランが {{site.data.keyword.Bluemix_notm}} カタログに公開されます。 使用量を送信するサンプルの curl コマンドを保存します。
-   * **従量制プラン**: **「このプランは無料ですか? (Is this plan free?)」**に**「いいえ」**を指定します。 必要なフィールドを入力します。 デフォルトの**「料金メトリック (Pricing metrics)」**のサブスクリプション・メトリックを*削除*します。 **「メトリックをもう 1 つ追加 (Add another metric)」**をクリックし、**「料金メトリックの追加 (Add pricing metric)」**ページの入力を完了して、**「メトリックの追加 (Add metric)」**をクリックします。 **「保存」**をクリックします。 プランが {{site.data.keyword.Bluemix_notm}} カタログに公開されます。 使用量を送信するサンプルの curl コマンドを保存します。 適切なメトリックの選択に役立つ情報については、[計量の統合](/docs/third-party/metering.html)を参照してください。
+   * **従量制プラン**: **「このプランは無料ですか? (Is this plan free?)」**に**「いいえ」**を指定します。 必要なフィールドを入力します。 デフォルトの**「料金メトリック (Pricing metrics)」**のサブスクリプション・メトリックを*削除*します。 **「メトリックをもう 1 つ追加 (Add another metric)」**をクリックし、**「料金メトリックの追加 (Add pricing metric)」**ページの入力を完了して、**「メトリックの追加 (Add metric)」**をクリックします。 **「保存」**をクリックします。 プランが {{site.data.keyword.Bluemix_notm}} カタログに公開されます。 使用量を送信するサンプルの curl コマンドを保存します。 適切なメトリックの選択に役立つ情報については、[計量の統合](/docs/third-party?topic=third-party-content-tasks#content-tasks)を参照してください。
 3. **「料金」**ページに、このページを完成するための最小要件を満たしたことを示す完了のマークが示されています。
 
-サービス・プロバイダーは、すべての従量制プランについて毎時の使用量送信を自動化する必要があります。 詳しくは、[従量制プランの使用量の送信 (Submitting usage for metered plans)](/docs/third-party/submitusage.html) を参照してください。
+サービス・プロバイダーは、すべての従量制プランについて毎時の使用量送信を自動化する必要があります。 詳しくは、[従量制プランの使用量の送信](/docs/third-party?topic=third-party-submitusage#submitusage)を参照してください。
 {: tip}
 
 ## メタデータを JSON としてエクスポート
 {: #export-metadata}
 
-リソース管理コンソールでサービスを定義したので、catalog.json ファイルをダウンロードして使用し、Open Service Broker の開発に情報を提供することができます。 catalog.json には、ブローカーでホストする必要があるメタデータが含まれます。これらの値によって、ブローカーがサポートするサービスとプランについて、ブローカーと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の契約が定義されます。 プロビジョニングに必要でないその他のカタログ・メタデータはすべて、{{site.data.keyword.Bluemix_notm}} カタログ内に保管されます。 ダッシュボードのレンダリングに使用されるカタログ表示値 (リンク、アイコン、国際化対応翻訳メタデータなど) への更新は、リソース管理コンソールで更新されます。ブローカーには格納されません。ブローカーに保管されたメタデータは、{{site.data.keyword.Bluemix_notm}} コンソールでも {{site.data.keyword.Bluemix_notm}} CLI でも表示されません。 コンソールと CLI は、リソース管理コンソール内で設定され、{{site.data.keyword.Bluemix_notm}} カタログに保管されたものを戻します。
+リソース管理コンソールでサービスを定義したので、catalog.json ファイルをダウンロードして使用し、Open Service Broker の開発に情報を提供することができます。 catalog.json には、ブローカーでホストする必要があるメタデータが含まれます。 これらの値によって、ブローカーがサポートするサービスとプランについて、ブローカーと {{site.data.keyword.Bluemix_notm}} プラットフォーム間の契約が定義されます。 プロビジョニングに必要でないその他のカタログ・メタデータはすべて、{{site.data.keyword.Bluemix_notm}} カタログ内に保管されます。 ダッシュボードのレンダリングに使用されるカタログ表示値 (リンク、アイコン、国際化対応翻訳メタデータなど) への更新は、リソース管理コンソールで更新されます。 ブローカーには格納されません。 ブローカーに保管されたメタデータは、{{site.data.keyword.Bluemix_notm}} コンソールでも {{site.data.keyword.Bluemix_notm}} CLI でも表示されません。 コンソールと CLI は、リソース管理コンソール内で設定され、{{site.data.keyword.Bluemix_notm}} カタログに保管されたものを戻します。
 
 1. リソース管理コンソールから、**「デプロイメント (Deployments)」**ページを開きます。
 2. **「管理」**をクリックします。
@@ -121,6 +121,6 @@ lastupdated: "2018-11-29"
 `catalog.json` ファイルを保存します。 これを使用して、次のセクションで Open Service Broker を開発します。
 
 ## 次のステップ
-{: #next-steps}
+{: #cis2-next-steps}
 
-順調です。 カタログ表示メタデータを追加し、IAM に登録し、1 つ以上の料金プランを作成して、サービス・オファリングを定義しました。 次に、エクスポートされた JSON を使用して、サービス・ブローカーの開発を始めます。 [ステップ 3: サービス・ブローカーの開発とホスティング](/docs/third-party/cis3-broker.html)を参照してください。
+順調です。 カタログ表示メタデータを追加し、IAM に登録し、1 つ以上の料金プランを作成して、サービス・オファリングを定義しました。 次に、エクスポートされた JSON を使用して、サービス・ブローカーの開発を始めます。 [ステップ 3: サービス・ブローカーの開発とホスティング](/docs/third-party?topic=third-party-step3-osb#step3-osb)を参照してください。

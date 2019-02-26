@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ OSB 仕様に適合した 1 つ以上のブローカーをホストしたので�
 {:shortdesc}
 
 ## 始める前に
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-このステップは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.md)を参照してください。
+このステップは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認がまだ完了していない場合は、[入門チュートリアル](/docs/third-party/index.md?topic=third-party-get-started#get-started)を参照してください。
 {: tip}
 
 ステップ 1 を開始しており、ステップ 2、3、および 4 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party/cis1-docs-marketing.html)。
-2. [リソース管理コンソールでオファリングを定義する](/docs/third-party/cis2-rmc-define.html)。
-3. [サービス・ブローカーを作成してホストする](/docs/third-party/cis3-broker.html)。
-3. [認証フローを作成する](/docs/third-party/cis5-iam.html)。
+1. [サービス文書とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [リソース管理コンソールでオファリングを定義する](/docs/third-party?topic=third-party-step2-define#step2-define)。
+3. [サービス・ブローカーを作成してホストする](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
+3. [認証フローを作成する](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
 
 ## {{site.data.keyword.Bluemix_notm}} へのサービスの公開
 {: #publish}
@@ -53,7 +53,7 @@ OSB 仕様に適合した 1 つ以上のブローカーをホストしたので�
 {: tip}
 
 ## デプロイされたオファリングのテスト 
-{: #test}
+{: #publish-test}
 
 限定表示モードでデプロイしているため、{{site.data.keyword.Bluemix_notm}} カタログでお客様のオファリングを表示できるのはお客様自身のみになります。 次のセクションのチェックリストを使用して、{{site.data.keyword.Bluemix_notm}} にログインし、テスト基準の確認作業を行ってください。
 
@@ -84,6 +84,6 @@ OSB 仕様に適合した 1 つ以上のブローカーをホストしたので�
 
 
 ## 次のステップ
-{: #next-steps}
+{: #release}
 
-これで、機能するサービスがカタログに掲載されたので、デモを作成し、サービスを一般公開するための承認を依頼できます。 [ステップ 6: サービスの一般公開](/docs/third-party/cis6-ga.html)を参照してください。
+これで、機能するサービスがカタログに掲載されたので、デモを作成し、サービスを一般公開するための承認を依頼できます。 [ステップ 6: サービスの一般公開](/docs/third-party?topic=third-party-public-releasing#public-releasing)を参照してください。

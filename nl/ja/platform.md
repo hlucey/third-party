@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # 統合請求サービスによる {{site.data.keyword.Bluemix_notm}} プラットフォームの使用方法
@@ -44,7 +43,7 @@ lastupdated: "2018-11-29"
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) を使用すると、ユーザーを安全に認証し、{{site.data.keyword.Bluemix_notm}} 全体ですべてのクラウド・リソースへのアクセスを一貫して制御することができます。 {{site.data.keyword.Bluemix_notm}} プロビジョニング・レイヤーは、プロビジョニング・レイヤーに対して実行されるアクションの認証および許可のために IAM を採用しました。 第三者オファリングのプロバイダーは、IAM を使用して認証フロー (OAuth) を作成します。 詳しくは、[IAM とは? ](/docs/iam/index.html#iamoverview)を参照してください。
+Identity Access Management (IAM) を使用すると、ユーザーを安全に認証し、{{site.data.keyword.Bluemix_notm}} 全体ですべてのクラウド・リソースへのアクセスを一貫して制御することができます。 {{site.data.keyword.Bluemix_notm}} プロビジョニング・レイヤーは、プロビジョニング・レイヤーに対して実行されるアクションの認証および許可のために IAM を採用しました。 第三者オファリングのプロバイダーは、IAM を使用して認証フロー (OAuth) を作成します。 詳しくは、[IAM とは? ](/docs/iam?topic=iam-iamoverview#iamoverview)を参照してください。
 
 オファリングで OpenID Connect (OIDC) ライブラリーが使用されている場合、IAM は OIDC 統合をサポートします。 OIDC は、認証フレームワーク OAuth 2.0 の上で稼働する認証レイヤーで、オンボーディング・プロセスの簡素化に役立ちます。 OIDC について詳しくは、 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。
 
@@ -89,11 +88,11 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
 従量制プランを提供するすべての統合請求サービスは、使用量データを報告するために {{site.data.keyword.Bluemix_notm}} 計量サービスを使用する必要があります。
 
 従量制プランを提供する場合は、計量サービス API を使用して、毎時の使用量の送信を自動化する必要があります。
-{: important}
 
-計量について詳しくは、[計量の統合](/docs/third-party/metering.html#meteringintera)を参照してください。 計量される使用量の送信について詳しくは、[従量制プランの使用量の送信](/docs/third-party/submitusage.html#submitusage)を参照してください。
+計量について詳しくは、[計量の統合](/docs/third-party?topic=third-party-meteringintera#meteringintera)を参照してください。 計量される使用量の送信について詳しくは、[従量制プランの使用量の送信](/docs/third-party?topic=third-party-submitusage#submitusage)を参照してください。
 
 ## プロビジョニング・シナリオ: すべてをまとめる
+{: #provision2}
 
 次に、すべての概念をまとめ、{{site.data.keyword.Bluemix_notm}} プラットフォームを使用してサービス・インスタンスの作成がどのように機能するかについての例を見てみます。
 
@@ -156,7 +155,7 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
 
    このサンプルで、この `compose-redis` インスタンスは、ID の {{site.data.keyword.Bluemix_notm}} アカウントの一部です。 インスタンスの固有 ID は `416d769b-682d-4833-8bd7-5ef8778e5b52` で、インスタンスはパブリック {{site.data.keyword.Bluemix_notm}} の `us-south` 地域でホストされています。
 
-* **resource_group_crn**: サービス・インスタンスを含むリソース・グループを返します。 詳しくは、[リソース・グループの管理](/docs/resources/resourcegroups.html)を参照してください。
+* **resource_group_crn**: サービス・インスタンスを含むリソース・グループを返します。 詳しくは、[リソース・グループの管理](/docs/resources?topic=resources-rgs#rgs)を参照してください。
 
    オファリング・プロバイダーは、固有の状況を除き、`resource_group_crn` に関係していません。 そのフィールドを使用する前に、ご自身のユース・ケースについて IBM 担当員に相談してください。
    {: note}

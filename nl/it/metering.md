@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ Il seguente elenco descrive le aspettative per la traccia e l'inoltro dell'utili
 *	I provider di offerte di terze parti non sono tenuti a inoltrare l'utilizzo per i piani gratuiti.
 *	I provider di offerte di terze parti non sono tenuti a inoltrare l'utilizzo per i piani di sottoscrizione mensili.
 *	Per i piani a consumo, tutti i provider di offerte devono inoltrare l'utilizzo ogni ora (i piani Lite devono eseguire l'inoltro con una frequenza ogni 15 minuti - 1 ora).
-*	Il provider di offerte è responsabile dell'automazione dell'inoltro dell'utilizzo, compresa l'automazione che riprova le risposte di errore. {{site.data.keyword.Bluemix_notm}} non fornisce una funzione di nuovo tentativo per gli inoltri non riusciti. Per ulteriori informazioni, vedi la tabella delle azioni e dei codici di stato in [Inoltro dei record di utilizzo](/docs/third-party/submitusage.html#submitting-usage-records).
+*	Il provider di offerte è responsabile dell'automazione dell'inoltro dell'utilizzo, compresa l'automazione che riprova le risposte di errore. {{site.data.keyword.Bluemix_notm}} non fornisce una funzione di nuovo tentativo per gli inoltri non riusciti. Per ulteriori informazioni, vedi la tabella delle azioni e dei codici di stato in [Inoltro dei record di utilizzo](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	I record di utilizzo per il mese corrente devono essere inoltrati al più tardi entro il secondo giorno del mese successivo.
 *	{{site.data.keyword.Bluemix_notm}} è configurato per un ciclo di fatturazione mensile e l'ora è rappresentata in Coordinated Universal Time (UTC).
 *  I provider di offerte devono verificare l'inoltro dell'utilizzo e convalidare i loro risultati per informare della modalità di calcolo del ciclo di fatturazione mensile.
 
-Per informazioni generali sui prezzi, consulta [Come calcolare i tuoi costi](/docs/billing-usage/estimating_costs.html#cost). 
+Per informazioni generali sui prezzi, consulta [Come calcolare i tuoi costi](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Proprietà di configurazione
 {: #configure}

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ IBM Provider Workbench を使用して、概要文書とマーケティング発
 {:shortdesc}
 
 ## 始める前に
-{: #prereqs}
+{: #marketing-prereqs}
 
-[入門チュートリアル](/docs/third-party/index.html)を完了し、統合請求サービスの提供が承認されていることを確認してください。
+[入門チュートリアル](/docs/third-party?topic=third-party-get-started#get-started)を完了し、統合請求サービスの提供が承認されていることを確認してください。
 
 ## 概要文書の作成
-{: #docs}
+{: #gs-docs}
 
 統合請求サービスを提供するには、{{site.data.keyword.Bluemix_notm}} のコンテキストでユーザーが当該サービスの使用を開始する方法を記述した概要文書を用意する必要があります。 このタスクは、サービスの開発と並行して行えます。
 
@@ -54,4 +54,4 @@ IBM Provider Workbench を使用して、概要文書とマーケティング発
 ## 次のステップ
 {: #next-steps}
 
-概要文書とサービス発表を作成するためにタスクを開始したので、リソース管理コンソールでオファリングを定義する準備ができました。 [ステップ 2: リソース管理コンソールでのオファリングの定義](/docs/third-party/cis2-rmc-define.html)を参照してください。
+概要文書とサービス発表を作成するためにタスクを開始したので、リソース管理コンソールでオファリングを定義する準備ができました。 [ステップ 2: リソース管理コンソールでのオファリングの定義](/docs/third-party?topic=third-party-step2-define#step2-define)を参照してください。

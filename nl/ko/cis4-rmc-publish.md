@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 시작하기 전에
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. Provider Workbench의 초기 등록 및 승인을 아직 완료하지 않은 경우 [튜토리얼 시작하기](/docs/third-party/index.md)를 참조하십시오.
+이 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. Provider Workbench의 초기 등록 및 승인을 아직 완료하지 않은 경우 [튜토리얼 시작하기](/docs/third-party/index.md?topic=third-party-get-started#get-started)를 참조하십시오.
 {: tip}
 
 1단계를 시작했는지 확인하고 2, 3 및 4단계를 완료했는지 확인하십시오.
-1. [서비스 문서 및 마케팅 공지사항 작성](/docs/third-party/cis1-docs-marketing.html).
-2. [리소스 관리 콘솔의 오퍼링 정의](/docs/third-party/cis2-rmc-define.html).
-3. [서비스 브로커 개발 및 호스트](/docs/third-party/cis3-broker.html).
-3. [인증 플로우 개발](/docs/third-party/cis5-iam.html).
+1. [서비스 문서 및 마케팅 공지사항 작성](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [리소스 관리 콘솔의 오퍼링 정의](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [서비스 브로커 개발 및 호스트](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [인증 플로우 개발](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## 서비스를 {{site.data.keyword.Bluemix_notm}}에 공개
 {: #publish}
@@ -53,7 +53,7 @@ lastupdated: "2018-11-29"
 {: tip}
 
 ## 배치된 오퍼링 테스트 
-{: #test}
+{: #publish-test}
 
 제한된 가시성 모드로 배치했으므로 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 오퍼링을 볼 수만 있습니다. 다음 섹션의 체크리스트를 사용하여 {{site.data.keyword.Bluemix_notm}}에 로그인한 후 테스트 기준에 대한 작업을 수행하십시오.
 
@@ -84,6 +84,6 @@ lastupdated: "2018-11-29"
 
 
 ## 다음 단계
-{: #next-steps}
+{: #release}
 
-이제 카탈로그에 기능 서비스가 있으므로 데모를 빌드하고 승인을 요청하여 서비스를 공개적으로 릴리스할 수 있습니다. [6단계: 공개적으로 서비스 릴리스](/docs/third-party/cis6-ga.html)를 참조하십시오.
+이제 카탈로그에 기능 서비스가 있으므로 데모를 빌드하고 승인을 요청하여 서비스를 공개적으로 릴리스할 수 있습니다. [6단계: 공개적으로 서비스 릴리스](/docs/third-party?topic=third-party-public-releasing#public-releasing)를 참조하십시오.

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -25,9 +25,9 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 시작하기 전에
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. [1단계: 서비스 문서 및 마케팅 공지사항 작성(PWB)](/docs/third-party/cis1-docs-marketing.html) 작업을 시작했는지 확인하십시오.
+1. [1단계: 서비스 문서 및 마케팅 공지사항 작성(PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks) 작업을 시작했는지 확인하십시오.
 2. {{site.data.keyword.Bluemix_notm}}에 등록되어 있는지 확인하십시오. 그렇지 않으면 계속하기 전에 [등록](https://cloud.ibm.com/registration){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")하십시오.
 3. 리소스 관리 콘솔에서 작업을 시작할 때 올바른 계정이 있는지 확인하십시오.
 4. {{site.data.keyword.Bluemix_notm}} 서비스 이름을 준비하십시오. {{site.data.keyword.Bluemix_notm}} 플랫폼에서 서비스를 식별하는 데 사용되는 서비스 이름과 고객이 {{site.data.keyword.Bluemix_notm}} 카탈로그에서 볼 수 있는 표시 이름을 모두 제공해야 합니다.
@@ -73,7 +73,7 @@ lastupdated: "2018-11-29"
 ## IAM에 등록
 {: #reg-iam}
 
-IAM은 {{site.data.keyword.Bluemix_notm}}에 온보딩되는 모든 서비스에 필요합니다. IAM 개념과 요구사항에 대해 자세히 알아보려면 [IAM 개념](/docs/iam/index.html#what-is-cloud-iam-)을 참조하십시오.
+IAM은 {{site.data.keyword.Bluemix_notm}}에 온보딩되는 모든 서비스에 필요합니다. IAM 개념과 요구사항에 대해 자세히 알아보려면 [IAM 개념](/docs/iam?topic=iam-iamoverview#iamoverview)을 참조하십시오.
 
 리소스 관리 콘솔은 다음과 같은 IAM 값을 생성합니다.
    - 서비스 ID(생성 및 저장)
@@ -91,7 +91,7 @@ IAM은 {{site.data.keyword.Bluemix_notm}}에 온보딩되는 모든 서비스에
 나중에 IAM 페이지로 돌아가서 `Redirect URI`를 제공해야 합니다. 인증 플로우를 빌드하는 일부 추가 개발 작업을 수행할 때까지 이 값을 보유하지 않습니다. 이후 단계는 경로 재지정 URI 값을 식별하는 과정을 안내합니다.
 {: note}
 
-**IAM 사용**을 설정하면 API 키가 제공됩니다. API 키를 저장하는 것이 중요합니다. 이 값은 다시 표시되지 않습니다. API 키를 잃어버린 경우 키를 삭제하고 새 키를 작성할 수 있습니다([서비스 ID API 키 관리](/docs/iam/serviceid_keys.html#serviceidapikeys)).
+**IAM 사용**을 설정하면 API 키가 제공됩니다. API 키를 저장하는 것이 중요합니다. 이 값은 다시 표시되지 않습니다. API 키를 잃어버린 경우 키를 삭제하고 새 키를 작성할 수 있습니다([서비스 ID API 키 관리](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)).
 {: tip}
 
 ## 가격 플랜 개발
@@ -103,10 +103,10 @@ IAM은 {{site.data.keyword.Bluemix_notm}}에 온보딩되는 모든 서비스에
 2. **플랜 추가**를 클릭하여 새 플랜 항목을 작성하고 **플랜 편집**을 클릭하여 플랜을 편집하십시오.
    * **무료 플랜**: 모든 오퍼링에는 무료로 제공되는 하나의 Lite 플랜이 있으며 이를 통해 사용자가 서비스를 사용해 볼 수 있습니다. 무료 플랜은 **표시 이름**에 *Lite*를 사용하고 **프로그램 이름**에 *Lite*를 사용합니다. **무료 플랜입니까?**에 **예**를 지정하십시오. **저장**을 클릭하십시오. 플랜이 {{site.data.keyword.Bluemix_notm}} 카탈로그에 공개됩니다.
    * **구독 플랜**: **무료 플랜입니까?**에 **아니오**를 지정하십시오. 필수 필드를 완료하십시오. 기본 **가격 메트릭** 메트릭을 그대로 두십시오. 이 기본 메트릭은 한 달에 한 번 사용자에게 요금을 부과하기 위해 제공됩니다. **저장**을 클릭하십시오. 플랜이 {{site.data.keyword.Bluemix_notm}} 카탈로그에 공개됩니다. 사용량을 제출하려면 샘플 curl 명령을 저장하십시오.
-   * **측정량 기반 플랜**: **무료 플랜입니까?**에 **아니오**를 지정하십시오. 필수 필드를 완료하십시오. 기본 **가격 메트릭** 구독 메트릭을 *삭제*하십시오. **다른 메트릭 추가**를 클릭하고 **가격 메트릭 추가** 페이지를 완료한 후 **메트릭 추가**를 클릭하십시오. **저장**을 클릭하십시오. 플랜이 {{site.data.keyword.Bluemix_notm}} 카탈로그에 공개됩니다. 사용량을 제출하려면 샘플 curl 명령을 저장하십시오. 올바른 메트릭을 선택하는 데 도움을 받으려면 [측정 통합](/docs/third-party/metering.html)을 참조하십시오.
+   * **측정량 기반 플랜**: **무료 플랜입니까?**에 **아니오**를 지정하십시오. 필수 필드를 완료하십시오. 기본 **가격 메트릭** 구독 메트릭을 *삭제*하십시오. **다른 메트릭 추가**를 클릭하고 **가격 메트릭 추가** 페이지를 완료한 후 **메트릭 추가**를 클릭하십시오. **저장**을 클릭하십시오. 플랜이 {{site.data.keyword.Bluemix_notm}} 카탈로그에 공개됩니다. 사용량을 제출하려면 샘플 curl 명령을 저장하십시오. 올바른 메트릭을 선택하는 데 도움을 받으려면 [측정 통합](/docs/third-party?topic=third-party-content-tasks#content-tasks)을 참조하십시오.
 3. 이제 **가격** 페이지가 완료로 표시되어야 합니다. 이는 이 페이지를 완료할 최소 요구사항을 충족했음을 나타냅니다.
 
-서비스 제공자는 측정된 모든 플랜에 대한 시간별 사용 제출을 자동화해야 합니다. 자세한 정보는 [측정량 기반 플랜을 위한 사용량 제출](/docs/third-party/submitusage.html)을 참조하십시오.
+서비스 제공자는 측정된 모든 플랜에 대한 시간별 사용 제출을 자동화해야 합니다. 자세한 정보는 [측정량 기반 플랜을 위한 사용량 제출](/docs/third-party?topic=third-party-submitusage#submitusage)을 참조하십시오.
 {: tip}
 
 ## 메타데이터를 JSON으로 내보내기
@@ -121,6 +121,6 @@ IAM은 {{site.data.keyword.Bluemix_notm}}에 온보딩되는 모든 서비스에
 `catalog.json` 파일을 저장하십시오. 다음 절에서는 이 파일을 사용하여 Open Service Broker를 개발합니다.
 
 ## 다음 단계
-{: #next-steps}
+{: #cis2-next-steps}
 
-축하합니다! 카탈로그 표시 메타데이터를 추가하고, IAM에 등록한 후, 하나 이상의 가격 플랜을 작성하여 서비스 오퍼링을 정의했습니다. 다음으로 내보낸 JSON을 사용하여 서비스 브로커 개발을 시작할 수 있습니다. [3단계: 서비스 브로커 개발 및 호스팅](/docs/third-party/cis3-broker.html)을 참조하십시오.
+축하합니다! 카탈로그 표시 메타데이터를 추가하고, IAM에 등록한 후, 하나 이상의 가격 플랜을 작성하여 서비스 오퍼링을 정의했습니다. 다음으로 내보낸 JSON을 사용하여 서비스 브로커 개발을 시작할 수 있습니다. [3단계: 서비스 브로커 개발 및 호스팅](/docs/third-party?topic=third-party-step3-osb#step3-osb)을 참조하십시오.

@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ Puoi utilizzare il workbench IBM Provider per creare la tua documentazione intro
 {:shortdesc}
 
 ## Prima di iniziare
-{: #prereqs}
+{: #marketing-prereqs}
 
-Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
+Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party?topic=third-party-get-started#get-started) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
 ## Crea la tua documentazione introduttiva
-{: #docs}
+{: #gs-docs}
 
 Per distribuire un servizio di fatturazione integrato, devi fornire una documentazione introduttiva che descrive come gli utenti iniziano ad utilizzare il tuo servizio nel contesto di {{site.data.keyword.Bluemix_notm}}. Puoi lavorare su questa attività in parallelo mentre sviluppi il tuo servizio.
 
@@ -54,4 +54,4 @@ Dopo aver inviato il tuo comunicato del servizio, un responsabile del marketing 
 ## Passi successivi
 {: #next-steps}
 
-Ora che sono state avviate le attività per creare la tua documentazione introduttiva e il comunicato del servizio, sei pronto a definire la tua offerta nella console di gestione delle risorse. Consulta [Passo 2: Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).
+Ora che sono state avviate le attività per creare la tua documentazione introduttiva e il comunicato del servizio, sei pronto a definire la tua offerta nella console di gestione delle risorse. Consulta [Passo 2: Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party?topic=third-party-step2-define#step2-define).

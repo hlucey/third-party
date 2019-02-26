@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 このチュートリアルでは、IBM Provider Workbench を紹介し、第三者オファリングを統合請求サービスとして登録するプロセスについて段階的に説明します。
 {:shortdesc}
 
-{{site.data.keyword.Bluemix}} の第三者オファリングを統合請求サービスまたは紹介サービスとして提供することができます。 このチュートリアルは、統合請求サービス・オプションに焦点を合わせます。 紹介サービス・オプションの詳細については、[第三者オファリングのタイプ](/docs/third-party/offering-types.html)を参照してください。
+{{site.data.keyword.Bluemix}} の第三者オファリングを統合請求サービスまたは紹介サービスとして提供することができます。 このチュートリアルは、統合請求サービス・オプションに焦点を合わせます。 紹介サービス・オプションの詳細については、[第三者オファリングのタイプ](/docs/third-party?topic=third-party-offering-types#offering-types)を参照してください。
 {: tip}
 
 ## ステップ 1. オファリングの登録
@@ -46,7 +46,7 @@ Provider Workbench を使用して、統合請求サービスとしてオファ�
 オファリング・タイプとして**「Integrated billing service」**を選択し、準備状況の評価フォームを送信すると、ページが更新されて、コンテンツを定義するためのセクションが表示されます。 それは {{site.data.keyword.Bluemix_notm}} コンソールのカタログ詳細ページに表示されます。 各フィールドを入力し、レビューのためのフォームを送信します。 レビュー・プロセスには数日間かかる可能性があります。
 
 ## 次のステップ
-{: #next-steps}
+{: #gs-next-steps}
 
 承認されると、次のステップを示す E メールを受信します。
 
@@ -57,4 +57,4 @@ Provider Workbench を使用して、統合請求サービスとしてオファ�
 
 * リソース管理コンソールで、オファリングを定義し、料金プランを作成し、セキュリティーを有効にし、さまざまな {{site.data.keyword.Bluemix_notm}} 環境へのオファリングのデプロイメントを管理して、オファリングを {{site.data.keyword.Bluemix_notm}} に統合します。 
 
-詳しくは、[統合請求サービスの作成および公開](/docs/third-party/integrated-billing-service.html)を参照してください。 
+詳しくは、[統合請求サービスの作成および公開](/docs/third-party?topic=third-party-overview#overview)を参照してください。 

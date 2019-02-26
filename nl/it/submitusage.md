@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-04" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -28,9 +28,9 @@ I seguenti passi descrivono il processo per l'inoltro dell'utilizzo:
 
 1. Inoltra una verifica dell'utilizzo iniziale tramite lo strumento API REST Usage Submission per convalidare che i tuoi piani a consumo siano configurati correttamente.
 2. Automatizza l'inoltro orario continuo allo strumento API REST Usage Submission per ogni piano a consumo. Puoi ospitare questi inoltri automatizzati dovunque tu voglia, a condizione che sia supportato SSO standard.
-2. I record di utilizzo sono aggregati in base al modello di misurazione e la quantità totale viene visualizzata nel Dashboard di utilizzo nella console {{site.data.keyword.Bluemix_notm}}.
-3. Viene utilizzata la quantità unitaria aggregata dal processo di misurazione, viene applicato il costo e viene calcolato l'importo dovuto dall'utente per l'istanza del servizio.
-4. Alla fine del mese, il costo calcolato finale è l'importo generato per l'utente.
+3. I record di utilizzo sono aggregati in base al modello di misurazione e la quantità totale viene visualizzata nel Dashboard di utilizzo nella console {{site.data.keyword.Bluemix_notm}}.
+4. Viene utilizzata la quantità unitaria aggregata dal processo di misurazione, viene applicato il costo e viene calcolato l'importo dovuto dall'utente per l'istanza del servizio.
+5. Alla fine del mese, il costo calcolato finale è l'importo generato per l'utente.
 
 ## Prerequisiti
 {: #prereqs}
@@ -49,7 +49,7 @@ Riesamina i seguenti prerequisiti per abilitare la misurazione per il tuo serviz
 Fai riferimento alle seguenti linee guida quando utilizzi il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per inoltrare i dati di utilizzo delle risorse:
 
 * L'ora di inizio e l'ora di fine rappresentano l'intervallo di tempo durante il quale le misure sono state raccolte. Le ore non dipendono dall'ora in cui il record di utilizzo viene inoltrato alle API di misurazione.
-* I record di utilizzo sono fatti. Non aggiornare il record di utilizzo dopo averlo creato. Un'ubicazione viene specificata quando crei correttamente un record di utilizzo. Se viene restituito un codice di errore, vedi le [azioni](#actions) che potresti dover eseguire.
+* I record di utilizzo sono fatti. Non aggiornare il record di utilizzo dopo averlo creato. Un'ubicazione viene specificata quando crei correttamente un record di utilizzo. Se viene restituito un codice di errore, vedi le [azioni](/docs/third-party?topic=third-party-submitusage#actions) che potresti dover eseguire.
 * Un record di utilizzo viene identificato in modo univoco dalla firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando un record di utilizzo viene elaborato, qualsiasi altro record di utilizzo con la stessa firma viene rifiutato come un duplicato.
 * Non combinare l'interazione con il servizio di misurazione con altri servizi. Le richieste devono essere gestite singolarmente anche se la misurazione inizia e termina con il provisioning e l'annullamento del provisioning dell'istanza.
 * I dati di utilizzo delle risorse devono essere inoltrati al servizio di misurazione una volta ogni 2 - 24 ore. La frequenza con cui inoltri i dati di utilizzo dipende dalla frequenza con cui vengono modificate le tue metriche di utilizzo.

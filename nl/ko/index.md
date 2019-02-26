@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 이 튜토리얼에서는 IBM Provider Workbench를 소개하고 통합 청구 서비스로 서드파티 오퍼링을 등록하는 프로세스를 안내합니다.
 {:shortdesc}
 
-{{site.data.keyword.Bluemix}}에서 서드파티 오퍼링을 통합 청구 서비스 또는 추천 서비스로 제공할 수 있습니다. 이 튜토리얼에서는 통합 청구 서비스 옵션에 초점을 둡니다. 추천 서비스 옵션에 대해 자세히 알아보려면 [서드파티 오퍼링 유형](/docs/third-party/offering-types.html)을 참조하십시오.
+{{site.data.keyword.Bluemix}}에서 서드파티 오퍼링을 통합 청구 서비스 또는 추천 서비스로 제공할 수 있습니다. 이 튜토리얼에서는 통합 청구 서비스 옵션에 초점을 둡니다. 추천 서비스 옵션에 대해 자세히 알아보려면 [서드파티 오퍼링 유형](/docs/third-party?topic=third-party-offering-types#offering-types)을 참조하십시오.
 {: tip}
 
 ## 1단계. 오퍼링 등록
@@ -46,7 +46,7 @@ Provider Workbench를 사용하여 오퍼링 유형을 통합 청구 서비스�
 사용자의 오퍼링 유형으로 **통합 청구 서비스**를 선택하고 준비 평가 양식을 제출한 후에는 컨텐츠를 정의하는 섹션으로 페이지가 새로 고쳐집니다. 컨텐츠는 {{site.data.keyword.Bluemix_notm}} 콘솔의 카탈로그 세부사항 페이지에 표시됩니다. 각 필드를 완료하고 검토를 위해 양식을 제출하십시오. 검토 프로세스에는 며칠이 걸릴 수 있습니다.
 
 ## 다음 단계
-{: #next-steps}
+{: #gs-next-steps}
 
 승인되면 다음 단계를 간략하게 설명하는 이메일을 받게 됩니다.
 
@@ -57,4 +57,4 @@ Provider Workbench를 사용하여 오퍼링 유형을 통합 청구 서비스�
 
 * 리소스 관리 콘솔에서 오퍼링을 정의하고, 가격 플랜을 빌드하고, 보안을 사용으로 설정하며, 다른 {{site.data.keyword.Bluemix_notm}} 환경에 있는 오퍼링의 배치를 관리하여 오퍼링을 {{site.data.keyword.Bluemix_notm}}로 통합하십시오. 
 
-세부사항은 [통합 청구 서비스 개발 및 공개](/docs/third-party/integrated-billing-service.html)를 참조하십시오. 
+세부사항은 [통합 청구 서비스 개발 및 공개](/docs/third-party?topic=third-party-overview#overview)를 참조하십시오. 

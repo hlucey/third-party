@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-08-28"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 ---
 
@@ -14,7 +14,7 @@ lastupdated: "2018-08-28"
 {:faq: data-hd-content-type="faq"}
 {:note: .note}
 
-# Domande frequenti
+# FAQ
 {: #3p-faqs}
 
 ## Quali sono le diverse opzioni di misurazione per i piani?
@@ -26,12 +26,12 @@ lastupdated: "2018-08-28"
 Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione, se offri un piano a consumo.
 {: note}
 
-Per ulteriori informazioni sulla misurazione, vedi [Integrazione della misurazione](/docs/third-party/metering.html#meteringintera). Per ulteriori informazioni sull'inoltro dell'utilizzo a consumo, vedi [Inoltro dell'utilizzo per i piani a consumo](/docs/third-party/submitusage.html#submitusage).
+Per ulteriori informazioni sulla misurazione, vedi [Integrazione della misurazione](/docs/third-party?topic=third-party-meteringintera#meteringintera). Per ulteriori informazioni sull'inoltro dell'utilizzo a consumo, vedi [Inoltro dell'utilizzo per i piani a consumo](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Come posso generare una nuova chiave API {{site.data.keyword.Bluemix_notm}} Identity and Access Management?
 {: #iam-creds}
 {: faq}
 
-Ti viene fornita la chiave API quando abiliti IAM. È molto importante che salvi la chiave API. Il valore non viene mostrato nuovamente. Se perdi la tua chiave API, puoi eliminarla e crearne una nuova. Per ulteriori informazioni, vedi [Gestione delle chiavi API di un ID servizio](/docs/iam/serviceid_keys.html#serviceidapikeys). 
+Ti viene fornita la chiave API quando abiliti IAM. È molto importante che salvi la chiave API. Il valore non viene mostrato nuovamente. Se perdi la tua chiave API, puoi eliminarla e crearne una nuova. Per ulteriori informazioni, vedi [Gestione delle chiavi API di un ID servizio](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). 
 
 

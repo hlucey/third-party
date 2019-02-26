@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # In che modo i servizi di fatturazione integrati utilizzano la piattaforma {{site.data.keyword.Bluemix_notm}}
@@ -44,7 +43,7 @@ Il livello di provisioning fornisce le API che ti aiutano a gestire i seguenti e
 ## {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management)
 {: #iam}
 
-IAM (Identity Access Management) ti consente di autenticare in modo sicuro gli utenti e controllare l'accesso a tutte le risorse cloud in modo congruente in tutto {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning {{site.data.keyword.Bluemix_notm}} ha adottato IAM per l'autenticazione e l'autorizzazione delle azioni eseguite sul livello di provisioning. I provider di offerte di terze parti usano IAM per creare un flusso di autenticazione (OAuth). Per ulteriori informazioni, vedi [Cos'è IAM](/docs/iam/index.html#iamoverview)?
+IAM (Identity Access Management) ti consente di autenticare in modo sicuro gli utenti e controllare l'accesso a tutte le risorse cloud in modo congruente in tutto {{site.data.keyword.Bluemix_notm}}. Il livello di provisioning {{site.data.keyword.Bluemix_notm}} ha adottato IAM per l'autenticazione e l'autorizzazione delle azioni eseguite sul livello di provisioning. I provider di offerte di terze parti usano IAM per creare un flusso di autenticazione (OAuth). Per ulteriori informazioni, vedi [Cos'è IAM](/docs/iam?topic=iam-iamoverview#iamoverview)?
 
 Se la tua offerta utilizza librerie OIDC (OpenID Connect), IAM supporta l'integrazione OIDC. OIDC è un livello di autenticazione in aggiunta a OAuth 2.0, un framework di autorizzazione, e può aiutare a semplificare il processo di onboarding. Per ulteriori informazioni su OIDC, vedi [Open ID Connect](http://openid.net/connect/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
 
@@ -89,11 +88,11 @@ Se un servizio offre un piano a consumo, l'addebito a carico degli utenti {{site
 Tutti i servizi di fatturazione integrati che offrono un piano a consumo devono utilizzare il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per notificare i dati di utilizzo.
 
 Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione, se offri un piano a consumo.
-{: important}
 
-Per ulteriori informazioni sulla misurazione, vedi: [Integrazione della misurazione](/docs/third-party/metering.html#meteringintera). Per ulteriori informazioni sull'inoltro dell'utilizzo a consumo, vedi [Inoltro dell'utilizzo per i piani a consumo](/docs/third-party/submitusage.html#submitusage)
+Per ulteriori informazioni sulla misurazione, vedi: [Integrazione della misurazione](/docs/third-party?topic=third-party-meteringintera#meteringintera). Per ulteriori informazioni sull'inoltro dell'utilizzo a consumo, vedi [Inoltro dell'utilizzo per i piani a consumo](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Scenario di provisioning: assemblaggio di tutti i concetti
+{: #provision2}
 
 Mettiamo ora insieme tutti i concetti e guardiamo un esempio di come funziona la creazione di un'istanza del servizio utilizzando la piattaforma {{site.data.keyword.Bluemix_notm}}.
 
@@ -156,7 +155,7 @@ Nell'esempio precedente, puoi vedere i metadati restituiti nel parametro `contex
 
    In questo esempio, questa istanza `compose-redis` fa parte dell'account {{site.data.keyword.Bluemix_notm}} con ID. L'ID univoco per l'istanza è `416d769b-682d-4833-8bd7-5ef8778e5b52` e l'istanza è ospitata nella regione `us-south` di {{site.data.keyword.Bluemix_notm}} pubblico.
 
-* **resource_group_crn**: restituisce il gruppo di risorse che include l'istanza del servizio. Per ulteriori dettagli, vedi [Gestione dei gruppi di risorse](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: restituisce il gruppo di risorse che include l'istanza del servizio. Per ulteriori dettagli, vedi [Gestione dei gruppi di risorse](/docs/resources?topic=resources-rgs#rgs).
 
    I provider di offerte non devono preoccuparsi del `resource_group_crn`, tranne in circostanze eccezionali. Consulta il tuo rappresentante IBM sul tuo caso di utilizzo prima di utilizzare tale campo.
    {: note}

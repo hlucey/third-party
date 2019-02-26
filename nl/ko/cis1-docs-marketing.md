@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ IBM Provider Workbench를 사용하여 시작하기 문서 및 마케팅 공지�
 {:shortdesc}
 
 ## 시작하기 전에
-{: #prereqs}
+{: #marketing-prereqs}
 
-[시작하기 튜토리얼](/docs/third-party/index.html)이 완료되었는지와 통합 청구 서비스를 제공하도록 승인되었는지 확인하십시오.
+[시작하기 튜토리얼](/docs/third-party?topic=third-party-get-started#get-started)이 완료되었는지와 통합 청구 서비스를 제공하도록 승인되었는지 확인하십시오.
 
 ## 시작하기 문서 작성
-{: #docs}
+{: #gs-docs}
 
 통합 청구 서비스를 제공하려면 사용자가 {{site.data.keyword.Bluemix_notm}}의 컨텍스트에서 서비스를 사용하여 시작하는 방법을 설명하는 시작하기 문서를 제공해야 합니다. 서비스를 개발하는 동안 이 태스크를 병렬로 작업할 수 있습니다.
 
@@ -54,4 +54,4 @@ IBM Provider Workbench를 사용하여 시작하기 문서 및 마케팅 공지�
 ## 다음 단계
 {: #next-steps}
 
-이제 시작하기 문서와 서비스 공지사항을 작성하는 태스크를 시작했으므로 리소스 관리 콘솔에서 오퍼링을 정의할 준비가 되었습니다. [2단계: 리소스 관리 콘솔에서 오퍼링 정의](/docs/third-party/cis2-rmc-define.html)를 참조하십시오.
+이제 시작하기 문서와 서비스 공지사항을 작성하는 태스크를 시작했으므로 리소스 관리 콘솔에서 오퍼링을 정의할 준비가 되었습니다. [2단계: 리소스 관리 콘솔에서 오퍼링 정의](/docs/third-party?topic=third-party-step2-define#step2-define)를 참조하십시오.

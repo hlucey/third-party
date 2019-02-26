@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ lastupdated: "2018-11-14"
 ## 프로세스 작동 방식
 {: #process}
 
-사용자는 통합 청구 서비스를 제공하기 위해 Provider Workbench, 리소스 관리 콘솔 및 선택한 개발 환경을 사용합니다. 이러한 단계를 추적하려면 [체크리스트](/docs/third-party/checklist.html#checklist)를 참조하십시오.
+사용자는 통합 청구 서비스를 제공하기 위해 Provider Workbench, 리소스 관리 콘솔 및 선택한 개발 환경을 사용합니다. 이러한 단계를 추적하려면 [체크리스트](/docs/third-party?topic=third-party-checklist#checklist)를 참조하십시오.
 
-이러한 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. PWB에서 초기 등록 및 승인을 완료하지 않은 경우 [{{site.data.keyword.Bluemix_notm}}에서 서드파티 오퍼링 공개 시작하기](/docs/third-party/index.md)를 참조하십시오.
+이러한 단계에서는 사용자가 통합 청구 서비스를 제공하도록 승인되었다고 가정합니다. PWB에서 초기 등록 및 승인을 완료하지 않은 경우 [{{site.data.keyword.Bluemix_notm}}에서 서드파티 오퍼링 공개 시작하기](/docs/third-party/index.md?topic=third-party-get-started#get-started)를 참조하십시오.
 {: tip}
 
-1. [문서 및 마케팅 공지사항 작성](/docs/third-party/cis1-docs-marketing.html).
-2. [리소스 관리 콘솔 {{site.data.keyword.Bluemix_notm}}에서 오퍼링 정의](/docs/third-party/cis2-rmc-define.html).
-3. [서비스 브로커 개발 및 호스트](/docs/third-party/cis3-broker.html).
-4. [인증 플로우 개발](/docs/third-party/cis5-iam.html).
-5. [서비스 테스트](/docs/third-party/cis4-rmc-publish.html).
-6. [공개적으로 서비스 릴리스](/docs/third-party/cis6-ga.html).
+1. [문서 및 마케팅 공지사항 작성](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [리소스 관리 콘솔의 오퍼링 정의{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [서비스 브로커 개발 및 호스트](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [인증 플로우 개발](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [서비스 테스트](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [공개적으로 서비스 릴리스](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## 지원
 {: #support}

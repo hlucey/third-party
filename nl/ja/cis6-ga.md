@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -21,26 +21,26 @@ lastupdated: "2018-09-04"
 
 稼働の準備はできましたか? 限定表示サービスはテストしましたか? それでは、次に GA の準備に取り掛かりましょう。 サービス・プロバイダーは、完成したサービスがすべての要件を満たしていることを示すビデオを記録する必要があります。 ビデオは、E メールで IBM に送信します。 デモは、最終的な公開承認を付与する前に IBM で審査されます。 記録の審査は毎週火曜日に行われ、続く木曜日に、決定またはフィードバックが返されます。したがって、稼働日の準備のために十分な時間を見込んで計画を立てるようにしてください。
 
-このステップは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認が完了していない場合は、[入門チュートリアル](/docs/third-party/index.html)を参照してください。
+このステップは、ユーザーが統合請求サービスを提供することを承認済みであると想定しています。 Provider Workbench での初期登録と承認が完了していない場合は、[入門チュートリアル](/docs/third-party?topic=third-party-get-started#get-started)を参照してください。
 {: tip}
 
 ## 始める前に
 {: #before-you-begin}
 
 ステップ 1 を開始しており、ステップ 2、3、4、および 5 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party/cis1-docs-marketing.html)。
-2. [リソース管理コンソールでオファリングを定義する](/docs/third-party/cis2-rmc-define.html)。
-3. [サービス・ブローカーを作成してホストする](/docs/third-party/cis3-broker.html)。
-3. [認証フローを作成する](/docs/third-party/cis5-iam.html)。
-3. [サービスを公開およびテストする](/docs/third-party/cis4-rmc-publish.html)。
+1. [サービス文書とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [リソース管理コンソールでオファリングを定義する](/docs/third-party?topic=third-party-step2-define#step2-define)。
+3. [サービス・ブローカーを作成してホストする](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
+4. [認証フローを作成する](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
+5. [サービスを公開およびテストする](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)。
 
 
 ## デモの記録
 {: #demo}
 
 1. IBM 担当員と協力して、デモの要件と正確な内容を理解してください。
-1. 記録用のソフトウェアを選択します (macOS の Quicktime と Windows の Windows Media Player は両方とも無料のビデオおよびオーディオ記録オプションを提供しています)。
-2. {{site.data.keyword.Bluemix_notm}} にログインし、記録を開始します。
+2. 記録用のソフトウェアを選択します (macOS の Quicktime と Windows の Windows Media Player は両方とも無料のビデオおよびオーディオ記録オプションを提供しています)。
+3. {{site.data.keyword.Bluemix_notm}} にログインし、記録を開始します。
 
 ## デモを IBM に送信
 {: #send-demo}

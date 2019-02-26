@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="third-party" audience="platform" href="/docs/third-party/index.html" path="third-party"}
+{: .toc subcollection="third-party" audience="platform" href="/docs/third-party?topic=third-party-get-started#get-started" path="third-party"}
 서드파티 통합 청구 서비스 개발
 
     {: .navgroup id="learn"}

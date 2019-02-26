@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Ora che hai uno o più broker ospitati che soddisfano la specifica OSB, puoi tor
 {:shortdesc}
 
 ## Prima di iniziare
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali nel workbench Provider, vedi l'[esercitazione introduttiva](/docs/third-party/index.md).
+Questo passo presuppone che tu sia stato approvato per fornire un servizio di fatturazione integrato. Se non hai completato la registrazione e l'approvazione iniziali nel workbench Provider, vedi l'[esercitazione introduttiva](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
 Assicurati di aver avviato il passo 1 e di aver completato i passi 2, 3 e 4:
-1. [Crea i documenti e il comunicato di marketing del servizio](/docs/third-party/cis1-docs-marketing.html).
-2. [Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party/cis2-rmc-define.html).
-3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party/cis3-broker.html).
-3. [Sviluppa un flusso di autenticazione](/docs/third-party/cis5-iam.html).
+1. [Crea i documenti e il comunicato di marketing del servizio](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Definisci la tua offerta nella console di gestione delle risorse](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Sviluppa e ospita i tuoi broker dei servizi](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [Sviluppa un flusso di autenticazione](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Pubblica il tuo servizio in {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ Sei bloccato su un errore di distribuzione? Contatta il tuo rappresentante IBM p
 {: tip}
 
 ## Verifica la tua offerta distribuita 
-{: #test}
+{: #publish-test}
 
 Poiché hai eseguito la distribuzione in modalità di visibilità limitata, solo tu puoi vedere la tua offerta nel catalogo {{site.data.keyword.Bluemix_notm}}. Utilizzando l'elenco di controllo nella seguente sezione, esegui l'accesso {{site.data.keyword.Bluemix_notm}} e procedi con i criteri di verifica.
 
@@ -84,6 +84,6 @@ Se i tuoi test non vengono eseguiti correttamente, ripeti i passi precedenti per
 
 
 ## Passi successivi
-{: #next-steps}
+{: #release}
 
-Ora che hai un servizio funzionale nel catalogo, puoi creare una Demo e chiedere l'approvazione per rilasciare pubblicamente il tuo servizio. Vedi [Passo 6: Rilascia pubblicamente il tuo servizio](/docs/third-party/cis6-ga.html).
+Ora che hai un servizio funzionale nel catalogo, puoi creare una Demo e chiedere l'approvazione per rilasciare pubblicamente il tuo servizio. Vedi [Passo 6: Rilascia pubblicamente il tuo servizio](/docs/third-party?topic=third-party-public-releasing#public-releasing).
