@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ lastupdated: "2018-09-04"
 {:shortdesc}
 
 ## Antes de começar
-{: #prereqs}
+{: #marketing-prereqs}
 
-Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party/index.html) e que esteja aprovado para entregar um serviço de faturamento integrado.
+Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party?topic=third-party-get-started#get-started) e que esteja aprovado para entregar um serviço de faturamento integrado.
 
 ## Criar sua documentação de introdução
-{: #docs}
+{: #gs-docs}
 
 Para entregar um serviço de faturamento integrado, é necessário fornecer a documentação de introdução que descreve como os
 usuários são iniciados no uso do serviço no contexto do {{site.data.keyword.Bluemix_notm}}. É possível trabalhar nessa tarefa em paralelo enquanto desenvolve seu serviço.
@@ -56,4 +56,4 @@ Depois que você envia seu anúncio de serviço, um gerente de marketing da IBM 
 ## Próximas Etapas
 {: #next-steps}
 
-Agora que iniciou as tarefas para criar a documentação de introdução e o anúncio de serviço, você está pronto para definir sua oferta no console de gerenciamento de recurso. Veja [Etapa 2: definindo sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
+Agora que iniciou as tarefas para criar a documentação de introdução e o anúncio de serviço, você está pronto para definir sua oferta no console de gerenciamento de recurso. Veja [Etapa 2: definindo sua oferta no console de gerenciamento de recurso](/docs/third-party?topic=third-party-step2-define#step2-define).

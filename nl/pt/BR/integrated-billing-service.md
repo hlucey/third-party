@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ Em seguida, fora do console de gerenciamento de recurso, você executa o desenvo
 ## Como o processo funciona
 {: #process}
 
-Para entregar um serviço de faturamento integrado, você trabalha com o ambiente de trabalho do Provedor, o console de gerenciamento de recursos e o ambiente de desenvolvimento de sua escolha. Veja a [lista de verificação](/docs/third-party/checklist.html#checklist) para ajudar a rastrear essas etapas.
+Para entregar um serviço de faturamento integrado, você trabalha com o ambiente de trabalho do Provedor, o console de gerenciamento de recursos e o ambiente de desenvolvimento de sua escolha. Veja a [lista de verificação](/docs/third-party?topic=third-party-checklist#checklist) para ajudar a rastrear essas etapas.
 
-Essas etapas assumem que você foi aprovado para entregar um serviço de Faturamento integrado. Se você não concluiu o registro e a aprovação iniciais no PWB, veja: [Introdução à publicação de sua oferta de terceiros no {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+Essas etapas assumem que você foi aprovado para entregar um serviço de Faturamento integrado. Se você não concluiu o registro e a aprovação iniciais no PWB, veja: [Introdução à publicação de sua oferta de terceiros no {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started)
 {: tip}
 
-1. [ Crie sua documentação e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
-2. [Defina sua oferta no console de gerenciamento de recurso{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
-3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
-4. [ Desenvolva um fluxo de autenticação ](/docs/third-party/cis5-iam.html).
-5. [ Teste seu serviço ](/docs/third-party/cis4-rmc-publish.html).
-6. [ Liberar seu serviço publicamente ](/docs/third-party/cis6-ga.html).
+1. [ Crie sua documentação e anúncio de marketing ](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Defina sua oferta no console de gerenciamento de recurso{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [ Desenvolva um fluxo de autenticação ](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [ Teste seu serviço ](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [ Liberar seu serviço publicamente ](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## Suporte
 {: #support}

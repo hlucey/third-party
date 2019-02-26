@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-02-20"
 
 
 ---
@@ -29,17 +29,17 @@ Os brokers de serviço gerenciam o ciclo de vida de serviços. A plataforma {{si
 É possível construir seu broker usando uma combinação dos metadados exportados do console de gerenciamento de recursos, nossas amostras do broker de serviço público do {{site.data.keyword.Bluemix_notm}} e a documentação da API do Broker de Recurso.
 
 ## Antes de começar
-{: #pre-reqs}
+{: #broker-pre-reqs}
 
 Assegure-se de iniciar a etapa 1 e concluir a etapa 2:
-1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
-2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
+1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party?topic=third-party-step2-define#step2-define).
 
 
 ## Visualize o cenário de fornecimento de plataforma do  {{site.data.keyword.Bluemix_notm}}
 {: #scenario}
 
-Você está desenvolvendo um Open Service Broker que trabalha com a plataforma {{site.data.keyword.Bluemix_notm}}. Veja nosso [Cenário de fornecimento](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obter um entendimento de como a criação de recursos funciona.
+Você está desenvolvendo um Open Service Broker que trabalha com a plataforma {{site.data.keyword.Bluemix_notm}}. Veja nosso [Cenário de fornecimento](/docs/third-party?topic=third-party-how-it-works#provision2) para obter um entendimento de como a criação de recursos funciona.
 
 ## Familiarize-se com a especificação do OSB
 {: #learn-osb}
@@ -63,6 +63,7 @@ O Open Service Broker do {{site.data.keyword.Bluemix_notm}} estende a especifica
 {: tip}
 
 ### Lógica de terminal necessária para todos os brokers de serviço
+{: #endpoint-sb}
 
 Os brokers de serviço devem fornecer um conjunto padrão de valores de metadados que são consumidos por APIs de REST e os brokers do {{site.data.keyword.Bluemix_notm}} devem ter lógica para os terminais ou caminhos da API de REST a seguir:
 
@@ -100,6 +101,7 @@ Os brokers de serviço devem fornecer um conjunto padrão de valores de metadado
 ```
 
 ### Lógica de terminais necessários para serviços ligáveis
+{: #bindable}
 
 Se seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}, ele deverá retornar terminais e credenciais de API para seus consumidores de serviço. Um serviço que permite ligação deve usar as operações que permitem ligação na especificação Open Service Broker e implementar os terminais ou os caminhos a seguir:
 
@@ -111,6 +113,7 @@ Se seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_no
 </dl>
 
 ### Terminais de extensão  {{site.data.keyword.Bluemix_notm}}  necessários
+{: #extension} 
 
 A especificação do OSB não* suporta um estado de instância desativado, mas ainda não excluiu o estado da instância. Para que o {{site.data.keyword.Bluemix_notm}} suporte os clientes que talvez passem por uma expiração de faturamento ou outras situações que resultem em uma suspensão de conta (mas ainda não o cancelamento), o {{site.data.keyword.Bluemix_notm}} definiu os terminais de API estendidos que permitem que instâncias de serviço sejam desativadas e reativadas. As extensões de terminal a seguir são **necessárias**:
 
@@ -187,6 +190,7 @@ Sua matriz de serviços OSB deve ser a mesma que os metadados da oferta que voc�
 Seu broker ou brokers de serviço recebem as informações a seguir da plataforma {{site.data.keyword.Bluemix_notm}}:
 
 ### X-Broker-API-Originating-Identity
+{: #x-broker}
 
 O **cabeçalho de identidade do usuário** é fornecido por meio de um cabeçalho de identidade de origem de API. Esse cabeçalho de solicitação inclui a Identidade do IAM do {{site.data.keyword.Bluemix_notm}} do usuário. A Identidade do IAM é codificada em base64. O {{site.data.keyword.Bluemix_notm}}  suporta uma região de autenticação única:  ` IBMid `. A região `IBMid` usa um IBMid Unique ID (IUI) para identificar a identidade do usuário no {{site.data.keyword.Bluemix_notm}}. Esse IUI é uma sequência opaca para o provedor de serviços.
 
@@ -199,12 +203,14 @@ Decoded:
 ```
 
 ### Versão de cabeçalho da API
+{: #api-header}
 
 O **cabeçalho da versão da API** é
 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window}
 ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Por exemplo: ` X-Broker-Api-Version: 2.12`.
 
 ### Instância de recurso (PUT) body.context e instância de recurso (PATCH) body.context
+{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` e `PATCH /v2/service_instances/:resource_instance_id` recebem o valor a seguir em **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
@@ -212,6 +218,7 @@ O **cabeçalho da versão da API** é
 {: #more-info}
 
 ### Recomendações sobre o uso assíncrono em vez de operações síncronas
+{: #asynch-ops}
 
 O OSB API suporta os modos síncrono e assíncrono de operação. Se suas operações forem levar menos de 10 segundos, as respostas síncronas serão recomendadas. Caso contrário, deve-se usar o modo assíncrono da operação. Mais informações estão contidas na especificação do OSB.
 
@@ -219,6 +226,7 @@ Se a sua operação assíncrona levar menos de 10 segundos quando você estiver 
 {: tip}
 
 ### Recomendações para gerenciar brokers em locais
+{: #managing-broker}
 
 É importante que os usuários entendam o local de seus serviços de nuvem para latência, disponibilidade e residência de dados.
 
@@ -229,7 +237,7 @@ Se seu serviço baseado em API de terceiros for implementado em outra nuvem e ex
 Quando você se integra ao {{site.data.keyword.Bluemix_notm}}, deve implementar pelo menos um broker do OSB. É possível ter mais de um broker, dependendo de sua estratégia de implementação e dos locais que deseja suportar para seu serviço. Na ferramenta do console de gerenciamento de recursos, você estabeleceu o mapeamento entre a tupla de serviço/plano/local e o broker que atende as operações para
 essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
 
-Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o serviço precisar que mais locais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
+Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o serviço precisar que mais locais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Hospeda seus brokers
@@ -241,13 +249,13 @@ Para hospedar seu broker fora da IBM, deve-se assegurar de que ele atenda às di
 - Deve seguir o protocolo de Segurança da Camada de Transporte (TLS) versão 1.2
 - Deve ser hospedado em um terminal HTTPs válido que esteja acessível na Internet pública
 
-Se desejar hospedar no {{site.data.keyword.Bluemix_notm}}, será possível localizar informações sobre a criação de um app usando Contêineres (Kubernetes) aqui: [Adotantes internos - Informações de uso](/docs/containers/cs_internal.html#cs_internal).
+Se desejar hospedar no {{site.data.keyword.Bluemix_notm}}, será possível localizar informações sobre a criação de um app usando Contêineres (Kubernetes) aqui: [Adotantes internos - Informações de uso](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 Será necessário o local hospedado de seu broker de serviço para concluir a próxima etapa. Tenha a URL e as credenciais que estão associadas ao seu aplicativo prontas quando for para a próxima etapa.
 {: tip}
 
 ## Como testar o broker do seu serviço
-{: #test}
+{: #broker-test}
 
 Deve-se validar seu broker executando comandos curl nos diferentes terminais que você está ativando. O arquivo leia-me de amostra fornece uma excelente orientação para curling de seus terminais do OSB: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Ícone do link externo](../icons/launch-glyph.svg "Ícone do link externo")
 
@@ -269,6 +277,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Próximas Etapas
-{: #next-steps}
+{: #cis3-next-steps}
 
-Você tem algumas habilidades sérias! Você construiu e hospedou um broker de serviço que atende à especificação OSB. Consulte [Etapa 4: Desenvolvendo um fluxo de autenticação](/docs/third-party/cis5-iam.html).
+Você tem algumas habilidades sérias! Você construiu e hospedou um broker de serviço que atende à especificação OSB. Consulte [Etapa 4: Desenvolvendo um fluxo de autenticação](/docs/third-party?topic=third-party-step4-iam#step4-iam).

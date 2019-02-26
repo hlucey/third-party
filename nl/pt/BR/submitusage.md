@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-04" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -30,9 +30,9 @@ As etapas a seguir descrevem o processo para enviar o uso:
 
 1. Envie um teste de uso inicial por meio da ferramenta API de REST de Envio de uso para validar que seus planos medidos estão configurados corretamente.
 2. Automatize o envio contínuo por hora para a ferramenta API de Rest de Envio de uso para cada plano medido. Será possível hospedar esses envios automatizados sempre que você desejar, desde que a SSO padrão seja suportada.
-2. Os registros de uso são agregados com base no modelo de medição e a quantidade total é exibida no Painel de uso no console do {{site.data.keyword.Bluemix_notm}}.
-3. A quantidade da unidade agregada do processo de medição é usada, o custo é aplicado e a quantia que o usuário deve para a instância de serviço é calculada.
-4. No término do mês, o custo calculado final é a quantia gerada para o usuário.
+3. Os registros de uso são agregados com base no modelo de medição e a quantidade total é exibida no Painel de uso no console do {{site.data.keyword.Bluemix_notm}}.
+4. A quantidade da unidade agregada do processo de medição é usada, o custo é aplicado e a quantia que o usuário deve para a instância de serviço é calculada.
+5. No término do mês, o custo calculado final é a quantia gerada para o usuário.
 
 ## Pré-requisito
 {: #prereqs}
@@ -51,7 +51,7 @@ Revise os pré-requisitos a seguir para ativar a medição para seu serviço:
 Consulte as diretrizes a seguir ao usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para enviar dados de uso de recurso:
 
 * O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
-* Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, veja as [ações](#actions) que você pode ter que tomar.
+* Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, veja as [ações](/docs/third-party?topic=third-party-submitusage#actions) que você pode ter que tomar.
 * Um registro de uso é identificado com exclusividade pela assinatura ` account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando um registro de uso é processado, qualquer outro registro de uso com a mesma assinatura é rejeitado como uma duplicata.
 * Não combine a interação com o serviço de medição com quaisquer outros serviços. As solicitações devem ser tratadas
 individualmente, mesmo caso a medição inicie e termine com o fornecimento e a remoção do fornecimento da instância.

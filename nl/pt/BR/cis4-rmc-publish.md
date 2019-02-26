@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Agora que você tem seu broker ou brokers hospedados que atendem à especificaç
 {:shortdesc}
 
 ## Antes de começar
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-Essa etapa assume que você foi aprovado para entregar um serviço de faturamento integrado. Se você não concluiu o registro inicial e a aprovação no ambiente de trabalho do Provedor, consulte o [Tutorial de introdução](/docs/third-party/index.md).
+Essa etapa assume que você foi aprovado para entregar um serviço de faturamento integrado. Se você não concluiu o registro inicial e a aprovação no ambiente de trabalho do Provedor, consulte o [Tutorial de introdução](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
 Assegure-se de iniciar a etapa 1 e de que concluiu as etapas 2, 3 e 4:
-1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party/cis1-docs-marketing.html).
-2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party/cis2-rmc-define.html).
-3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party/cis3-broker.html).
-3. [ Desenvolva um fluxo de autenticação ](/docs/third-party/cis5-iam.html).
+1. [ Anúncios de serviço de autor e anúncio de marketing ](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Defina sua oferta no console de gerenciamento de recurso](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Desenvolva e hospede seus brokers de serviço](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [ Desenvolva um fluxo de autenticação ](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Publicar seu serviço no {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ Preso em uma falha de implementação? Entre em contato com seu representante IB
 {: tip}
 
 ## Testar sua oferta implementada 
-{: #test}
+{: #publish-test}
 
 Como a implementação foi no modo de visibilidade limitada, somente você pode ver a sua oferta no catálogo do {{site.data.keyword.Bluemix_notm}}. Usando a lista de verificação na seção a seguir, efetue login no {{site.data.keyword.Bluemix_notm}} e trabalhe por meio dos critérios de teste.
 
@@ -84,6 +84,6 @@ Se seus testes forem malsucedidos, repita as etapas anteriores para publicar seu
 
 
 ## Próximas Etapas
-{: #next-steps}
+{: #release}
 
-Agora que você tem um serviço funcional no catálogo, é possível construir uma Demo e solicitar a aprovação para liberar publicamente o seu serviço. Veja: [Etapa 6: liberar publicamente seu serviço](/docs/third-party/cis6-ga.html).
+Agora que você tem um serviço funcional no catálogo, é possível construir uma Demo e solicitar a aprovação para liberar publicamente o seu serviço. Veja: [Etapa 6: liberar publicamente seu serviço](/docs/third-party?topic=third-party-public-releasing#public-releasing).

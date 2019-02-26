@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -28,14 +28,14 @@ A lista a seguir descreve as expectativas para rastreamento e envio de uso:
 *	Para planos medidos, todos os provedores de oferta devem enviar o uso por hora (os planos Lite devem ser enviados a cada 15 minutos até 1 hora).
 *	O provedor de oferta é responsável por automatizar o envio de uso, incluindo a automação que tenta respostas de falha novamente. O {{site.data.keyword.Bluemix_notm}} não fornece uma função de nova tentativa para envios com falha. Para obter mais
 informações, consulte os códigos de status e a tabela de ações em
-[Enviando registros de uso](/docs/third-party/submitusage.html#submitting-usage-records).
+[Enviando registros de uso](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	Os registros de uso do mês atual devem ser enviados, o mais tardar, até o dia 2 do mês seguinte.
 *	O {{site.data.keyword.Bluemix_notm}} é configurado para um ciclo de faturamento mensal e o horário é representado em
 Hora Universal Coordenada (UTC).
 *  Os provedores de ofertas devem testar o envio de uso e validar seus resultados para informar como o ciclo de faturamento mensal é calculado.
 
 Para obter informações gerais sobre precificação, consulte
-[Como calcular os custos](/docs/billing-usage/estimating_costs.html#cost). 
+[Como calcular os custos](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Propriedades de Configuração
 {: #configure}

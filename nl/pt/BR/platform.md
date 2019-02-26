@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # Como os serviços de faturamento integrado usam a plataforma {{site.data.keyword.Bluemix_notm}}
@@ -47,7 +46,7 @@ A camada de fornecimento fornece APIs para ajudá-lo a gerenciar os elementos a 
 {: #iam}
 
 O Identity Access Management (IAM) permite que você autentique os usuários com segurança e controle o acesso a todos os recursos em nuvem de forma consistente no {{site.data.keyword.Bluemix_notm}}. A camada de fornecimento do {{site.data.keyword.Bluemix_notm}} adotada pelo IAM para a autenticação e a autorização de ações
-que são tomadas com relação à camada de fornecimento. Os provedores de ofertas de terceiros usam o IAM para criar um fluxo de autenticação (OAuth). Para obter mais informações, consulte [O que é IAM](/docs/iam/index.html#iamoverview)?
+que são tomadas com relação à camada de fornecimento. Os provedores de ofertas de terceiros usam o IAM para criar um fluxo de autenticação (OAuth). Para obter mais informações, consulte [O que é IAM](/docs/iam?topic=iam-iamoverview#iamoverview)?
 
 Se sua oferta usa bibliotecas do OpenID Connect (OIDC), o IAM suporta a integração OIDC. OIDC é uma camada de autenticação em cima do OAuth 2.0, uma estrutura de autorização e pode ajudar a simplificar o processo de integração. Para obter mais informações sobre OIDC, veja [Open ID Connect](http://openid.net/connect/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
 
@@ -98,12 +97,13 @@ Se um serviço oferece um plano medido, os usuários do {{site.data.keyword.Blue
 
 Todos os serviços de faturamento integrado que oferecem um plano medido devem usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para relatar dados de uso.
 
-Será necessário automatizar o envio de uso por hora usando a API de serviço de medição, se você oferecer um plano medidor.
-{: important}
+Será necessário automatizar o envio de uso por hora usando a API de serviço de medição, se você oferecer um plano medido.
 
-Para obter mais informações sobre a medição, consulte: [Integração da medição](/docs/third-party/metering.html#meteringintera). Para obter mais informações sobre como enviar o uso medido, consulte: [Enviando o uso para os planos medidos](/docs/third-party/submitusage.html#submitusage)
+Para obter mais informações sobre a medição, consulte:
+[Integração da medição](/docs/third-party?topic=third-party-meteringintera#meteringintera). Para obter mais informações sobre o envio de uso medido, consulte: [Enviando o uso para planos medidos](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Cenário de Provisão: Puxando tudo junto
+{: #provision2}
 
 Agora, vamos reunir todos os conceitos e ver um exemplo de como a criação da instância de serviço funciona usando a plataforma {{site.data.keyword.Bluemix_notm}}.
 
@@ -169,7 +169,7 @@ fornecimento, a ligação (criando as credenciais e os terminais), a medição, 
 
    Nessa amostra, essa instância de `compose-redis` faz parte da conta do {{site.data.keyword.Bluemix_notm}} com o ID. O ID exclusivo para a instância é `416d769b-682d-4833-8bd7-5ef8778e5b52` e a instância está hospedada na região `us-south` do {{site.data.keyword.Bluemix_notm}} público.
 
-* **resource_group_crn**: retorna o grupo de recursos que inclui a instância de serviço. Para obter mais detalhes, veja [Gerenciando grupos de recursos](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: retorna o grupo de recursos que inclui a instância de serviço. Para obter mais detalhes, veja [Gerenciando grupos de recursos](/docs/resources?topic=resources-rgs#rgs).
 
    Os provedores de ofertas não estão preocupados com o `resource_group_crn`, exceto em circunstâncias exclusivas. Consulte seu representante IBM sobre seu caso de uso antes de usar esse campo.
    {: note}

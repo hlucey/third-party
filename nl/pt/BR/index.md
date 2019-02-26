@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 Nesse tutorial, introduzimos o ambiente de trabalho do Provedor IBM e passaremos pelo processo de registro de sua oferta de terceiro como um serviço de faturamento integrado.
 {:shortdesc}
 
-É possível entregar uma oferta de terceiros no {{site.data.keyword.Bluemix}} como um serviço de faturamento integrado ou um serviço de indicação. Este tutorial se concentra na opção de serviço de faturamento integrado. Para saber mais sobre a opção de serviço de indicação, veja [Tipos de oferta de terceiros](/docs/third-party/offering-types.html).
+É possível entregar uma oferta de terceiros no {{site.data.keyword.Bluemix}} como um serviço de faturamento integrado ou um serviço de indicação. Este tutorial se concentra na opção de serviço de faturamento integrado. Para saber mais sobre a opção de serviço de indicação, veja [Tipos de oferta de terceiros](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
 
 ## Etapa 1. Registre sua oferta
@@ -47,7 +47,7 @@ Depois de selecionar **Serviço de faturamento integrado** como o tipo de oferta
 de avaliação de prontidão, a página será atualizada com uma seção para definir o conteúdo. Ela é exibida em sua página de detalhes do catálogo no console do {{site.data.keyword.Bluemix_notm}}. Preencha cada campo e envie o formulário para revisão. O processo de revisão pode demorar alguns dias.
 
 ## Próximas Etapas
-{: #next-steps}
+{: #gs-next-steps}
 
 Quando estiver aprovado, você receberá um e-mail que descreve suas próximas etapas:
 
@@ -59,4 +59,4 @@ Quando estiver aprovado, você receberá um e-mail que descreve suas próximas e
 * No console de gerenciamento de recurso, integre a oferta no {{site.data.keyword.Bluemix_notm}} definindo-a, criando
 planos de precificação, ativando a segurança e gerenciando a implementação da oferta em diferentes ambientes do {{site.data.keyword.Bluemix_notm}}. 
 
-Para obter mais detalhes, consulte [Desenvolvendo e publicando um serviço de faturamento integrado](/docs/third-party/integrated-billing-service.html). 
+Para obter mais detalhes, consulte [Desenvolvendo e publicando um serviço de faturamento integrado](/docs/third-party?topic=third-party-overview#overview). 
