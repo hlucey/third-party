@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ Puede utilizar el entorno de trabajo de IBM Provider para crear la documentació
 {:shortdesc}
 
 ## Antes de empezar
-{: #prereqs}
+{: #marketing-prereqs}
 
-Asegúrese de que ha revisado la [guía de aprendizaje de iniciación](/docs/third-party/index.html) y de que está aprobado para ofrecer un servicio de facturación integrado.
+Asegúrese de que ha revisado la [guía de aprendizaje de iniciación](/docs/third-party?topic=third-party-get-started#get-started) y de que está aprobado para ofrecer un servicio de facturación integrado.
 
 ## Crear la documentación de iniciación
-{: #docs}
+{: #gs-docs}
 
 Para ofrecer un servicio de facturación integrado, es necesario que proporcione la documentación de iniciación que describe la forma en que los usuarios comienzan a utilizar su servicio en el contexto de {{site.data.keyword.Bluemix_notm}}. Puede trabajar en esta tarea mientras desarrolla el servicio.
 
@@ -54,4 +54,4 @@ Después de enviar el anuncio del servicio, un gestor de marketing de IBM lo rev
 ## Pasos siguientes
 {: #next-steps}
 
-Ahora que ha iniciado las tareas para crear la documentación de iniciación y el anuncio del servicio, está listo para definir la oferta en la consola de gestión de recursos. Consulte el [Paso 2: Definición de la oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
+Ahora que ha iniciado las tareas para crear la documentación de iniciación y el anuncio del servicio, está listo para definir la oferta en la consola de gestión de recursos. Consulte el [Paso 2: Definición de la oferta en la consola de gestión de recursos](/docs/third-party?topic=third-party-step2-define#step2-define).

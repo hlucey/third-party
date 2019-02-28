@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ Ahora que tiene el intermediario o intermediarios alojados que cumplen la especi
 {:shortdesc}
 
 ## Antes de empezar
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el registro y aprobación iniciales en el entorno de trabajo de Provider, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.md).
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el registro y aprobación iniciales en el entorno de trabajo de Provider, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.md?topic=third-party-get-started#get-started).
 {: tip}
 
 Asegúrese de que ha iniciado el paso 1 y completado los pasos 2, 3 y 4:
-1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
-3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).
-3. [Desarrollar un flujo de autenticación](/docs/third-party/cis5-iam.html).
+1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+3. [Desarrollar un flujo de autenticación](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 
 ## Publique su servicio en {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ La página Despliegues debería estar marcada como completada en el área de nav
 {: tip}
 
 ## Pruebe la oferta desplegada 
-{: #test}
+{: #publish-test}
 
 Como ha realizado el despliegue en modalidad de visibilidad limitada, solo puede ver la oferta en el catálogo de {{site.data.keyword.Bluemix_notm}}. Con la lista de comprobación de la siguiente sección, inicie una sesión en {{site.data.keyword.Bluemix_notm}} y siga los pasos de los criterios de prueba.
 
@@ -84,6 +84,6 @@ Si no pasa todas las pruebas, repita los pasos anteriores para publicar el servi
 
 
 ## Pasos siguientes
-{: #next-steps}
+{: #release}
 
-Ahora que tiene un servicio funcional en el catálogo, puede crear una demostración y solicitar aprobación para publicar su servicio a nivel público. Consulte [Paso 6: Publicación del servicio a nivel público](/docs/third-party/cis6-ga.html).
+Ahora que tiene un servicio funcional en el catálogo, puede crear una demostración y solicitar aprobación para publicar su servicio a nivel público. Consulte [Paso 6: Publicación del servicio a nivel público](/docs/third-party?topic=third-party-public-releasing#public-releasing).

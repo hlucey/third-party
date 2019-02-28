@@ -3,9 +3,9 @@
  
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-09-04" 
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -28,9 +28,9 @@ En los pasos siguientes se describe el proceso para enviar datos sobre uso:
 
 1. Envíe una prueba de uso inicial a través de la herramienta de la API REST de envío de uso para validar que los planes de medición están configurados correctamente.
 2. Automatice el envío continuo cada hora a la herramienta de la API REST de envío de uso para cada plan de medición. Puede alojar estos envíos automatizados donde desee, siempre que se dé soporte a SSO estándar.
-2. Los registros de uso se agregan en función del modelo de medición, y la cantidad total se muestra en el panel de control de uso en la consola de {{site.data.keyword.Bluemix_notm}}.
-3. Se utiliza la cantidad de unidad agregada del proceso de medición, se aplica el coste y se calcula la cantidad que debe el usuario por la instancia de servicio.
-4. Al final del mes, el coste final calculado es la cantidad que se genera para el usuario.
+3. Los registros de uso se agregan en función del modelo de medición, y la cantidad total se muestra en el panel de control de uso en la consola de {{site.data.keyword.Bluemix_notm}}.
+4. Se utiliza la cantidad de unidad agregada del proceso de medición, se aplica el coste y se calcula la cantidad que debe el usuario por la instancia de servicio.
+5. Al final del mes, el coste final calculado es la cantidad que se genera para el usuario.
 
 ## Requisitos previos
 {: #prereqs}
@@ -49,7 +49,7 @@ Revise los siguientes requisitos previos para habilitar la medición del servici
 Consulte las directrices siguientes cuando utilice el servicio de medición de {{site.data.keyword.Bluemix_notm}} para enviar datos de uso del recurso:
 
 * La hora de inicio y la hora de finalización representan el intervalo de tiempo durante el que se han recopilado las mediciones. Los tiempos no dependen de la hora a la que se envía el registro de uso a las API de medición.
-* Los registros de uso representan hechos. No actualice el registro de uso después de crearlo. Se especifica una ubicación cuando se crea correctamente un registro de uso. Si se devuelve un código de error, consulte las [acciones](#actions) que es posible que tenga que llevar a cabo.
+* Los registros de uso representan hechos. No actualice el registro de uso después de crearlo. Se especifica una ubicación cuando se crea correctamente un registro de uso. Si se devuelve un código de error, consulte las [acciones](/docs/third-party?topic=third-party-submitusage#actions) que es posible que tenga que llevar a cabo.
 * Un registro de uso se identifica de forma exclusiva mediante la firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Cuando se procesa un registro de uso, cualquier otro registro de uso con la misma firma se rechaza como duplicado.
 * No combine la interacción con el servicio de medición con ningún otro servicio. Las solicitudes se deben manejar individualmente, aunque la medición se inicie y finalice con el suministro y el cese de suministro de la instancia.
 * Los datos de uso del recurso deben enviarse al servicio de medición una vez cada 2-24 horas. La frecuencia con la que envíen datos de uso dependerá de la frecuencia con la que cambian las métricas de uso.
@@ -147,7 +147,7 @@ Los registros de uso son las entidades más pequeñas que contribuyen a los valo
 | plan_id | El contrato por el que se agrega y se califica el registro de uso.   |
 | start  | Hora a partir de la que se mide el uso, especificada en milisegundos desde epoch.  |
 | end  | Hora hasta la cual se mide el uso, especificada en milisegundos desde epoch.  |
-| region  | La región del proveedor de la oferta en la que se mide el uso.  |
+| región  | La región del proveedor de la oferta en la que se mide el uso.  |
 | measured_usage  | Una matriz de medidas con valores.  |
 | consumer_id | Opcional. Este campo solo es necesario si se necesita la agregación a nivel de consumidor. Solo los proveedores de la oferta conocen el valor de consumer_id. |
 {: caption="Tabla 1. Campos de un registro de uso" caption-side="top"}

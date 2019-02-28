@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -21,26 +21,26 @@ lastupdated: "2018-09-04"
 
 ¿Está listo para publicar su servicio? ¿Ha probado su servicio de visibilidad limitada? Si es así, es hora de prepararse para su disponibilidad general. Los proveedores de servicios deben grabar un vídeo que demuestre que su servicio finalizado cumple todos los requisitos. Lo deberá enviar a IBM por correo electrónico. IBM revisa su demo antes de garantizar la aprobación de la publicación final. Las grabaciones se revisan cada martes y se comunica la decisión el jueves siguiente, así que asegúrese de planificar el tiempo suficiente para prepararse para la fecha de publicación.
 
-En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el registro y aprobación iniciales en el Provider Workbench, consulte la [guía de aprendizaje de iniciación](/docs/third-party/index.html).
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el registro y aprobación iniciales en el Provider Workbench, consulte la [guía de aprendizaje de iniciación](/docs/third-party?topic=third-party-get-started#get-started).
 {: tip}
 
 ## Antes de empezar
 {: #before-you-begin}
 
 Asegúrese de que ha iniciado el paso 1 y completado los pasos 2, 3, 4 y 5:
-1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
-3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).
-3. [Desarrollar un flujo de autenticación](/docs/third-party/cis5-iam.html).
-3. [Publicación y prueba del servicio](/docs/third-party/cis4-rmc-publish.html)
+1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Desarrollar un flujo de autenticación](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Publicación y prueba del servicio](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)
 
 
 ## Grabación de la demo
 {: #demo}
 
 1. Trabaje con el representante de IBM para comprender los requisitos y lo que debe demostrar exactamente.
-1. Elija el software de grabación que desee (Quicktime en macOS y Windows Media Player en Windows ofrecen opciones de grabación de vídeo y audio gratuitas).
-2. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} y empiece a grabar.
+2. Elija el software de grabación que desee (Quicktime en macOS y Windows Media Player en Windows ofrecen opciones de grabación de vídeo y audio gratuitas).
+3. Inicie una sesión en {{site.data.keyword.Bluemix_notm}} y empiece a grabar.
 
 ## Envíe su demostración a IBM
 {: #send-demo}

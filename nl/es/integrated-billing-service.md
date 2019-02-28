@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ A continuación, fuera de la consola de gestión de recursos, realice el desarro
 ## Cómo funciona el proceso
 {: #process}
 
-Para entregar un servicio de facturación integrado, puede trabajar con el entorno de trabajo del componente Provider, con la consola de gestión de recursos y con el entorno de desarrollo de su elección. Consulte la [lista de comprobación](/docs/third-party/checklist.html#checklist) como ayuda para seguir estos pasos.
+Para entregar un servicio de facturación integrado, puede trabajar con el entorno de trabajo del componente Provider, con la consola de gestión de recursos y con el entorno de desarrollo de su elección. Consulte la [lista de comprobación](/docs/third-party?topic=third-party-checklist#checklist) como ayuda para seguir estos pasos.
 
-En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el proceso de registro y aprobación inicial en PWB, consulte: [Cómo comenzar a publicar su oferta de terceros en {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md)
+En este paso se presupone que se ha aprobado que suministre un servicio de facturación integrado. Si no ha completado el proceso de registro y aprobación inicial en PWB, consulte: [Cómo comenzar a publicar su oferta de terceros en {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started)
 {: tip}
 
-1. [Crear su documentación y su anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
-2. [Definir su oferta en la consola de gestión de recursos{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html).
-3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party/cis3-broker.html).
-4. [Desarrollar un flujo de autenticación](/docs/third-party/cis5-iam.html).
-5. [Probar el servicio](/docs/third-party/cis4-rmc-publish.html).
-6. [Publicar el servicio a nivel público](/docs/third-party/cis6-ga.html).
+1. [Crear su documentación y su anuncio de marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+2. [Definir su oferta en la consola de gestión de recursos{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party?topic=third-party-step3-osb#step3-osb).
+4. [Desarrollar un flujo de autenticación](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+5. [Probar el servicio](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+6. [Publicar el servicio a nivel público](/docs/third-party?topic=third-party-public-releasing#public-releasing).
 
 ## Soporte
 {: #support}

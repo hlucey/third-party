@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # Cómo utilizan la plataforma {{site.data.keyword.Bluemix_notm}} los servicios de facturación integrados
@@ -44,7 +43,7 @@ La capa de suministro proporciona varias API para ayudarle a gestionar los sigui
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) le permite autenticar usuarios de forma segura y controlar el acceso a todos los recursos de la nube de forma coherente en {{site.data.keyword.Bluemix_notm}}. La capa de suministro de {{site.data.keyword.Bluemix_notm}} ha adoptado IAM para la autenticación y autorización de acciones que se emprenden sobre la capa de suministro. Los proveedores de ofertas de terceros utilizan IAM para crear un flujo de autenticación (OAuth). Para obtener más información, consulte [¿Qué es IAM?](/docs/iam/index.html#iamoverview)?
+Identity Access Management (IAM) le permite autenticar usuarios de forma segura y controlar el acceso a todos los recursos de la nube de forma coherente en {{site.data.keyword.Bluemix_notm}}. La capa de suministro de {{site.data.keyword.Bluemix_notm}} ha adoptado IAM para la autenticación y autorización de acciones que se emprenden sobre la capa de suministro. Los proveedores de ofertas de terceros utilizan IAM para crear un flujo de autenticación (OAuth). Para obtener más información, consulte [¿Qué es IAM?](/docs/iam?topic=iam-iamoverview#iamoverview)?
 
 Si su oferta utiliza bibliotecas de OpenID Connect (OIDC), IAM da soporte a la integración de OIDC. OIDC es una capa de autenticación en la parte superior de OAuth 2.0, una infraestructura de autorización, y puede ayudar a simplificar el proceso de incorporación. Para obtener más información sobre OIDC, consulte [Open ID Connect](http://openid.net/connect/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
 
@@ -89,11 +88,11 @@ Si un servicio ofrece un plan de medición, se factura a los usuarios de {{site.
 Todos los servicios de facturación integrados que ofrecen un plan de medición utilizan el servicio de medición de {{site.data.keyword.Bluemix_notm}} para notificar los datos sobre uso.
 
 Es necesario automatizar el envío de uso por hora utilizando la API de servicio de medición si ofrece un plan de medición.
-{: important}
 
-Para obtener más información sobre la medición, consulte: [Integración de mediciones](/docs/third-party/metering.html#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos sobre uso para planes de medición](/docs/third-party/submitusage.html#submitusage)
+Para obtener más información sobre la medición, consulte: [Integración de mediciones](/docs/third-party?topic=third-party-meteringintera#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos sobre uso para planes de medición](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Caso de ejemplo de suministro: combinación de todos los elementos
+{: #provision2}
 
 Ahora vamos a combinar todos los conceptos y examinaremos un ejemplo de cómo funciona la creación de una instancia de servicio con la plataforma {{site.data.keyword.Bluemix_notm}}.
 
@@ -156,7 +155,7 @@ En el ejemplo anterior, puede ver los metadatos que se devuelven en el parámetr
 
    En este ejemplo, la instancia de `compose-redis` forma parte de una cuenta de {{site.data.keyword.Bluemix_notm}} con ID. El ID único de la instancia es `416d769b-682d-4833-8bd7-5ef8778e5b52` y la instancia se aloja en la región `us-south` de {{site.data.keyword.Bluemix_notm}} público.
 
-* **resource_group_crn**: Devuelve el grupo de recursos que contiene la instancia de servicio. Para obtener más información, consulte [Gestión de grupos de recursos](/docs/resources/resourcegroups.html).
+* **resource_group_crn**: Devuelve el grupo de recursos que contiene la instancia de servicio. Para obtener más información, consulte [Gestión de grupos de recursos](/docs/resources?topic=resources-rgs#rgs).
 
    Los proveedores de ofertas no se preocupan por `resource_group_crn`, excepto en casos muy específicos. Consulte a su representante de IBM antes de utilizar este campo.
    {: note}

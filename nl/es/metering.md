@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ En la lista siguiente se describen las expectativas para el seguimiento y el env
 *	No es necesario que los proveedores de la oferta (terceros) envíen datos sobre uso para planes gratuitos.
 *	No es necesario que los proveedores de la oferta (terceros) envíen datos sobre uso para planes de suscripción mensual.
 *	Para los planes de medición, todos los proveedores de la oferta deben enviar datos sobre uso cada hora (para los planes Lite se deben enviar entre cada 15 minutos y 1 hora).
-*	El proveedor de la oferta es el responsable de automatizar el envío de datos sobre uso, incluida la automatización que intenta de nuevo las respuestas de error. {{site.data.keyword.Bluemix_notm}} no proporciona una función de reintento para envíos fallidos. Para obtener más información, consulte los códigos de estado y la tabla de acciones en [Envío de registros de uso](/docs/third-party/submitusage.html#submitting-usage-records).
+*	El proveedor de la oferta es el responsable de automatizar el envío de datos sobre uso, incluida la automatización que intenta de nuevo las respuestas de error. {{site.data.keyword.Bluemix_notm}} no proporciona una función de reintento para envíos fallidos. Para obtener más información, consulte los códigos de estado y la tabla de acciones en [Envío de registros de uso](/docs/third-party?topic=third-party-submitusage#usage-records).
 *	Los registros de uso correspondientes al mes actual se deben enviar, a más tardar, el segundo día del mes siguiente.
 *	{{site.data.keyword.Bluemix_notm}} está configurado para un ciclo de facturación mensual y el tiempo está representado en UTC (Hora Universal Coordinada).
 *  Los proveedores de la oferta deben probar el envío de datos sobre uso y validar sus resultados para informar sobre cómo se calcula el ciclo de facturación mensual.
 
-Para obtener información general sobre los precios, consulte [Cómo calcular los costes](/docs/billing-usage/estimating_costs.html#cost). 
+Para obtener información general sobre los precios, consulte [Cómo calcular los costes](/docs/billing-usage?topic=billing-usage-cost#cost). 
 
 ## Propiedades de configuración
 {: #configure}
