@@ -37,7 +37,7 @@ La buena noticia es que, en el paso de desarrollo anterior, ha desarrollado un O
  Los ejemplos siguientes muestran URI de redirección:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 

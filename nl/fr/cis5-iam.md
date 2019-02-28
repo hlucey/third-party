@@ -37,7 +37,7 @@ Lors de l'étape de développement précédente, vous avez développé un courti
  Les exemples suivants présentent les URI de redirection :
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 

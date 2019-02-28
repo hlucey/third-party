@@ -37,8 +37,8 @@ Im vorherigen Entwicklungsschritt haben Sie einen OSB (Open Service Broker) entw
  In den folgenden Beispielen werden Weiterleitungs-URIs dargestellt:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
-http://localhost:3000/auth/callback <-- for testing locally
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
+http://localhost:3000/auth/callback <-- für lokale Tests
 ```
 
 Kehren Sie zur Konsole für das Ressourcenmanagement zurück und fügen Sie den Weiterleitungs-URI zur Registerkarte für IAM hinzu:

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -226,7 +226,7 @@ Si votre service de tiers reposant sur une API est implémenté dans un autre cl
 
 Lors de l'intégration à {{site.data.keyword.Bluemix_notm}}, vous devez implémenter au moins un courtier OSB. Vous pouvez avoir plus d'un courtier en fonction de votre stratégie de déploiement et des emplacements à prendre en charge pour votre service. Dans la console de gestion des ressources, vous avez établi le mappage entre votre bloc de données service/plan/emplacement et le courtier qui traite les opérations pour ce bloc de données. Les choix standard consistent à définir un courtier unique pour traiter tous les emplacements pour votre service ou à définir un courtier par emplacement. Ce choix dépend de votre fournisseur de services.
 
-Pour obtenir la liste des emplacements disponibles, consultez les [emplacements IBM Global Catalog](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Si votre service exige que des emplacements supplémentaires soient définis dans le catalogue global, consultez l'équipe d'intégration {{site.data.keyword.Bluemix_notm}}.
+Pour obtenir la liste des emplacements disponibles, consultez les [emplacements IBM Global Catalog](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Si votre service exige que des emplacements supplémentaires soient définis dans le catalogue global, consultez l'équipe d'intégration {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Hébergement de vos courtiers

@@ -37,7 +37,7 @@ La buona notizia è che nel passo di sviluppo precedente hai sviluppato un OSB e
  I seguenti esempi mostrano gli URI di reindirizzamento:
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 

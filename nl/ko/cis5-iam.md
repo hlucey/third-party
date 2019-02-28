@@ -37,7 +37,7 @@ lastupdated: "2019-01-04"
  다음 예제에서는 경로 재지정 URI를 보여줍니다.
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
@@ -303,4 +303,4 @@ curl -X POST \
 ## 다음 단계
 {: #next-steps}
 
-이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링의 유효성을 검증하십시오. 자세한 정보는 [서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오. 
+이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링의 유효성을 검증하십시오. 자세한 정보는 [서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오.
