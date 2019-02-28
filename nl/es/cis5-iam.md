@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ Cuando define la oferta, la página Gestión de acceso de la consola de gestión
 {:shortdesc}
 
 ## Antes de empezar
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-Asegúrese de que ha revisado la [guía de aprendizaje de iniciación](/docs/third-party/index.html) y de que está aprobado para ofrecer un servicio de facturación integrado.
+Asegúrese de que ha revisado la [guía de aprendizaje de iniciación](/docs/third-party?topic=third-party-get-started#get-started) y de que está aprobado para ofrecer un servicio de facturación integrado.
 
 ## Obtenga el URI de redirección de IAM
 {: #redirect-uri}
@@ -89,7 +89,7 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 **Autenticación - Paso 2:** intercambie el código para una llamada de señal de acceso
 
 ### PUBLIQUE (POST) <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### Cabeceras:
 {: #headers1}
@@ -151,6 +151,7 @@ Consulte el ejemplo en nuestros [intermediarios de ejemplo](https://github.com/I
 {: #iam_token_using_api_key}
 
 ### POST /identidad/señal
+{: #post}
 
 #### Cabeceras:
 {: #headers2}
@@ -258,7 +259,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-Consulte el ejemplo de nuestros intermediarios de ejemplo: https://github.com/IBM/sample-resource-service-brokers
+Consulte el ejemplo en nuestros [intermediarios de ejemplo](https://github.com/IBM/sample-resource-service-brokers).
 
 ## Definición del ámbito de señales de IAM para terceros
 {: #token_scoping}
@@ -301,6 +302,6 @@ La sección siguiente es un ejemplo de lo que se añade en la llamada de autoriz
 Esto se aplica a todos los usos (`user, serviceId, crn`) y todos los `subject.attributes` necesitan un ámbito.
 
 ## Pasos siguientes
-{: #next-steps}
+{: #cis5-test}
 
-Ahora es el momento de aunar todos estos elementos. Vuelva a la consola de gestión de recursos para publicar el servicio con visibilidad limitada y para validar la oferta en el catálogo. Para obtener más información, consulte [Publicación y prueba del servicio](/docs/third-party/cis4-rmc-publish.html).
+Ahora es el momento de aunar todos estos elementos. Vuelva a la consola de gestión de recursos para publicar el servicio con visibilidad limitada y para validar la oferta en el catálogo. Para obtener más información, consulte [Publicación y prueba del servicio](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).

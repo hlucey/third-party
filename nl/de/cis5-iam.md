@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ Beim Definieren Ihres Angebots haben Sie in der Konsole für das Ressourcenmanag
 {:shortdesc}
 
 ## Vorbereitende Schritte
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-party/index.html) durchgearbeitet haben und über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen.
+Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-party?topic=third-party-get-started#get-started) durchgearbeitet haben und über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen.
 
 ## IAM-Weiterleitungs-URI ableiten
 {: #redirect-uri}
@@ -89,7 +89,7 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 **Authentifizierung - Schritt 2:** Code für Aufruf eines Zugriffstokens austauschen
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### Header:
 {: #headers1}
@@ -151,6 +151,7 @@ Orientieren Sie sich an dem Beispiel im Abschnitt zu den [Beispielbrokern für I
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### Header:
 {: #headers2}
@@ -258,7 +259,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.com/IBM/sample-resource-service-brokers
+In den [Beispielbrokern](https://github.com/IBM/sample-resource-service-brokers) finden Sie ein Beispiel hierzu. 
 
 ## IAM-Token-Scoping für Adopter anderer Anbieter
 {: #token_scoping}
@@ -301,6 +302,6 @@ Im folgenden Abschnitt wird dargestellt, welche Elemente im Berechtigungsaufruf 
 Dies gilt für alle Verwendungen (`user, serviceId, crn`). Für alle Vorkommen von `subject.attributes` wird ein Bereich benötigt.
 
 ## Nächste Schritte
-{: #next-steps}
+{: #cis5-test}
 
-Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Weitere Informationen finden Sie in [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).
+Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Weitere Informationen finden Sie in [Eigenen Service veröffentlichen und testen](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
