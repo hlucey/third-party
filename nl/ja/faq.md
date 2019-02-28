@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2015, 2019
-lastupdated: "2019-01-30"
+  years: 2015, 2018
+lastupdated: "2018-08-28"
 
 ---
 
@@ -26,12 +26,12 @@ lastupdated: "2019-01-30"
 従量制プランを提供する場合は、計量サービス API を使用して、毎時の使用量の送信を自動化する必要があります。
 {: note}
 
-計量について詳しくは、[計量の統合](/docs/third-party?topic=third-party-meteringintera#meteringintera)を参照してください。 計量される使用量の送信について詳しくは、[従量制プランの使用量の送信](/docs/third-party?topic=third-party-submitusage#submitusage)を参照してください。
+計量について詳しくは、[計量の統合](/docs/third-party/metering.html#meteringintera)を参照してください。 計量される使用量の送信について詳しくは、[従量制プランの使用量の送信](/docs/third-party/submitusage.html#submitusage)を参照してください。
 
 ## 新しい {{site.data.keyword.Bluemix_notm}} Identity and Access Management の API キーを生成するにはどうすればよいですか。
 {: #iam-creds}
 {: faq}
 
-IAM を有効化する時に、API キーが付与されます。 この API キーを保存することは極めて重要です。 この値は再度表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます。 詳しくは、[サービス ID API キーの管理](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)を参照してください。 
+IAM を有効化する時に、API キーが付与されます。 この API キーを保存することは極めて重要です。 この値は再度表示されません。 API キーを紛失した場合は、キーを削除して新規に作成できます。 詳しくは、[サービス ID API キーの管理](/docs/iam/serviceid_keys.html#serviceidapikeys)を参照してください。 
 
 

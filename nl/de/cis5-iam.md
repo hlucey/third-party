@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-01-04"
 
 
 ---
@@ -23,9 +23,9 @@ Beim Definieren Ihres Angebots haben Sie in der Konsole für das Ressourcenmanag
 {:shortdesc}
 
 ## Vorbereitende Schritte
-{: #iam-pre-reqs}
+{: #pre-reqs}
 
-Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-party?topic=third-party-get-started#get-started) durchgearbeitet haben und über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen.
+Vergewissern Sie sich, dass Sie das [Lernprogramm 'Einführung'](/docs/third-party/index.html) durchgearbeitet haben und über die Genehmigung zur Bereitstellung eines integrierten Abrechnungsservice verfügen.
 
 ## IAM-Weiterleitungs-URI ableiten
 {: #redirect-uri}
@@ -37,8 +37,8 @@ Im vorherigen Entwicklungsschritt haben Sie einen OSB (Open Service Broker) entw
  In den folgenden Beispielen werden Weiterleitungs-URIs dargestellt:
 
 ```
-https://<myapp>.cloud.ibm.com/integrate/auth/callback
-http://localhost:3000/auth/callback <-- für lokale Tests
+https://myapp.bluemix.net/integrate/auth/callback
+http://localhost:3000/auth/callback <-- for testing locally
 ```
 
 Kehren Sie zur Konsole für das Ressourcenmanagement zurück und fügen Sie den Weiterleitungs-URI zur Registerkarte für IAM hinzu:
@@ -89,7 +89,7 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 **Authentifizierung - Schritt 2:** Code für Aufruf eines Zugriffstokens austauschen
 
 ### POST <token_endpoint>
-{: #token-post}
+{: #post}
 
 #### Header:
 {: #headers1}
@@ -151,7 +151,6 @@ Orientieren Sie sich an dem Beispiel im Abschnitt zu den [Beispielbrokern für I
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
-{: #post}
 
 #### Header:
 {: #headers2}
@@ -259,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-In den [Beispielbrokern](https://github.com/IBM/sample-resource-service-brokers) finden Sie ein Beispiel hierzu. 
+Informationen zu diesem Thema finden Sie in den Beispielbrokern: https://github.com/IBM/sample-resource-service-brokers
 
 ## IAM-Token-Scoping für Adopter anderer Anbieter
 {: #token_scoping}
@@ -302,6 +301,6 @@ Im folgenden Abschnitt wird dargestellt, welche Elemente im Berechtigungsaufruf 
 Dies gilt für alle Verwendungen (`user, serviceId, crn`). Für alle Vorkommen von `subject.attributes` wird ein Bereich benötigt.
 
 ## Nächste Schritte
-{: #cis5-test}
+{: #next-steps}
 
-Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Weitere Informationen finden Sie in [Eigenen Service veröffentlichen und testen](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+Nun müssen alle erarbeiteten Erkenntnisse in Beziehung zueinander gesetzt werden. Rufen Sie erneut die Konsole für das Ressourcenmanagement auf, um Ihren Service im Modus für die eingeschränkte Sichtbarkeit zu veröffentlichen, und überprüfen Sie Ihr Angebot im Katalog. Weitere Informationen finden Sie in [Eigenen Service veröffentlichen und testen](/docs/third-party/cis4-rmc-publish.html).

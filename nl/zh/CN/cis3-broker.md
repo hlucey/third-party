@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-04"
 
 
 ---
@@ -63,20 +63,20 @@ lastupdated: "2018-11-29"
 
 ### 所有服务代理程序的必需端点逻辑
 
-服务代理程序必须提供 REST API 使用的一组标准元数据值，并且 {{site.data.keyword.Bluemix_notm}} 代理程序必须包含用于以下 REST API 端点/路径的逻辑：
+服务代理程序必须提供 REST API 使用的一组标准元数据值，并且 {{site.data.keyword.Bluemix_notm}} 代理程序必须包含用于以下 REST API 端点或路径的逻辑：
 
 <dl>
   <dt>目录 (GET)</dt>
   <dd>返回代理程序中包含的目录元数据。有许多额外的目录元数据值未返回。这些值仅在资源管理控制台中添加并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。</dd>
   <dt>资源实例 (PUT)</dt>
-  <dd>供应服务实例</dd>
+  <dd>供应服务实例。</dd>
   <dt>资源实例 (DELETE)</dt>
   <dd>取消供应服务实例。</dd>
   <dt>资源实例 (PATCH)</dt>
   <dd>更新服务实例。</dd>
 </dl>
 
-**关于目录 (GET) 的注释**：此端点定义代理程序与 {{site.data.keyword.Bluemix_notm}} 平台（用于代理程序支持的服务和套餐）之间的合同。此端点返回存储在代理程序中的目录元数据。这些值定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。供应时不需要的所有其他目录元数据都存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。对用于呈现仪表板的目录显示值（如链接、图标和 i18n 转换的元数据）的任何更新都必须在资源管理控制台中进行，而不在代理程序中存放。代理程序中存储的任何元数据都不会显示在 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 中。控制台和 CLI 会返回在资源管理控制台内设置并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的内容。以下部分显示了 catalog (GET) 将返回的最少必需值：
+**关于目录 (GET) 的注释**：此端点定义代理程序与 {{site.data.keyword.Bluemix_notm}} 平台（用于代理程序支持的服务和套餐）之间的合同。此端点返回存储在代理程序中的目录元数据。这些值定义了服务与 {{site.data.keyword.Bluemix_notm}} 平台之间最少内容的供应合同。供应时不需要的所有其他目录元数据都存储在 {{site.data.keyword.Bluemix_notm}}“目录”中。对用于呈现仪表板的目录显示值（如链接、图标和 i18n 转换的元数据）的任何更新都必须在资源管理控制台中进行，而不在代理程序中存放。代理程序中存储的任何元数据都不会显示在 {{site.data.keyword.Bluemix_notm}} 控制台或 {{site.data.keyword.Bluemix_notm}} CLI 中。控制台和 CLI 会返回在资源管理控制台内设置并存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的内容。以下部分显示了目录 (GET) 返回的最少必需值：
 
 ```
 {
@@ -100,7 +100,7 @@ lastupdated: "2018-11-29"
 
 ### 可绑定服务的必需端点逻辑
 
-如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，那么必须将 API 端点和凭证返回给服务使用者。可绑定服务必须使用 Open Service Broker 规范中的可绑定操作，并实现以下端点/路径：
+如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，那么必须将 API 端点和凭证返回给服务使用者。可绑定服务必须使用 Open Service Broker 规范中的可绑定操作，并实现以下端点或路径：
 
 <dl>
   <dt>绑定和凭证 (PUT)</dt>
@@ -225,7 +225,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 
 上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实施一个 OSB 代理程序。但您可根据部署策略和要为服务提供支持的位置，实施多个代理程序。在资源管理控制台工具中，您已在服务/套餐/位置元组与为该元组提供操作的代理程序之间建立映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
 
-有关可用位置的列表，请查阅 [IBM 全球目录位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义其他位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
+有关可用位置的列表，请查阅 [IBM 全球目录位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
 
 
 ## 托管代理程序

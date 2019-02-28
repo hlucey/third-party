@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-01-04"
 
 
 ---
@@ -28,17 +28,17 @@ Les courtiers de services gèrent le cycle de vie des services. La plateforme {{
 Vous pouvez créer votre courtier en utilisant conjointement les métadonnées exportées à partir de la console de gestion des ressources, nos exemples de courtiers de services {{site.data.keyword.Bluemix_notm}} publics et la documentation de l'API Resource Broker.
 
 ## Avant de commencer
-{: #broker-pre-reqs}
+{: #pre-reqs}
 
 Vérifiez que vous avez commencé à l'étape 1 et avez terminé l'étape 2 :
-1. [Création de documents de service et d'annonce marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
-2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party?topic=third-party-step2-define#step2-define).
+1. [Création de documents de service et d'annonce marketing](/docs/third-party/cis1-docs-marketing.html).
+2. [Définition de votre offre dans la console de gestion des ressources](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Consultez notre scénario de mise à disposition de plateforme {{site.data.keyword.Bluemix_notm}}
 {: #scenario}
 
-Tout d'abord, développez un courtier OSB fonctionnant avec la plateforme {{site.data.keyword.Bluemix_notm}}. Consultez notre [scénario de mise à disposition](/docs/third-party?topic=third-party-how-it-works#provision2) pour plus d'informations sur la création de ressources.
+Tout d'abord, développez un courtier OSB fonctionnant avec la plateforme {{site.data.keyword.Bluemix_notm}}. Consultez notre [scénario de mise à disposition](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) pour plus d'informations sur la création de ressources.
 
 ## Familiarisez-vous avec la spécification OSB
 {: #learn-osb}
@@ -62,7 +62,6 @@ Les courtiers de services peuvent être développés en prenant en compte l'[{{s
 {: tip}
 
 ### Logique de noeud final requise pour tous les courtiers de services
-{: #endpoint-sb}
 
 Les courtiers de services doivent fournir un ensemble standard de valeurs de métadonnées utilisées par les API REST. De plus, les courtiers {{site.data.keyword.Bluemix_notm}} doivent inclure la logique pour les noeuds finaux ou les chemins d'API REST suivants :
 
@@ -101,7 +100,6 @@ Les courtiers de services doivent fournir un ensemble standard de valeurs de mé
 ```
 
 ### Logique des noeuds finaux requis pour les services pouvant être liés
-{: #bindable}
 
 Si votre service peut être lié à des applications dans {{site.data.keyword.Bluemix_notm}}, il doit renvoyer des données d'identification et des noeuds finaux d'API à vos consommateurs de service. Un service pouvant être lié doit utiliser les opérations pouvant être liées dans la spécification Open Service Broker et implémenter les noeuds finaux ou les chemins suivants :
 
@@ -113,7 +111,6 @@ Si votre service peut être lié à des applications dans {{site.data.keyword.Bl
 </dl>
 
 ### Noeuds finaux d'extension {{site.data.keyword.Bluemix_notm}} requis
-{: #extension} 
 
 La spécification OSB ne prend pas* en charge l'état désactivé (mais pas encore supprimé) d'une instance. Pour qu'{{site.data.keyword.Bluemix_notm}} prenne en charge des clients pouvant avoir subi un retard de paiement ou d'autres situations générant une suspension de compte (sans qu'il ne soit annulé), {{site.data.keyword.Bluemix_notm}} a défini des noeuds finaux étendus qui permettent de désactiver puis d'activer à nouveau des instances de service. Les extensions de noeud final suivantes sont **requises** :
 
@@ -190,7 +187,6 @@ Votre tableau de services OSB doit être identique aux métadonnées de l'offre 
 Vos courtiers de services reçoivent les informations suivantes de la plateforme {{site.data.keyword.Bluemix_notm}} :
 
 ### X-Broker-API-Originating-Identity
-{: #x-broker}
 
 L'**en-tête d'identité d'utilisateur** est fourni via un en-tête d'identité provenant d'une API. Cet en-tête de demande inclut l'identité IAM {{site.data.keyword.Bluemix_notm}} de l'utilisateur. Cette dernière est codée en base 64. {{site.data.keyword.Bluemix_notm}} prend en charge un seul domaine d'authentification, `IBMid`. Le domaine `IBMid` utilise un ID unique (IU) IBMid pour définir l'identité de l'utilisateur dans {{site.data.keyword.Bluemix_notm}}. Cet ID unique est une chaîne opaque pour le fournisseur de services.
 
@@ -203,12 +199,10 @@ Decoded:
 ```
 
 ### Version d'en-tête d'API
-{: #api-header}
 
 La **version d'en-tête d'API** est [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Par exemple : `X-Broker-Api-Version: 2.12`.
 
 ### resource instance (PUT) body.context et resource instance (PATCH) body.context
-{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` and `PATCH /v2/service_instances/:resource_instance_id` receive the following value within **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
@@ -216,7 +210,6 @@ La **version d'en-tête d'API** est [2.12](https://github.com/openservicebrokera
 {: #more-info}
 
 ### Recommandations en matière d'utilisation d'opérations asynchrones au lieu d'opérations synchrones
-{: #asynch-ops}
 
 L'API OSB prend en charge à la fois les modes de fonctionnement synchrones et asynchrones. Si vos opérations durent moins de 10 secondes, les réponses synchrones sont recommandées. Dans le cas contraire, vous devez utiliser le mode de fonctionnement asynchrone. Des informations supplémentaires sont disponibles dans la spécification OSB.
 
@@ -224,7 +217,6 @@ Si votre opération asynchrone dure moins de 10 secondes lorsque vous mettez à 
 {: tip}
 
 ### Recommandations pour la gestion des courtiers dans les différents emplacements
-{: #managing-broker}
 
 Il est important que les utilisateurs connaissent l'emplacement de leurs services Cloud pour le temps d'attente, la disponibilité et l'hébergement des données.
 
@@ -234,7 +226,7 @@ Si votre service de tiers reposant sur une API est implémenté dans un autre cl
 
 Lors de l'intégration à {{site.data.keyword.Bluemix_notm}}, vous devez implémenter au moins un courtier OSB. Vous pouvez avoir plus d'un courtier en fonction de votre stratégie de déploiement et des emplacements à prendre en charge pour votre service. Dans la console de gestion des ressources, vous avez établi le mappage entre votre bloc de données service/plan/emplacement et le courtier qui traite les opérations pour ce bloc de données. Les choix standard consistent à définir un courtier unique pour traiter tous les emplacements pour votre service ou à définir un courtier par emplacement. Ce choix dépend de votre fournisseur de services.
 
-Pour obtenir la liste des emplacements disponibles, consultez les [emplacements IBM Global Catalog](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Si votre service exige que des emplacements supplémentaires soient définis dans le catalogue global, consultez l'équipe d'intégration {{site.data.keyword.Bluemix_notm}}.
+Pour obtenir la liste des emplacements disponibles, consultez les [emplacements IBM Global Catalog](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe"). Si votre service exige que des emplacements supplémentaires soient définis dans le catalogue global, consultez l'équipe d'intégration {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Hébergement de vos courtiers
@@ -246,13 +238,13 @@ Pour héberger votre courtier en dehors d'IBM, vous devez vous assurer que les i
 - Le protocole TLS (Transport Layer Security) version 1.2 doit être respecté
 - L'hébergement doit être effectué sur un noeud final HTTPs valide accessible sur le réseau Internet public
 
-Si vous souhaitez que l'hébergement soit effectué dans {{site.data.keyword.Bluemix_notm}}, vous pouvez trouver des informations présentant la création d'une application à l'aide de conteneurs (Kubernetes) en consultant la rubrique [Utilisateurs internes - Informations sur l'utilisation](/docs/containers?topic=containers-cs_internal#cs_internal).
+Si vous souhaitez que l'hébergement soit effectué dans {{site.data.keyword.Bluemix_notm}}, vous pouvez trouver des informations présentant la création d'une application à l'aide de conteneurs (Kubernetes) en consultant la rubrique [Utilisateurs internes - Informations sur l'utilisation](/docs/containers/cs_internal.html#cs_internal).
 
 Vous allez avoir besoin de l'emplacement hébergé de votre courtier de services pour l'étape suivante. Faites en sorte que l'URL et les données d'identification associées à votre application soient prêtes pour l'étape suivante.
 {: tip}
 
 ## Test de votre courtier de services
-{: #broker-test}
+{: #test}
 
 Vous devez valider votre courtier en exécutant des commandes curl pour les noeuds finaux que vous activez. Le fichier readme exemple inclut des conseils pour l'exécution de commandes curl sur vos noeuds finaux OSB : [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
 
@@ -274,6 +266,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Etapes suivantes
-{: #cis3-next-steps}
+{: #next-steps}
 
-Félicitations ! Vous venez de créer et d'héberger un courtier de services respectant la spécification OSB. Voir [Etape 4 : Développement d'un flux d'authentification](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+Félicitations ! Vous venez de créer et d'héberger un courtier de services respectant la spécification OSB. Voir [Etape 4 : Développement d'un flux d'authentification](/docs/third-party/cis5-iam.html).

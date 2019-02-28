@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-20"
+lastupdated: "2019-01-04"
 
 
 ---
@@ -28,17 +28,17 @@ Los intermediarios de servicio gestionan el ciclo de vida de los servicios. La p
 Puede crear el intermediario utilizando una combinación de los metadatos que ha exportado desde la consola de gestión de recursos, nuestros ejemplos de intermediarios de servicio públicos de {{site.data.keyword.Bluemix_notm}} y la documentación de la API del intermediario de recursos.
 
 ## Antes de empezar
-{: #broker-pre-reqs}
+{: #pre-reqs}
 
 Asegúrese de que ha iniciado el paso 1 y completado el paso 2:
-1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
-2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party?topic=third-party-step2-define#step2-define).
+1. [Crear documentación del servicio y anuncio de marketing](/docs/third-party/cis1-docs-marketing.html).
+2. [Definir su oferta en la consola de gestión de recursos](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Vea nuestro caso de ejemplo de suministro de la plataforma {{site.data.keyword.Bluemix_notm}}
 {: #scenario}
 
-Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.data.keyword.Bluemix_notm}}. Consulte nuestro [Caso de ejemplo de suministro](/docs/third-party?topic=third-party-how-it-works#provision2) para obtener una visión general del funcionamiento del proceso de creación de recursos.
+Va a desarrollar un Open Service Broker que funcione con la plataforma {{site.data.keyword.Bluemix_notm}}. Consulte nuestro [Caso de ejemplo de suministro](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) para obtener una visión general del funcionamiento del proceso de creación de recursos.
 
 ## Familiarícese con la especificación OSB
 {: #learn-osb}
@@ -62,7 +62,6 @@ Los intermediarios de servicio se pueden desarrollar con un cierto conocimiento 
 {: tip}
 
 ### Lógica de punto final necesaria para todos los intermediarios de servicio
-{: #endpoint-sb}
 
 Los intermediarios de servicio deben proporcionar un conjunto estándar de valores de metadatos que consumen las API REST, y los intermediarios de {{site.data.keyword.Bluemix_notm}} deben tener lógica para los siguientes puntos finales o vías de acceso de la API REST:
 
@@ -100,7 +99,6 @@ Los intermediarios de servicio deben proporcionar un conjunto estándar de valor
 ```
 
 ### Lógica de los puntos finales necesarios para servicios que se pueden enlazar
-{: #bindable}
 
 Si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}, debe poder devolver los puntos finales de la API y las credenciales a los consumidores del servicio. Un servicio que se puede enlazar debe utilizar las operaciones enlazables de la especificación Open Service Broker y debe utilizar los siguientes puntos finales o vías de acceso:
 
@@ -112,7 +110,6 @@ Si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_no
 </dl>
 
 ### Puntos finales necesarios de extensión de {{site.data.keyword.Bluemix_notm}}
-{: #extension} 
 
 La especificación OSB no* da soporte a un estado de instancia inhabilitada, pero aún no suprimida. Para que {{site.data.keyword.Bluemix_notm}} dé soporte a los clientes que puedan experimentar un vencimiento de facturación u otra situación que pueda dar lugar a la suspensión de la cuenta (pero no cancelación), {{site.data.keyword.Bluemix_notm}} ha definido puntos finales de API ampliados que permiten inhabilitar y volver a habilitar instancias de servicio. Las siguientes extensiones de punto final son **obligatorias**:
 
@@ -189,7 +186,6 @@ La matriz de servicios OSB debe ser la misma que la de los metadatos de la ofert
 El intermediario o intermediarios de servicio reciben la siguiente información de la plataforma {{site.data.keyword.Bluemix_notm}}:
 
 ### X-Broker-API-Originating-Identity
-{: #x-broker}
 
 La **cabecera de identidad de usuario** se proporciona mediante una API que origina la cabecera de identidad. Esta cabecera de solicitud incluye la identidad de {{site.data.keyword.Bluemix_notm}} IAM del usuario. La identidad de IAM está codificada en base64. {{site.data.keyword.Bluemix_notm}} da soporte a un único dominio de autenticación: `IBMid`. El dominio de `IBMid` utiliza un ID exclusivo de IBMid (IUI) para identificar la identidad del usuario en {{site.data.keyword.Bluemix_notm}}. Este IUI es una serie opaca para el proveedor del servicio.
 
@@ -202,12 +198,10 @@ Decoded:
 ```
 
 ### Versión de la cabecera de API
-{: #api-header}
 
 La **cabecera de la versión de API** es [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Por ejemplo: `X-Broker-Api-Version: 2.12`.
 
 ### body.context de la instancia del recurso (PUT) y body.context de la instancia del recurso (PATCH)
-{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` y `PATCH /v2/service_instances/:resource_instance_id` reciben el siguiente valor en **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
@@ -215,7 +209,6 @@ La **cabecera de la versión de API** es [2.12](https://github.com/openservicebr
 {: #more-info}
 
 ### Recomendaciones sobre el uso de operaciones síncronas en lugar de operaciones asíncronas
-{: #asynch-ops}
 
 La API OSB da soporte a las modalidades de operación síncronas y asíncronas. Si las operaciones van a tardar menos de 10 segundos, se recomiendan las operaciones síncronas. De lo contrario, debe utilizar la modalidad de operación asíncrona. Encontrará más información en la especificación de OSB.
 
@@ -223,7 +216,6 @@ Si la operación asíncrona tarda menos de 10 segundos, cuando intente suministr
 {: tip}
 
 ### Recomendaciones para gestionar intermediarios entre ubicaciones
-{: #managing-broker}
 
 Es importante que los usuarios conozcan la ubicación de sus servicios de nube para saber la latencia, disponibilidad y residencia de los datos.
 
@@ -233,7 +225,7 @@ Si el servicio basado en API de terceros se implementa en otra nube y se expone 
 
 Al realizar la incorporación a {{site.data.keyword.Bluemix_notm}}, debe implementar al menos un intermediario OSB. Tiene la opción de tener más de un intermediario, en función de la estrategia de despliegue y de las ubicaciones a las que desea dar soporte para el servicio. Dentro de la herramienta de la consola de gestión de recursos, se establece la correlación entre la combinación de servicio/plan/ubicación y el intermediario que da servicio a las operaciones de dicha combinación. Las opciones típicas serían definir un solo intermediario para dar servicio a todas las ubicaciones para el servicio o definir un intermediario por ubicación; la elección corresponde al proveedor del servicio.
 
-Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del catálogo global de IBM](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Si el servicio requiere que se definan más ubicaciones en el catálogo global, póngase en contacto con el equipo de incorporación de {{site.data.keyword.Bluemix_notm}}.
+Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del catálogo global de IBM](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Si el servicio requiere que se definan más ubicaciones en el catálogo global, póngase en contacto con el equipo de incorporación de {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Alojamiento de los intermediarios
@@ -245,13 +237,13 @@ Para alojar el intermediario fuera de IBM, debe asegurarse de que cumple las sig
 - Debe seguir el protocolo Transport Layer Security (TLS) versión 1.2
 - Debe estar alojado en un punto final HTTPs válido que sea accesible en internet público
 
-Si desea alojar en {{site.data.keyword.Bluemix_notm}}, encontrará información sobre cómo crear una app utilizando Containers (Kubernetes) aquí: [Adoptadores internos - Información de uso](/docs/containers?topic=containers-cs_internal#cs_internal).
+Si desea alojar en {{site.data.keyword.Bluemix_notm}}, encontrará información sobre cómo crear una app utilizando Containers (Kubernetes) aquí: [Adoptadores internos - Información de uso](/docs/containers/cs_internal.html#cs_internal).
 
 Necesitará la ubicación alojada del intermediario de servicio para completar el paso siguiente. Tenga preparados el URL y las credenciales asociadas a la app antes de pasar al siguiente paso.
 {: tip}
 
 ## Cómo probar el intermediario del servicio
-{: #broker-test}
+{: #test}
 
 Debe validar el intermediario ejecutando mandatos curl sobre los distintos puntos finales que va a habilitar. El archivo readme de ejemplo contiene una excelente guía para preparar los puntos finales OSB: [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
 
@@ -273,6 +265,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Pasos siguientes
-{: #cis3-next-steps}
+{: #next-steps}
 
-¡Ya dispone de conocimientos avanzados! Acaba de crear y alojar un intermediario de servicio que cumple con la especificación OSB. Consulte [Paso 4: Desarrollo de un flujo de autenticación](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+¡Ya dispone de conocimientos avanzados! Acaba de crear y alojar un intermediario de servicio que cumple con la especificación OSB. Consulte [Paso 4: Desarrollo de un flujo de autenticación](/docs/third-party/cis5-iam.html).

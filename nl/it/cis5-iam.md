@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-01-04"
 
 
 ---
@@ -23,9 +23,9 @@ Quando definisci la tua offerta, la pagina Access Manage della console di gestio
 {:shortdesc}
 
 ## Prima di iniziare
-{: #iam-pre-reqs}
+{: #pre-reqs}
 
-Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party?topic=third-party-get-started#get-started) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
+Assicurati di aver completato l'[esercitazione introduttiva](/docs/third-party/index.html) e di aver ricevuto l'approvazione a distribuire un servizio di fatturazione integrato.
 
 ## Ricava l'URI di reindirizzamento IAM
 {: #redirect-uri}
@@ -37,7 +37,7 @@ La buona notizia è che nel passo di sviluppo precedente hai sviluppato un OSB e
  I seguenti esempi mostrano gli URI di reindirizzamento:
 
 ```
-https://<myapp>.cloud.ibm.com/integrate/auth/callback
+https://myapp.bluemix.net/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
@@ -89,7 +89,7 @@ Questa richiesta può essere eseguita dopo che l'applicazione è stata avvitata 
 **Autenticazione - Passo 2:** scambia il codice per una chiamata al token di accesso
 
 ### POST <token_endpoint>
-{: #token-post}
+{: #post}
 
 #### Intestazioni:
 {: #headers1}
@@ -151,7 +151,6 @@ Vedi l'esempio nei nostri [broker di esempio](https://github.com/IBM/sample-reso
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
-{: #post}
 
 #### Intestazioni:
 {: #headers2}
@@ -259,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-Vedi l'esempio nei nostri [broker di esempio](https://github.com/IBM/sample-resource-service-brokers).
+Vedi l'esempio nei nostri broker di esempio: https://github.com/IBM/sample-resource-service-brokers
 
 ## Ambito del token IAM per utenti di terze parti
 {: #token_scoping}
@@ -273,9 +272,9 @@ L'impatto sulle autorizzazioni (tutte le chiamate a `https://iam.cloud.ibm.com/v
 La seguente sezione è un esempio di cosa viene aggiunto nella chiamata di autorizzazione:
 ```
   [
-   {  Intestazioni
-   `Authorization` -> un token jwt che rappresenta un servizio di terze parti e/o un dashboard
-   `Transaction-ID` -> "un guid univoco ci consente di agevolare la traccia della richiesta end-to-end"
+   {  Headers
+   `Authorization` -> a jwt token representing a 3rd party service and/or dashboard
+   `Transaction-ID` -> "a unique guid lets us help trace the request end to end"
    `Accept` -> `application/vnd.authz.v2+json`
    `Content-Type` -> `application/json`
 
@@ -302,6 +301,6 @@ La seguente sezione è un esempio di cosa viene aggiunto nella chiamata di autor
 Ciò è applicabile a tutti gli utilizzi (`user, serviceId, crn`) e tutti i `subject.attributes` hanno bisogno di un ambito.
 
 ## Passi successivi
-{: #cis5-test}
+{: #next-steps}
 
-Ora è il momento di mettere tutto insieme. Ritorna alla console di gestione delle risorse per pubblicare il tuo servizio in modalità di visibilità limitata e convalidare la tua offerta nel catalogo. Per ulteriori informazioni, vedi [Pubblicazione e verifica del tuo servizio](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+Ora è il momento di mettere tutto insieme. Ritorna alla console di gestione delle risorse per pubblicare il tuo servizio in modalità di visibilità limitata e convalidare la tua offerta nel catalogo. Per ulteriori informazioni, vedi [Pubblicazione e verifica del tuo servizio](/docs/third-party/cis4-rmc-publish.html).
