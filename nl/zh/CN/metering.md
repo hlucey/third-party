@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ lastupdated: "2018-11-29"
 *	第三方产品提供者无需提交免费套餐的使用量。
 *	第三方产品提供者无需提交每月预订套餐的使用量。
 *	对于计量套餐，所有产品提供者必须每小时提交一次使用量（轻量套餐每 15 分钟到 1 小时提交一次）。
-*	产品提供者负责自动提交使用量，包括重试失败响应的自动提交。{{site.data.keyword.Bluemix_notm}} 没有为失败的提交提供重试功能。有关更多信息，请参阅[提交使用量记录](/docs/third-party/submitusage.html#submitting-usage-records)中的状态码和操作表。
+*	产品提供者负责自动提交使用量，包括重试失败响应的自动提交。{{site.data.keyword.Bluemix_notm}} 没有为失败的提交提供重试功能。有关更多信息，请参阅[提交使用量记录](/docs/third-party?topic=third-party-submitusage#usage-records)中的状态码和操作表。
 *	当月的使用量记录必须最迟在下个月的第 2 天提交。
 *	{{site.data.keyword.Bluemix_notm}} 是针对每月计费周期配置的，时间以全球标准时间 (UTC) 表示。
 *  产品提供者必须测试使用量提交，并验证其结果以了解如何计算每月计费周期。
 
-有关定价的常规信息，请参阅[如何计算成本](/docs/billing-usage/estimating_costs.html#cost)。 
+有关定价的常规信息，请参阅[如何计算成本](/docs/billing-usage?topic=billing-usage-cost#cost)。 
 
 ## 配置属性
 {: #configure}

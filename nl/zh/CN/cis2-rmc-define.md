@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -24,9 +24,9 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 开始之前
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. 确保您已开始执行[步骤 1：编写服务文档和市场营销公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
+1. 确保您已开始执行[步骤 1：编写服务文档和市场营销公告 (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 2. 确保已向 {{site.data.keyword.Bluemix_notm}} 注册。否则，请[注册](https://cloud.ibm.com/registration){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")，然后再继续。
 3. 在资源管理控制台中开始工作时，请确保您处于正确的帐户中。
 4. 准备 {{site.data.keyword.Bluemix_notm}} 服务名称。您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。
@@ -71,7 +71,7 @@ lastupdated: "2018-11-29"
 ## 向 IAM 注册
 {: #reg-iam}
 
-所有上线到 {{site.data.keyword.Bluemix_notm}} 中的服务都需要 IAM。请参阅[什么是 IAM？](/docs/iam/index.html#what-is-cloud-iam-)以了解有关 IAM 概念和需求的更多信息。
+所有上线到 {{site.data.keyword.Bluemix_notm}} 中的服务都需要 IAM。请参阅[什么是 IAM？](/docs/iam?topic=iam-iamoverview#iamoverview)以了解有关 IAM 概念和需求的更多信息。
 
 资源管理控制台会生成以下 IAM 值：
    - 服务标识（生成并存储）
@@ -89,7 +89,7 @@ lastupdated: "2018-11-29"
 稍后您需要返回到 IAM 页面来提供`重定向 URI`。在执行其他一些开发以构建认证流程之前，您不会拥有此值。后面的步骤将帮助指导您识别重定向 URI 值。
 {: note}
 
-在**启用 IAM** 后，会向您提供 API 密钥。保存 API 密钥非常关键。该值不会再显示。如果丢失了 API 密钥，您可以删除该密钥并创建新密钥：[管理服务标识 API 密钥](/docs/iam/serviceid_keys.html#serviceidapikeys)
+在**启用 IAM** 后，会向您提供 API 密钥。保存 API 密钥非常关键。该值不会再显示。如果丢失了 API 密钥，您可以删除该密钥并创建新密钥：[管理服务标识 API 密钥](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)。
 {: tip}
 
 ## 制定价格套餐
@@ -103,10 +103,10 @@ lastupdated: "2018-11-29"
    * **预订套餐**：对于**此套餐是否免费？**，指定**否**。填写必填字段。
 保留缺省**定价度量值**度量值。提供的此缺省度量值用于向用户收取一次性的月度费用。单击**保存**。您的套餐将发布到 {{site.data.keyword.Bluemix_notm}}“目录”。保存用于提交使用量的样本 curl 命令。
    * **计量套餐**：对于**此套餐是否免费？**，指定**否**。填写必填字段。
-*删除*缺省**定价度量值**预订度量值。单击**添加其他度量值**，填写**添加定价度量值**页面，然后单击**添加度量值**。单击**保存**。您的套餐将发布到 {{site.data.keyword.Bluemix_notm}}“目录”。保存用于提交使用量的样本 curl 命令。有关选择正确度量值的帮助，请参阅[计量集成](/docs/third-party/metering.html)。
+*删除*缺省**定价度量值**预订度量值。单击**添加其他度量值**，填写**添加定价度量值**页面，然后单击**添加度量值**。单击**保存**。您的套餐将发布到 {{site.data.keyword.Bluemix_notm}}“目录”。保存用于提交使用量的样本 curl 命令。有关选择正确度量值的帮助，请参阅[计量集成](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 3. 现在，**定价**页面已标记为“完成”，指示您已满足此页面的最低完成需求。
 
-服务提供者需要为所有计量套餐自动提交每小时使用量。有关更多信息，请参阅：[提交计量套餐的使用量](/docs/third-party/submitusage.html)
+服务提供者需要为所有计量套餐自动提交每小时使用量。有关更多信息，请参阅：[提交计量套餐的使用量](/docs/third-party?topic=third-party-submitusage#submitusage)。
 {: tip}
 
 ## 将元数据导出为 JSON
@@ -121,6 +121,6 @@ lastupdated: "2018-11-29"
 保存 `catalog.json` 文件。在下一部分中，将使用此文件来开发 Open Service Broker。
 
 ## 后续步骤
-{: #next-steps}
+{: #cis2-next-steps}
 
-加油！您已通过添加目录显示元数据，向 IAM 注册以及创建一个或多个价格套餐，定义了服务产品。接下来，可以采用导出的 JSON 并开始开发服务代理程序。请参阅[步骤 3：开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。
+加油！您已通过添加目录显示元数据，向 IAM 注册以及创建一个或多个价格套餐，定义了服务产品。接下来，可以采用导出的 JSON 并开始开发服务代理程序。请参阅[步骤 3：开发和托管服务代理程序](/docs/third-party?topic=third-party-step3-osb#step3-osb)。

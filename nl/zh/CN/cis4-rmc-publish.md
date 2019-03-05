@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 开始之前
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-此步骤假定您已获得交付 Integrated Billing 服务的许可。如果您未在 Provider Workbench 中完成初始注册和批准过程，请参阅[入门教程](/docs/third-party/index.md)。
+此步骤假定您已获得交付 Integrated Billing 服务的许可。如果您未在 Provider Workbench 中完成初始注册和批准过程，请参阅[入门教程](/docs/third-party/index.md?topic=third-party-get-started#get-started)。
 {: tip}
 
 确保已开始执行步骤 1，并完成了步骤 2、3 和 4：
-1. [编写服务文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在资源管理控制台中定义产品](/docs/third-party/cis2-rmc-define.html)。
-3. [开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。
-3. [开发认证流程](/docs/third-party/cis5-iam.html)。
+1. [编写服务文档和市场营销公告](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [在资源管理控制台中定义产品](/docs/third-party?topic=third-party-step2-define#step2-define)。
+3. [开发和托管服务代理程序](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
+3. [开发认证流程](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
 
 ## 将服务发布到 {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ lastupdated: "2018-11-29"
 {: tip}
 
 ## 测试部署的产品 
-{: #test}
+{: #publish-test}
 
 由于您是以有限可视性方式进行部署的，因此只能在 {{site.data.keyword.Bluemix_notm}}“目录”中看到您的产品。使用以下部分中的核对表，登录到 {{site.data.keyword.Bluemix_notm}}，并完成所有测试条件。
 
@@ -84,6 +84,6 @@ lastupdated: "2018-11-29"
 
 
 ## 后续步骤
-{: #next-steps}
+{: #release}
 
-现在，您在目录中有正常运行的服务，您可以构建演示并要求获得批准以公开发布服务。请参阅：[步骤 6：公开发布服务](/docs/third-party/cis6-ga.html)。
+现在，您在目录中有正常运行的服务，您可以构建演示并要求获得批准以公开发布服务。请参阅：[步骤 6：公开发布服务](/docs/third-party?topic=third-party-public-releasing#public-releasing)。

@@ -3,9 +3,9 @@
 
 copyright:
 
-  years: 2017, 2018
+  years: 2017, 2019
 
-lastupdated: "2018-11-29"
+lastupdated: "2019-01-30"
 
 ---
 
@@ -26,12 +26,12 @@ lastupdated: "2018-11-29"
 *	協力廠商供應項目提供者不需要提交免費方案的用量。
 *	協力廠商供應項目提供者不需要提交每月訂閱方案的用量。
 *	對於計量方案，所有供應項目提供者都必須每小時提交用量（精簡方案必須每 15 分鐘到 1 小時提交一次）。
-*	供應項目提供者負責將用量提交自動化（包括重新嘗試失敗回應的自動化）。{{site.data.keyword.Bluemix_notm}} 不會提供失敗提交的重試功能。如需相關資訊，請參閱[提交用量記錄](/docs/third-party/submitusage.html#submitting-usage-records)中的狀態碼及動作表。
+*	供應項目提供者負責將用量提交自動化（包括重新嘗試失敗回應的自動化）。{{site.data.keyword.Bluemix_notm}} 不會提供失敗提交的重試功能。如需相關資訊，請參閱[提交用量記錄](/docs/third-party?topic=third-party-submitusage#usage-records)中的狀態碼及動作表。
 *	最晚必須在下個月的 2 號之前提交現行月份的用量記錄。
 *	{{site.data.keyword.Bluemix_notm}} 配置為按月計費週期，而且時間以世界標準時間 (UTC) 表示。
 *  供應項目提供者必須測試用量提交，並驗證其結果，以通知如何計算按月計費週期。
 
-如需定價的一般資訊，請參閱[如何計算成本](/docs/billing-usage/estimating_costs.html#cost)。 
+如需定價的一般資訊，請參閱[如何計算成本](/docs/billing-usage?topic=billing-usage-cost#cost)。 
 
 ## 配置內容
 {: #configure}

@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ lastupdated: "2019-01-04"
 {:shortdesc}
 
 ## 開始之前
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-請確定您已完成[入門指導教學](/docs/third-party/index.html)，並且已獲准提供整合式計費服務。
+請確定您已完成[入門指導教學](/docs/third-party?topic=third-party-get-started#get-started)，並且已獲准提供整合式計費服務。
 
 ## 衍生 IAM 重新導向 URI
 {: #redirect-uri}
@@ -89,7 +89,7 @@ Content-Type: application/json
 **鑑別 - 步驟 2：**交換存取記號的代碼
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### 標頭：
 {: #headers1}
@@ -151,6 +151,7 @@ curl -k -X POST \
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### 標頭：
 {: #headers2}
@@ -257,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-請參閱範例分配管理系統中的範例：https://github.com/IBM/sample-resource-service-brokers
+請參閱[範例分配管理系統](https://github.com/IBM/sample-resource-service-brokers)中的範例。
 
 ## 協力廠商採用者的 IAM 記號範圍設定
 {: #token_scoping}
@@ -300,6 +301,6 @@ curl -X POST \
 這適用於所有用法 (`user, serviceId, crn`)，而且所有 `subject.attributes` 都需要一個範圍。
 
 ## 後續步驟
-{: #next-steps}
+{: #cis5-test}
 
-該將所有項目組合在一起了！回到資源管理主控台，以受限可見性發佈您的服務，並在型錄中驗證您的供應項目。如需相關資訊，請參閱[發佈及測試服務](/docs/third-party/cis4-rmc-publish.html)。
+該將所有項目組合在一起了！回到資源管理主控台，以受限可見性發佈您的服務，並在型錄中驗證您的供應項目。如需相關資訊，請參閱[發佈及測試服務](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)。

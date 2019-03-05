@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # 整合式計費服務如何使用 {{site.data.keyword.Bluemix_notm}} 平台
@@ -26,7 +25,7 @@ lastupdated: "2018-11-29"
 ## {{site.data.keyword.Bluemix_notm}} 佈建層
 {: #provisioning-layer}
 
-佈建層會管理 {{site.data.keyword.Bluemix_notm}} 資源的生命週期。佈建層負責控制及追蹤客戶帳戶中的資源生命週期。*資源* 是可以針對應用程式或服務實例佈建或保留的實體或邏輯元件。資源的範例包括資料庫、帳戶、處理器、記憶體和儲存空間限制。一般而言，佈建層所追蹤的資源，預期會讓用量度量值與計費相關聯，但不一定都是這種情況。在某些情況下，資源可能會與佈建層相關聯，以確保可以管理資源生命週期及帳戶生命週期。
+佈建層會管理 {{site.data.keyword.Bluemix_notm}} 資源的生命週期。佈建層負責控制及追蹤客戶帳戶中資源的生命週期。*資源* 是可以針對應用程式或服務實例佈建或保留的實體或邏輯元件。資源的範例包括資料庫、帳戶、處理器、記憶體和儲存空間限制。一般而言，佈建層所追蹤的資源，預期會讓用量度量值與計費相關聯，但不一定都是這種情況。在某些情況下，資源可能會與佈建層相關聯，以確保可以管理資源生命週期及帳戶生命週期。
 
 ### 資源生命週期管理
 {: #lifecycle}
@@ -44,7 +43,7 @@ lastupdated: "2018-11-29"
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{site.data.keyword.Bluemix_notm}} 一致地控制所有雲端資源的存取。{{site.data.keyword.Bluemix_notm}} 佈建層已採用 IAM 來鑑別及授權針對佈建層所採取的動作。協力廠商供應項目提供者會使用 IAM 來建立鑑別流程 (OAuth)。如需相關資訊，請參閱[何謂 IAM？](/docs/iam/index.html#iamoverview)
+Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{site.data.keyword.Bluemix_notm}} 一致地控制所有雲端資源的存取。{{site.data.keyword.Bluemix_notm}} 佈建層已採用 IAM 來鑑別及授權針對佈建層所採取的動作。協力廠商供應項目提供者會使用 IAM 來建立鑑別流程 (OAuth)。如需相關資訊，請參閱[何謂 IAM？](/docs/iam?topic=iam-iamoverview#iamoverview)
 
 如果您的供應項目使用 OpenID Connect (OIDC) 程式庫，則 IAM 支援 OIDC 整合。OIDC 是在 OAuth 2.0 之上的鑑別層，而 OAuth 2.0 是可協助簡化上線處理程序的授權架構。如需 OIDC 的相關資訊，請參閱 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
 
@@ -89,11 +88,11 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 提供計量方案的所有整合式計費服務，都必須使用 {{site.data.keyword.Bluemix_notm}} 計量服務來報告用量資料。
 
 如果您提供計量方案，則需要使用計量服務 API 自動執行每小時用量提交。
-{: important}
 
-如需計量的相關資訊，請參閱：[計量整合](/docs/third-party/metering.html#meteringintera)。如需提交計量用量的相關資訊，請參閱[提交計量方案的用量](/docs/third-party/submitusage.html#submitusage)
+如需計量的相關資訊，請參閱：[計量整合](/docs/third-party?topic=third-party-meteringintera#meteringintera)。如需提交計量用量的相關資訊，請參閱[提交計量方案的用量](/docs/third-party?topic=third-party-submitusage#submitusage)。
 
 ## 佈建情境：組合在一起
+{: #provision2}
 
 現在，讓我們將所有概念集合在一起，並查看如何使用 {{site.data.keyword.Bluemix_notm}} 平台來建立服務實例的範例。
 
@@ -156,7 +155,7 @@ Identity Access Management (IAM) 可讓您安全地鑑別使用者，並跨 {{si
 
    在此範例中，此 `compose-redis` 實例是 {{site.data.keyword.Bluemix_notm}} 帳戶的一部分加上 ID。此實例的唯一 ID 為 `416d769b-682d-4833-8bd7-5ef8778e5b52`，而此實例是在公用 {{site.data.keyword.Bluemix_notm}} 的 `us-south` 地區進行管理。
 
-* **resource_group_crn**：傳回包含服務實例的資源群組。如需詳細資料，請參閱[管理資源群組](/docs/resources/resourcegroups.html)。
+* **resource_group_crn**：傳回包含服務實例的資源群組。如需詳細資料，請參閱[管理資源群組](/docs/resources?topic=resources-rgs#rgs)。
 
    供應項目提供者與 `resource_group_crn` 無關，但在特殊情況下除外。使用該欄位之前，請向 IBM 業務代表諮詢您的使用案例。
    {: note}

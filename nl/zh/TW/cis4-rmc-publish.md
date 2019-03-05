@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,16 +23,16 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 開始之前
-{: #pre-reqs}
+{: #service-pre-reqs}
 
-此步驟假設您已獲准提供整合式計費服務。如果您未在 Provider Workbench 中完成起始登錄及核准，請參閱[入門指導教學](/docs/third-party/index.md)。
+此步驟假設您已獲准提供整合式計費服務。如果您未在 Provider Workbench 中完成起始登錄及核准，請參閱[入門指導教學](/docs/third-party/index.md?topic=third-party-get-started#get-started)。
 {: tip}
 
 請確定您已開始步驟 1，並完成步驟 2、3 及 4：
-1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。
-3. [開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。
-3. [開發鑑別流程](/docs/third-party/cis5-iam.html)。
+1. [編寫服務文件及行銷公告](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [在資源管理主控台定義供應項目](/docs/third-party?topic=third-party-step2-define#step2-define)。
+3. [開發及管理服務分配管理系統](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
+3. [開發鑑別流程](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
 
 ## 將服務發佈至 {{site.data.keyword.Bluemix_notm}}
 {: #publish}
@@ -53,7 +53,7 @@ lastupdated: "2018-11-29"
 {: tip}
 
 ## 測試已部署的供應項目 
-{: #test}
+{: #publish-test}
 
 因為您是以受限可見性模式部署，所以只能在 {{site.data.keyword.Bluemix_notm}} 型錄中看到您的供應項目。使用下一節中的核對清單，登入 {{site.data.keyword.Bluemix_notm}}，並完成測試準則。
 
@@ -84,6 +84,6 @@ lastupdated: "2018-11-29"
 
 
 ## 後續步驟
-{: #next-steps}
+{: #release}
 
-既然您在型錄中有一個可發揮功能的服務，就可以建置「展示」並要求核准，以公開發行您的服務。請參閱：[步驟 6：公開發行服務](/docs/third-party/cis6-ga.html)。
+既然您在型錄中有一個可發揮功能的服務，就可以建置「展示」並要求核准，以公開發行您的服務。請參閱：[步驟 6：公開發行服務](/docs/third-party?topic=third-party-public-releasing#public-releasing)。

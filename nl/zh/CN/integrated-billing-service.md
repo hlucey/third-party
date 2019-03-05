@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-14"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -30,17 +30,17 @@ lastupdated: "2018-11-14"
 ## 过程工作方式
 {: #process}
 
-要交付 Integrated Billing 服务，您可使用 Provider Workbench、资源管理控制台和所选开发环境。请参阅[核对表](/docs/third-party/checklist.html#checklist)以帮助跟踪这些步骤。
+要交付 Integrated Billing 服务，您可使用 Provider Workbench、资源管理控制台和所选开发环境。请参阅[核对表](/docs/third-party?topic=third-party-checklist#checklist)以帮助跟踪这些步骤。
 
-这些步骤假定您已获得批准，可交付 Integrated Billing 服务。如果您尚未完成 PWB 中的初始注册和批准，请参阅：[在 {{site.data.keyword.Bluemix_notm}} 中发布第三方产品入门](/docs/third-party/index.md)
+这些步骤假定您已获得批准，可交付 Integrated Billing 服务。如果您尚未完成 PWB 中的初始注册和批准，请参阅：[在 {{site.data.keyword.Bluemix_notm}} 中发布第三方产品入门](/docs/third-party/index.md?topic=third-party-get-started#get-started)
 {: tip}
 
-1. [创建文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在资源管理控制台中定义产品{{site.data.keyword.Bluemix_notm}}](/docs/third-party/cis2-rmc-define.html)。
-3. [开发和托管服务代理程序](/docs/third-party/cis3-broker.html)。
-4. [开发认证流程](/docs/third-party/cis5-iam.html)。
-5. [测试服务](/docs/third-party/cis4-rmc-publish.html)。
-6. [公开发布服务](/docs/third-party/cis6-ga.html)。
+1. [创建文档和市场营销公告](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [在资源管理控制台中定义产品{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define)。
+3. [开发和托管服务代理程序](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
+4. [开发认证流程](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
+5. [测试服务](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)。
+6. [公开发布服务](/docs/third-party?topic=third-party-public-releasing#public-releasing)。
 
 ## 支持
 {: #support}

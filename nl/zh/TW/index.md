@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2015, 2018
-lastupdated: "2018-11-14"
+  years: 2015, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -20,7 +20,7 @@ lastupdated: "2018-11-14"
 在本指導教學中，我們介紹 IBM Provider Workbench，並逐步介紹將協力廠商供應項目登錄為整合式計費服務的處理程序。
 {:shortdesc}
 
-您可以在 {{site.data.keyword.Bluemix}} 中將協力廠商供應項目提供為整合式計費服務或轉介服務。本指導教學著重在整合式計費服務選項。若要進一步瞭解轉介服務選項，請參閱[協力廠商供應項目類型](/docs/third-party/offering-types.html)。
+您可以在 {{site.data.keyword.Bluemix}} 中將協力廠商供應項目提供為整合式計費服務或轉介服務。本指導教學著重在整合式計費服務選項。若要進一步瞭解轉介服務選項，請參閱[協力廠商供應項目類型](/docs/third-party?topic=third-party-offering-types#offering-types)。
 {: tip}
 
 ## 步驟 1. 登錄供應項目
@@ -46,7 +46,7 @@ lastupdated: "2018-11-14"
 在您選取**整合式計費服務**作為供應項目類型並提交整備評量表單之後，頁面會重新整理，並且具有一個區段以便定義內容。它會顯示在 {{site.data.keyword.Bluemix_notm}} 主控台的型錄詳細資料頁面上。完成每一個欄位，並提交表單以供檢閱。檢閱處理程序可能需要幾天的時間。
 
 ## 後續步驟
-{: #next-steps}
+{: #gs-next-steps}
 
 您獲准之後，會收到概述後續步驟的電子郵件：
 
@@ -57,4 +57,4 @@ lastupdated: "2018-11-14"
 
 * 在資源管理主控台定義供應項目、建置定價方案、啟用安全，以及管理不同 {{site.data.keyword.Bluemix_notm}} 環境的供應項目部署，以將供應項目整合至 {{site.data.keyword.Bluemix_notm}}。 
 
-如需詳細資料，請參閱[開發及發佈整合式計費服務](/docs/third-party/integrated-billing-service.html)。 
+如需詳細資料，請參閱[開發及發佈整合式計費服務](/docs/third-party?topic=third-party-overview#overview)。 

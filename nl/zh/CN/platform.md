@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -15,7 +15,6 @@ lastupdated: "2018-11-29"
 {:screen: .screen}
 {:tip: .tip}
 {:note: .note}
-{:important: .important}
 {:download: .download}
 
 # Integrated Billing 服务如何使用 {{site.data.keyword.Bluemix_notm}} 平台
@@ -26,7 +25,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 ## {{site.data.keyword.Bluemix_notm}} 供应层
 {: #provisioning-layer}
 
-供应层用于管理 {{site.data.keyword.Bluemix_notm}} 资源的生命周期。供应层负责控制和跟踪客户帐户中资源的生命周期。*资源*是一种物理或逻辑组件，可以针对应用程序或服务实例进行供应或保留。例如，资源包括数据库、帐户、处理器、内存以及存储限制。通常，由供应层跟踪的资源旨在关联使用量度量值和帐单，但并不一定总是如此。在某些情况下，资源可能会与供应层相关联，以确保资源生命周期可与帐户生命周期一起进行管理。
+供应层用于管理 {{site.data.keyword.Bluemix_notm}} 资源的生命周期。供应层负责控制和跟踪客户帐户中资源的生命周期。*资源*是一种物理或逻辑组件，可以针对应用程序或服务实例进行供应或保留。例如，资源包括数据库、帐户、处理器、内存以及存储限制。通常，由供应层跟踪的资源都会与使用量度量值和帐单相关联，但也并不总是如此。在某些情况下，资源可能会与供应层相关联，以确保资源生命周期可与帐户生命周期一起进行管理。
 
 ### 资源生命周期管理
 {: #lifecycle}
@@ -44,14 +43,14 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 ## {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)
 {: #iam}
 
-通过 Identity and Access Management (IAM)，您可以在整个 {{site.data.keyword.Bluemix_notm}} 上安全地对用户进行认证并一致地控制对所有云资源的访问权。{{site.data.keyword.Bluemix_notm}} 供应层采用了 IAM 来对针对供应层执行的操作进行认证和授权。第三方产品提供者使用 IAM 来创建认证流程 (OAuth)。有关更多信息，请参阅[什么是 IAM？](/docs/iam/index.html#iamoverview)
+通过 Identity and Access Management (IAM)，您可以在整个 {{site.data.keyword.Bluemix_notm}} 上安全地对用户进行认证并一致地控制对所有云资源的访问权。{{site.data.keyword.Bluemix_notm}} 供应层采用了 IAM 来对针对供应层执行的操作进行认证和授权。第三方产品提供者使用 IAM 来创建认证流程 (OAuth)。有关更多信息，请参阅[什么是 IAM？](/docs/iam?topic=iam-iamoverview#iamoverview)
 
 如果您的产品使用的是 OpenID Connect (OIDC) 库，那么 IAM 支持 OIDC 集成。OIDC 是基于 OAuth 2.0 的认证层，这是一个授权框架，可以帮助简化上线过程。有关 OIDC 的更多信息，请参阅 [Open ID Connect](http://openid.net/connect/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。
 
 ## {{site.data.keyword.Bluemix_notm}} 目录
 {: #catalog}
 
-{{site.data.keyword.Bluemix_notm}}“目录”将存储显示在 {{site.data.keyword.Bluemix_notm}} 控制台中的资源的产品定义（描述、功能、图像和 URL 等）。资源管理控制台用于定义服务必需元数据的所有方面。此元数据将发布到目录并用于显示在目录中。您可以在资源管理控制台中的**产品**和**套餐**页面中找到有关必需和可选元数据字段的详细信息。此处包含的关键项可让您快速了解这些信息。
+{{site.data.keyword.Bluemix_notm}}“目录”会存储 {{site.data.keyword.Bluemix_notm}} 控制台中显示的资源的产品定义（描述、功能、图像和 URL 等）。资源管理控制台用于定义服务必需元数据的所有方面。此元数据将发布到目录并用于显示在目录中。您可以在资源管理控制台中的**产品**和**套餐**页面中找到有关必需和可选元数据字段的详细信息。此处包含的关键项可让您快速了解这些信息。
 
    * 服务名称：服务的技术名称。服务名称至关重要，必须正确定义。您必须提供 {{site.data.keyword.Bluemix_notm}} 平台用于标识服务的服务名称，以及客户在 {{site.data.keyword.Bluemix_notm}}“目录”中看到的显示名称。服务名称并不是显示名称。
    * 服务显示名称：服务的用户友好名称。例如，“Compose Redis”
@@ -89,11 +88,11 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 所有提供计量套餐的 Integrated Billing 服务都必须使用 {{site.data.keyword.Bluemix_notm}} 计量服务来报告使用量数据。
 
 如果提供计量套餐，那么您需要使用计量服务 API 来自动提交每小时使用量。
-{: important}
 
-有关计量的更多信息，请参阅：[计量集成](/docs/third-party/metering.html#meteringintera)。有关提交计量使用量的更多信息，请参阅：[提交计量套餐的使用量](/docs/third-party/submitusage.html#submitusage)
+有关计量的更多信息，请参阅：[计量集成](/docs/third-party?topic=third-party-meteringintera#meteringintera)。有关提交计量使用量的更多信息，请参阅：[提交计量套餐的使用量](/docs/third-party?topic=third-party-submitusage#submitusage)。
 
 ## 供应方案：融会贯通
+{: #provision2}
 
 现在，我们将所有概念集中在一起，并查看有关如何使用 {{site.data.keyword.Bluemix_notm}} 平台来创建服务实例的示例。
 
@@ -156,7 +155,7 @@ Integrated Billing 服务不同于引荐服务。Integrated Billing 服务使用
 
    在此样本中，此 `compose-redis` 实例属于标识为 46aa677e-e83f-4d17-a2b6-5b752564477c 的 {{site.data.keyword.Bluemix_notm}} 帐户。该实例的唯一标识为 `416d769b-682d-4833-8bd7-5ef8778e5b52`，并且该实例在公共 {{site.data.keyword.Bluemix_notm}} 的 `us-south` 区域进行托管。
 
-* **resource_group_crn**：返回包含服务实例的资源组。有关更多详细信息，请参阅[管理资源组](/docs/resources/resourcegroups.html)。
+* **resource_group_crn**：返回包含服务实例的资源组。有关更多详细信息，请参阅[管理资源组](/docs/resources?topic=resources-rgs#rgs)。
 
    除特殊情况外，产品提供者并不关心 `resource_group_crn`。在使用该字段之前，请就您的用例向 IBM 代表进行咨询。
    {: note}

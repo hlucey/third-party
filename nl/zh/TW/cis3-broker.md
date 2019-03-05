@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-02-12"
+lastupdated: "2019-02-20"
 
 
 ---
@@ -28,17 +28,17 @@ lastupdated: "2019-02-12"
 您可以使用下列項目的組合來建置分配管理系統：從資源管理主控台匯出的 meta 資料、我們的公用 {{site.data.keyword.Bluemix_notm}} 服務分配管理系統範例，以及 Resource Broker API 文件。
 
 ## 開始之前
-{: #pre-reqs}
+{: #broker-pre-reqs}
 
 確定您已開始步驟 1 並完成步驟 2：
-1. [編寫服務文件及行銷公告](/docs/third-party/cis1-docs-marketing.html)。
-2. [在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。
+1. [編寫服務文件及行銷公告](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+2. [在資源管理主控台定義供應項目](/docs/third-party?topic=third-party-step2-define#step2-define)。
 
 
 ## 檢視 {{site.data.keyword.Bluemix_notm}} 平台佈建情境
 {: #scenario}
 
-您將會開發 Open Service Broker，以與 {{site.data.keyword.Bluemix_notm}} 平台搭配使用。請參閱[佈建情境](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以瞭解如何建立資源。
+您將會開發 Open Service Broker，以與 {{site.data.keyword.Bluemix_notm}} 平台搭配使用。請參閱[佈建情境](/docs/third-party?topic=third-party-how-it-works#provision2)，以瞭解如何建立資源。
 
 ## 熟悉 OSB 規格
 {: #learn-osb}
@@ -62,6 +62,7 @@ lastupdated: "2019-02-12"
 {: tip}
 
 ### 所有服務分配管理系統的必要端點邏輯
+{: #endpoint-sb}
 
 服務分配管理系統必須提供 REST API 所耗用的一組標準 meta 資料值，而 {{site.data.keyword.Bluemix_notm}} 分配管理系統必須要有下列 REST API 端點或路徑的邏輯：
 
@@ -99,6 +100,7 @@ lastupdated: "2019-02-12"
 ```
 
 ### 可連結服務的必要端點邏輯
+{: #bindable}
 
 如果服務可以連結至 {{site.data.keyword.Bluemix_notm}} 中的應用程式，則其必須將 API 端點及認證傳回給服務消費者。可連結服務必須使用 Open Service Broker 規格中的可連結作業，並實作下列端點或路徑：
 
@@ -110,6 +112,7 @@ lastupdated: "2019-02-12"
 </dl>
 
 ### 必要 {{site.data.keyword.Bluemix_notm}} 延伸端點
+{: #extension} 
 
 OSB 規格不*支援已停用但尚未刪除的實例狀態。為了讓 {{site.data.keyword.Bluemix_notm}} 支援可能遇到計費失誤或其他導致帳戶暫停（但尚未取消）之狀況的客戶，{{site.data.keyword.Bluemix_notm}} 定義了延伸 API 端點，可讓服務實例停用並重新啟用。以下是**必要的*端點延伸*：
 
@@ -186,6 +189,7 @@ services :
 您的服務分配管理系統會從 {{site.data.keyword.Bluemix_notm}} 平台收到下列資訊：
 
 ### X-Broker-API-Originating-Identity
+{: #x-broker}
 
 **使用者身分標頭**會透過產生身分標頭的 API 提供。此要求標頭包含使用者的「{{site.data.keyword.Bluemix_notm}} IAM 身分」。「IAM 身分」為 base64 編碼。{{site.data.keyword.Bluemix_notm}} 支援單一鑑別領域：`IBMid`。`IBMid` 領域使用「IBM ID 唯一 ID (IUI)」來識別使用者在 {{site.data.keyword.Bluemix_notm}} 中的身分。此 IUI 對服務提供者來說是不可探知的字串。
 
@@ -198,10 +202,12 @@ Decoded:
 ```
 
 ### API 版本標頭
+{: #api-header}
 
 **API 版本標頭**為 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。例如：`X-Broker-Api-Version: 2.12`。
 
 ### 資源實例 (PUT) body.context 及資源實例 (PATCH) body.context
+{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` 及 `PATCH /v2/service_instances/:resource_instance_id` 會在 **body.context** 內收到下列值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
@@ -209,6 +215,7 @@ Decoded:
 {: #more-info}
 
 ### 使用非同步作業而不使用同步作業的建議
+{: #asynch-ops}
 
 OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10 秒的時間，則建議使用同步回應。否則，您必須使用非同步作業模式。相關資訊包含在 OSB 規格中。
 
@@ -216,6 +223,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 {: tip}
 
 ### 跨位置管理分配管理系統的建議
+{: #managing-broker}
 
 使用者必須瞭解其雲端服務的位置，查看是否會有延遲、可用性及資料常駐等問題。
 
@@ -225,7 +233,7 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 
 在 {{site.data.keyword.Bluemix_notm}} 上線時，您必須實作至少一個 OSB 分配管理系統。您可以根據部署策略以及您要為服務提供支援的位置，實作多個分配管理系統。在資源管理主控台工具內，您已建立服務/方案/位置值組與處理該值組作業之分配管理系統間的對映。一般選項會是定義單一分配管理系統來處理服務的所有位置，或定義每個位置的分配管理系統；此選項取決於服務提供者。
 
-如需可用位置的清單，請參閱 [IBM 全球型錄位置](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。如果您的服務需要在「全球型錄」中定義其他位置，請諮詢 {{site.data.keyword.Bluemix_notm}} 上線團隊。
+如需可用位置的清單，請參閱 [IBM 全球型錄位置](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。如果您的服務需要在「全球型錄」中定義其他位置，請諮詢 {{site.data.keyword.Bluemix_notm}} 上線團隊。
 
 
 ## 管理分配管理系統
@@ -237,13 +245,13 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 - 必須遵循「傳輸層安全 (TLS)」通訊協定 1.2 版
 - 必須在公用網際網路上可存取的有效 HTTPS 端點上管理
 
-如果您要在 {{site.data.keyword.Bluemix_notm}} 中管理，則可以在下列位置找到使用 Containers (Kubernetes) 建立應用程式的相關資訊：[內部採用者 - 用量資訊](/docs/containers/cs_internal.html#cs_internal)。
+如果您要在 {{site.data.keyword.Bluemix_notm}} 中管理，則可以在下列位置找到使用 Containers (Kubernetes) 建立應用程式的相關資訊：[內部採用者 - 用量資訊](/docs/containers?topic=containers-cs_internal#cs_internal)。
 
 您需要服務分配管理系統的受管理位置，才能完成下一步。移至下一步時，請備妥與應用程式相關聯的 URL 及認證。
 {: tip}
 
 ## 如何測試服務的分配管理系統
-{: #test}
+{: #broker-test}
 
 您必須對您要啟用的不同端點執行 curl 指令，以驗證分配管理系統。範例 Readme 檔提供對 OSB 端點進行 curl 處理的絕佳指引：[https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")
 
@@ -265,6 +273,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## 後續步驟
-{: #next-steps}
+{: #cis3-next-steps}
 
-您有一些重大技能！您已建置並管理符合 OSB 規格的服務分配管理系統。請參閱[步驟 4：開發鑑別流程](/docs/third-party/cis5-iam.html)。
+您有一些重大技能！您已建置並管理符合 OSB 規格的服務分配管理系統。請參閱[步驟 4：開發鑑別流程](/docs/third-party?topic=third-party-step4-iam#step4-iam)。

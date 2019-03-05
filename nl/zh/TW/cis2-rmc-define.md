@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-11-29"
+  years: 2018, 2019 
+lastupdated: "2019-01-30"
 
 
 ---
@@ -24,9 +24,9 @@ lastupdated: "2018-11-29"
 {:shortdesc}
 
 ## 開始之前
-{: #pre-reqs}
+{: #rmc-pre-reqs}
 
-1. 確定您已開始處理[步驟 1：編寫服務文件及行銷公告 (PWB)](/docs/third-party/cis1-docs-marketing.html)。
+1. 確定您已開始處理[步驟 1：編寫服務文件及行銷公告 (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 2. 確定您已向 {{site.data.keyword.Bluemix_notm}} 登錄。否則，請先[登錄](https://cloud.ibm.com/registration){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")，再繼續進行。
 3. 當您開始在資源管理主控台中工作時，請確定位於正確的帳戶中。
 4. 準備 {{site.data.keyword.Bluemix_notm}} 服務名稱。您必須同時提供 {{site.data.keyword.Bluemix_notm}} 平台用來識別服務的服務名稱，以及客戶在 {{site.data.keyword.Bluemix_notm}} 型錄中看到的顯示名稱。
@@ -60,7 +60,7 @@ lastupdated: "2018-11-29"
 在**供應項目**頁面上，提供 {{site.data.keyword.Bluemix_notm}} 型錄中所儲存的 meta 資料值。此外，這當中有一些值需要匯出並儲存在服務分配管理系統中，以用來進行佈建，並且會作為「`型錄 (GET)` 回應」的一部分傳回。在稍後的步驟中，可利用這些值來幫助快速開始開發服務分配管理系統。
 
 1. 從資源管理主控台按一下**供應項目**頁面，然後按一下**列出頁面**標籤。**列出頁面**定義 {{site.data.keyword.Bluemix_notm}} 供應項目服務儀表板中所顯示的 meta 資料。完成所有必要值，然後按一下**儲存**。資源管理主控台會向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 執行服務的起始登錄。即會顯示已向 IAM 登錄服務的通知。您稍後可以使用 IAM 執行更多作業。
-2. 從「供應項目」頁面中，按一下**設定**標籤。
+2. 從「供應項目」頁面，按一下**設定**標籤。
    1. 指定您的供應項目是否容許**支援方案變更？**。預設值為**否**。如果您指定**是**，則需要延伸 Open Service Broker，以支援所佈建實例的方案變更。如果您的供應項目支援多個方案，而您希望使用者變更現有已佈建實例的方案，則需要讓使用者能夠更新其服務實例。如需詳細資料，請參閱 [Open Service Broker API 2.12 版](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中的 `/v2/service_instances/{instance_id} PATCH` 端點
    2. 指定您的服務是否為**可連結**。預設值為**否**。如果您的服務可以連結至 {{site.data.keyword.Bluemix_notm}} 中的應用程式，請選取**是**。如果可連結，則其必須將 API 端點及認證傳回給服務消費者。開發可連結的服務時，您必須使用 [Open Service Broker API 2.12 版中的可連結作業](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
    3. 完成其他必要欄位，然後按一下**儲存**。
@@ -72,7 +72,7 @@ lastupdated: "2018-11-29"
 ## 向 IAM 登錄
 {: #reg-iam}
 
-所有服務都需要有 IAM，才能在 {{site.data.keyword.Bluemix_notm}} 上線。請參閱[何謂 IAM？](/docs/iam/index.html#what-is-cloud-iam-)，以進一步瞭解 IAM 概念及需求。
+所有服務都需要有 IAM，才能在 {{site.data.keyword.Bluemix_notm}} 上線。請參閱[何謂 IAM？](/docs/iam?topic=iam-iamoverview#iamoverview)，以進一步瞭解 IAM 概念及需求。
 
 資源管理主控台會產生下列 IAM 值：
    - 服務 ID（已產生並儲存）
@@ -90,7 +90,7 @@ lastupdated: "2018-11-29"
 您稍後需要回到 IAM 頁面，以提供`重新導向 URI`。您必須進行一些額外的開發來建置鑑別流程，才會有這個值。後續步驟可協助引導您識別「重新導向 URI」值。
 {: note}
 
-當您**啟用 IAM** 時，會提供「API 金鑰」給您。您必須儲存「API 金鑰」。此值不會再次顯示。如果您遺失「API 金鑰」，則可以刪除該金鑰，然後建立新金鑰：[管理服務 ID API 金鑰](/docs/iam/serviceid_keys.html#serviceidapikeys)
+當您**啟用 IAM** 時，會提供「API 金鑰」給您。您必須儲存「API 金鑰」。此值不會再次顯示。如果您遺失「API 金鑰」，則可以刪除該金鑰，然後建立新金鑰：[管理服務 ID API 金鑰](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)。
 {: tip}
 
 ## 開發定價方案
@@ -102,10 +102,10 @@ lastupdated: "2018-11-29"
 2. 按一下**新增方案**來建立新的方案項目，然後按一下**編輯方案**來編輯方案。
    * **免費方案**：所有供應項目都可以有一個免費的「精簡方案」，讓使用者試用您的服務。免費方案會使用*精簡* 作為**顯示名稱**，並使用 *lite* 作為**程式化名稱**。針對**此方案是否免費？**，指定**是**。按一下**儲存**。您的方案會發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。
    * **訂閱方案**：針對**此方案是否免費？**，指定**否**。完成必要欄位。保留預設**定價標準**度量值。提供此預設度量值，供您用來向使用者收取一次性的每月費用。按一下**儲存**。您的方案會發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。儲存範例 curl 指令來提交用量。
-   * **計量方案**：針對**此方案是否免費？**，指定**否**。完成必要欄位。*刪除* 預設**定價標準**訂閱度量值。按一下**新增另一個度量值**，並完成**新增定價標準**頁面，然後按一下**新增度量值**。按一下**儲存**。您的方案會發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。儲存範例 curl 指令來提交用量。如需選取正確度量值的說明，請參閱[計量整合](/docs/third-party/metering.html)。
+   * **計量方案**：針對**此方案是否免費？**，指定**否**。完成必要欄位。*刪除* 預設**定價標準**訂閱度量值。按一下**新增另一個度量值**，並完成**新增定價標準**頁面，然後按一下**新增度量值**。按一下**儲存**。您的方案會發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。儲存範例 curl 指令來提交用量。如需選取正確度量值的說明，請參閱[計量整合](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 3. **定價**頁面現在標示為已完成，指出您已達到完成此頁面的最低需求。
 
-需要有服務提供者，才能自動執行所有計量方案的每小時用量提交。如需相關資訊，請參閱：[提交計量方案的用量](/docs/third-party/submitusage.html)
+需要有服務提供者，才能自動執行所有計量方案的每小時用量提交。如需相關資訊，請參閱：[提交計量方案的用量](/docs/third-party?topic=third-party-submitusage#submitusage)。
 {: tip}
 
 ## 將 meta 資料匯出為 JSON
@@ -115,11 +115,11 @@ lastupdated: "2018-11-29"
 
 1. 從資源管理主控台開啟**部署**頁面。
 2. 按一下**管理**。
-3. 按一下**下載程式碼**。
+3. 按一下**下載定義**。
 
 儲存 `catalog.json` 檔案。您將使用它在下一節開發 Open Service Broker。
 
 ## 後續步驟
-{: #next-steps}
+{: #cis2-next-steps}
 
-做得好！您已透過新增型錄顯示 meta 資料、向 IAM 登錄並建立一個以上的定價方案，來定義服務供應項目。接下來，您可以取得匯出的 JSON，並開始開發服務分配管理系統。請參閱[步驟 3：開發及管理服務分配管理系統](/docs/third-party/cis3-broker.html)。
+做得好！您已透過新增型錄顯示 meta 資料、向 IAM 登錄並建立一個以上的定價方案，來定義服務供應項目。接下來，您可以取得匯出的 JSON，並開始開發服務分配管理系統。請參閱[步驟 3：開發及管理服務分配管理系統](/docs/third-party?topic=third-party-step3-osb#step3-osb)。

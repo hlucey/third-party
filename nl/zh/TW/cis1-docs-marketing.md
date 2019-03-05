@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,17 +23,17 @@ lastupdated: "2018-09-04"
 {:shortdesc}
 
 ## 開始之前
-{: #prereqs}
+{: #marketing-prereqs}
 
-請確定您已完成[入門指導教學](/docs/third-party/index.html)，並且已獲准提供整合式計費服務。
+請確定您已完成[入門指導教學](/docs/third-party?topic=third-party-get-started#get-started)，並且已獲准提供整合式計費服務。
 
 ## 建立入門文件
-{: #docs}
+{: #gs-docs}
 
 若要提供整合式計費服務，您需要提供入門文件，以說明使用者如何在 {{site.data.keyword.Bluemix_notm}} 環境定義中開始使用您的服務。您可以在開發服務時，同時並進地處理此作業。
 
 1. 登入 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
-2. 從 Provider Workbench 儀表板中，按一下您供應項目磚上的**作業**。
+2. 從 Provider Workbench 儀表板，按一下您供應項目磚上的**作業**。
 3. 過濾 IBM Cloud 列出作業，然後按一下「指引」作業磚中的**開始**。
 4. 遵循「指引」作業工作流程，在 {{site.data.keyword.Bluemix_notm}} 文件應用程式中發佈您的入門文件。
 
@@ -45,7 +45,7 @@ lastupdated: "2018-09-04"
 除了您的入門文件之外，您還需要透過 {{site.data.keyword.Bluemix_notm}} 新聞信件及社交媒體通路來建立行銷內容，以發表您服務的可用性。您可以在開發服務時，同時並進地處理此作業。
 
 1. 登入 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
-2. 從 Provider Workbench 儀表板中，按一下您供應項目磚上的**作業**。
+2. 從 Provider Workbench 儀表板，按一下您供應項目磚上的**作業**。
 3. 過濾 IBM Cloud 列出作業，然後按一下「行銷」作業磚中的**開始**。
 4. 遵循「行銷」作業工作流程，以建立並提交您的服務公告。
 
@@ -54,4 +54,4 @@ lastupdated: "2018-09-04"
 ## 後續步驟
 {: #next-steps}
 
-既然您已開始建立入門文件及服務公告的作業，就可以在資源管理主控台定義您的供應項目。請參閱[步驟 2：在資源管理主控台定義供應項目](/docs/third-party/cis2-rmc-define.html)。
+既然您已開始建立入門文件及服務公告的作業，就可以在資源管理主控台定義您的供應項目。請參閱[步驟 2：在資源管理主控台定義供應項目](/docs/third-party?topic=third-party-step2-define#step2-define)。

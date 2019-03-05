@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ lastupdated: "2019-01-04"
 {:shortdesc}
 
 ## 开始之前
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-确保已完成[入门教程](/docs/third-party/index.html)，并且已获得交付综合计费服务的许可。
+确保已完成[入门教程](/docs/third-party?topic=third-party-get-started#get-started)，并且已获得交付综合计费服务的许可。
 
 ## 派生 IAM 重定向 URI
 {: #redirect-uri}
@@ -89,7 +89,7 @@ Content-Type: application/json
 **认证 - 步骤 2：**用代码交换访问令牌调用
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### 头：
 {: #headers1}
@@ -151,6 +151,7 @@ curl -k -X POST \
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### 头：
 {: #headers2}
@@ -257,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-请参阅样本代理程序中的示例：https://github.com/IBM/sample-resource-service-brokers
+请参阅[样本代理程序](https://github.com/IBM/sample-resource-service-brokers)中的示例。
 
 ## 针对第三方采用者的 IAM 令牌作用域限定
 {: #token_scoping}
@@ -300,6 +301,6 @@ curl -X POST \
 这适用于所有用途（`user、serviceId、crn`），并且所有 `subject.attributes` 都需要作用域。
 
 ## 后续步骤
-{: #next-steps}
+{: #cis5-test}
 
-现在该把所有内容融会贯通在一起了！返回到资源管理控制台，在有限的可视范围内发布服务，并在目录中验证产品。有关更多信息，请参阅[发布和测试服务](/docs/third-party/cis4-rmc-publish.html)。
+现在该把所有内容融会贯通在一起了！返回到资源管理控制台，在有限的可视范围内发布服务，并在目录中验证产品。有关更多信息，请参阅[发布和测试服务](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)。

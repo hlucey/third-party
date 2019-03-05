@@ -2,8 +2,8 @@
 
 
 copyright:
-  years: 2018
-lastupdated: "2018-09-04"
+  years: 2018, 2019
+lastupdated: "2019-01-30"
 
 
 ---
@@ -23,12 +23,12 @@ lastupdated: "2018-09-04"
 {:shortdesc}
 
 ## 开始之前
-{: #prereqs}
+{: #marketing-prereqs}
 
-确保已完成[入门教程](/docs/third-party/index.html)，并且已获得交付 Integrated Billing 服务的许可。
+确保已完成[入门教程](/docs/third-party?topic=third-party-get-started#get-started)，并且已获得交付综合计费服务的许可。
 
 ## 创建入门文档
-{: #docs}
+{: #gs-docs}
 
 要交付 Integrated Billing 服务，您需要提供入门文档，该文档描述了用户在 {{site.data.keyword.Bluemix_notm}} 的上下文中如何开始使用您的服务。您可以在开发服务的同时执行此任务。
 
@@ -54,4 +54,4 @@ lastupdated: "2018-09-04"
 ## 后续步骤
 {: #next-steps}
 
-现在，您已启动用于创建入门文档和服务公告的任务，因此您已准备好在资源管理控制台中定义产品。请参阅[步骤 2：在资源管理控制台中定义产品](/docs/third-party/cis2-rmc-define.html)。
+现在，您已启动用于创建入门文档和服务公告的任务，因此您已准备好在资源管理控制台中定义产品。请参阅[步骤 2：在资源管理控制台中定义产品](/docs/third-party?topic=third-party-step2-define#step2-define)。
