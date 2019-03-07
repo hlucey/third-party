@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-01-30"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: billing service, resource management console, IBM Cloud, RMC, 
+
+subcollection: third-party
 
 ---
 

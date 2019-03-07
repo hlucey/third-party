@@ -1,11 +1,14 @@
 ---
 
-
 copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-01-30"
+lastupdated: "2019-02-25"
+
+keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
+
+subcollection: third-party
 
 ---
 

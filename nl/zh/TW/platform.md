@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-01-30"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: IBM Cloud platform, integrated billing services, lifecycle of IBM Cloud resources, provisioning layer 
+
+subcollection: third-party
 
 ---
 

@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-12"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: access token, client ID, Access Manage page, authentication flow 
+
+subcollection: third-party
 
 ---
 
@@ -259,7 +263,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-[샘플 브로커](https://github.com/IBM/sample-resource-service-brokers)의 예를 참조하십시오. 
+[샘플 브로커](https://github.com/IBM/sample-resource-service-brokers)의 예를 참조하십시오.
 
 ## 서드파티 채택자를 위한 IAM 토큰 범위
 {: #token_scoping}
