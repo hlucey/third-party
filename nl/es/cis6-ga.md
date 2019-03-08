@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019 
-lastupdated: "2019-01-30"
 
+  years: 2018, 2019 
+
+lastupdated: "2019-02-25"
+
+keywords: Service providers, Windows Media Player, limited visibility service, record demo
+
+subcollection: third-party
 
 ---
 

@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-20"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: service brokers, IBM Cloud platform, new service brokers, hosting service broker 
+
+subcollection: third-party
 
 ---
 

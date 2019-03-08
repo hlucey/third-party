@@ -1,8 +1,14 @@
 ---
 
 copyright:
+
   years: 2015, 2019
-lastupdated: "2019-01-30"
+
+lastupdated: "2019-02-25"
+
+keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
+
+subcollection: third-party
 
 ---
 
