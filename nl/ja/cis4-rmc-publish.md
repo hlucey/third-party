@@ -61,7 +61,7 @@ OSB 仕様に適合した 1 つ以上のブローカーをホストしたので�
 
 限定表示モードでデプロイしているため、{{site.data.keyword.Bluemix_notm}} カタログでお客様のオファリングを表示できるのはお客様自身のみになります。 次のセクションのチェックリストを使用して、{{site.data.keyword.Bluemix_notm}} にログインし、テスト基準の確認作業を行ってください。
 
-1. IBM ID で [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "External linkicon") にログインします。
+1. IBMid で [{{site.data.keyword.Bluemix_notm}}](https://cloud.ibm.com){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "External linkicon") にログインします。
 2. 正しいアカウント (サービスを作成するために使用したのと同じアカウント) にログインしていることを確認します。
 3. ヘッダーの**「カタログ」**リンクをクリックし、ご自分のオファリングを検索します。
 4. 次に、以下のチェックリストを使用してサービスを確認します。
