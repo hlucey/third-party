@@ -40,7 +40,7 @@ En este paso se presupone que se ha aprobado que suministre un servicio de factu
 {: tip}
 
 1. [Crear su documentación y su anuncio de marketing](/docs/third-party?topic=third-party-content-tasks#content-tasks).
-2. [Definir su oferta en la consola de gestión de recursos{{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
+2. [Definir su oferta en la consola de gestión de recursos de {{site.data.keyword.Bluemix_notm}}](/docs/third-party?topic=third-party-step2-define#step2-define).
 3. [Desarrollar y alojar sus intermediarios de servicio](/docs/third-party?topic=third-party-step3-osb#step3-osb).
 4. [Desarrollar un flujo de autenticación](/docs/third-party?topic=third-party-step4-iam#step4-iam).
 5. [Probar el servicio](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).

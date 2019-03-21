@@ -232,7 +232,7 @@ Se l'operazione asincrona impiega meno di 10 secondi quando stai eseguendo il pr
 
 È importante che gli utenti comprendano l'ubicazione dei loro servizi cloud per la latenza, la disponibilità e la residenza dei dati.
 
-Quando si esegue il provisioning delle istanze del servizio su {{site.data.keyword.Bluemix_notm}}, uno dei parametri obbligatori che gli utenti forniscono è l'ubicazione in cui desiderano che venga eseguito il provisioning dell'istanza del servizio. Alcuni servizi possono supportare il provisioning in più ubicazioni. Ad esempio, un servizio di database può supportare il provisioning in tutte le regioni {{site.data.keyword.Bluemix_notm}} o in un sottoinsieme.
+Quando esegui il provisioning delle istanze del servizio su {{site.data.keyword.Bluemix_notm}}, uno dei parametri obbligatori che gli utenti forniscono è l'ubicazione in cui desiderano che venga eseguito il provisioning dell'istanza del servizio. Alcuni servizi possono supportare il provisioning in più ubicazioni. Ad esempio, un servizio di database può supportare il provisioning in tutte le regioni {{site.data.keyword.Bluemix_notm}} o in un sottoinsieme.
 
 Se il tuo servizio basato su API di terze parti è implementato in un altro cloud ed esposto in {{site.data.keyword.Bluemix_notm}}, l'ubicazione indica l'ubicazione del servizio nell'altro cloud.
 
