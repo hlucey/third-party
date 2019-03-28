@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -62,10 +62,10 @@ You can save your progress in the resource management console and come back late
 ## Enter your offering metadata
 {: #offering-metadata}
 
-On the **Offering** page, provide metadata values that are stored in the {{site.data.keyword.Bluemix_notm}} catalog. Additionally, some of these values need to be exported and stored in your service broker where they're used for provisioning and returned as part of the `catalog (GET)` Response. Use these values to help jump-start the development of a service broker in later steps.
+On the **Catalog Listing** page, provide metadata values that are stored in the {{site.data.keyword.Bluemix_notm}} catalog. Additionally, some of these values need to be exported and stored in your service broker where they're used for provisioning and returned as part of the `catalog (GET)` Response. Use these values to help jump-start the development of a service broker in later steps.
 
-1. From the resource management console, click the **Offering** page and click the **Listing Page** tab. The **Listing Page** defines the metadata that is displayed in your {{site.data.keyword.Bluemix_notm}} offering's service dashboard. Complete all the required values and click **Save**. The resource management console does an initial registration of your service with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). A notification that your service was registered with IAM is displayed. You can do more with IAM later.
-2. From the Offering page, click the **Settings** tab.
+1. From the resource management console, click the **Catalog Listing** page and click the **Listing Page** tab. The **Listing Page** defines the metadata that is displayed in your {{site.data.keyword.Bluemix_notm}} offering's service dashboard. Complete all the required values and click **Save**. The resource management console does an initial registration of your service with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). A notification that your service was registered with IAM is displayed. You can do more with IAM later.
+2. From the **Catalog Listing** page, click the **Settings** tab.
    1. Specify whether your offering allows **Plan changes supported?** The default is **No**. If you specify **Yes**, you need to extend your Open Service Broker to support plan changes for provisioned instances. If your offering supports many plans, and you want users to change plans for an existing provisioned instance, you need to enable the ability for users to update their service instance. For more details, see the `/v2/service_instances/{instance_id} PATCH` endpoint in the [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
    2. Specify whether your service is **Bindable**. The default is **No**. Select **Yes** if your service can be bound to applications in {{site.data.keyword.Bluemix_notm}}. If bindable, it must return API endpoints and credentials to your service consumers. When you develop a bindable service, you must use the [bindable operations in the Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
    3. Complete the additional required fields and click **Save**.
