@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -61,10 +61,10 @@ subcollection: third-party
 ## 輸入供應項目 meta 資料
 {: #offering-metadata}
 
-在**供應項目**頁面上，提供 {{site.data.keyword.Bluemix_notm}} 型錄中所儲存的 meta 資料值。此外，這當中有一些值需要匯出並儲存在服務分配管理系統中，以用來進行佈建，並且會作為「`型錄 (GET)` 回應」的一部分傳回。在稍後的步驟中，可利用這些值來幫助快速開始開發服務分配管理系統。
+在**型錄清單**頁面上，提供 {{site.data.keyword.Bluemix_notm}} 型錄中所儲存的 meta 資料值。此外，這當中有一些值需要匯出並儲存在服務分配管理系統中，以用來進行佈建，並且會作為「`型錄 (GET)` 回應」的一部分傳回。在稍後的步驟中，可利用這些值來幫助快速開始開發服務分配管理系統。
 
-1. 從資源管理主控台按一下**供應項目**頁面，然後按一下**列出頁面**標籤。**列出頁面**定義 {{site.data.keyword.Bluemix_notm}} 供應項目服務儀表板中所顯示的 meta 資料。完成所有必要值，然後按一下**儲存**。資源管理主控台會向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 執行服務的起始登錄。即會顯示已向 IAM 登錄服務的通知。您稍後可以使用 IAM 執行更多作業。
-2. 從「供應項目」頁面，按一下**設定**標籤。
+1. 從資源管理主控台按一下**型錄清單**頁面，然後按一下**列出頁面**標籤。**列出頁面**定義 {{site.data.keyword.Bluemix_notm}} 供應項目服務儀表板中所顯示的 meta 資料。完成所有必要值，然後按一下**儲存**。資源管理主控台會向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 執行服務的起始登錄。即會顯示已向 IAM 登錄服務的通知。您稍後可以使用 IAM 執行更多作業。
+2. 從**型錄清單**頁面，按一下**設定**標籤。
    1. 指定您的供應項目是否容許**支援方案變更？**。預設值為**否**。如果您指定**是**，則需要延伸 Open Service Broker，以支援所佈建實例的方案變更。如果您的供應項目支援多個方案，而您希望使用者變更現有已佈建實例的方案，則需要讓使用者能夠更新其服務實例。如需詳細資料，請參閱 [Open Service Broker API 2.12 版](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中的 `/v2/service_instances/{instance_id} PATCH` 端點
    2. 指定您的服務是否為**可連結**。預設值為**否**。如果您的服務可以連結至 {{site.data.keyword.Bluemix_notm}} 中的應用程式，請選取**是**。如果可連結，則其必須將 API 端點及認證傳回給服務消費者。開發可連結的服務時，您必須使用 [Open Service Broker API 2.12 版中的可連結作業](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。
    3. 完成其他必要欄位，然後按一下**儲存**。
