@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -60,10 +60,10 @@ subcollection: third-party
 ## 输入产品元数据
 {: #offering-metadata}
 
-在**产品**页面上，提供存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的元数据值。此外，其中的某些值需要导出并存储在服务代理程序中，这些值将用于供应，并作为 `catalog (GET)` 响应的一部分返回。使用这些值，有助于在后面的步骤中快速开始开发服务代理程序。
+在**目录列表**页面上，提供存储在 {{site.data.keyword.Bluemix_notm}}“目录”中的元数据值。此外，其中的某些值需要导出并存储在服务代理程序中，这些值将用于供应，并作为 `catalog (GET)` 响应的一部分返回。使用这些值，有助于在后面的步骤中快速开始开发服务代理程序。
 
-1. 在资源管理控制台中，单击**产品**页面，然后单击**列表页面**选项卡。**列表页面**定义在 {{site.data.keyword.Bluemix_notm}} 产品的服务仪表板中显示的元数据。填写所有必需值，然后单击**保存**。资源管理控制台会向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 初始注册您的服务。这将显示服务已向 IAM 注册的通知。稍后您可以使用 IAM 执行更多操作。
-2. 在“产品”页面中，单击**设置**选项卡。
+1. 在资源管理控制台中，单击**目录列表**页面，然后单击**列表页面**选项卡。**列表页面**定义在 {{site.data.keyword.Bluemix_notm}} 产品的服务仪表板中显示的元数据。填写所有必需值，然后单击**保存**。资源管理控制台会向 {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) 初始注册您的服务。这将显示服务已向 IAM 注册的通知。稍后您可以使用 IAM 执行更多操作。
+2. 在**目录列表**页面中，单击**设置**选项卡。
    1. 指定产品是否允许**支持套餐更改？**缺省值为**否**。如果指定**是**，那么需要扩展 Open Service Broker 以支持所供应实例的套餐更改。如果产品支持多个套餐，并且您希望用户能够更改现有所供应实例的套餐，那么需要启用相应选项，使用户能够更新其服务实例。有关更多详细信息，请参阅 [Open Service Broker API V2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中的 `/v2/service_instances/{instance_id} PATCH` 端点
    2. 指定服务是否**可绑定**。缺省值为**否**。如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，请选择**是**。如果可绑定，那么服务必须将 API 端点和凭证返回给服务使用者。开发可绑定服务时，必须使用 [Open Service Broker API V2.12 中的可绑定操作](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
    3. 填写其他必填字段，然后单击**保存**。

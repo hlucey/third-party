@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -62,10 +62,10 @@ Sie können Ihre Arbeitsergebnisse in der Konsole für das Ressourcenmanagement 
 ## Angebotsmetadaten eingeben
 {: #offering-metadata}
 
-Geben Sie auf der Seite **Angebot** die Metadatenwerte an, die im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert sind. Darüber hinaus ist bei einigen dieser Werte ein Export und die Speicherung in Ihrem Service-Broker erforderlich, in dem sie für die Bereitstellung verwendet und als Teil der `Katalog (GET)`-Antwort zurückgegeben werden. Verwenden Sie diese Werte in den nachfolgenden Schritten, um rasch einen Service-Broker zu entwickeln.
+Geben Sie auf der Seite **Katalogliste** Metadatenwerte an, die im {{site.data.keyword.Bluemix_notm}}-Katalog gespeichert sind. Darüber hinaus ist bei einigen dieser Werte ein Export und die Speicherung in Ihrem Service-Broker erforderlich, in dem sie für die Bereitstellung verwendet und als Teil der `Katalog (GET)`-Antwort zurückgegeben werden. Verwenden Sie diese Werte in den nachfolgenden Schritten, um rasch einen Service-Broker zu entwickeln.
 
-1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Angebot** und dann auf die Registerkarte für die **Listenseite**. Auf der **Listenseite** werden die Metadaten definiert, die im Service-Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Angebots angezeigt werden. Geben Sie alle erforderlichen Werte an und klicken Sie dann auf **Speichern**. Die Konsole für das Ressourcenmanagement führt eine Erstregistrierung Ihres Service bei {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) durch. Daraufhin wird eine Benachrichtigung angezeigt, in der Sie darüber informiert werden, dass Ihr Service bei IAM registriert wurde. Später können Sie weitere Aktionen mit IAM ausführen.
-2. Klicken Sie auf der Seite 'Angebot' auf die Registerkarte **Einstellungen**.
+1. Klicken Sie in der Konsole für das Ressourcenmanagement auf die Seite **Katalogliste** und dann auf die Registerkarte für die **Listenseite**. Auf der **Listenseite** werden die Metadaten definiert, die im Service-Dashboard Ihres {{site.data.keyword.Bluemix_notm}}-Angebots angezeigt werden. Geben Sie alle erforderlichen Werte an und klicken Sie dann auf **Speichern**. Die Konsole für das Ressourcenmanagement führt eine Erstregistrierung Ihres Service bei {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) durch. Daraufhin wird eine Benachrichtigung angezeigt, in der Sie darüber informiert werden, dass Ihr Service bei IAM registriert wurde. Später können Sie weitere Aktionen mit IAM ausführen.
+2. Klicken Sie auf der Seite **Katalogliste** auf die Registerkarte **Einstellungen**. 
    1. Geben Sie an, ob für Ihr Angebot die Option **Werden Planänderungen unterstützt?** zulässig sein soll. Der Standardwert lautet **Nein**. Wenn Sie **Ja** angeben, dann müssen Sie Open Service Broker so erweitern, dass Planänderungen für bereitgestellte Instanzen unterstützt werden. Wenn Ihr Angebot mehrere Pläne unterstützt und wenn Sie möchten, dass Benutzer die Pläne für eine vorhandene bereitgestellte Instanz ändern können, müssen Sie die Funktion aktivieren, über die Benutzer ihre Serviceinstanz aktualisieren können. Weitere Details finden Sie unter dem Endpunkt `/v2/service_instances/{instance_id} PATCH` in der [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
    2. Geben Sie an, ob für Ihren Service die Option **Bindable** gelten soll. Der Standardwert ist **Nein**. Wählen Sie **Ja** aus, wenn Ihr Service in {{site.data.keyword.Bluemix_notm}} an Anwendungen gebunden werden kann. Wenn eine Bindung möglich sein soll, muss der Service API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückgeben können. Bei der Entwicklung eines Service, für den eine Bindung möglich ist, müssen Sie die Informationen im Abschnitt zu den [bindefähigen Operationen in der Open Service Broker-API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link") beachten.
    3. Geben Sie die Werte in den zusätzlich erforderlichen Feldern an und klicken Sie dann auf **Speichern**.

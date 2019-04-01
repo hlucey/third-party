@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-21"
+lastupdated: "2019-03-28"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -62,10 +62,10 @@ subcollection: third-party
 ## 오퍼링 메타데이터 입력
 {: #offering-metadata}
 
-**오퍼링** 페이지에서 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장된 메타데이터 값을 제공하십시오. 또한 이러한 값 중 일부는 서비스 브로커에 내보내고 저장해야 하며 이들 값은 프로비저닝에 사용되고 `catalog(GET)` 응답의 일부로 리턴됩니다. 해당 값을 사용하면 이후 단계에서 서비스 브로커 개발을 신속하게 시작하는 데 도움이 됩니다.
+**카탈로그 목록** 페이지에서 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장된 메타데이터 값을 제공하십시오. 또한 이러한 값 중 일부는 서비스 브로커에 내보내고 저장해야 하며 이들 값은 프로비저닝에 사용되고 `catalog(GET)` 응답의 일부로 리턴됩니다. 해당 값을 사용하면 이후 단계에서 서비스 브로커 개발을 신속하게 시작하는 데 도움이 됩니다.
 
-1. 리소스 관리 콘솔에서 **오퍼링** 페이지를 클릭하고 **목록 페이지** 탭을 클릭하십시오. **목록 페이지**는 {{site.data.keyword.Bluemix_notm}} 오퍼링의 서비스 대시보드에 표시되는 메타데이터를 정의합니다. 모든 필수 값을 완료하고 **저장**을 클릭하십시오. 리소스 관리 콘솔이 {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management)에 서비스 초기 등록을 수행합니다. 서비스가 IAM에 등록되었다는 알림이 표시됩니다. 나중에 IAM에서 더 많은 작업을 수행할 수 있습니다.
-2. 오퍼링 페이지에서 **설정** 탭을 클릭하십시오.
+1. 리소스 관리 콘솔에서 **카탈로그 목록** 페이지를 클릭하고 **목록 페이지** 탭을 클릭하십시오. **목록 페이지**는 {{site.data.keyword.Bluemix_notm}} 오퍼링의 서비스 대시보드에 표시되는 메타데이터를 정의합니다. 모든 필수 값을 완료하고 **저장**을 클릭하십시오. 리소스 관리 콘솔이 {{site.data.keyword.Bluemix_notm}} IAM(Identity and Access Management)에 서비스 초기 등록을 수행합니다. 서비스가 IAM에 등록되었다는 알림이 표시됩니다. 나중에 IAM에서 더 많은 작업을 수행할 수 있습니다.
+2. **카탈로그 목록** 페이지에서 **설정** 탭을 클릭하십시오.
    1. 오퍼링이 **플랜 변경 지원**을 허용하는지 여부를 지정하십시오. 기본값은 **아니오**입니다. **예**를 지정하는 경우 프로비저닝된 인스턴스에 대한 플랜 변경을 지원하도록 Open Service Broker를 확장해야 합니다. 오퍼링에서 여러 플랜을 지원하고 사용자가 프로비저닝된 인스턴스에 대한 플랜을 변경할 수 있도록 하려면 사용자가 해당 서비스 인스턴스를 업데이트할 수 있도록 설정해야 합니다. 추가 세부사항은 [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에서 `/v2/service_instances/{instance_id} PATCH` 엔드포인트를 참조하십시오.
    2. 서비스가 **바인드 가능**한지 여부를 지정하십시오. 기본값은 **아니오**입니다. 서비스를 {{site.data.keyword.Bluemix_notm}}의 애플리케이션에 바인드할 수 있는 경우 **예**를 선택하십시오. 바인드 가능한 경우 서비스 이용자에게 API 엔드포인트 및 인증 정보를 리턴할 수 있어야 합니다. 바인드 가능 서비스를 개발할 때는 [Open Service Broker API v2.12의 바인드 가능 오퍼레이션](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")을 사용해야 합니다.
    3. 추가 필수 필드를 완료하고 **저장**을 클릭하십시오.
