@@ -237,7 +237,7 @@ If your third-party API-based service is implemented in another cloud and expose
 
 When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
 
-For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
+For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 
 
 ## Host your brokers
@@ -248,8 +248,6 @@ Your broker must be hosted as part of an application that can respond to REST AP
 To host your broker outside of IBM, you must ensure that it meets the following security guidelines:
 - Must follow Transport Layer Security (TLS) protocol version 1.2
 - Must be hosted on a valid HTTPs endpoint that is accessible on the public internet
-
-If you want to host in {{site.data.keyword.Bluemix_notm}}, you can find information about creating an app by using Containers (Kubernetes) here: [Internal Adopters - Usage information](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 You'll need the hosted location of your service broker to complete the next step. Have the URL and credentials that are associated with your app ready when you move to the next step.
 {: tip}
