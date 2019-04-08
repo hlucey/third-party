@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -53,7 +53,7 @@ subcollection: third-party
 {{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 리소스 사용량 데이터를 제출할 때 다음 가이드라인을 참조하십시오.
 
 * 시작 시간 및 종료 시간은 측정값이 수집되는 시간 범위를 나타냅니다. 이 시간은 사용량 레코드가 측정 API에 제출되는 시간에 종속되지 않습니다.
-* 사용량 레코드는 실제 정보입니다. 사용량 레코드를 작성한 후에는 업데이트하지 마십시오. 위치는 사용량 레코드를 성공적으로 작성하면 지정됩니다. 오류 코드가 리턴되면 수행해야 할 수 있는 [조치](/docs/third-party?topic=third-party-submitusage#actions)를 참조하십시오.
+* 사용량 레코드는 실제 정보입니다. 사용량 레코드를 작성한 후에는 업데이트하지 마십시오. 위치는 사용량 레코드를 성공적으로 작성하면 지정됩니다. 오류 코드가 리턴되면 수행해야 할 수 있는 [상태 코드 및 필수 조치](/docs/third-party?topic=third-party-submitusage#usage-records)를 참조하십시오.
 * 사용량 레코드는 `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end` 서명으로 고유하게 식별됩니다. 사용량 레코드가 처리될 때 서명이 동일한 다른 사용량 레코드는 중복 문제로 거부됩니다.
 * 측정 서비스와의 상호작용은 다른 서비스와 결합하지 마십시오. 요청은 인스턴스의 프로비저닝 및 디프로비저닝으로 측정이 시작되고 종료되는 경우에도 개별적으로 처리되어야 합니다.
 * 리소스 사용량 데이터는 2-24시간에 한 번씩 측정 서비스에 제출되어야 합니다. 사용량 데이터를 제출하는 빈도는 사용량 메트릭이 변경되는 빈도에 따라 다릅니다.

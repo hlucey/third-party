@@ -237,7 +237,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 
 上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实施一个 OSB 代理程序。但您可根据部署策略和要为服务提供支持的位置，实施多个代理程序。在资源管理控制台工具中，您已在服务/套餐/位置元组与为该元组提供操作的代理程序之间建立映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
 
-有关可用位置的列表，请查阅 [IBM 全球目录位置](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
+有关可用位置的列表，请查阅 [IBM 全球目录位置](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
 
 
 ## 托管代理程序
@@ -248,8 +248,6 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 要在 IBM 外部托管代理程序，必须确保该位置符合以下安全准则：
 - 必须遵循传输层安全性 (TLS) 协议 V1.2
 - 必须在可通过公用因特网访问的有效 HTTPS 端点上进行托管
-
-如果要在 {{site.data.keyword.Bluemix_notm}} 中进行托管，可以在以下位置查找有关使用 Containers (Kubernetes) 创建应用程序的信息：[内部采用者 - 使用信息](/docs/containers?topic=containers-cs_internal#cs_internal)。
 
 您需要有服务代理程序的托管位置才能完成下一步。进行下一步时，请确保已具有与应用程序相关联的 URL 和凭证。
 {: tip}

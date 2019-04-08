@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -53,7 +53,7 @@ subcollection: third-party
 {{site.data.keyword.Bluemix_notm}} 計量サービスを使用してリソース使用量データを送信するときは、以下のガイドラインを参照してください。
 
 * 開始時刻と終了時刻は、測定値が収集された時刻範囲を示します。 これらの時刻は、使用量記録が計量 API に送信される時刻に依存しません。
-* 使用量記録は事実です。 使用量記録を作成後に更新しないでください。 使用量記録を正常に作成するとロケーションが指定されます。 エラー・コードが返される場合は、実行が必要な可能性がある[アクション](/docs/third-party?topic=third-party-submitusage#actions)を参照してください。
+* 使用量記録は事実です。 使用量記録を作成後に更新しないでください。 使用量記録を正常に作成するとロケーションが指定されます。 エラー・コードが返される場合は、実行しなければならない可能性がある[状況コードと必要なアクション](/docs/third-party?topic=third-party-submitusage#usage-records)を参照してください。
 * 使用量記録は、シグニチャー `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end` によって一意的に識別されます。 使用量記録が処理されると、同じシグニチャーを持つ他の使用量記録は重複として拒否されます。
 * 計量サービスとの相互作用を他のどのサービスとも組み合わせないでください。 計量の開始と終了がインスタンスのプロビジョニングとプロビジョニング解除で行われる場合でも、要求は個別に処理する必要があります。
 * リソース使用量データは、2 時間から 24 時間ごとに 1 回、計量サービスに送信する必要があります。 使用量データの送信頻度は、使用量メトリックの変更頻度によって決まります。
