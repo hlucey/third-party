@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -53,7 +53,7 @@ Consultez les conditions préalables suivantes pour activer la fonction de mesur
 Reportez-vous aux conseils suivants lorsque vous utilisez le service de mesure {{site.data.keyword.Bluemix_notm}} pour soumettre des données d'utilisation de ressource :
 
 * L'heure de début et l'heure de fin représentent la plage durant laquelle les mesures sont collectées. Ces heures ne dépendent pas de l'heure à laquelle l'enregistrement de l'utilisation est soumis aux API de mesure.
-* Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [actions](/docs/third-party?topic=third-party-submitusage#actions) possibles.
+* Les enregistrements d'utilisation sont des faits. Ne mettez pas à jour l'enregistrement d'utilisation après l'avoir créé. Un emplacement est spécifié lorsque vous créez avec succès un enregistrement d'utilisation. Si un code d'erreur s'affiche, consultez les [codes d'état et les actions requises](/docs/third-party?topic=third-party-submitusage#usage-records) possibles.
 * Un enregistrement d'utilisation est identifié de manière unique par la signature `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Lorsqu'un tel enregistrement est traité, tout autre élément ayant la même signature est rejeté comme doublon.
 * N'associez pas à d'autres services l'interaction avec le service de mesure. Les demandes doivent être traitées individuellement même si l'opération de mesure commence et se termine avec la mise à disposition et l'annulation de la mise à disposition de l'instance.
 * Les données d'utilisation des ressources doivent être soumises au service de mesure une fois par période allant de deux à 24 heures. La fréquence de soumission de vos données d'utilisation dépend de la fréquence de changement de vos mesures d'utilisation.

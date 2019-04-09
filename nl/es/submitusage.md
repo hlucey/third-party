@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -53,7 +53,7 @@ Revise los siguientes requisitos previos para habilitar la medición del servici
 Consulte las directrices siguientes cuando utilice el servicio de medición de {{site.data.keyword.Bluemix_notm}} para enviar datos de uso del recurso:
 
 * La hora de inicio y la hora de finalización representan el intervalo de tiempo durante el que se han recopilado las mediciones. Los tiempos no dependen de la hora a la que se envía el registro de uso a las API de medición.
-* Los registros de uso representan hechos. No actualice el registro de uso después de crearlo. Se especifica una ubicación cuando se crea correctamente un registro de uso. Si se devuelve un código de error, consulte las [acciones](/docs/third-party?topic=third-party-submitusage#actions) que es posible que tenga que llevar a cabo.
+* Los registros de uso representan hechos. No actualice el registro de uso después de crearlo. Se especifica una ubicación cuando se crea correctamente un registro de uso. Si se devuelve un código de error, consulte los [Códigos de estado y acciones necesarias](/docs/third-party?topic=third-party-submitusage#usage-records) que es posible que tenga que llevar a cabo.
 * Un registro de uso se identifica de forma exclusiva mediante la firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Cuando se procesa un registro de uso, cualquier otro registro de uso con la misma firma se rechaza como duplicado.
 * No combine la interacción con el servicio de medición con ningún otro servicio. Las solicitudes se deben manejar individualmente, aunque la medición se inicie y finalice con el suministro y el cese de suministro de la instancia.
 * Los datos de uso del recurso deben enviarse al servicio de medición una vez cada 2-24 horas. La frecuencia con la que envíen datos de uso dependerá de la frecuencia con la que cambian las métricas de uso.

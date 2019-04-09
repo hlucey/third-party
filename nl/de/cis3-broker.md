@@ -238,7 +238,7 @@ Wenn Ihr API-basierter Drittanbieterservice in einer anderen Cloud implementiert
 
 Beim {{site.data.keyword.Bluemix_notm}}-Onboarding müssen Sie mindestens einen OSB-Broker implementieren. Sie können je nach Bereitstellungsstrategie und den Standorten, die für Ihren Service unterstützt werden sollen, mit mehreren Brokern arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
 
-Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
+Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
 
 
 ## Eigene Broker hosten
@@ -249,8 +249,6 @@ Ihr Broker muss als Bestandteil einer Anwendung gehostet werden, die auf REST-AP
 Zum IBM externen Hosten des Brokers müssen Sie sicherstellen, dass der Broker den folgenden Sicherheitsrichtlinien entspricht:
 - Einhaltung des TLS-Protokolls (Transport Layer Security) Version 1.2
 - Hosting auf einem gültigen HTTPS-Endpunkt, auf den über das öffentliche Internet zugegriffen werden kann
-
-Wenn das Hosting in {{site.data.keyword.Bluemix_notm}} durchgeführt werden soll, sind die Informationen zum Erstellen einer App mithilfe von Containern (Kubernetes) im Abschnitt zum Thema [Interne Adopter - Nutzungsinformationen](/docs/containers?topic=containers-cs_internal#cs_internal) hilfreich.
 
 Sie benötigen die gehostete Position Ihres Service-Brokers, um den nächsten Schritt ausführen zu können. Halten Sie die URL und die Berechtigungsnachweise Ihrer App bereit, bevor Sie mit dem nächsten Schritt fortfahren.
 {: tip}

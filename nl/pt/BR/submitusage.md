@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -55,7 +55,7 @@ Revise os pré-requisitos a seguir para ativar a medição para seu serviço:
 Consulte as diretrizes a seguir ao usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para enviar dados de uso de recurso:
 
 * O horário de início e o horário de encerramento representam o intervalo de tempo durante o qual as medidas foram coletadas. Os horários não são dependentes do horário em que o registro de uso é enviado para as APIs de medição.
-* Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, veja as [ações](/docs/third-party?topic=third-party-submitusage#actions) que você pode ter que tomar.
+* Os registros de uso são fatos. Não atualize o registro de uso depois de criá-lo. Um local é especificado quando você cria com êxito um registro de uso. Se um código de erro for retornado, consulte os [Códigos de status e as ações necessárias](/docs/third-party?topic=third-party-submitusage#usage-records) que você pode ter que tomar.
 * Um registro de uso é identificado com exclusividade pela assinatura ` account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando um registro de uso é processado, qualquer outro registro de uso com a mesma assinatura é rejeitado como uma duplicata.
 * Não combine a interação com o serviço de medição com quaisquer outros serviços. As solicitações devem ser tratadas
 individualmente, mesmo caso a medição inicie e termine com o fornecimento e a remoção do fornecimento da instância.
