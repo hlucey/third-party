@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-04"
 
-lastupdated: "2019-02-25"
-
-keywords: access token, client ID, Access Manage page, authentication flow 
-
-subcollection: third-party
 
 ---
 
@@ -27,9 +23,9 @@ Ao definir a oferta, a página Gerenciar acesso no console de gerenciamento de r
 {:shortdesc}
 
 ## Antes de começar
-{: #iam-pre-reqs}
+{: #pre-reqs}
 
-Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party?topic=third-party-get-started#get-started) e que esteja aprovado para entregar um serviço de faturamento integrado.
+Certifique-se de ter concluído o [tutorial de introdução](/docs/third-party/index.html) e que esteja aprovado para entregar um serviço de faturamento integrado.
 
 ## Derive o URI de redirecionamento do IAM
 {: #redirect-uri}
@@ -41,8 +37,8 @@ A boa notícia é que na etapa de desenvolvimento anterior, você desenvolveu um
  Os exemplos a seguir mostram URIs redirecionarem:
 
 ```
-https://<myapp>.cloud.ibm.com/integrate/auth/callback
-http://localhost:3000/auth/callback <-- for testing locally
+https://myapp.bluemix.net/integrate/auth/callback
+http://localhost:3000/auth/callback <-- para testar localmente
 ```
 
 Retorne para o console de gerenciamento de recursos e inclua o URI de redirecionamento na guia IAM:
@@ -93,7 +89,7 @@ Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e 
 **Autenticação - Etapa 2:** troque o código para uma chamada de token de acesso
 
 ### POST <token_endpoint>
-{: #token-post}
+{: #post}
 
 #### Cabeçalhos:
 {: #headers1}
@@ -155,7 +151,6 @@ Consulte o exemplo em nossos [brokers de amostra](https://github.com/IBM/sample-
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
-{: #post}
 
 #### Cabeçalhos:
 {: #headers2}
@@ -263,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-Veja o exemplo em nossos [brokers de amostra](https://github.com/IBM/sample-resource-service-brokers).
+Veja o exemplo em nossos brokers de amostra: https://github.com/IBM/sample-resource-service-brokers
 
 ## Escagem de Token do IAM para Adotivos de Terce
 {: #token_scoping}
@@ -306,6 +301,6 @@ A seção a seguir é um exemplo do que é incluído na chamada de autorização
 Isso é aplicável a todos os usos (`user, serviceId, crn`) e todos os `subject.attributes` precisam de um escopo.
 
 ## Próximas Etapas
-{: #cis5-test}
+{: #next-steps}
 
-Agora é hora de reunir tudo! Retorne para o console de gerenciamento de recurso para publicar seu serviço em visibilidade limitada e validar sua oferta no catálogo. Para obter mais informações, consulte [Publicando e testando seu serviço](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest).
+Agora é hora de reunir tudo! Retorne para o console de gerenciamento de recurso para publicar seu serviço em visibilidade limitada e validar sua oferta no catálogo. Para obter mais informações, consulte [Publicando e testando seu serviço](/docs/third-party/cis4-rmc-publish.html).

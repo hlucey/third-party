@@ -1,14 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2019
-
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
-
-subcollection: third-party
+  years: 2015, 2018
+lastupdated: "2018-08-28"
 
 ---
 
@@ -32,12 +26,12 @@ subcollection: third-party
 Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten.
 {: note}
 
-Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage).
+Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party/metering.html#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party/submitusage.html#submitusage).
 
 ## Wie kann ich einen neuen API-Schlüssel für {{site.data.keyword.Bluemix_notm}} Identity and Access Management generieren?
 {: #iam-creds}
 {: faq}
 
-Sie erhalten den API-Schlüssel bei der Aktivierung von IAM. Es ist wichtig, dass Sie den API-Schlüssel speichern. Der Wert wird nicht erneut angezeigt. Wenn Sie den API-Schlüssel verlieren, können Sie den Schlüssel löschen und einen neuen erstellen. Weitere Informationen finden Sie in [API-Schlüssel für Service-ID verwalten](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). 
+Sie erhalten den API-Schlüssel bei der Aktivierung von IAM. Es ist wichtig, dass Sie den API-Schlüssel speichern. Der Wert wird nicht erneut angezeigt. Wenn Sie den API-Schlüssel verlieren, können Sie den Schlüssel löschen und einen neuen erstellen. Weitere Informationen finden Sie in [API-Schlüssel für Service-ID verwalten](/docs/iam/serviceid_keys.html#serviceidapikeys). 
 
 

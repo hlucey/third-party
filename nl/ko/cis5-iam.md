@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-04"
 
-lastupdated: "2019-02-25"
-
-keywords: access token, client ID, Access Manage page, authentication flow 
-
-subcollection: third-party
 
 ---
 
@@ -27,9 +23,9 @@ subcollection: third-party
 {:shortdesc}
 
 ## 시작하기 전에
-{: #iam-pre-reqs}
+{: #pre-reqs}
 
-[시작하기 튜토리얼](/docs/third-party?topic=third-party-get-started#get-started)이 완료되었는지와 통합 청구 서비스를 제공하도록 승인되었는지 확인하십시오.
+[시작하기 튜토리얼](/docs/third-party/index.html)이 완료되었는지와 통합 청구 서비스를 제공하도록 승인되었는지 확인하십시오.
 
 ## IAM 경로 재지정 URI 파생
 {: #redirect-uri}
@@ -41,7 +37,7 @@ subcollection: third-party
  다음 예제에서는 경로 재지정 URI를 보여줍니다.
 
 ```
-https://<myapp>.cloud.ibm.com/integrate/auth/callback
+https://myapp.bluemix.net/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
@@ -93,7 +89,7 @@ Content-Type: application/json
 **인증 - 2단계:** 다음을 호출하는 액세스 토큰용 코드 교환
 
 ### POST <token_endpoint>
-{: #token-post}
+{: #post}
 
 #### 헤더:
 {: #headers1}
@@ -155,7 +151,6 @@ curl -k -X POST \
 {: #iam_token_using_api_key}
 
 ### POST/ID/토큰
-{: #post}
 
 #### 헤더:
 {: #headers2}
@@ -263,7 +258,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-[샘플 브로커](https://github.com/IBM/sample-resource-service-brokers)의 예를 참조하십시오.
+샘플 브로커의 예제를 확인하십시오(https://github.com/IBM/sample-resource-service-brokers).
 
 ## 서드파티 채택자를 위한 IAM 토큰 범위
 {: #token_scoping}
@@ -306,6 +301,6 @@ curl -X POST \
 이는 모든 사용량(`사용자, serviceId, crn`)에 적용되며 모든 `subject.attributes`에 범위가 필요합니다.
 
 ## 다음 단계
-{: #cis5-test}
+{: #next-steps}
 
-이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링의 유효성을 검증하십시오. 자세한 정보는 [서비스 공개 및 테스트](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)를 참조하십시오.
+이제 모든 것을 함께 사용해야 할 단계입니다! 리소스 관리 콘솔로 돌아가 제한된 가시성 모드로 서비스를 공개하고 카탈로그에서 오퍼링의 유효성을 검증하십시오. 자세한 정보는 [서비스 공개 및 테스트](/docs/third-party/cis4-rmc-publish.html)를 참조하십시오. 

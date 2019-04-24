@@ -1,14 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2019
-
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
-
-subcollection: third-party
+  years: 2015, 2018
+lastupdated: "2018-08-28"
 
 ---
 
@@ -32,12 +26,12 @@ subcollection: third-party
 Vous devez automatiser la soumission de l'utilisation horaire en utilisant l'API de service de mesure si vous proposez un plan mesuré.
 {: note}
 
-Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party?topic=third-party-meteringintera#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party?topic=third-party-submitusage#submitusage).
+Pour plus d'informations sur l'opération de mesure, voir [Intégration des mesures](/docs/third-party/metering.html#meteringintera). Pour plus d'informations sur la soumission de l'utilisation mesurée, voir [Soumission de l'utilisation pour les plans mesurés](/docs/third-party/submitusage.html#submitusage).
 
 ## Comment puis-je générer une nouvelle clé d'API {{site.data.keyword.Bluemix_notm}} Identity and Access Management ?
 {: #iam-creds}
 {: faq}
 
-Une clé d'API vous est octroyée lorsque vous activez IAM. Il est primordial de sauvegarder cette clé. Cette valeur ne s'affichera plus. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle. Pour plus d'informations, voir [Gestion des clés d'API d'ID de service](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). 
+Une clé d'API vous est octroyée lorsque vous activez IAM. Il est primordial de sauvegarder cette clé. Cette valeur ne s'affichera plus. Si vous perdez votre clé d'API, vous pouvez supprimer la clé et en créer une nouvelle. Pour plus d'informations, voir [Gestion des clés d'API d'ID de service](/docs/iam/serviceid_keys.html#serviceidapikeys). 
 
 

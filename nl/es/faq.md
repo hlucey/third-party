@@ -1,14 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2019
-
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
-
-subcollection: third-party
+  years: 2015, 2018
+lastupdated: "2018-08-28"
 
 ---
 
@@ -32,12 +26,12 @@ subcollection: third-party
 Es necesario automatizar el envío de uso por hora utilizando la API de servicio de medición si ofrece un plan de medición.
 {: note}
 
-Para obtener más información sobre la medición, consulte [Integración de mediciones](/docs/third-party?topic=third-party-meteringintera#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos de uso para planes de medición](/docs/third-party?topic=third-party-submitusage#submitusage).
+Para obtener más información sobre la medición, consulte [Integración de mediciones](/docs/third-party/metering.html#meteringintera). Para obtener más información sobre el envío de datos de uso de medición, consulte [Envío de datos de uso para planes de medición](/docs/third-party/submitusage.html#submitusage).
 
 ## ¿Cómo puedo generar una nueva clave de API de {{site.data.keyword.Bluemix_notm}} Identity and Access Management?
 {: #iam-creds}
 {: faq}
 
-Se le proporciona una clave de API cuando se habilita IAM. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva. Para obtener más información, consulte [Gestión de claves de API de ID de servicio](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys). 
+Se le proporciona una clave de API cuando se habilita IAM. Es esencial que guarde bien la clave de API. El valor no se muestra de nuevo. Si pierde la clave de API, puede suprimir la clave y crear una nueva. Para obtener más información, consulte [Gestión de claves de API de ID de servicio](/docs/iam/serviceid_keys.html#serviceidapikeys). 
 
 

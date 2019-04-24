@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-04"
 
-lastupdated: "2019-02-25"
-
-keywords: service brokers, IBM Cloud platform, new service brokers, hosting service broker 
-
-subcollection: third-party
 
 ---
 
@@ -32,17 +28,17 @@ subcollection: third-party
 您可以组合使用从资源管理控制台导出的元数据、公共 {{site.data.keyword.Bluemix_notm}} 服务代理程序样本以及资源代理程序 API 文档来构建代理程序。
 
 ## 开始之前
-{: #broker-pre-reqs}
+{: #pre-reqs}
 
 确保已开始执行步骤 1，并完成了步骤 2：
-1. [编写服务文档和市场营销公告](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
-2. [在资源管理控制台中定义产品](/docs/third-party?topic=third-party-step2-define#step2-define)。
+1. [编写服务文档和市场营销公告](/docs/third-party/cis1-docs-marketing.html)。
+2. [在资源管理控制台中定义产品](/docs/third-party/cis2-rmc-define.html)。
 
 
 ## 查看 {{site.data.keyword.Bluemix_notm}} 平台供应方案
 {: #scenario}
 
-您要开发的是与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party?topic=third-party-how-it-works#provision2)，以了解资源创建的工作方式。
+您要开发的是与 {{site.data.keyword.Bluemix_notm}} 平台一起使用的 Open Service Broker。请参阅[供应方案](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together)，以了解资源创建的工作方式。
 
 ## 熟悉 OSB 规范
 {: #learn-osb}
@@ -66,7 +62,6 @@ subcollection: third-party
 {: tip}
 
 ### 所有服务代理程序的必需端点逻辑
-{: #endpoint-sb}
 
 服务代理程序必须提供 REST API 使用的一组标准元数据值，并且 {{site.data.keyword.Bluemix_notm}} 代理程序必须包含用于以下 REST API 端点或路径的逻辑：
 
@@ -104,7 +99,6 @@ subcollection: third-party
 ```
 
 ### 可绑定服务的必需端点逻辑
-{: #bindable}
 
 如果服务可以绑定到 {{site.data.keyword.Bluemix_notm}} 中的应用程序，那么必须将 API 端点和凭证返回给服务使用者。可绑定服务必须使用 Open Service Broker 规范中的可绑定操作，并实现以下端点或路径：
 
@@ -116,7 +110,6 @@ subcollection: third-party
 </dl>
 
 ### 必需的 {{site.data.keyword.Bluemix_notm}} 扩展端点
-{: #extension} 
 
 OSB 规范*不支持已禁用但尚未删除的实例状态。客户可能会遇到计费中断或导致帐户暂挂（但尚未取消）的其他情况，为了使 {{site.data.keyword.Bluemix_notm}} 能够为这些客户提供支持，{{site.data.keyword.Bluemix_notm}} 定义了扩展 API 端点来允许禁用和重新启用服务实例。以下端点扩展是**必需的**：
 
@@ -193,7 +186,6 @@ OSB 服务数组必须与添加到资源管理控制台中的产品元数据相�
 服务代理程序会从 {{site.data.keyword.Bluemix_notm}} 平台接收以下信息：
 
 ### X-Broker-API-Originating-Identity
-{: #x-broker}
 
 **用户身份头**通过 API 源身份头来提供。此请求头包含用户的 {{site.data.keyword.Bluemix_notm}} IAM 身份。IAM 身份为 base64 编码。{{site.data.keyword.Bluemix_notm}} 支持单个认证域：`IBMid`。`IBMid` 域使用 IBMid 唯一标识 (IUI) 来标识 {{site.data.keyword.Bluemix_notm}} 中的用户身份。此 IUI 是服务提供者的不透明字符串。
 
@@ -206,12 +198,10 @@ Decoded:
 ```
 
 ### API 版本头
-{: #api-header}
 
 **API 版本头**为 [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。例如：`X-Broker-Api-Version: 2.12`。
 
 ### 资源实例 (PUT) body.context 和资源实例 (PATCH) body.context
-{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` 和 `PATCH /v2/service_instances/:resource_instance_id` 会在 **body.context** 中接收以下值：`{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`。
 
@@ -219,7 +209,6 @@ Decoded:
 {: #more-info}
 
 ### 有关使用异步操作取代同步操作的建议
-{: #asynch-ops}
 
 OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10 秒，那么建议使用同步响应。否则，必须使用异步操作方式。有关更多信息，请参阅 OSB 规范。
 
@@ -227,7 +216,6 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 {: tip}
 
 ### 管理不同位置代理程序的建议
-{: #managing-broker}
 
 用户必须了解其云服务的位置，才能确定等待时间、可用性和数据存储位置。
 
@@ -237,7 +225,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 
 上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实施一个 OSB 代理程序。但您可根据部署策略和要为服务提供支持的位置，实施多个代理程序。在资源管理控制台工具中，您已在服务/套餐/位置元组与为该元组提供操作的代理程序之间建立映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
 
-有关可用位置的列表，请查阅 [IBM 全球目录位置](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
+有关可用位置的列表，请查阅 [IBM 全球目录位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
 
 
 ## 托管代理程序
@@ -249,11 +237,13 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 - 必须遵循传输层安全性 (TLS) 协议 V1.2
 - 必须在可通过公用因特网访问的有效 HTTPS 端点上进行托管
 
+如果要在 {{site.data.keyword.Bluemix_notm}} 中进行托管，可以在以下位置查找有关使用 Containers (Kubernetes) 创建应用程序的信息：[内部采用者 - 使用信息](/docs/containers/cs_internal.html#cs_internal)。
+
 您需要有服务代理程序的托管位置才能完成下一步。进行下一步时，请确保已具有与应用程序相关联的 URL 和凭证。
 {: tip}
 
 ## 如何测试服务的代理程序
-{: #broker-test}
+{: #test}
 
 要验证代理程序，您必须对要启用的不同端点运行 curl 命令。有关对 OSB 端点运行 curl 命令的最佳指导信息，请参阅样本自述文件：[https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")
 
@@ -275,6 +265,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## 后续步骤
-{: #cis3-next-steps}
+{: #next-steps}
 
-您已掌握了一些重要技能！您已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：开发认证流程](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
+您已掌握了一些重要技能！您已构建并托管符合 OSB 规范的服务代理程序。请参阅[步骤 4：开发认证流程](/docs/third-party/cis5-iam.html)。

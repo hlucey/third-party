@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-04"
 
-lastupdated: "2019-02-25"
-
-keywords: service brokers, IBM Cloud platform, new service brokers, hosting service broker 
-
-subcollection: third-party
 
 ---
 
@@ -32,17 +28,17 @@ Service-Broker verwalten den Lebenszyklus von Services. Die {{site.data.keyword.
 Sie erstellen Ihren Broker, indem Sie eine Kombination aus den von Ihnen aus der Konsole für das Ressourcenmanagement exportierten Metadaten, den von IBM bereitgestellten öffentlichen {{site.data.keyword.Bluemix_notm}}-Service-Broker-Beispielen und der API-Dokumentation für Ressourcenbroker verwenden.
 
 ## Vorbereitende Schritte
-{: #broker-pre-reqs}
+{: #pre-reqs}
 
 Vergewissern Sie sich, dass Sie Schritt 1 starten und Schritt 2 abgeschlossen haben:
-1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party?topic=third-party-content-tasks#content-tasks).
-2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party?topic=third-party-step2-define#step2-define).
+1. [Servicedokumentation und Vertriebsfreigabe verfassen](/docs/third-party/cis1-docs-marketing.html).
+2. [Angebot in der Konsole für das Ressourcenmanagement definieren](/docs/third-party/cis2-rmc-define.html).
 
 
 ## Szenario für {{site.data.keyword.Bluemix_notm}}-Plattformbereitstellung anzeigen
 {: #scenario}
 
-Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party?topic=third-party-how-it-works#provision2) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
+Sie entwickeln einen Open Service Broker, der mit der {{site.data.keyword.Bluemix_notm}}-Plattform arbeitet. Anhand des [Bereitstellungsszenarios](/docs/third-party/platform.html#provisioning-scenario-pulling-it-all-together) können Sie sich mit der Vorgehensweise zur Ressourcenerstellung vertraut machen.
 
 ## Einarbeitung in OSB-Spezifikation durchführen
 {: #learn-osb}
@@ -66,9 +62,8 @@ Der {{site.data.keyword.Bluemix_notm}} Open Service Broker erweitert die Version
 {: tip}
 
 ### Erforderliche Endpunktlogik für alle Service-Broker
-{: #endpoint-sb}
 
-Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden, und {{site.data.keyword.Bluemix_notm}}-Broker müssen über Logik für die folgenden REST-API-Endpunkte und -Pfade verfügen:
+Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden, und {{site.data.keyword.Bluemix_notm}}-Broker müssen über Logik für die folgenden REST-API-Endpunkte und -Pfade verfügen: 
 
 <dl>
   <dt>Katalog (GET)</dt>
@@ -105,7 +100,6 @@ Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, di
 ```
 
 ### Erforderliche Endpunktlogik für bindefähige Services
-{: #bindable}
 
 Wenn Ihr Service an Anwendungen in {{site.data.keyword.Bluemix_notm}} gebunden werden kann, muss er API-Endpunkte und Berechtigungsnachweise an Ihre Servicekonsumenten zurückzugeben. Ein bindefähiger Service muss die bindefähigen Operationen in der Open Service Broker-Spezifikation verwenden und die folgenden Endpunkte oder Pfade implementieren:
 
@@ -117,7 +111,6 @@ Wenn Ihr Service an Anwendungen in {{site.data.keyword.Bluemix_notm}} gebunden w
 </dl>
 
 ### Erforderliche {{site.data.keyword.Bluemix_notm}}-Erweiterungsendpunkte
-{: #extension} 
 
 Die OSB-Spezifikation bietet keine Unterstützung für einen inaktivierten Instanzstatus, der jedoch noch nicht gelöscht wurde. Damit {{site.data.keyword.Bluemix_notm}} Kunden unterstützen kann, bei denen es möglicherweise zu Zahlungsverzögerungen oder zu anderen Situationen kommt, die zu einer Aussetzung des Kontos (jedoch noch nicht zu seiner Stornierung) führen können, hat {{site.data.keyword.Bluemix_notm}} erweiterte API-Endpunkte definiert, die es Ihnen ermöglichen, Serviceinstanzen zu inaktivieren und erneut zu aktivieren. Folgende Endpunkterweiterungen sind **erforderlich**:
 
@@ -194,7 +187,6 @@ Ihr OSB-Servicearray muss mit den Angebotsmetadaten übereinstimmen, die Sie zur
 Ihr Service-Broker bzw. Ihre Service-Broker empfangen von der {{site.data.keyword.Bluemix_notm}}-Plattform folgende Informationen:
 
 ### X-Broker-API-Originating-Identity
-{: #x-broker}
 
 Der **Benutzeridentitätsheader** wird über einen Identitätsheader der API bereitgestellt. Dieser Anforderungsheader enthält die {{site.data.keyword.Bluemix_notm}}-IAM-Identität des Benutzers. Die IAM-Identität verfügt über eine Base64-Codierung. {{site.data.keyword.Bluemix_notm}} unterstützt einen einzelnen Authentifizierungsrealm: `IBMid`. Der Realm `IBMid` verwendet eine eindeutige IBMid-ID (IUI = IBMid Unique ID)), um die Identität des Benutzers in {{site.data.keyword.Bluemix_notm}} zu ermitteln. Diese IUI stellt für den Service-Provider eine nicht transparente Zeichenfolge dar.
 
@@ -207,12 +199,10 @@ Decoded:
 ```
 
 ### Version des API-Headers
-{: #api-header}
 
 Der **Header der API-Version** lautet [2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Beispiel: `X-Broker-Api-Version: 2.12`.
 
 ### Ressourceninstanz (PUT) body.context und Ressourceninstanz (PATCH) body.context
-{: #put}
 
 `PUT /v2/service_instances/:resource_instance_id` und `PATCH /v2/service_instances/:resource_instance_id` empfangen den folgenden Wert in **body.context**: `{ "platform": "ibmcloud", "account_id": "tracys-account-id", "crn": "resource-instance-crn" }`.
 
@@ -220,7 +210,6 @@ Der **Header der API-Version** lautet [2.12](https://github.com/openservicebroke
 {: #more-info}
 
 ### Empfehlungen zur Verwendung asynchroner anstelle synchroner Operationen
-{: #asynch-ops}
 
 Die OSB-API unterstützt sowohl den synchronen als auch den asynchronen Betriebsmodus. Wenn die Operationen weniger als 10 Sekunden in Anspruch nehmen, werden synchrone Antworten empfohlen. Andernfalls müssen Sie den asynchronen Betriebsmodus verwenden. Weitere Informationen sind in der OSB-Spezifikation enthalten.
 
@@ -228,7 +217,6 @@ Wenn die asynchrone Operation beim Bereitstellen einer Instanz weniger als 10 Se
 {: tip}
 
 ### Empfehlungen für die positionsübergreifende Verwaltung von Brokern
-{: #managing-broker}
 
 Für Benutzer ist es wichtig, die Gegebenheiten der Position für ihre Cloud-Services in Bezug auf die Latenzzeiten, die Verfügbarkeit und den Datenspeicherort zu kennen.
 
@@ -238,7 +226,7 @@ Wenn Ihr API-basierter Drittanbieterservice in einer anderen Cloud implementiert
 
 Beim {{site.data.keyword.Bluemix_notm}}-Onboarding müssen Sie mindestens einen OSB-Broker implementieren. Sie können je nach Bereitstellungsstrategie und den Standorten, die für Ihren Service unterstützt werden sollen, mit mehreren Brokern arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
 
-Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
+Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
 
 
 ## Eigene Broker hosten
@@ -250,11 +238,13 @@ Zum IBM externen Hosten des Brokers müssen Sie sicherstellen, dass der Broker d
 - Einhaltung des TLS-Protokolls (Transport Layer Security) Version 1.2
 - Hosting auf einem gültigen HTTPS-Endpunkt, auf den über das öffentliche Internet zugegriffen werden kann
 
+Wenn das Hosting in {{site.data.keyword.Bluemix_notm}} durchgeführt werden soll, sind die Informationen zum Erstellen einer App mithilfe von Containern (Kubernetes) im Abschnitt zum Thema [Interne Adopter - Nutzungsinformationen](/docs/containers/cs_internal.html#cs_internal) hilfreich.
+
 Sie benötigen die gehostete Position Ihres Service-Brokers, um den nächsten Schritt ausführen zu können. Halten Sie die URL und die Berechtigungsnachweise Ihrer App bereit, bevor Sie mit dem nächsten Schritt fortfahren.
 {: tip}
 
 ## Vorgehensweise zum Testen des Service-Brokers
-{: #broker-test}
+{: #test}
 
 Sie müssen Ihren Broker überprüfen, indem Sie die curl-Befehle für die unterschiedlichen Endpunkte ausführen, die Sie aktivieren wollen. Die Readme-Beispieldatei enthält hervorragende Anweisungen zur Verarbeitung Ihrer OSB-Endpunkte mit 'curl': [https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md](https://github.com/IBM/sample-resource-service-brokers/blob/master/README.md){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
 
@@ -276,6 +266,6 @@ curl -X PUT  https://<sample-service-broker>/v2/service_instances/<encoded-resou
 ```
 
 ## Nächste Schritte
-{: #cis3-next-steps}
+{: #next-steps}
 
-Sie verfügen nun über fundierte Kenntnisse! Sie haben einen Service-Broker erstellt und gehostet, der der OSB-Spezifikation entspricht. Weitere Informationen finden Sie in [Schritt 4: Authentifizierungsablauf entwickeln](/docs/third-party?topic=third-party-step4-iam#step4-iam).
+Sie verfügen nun über fundierte Kenntnisse! Sie haben einen Service-Broker erstellt und gehostet, der der OSB-Spezifikation entspricht. Weitere Informationen finden Sie in [Schritt 4: Authentifizierungsablauf entwickeln](/docs/third-party/cis5-iam.html).

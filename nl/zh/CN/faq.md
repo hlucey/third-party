@@ -1,14 +1,8 @@
 ---
 
 copyright:
-
-  years: 2015, 2019
-
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
-
-subcollection: third-party
+  years: 2015, 2018
+lastupdated: "2018-08-28"
 
 ---
 
@@ -32,12 +26,12 @@ subcollection: third-party
 如果提供计量套餐，那么您需要使用计量服务 API 来自动提交每小时使用量。
 {: note}
 
-有关计量的更多信息，请参阅[计量集成](/docs/third-party?topic=third-party-meteringintera#meteringintera)。有关提交计量使用量的更多信息，请参阅[提交计量套餐的使用量](/docs/third-party?topic=third-party-submitusage#submitusage)
+有关计量的更多信息，请参阅[计量集成](/docs/third-party/metering.html#meteringintera)。有关提交计量使用量的更多信息，请参阅[提交计量套餐的使用量](/docs/third-party/submitusage.html#submitusage)
 
 ## 如何生成新的 {{site.data.keyword.Bluemix_notm}} Identity and Access Management API 密钥？
 {: #iam-creds}
 {: faq}
 
-在启用 IAM 时，会向您提供 API 密钥。保存 API 密钥至关重要。该值不会再显示。如果丢失了 API 密钥，您可以删除该密钥并创建新密钥。有关更多信息，请参阅[管理服务标识 API 密钥](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys)。 
+在启用 IAM 时，会向您提供 API 密钥。保存 API 密钥至关重要。该值不会再显示。如果丢失了 API 密钥，您可以删除该密钥并创建新密钥。有关更多信息，请参阅[管理服务标识 API 密钥](/docs/iam/serviceid_keys.html#serviceidapikeys)。 
 
 
