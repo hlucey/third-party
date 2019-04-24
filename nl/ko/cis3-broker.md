@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -63,7 +63,7 @@ lastupdated: "2019-01-04"
 
 ### 모든 서비스 브로커에 대한 필수 엔드포인트 로직
 
-서비스 브로커는 REST API가 이용하는 메타데이터 값의 표준 세트를 제공해야 하며 {{site.data.keyword.Bluemix_notm}} 브로커에는 다음 REST API 엔드포인트 또는 경로에 대한 로직이 있어야 합니다. 
+서비스 브로커는 REST API가 이용하는 메타데이터 값의 표준 세트를 제공해야 하며 {{site.data.keyword.Bluemix_notm}} 브로커에는 다음 REST API 엔드포인트 또는 경로에 대한 로직이 있어야 합니다.
 
 <dl>
   <dt>카탈로그(GET)</dt>
@@ -76,7 +76,7 @@ lastupdated: "2019-01-04"
   <dd>서비스 인스턴스를 업데이트합니다.</dd>
 </dl>
 
-**카탈로그(GET)에 대한 참고**: 이 엔드포인트는 브로커가 지원하는 서비스 및 플랜에 대한 브로커와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 계약을 정의합니다. 이 엔드포인트는 브로커 내에 저장된 카탈로그 메타데이터를 리턴합니다. 이러한 값은 서비스와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 최소 프로비저닝 계약을 정의합니다. 프로비저닝하는 데 필요하지 않은 모든 추가 카탈로그 메타데이터는 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장됩니다. 링크, 아이콘 및 i18n 변환 메타데이터와 같은 대시보드를 렌더링하는 데 사용되는 카탈로그 표시 값에 대한 업데이트는 소스 관리 콘솔에서 업데이트해야 하며 브로커에 포함되지 않습니다. 브로커에 저장된 메타데이터는 {{site.data.keyword.Bluemix_notm}} 콘솔이나 {{site.data.keyword.Bluemix_notm}} CLI에 표시되지 않습니다. 콘솔과 CLI에서는 리소스 관리 콘솔에서 설정하고 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장된 항목을 리턴합니다. 다음 섹션에서는 카탈로그(GET)가 리턴하는 최소 필수 값을 보여줍니다. 
+**카탈로그(GET)에 대한 참고**: 이 엔드포인트는 브로커가 지원하는 서비스 및 플랜에 대한 브로커와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 계약을 정의합니다. 이 엔드포인트는 브로커 내에 저장된 카탈로그 메타데이터를 리턴합니다. 이러한 값은 서비스와 {{site.data.keyword.Bluemix_notm}} 플랫폼 간의 최소 프로비저닝 계약을 정의합니다. 프로비저닝하는 데 필요하지 않은 모든 추가 카탈로그 메타데이터는 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장됩니다. 링크, 아이콘 및 i18n 변환 메타데이터와 같은 대시보드를 렌더링하는 데 사용되는 카탈로그 표시 값에 대한 업데이트는 소스 관리 콘솔에서 업데이트해야 하며 브로커에 포함되지 않습니다. 브로커에 저장된 메타데이터는 {{site.data.keyword.Bluemix_notm}} 콘솔이나 {{site.data.keyword.Bluemix_notm}} CLI에 표시되지 않습니다. 콘솔과 CLI에서는 리소스 관리 콘솔에서 설정하고 {{site.data.keyword.Bluemix_notm}} 카탈로그에 저장된 항목을 리턴합니다. 다음 섹션에서는 카탈로그(GET)가 리턴하는 최소 필수 값을 보여줍니다.
 
 ```
 {
@@ -100,7 +100,7 @@ lastupdated: "2019-01-04"
 
 ### 바인드 가능 서비스에 대한 필수 엔드포인트 로직
 
-서비스를 {{site.data.keyword.Bluemix_notm}}의 애플리케이션에 바인드할 수 있으면 API 엔드포인트와 인증 정보를 서비스 이용자에게 리턴할 수 있어야 합니다. 바인드 가능 서비스는 Open Service Broker 스펙의 바인드 가능 조작을 사용해야 하며 다음의 엔드포인트 또는 경로를 구현해야 합니다. 
+서비스를 {{site.data.keyword.Bluemix_notm}}의 애플리케이션에 바인드할 수 있으면 API 엔드포인트와 인증 정보를 서비스 이용자에게 리턴할 수 있어야 합니다. 바인드 가능 서비스는 Open Service Broker 스펙의 바인드 가능 조작을 사용해야 하며 다음의 엔드포인트 또는 경로를 구현해야 합니다.
 
 <dl>
   <dt>바인딩 및 인증 정보(PUT)</dt>
@@ -225,7 +225,7 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 {{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 하나 이상의 OSB 브로커를 구현해야 합니다. 배치 전략 및 서비스에 대해 지원할 위치에 따라 둘 이상의 브로커가 있을 수 있습니다. 리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
 
-사용 가능한 위치 목록은 [IBM Global Catalog 위치](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스가 Global Catalog에서 추가 위치의 정의를 요구하는 경우에는 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오. 
+사용 가능한 위치 목록은 [IBM Global Catalog 위치](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스가 Global Catalog에서 추가 위치의 정의를 요구하는 경우에는 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
 
 
 ## 브로커 호스트

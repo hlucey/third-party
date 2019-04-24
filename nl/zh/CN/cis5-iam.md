@@ -37,7 +37,7 @@ lastupdated: "2019-01-04"
  以下示例显示重定向 URI：
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 

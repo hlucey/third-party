@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -225,13 +225,13 @@ OSB API 支援同步及非同步作業模式。如果您的作業需要不到 10
 
 在 {{site.data.keyword.Bluemix_notm}} 上線時，您必須實作至少一個 OSB 分配管理系統。您可以根據部署策略以及您要為服務提供支援的位置，實作多個分配管理系統。在資源管理主控台工具內，您已建立服務/方案/位置值組與處理該值組作業之分配管理系統間的對映。一般選項會是定義單一分配管理系統來處理服務的所有位置，或定義每個位置的分配管理系統；此選項取決於服務提供者。
 
-如需可用位置的清單，請參閱 [IBM 全球型錄位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。如果您的服務需要在「全球型錄」中定義其他位置，請諮詢 {{site.data.keyword.Bluemix_notm}} 上線團隊。
+如需可用位置的清單，請參閱 [IBM 全球型錄位置](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示")。如果您的服務需要在「全球型錄」中定義其他位置，請諮詢 {{site.data.keyword.Bluemix_notm}} 上線團隊。
 
 
 ## 管理分配管理系統
 {: #host}
 
-您的分配管理系統必須當作可回應 REST API 呼叫之應用程式的一部分來管理。您的受管理位置必須符合 {{site.data.keyword.Bluemix_notm}} 安全準則。您可以在 {{site.data.keyword.Bluemix_notm}} 中管理，也可以在外部管理，只要能夠從 {{site.data.keyword.Bluemix_notm}} 本身公開存取即可。
+您的分配管理系統必須當作可回應 REST API 呼叫之應用程式的一部分來管理。此外，您的受管理位置必須符合 {{site.data.keyword.Bluemix_notm}} 安全準則。您可以在 {{site.data.keyword.Bluemix_notm}} 中管理，也可以在外部管理，只要能夠從 {{site.data.keyword.Bluemix_notm}} 本身公開存取即可。
 
 若要在 IBM 外部管理分配管理系統，您必須確定符合下列安全準則：
 - 必須遵循「傳輸層安全 (TLS)」通訊協定 1.2 版

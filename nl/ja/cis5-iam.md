@@ -37,7 +37,7 @@ lastupdated: "2019-01-04"
  以下はリダイレクト URI の例です。
 
 ```
-https://myapp.bluemix.net/integrate/auth/callback
+https://<myapp>.cloud.ibm.com/integrate/auth/callback
 http://localhost:3000/auth/callback <-- for testing locally
 ```
 
@@ -94,7 +94,7 @@ Content-Type: application/json
 #### ヘッダー:
 {: #headers1}
 
-  - Authorization: Basic *[client id]: [client secret]*
+  - Authorization: Basic *[client id]:[client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 

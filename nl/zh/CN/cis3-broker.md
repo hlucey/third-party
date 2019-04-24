@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -225,7 +225,7 @@ OSB API 支持同步和异步操作方式。如果操作需要的时间少于 10
 
 上线到 {{site.data.keyword.Bluemix_notm}} 时，必须至少实施一个 OSB 代理程序。但您可根据部署策略和要为服务提供支持的位置，实施多个代理程序。在资源管理控制台工具中，您已在服务/套餐/位置元组与为该元组提供操作的代理程序之间建立映射。典型选项是定义单个代理程序来处理服务的所有位置，或者每个位置定义一个代理程序；此选项由服务提供者决定。
 
-有关可用位置的列表，请查阅 [IBM 全球目录位置](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
+有关可用位置的列表，请查阅 [IBM 全球目录位置](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标")。如果服务需要在“全球目录”中定义更多位置，请咨询 {{site.data.keyword.Bluemix_notm}} 上线团队。
 
 
 ## 托管代理程序

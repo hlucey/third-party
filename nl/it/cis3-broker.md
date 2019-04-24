@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -226,7 +226,7 @@ Se il tuo servizio basato su API di terze parti è implementato in un altro clou
 
 Durante l'onboarding in {{site.data.keyword.Bluemix_notm}}, devi implementare almeno un broker OSB. Puoi avere più di un broker in base alla tua strategia di distribuzione e alle ubicazioni che desideri supportare per il tuo servizio. All'interno dello strumento della console di gestione delle risorse, hai stabilito l'associazione tra la tua tupla di servizio/piano/ubicazione e il broker che gestisce le operazioni per tale tupla. Le scelte tipiche sono quelle di definire un singolo broker per servire tutte le ubicazioni per il tuo servizio o di definire un broker per ogni ubicazione; questa scelta spetta al provider di servizi.
 
-Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede più ubicazioni da definire nel catalogo globale, consulta il team di onboarding {{site.data.keyword.Bluemix_notm}}.
+Per un elenco di ubicazioni disponibili, vedi [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno"). Se il tuo servizio richiede più ubicazioni da definire nel catalogo globale, consulta il team di onboarding {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Ospita i tuoi broker

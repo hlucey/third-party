@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -63,7 +63,7 @@ Der {{site.data.keyword.Bluemix_notm}} Open Service Broker erweitert die Version
 
 ### Erforderliche Endpunktlogik für alle Service-Broker
 
-Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden, und {{site.data.keyword.Bluemix_notm}}-Broker müssen über Logik für die folgenden REST-API-Endpunkte und -Pfade verfügen: 
+Service-Broker müssen eine Standardgruppe von Metadatenwerten bereitstellen, die von den REST-APIs benutzt werden, und {{site.data.keyword.Bluemix_notm}}-Broker müssen über Logik für die folgenden REST-API-Endpunkte und -Pfade verfügen:
 
 <dl>
   <dt>Katalog (GET)</dt>
@@ -226,7 +226,7 @@ Wenn Ihr API-basierter Drittanbieterservice in einer anderen Cloud implementiert
 
 Beim {{site.data.keyword.Bluemix_notm}}-Onboarding müssen Sie mindestens einen OSB-Broker implementieren. Sie können je nach Bereitstellungsstrategie und den Standorten, die für Ihren Service unterstützt werden sollen, mit mehreren Brokern arbeiten. Im Tool der Konsole für das Ressourcenmanagement haben Sie die Zuordnung zwischen Ihrem Service, dem Plan und dem Positionstupel und dem Broker eingerichtet, der die Operationen für diesen Tupel bedient. Die typischen Optionen bestehen im Definieren eines einzelnen Brokers, der alle Positionen für Ihren Service bedient, oder in der Definition eines Brokers pro Position. Die gewählte Option wird vom jeweiligen Service-Provider festgelegt.
 
-Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://resource-catalog.bluemix.net/search?q=kind:geography){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
+Eine Liste der verfügbaren Positionen finden Sie in der Auflistung der [IBM Global Catalog-Standorte](https://globalcatalog.cloud.ibm.com/search?q=kind:geography&account=ed7278b5a3cd456db261499cf517a030){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link"). Wenn für Ihren Service weitere Standorte im globalen Katalog definiert werden müssen, wenden Sie sich an das {{site.data.keyword.Bluemix_notm}}-Onboarding-Team.
 
 
 ## Eigene Broker hosten
