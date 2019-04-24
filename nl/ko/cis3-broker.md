@@ -237,7 +237,7 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 
 {{site.data.keyword.Bluemix_notm}}에 온보딩하는 경우 하나 이상의 OSB 브로커를 구현해야 합니다. 배치 전략 및 서비스에 대해 지원할 위치에 따라 둘 이상의 브로커가 있을 수 있습니다. 리소스 관리 콘솔 도구 내에서 서비스/플랜/위치 튜플과 해당 튜플에 대한 오퍼레이션을 서비스할 브로커 사이에 맵핑을 설정했습니다. 일반적인 선택사항은 서비스의 모든 위치를 서비스할 단일 브로커를 정의하거나 위치별 브로커를 정의하는 것입니다. 이 선택사항은 서비스 제공자가 선택합니다.
 
-사용 가능한 위치 목록은 [IBM Global Catalog 위치](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스가 Global Catalog에서 추가 위치의 정의를 요구하는 경우에는 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
+사용 가능한 위치 목록은 [IBM Global Catalog 위치](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")를 참조하십시오. 서비스가 Global Catalog에서 추가 위치의 정의를 요구하는 경우에는 {{site.data.keyword.Bluemix_notm}} 온보딩 팀에 문의하십시오.
 
 
 ## 브로커 호스트
@@ -248,8 +248,6 @@ OSB API는 동기 및 비동기 모드의 오퍼레이션을 모두 지원합니
 IBM 외부에서 브로커를 호스팅하려면 다음 보안 가이드라인을 충족해야 합니다.
 - TLS(Transport Layer Security) 프로토콜 버전 1.2를 준수해야 함
 - 공용 인터넷에서 액세스할 수 있는 올바른 HTTP 엔드포인트에서 호스팅되어야 함
-
-{{site.data.keyword.Bluemix_notm}}에서 호스팅하려는 경우 컨테이너(Kubernetes)를 사용하여 앱을 작성하는 방법에 대한 정보는 다음에 있습니다. [내부 채택자 - 사용 정보](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 다음 단계를 완료하려면 서비스 브로커의 호스트 위치가 필요합니다. 다음 단계로 이동할 때 앱과 연관된 URL과 인증 정보를 준비해 두십시오.
 {: tip}

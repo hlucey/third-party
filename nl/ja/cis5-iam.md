@@ -98,7 +98,7 @@ Content-Type: application/json
 #### ヘッダー:
 {: #headers1}
 
-  - Authorization: Basic *[client id]:[client secret]*
+  - Authorization: Basic *[client id]: [client secret]*
   - Content-Type: application/x-www-form-urlencoded
   - Accept: application/json
 

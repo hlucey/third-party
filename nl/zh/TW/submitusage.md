@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25" 
+lastupdated: "2019-04-04" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -53,7 +53,7 @@ subcollection: third-party
 當您使用 {{site.data.keyword.Bluemix_notm}} 計量服務來提交資源用量資料時，請參閱下列準則：
 
 * 開始時間和結束時間代表收集測量值的時間範圍。這些時間與將用量記錄提交至計量 API 的時間無關。
-* 用量記錄是事實資料。請不要在建立用量記錄之後更新該記錄。當您順利建立用量記錄時，會指定位置。如果傳回錯誤碼，則請參閱您可能需要採取的[動作](/docs/third-party?topic=third-party-submitusage#actions)。
+* 用量記錄是事實資料。請不要在建立用量記錄之後更新該記錄。當您順利建立用量記錄時，會指定位置。如果傳回錯誤碼，則請參閱[狀態碼及您可能需要採取的必要動作](/docs/third-party?topic=third-party-submitusage#usage-records)。
 * 用量記錄是依簽章 `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end` 進行唯一識別。處理用量記錄時，會將任何具有相同簽章的其他用量記錄視為重複項目而加以拒絶。
 * 不要將與計量服務的互動與任何其他服務結合。即使計量會隨著佈建與取消佈建實例而開始及結束，也必須個別處理這些要求。
 * 資源用量資料每隔 2 - 24 小時都必須提交至計量服務一次。用量資料的提交頻率取決於用量度量值的變更頻率。

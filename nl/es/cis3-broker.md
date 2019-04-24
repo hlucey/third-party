@@ -237,7 +237,7 @@ Si el servicio basado en API de terceros se implementa en otra nube y se expone 
 
 Al realizar la incorporación a {{site.data.keyword.Bluemix_notm}}, debe implementar al menos un intermediario OSB. Tiene la opción de tener más de un intermediario, en función de la estrategia de despliegue y de las ubicaciones a las que desea dar soporte para el servicio. Dentro de la herramienta de la consola de gestión de recursos, se establece la correlación entre la combinación de servicio/plan/ubicación y el intermediario que da servicio a las operaciones de dicha combinación. Las opciones típicas serían definir un solo intermediario para dar servicio a todas las ubicaciones para el servicio o definir un intermediario por ubicación; la elección corresponde al proveedor del servicio.
 
-Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del catálogo global de IBM](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Si el servicio requiere que se definan más ubicaciones en el catálogo global, póngase en contacto con el equipo de incorporación de {{site.data.keyword.Bluemix_notm}}.
+Para ver una lista de las ubicaciones disponibles, consulte las [ubicaciones del catálogo global de IBM](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo"). Si el servicio requiere que se definan más ubicaciones en el catálogo global, póngase en contacto con el equipo de incorporación de {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Alojamiento de los intermediarios
@@ -248,8 +248,6 @@ El intermediario debe estar alojado como parte de una aplicación que pueda resp
 Para alojar el intermediario fuera de IBM, debe asegurarse de que cumple las siguientes directrices de seguridad:
 - Debe seguir el protocolo Transport Layer Security (TLS) versión 1.2
 - Debe estar alojado en un punto final HTTPs válido que sea accesible en internet público
-
-Si desea alojar en {{site.data.keyword.Bluemix_notm}}, encontrará información sobre cómo crear una app utilizando Containers (Kubernetes) aquí: [Adoptadores internos - Información de uso](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 Necesitará la ubicación alojada del intermediario de servicio para completar el paso siguiente. Tenga preparados el URL y las credenciales asociadas a la app antes de pasar al siguiente paso.
 {: tip}

@@ -241,7 +241,7 @@ Se seu serviço baseado em API de terceiros for implementado em outra nuvem e ex
 Quando você se integra ao {{site.data.keyword.Bluemix_notm}}, deve implementar pelo menos um broker do OSB. É possível ter mais de um broker, dependendo de sua estratégia de implementação e dos locais que deseja suportar para seu serviço. Na ferramenta do console de gerenciamento de recursos, você estabeleceu o mapeamento entre a tupla de serviço/plano/local e o broker que atende as operações para
 essa tupla. As opções típicas seriam definir um único broker para atender a todos os locais para seu serviço ou definir um broker por local; essa opção cabe ao provedor de serviços.
 
-Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o serviço precisar que mais locais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
+Para obter uma lista de locais disponíveis, consulte os [Locais do catálogo global da IBM](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo"). Se o serviço precisar que mais locais sejam definidos no Catálogo global, consulte a equipe de integração do {{site.data.keyword.Bluemix_notm}}.
 
 
 ## Hospeda seus brokers
@@ -252,8 +252,6 @@ Seu broker deve ser hospedado como parte de um aplicativo que pode responder às
 Para hospedar seu broker fora da IBM, deve-se assegurar de que ele atenda às diretrizes de segurança a seguir:
 - Deve seguir o protocolo de Segurança da Camada de Transporte (TLS) versão 1.2
 - Deve ser hospedado em um terminal HTTPs válido que esteja acessível na Internet pública
-
-Se desejar hospedar no {{site.data.keyword.Bluemix_notm}}, será possível localizar informações sobre a criação de um app usando Contêineres (Kubernetes) aqui: [Adotantes internos - Informações de uso](/docs/containers?topic=containers-cs_internal#cs_internal).
 
 Será necessário o local hospedado de seu broker de serviço para concluir a próxima etapa. Tenha a URL e as credenciais que estão associadas ao seu aplicativo prontas quando for para a próxima etapa.
 {: tip}
