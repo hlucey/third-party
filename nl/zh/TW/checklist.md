@@ -1,8 +1,14 @@
 ---
 
 copyright:
+
   years: 2018, 2019
-lastupdated: "2019-01-30"
+
+lastupdated: "2019-02-25"
+
+keywords: billing service, resource management console, Open Service Broker, end-to-end 
+
+subcollection: third-party
 
 ---
 
@@ -23,7 +29,7 @@ lastupdated: "2019-01-30"
 ## 定義服務
 {: #define}
 
-| 作業 | 子作業   | 說明 | 環境        |
+| 作業 | 子作業   |說明| 環境        |
 |------| ----------| ------------|-----|
 |瞭解 {{site.data.keyword.Bluemix}} 平台。| ☐ 我瞭解佈建層、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM)、型錄、Open Service Broker 及計量服務如何全部一起運作。|與 {{site.data.keyword.Bluemix_notm}} 轉介服務不同，整合式計費服務會使用 {{site.data.keyword.Bluemix_notm}} 平台來建立、連結及刪除服務實例，以及收取其費用。[瞭解](/docs/third-party?topic=third-party-how-it-works#how-it-works)包含平台的重要元件，以便快速開始進行開發。| 文件 |
 | 在 {{site.data.keyword.Bluemix_notm}} Provider Workbench 登錄您的供應項目。| ☐ 我已完成內容作業。<br><br>☐ 我已收到核准，可以將我的供應項目發佈為整合式計費服務。<br><br> ☐ 我已收到具有文件 URL 值的電子郵件。<br><br> | 您的第一步是在 Provider Workbench 登錄供應項目。如需相關資訊，請參閱[入門指導教學](/docs/third-party?topic=third-party-get-started#get-started)。| Provider Workbench |
@@ -39,7 +45,7 @@ lastupdated: "2019-01-30"
 ## 開發服務
 {: #develop}
 
-| 作業 | 子作業   | 說明 | 環境        |
+| 作業 | 子作業   |說明| 環境        |
 |------| ----------| ------------|-----|
 |瞭解 Open Service Broker 規格 2.12 版。|☐ 我已閱讀 Open Service Broker 規格，並瞭解我必須自行開發 Open Service Broker。<br><br>  |  服務分配管理系統可管理服務的生命週期。{{site.data.keyword.Bluemix_notm}} 平台會與 Open Service Broker 互動，以建立及管理服務實例和服務連結。如需相關資訊，請參閱[開發及管理服務分配管理系統](/docs/third-party?topic=third-party-step3-osb#step3-osb)。| 文件 |
 |檢視 {{site.data.keyword.Bluemix_notm}} 分配管理系統範例。|☐ 我已複製儲存庫、瀏覽分配管理系統範例，並準備好使用這些範例來開始進行開發。<br><br>  |  [https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") | 程式碼範例 |
@@ -55,7 +61,7 @@ lastupdated: "2019-01-30"
 ## 發佈及測試服務
 {: #pubtest}
 
-| 作業 | 子作業   | 說明 | 環境        |
+| 作業 | 子作業   |說明| 環境        |
 |------| ----------| ------------|-----|
 | 以受限可見性模式發佈服務。|☐ 我已在資源管理主控台順利登錄受管理的 Open Service Broker。<br><br> ☐ 我已順利建立新的部署，並將我的供應項目發佈至一個以上的地區。<br><br> |既然您的受管理服務分配管理系統符合 Open Service Broker 規格，您便可以將服務發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。如需相關資訊，請參閱[發佈服務的步驟](/docs/third-party?topic=third-party-publish#publish)。| 資源管理主控台 |
 | 測試供應項目。| ☐ 我可以在型錄中看到我的服務。<br><br> ☐ 我已從服務實例儀表板驗證鑑別。<br><br> ☐ 我已驗證我的服務正確地顯示在型錄中。<br><br> ☐ 我可以選取方案，並建立服務實例。<br><br> ☐ 我可以刪除服務實例。<br><br> ☐ 我可以將我的服務連接至另一個應用程式。<br><br> ☐ 我可以中斷服務的連線，並刪除連線。<br><br>  ☐ 我可以產生服務金鑰及刪除該服務金鑰。<br><br> ☐ 我已與 IBM 業務代表合作，驗證我的供應項目正確地支援啟用及停用端點。<br><br> ☐ 因為我的供應項目具有計量方案，所以我已順利測試用量提交。|既然您的受管理服務分配管理系統符合 Open Service Broker 規格，您便可以將服務發佈至 {{site.data.keyword.Bluemix_notm}} 型錄。如需相關資訊，請參閱[測試服務的步驟](/docs/third-party?topic=third-party-test-your-service#test)。| {{site.data.keyword.Bluemix_notm}} 主控台 |

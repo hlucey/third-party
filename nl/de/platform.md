@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-01-30"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: IBM Cloud platform, integrated billing services, lifecycle of IBM Cloud resources, provisioning layer 
+
+subcollection: third-party
 
 ---
 
@@ -87,9 +91,9 @@ Wenn für einen Service ein Plan mit Nutzungsmessung angeboten wird, werden die 
 
 Alle integrierten Abrechnungsservices mit einem Plan mit Nutzungsmessung müssen den {{site.data.keyword.Bluemix_notm}}-Messservice verwenden, um die Nutzungsdaten zu melden.
 
-Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten. 
+Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten.
 
-Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage). 
+Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage).
 
 ## Bereitstellungsszenario: Zusammenfassung
 {: #provision2}

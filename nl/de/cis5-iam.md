@@ -1,10 +1,14 @@
 ---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-12"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: access token, client ID, Access Manage page, authentication flow 
+
+subcollection: third-party
 
 ---
 
@@ -259,7 +263,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-In den [Beispielbrokern](https://github.com/IBM/sample-resource-service-brokers) finden Sie ein Beispiel hierzu. 
+In den [Beispielbrokern](https://github.com/IBM/sample-resource-service-brokers) finden Sie ein Beispiel hierzu.
 
 ## IAM-Token-Scoping für Adopter anderer Anbieter
 {: #token_scoping}

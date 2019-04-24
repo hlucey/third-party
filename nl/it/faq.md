@@ -1,8 +1,14 @@
 ---
 
 copyright:
+
   years: 2015, 2019
-lastupdated: "2019-01-30"
+
+lastupdated: "2019-02-25"
+
+keywords: IBM Cloud, different metering options, new IBM Cloud Identity, faqs 
+
+subcollection: third-party
 
 ---
 
@@ -21,7 +27,7 @@ lastupdated: "2019-01-30"
 {: #metering}
 {: faq}
 
-{{site.data.keyword.Bluemix}} supporta più modelli per aggregare l'utilizzo delle offerte. I provider dell'offerta misurano varie metriche sulle istanze fornite e le inviano al servizio di misurazione. Il servizio di classificazione aggrega l'utilizzo inviato in bucket differenti (istanza, gruppo di risorse e account) in base al modello che i provider dell'offerta scelgono. I modelli di aggregazione e di classificazione di tutte le metriche in un piano sono contenuti nei documenti di definizione di misurazione e classificazione per il piano.
+{{site.data.keyword.Bluemix}} supporta molteplici modelli per l'aggregazione dell'utilizzo dell'offerta. I provider dell'offerta misurano varie metriche sulle istanze fornite e le inviano al servizio di misurazione. Il servizio di classificazione aggrega l'utilizzo inviato in bucket differenti (istanza, gruppo di risorse e account) in base al modello che i provider dell'offerta scelgono. I modelli di aggregazione e di classificazione di tutte le metriche in un piano sono contenuti nei documenti di definizione di misurazione e classificazione per il piano.
 
 Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio di misurazione, se offri un piano a consumo.
 {: note}

@@ -1,10 +1,14 @@
 ﻿---
 
-
 copyright:
-  years: 2018, 2019
-lastupdated: "2019-02-12"
 
+  years: 2018, 2019
+
+lastupdated: "2019-02-25"
+
+keywords: access token, client ID, Access Manage page, authentication flow 
+
+subcollection: third-party
 
 ---
 

@@ -5,7 +5,11 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-01-30" 
+lastupdated: "2019-02-25" 
+
+keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
+
+subcollection: third-party
 
 ---
 
