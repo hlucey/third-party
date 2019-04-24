@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-03-28"
-
-keywords: billing service, resource management console, pricing plans
-
-subcollection: third-party
 
 ---
 
@@ -62,10 +58,10 @@ Puoi salvare il tuo avanzamento nella console di gestione delle risorse e tornar
 ## Immetti i metadati della tua offerta
 {: #offering-metadata}
 
-Nella pagina **Catalog Listing**, fornisci i valori dei metadati che sono archiviati nel catalogo {{site.data.keyword.Bluemix_notm}}. Inoltre, alcuni di questi valori devono essere esportati e archiviati nel tuo broker dei servizi dove vengono utilizzati per il provisioning e restituiti come parte della risposta di `catalog (GET)`. Utilizza questi valori come ausilio per iniziare rapidamente a sviluppare un broker dei servizi nei passi successivi.
+Nella pagina **Offering**, fornisci i valori dei metadati che sono archiviati nel catalogo {{site.data.keyword.Bluemix_notm}}. Inoltre, alcuni di questi valori devono essere esportati e archiviati nel tuo broker dei servizi dove vengono utilizzati per il provisioning e restituiti come parte della risposta di `catalog (GET)`. Utilizza questi valori come ausilio per iniziare rapidamente a sviluppare un broker dei servizi nei passi successivi.
 
-1. Dalla console di gestione delle risorse, fai clic sulla pagina **Catalog Listing** e fai clic sulla scheda **Listing Page**. **Listing Page** definisce i metadati visualizzati nel dashboard dei servizi della tua offerta {{site.data.keyword.Bluemix_notm}}. Completa tutti i valori obbligatori e fai clic su **Save**. La console di gestione delle risorse esegue una registrazione iniziale del tuo servizio presso {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). Viene visualizzata una notifica che il tuo servizio è stato registrato presso IAM. Puoi eseguire ulteriori operazioni con IAM successivamente.
-2. Dalla pagina **Catalog Listing**, fai clic sulla scheda **Settings**.
+1. Dalla console di gestione delle risorse, fai clic sulla pagina **Offering** e fai clic sulla scheda **Listing Page**. **Listing Page** definisce i metadati visualizzati nel dashboard dei servizi della tua offerta {{site.data.keyword.Bluemix_notm}}. Completa tutti i valori obbligatori e fai clic su **Save**. La console di gestione delle risorse esegue una registrazione iniziale del tuo servizio presso {{site.data.keyword.Bluemix_notm}} IAM (Identity and Access Management). Viene visualizzata una notifica che il tuo servizio è stato registrato presso IAM. Puoi eseguire ulteriori operazioni con IAM successivamente.
+2. Dalla pagina Offering, fai clic sulla scheda **Settings**.
    1. Specifica se la tua offerta consente le modifiche di piano (**Plan changes supported?**). Il valore predefinito è **No**. Se specifichi **Yes**, devi estendere il tuo Open Service Broker per supportare le modifiche di piano per le istanze di cui è stato eseguito il provisioning. Se la tua offerta supporta molti piani, e desideri che gli utenti possano modificare i piani per un'istanza di cui è stato eseguito il provisioning esistente, devi abilitare la capacità degli utenti di aggiornare la loro istanza del servizio. Per ulteriori dettagli, vedi l'endpoint `/v2/service_instances/{instance_id} PATCH` nella [API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
    2. Specifica se per il tuo servizio può essere eseguito il bind (**Bindable**). Il valore predefinito è **No**. Seleziona **Yes** se è possibile eseguire il bind del tuo servizio alle applicazioni in {{site.data.keyword.Bluemix_notm}}. Se è possibile eseguirne il bind, deve restituire le credenziali e gli endpoint API ai tuoi consumatori del servizio. Quando sviluppi un servizio di cui è possibile eseguire il bind, devi utilizzare le [operazioni di cui è possibile eseguire il bind nella API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno")
    3. Completa i campi obbligatori aggiuntivi e fai clic su **Save**.

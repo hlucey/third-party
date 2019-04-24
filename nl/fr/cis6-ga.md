@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-02-25"
-
-keywords: Service providers, Windows Media Player, limited visibility service, record demo
-
-subcollection: third-party
 
 ---
 
@@ -23,7 +19,7 @@ subcollection: third-party
 # Etape 6. Mise à disposition publique de votre service
 {: #public-releasing}
 
-Etes-vous prêt pour une diffusion en ligne ? Avez-vous testé votre service de visibilité limitée ? Le cas échéant, il est temps de se préparer pour la disponibilité générale. Les fournisseurs de services doivent enregistrer une vidéo démontrant que votre service terminé répond à toutes les exigences. La soumission à IBM s'effectue par courrier électronique. Votre démonstration est révisée par IBM avant qu'une approbation publique finale ne soit accordée. Les enregistrements sont révisés tous les mardis et une décision est rendue le jeudi suivant. Pensez donc à prévoir suffisamment de temps pour votre date de diffusion en ligne.
+Etes-vous prêts pour une diffusion en ligne ? Avez-vous testé votre service de visibilité limitée ? Le cas échéant, il est temps de se préparer pour la disponibilité générale. Les fournisseurs de services doivent enregistrer une vidéo démontrant que votre service terminé répond à toutes les exigences. La soumission à IBM s'effectue par courrier électronique. Votre démonstration est alors révisée avant qu'une approbation publique finale ne soit accordée. Les enregistrements sont révisés tous les mardis et une décision est rendue le jeudi suivant. Pensez donc à prévoir suffisamment de temps pour votre date de diffusion en ligne.
 
 Pour cette étape, vous devez disposer de l'approbation permettant de fournir un service de facturation intégrée. Si vous n'avez pas effectué le processus d'enregistrement et d'approbation initial dans Provider Workbench, consultez le [tutoriel d'initiation](/docs/third-party?topic=third-party-get-started#get-started).
 {: tip}

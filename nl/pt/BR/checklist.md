@@ -1,14 +1,8 @@
 ---
 
 copyright:
-
   years: 2018, 2019
-
-lastupdated: "2019-02-25"
-
-keywords: billing service, resource management console, Open Service Broker, end-to-end 
-
-subcollection: third-party
+lastupdated: "2019-01-30"
 
 ---
 
@@ -97,8 +91,8 @@ os usuários estejam corretamente autorizados, assegurando que os usuários do s
 |------| ----------| ------------|-----|
 | Publique o serviço no modo de visibilidade limitada. | ☐ O Open Service Broker hospedado foi registrado com êxito na página
 Implementações no console de gerenciamento de recurso. <br><br> ☐ As novas implementações foram criadas com êxito e a oferta
-publicada para uma ou mais regiões. <br><br> |  Agora que os brokers de serviço hospedados atendem à
-especificação do Open Service Broker, é possível publicar o serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte [as etapas para publicar seu serviço](/docs/third-party?topic=third-party-publish#publish). | Console de gerenciamento de recurso |
+publicada para uma ou mais regiões. <br><br> |  Agora que os brokers de serviço hospedados atendem à especificação do Open
+Service Broker, é possível publicar o serviço no catálogo do {{site.data.keyword.Bluemix_notm}}. Para obter mais informações, consulte [as etapas para publicar seu serviço](/docs/third-party?topic=third-party-publish#publish). | Console de gerenciamento de recurso |
 | Teste sua oferta. | ☐ Posso ver o serviço no catálogo. <br><br> ☐ A autenticação foi validada por meio do painel da instância de serviço. <br><br> ☐ Validei que o serviço é exibido corretamente no catálogo. <br><br> ☐ Posso selecionar um plano e criar uma instância de serviço. <br><br> ☐
 Posso excluir uma instância de serviço. <br><br> ☐ Posso conectar o serviço a outro aplicativo. <br><br> ☐ Posso desconectar o
 serviço e excluir a conexão. <br><br>  ☐ Posso gerar uma chave de serviço e excluí-la. <br><br> ☐ Eu trabalhei com meu representante IBM para validar que minha oferta suporta corretamente os terminais de ativação e desativação. <br><br> ☐ Porque a oferta tem um plano medido, testei com sucesso o envio de uso. | Agora que os brokers de serviço hospedados atendem à

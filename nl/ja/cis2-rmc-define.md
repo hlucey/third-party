@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-03-28"
-
-keywords: billing service, resource management console, pricing plans
-
-subcollection: third-party
 
 ---
 
@@ -62,10 +58,10 @@ subcollection: third-party
 ## オファリング・メタデータの入力
 {: #offering-metadata}
 
-**「カタログ・リスト (Catalog Listing)」**ページで、{{site.data.keyword.Bluemix_notm}} カタログに保管されるメタデータ値を指定します。さらに、一部の値は、エクスポートしてサービス・ブローカーに保管する必要があります。サービス・ブローカーではそれらがプロビジョニングに使用され、`カタログ (GET)` 応答の一部として戻されます。 これらの値を使用して、後のステップでサービス・ブローカーの開発を円滑に開始できます。
+**「オファリング (Offering)」**ページで、{{site.data.keyword.Bluemix_notm}} カタログに保管されるメタデータ値を指定します。 さらに、一部の値は、エクスポートしてサービス・ブローカーに保管する必要があります。サービス・ブローカーではそれらがプロビジョニングに使用され、`カタログ (GET)` 応答の一部として戻されます。 これらの値を使用して、後のステップでサービス・ブローカーの開発を円滑に開始できます。
 
-1. リソース管理コンソールから、**「カタログ・リスト (Catalog Listing)」**ページをクリックし、**「リスト・ページ (Listing Page)」**タブをクリックします。**「リスト・ページ (Listing Page)」**では、{{site.data.keyword.Bluemix_notm}} オファリングのサービス・ダッシュボードに表示されるメタデータを定義します。 すべての必須値を入力して**「保存」**をクリックします。 リソース管理コンソールは、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) へのサービスの初期登録を行います。 サービスが IAM に登録されたことを示す通知が表示されます。 IAM では、後でさらに多くの操作を実行できます。
-2. **「カタログ・リスト (Catalog Listing)」**ページから、**「設定」**タブをクリックします。
+1. リソース管理コンソールから、**「オファリング (Offering)」**ページをクリックし、**「リスト・ページ (Listing Page)」**タブをクリックします。 **「リスト・ページ (Listing Page)」**では、{{site.data.keyword.Bluemix_notm}} オファリングのサービス・ダッシュボードに表示されるメタデータを定義します。 すべての必須値を入力して**「保存」**をクリックします。 リソース管理コンソールは、{{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM) へのサービスの初期登録を行います。 サービスが IAM に登録されたことを示す通知が表示されます。 IAM では、後でさらに多くの操作を実行できます。
+2. 「オファリング (Offering)」ページから、**「設定」**タブをクリックします。
    1. オファリングで**「プラン変更のサポート (Plan changes supported?)」**を許可するかどうかを指定します。 デフォルトは**「いいえ」**です。**「はい」**を指定する場合は、プロビジョン済みインスタンスのプラン変更をサポートするように Open Service Broker を拡張する必要があります。 オファリングで多数のプランがサポートされていて、ユーザーが既存のプロビジョン済みインスタンスのプランを変更する場合は、ユーザーが自分のサービス・インスタンスを更新できるようにする必要があります。 詳しくは、[Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") で `/v2/service_instances/{instance_id} PATCH` のエンドポイントを参照してください。
    2. サービスを**「バインド可能」**にするかどうかを指定します。 デフォルトは**「いいえ」**です。サービスを {{site.data.keyword.Bluemix_notm}} 内のアプリケーションにバインドできる場合は、**「はい」**を選択します。 バインド可能の場合は、API エンドポイントと資格情報をサービス・コンシューマーに戻せなければなりません。 バインド可能なサービスを開発する際には、[Open Service Broker API v2.12 のバインド可能な操作](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を使用してください。
    3. その他の必須フィールドを入力し、**「保存」**をクリックします。

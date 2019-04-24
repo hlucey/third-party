@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-03-28"
-
-keywords: billing service, resource management console, pricing plans
-
-subcollection: third-party
 
 ---
 
@@ -62,11 +58,11 @@ Puede guardar el progreso en la consola de gestión de recursos y volver más ta
 ## Especifique los metadatos de la oferta
 {: #offering-metadata}
 
-En la página **Listado del catálogo**, especifique los valores de metadatos que están almacenados en el catálogo de {{site.data.keyword.Bluemix_notm}}. Además, algunos de estos valores se tienen que exportar y almacenar en el intermediario de servicio, donde se utilizan para el suministro y se devuelven como parte de la respuesta de `catalog (GET)`. Utilice estos valores para ayudar a iniciar el desarrollo de un intermediario de servicio en pasos posteriores.
+En la página **Oferta**, especifique los valores de metadatos que están almacenados en el catálogo de {{site.data.keyword.Bluemix_notm}}. Además, algunos de estos valores se tienen que exportar y almacenar en el intermediario de servicio, donde se utilizan para el suministro y se devuelven como parte de la respuesta de `catalog (GET)`. Utilice estos valores para ayudar a iniciar el desarrollo de un intermediario de servicio en pasos posteriores.
 
-1. En la consola de gestión de recursos, pulse la página **Listado del catálogo** y pulse el separador **Página de listado**. La **Página de listado** define
+1. En la consola de gestión de recursos, pulse la página **Oferta** y pulse el separador **Página de listado**. La **Página de listado** define
 los metadatos que se muestran en el panel de control del servicio de la oferta de {{site.data.keyword.Bluemix_notm}}. Complete todos los valores necesarios y pulse **Guardar**. La consola de gestión de recursos hace un registro inicial de su servicio con {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Se mostrará una notificación que indica que el servicio se ha registrado con IAM. Más adelante volverá a trabajar con IAM.
-2. En la página **Listado del catálogo**, pulse el separador **Valores**.
+2. En la página Oferta, pulse el separador **Valores**.
    1. Especifique si su oferta **permite cambios de plan**. El valor predeterminado es **No**. Si especifica **Sí**, debe ampliar Open Service Broker para que dé soporte a cambios de plan para las instancias suministradas. Si la oferta da soporte a varios planes y desea que los usuarios cambien sus planes para una instancia suministrada, deberá habilitar la capacidad de los usuarios para actualizar su instancia de servicio. Para ver más detalles, consulte el punto final `/v2/service_instances/{instance_id} PATCH` en la [API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
    2. Especifique si el servicio se puede **Enlazar**. El valor predeterminado es **No**. Seleccione **Sí** si el servicio se puede enlazar a aplicaciones en {{site.data.keyword.Bluemix_notm}}. Si se puede enlazar, debe devolver los puntos finales de API y las credenciales a los consumidores del servicio. Cuando se desarrolla un servicio enlazable, se deben utilizar las [operaciones enlazables en la API de Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window}![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo")
    3. Complete los campos necesarios adicionales y pulse **Guardar**.

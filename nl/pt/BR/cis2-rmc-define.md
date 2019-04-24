@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-03-28"
-
-keywords: billing service, resource management console, pricing plans
-
-subcollection: third-party
 
 ---
 
@@ -66,10 +62,10 @@ Para começar, efetue login e registre sua oferta.
 ## Inserir seus metadados da oferta
 {: #offering-metadata}
 
-Na página **Listagem de catálogos**, forneça os valores de metadados que estão armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Além disso, alguns desses valores precisam ser exportados e armazenados em seu broker de serviço no qual eles são usados para fornecimento e retornados como parte da Resposta `catalog (GET)`. Use esses valores para ajudar a iniciar o desenvolvimento de um broker de serviço em etapas posteriores.
+Na página **Oferta**, forneça os valores de metadados que são armazenados no catálogo do {{site.data.keyword.Bluemix_notm}}. Além disso, alguns desses valores precisam ser exportados e armazenados em seu broker de serviço no qual eles são usados para fornecimento e retornados como parte da Resposta `catalog (GET)`. Use esses valores para ajudar a iniciar o desenvolvimento de um broker de serviço em etapas posteriores.
 
-1. No console de gerenciamento de recurso, clique na página ** Listagem de catálogos** e clique na guia **Página de listagem**. A **Página de listagem** define os metadados que são exibidos no painel de serviço de sua oferta do {{site.data.keyword.Bluemix_notm}}. Conclua todos os valores necessários e clique em **Salvar**. O console de gerenciamento de recursos faz um registro inicial de seu serviço com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Uma notificação de que seu serviço foi registrado com o IAM é exibida. É possível fazer mais com o IAM mais tarde.
-2. Na página **Listagem de catálogos**, clique na guia **Configurações**.
+1. No console de gerenciamento de recurso, clique na página **Oferta** e clique na guia **Página de listagem**. A **Página de listagem** define os metadados que são exibidos no painel de serviço de sua oferta do {{site.data.keyword.Bluemix_notm}}. Conclua todos os valores necessários e clique em **Salvar**. O console de gerenciamento de recursos faz um registro inicial de seu serviço com o {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Uma notificação de que seu serviço foi registrado com o IAM é exibida. É possível fazer mais com o IAM mais tarde.
+2. Na página Oferta, clique na guia **Configurações**.
    1. Especifique se sua oferta permite **Mudanças de plano suportadas?** O padrão é **Não**. Se você especificar **Sim**, será necessário estender o Open Service Broker para suportar mudanças de plano para instâncias provisionadas. Se a sua oferta suportar muitos planos e você desejar que os usuários mudem os planos para uma instância provisionada existente, será necessário ativar o recurso para que os usuários atualizem sua instância de serviço. Para obter mais detalhes, veja o terminal `/v2/service_instances/{instance_id} PATCH` no [Open Service Broker API v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
    2. Especifique se seu serviço é  ** Bindable **. O padrão é **Não**. Selecione **Sim** se o seu serviço puder ser ligado a aplicativos no {{site.data.keyword.Bluemix_notm}}. Se ele for de ligação, deverá retornar os terminais e as credenciais da API para seus consumidores de serviço. Quando você desenvolve um serviço de ligação, deve-se usar as [operações de ligação na API do Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo")
    3. Preencha os campos obrigatórios adicionais e clique em **Salvar**.

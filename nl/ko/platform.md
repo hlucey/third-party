@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud platform, integrated billing services, lifecycle of IBM Cloud resources, provisioning layer 
-
-subcollection: third-party
 
 ---
 
@@ -91,9 +87,9 @@ IAM(Identity Access Management)을 사용하면 안전하게 사용자를 인증
 
 측정량 기반 플랜을 제공하는 모든 통합 청구 서비스는 {{site.data.keyword.Bluemix_notm}} 측정 서비스를 사용하여 사용량 데이터를 보고해야 합니다.
 
-측정량 기반 플랜을 제공하는 경우 측정 서비스 API를 사용하여 시간별 사용량 제출을 자동화해야 합니다.
+측정량 기반 플랜을 제공하는 경우 측정 서비스 API를 사용하여 시간별 사용량 제출을 자동화해야 합니다. 
 
-측정에 대한 자세한 정보는 [측정 통합](/docs/third-party?topic=third-party-meteringintera#meteringintera)을 참조하십시오. 측정된 사용량 제출에 대한 자세한 정보는 [측정량 기반 플랜을 위한 사용량 제출](/docs/third-party?topic=third-party-submitusage#submitusage)을 참조하십시오.
+측정에 대한 자세한 정보는 [측정 통합](/docs/third-party?topic=third-party-meteringintera#meteringintera)을 참조하십시오. 측정된 사용량 제출에 대한 자세한 정보는 [측정량 기반 플랜을 위한 사용량 제출](/docs/third-party?topic=third-party-submitusage#submitusage)을 참조하십시오. 
 
 ## 프로비저닝 시나리오: 모두 함께 가져오기
 {: #provision2}

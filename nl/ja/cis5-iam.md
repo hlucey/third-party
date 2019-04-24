@@ -3,7 +3,7 @@
 
 copyright:
   years: 2018, 2019
-lastupdated: "2019-01-04"
+lastupdated: "2019-02-12"
 
 
 ---
@@ -23,9 +23,9 @@ lastupdated: "2019-01-04"
 {:shortdesc}
 
 ## 始める前に
-{: #pre-reqs}
+{: #iam-pre-reqs}
 
-[入門チュートリアル](/docs/third-party/index.html)を完了し、統合請求サービスの提供が承認されていることを確認してください。
+[入門チュートリアル](/docs/third-party?topic=third-party-get-started#get-started)を完了し、統合請求サービスの提供が承認されていることを確認してください。
 
 ## IAM リダイレクト URI の導出
 {: #redirect-uri}
@@ -89,7 +89,7 @@ Content-Type: application/json
 **認証 - ステップ 2:** アクセス・トークン呼び出しのためのコードの交換
 
 ### POST <token_endpoint>
-{: #post}
+{: #token-post}
 
 #### ヘッダー:
 {: #headers1}
@@ -151,6 +151,7 @@ curl -k -X POST \
 {: #iam_token_using_api_key}
 
 ### POST /identity/token
+{: #post}
 
 #### ヘッダー:
 {: #headers2}
@@ -258,7 +259,7 @@ curl -X POST \
   https://iam.cloud.ibm.com/v2/authz
 ```
 
-次のサンプル・ブローカーにある例を参照してください: https://github.com/IBM/sample-resource-service-brokers
+[サンプル・ブローカー](https://github.com/IBM/sample-resource-service-brokers)の例を参照してください。
 
 ## サード・パーティー・アダプターの IAM トークンのスコープ
 {: #token_scoping}
@@ -301,6 +302,6 @@ curl -X POST \
 これはすべての使用法 (`user, serviceId, crn`) に適用され、すべての `subject.attributes` にスコープが必要です。
 
 ## 次のステップ
-{: #next-steps}
+{: #cis5-test}
 
-次に、すべての事項をまとめます。 リソース管理コンソールに戻り、限定表示モードでサービスを公開して、カタログでオファリングを確認します。 詳しくは、[サービスの公開およびテスト](/docs/third-party/cis4-rmc-publish.html)を参照してください。
+次に、すべての事項をまとめます。 リソース管理コンソールに戻り、限定表示モードでサービスを公開して、カタログでオファリングを確認します。 詳しくは、[サービスの公開およびテスト](/docs/third-party?topic=third-party-step5-pubtest#step5-pubtest)を参照してください。

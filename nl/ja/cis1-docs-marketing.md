@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-02-25"
-
-keywords: IBM Provider workbench, marketing announcement, billing service
-
-subcollection: third-party
 
 ---
 

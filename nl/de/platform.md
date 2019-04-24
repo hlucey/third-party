@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-02-25"
-
-keywords: IBM Cloud platform, integrated billing services, lifecycle of IBM Cloud resources, provisioning layer 
-
-subcollection: third-party
 
 ---
 
@@ -63,7 +59,7 @@ Der {{site.data.keyword.Bluemix_notm}}-Katalog dient zur Speicherung der Angebot
    * Servicebeschreibung: Die Beschreibung der Ressource, die angezeigt wird, wenn Sie den Mauszeiger über das Ressourcensymbol in der Benutzerschnittstelle des {{site.data.keyword.Bluemix_notm}}-Katalogs bewegen. Sie können für die Beschreibung einen einzelnen Satz oder Ausdruck hinzufügen.
    * Detaillierte Servicebeschreibung: Der erste Abschnitt, der auf der Kataloglistenseite aufgeführt wird. Ziehen Sie als detaillierte Beschreibung mindestens zwei Sätze in Betracht.
    * Dokumentations-URL: Ein Link zu Ihrer {{site.data.keyword.Bluemix_notm}}-Dokumentation. Diese Informationen werden in Provider Workbench (PWB) verfasst und Ihr URL-Wert wird von PWB generiert.
-   * Bedingungs-URL: Ein Link zu den Bedingungen für die Nutzung Ihres Service. Beachten Sie dabei, dass zur Einhaltung der DSGVO-Vorgaben kein Link zu den vorhandenen Bedingungen für Drittanbieterservices hergestellt werden darf. Stattdessen müssen Sie eine eindeutige Seite für einen integrierten Abrechnungsservice bereitstellen.
+   * Bedingungs-URL: Ein Link zu den Bedingungen für die Nutzung Ihres Service. Beachten Sie dabei, dass für GDPR-Zwecke kein Link zu den vorhandenen Bedingungen für Drittanbieterservices hergestellt werden darf. Stattdessen müssen Sie eine eindeutige Seite für einen integrierten Abrechnungsservice bereitstellen.
    * Anweisungs-URL: Ähnlich wie bei der Dokumentations-URL wird hier auf Ihre {{site.data.keyword.Bluemix_notm}}-Dokumentation verwiesen. Die Anweisungs-URL überführt Ihre Dokumentation jedoch dynamisch auf die Registerkarte 'Einführung' Ihres Service-Dashboards.
    * Kategorie: Die Auswahl der verfügbaren {{site.data.keyword.Bluemix_notm}}-Kategorien, unter denen Ihr Service in den Katalog aufgenommen wird.
    * Listenpunkte: Kurze beschreibende Highlights zu Ihrem Service.
@@ -91,9 +87,9 @@ Wenn für einen Service ein Plan mit Nutzungsmessung angeboten wird, werden die 
 
 Alle integrierten Abrechnungsservices mit einem Plan mit Nutzungsmessung müssen den {{site.data.keyword.Bluemix_notm}}-Messservice verwenden, um die Nutzungsdaten zu melden.
 
-Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten.
+Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messservice-API automatisieren, wenn Sie einen Plan mit Nutzungsmessung anbieten. 
 
-Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage).
+Weitere Informationen zu Messungen finden Sie in [Messungsintegration](/docs/third-party?topic=third-party-meteringintera#meteringintera). Weitere Informationen zur Übermittlung der gemessenen Nutzungsdaten finden Sie in [Nutzungsdaten für Pläne mit Nutzungsmessung übermitteln](/docs/third-party?topic=third-party-submitusage#submitusage). 
 
 ## Bereitstellungsszenario: Zusammenfassung
 {: #provision2}

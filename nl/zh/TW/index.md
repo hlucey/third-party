@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2015, 2019
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-02-25"
-
-keywords: Next steps, IBM Provider workbench, third-party offering, offering type
-
-subcollection: third-party
 
 ---
 

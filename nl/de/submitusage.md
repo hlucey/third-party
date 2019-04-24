@@ -5,11 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
-
-keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
-
-subcollection: third-party
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -53,7 +49,7 @@ In den folgenden Schritten wird der Prozess zur Übermittlung von Nutzungsdaten 
 Beachten Sie bei Verwendung des {{site.data.keyword.Bluemix_notm}}-Messservice zur Übermittlung der Ressourcennutzungsdaten die folgenden Richtlinien:
 
 * Der Start- und der Endzeitpunkt legen den Zeitbereich fest, innerhalb dessen die Messungen erfasst werden. Die Zeitangaben sind nicht von der Zeit abhängig, zu der der Nutzungsdatensatz an die Messungs-APIs übermittelt wurde.
-* Nutzungsdatensätze werden als Fakten eingestuft. Aus diesem Grund dürfen Nutzungsdatensätze nach ihrer Erstellung nicht mehr aktualisiert werden. Eine Position wird angegeben, wenn Sie die Erstellung eines Nutzungsdatensatzes erfolgreich abgeschlossen haben. Wird ein Fehlercode zurückgegeben, dann informieren Sie sich über die [Statuscodes und erforderlichen Aktionen](/docs/third-party?topic=third-party-submitusage#usage-records), die möglicherweise ausgeführt werden müssen.
+* Nutzungsdatensätze werden als Fakten eingestuft. Aus diesem Grund dürfen Nutzungsdatensätze nach ihrer Erstellung nicht mehr aktualisiert werden. Eine Position wird angegeben, wenn Sie die Erstellung eines Nutzungsdatensatzes erfolgreich abgeschlossen haben. Wird ein Fehlercode zurückgegeben, dann informieren Sie sich über die [Aktionen](/docs/third-party?topic=third-party-submitusage#actions), die möglicherweise ausgeführt werden müssen.
 * Ein Nutzungsdatensatz wird durch die Signatur `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end` eindeutig identifiziert. Wenn ein Nutzungsdatensatz verarbeitet wird, dann werden alle anderen Nutzungsdatensätze mit derselben Signatur als Duplikate zurückgewiesen.
 * Die Interaktionen mit dem Messservice dürfen nicht mit anderen Services kombiniert werden. Die Anforderungen müssen auch dann einzeln verarbeitet werden, wenn die Messung mit der Bereitstellung der Instanz beginnt und mit der Aufhebung der Bereitstellung endet.
 * Die Ressourcennutzungsdaten müssen in einem Intervall von 2 bis 24 Stunden an den Messservice übermittelt werden. Die Häufigkeit der Übermittlung Ihrer Nutzungsdaten ist davon abhängig, wie oft die Nutzungsmetriken geändert werden.

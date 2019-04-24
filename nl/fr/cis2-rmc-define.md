@@ -1,14 +1,10 @@
 ---
 
+
 copyright:
-
   years: 2018, 2019 
+lastupdated: "2019-01-30"
 
-lastupdated: "2019-03-28"
-
-keywords: billing service, resource management console, pricing plans
-
-subcollection: third-party
 
 ---
 
@@ -62,10 +58,10 @@ Vous pouvez enregistrer votre progression dans la console de gestion des ressour
 ## Saisie de vos métadonnées d'offre
 {: #offering-metadata}
 
-Sur la page **Catalog Listing**, indiquez les valeurs de métadonnées stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. De plus, certaines de ces valeurs doivent être exportées et stockées dans votre courtier de services où elles sont utilisées pour la mise à disposition et renvoyées comme partie de la réponse `catalog (GET)`. En utilisant ces valeurs, vous pouvez développer plus rapidement un courtier de services dans une procédure ultérieure.
+Sur la page **Offering**, indiquez les valeurs de métadonnées stockées dans le catalogue {{site.data.keyword.Bluemix_notm}}. De plus, certaines de ces valeurs doivent être exportées et stockées dans votre courtier de services où elles sont utilisées pour la mise à disposition et renvoyées comme partie de la réponse `catalog (GET)`. En utilisant ces valeurs, vous pouvez développer plus rapidement un courtier de services dans une procédure ultérieure.
 
-1. Dans la console de gestion des ressources, cliquez sur la page **Catalog Listing** puis sur l'onglet **Listing Page**. ****Dans cet onglet, vous pouvez définir les métadonnées affichées dans votre tableau de bord de services de l'offre {{site.data.keyword.Bluemix_notm}}. Renseignez toutes les valeurs requises puis cliquez sur **Save**. La console de gestion des ressources effectue un enregistrement initial de votre service dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Une notification indiquant que votre service a été enregistré avec IAM s'affiche. Vous pouvez effectuer des actions supplémentaires avec IAM ultérieurement.
-2. Sur la page **Catalog Listing**, cliquez sur l'onglet **Settings**.
+1. Dans la console de gestion des ressources, cliquez sur la page **Offering** puis sur l'onglet **Listing Page**. ****Dans cet onglet, vous pouvez définir les métadonnées affichées dans votre tableau de bord de services de l'offre {{site.data.keyword.Bluemix_notm}}. Renseignez toutes les valeurs requises puis cliquez sur **Save**. La console de gestion des ressources effectue un enregistrement initial de votre service dans {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). Une notification indiquant que votre service a été enregistré avec IAM s'affiche. Vous pouvez effectuer des actions supplémentaires avec IAM ultérieurement.
+2. Sur la page Offering, cliquez sur l'onglet **Settings**.
    1. Activez ou désactivez l'option **Plan changes supported?** pour votre offre. La valeur par défaut est **No**. Si vous indiquez **Yes**, vous devez étendre votre courtier OSB pour prendre en charge des modifications de plan pour les instances mises à disposition. Si votre offre prend en charge plusieurs plans et que vous souhaitez que les utilisateurs puissent en changer pour une instance mise à disposition existante, vous devez faire en sorte que ces derniers puissent mettre à jour leur instance de service. Pour plus de détails, voir le noeud final `/v2/service_instances/{instance_id} PATCH` dans [l'API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#updating-a-service-instance){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
    2. Activez ou désactivez l'option **Bindable** pour votre service. La valeur par défaut est **No**. Sélectionnez **Yes** si votre service peut être lié à des applications dans {{site.data.keyword.Bluemix_notm}}. Le cas échéant, il doit renvoyer des données d'identification et des noeuds finaux d'API à vos consommateurs de service. Lorsque vous développez un service pouvant être lié, vous devez utiliser les [opérations pouvant être liées dans l'API Open Service Broker v2.12](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md#binding){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe")
    3. Renseignez toutes les zones requises supplémentaires puis cliquez sur **Save**.

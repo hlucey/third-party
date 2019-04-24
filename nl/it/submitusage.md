@@ -5,11 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
-
-keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
-
-subcollection: third-party
+lastupdated: "2019-01-30" 
 
 ---
 
@@ -53,7 +49,7 @@ Riesamina i seguenti prerequisiti per abilitare la misurazione per il tuo serviz
 Fai riferimento alle seguenti linee guida quando utilizzi il servizio di misurazione {{site.data.keyword.Bluemix_notm}} per inoltrare i dati di utilizzo delle risorse:
 
 * L'ora di inizio e l'ora di fine rappresentano l'intervallo di tempo durante il quale le misure sono state raccolte. Le ore non dipendono dall'ora in cui il record di utilizzo viene inoltrato alle API di misurazione.
-* I record di utilizzo sono fatti. Non aggiornare il record di utilizzo dopo averlo creato. Un'ubicazione viene specificata quando crei correttamente un record di utilizzo. Se viene restituito un codice di errore, vedi [i codici di stato e le azioni richieste](/docs/third-party?topic=third-party-submitusage#usage-records) che potresti dover eseguire.
+* I record di utilizzo sono fatti. Non aggiornare il record di utilizzo dopo averlo creato. Un'ubicazione viene specificata quando crei correttamente un record di utilizzo. Se viene restituito un codice di errore, vedi le [azioni](/docs/third-party?topic=third-party-submitusage#actions) che potresti dover eseguire.
 * Un record di utilizzo viene identificato in modo univoco dalla firma `account_id/resource_group_id/resource_instance_id/consumer_id/plan_id/region/start/end`. Quando un record di utilizzo viene elaborato, qualsiasi altro record di utilizzo con la stessa firma viene rifiutato come un duplicato.
 * Non combinare l'interazione con il servizio di misurazione con altri servizi. Le richieste devono essere gestite singolarmente anche se la misurazione inizia e termina con il provisioning e l'annullamento del provisioning dell'istanza.
 * I dati di utilizzo delle risorse devono essere inoltrati al servizio di misurazione una volta ogni 2 - 24 ore. La frequenza con cui inoltri i dati di utilizzo dipende dalla frequenza con cui vengono modificate le tue metriche di utilizzo.
