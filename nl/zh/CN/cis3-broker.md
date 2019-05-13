@@ -157,7 +157,7 @@ services :
                         termsUrl            : baseMetadataUrl + "terms.html"
                     },
                     name             : SERVICE_NAME,
-                    // TODO - 确保此值对于服务是准确的。需要下面的 PATCH /v2/service_instances/:instance_id（如果为 true）
+                    // TODO - 确保此值对于服务是准确的。需要 PATCH /v2/service_instances/:instance_id（如果为 true）
                     plan_updateable  : true,
                     tags             : ["lite", "tag1a", "tag1b"],
                     plans            :

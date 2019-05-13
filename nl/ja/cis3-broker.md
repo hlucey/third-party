@@ -157,7 +157,7 @@ services :
                         termsUrl            : baseMetadataUrl + "terms.html"
                     },
                     name             : SERVICE_NAME,
-                    // TODO - Ensure this value is accurate for your service. Requires PATCH of /v2/service_instances/:instance_id below if true
+                    // TODO - Ensure this value is accurate for your service. Requires PATCH of /v2/service_instances/:instance_id if true
                     plan_updateable  : true,
                     tags             : ["lite", "tag1a", "tag1b"],
                     plans            :
@@ -237,7 +237,7 @@ OSB API は、操作の同期モードと非同期モードの両方をサポー
 
 {{site.data.keyword.Bluemix_notm}} にオンボードする場合、少なくとも 1 つの OSB ブローカーを実装する必要があります。 デプロイメント戦略およびサービスでサポートするロケーションに応じて、複数のブローカーを持つことができます。 リソース管理コンソール・ツール内で、サービス/プラン/ロケーションのタプルと、そのタプルの操作を処理するブローカーとのマッピングを設定しました。 一般的な選択肢としては、サービスのすべてのロケーションを処理する単一ブローカーを定義するか、ロケーションごとにブローカーを定義します。この選択は、サービス・プロバイダーに委ねられます。
 
-選択可能なロケーションのリストについては、[IBM グローバル・カタログ・ロケーション](https://globalcatalog.cloud.ibm.com//search?q=kind:geography){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。 サービスでグローバル・カタログに追加のロケーションを定義する必要がある場合は、{{site.data.keyword.Bluemix_notm}} オンボード・チームに相談してください。
+選択可能なロケーションのリストについては、[IBM グローバル・カタログ・ロケーション](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を参照してください。 サービスでグローバル・カタログに追加のロケーションを定義する必要がある場合は、{{site.data.keyword.Bluemix_notm}} オンボード・チームに相談してください。
 
 
 ## ブローカーのホスト
@@ -248,8 +248,6 @@ OSB API は、操作の同期モードと非同期モードの両方をサポー
 IBM 外部でブローカーをホストするには、以下のセキュリティー・ガイドラインに適合することを確認してください。
 - Transport Layer Security (TLS) プロトコル・バージョン 1.2 に従う必要があります。
 - パブリック・インターネットでアクセスできる有効な HTTPS エンドポイントでホストされる必要があります。
-
-{{site.data.keyword.Bluemix_notm}} でホストする場合は、以下に、コンテナー (Kubernetes) を使用したアプリケーションの作成に関する情報があります。[Internal Adopters - Usage information](/docs/containers?topic=containers-cs_internal#cs_internal)
 
 次のステップを完了するには、サービス・ブローカーのホストされるロケーションが必要になります。 アプリケーションに関連付けられた URL と資格情報を準備してから、次のステップに進んでください。
 {: tip}
