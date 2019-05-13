@@ -158,7 +158,7 @@ services :
                         termsUrl            : baseMetadataUrl + "terms.html"
                     },
                     name             : SERVICE_NAME,
-                    // TODO - Ensure this value is accurate for your service. Requires PATCH of /v2/service_instances/:instance_id below if true
+                    // TODO - Ensure this value is accurate for your service. Requer PATCH de /v2/service_instances/:instance_id se true
                     plan_updateable  : true,
                     tags             : ["lite", "tag1a", "tag1b"],
                     plans            :
