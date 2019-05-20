@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Getting started tutorial
 {: #get-started}
 
 In this tutorial, we introduce the IBM Provider workbench and walk through the process of registering your third-party offering as an integrated billing service.
-{:shortdesc}
+{: shortdesc}
 
 You can deliver a third-party offering in {{site.data.keyword.Bluemix}} either as an integrated billing service or a referral service. This tutorial focuses on the integrated billing service option. To learn more about the referral service option, see [Third-party offering types](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ You can deliver a third-party offering in {{site.data.keyword.Bluemix}} either a
 ## Step 1. Register your offering
 {: #step1}
 
-Register your offering in the [Provider workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+Register your offering in the [Provider workbench](https://www.ibm.com/marketplace/workbench/){: external}.
 
 1. From the Provider workbench details page, click **Onboard a new offering**, and complete the registration form.
 2. Check your inbox for an email that confirms your registration.
