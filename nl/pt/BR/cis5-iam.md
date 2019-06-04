@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -80,14 +80,17 @@ Content-Type: application/json
 Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e novamente se o `authorization_endpoint` falhar. Agora você é capaz de armazenar em cache o valor `authorization_endpoint` por um curto período de tempo e atualizar após a expiração do cache ou a localização de um erro.
 
 
-**Autenticação - Etapa 1:** quando um usuário navegar para o seu `dashboard_url`, redirecione o navegador para `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
+**Autenticação - Etapa 1:** quando seu usuário navega para seu `dashboard_url`, redirecione o navegador para `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 
--> o prompt de login é mostrado
+* Um prompt de login é mostrado. Se o usuário estiver com login efetuado, um redirecionamento retornará imediatamente à URL de redirecionamento, fornecendo um código e um valor de estado. Se o
+usuário não estiver com login efetuado, receberá um prompt de login e um redirecionamento ocorrerá
+de volta para a URL de redirecionamento fornecendo um código e um valor de estado.
 
--> O usuário insere credenciais
+* O usuário insere credenciais.
 
--> retorno de chamada do navegador para redirecionar o URI fornecendo um parâmetro de resposta "code" e um valor "state"
+* O navegador faz um retorno de chamada para redirecionar o URI para fornecer um parâmetro de
+resposta "code" e um valor "state".
 
 
 **Autenticação - Etapa 2:** troque o código para uma chamada de token de acesso
