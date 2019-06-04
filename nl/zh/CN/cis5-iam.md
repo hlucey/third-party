@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -80,14 +80,14 @@ Content-Type: application/json
 此请求可在应用程序启动时执行一次，并且如果 `authorization_endpoint` 失败，可再次执行此请求。现在您能够对 `authorization_endpoint` 值进行短时间高速缓存，并在高速缓存到期或遇到错误后进行刷新。
 
 
-**认证 - 步骤 1：**用户浏览到 `dashboard_url` 时，将浏览器重定向到 `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
+**认证 - 步骤 1：**用户导航至 `dashboard_url` 时，将浏览器重定向到 `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 
--> 显示登录提示
+* 这将显示登录提示。如果用户已登录，那么重定向会立即返回到重定向 URL，其中提供了代码和状态值。如果用户未登录，那么用户会收到登录提示，并且重定向会返回到重定向 URL，其中提供了代码和状态值。
 
--> 用户输入凭证
+* 用户输入凭证。
 
--> 浏览器回调到重定向 URI，此 URI 提供“代码”响应参数和“状态”值
+* 浏览器执行回调以重定向 URI，从而提供“code”响应参数和“state”值。
 
 
 **认证 - 步骤 2：**用代码交换访问令牌调用

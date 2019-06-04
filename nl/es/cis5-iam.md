@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -83,11 +83,11 @@ Esta solicitud se puede realizar una vez cuando se inicia la aplicación y de nu
 **Autenticación - Paso 1:** cuando un usuario vaya a su `dashboard_url`, redirija el navegador a `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 
--> aparece la solicitud de inicio de sesión
+* Se muestra un indicador de inicio de sesión. Si el usuario ha iniciado sesión, se redirige de inmediato al URL que proporciona un código y un valor de estado. Si el usuario no ha iniciado sesión, el usuario recibe un indicador de inicio de sesión y se redirige al URL que proporciona un código y un valor de estado.
 
--> el usuario especifica las credenciales
+* El usuario especifica credenciales.
 
--> devolución de llamada del navegador para redirigir al URI proporcionando un parámetro de respuesta "code" y un valor "state"
+* El navegador realiza una llamada para redirigir el URI para que proporcione un parámetro de respuesta "code" y un valor "state".
 
 
 **Autenticación - Paso 2:** intercambie el código para una llamada de señal de acceso

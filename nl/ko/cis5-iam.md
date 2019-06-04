@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -83,11 +83,11 @@ Content-Type: application/json
 **인증 - 1단계:** 사용자가 `dashboard_url`을 탐색할 때 브라우저를 다음으로 경로 재지정하십시오. `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 
--> 로그인 프롬프트가 표시됩니다.
+* 로그인 프롬프트가 표시됩니다. 사용자가 로그인된 경우에는 경로 재지정 URL로의 경로 재지정이 즉시 이뤄지며 code 및 state 값을 제공합니다. 사용자가 로그인되지 않은 경우에는 사용자에게 로그인 프롬프트가 표시되며, 경로 재지정 URL로 경로 재지정되어 code 및 state 값을 제공합니다. 
 
--> 사용자가 인증 정보를 입력합니다.
+* 사용자가 인증 정보를 입력합니다.
 
--> 브라우저에서 "code" 응답 매개변수 및 "state" 값을 제공하는 URI를 경로 재지정하도록 콜백합니다.
+* 브라우저에서 URI의 경로를 재지정하도록 콜백을 수행하여 "code" 응답 매개변수 및 "state" 값을 제공합니다.
 
 
 **인증 - 2단계:** 다음을 호출하는 액세스 토큰용 코드 교환
