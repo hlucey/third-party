@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -77,7 +77,7 @@ Note that the quantity in the dashboard in each of the following examples is bef
 #### Standard Add
 {: #standard-add}
 
-Calculate the usages for the entire month.
+The following table provides information about how to calculate the usages for the entire month.
 
 Formula: ADD(usages)
 
@@ -93,7 +93,7 @@ Formula: ADD(usages)
 #### Standard Average
 {: #standard-average}
 
-Calculate the average of the usages for the entire month. Note that submitting a zero usage also counts toward the average.
+The following table provides information about how to calculate the average of the usages for the entire month. Note that submitting a zero usage also counts toward the average.
 
 Formula: AVG(usages)
 
@@ -109,7 +109,7 @@ Formula: AVG(usages)
 #### Standard Max
 {: #standard-max}
 
-Calculate the maximum of the usages for the entire month.
+The following table provides information about how to calculate the maximum of the usages for the entire month.
 
 Formula: MAX(usages)
 
@@ -131,7 +131,7 @@ Formula: Summation(daily average) / Number of days passed in billing period
 
 Note that the quantity might change throughout the month, but what is rated is the average usage per day.
 
-Given a 30-day month:
+Given a 30-day month, see the following table to calculate the daily proration average:
 
 | Time               | Usage Sent In    | Daily Average | Calculation                            | Quantity in Dashboard*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -154,7 +154,7 @@ Formula: Summation(daily max) / number of days passed in billing period
 
 Note that the quantity might change throughout the month, but what is rated is the maximum usage per day.
 
-Given a 30-day month:
+Given a 30-day month, see the following table to calculate the maximum usage per day and monthly average:
 
 | Time             | Usage Sent In  | Daily Max | Calculation                    | Quantity in Dashboard* |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|
