@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ You're required to automate hourly usage submission by using the metering servic
 ## Submitting usage records
 {: #usage-records}
 
-Usage records are the smallest entities that contribute to the aggregated values of the metrics. A usage record is constructed by using the following fields:
+Usage records are the smallest entities that contribute to the aggregated values of the metrics. The following table provides information about the fields used to construct a usage record:
 
 | Name | Description                                           |
 | ------ | ---------------------------------------------------- |
