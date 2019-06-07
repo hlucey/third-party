@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -77,7 +77,7 @@ Beachten Sie, dass die im Dashboard vorhandene Menge in den folgenden Beispielen
 #### Standardmäßige Hinzufügung
 {: #standard-add}
 
-Berechnen Sie die Nutzungsdaten für den gesamten Monat.
+Die folgende Tabelle enthält Informationen zur Berechnung der Nutzung für den gesamten Monat. 
 
 Formel: ADD(usages)
 
@@ -93,7 +93,7 @@ Formel: ADD(usages)
 #### Standardmäßiger Durchschnitt
 {: #standard-average}
 
-Berechnen Sie den Durchschnitt der Nutzungsdaten für den gesamten Monat. Beachten Sie hierbei, dass die Übermittlung von Nullnutzungsdaten ebenfalls bei der Berechnung des Durchschnitts berücksichtigt wird.
+Die folgende Tabelle enthält Informationen zur Berechnung der durchschnittlichen Nutzung für den gesamten Monat. Beachten Sie hierbei, dass die Übermittlung von Nullnutzungsdaten ebenfalls bei der Berechnung des Durchschnitts berücksichtigt wird.
 
 Formel: AVG(usages)
 
@@ -109,7 +109,7 @@ Formel: AVG(usages)
 #### Standardmäßiges Maximum
 {: #standard-max}
 
-Berechnen Sie das Maximum der Nutzungsdaten für den gesamten Monat.
+Die folgende Tabelle enthält Informationen zur Berechnung der maximalen Nutzung für den gesamten Monat. 
 
 Formel: MAX(usages)
 
@@ -131,7 +131,7 @@ Formel: Summation(daily average) / Anzahl der verstrichenen Tage im Abrechnungsz
 
 Beachten Sie, dass die Menge sich innerhalb des Monats ändern kann. Bewertet wird jedoch die durchschnittliche Nutzung pro Tag.
 
-Beispiel für einen Monat mit 30 Tagen:
+Die folgende Tabelle enthält Informationen zur Berechnung der durchschnittlichen anteilmäßigen Nutzung pro Tag basierend auf einem Monat mit 30 Tagen: 
 
 | Zeit               | Eingesendete Nutzungsdaten    | Täglicher Durchschnitt | Berechnung                            | Menge im Dashboard*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -154,7 +154,7 @@ Formel: Summation(daily max) / Anzahl der verstrichenen Tage im Abrechnungszeitr
 
 Beachten Sie, dass die Menge sich innerhalb des Monats ändern kann. Bewertet wird jedoch die maximale Nutzung pro Tag.
 
-Beispiel für einen Monat mit 30 Tagen:
+Die folgende Tabelle enthält Informationen zur Berechnung der maximalen Nutzung pro Tag und des monatlichen Durchschnitts basierend auf einem Monat mit 30 Tagen:
 
 | Zeit             | Eingesendete Nutzungsdaten  | Tageshöchstwert | Berechnung                    | Menge im Dashboard* |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ Sie müssen die stündliche Übermittlung von Nutzungsdaten mithilfe der Messser
 ## Nutzungsdatensätze übermitteln
 {: #usage-records}
 
-Nutzungsdatensätze sind die kleinsten Entitäten, die zu den aggregierten Werten der Metriken beitragen. Ein Nutzungsdatensatz wird mithilfe der folgenden Felder erstellt:
+Nutzungsdatensätze sind die kleinsten Entitäten, die zu den aggregierten Werten der Metriken beitragen. Die folgende Tabelle enthält Informationen zu den Feldern, aus denen ein Nutzungsdatensatz besteht: 
 
 | Name | Beschreibung                                           |
 | ------ | ---------------------------------------------------- |
