@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # 入門指導教學
 {: #get-started}
 
 在本指導教學中，我們介紹 IBM Provider Workbench，並逐步介紹將協力廠商供應項目登錄為整合式計費服務的處理程序。
-{:shortdesc}
+{: shortdesc}
 
 您可以在 {{site.data.keyword.Bluemix}} 中將協力廠商供應項目提供為整合式計費服務或轉介服務。本指導教學著重在整合式計費服務選項。若要進一步瞭解轉介服務選項，請參閱[協力廠商供應項目類型](/docs/third-party?topic=third-party-offering-types#offering-types)。
 {: tip}
@@ -30,7 +31,7 @@ subcollection: third-party
 ## 步驟 1. 登錄供應項目
 {: #step1}
 
-在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部鏈結圖示](../icons/launch-glyph.svg "外部鏈結圖示") 中登錄供應項目。
+在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: external} 登錄您的供應項目。
 
 1. 從 Provider Workbench 詳細資料頁面，按一下**將新供應項目上線**，然後完成登錄表單。
 2. 檢查您的收件匣中是否有確認登錄的電子郵件。

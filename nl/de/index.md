@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Lernprogramm 'Einführung'
 {: #get-started}
 
 Im vorliegenden Lernprogramm wird die IBM Provider-Workbench vorgestellt und Sie werden durch den Prozess der Registrierung Ihres Drittanbieterangebots als integrierten Abrechnungsservice geführt.
-{:shortdesc}
+{: shortdesc}
 
 Sie können ein Drittanbieterangebot in {{site.data.keyword.Bluemix}} entweder als integrierten Abrechnungsservice oder als Empfehlungsservice bereitstellen. Im vorliegenden Lernprogramm wird der Schwerpunkt auf die Option für einen integrierten Abrechnungsservice gelegt. Weitere Informationen zur Option für einen Empfehlungsservice finden Sie im Abschnitt zu den [Typen von Drittanbieterangeboten](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ Sie können ein Drittanbieterangebot in {{site.data.keyword.Bluemix}} entweder a
 ## Schritt 1. Eigenes Angebot registrieren
 {: #step1}
 
-Registrieren Sie Ihr Angebot in der [Provider-Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Symbol für externen Link](../icons/launch-glyph.svg "Symbol für externen Link").
+Registrieren Sie Ihr Angebot in der [Provider-Workbench](https://www.ibm.com/marketplace/workbench/){: external}. 
 
 1. Klicken Sie auf der Provider Workbench-Detailseite auf **Onboarding für neues Angebot durchführen** und füllen Sie das Registrierungsformular aus.
 2. Überprüfen Sie Ihren Posteingang auf eine E-Mail, in der Ihre Registrierung bestätigt wird.

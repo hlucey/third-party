@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Esercitazione introduttiva
 {: #get-started}
 
 In questa esercitazione, introduciamo il workbench IBM Provider e illustriamo il processo di registrazione della tua offerta di terze parti come un servizio di fatturazione integrato.
-{:shortdesc}
+{: shortdesc}
 
 Puoi distribuire un'offerta di terze parti in {{site.data.keyword.Bluemix}} come un servizio di fatturazione integrato o di riferimento. Questa esercitazione si focalizza sull'opzione del servizio di fatturazione integrato. Per ulteriori informazioni sull'opzione del servizio di riferimento, consulta [Tipi di offerta di terze parti](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ Puoi distribuire un'offerta di terze parti in {{site.data.keyword.Bluemix}} come
 ## Passo 1. Registra la tua offerta
 {: #step1}
 
-Registra la tua offerta nel [workbench Provider](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icona link esterno](../icons/launch-glyph.svg "Icona link esterno").
+Registra la tua offerta nel [workbench Provider](https://www.ibm.com/marketplace/workbench/){: external}.
 
 1. Dalla pagina dei dettagli del workbench Provider, fai clic su **Onboard a new offering** e completa il modulo di registrazione.
 2. Controlla la tua posta in arrivo e cerca un'email che conferma la tua registrazione.

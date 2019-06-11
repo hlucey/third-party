@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # 시작하기 튜토리얼
 {: #get-started}
 
 이 튜토리얼에서는 IBM Provider Workbench를 소개하고 통합 청구 서비스로 서드파티 오퍼링을 등록하는 프로세스를 안내합니다.
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.Bluemix}}에서 서드파티 오퍼링을 통합 청구 서비스 또는 추천 서비스로 제공할 수 있습니다. 이 튜토리얼에서는 통합 청구 서비스 옵션에 초점을 둡니다. 추천 서비스 옵션에 대해 자세히 알아보려면 [서드파티 오퍼링 유형](/docs/third-party?topic=third-party-offering-types#offering-types)을 참조하십시오.
 {: tip}
@@ -30,7 +31,7 @@ subcollection: third-party
 ## 1단계. 오퍼링 등록
 {: #step1}
 
-오퍼링을 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![외부 링크 아이콘](../icons/launch-glyph.svg "외부 링크 아이콘")에 등록하십시오.
+ [ Provider Workbench](https://www.ibm.com/marketplace/workbench/){: external}에서 오퍼링을 등록하십시오.
 
 1. Provider Workbench 세부사항 페이지에서 **새 오퍼링 온보딩**을 클릭하고 등록 양식을 완료하십시오.
 2. 등록을 확인하는 이메일이 받은 편지함에 있는지 확인하십시오.

@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Guía de aprendizaje de iniciación
 {: #get-started}
 
 En esta guía de aprendizaje, presentamos el entorno de trabajo de IBM Provider y le guiamos por el proceso de registrar su oferta de terceros como un servicio de facturación integrado.
-{:shortdesc}
+{: shortdesc}
 
 Puede distribuir una oferta de terceros en {{site.data.keyword.Bluemix}} como un servicio de facturación integrado o como un servicio de referencia. Esta guía de aprendizaje se centra en la opción de servicio de facturación integrado. Para obtener más información sobre la opción de servicio de referencia, consulte [Tipos de ofertas de terceros](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ Puede distribuir una oferta de terceros en {{site.data.keyword.Bluemix}} como un
 ## Paso 1. Registrar la oferta
 {: #step1}
 
-Registre la oferta en el [entorno de trabajo de Provider](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icono de enlace externo](../icons/launch-glyph.svg "Icono de enlace externo").
+Registre la oferta en el [entorno de trabajo de Provider](https://www.ibm.com/marketplace/workbench/){: external}.
 
 1. En la página de detalles del entorno de trabajo de Provider, pulse **Incorporar una nueva oferta** y complete el formulario de registro.
 2. Consulte en su bandeja de entrada un correo electrónico que confirme el registro.

@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Tutoriel d'initiation
 {: #get-started}
 
 Dans ce tutoriel, nous allons présenter IBM Provider Workbench ainsi que le processus d'enregistrement de votre offre de tiers en tant que service de facturation intégrée.
-{:shortdesc}
+{: shortdesc}
 
 Vous pouvez mettre à disposition une offre de tiers dans {{site.data.keyword.Bluemix}}, soit en tant que service de facturation intégrée, soit en tant que service de référence. Ce tutoriel présente principalement l'option de service de facturation intégrée. Pour en savoir plus sur l'option de service de référence, voir [Types d'offre de tiers](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ Vous pouvez mettre à disposition une offre de tiers dans {{site.data.keyword.Bl
 ## Etape 1. Enregistrer votre offre
 {: #step1}
 
-Enregistrez votre offre dans le tableau de bord [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![Icône de lien externe](../icons/launch-glyph.svg "Icône de lien externe").
+Enregistrement de votre offre dans [Provider workbench](https://www.ibm.com/marketplace/workbench/){: external}.
 
 1. Sur la page de détails de Provider Workbench, cliquez sur **Onboard a new offering** puis remplissez le formulaire d'enregistrement.
 2. Recherchez dans votre messagerie électronique un message confirmant votre enregistrement.

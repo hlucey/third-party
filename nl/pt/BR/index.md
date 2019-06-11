@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # Tutorial Introdução
 {: #get-started}
 
 Nesse tutorial, introduzimos o ambiente de trabalho do Provedor IBM e passaremos pelo processo de registro de sua oferta de terceiro como um serviço de faturamento integrado.
-{:shortdesc}
+{: shortdesc}
 
 É possível entregar uma oferta de terceiros no {{site.data.keyword.Bluemix}} como um serviço de faturamento integrado ou um serviço de indicação. Este tutorial se concentra na opção de serviço de faturamento integrado. Para saber mais sobre a opção de serviço de indicação, veja [Tipos de oferta de terceiros](/docs/third-party?topic=third-party-offering-types#offering-types).
 {: tip}
@@ -30,7 +31,7 @@ Nesse tutorial, introduzimos o ambiente de trabalho do Provedor IBM e passaremos
 ## Etapa 1. Registre sua oferta
 {: #step1}
 
-Registre sua oferta no [ambiente de trabalho do Provedor](https://www.ibm.com/marketplace/workbench/){: new_window} ![Ícone de link externo](../icons/launch-glyph.svg "Ícone de link externo").
+Registre sua oferta no [ambiente de trabalho do provedor](https://www.ibm.com/marketplace/workbench/){: external}.
 
 1. Na página de detalhes do ambiente de trabalho do Provedor, clique em **Integrar uma nova oferta** e preencha o formulário de registro.
 2. Verifique em sua caixa de entrada um e-mail que confirme o registro.

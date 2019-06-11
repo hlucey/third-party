@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # 入门教程
 {: #get-started}
 
 在本教程中，我们将介绍 IBM Provider Workbench，并全程指导将第三方产品注册为 Integrated Billing 服务的过程。
-{:shortdesc}
+{: shortdesc}
 
 您可以将 {{site.data.keyword.Bluemix}} 中的第三方产品作为 Integrated Billing 服务或引荐服务交付。本教程着重描述 Integrated Billing 服务选项。要了解有关引荐服务选项的更多信息，请参阅[第三方产品类型](/docs/third-party?topic=third-party-offering-types#offering-types)。
 {: tip}
@@ -30,7 +31,7 @@ subcollection: third-party
 ## 步骤 1. 注册产品
 {: #step1}
 
-在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部链接图标](../icons/launch-glyph.svg "外部链接图标") 中注册您的产品。
+在 [Provider Workbench](https://www.ibm.com/marketplace/workbench/){: external} 中注册您的产品。
 
 1. 在 Provider Workbench 的“详细信息”页面中，单击**新产品上线**，然后填写注册表单。
 2. 检查您的收件箱，以获取用于确认注册的电子邮件。
