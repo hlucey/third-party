@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-30"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,16 +82,9 @@ Essa solicitação poderá ser feita uma vez quando o aplicativo for iniciado e 
 
 **Autenticação - Etapa 1:** quando seu usuário navega para seu `dashboard_url`, redirecione o navegador para `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
-
-* Um prompt de login é mostrado. Se o usuário estiver com login efetuado, um redirecionamento retornará imediatamente à URL de redirecionamento, fornecendo um código e um valor de estado. Se o
-usuário não estiver com login efetuado, receberá um prompt de login e um redirecionamento ocorrerá
-de volta para a URL de redirecionamento fornecendo um código e um valor de estado.
-
-* O usuário insere credenciais.
-
-* O navegador faz um retorno de chamada para redirecionar o URI para fornecer um parâmetro de
+* Se um usuário estiver com login efetuado, ele será redirecionado imediatamente. O navegador faz um retorno de chamada para redirecionar o URI para fornecer um parâmetro de
 resposta "code" e um valor "state".
-
+* Se um usuário não estiver com login efetuado, um prompt de login será exibido. Após o login bem-sucedido, o navegador fará uma chamada de retorno para redirecionar o URI e fornecer um parâmetro de resposta "code" e um valor "state".
 
 **Autenticação - Etapa 2:** troque o código para uma chamada de token de acesso
 
