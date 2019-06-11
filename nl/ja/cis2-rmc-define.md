@@ -31,7 +31,7 @@ subcollection: third-party
 ## 始める前に
 {: #rmc-pre-reqs}
 
-1. [ステップ 1: サービス文書とマーケティング発表の作成 (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks)の作業を必ず開始しておいてください。
+1. [ステップ 1: サービス資料とマーケティング発表の作成 (PWB)](/docs/third-party?topic=third-party-content-tasks#content-tasks)の作業を必ず開始しておいてください。
 2. {{site.data.keyword.Bluemix_notm}} に登録済みであることを確認します。 未登録の場合は、進める前に、[登録](https://cloud.ibm.com/registration){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") します。
 3. リソース管理コンソールでの作業の開始時に正しいアカウントを使用していることを確認します。
 4. {{site.data.keyword.Bluemix_notm}} サービス名を準備します。 {{site.data.keyword.Bluemix_notm}} プラットフォームがサービスの識別に使用するサービス名と、{{site.data.keyword.Bluemix_notm}} カタログで顧客に表示される表示名の両方を指定する必要があります。
@@ -71,7 +71,7 @@ subcollection: third-party
    3. その他の必須フィールドを入力し、**「保存」**をクリックします。
 3. 「オファリング (Offering)」ページのナビゲーションに、このページを完成するための最小要件を満たしたことを示すチェック・マークが示されています。 このページが不完全とマークされている場合は、ページを再度開いて、不完全な*必須* フィールドがあるかチェックしてください。
 
-最初のオファリング・レターに、Provider Workbench で生成されたサービス文書 URL が含まれています。 その URL を**「文書 URL (Documentation URL)」**フィールドと**「手順 URL (Instructions URL)」**フィールドに入力してください
+最初のオファリング・レターに、Provider Workbench で生成されたサービス資料 URL が含まれています。 その URL を**「資料 URL (Documentation URL)」**フィールドと**「手順 URL (Instructions URL)」**フィールドに入力してください
 {: tip}
 
 ## IAM への登録

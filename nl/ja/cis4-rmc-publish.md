@@ -33,7 +33,7 @@ OSB 仕様に適合した 1 つ以上のブローカーをホストしたので�
 {: tip}
 
 ステップ 1 を開始しており、ステップ 2、3、および 4 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+1. [サービス資料とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 2. [リソース管理コンソールでオファリングを定義する](/docs/third-party?topic=third-party-step2-define#step2-define)。
 3. [サービス・ブローカーを作成してホストする](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
 3. [認証フローを作成する](/docs/third-party?topic=third-party-step4-iam#step4-iam)。

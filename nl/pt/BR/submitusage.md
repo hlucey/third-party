@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -148,7 +148,7 @@ Para usar o serviço de medição do {{site.data.keyword.Bluemix_notm}} para rel
 ## Enviando registros de uso
 {: #usage-records}
 
-Os registros de uso são as menores entidades que contribuem para os valores agregados das métricas. Um registro de uso é construído usando os campos a seguir:
+Os registros de uso são as menores entidades que contribuem para os valores agregados das métricas. A tabela a seguir fornece informações sobre os campos usados para construir um registro de uso:
 
 | Nome | Descrição                                           |
 | ------ | ---------------------------------------------------- |

@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -82,7 +82,7 @@ Observe que a quantidade no painel em cada um dos exemplos a seguir é antes que
 #### Inclusão padrão
 {: #standard-add}
 
-Calcule os usos para o mês inteiro.
+A tabela a seguir fornece informações sobre como calcular os usos para todo o mês.
 
 Fórmula: ADD (usos)
 
@@ -98,7 +98,7 @@ Fórmula: ADD (usos)
 #### Média padrão
 {: #standard-average}
 
-Calcule a média dos usos para o mês inteiro. Observe que enviar um uso zero também conta para a média.
+A tabela a seguir fornece informações sobre como calcular a média dos usos para todo o mês. Observe que enviar um uso zero também conta para a média.
 
 Fórmula: AVG (usos)
 
@@ -114,7 +114,7 @@ Fórmula: AVG (usos)
 #### Máximo padrão
 {: #standard-max}
 
-Calcule o máximo dos usos para o mês inteiro.
+A tabela a seguir fornece informações sobre como calcular o máximo dos usos para todo o mês.
 
 Fórmula: MAX (usos)
 
@@ -136,7 +136,7 @@ Fórmula: adição (média diária) / Número de dias passados no período de fa
 
 Observe que a quantidade pode mudar durante todo o mês, mas o que é taxado é o uso médio por dia.
 
-Dado um mês de 30 dias:
+Considerando um mês de 30 dias, consulte a tabela a seguir para calcular a média diária de rateio:
 
 | Horário               | Uso Enviado    | Média diária | Cálculo                            | Quantidade no Painel *                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -159,7 +159,7 @@ Fórmula: adição (máximo diário)/número de dias passados no período de fat
 
 Observe que a quantidade pode mudar ao longo do mês, mas o que é taxado é o uso máximo por dia.
 
-Dado um mês de 30 dias:
+Considerando um mês de 30 dias, consulte a tabela a seguir para calcular o uso máximo por dia e a média mensal:
 
 | Horário             | Uso Enviado  | Máximo Diário | Cálculo                    | Quantidade no Painel * |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|

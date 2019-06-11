@@ -17,12 +17,13 @@ subcollection: third-party
 {:screen: .screen}
 {:tip: .tip}
 {:new_window: target="_blank"}
+{:external: target="_blank" .external}
 
 # 入門チュートリアル
 {: #get-started}
 
 このチュートリアルでは、IBM Provider Workbench を紹介し、第三者オファリングを統合請求サービスとして登録するプロセスについて段階的に説明します。
-{:shortdesc}
+{: shortdesc}
 
 {{site.data.keyword.Bluemix}} の第三者オファリングを統合請求サービスまたは紹介サービスとして提供することができます。 このチュートリアルは、統合請求サービス・オプションに焦点を合わせます。 紹介サービス・オプションの詳細については、[第三者オファリングのタイプ](/docs/third-party?topic=third-party-offering-types#offering-types)を参照してください。
 {: tip}
@@ -30,7 +31,7 @@ subcollection: third-party
 ## ステップ 1. オファリングの登録
 {: #step1}
 
-[Provider Workbench](https://www.ibm.com/marketplace/workbench/){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") でオファリングを登録します。
+[Provider Workbench](https://www.ibm.com/marketplace/workbench/){: external} でオファリングを登録します。
 
 1. Provider Workbench の詳細ページから**「Onboard a new offering」**をクリックし、登録フォームを入力します。
 2. 受信箱で、登録を確認する E メールを確認します。
@@ -54,9 +55,9 @@ Provider Workbench を使用して、統合請求サービスとしてオファ�
 
 承認されると、次のステップを示す E メールを受信します。
 
-* Provider Workbench で、概要文書とマーケティング・コンテンツを作成します。
+* Provider Workbench で、概要資料とマーケティング・コンテンツを作成します。
 
-  E メールには、ユーザーの概要文書が公開される場所のリンクが含まれています。 この URL は、リソース管理コンソールでの作業中に使用するので保存してください。 
+  E メールには、ユーザーの概要資料が公開される場所のリンクが含まれています。 この URL は、リソース管理コンソールでの作業中に使用するので保存してください。 
   {: tip}
 
 * リソース管理コンソールで、オファリングを定義し、料金プランを作成し、セキュリティーを有効にし、さまざまな {{site.data.keyword.Bluemix_notm}} 環境へのオファリングのデプロイメントを管理して、オファリングを {{site.data.keyword.Bluemix_notm}} に統合します。 

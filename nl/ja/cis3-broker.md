@@ -29,13 +29,13 @@ subcollection: third-party
 
 サービス・ブローカーは、サービスのライフサイクルを管理します。 {{site.data.keyword.Bluemix_notm}} プラットフォームとサービス・ブローカーとの相互作用によって、サービス・インスタンスおよびサービス・バインディングのプロビジョンと管理が行われます。 有効なメタデータ値を指定して、要求の実行時の正常な RESTful API 応答を作成できます。
 
-リソース管理コンソールからエクスポートしたメタデータ、{{site.data.keyword.Bluemix_notm}} サービス・ブローカーの公開サンプル、およびリソース・ブローカー API 文書を組み合わせて使用して、ブローカーを作成できます。
+リソース管理コンソールからエクスポートしたメタデータ、{{site.data.keyword.Bluemix_notm}} サービス・ブローカーの公開サンプル、およびリソース・ブローカー API 資料を組み合わせて使用して、ブローカーを作成できます。
 
 ## 始める前に
 {: #broker-pre-reqs}
 
 ステップ 1 を開始しており、ステップ 2 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+1. [サービス資料とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 2. [リソース管理コンソールでオファリングを定義する](/docs/third-party?topic=third-party-step2-define#step2-define)。
 
 
@@ -57,7 +57,7 @@ subcollection: third-party
 サンプルでは、すべての言語が示されているわけではありません。 例えば、Python のサンプル・ブローカーが必要な場合には、Google で検索すれば Cloud Foundry のサンプルを見つけることができます。 OSB の要件を満たすように、このサンプルを調整する必要がある場合があります。
 {: note}
 
-## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 文書の確認
+## {{site.data.keyword.Bluemix_notm}} Open Service Broker API 資料の確認
 {: #docs}
 
 サービス・ブローカーは、[{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を理解した上で開発できます。 Broker API 自体と、それがブローカーとどう相互作用するかについて熟知してください。

@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-30"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,13 +82,8 @@ Content-Type: application/json
 
 **認証 - ステップ 1:** ユーザーが `dashboard_url` にナビゲートしたら、ブラウザーを `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>` にリダイレクトします。
 
-
-* ログイン・プロンプトが表示されます。 ユーザーがログインしている場合、リダイレクトで即時にリダイレクト URL に戻され、code と state 値が提供されます。 ユーザーがログインしていない場合、ユーザーにログイン・プロンプトが出され、リダイレクト URL に戻るリダイレクトが実行されて code と state 値が提供されます。
-
-* ユーザーは資格情報を入力します。
-
-* ブラウザーが URI をリダイレクトするコールバックを実行し、「code」応答パラメーターと「state」値を提供します。
-
+* ユーザーがログインしている場合、即時にリダイレクトされます。ブラウザーが URI をリダイレクトするコールバックを実行し、「code」応答パラメーターと「state」値を提供します。
+* ユーザーがログインしていない場合、ログイン・プロンプトが表示されます。ログインが正常に行われた後、ブラウザーが URI をリダイレクトするコールバックを実行し、「code」応答パラメーターと「state」値を提供します。
 
 **認証 - ステップ 2:** アクセス・トークン呼び出しのためのコードの交換
 

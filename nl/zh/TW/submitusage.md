@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ subcollection: third-party
 ## 提交用量記錄
 {: #usage-records}
 
-用量記錄是影響度量值聚集值的最小實體。使用下列欄位來建構用量記錄：
+用量記錄是影響度量值聚集值的最小實體。下表提供用來建構用量記錄之欄位的相關資訊：
 
 | 名稱 | 說明                                                  |
 | ------ | ---------------------------------------------------- |

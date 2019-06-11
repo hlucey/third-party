@@ -62,9 +62,9 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
    * Service Icon: サービス・ロゴを含む SVG
    * Service Description: {{site.data.keyword.Bluemix_notm}} カタログのユーザー・インターフェースでリソース・アイコンの上にカーソルを移動したときに表示されるリソースの説明。 この説明には、単一の文または句を追加できます。
    * Service Detailed Description: カタログのリスト・ページに表示される最初の文節。 詳細説明には、2 文以上を検討してください。
-   * Documentation URL: {{site.data.keyword.Bluemix_notm}} 文書へのリンク。 PWB で作成し、URL 値は、PWB によって自動的に生成されます。
+   * Documentation URL: {{site.data.keyword.Bluemix_notm}} 資料へのリンク。 PWB で作成し、URL 値は、PWB によって自動的に生成されます。
    * Terms URL: サービスのご使用条件へのリンク。 GDPR の目的の場合は、既存のサード・パーティー・サービスのご使用条件にリンクしないでください。 代わりに、統合請求サービスの固有ページを指定する必要があります。
-   * Instructions URL: Documentation URL と同様に、{{site.data.keyword.Bluemix_notm}} 文書を指します。ただし、Instructions URL は、サービスのダッシュボードの「概要 (Getting Started)」タブに動的に文書をプルします。
+   * Instructions URL: Documentation URL と同様に、{{site.data.keyword.Bluemix_notm}} 資料を指します。ただし、Instructions URL は、サービスのダッシュボードの「概要 (Getting Started)」タブに動的に資料をプルします。
    * Category: カタログ内でサービスを配置する、使用可能な {{site.data.keyword.Bluemix_notm}} カテゴリーの選択。
    * Bullets: サービスに関する短い説明
    * Media: サービスに関する画面キャプチャーおよびビデオ
@@ -82,7 +82,7 @@ Identity Access Management (IAM) を使用すると、ユーザーを安全に�
 
 {{site.data.keyword.Bluemix_notm}} は、Open Service Broker API (OSB) `バージョン 2.12` 仕様を使用します。 [Open Broker API 仕様](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![外部リンク・アイコン](../icons/launch-glyph.svg "外部リンク・アイコン") を読んで熟知してください。詳細については、README ファイルをガイドとして使用してください。
 
-リソース・コントローラーはリソースをプロビジョンする要求を受信すると、OSB を呼び出してサービス・タイプ、オファリング、プラン、および地域の可用性を確認します。 リソース・コントローラーは、お客様のアカウントに関連付けられたプランの可視性も確認します。 {{site.data.keyword.Bluemix_notm}} には、OSB 仕様を拡張するブローカー・サンプルと API 文書が用意されています。 ブローカーの開発およびホストのより詳細な情報は、詳細な統合請求のオンボーディング開発ステップを段階的に実行しているときに見つけることができます。
+リソース・コントローラーはリソースをプロビジョンする要求を受信すると、OSB を呼び出してサービス・タイプ、オファリング、プラン、および地域の可用性を確認します。 リソース・コントローラーは、お客様のアカウントに関連付けられたプランの可視性も確認します。 {{site.data.keyword.Bluemix_notm}} には、OSB 仕様を拡張するブローカー・サンプルと API 資料が用意されています。 ブローカーの開発およびホストのより詳細な情報は、詳細な統合請求のオンボーディング開発ステップを段階的に実行しているときに見つけることができます。
 
 ## {{site.data.keyword.Bluemix_notm}} 計量サービス
 {: #metering-service}

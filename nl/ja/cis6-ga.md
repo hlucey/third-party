@@ -32,7 +32,7 @@ subcollection: third-party
 {: #before-you-begin}
 
 ステップ 1 を開始しており、ステップ 2、3、4、および 5 を完了していることを確認してください。
-1. [サービス文書とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
+1. [サービス資料とマーケティング発表を作成する](/docs/third-party?topic=third-party-content-tasks#content-tasks)。
 2. [リソース管理コンソールでオファリングを定義する](/docs/third-party?topic=third-party-step2-define#step2-define)。
 3. [サービス・ブローカーを作成してホストする](/docs/third-party?topic=third-party-step3-osb#step3-osb)。
 4. [認証フローを作成する](/docs/third-party?topic=third-party-step4-iam#step4-iam)。
