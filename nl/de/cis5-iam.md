@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,8 +82,13 @@ Diese Anforderung kann einmalig ausgeführt werden, wenn die Anwendung gestartet
 
 **Authentifizierung - Schritt 1:** Navigiert ein Benutzer zu Ihrer Dashboard-URL (`dashboard_url`), dann wird der Browser zu `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>` weitergeleitet.
 
-* Wenn ein Benutzer angemeldet ist, wird er sofort weitergeleitet. Der Browser führt einen Callback an den Weiterleitungs-URI durch und stellt einen Antwortparameter "code" und einen Wert für "state" bereit.
-* Wenn ein Benutzer nicht angemeldet ist, wird eine Anmeldeeingabeaufforderung angezeigt. Nach einer erfolgreichen Anmeldung führt der Browser einen Callback an den Weiterleitungs-URI durch und stellt einen Antwortparameter "code" und einen Wert für "state" bereit. 
+
+* Ein Anmeldedialog wird aufgerufen. Wenn der Benutzer angemeldet ist, erfolgt sofort eine Weiterleitung an die Weiterleitungs-URL mit einem Code und einem Statuswert. Ist der Benutzer nicht angemeldet, erhält er eine Anmeldeeingabeaufforderung und es erfolgt eine Weiterleitung an die Weiterleitungs-URL mit einem Code und einem Statuswert. 
+
+* Der Benutzer gibt Berechtigungsnachweise ein. 
+
+* Der Browser führt einen Callback an den Weiterleitungs-URI durch und stellt einen Antwortparameter "code" und einen Wert für "state" bereit. 
+
 
 **Authentifizierung - Schritt 2:** Code für Aufruf eines Zugriffstokens austauschen
 

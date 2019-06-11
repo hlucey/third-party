@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-05-29"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,8 +82,13 @@ Content-Type: application/json
 
 **鑑別 - 步驟 1：**當使用者導覽至 `dashboard_url` 時，會將瀏覽器重新導向至 `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
-* 如果使用者已登入，則會立即將他們重新導向。瀏覽器執行回呼來重新導向 URI，以提供 "code" 回應參數及 "state" 值。
-* 如果使用者未登入，則會出現登入提示。成功登入之後，瀏覽器會執行回呼來重新導向 URI，以提供 "code" 回應參數及 "state" 值。
+
+* 顯示登入提示。如果使用者已登入，重新導向會立即回到重新導向 URL，以提供程式碼及狀態值。如果使用者未登入，使用者會收到登入提示，而重新導向會回到重新導向 URL，以提供程式碼及狀態值。
+
+* 使用者輸入認證。
+
+* 瀏覽器執行回呼來重新導向 URI，以提供 "code" 回應參數及 "state" 值。
+
 
 **鑑別 - 步驟 2：**交換存取記號的代碼
 
