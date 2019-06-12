@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-30"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,13 +82,8 @@ Content-Type: application/json
 
 **认证 - 步骤 1：**用户导航至 `dashboard_url` 时，将浏览器重定向到 `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
-
-* 这将显示登录提示。如果用户已登录，那么重定向会立即返回到重定向 URL，其中提供了代码和状态值。如果用户未登录，那么用户会收到登录提示，并且重定向会返回到重定向 URL，其中提供了代码和状态值。
-
-* 用户输入凭证。
-
-* 浏览器执行回调以重定向 URI，从而提供“code”响应参数和“state”值。
-
+* 如果用户已登录，那么会立即对其执行重定向。浏览器执行回调以重定向 URI，从而提供“code”响应参数和“state”值。
+* 如果用户未登录，那么会显示登录提示。成功登录后，浏览器会执行回调以重定向 URI，从而提供“code”响应参数和“state”值。
 
 **认证 - 步骤 2：**用代码交换访问令牌调用
 

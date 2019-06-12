@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-30"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,13 +82,8 @@ Cette demande peut être effectuée une fois lorsque l'application est démarré
 
 **Authentification - Etape 1 :** Lorsqu'un utilisateur accède à votre adresse `dashboard_url`, redirigez-le vers `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
-
-* Une invite de connexion s'affiche. Si l'utilisateur est connecté, une redirection vers l'URL se produit immédiatement en fournissant un code et une valeur d'état. Si l'utilisateur n'est pas connecté, il reçoit une invite de connexion et une redirection vers l'URL de redirection se produit en fournissant un code et une valeur d'état. 
-
-* L'utilisateur entre des données d'identification.
-
-* Le navigateur effectue un rappel pour rediriger l'URI afin de fournir un paramètre de réponse "code" et une valeur "state"
-
+* Si un utilisateur est connecté, il est immédiatement redirigé. Le navigateur effectue un rappel pour rediriger l'URI afin de fournir un paramètre de réponse "code" et une valeur "state"
+* Si un utilisateur n'est pas connecté, une invite de connexion s'affiche. Une fois l'utilisateur connecté, le navigateur effectue un rappel pour rediriger l'URI afin de fournir un paramètre de réponse "code" et une valeur "state". 
 
 **Authentification - Etape 2 :** Echangez le code pour un appel de jeton d'accès
 

@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ Il vous est demandé d'automatiser la soumission d'utilisation horaire en utilis
 ## Soumission de vos enregistrements d'utilisation
 {: #usage-records}
 
-Les enregistrements d'utilisation constituent les plus petites entités faisant partie des valeurs agrégées des mesures. Un enregistrement d'utilisation est construit en utilisant les zones suivantes :
+Les enregistrements d'utilisation constituent les plus petites entités faisant partie des valeurs agrégées des mesures. Le tableau suivant fournit des informations sur les zones utilisées pour construire un enregistrement d'utilisation :
 
 | Nom | Description                                           |
 | ------ | ---------------------------------------------------- |

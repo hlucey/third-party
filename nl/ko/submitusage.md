@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ subcollection: third-party
 ## 사용량 레코드 제출
 {: #usage-records}
 
-사용량 레코드는 메트릭의 집계된 값을 구성하는 가장 작은 엔티티입니다. 사용량 레코드는 다음 필드를 사용하여 구성됩니다.
+사용량 레코드는 메트릭의 집계된 값을 구성하는 가장 작은 엔티티입니다. 다음 표에서는 사용량 레코드를 구성할 때 사용되는 필드에 대한 정보를 제공합니다. 
 
 |이름 |설명                                           |
 | ------ | ---------------------------------------------------- |

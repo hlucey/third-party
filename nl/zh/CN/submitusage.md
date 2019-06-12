@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ subcollection: third-party
 ## 提交使用量记录
 {: #usage-records}
 
-使用量记录是构成度量值的聚集值的最小实体。使用量记录使用以下字段构造而成：
+使用量记录是构成度量值的聚集值的最小实体。下表提供了有关用于构造使用量记录的字段的信息：
 
 |名称|描述
 |

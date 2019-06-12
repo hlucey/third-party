@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -77,7 +77,7 @@ Notez que la quantité indiquée dans le tableau de bord de chacun des exemples 
 #### Ajout standard
 {: #standard-add}
 
-Calcul des utilisations pour l'ensemble du mois
+Le tableau suivant contient des informations relatives au calcul de l'utilisation mensuelle. 
 
 Formule : ADD(utilisations)
 
@@ -93,7 +93,7 @@ Formule : ADD(utilisations)
 #### Moyenne standard
 {: #standard-average}
 
-Calcule la moyenne des utilisations pour l'ensemble du mois. La soumission d'une utilisation égale à zéro est prise en compte lors du calcul de la moyenne.
+Le tableau suivant contient des informations relatives au calcul de l'utilisation mensuelle moyenne. La soumission d'une utilisation égale à zéro est prise en compte lors du calcul de la moyenne.
 
 Formule : AVG(utilisations)
 
@@ -109,7 +109,7 @@ Formule : AVG(utilisations)
 #### Valeur maximale standard
 {: #standard-max}
 
-Calcule la valeur maximale des utilisations pour l'ensemble du mois.
+Le tableau suivant contient des informations relatives au calcul de l'utilisation mensuelle maximale. 
 
 Formule : MAX(utilisations)
 
@@ -131,7 +131,7 @@ Formule : total(moyenne quotidienne) / Nombre de jours transmis lors de la péri
 
 La quantité peut changer au cours du mois, mais l'élément évalué est l'utilisation moyenne par jour.
 
-Prenons un mois à 30 jours :
+Reportez-vous au tableau suivant pour calculer la moyenne de proratisation quotidienne (pour un mois de 30 jours) : 
 
 | Période               | Utilisation envoyée dans    | Moyenne quotidienne | Calcul                            | Quantité dans le tableau de bord*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -154,7 +154,7 @@ Formule : Total (valeur maximale quotidienne) / nombre de jours dans la période
 
 La quantité peut changer au cours du mois, mais l'élément évalué est l'utilisation maximale par jour.
 
-Prenons un mois à 30 jours :
+Reportez-vous au tableau suivant pour calculer l'utilisation maximale par jour et l'utilisation moyenne mensuelle (pour un mois de 30 jours) : 
 
 | Période             | Utilisation envoyée dans  | Valeur maximale quotidienne | Calcul                    | Quantité dans le tableau de bord* |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|
