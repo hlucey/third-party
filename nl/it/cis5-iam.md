@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-29"
+lastupdated: "2019-05-30"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -82,13 +82,8 @@ Questa richiesta può essere eseguita dopo che l'applicazione è stata avvitata 
 
 **Autenticazione - Passo 1:** quando un utente passa al tuo `dashboard_url`, reindirizza il browser a `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
-
-* Viene visualizzata una richiesta di login. Se l'utente è collegato, viene immediatamente effettuato un reindirizzamento all'URL di reindirizzamento che fornisce un valore di stato e un codice. Se l'utente non è collegato, riceve una richiesta di accesso e si verifica un reindirizzamento all'URL di reindirizzamento che fornisce un valore di stato e un codice.
-
-* L'utente immette le credenziali.
-
-* Il browser effettua un callback all'URI di reindirizzamento per fornire un parametro di risposta "code" e un valore "state".
-
+* Se un utente ha eseguito l'accesso, viene immediatamente reindirizzato. Il browser effettua un callback per reindirizzare l'URI in modo da fornire un parametro di risposta "code" e un valore "state".
+* Se un utente non ha eseguito l'accesso, verrà visualizzata una richiesta di accesso. Dopo un accesso corretto, il browser effettua un callback per reindirizzare l'URI in modo da fornire un parametro di risposta "code" e un valore "state".
 
 **Autenticazione - Passo 2:** scambia il codice per una chiamata al token di accesso
 
@@ -277,9 +272,9 @@ L'impatto sulle autorizzazioni (tutte le chiamate a `https://iam.cloud.ibm.com/v
 La seguente sezione è un esempio di cosa viene aggiunto nella chiamata di autorizzazione:
 ```
   [
-   {  Headers
-   `Authorization` -> a jwt token representing a 3rd party service and/or dashboard
-   `Transaction-ID` -> "a unique guid lets us help trace the request end to end"
+   {  Intestazioni
+   `Authorization` -> un token jwt che rappresenta un servizio di terze parti e/o un dashboard
+   `Transaction-ID` -> "un guid univoco ci consente di agevolare la traccia della richiesta end-to-end"
    `Accept` -> `application/vnd.authz.v2+json`
    `Content-Type` -> `application/json`
 

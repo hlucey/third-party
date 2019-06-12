@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -77,7 +77,7 @@ Nota che la quantità nel dashboard in ciascuno dei seguenti esempi è anteceden
 #### Aggiunta standard
 {: #standard-add}
 
-Calcola gli utilizzi per l'intero mese.
+La seguente tabella fornisce le informazioni su come calcolare gli utilizzi per l'intero mese.
 
 Formula: ADD(utilizzi)
 
@@ -93,7 +93,7 @@ Formula: ADD(utilizzi)
 #### Media standard
 {: #standard-average}
 
-Calcola la media degli utilizzi per l'intero mese. Nota che nella media si tiene conto anche dell'inoltro di un utilizzo zero.
+La seguente tabella fornisce le informazioni su come calcolare la media degli utilizzi per l'intero mese. Nota che nella media si tiene conto anche dell'inoltro di un utilizzo zero.
 
 Formula: AVG(utilizzi)
 
@@ -109,7 +109,7 @@ Formula: AVG(utilizzi)
 #### Massimo standard
 {: #standard-max}
 
-Calcola il massimo degli utilizzi per l'intero mese.
+La seguente tabella fornisce le informazioni su come calcolare il valore massimo degli utilizzi per l'intero mese. 
 
 Formula: MAX(utilizzi)
 
@@ -131,7 +131,7 @@ Formula: Summation(media giornaliera) / numero di giorni trascorsi nel periodo d
 
 Nota che la quantità potrebbe cambiare nel corso del mese ma ciò che viene valutato è l'utilizzo medio al giorno.
 
-Dato un mese di 30 giorni:
+Dato un mese di 30 giorni, vedi la seguente tabella per calcolare la media proporzionale giornaliera:
 
 | Ora               | Utilizzo inviato    | Media quotidiana | Calcolo                            | Quantità nel dashboard*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -154,7 +154,7 @@ Formula: Summation(massimo giornaliero) / numero di giorni trascorsi nel periodo
 
 Nota che la quantità potrebbe cambiare nel corso del mese ma ciò che viene valutato è l'utilizzo massimo al giorno.
 
-Dato un mese di 30 giorni:
+Dato un mese di 30 giorni, vedi la seguente tabella per calcolare l'utilizzo massimo al giorno e la media mensile:
 
 | Ora             | Utilizzo inviato  | Massimo giornaliero | Calcolo                    | Quantità nel dashboard* |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|

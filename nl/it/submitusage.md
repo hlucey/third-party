@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ Devi automatizzare l'inoltro dell'utilizzo orario utilizzando l'API di servizio 
 ## Inoltro dei record di utilizzo
 {: #usage-records}
 
-I record di utilizzo sono le entità più piccole che contribuiscono ai valori aggregati delle metriche. Un record di utilizzo viene costruito utilizzando i seguenti campi:
+I record di utilizzo sono le entità più piccole che contribuiscono ai valori aggregati delle metriche. La seguente tabella fornisce le informazioni sui campi utilizzati per creare un record di utilizzo:
 
 | Nome | Descrizione                                           |
 | ------ | ---------------------------------------------------- |
