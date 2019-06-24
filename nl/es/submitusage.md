@@ -5,7 +5,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-04-04" 
+lastupdated: "2019-06-05" 
 
 keywords: plans of the resource, use characters A, usage records, metered plans, submitting usage 
 
@@ -143,7 +143,7 @@ Debe automatizar el envío de uso por hora utilizando la API del servicio de med
 ## Envío de registros de uso
 {: #usage-records}
 
-Los registros de uso son las entidades más pequeñas que contribuyen a los valores agregados de las métricas. Un registro de uso se construye mediante los campos siguientes:
+Los registros de uso son las entidades más pequeñas que contribuyen a los valores agregados de las métricas. La tabla siguiente contiene información sobre los campos utilizados para crear un registro de uso:
 
 | Nombre | Descripción                                           |
 | ------ | ---------------------------------------------------- |

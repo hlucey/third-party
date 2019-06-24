@@ -163,7 +163,7 @@ Consulte el ejemplo en nuestros [intermediarios de ejemplo](https://github.com/I
 
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
-  - apikey=*[Api key]*
+  - apikey=*[clave API]*
 
 ```
 curl -k -X POST \

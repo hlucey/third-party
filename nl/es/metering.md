@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-06-05"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -77,7 +77,7 @@ Observe que la cantidad que aparece en el panel de control de cada uno de los si
 #### Suma estándar
 {: #standard-add}
 
-Calcular los datos de uso de todo el mes.
+La tabla siguiente contiene información sobre cómo calcular el uso de todo el mes.
 
 Fórmula: ADD(datos uso)
 
@@ -93,7 +93,7 @@ Fórmula: ADD(datos uso)
 #### Promedio estándar
 {: #standard-average}
 
-Calcular el promedio de los datos de uso de todo el mes. Tenga en cuenta que el envío de un uso cero también cuenta en el promedio.
+La tabla siguiente contiene información sobre cómo calcular el promedio de uso de todo el mes. Tenga en cuenta que el envío de un uso cero también cuenta en el promedio.
 
 Fórmula: AVG(datos uso)
 
@@ -109,7 +109,7 @@ Fórmula: AVG(datos uso)
 #### Máximo estándar
 {: #standard-max}
 
-Calcular el máximo de los datos de uso de todo el mes.
+La tabla siguiente contiene información sobre cómo calcular el uso máximo de todo el mes.
 
 Fórmula: MAX(datos uso)
 
@@ -131,7 +131,7 @@ Fórmula: Suma(promedio diario) / Número de días que han pasado del periodo de
 
 Tenga en cuenta que la cantidad puede cambiar a lo largo del mes, pero lo que se evalúa es el uso promedio por día.
 
-En el caso de un mes de 30 días:
+Dado un mes de 30 días, con la tabla siguiente puede calcular el promedio de prorrateo diario:
 
 | Momento               | Datos uso enviados    | Promedio diario | Cálculo                            | Cantidad en panel de control*                           |
 | ------------------ | :--------------: | ------------- | ------------------                     | :----------------------------------------------: |
@@ -154,7 +154,7 @@ Fórmula: Suma(máximo diario) / Número de días que han pasado del periodo de 
 
 Tenga en cuenta que la cantidad puede cambiar a lo largo del mes, pero lo que se evalúa es el uso máximo por día.
 
-En el caso de un mes de 30 días:
+Dado un mes de 30 días, con la tabla siguiente puede calcular el uso máximo por día y el promedio mensual:
 
 | Momento             | Datos uso enviados  | Máx. diario | Cálculo                    | Cantidad en panel de control* |
 |------------------|:--------------:| --------- | ------------------------------ |:----------------------:|
