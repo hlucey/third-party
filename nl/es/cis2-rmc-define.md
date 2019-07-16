@@ -75,7 +75,7 @@ los metadatos que se muestran en el panel de control del servicio de la oferta d
 La carta de la oferta inicial incluye un URL de documentación del servicio que genera el entorno de trabajo de Provider. Debe especificar dicho URL en los campos **URL de documentación** y **URL de instrucciones**
 {: tip}
 
-## Regístrese con IAM
+## Registro con IAM
 {: #reg-iam}
 
 IAM es necesario para todos los servicios que se han incorporado a {{site.data.keyword.Bluemix_notm}}. Consulte [¿Qué es IAM?](/docs/iam?topic=iam-iamoverview#iamoverview) para obtener más información sobre los conceptos y los requisitos de IAM.
