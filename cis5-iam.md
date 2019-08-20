@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-05-30"
+lastupdated: "2019-08-20"
 
 keywords: access token, client ID, Access Manage page, authentication flow 
 
@@ -34,9 +34,9 @@ Make sure that you completed the [getting started tutorial](/docs/third-party?to
 ## Derive your IAM redirect URI
 {: #redirect-uri}
 
-When you define your service in the resource management console, you generate a Client ID, but note that you likely don't have a Redirect URI at the time. A Client ID that is set to false is created by IAM. Until you return to the resource management console with your Redirect URI, you won't have a true Client ID.
+When you define your service in the resource management console, you generate a Client ID, but note that you likely don't have a Redirect URI at the time. A Client ID that is set to false is created by IAM. You must return to the resource management console with your Redirect URI to get a true Client ID.
 
-The good news is that in the previous development step, you developed an OSB and hosted it (You probably saw IAM values in the sample broker code). The `redirect_uri` is usually the host url where the app lives with some additional url that can handle the authentication/authorization.
+The good news is that in the previous development step, you developed an OSB and hosted it (You probably saw IAM values in the sample broker code). The `redirect_uri` is usually the host url where the app lives with some additional url that can handle the authentication or authorization.
 
  The following examples show redirect URIs:
 
@@ -83,7 +83,7 @@ This request can be done once when the application is started and again if the `
 **Authentication - Step 1:** When a user navigates to your `dashboard_url`, redirect browser to `<authorization_endpoint>?client_id=<your-client-id>&redirect_uri=<your-redirect-uri>&response-type=code&state=<your-resource-instance-id>`
 
 * If a user is logged in, they are immediately redirected. The browser does a call back to redirect the URI to provide a "code" response parameter and "state" value.
-* If a user is not logged in, a log in prompt will appear. After a successful log in, the browser does a call back to redirect the URI to provide a "code" response parameter and "state" value.
+* If a user is not logged in, a log in prompt appears. After a successful login, the browser does a call back to redirect the URI to provide a "code" response parameter and "state" value.
 
 **Authentication - Step 2:** Exchange the code for an access token calling
 
@@ -138,7 +138,7 @@ curl -k -X POST \
 
   Make sure to store the user's access_token returned in this response as it is used during user authorization next.
 
-See the example in our [sample brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
+See the example in the [sample brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon").
 
 ## Now it's time to validate the user authorization
 {: #validate}
@@ -163,7 +163,7 @@ See the example in our [sample brokers](https://github.com/IBM/sample-resource-s
 
   - grant_type=urn:ibm:params:oauth:grant-type:apikey
   - response_type=cloud_iam
-  - apikey=*[Api key]*
+  - apikey=*[API-key]*
 
 ```
 curl -k -X POST \
@@ -192,7 +192,7 @@ curl -k -X POST \
 ```
 {: codeblock}
 
-**Note:** This token is valid for 1 hour, and can be reused as many times as needed during the 1 hour time frame. It is highly recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
+**Note:** This token is valid for 1 hour, and can be reused as many times as needed during the 1 hour. It is highly recommended that this token is cached as to avoid doing this request for every access to the `dashboard_url`.
 
 
 ### Authorization - Step 2: Validate authorization for the user to the service instance (/v2/authz POST)

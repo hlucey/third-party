@@ -4,7 +4,7 @@ copyright:
 
   years: 2015, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-20"
 
 keywords: Next steps, IBM Provider workbench, third-party offering, offering type
 
@@ -57,7 +57,7 @@ When you're approved, you receive an email that outlines your next steps:
 
 * In the Provider workbench, you create your getting started documentation and marketing content.
 
-  The email includes the link to where your getting started documentation is published. Save the URL, because you use it as you're working in the resource management console. 
+  The email includes the link to where your getting started documentation is published. Make sure that you save the URL, you use it as you work in the resource management console. 
   {: tip}
 
 * In the resource management console, integrate your offering into {{site.data.keyword.Bluemix_notm}} by defining your offering, building pricing plans, enabling security, and managing the deployment of your offering in different {{site.data.keyword.Bluemix_notm}} environments. 

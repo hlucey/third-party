@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-19"
 
 keywords: service brokers, IBM Cloud platform, new service brokers, hosting service broker 
 
@@ -24,12 +24,12 @@ subcollection: third-party
 # Step 3. Developing and hosting your service brokers
 {: #step3-osb}
 
-By using the metadata you exported from the resource management console, you can build one or more new service brokers in the programming language of your choice.
+By using the metadata that you exported from the resource management console, you can build one or more new service brokers in the programming language of your choice.
 {:shortdesc}
 
 Service brokers manage the lifecycle of services. The {{site.data.keyword.Bluemix_notm}} platform interacts with service brokers to provision and manage service instances and service bindings. You can provide valid metadata values to create a successful RESTful API Response when a Request is performed.
 
-You can build your broker by using a combination of the metadata you exported from the resource management console, our public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation.
+You can build your broker by using a combination of the metadata you exported from the resource management console, the public {{site.data.keyword.Bluemix_notm}} service broker samples, and the Resource Broker API documentation.
 
 ## Before you begin
 {: #broker-pre-reqs}
@@ -49,15 +49,15 @@ You're developing an Open Service Broker that works with the {{site.data.keyword
 
 {{site.data.keyword.Bluemix_notm}} uses the Open Service Broker API (OSB) `version 2.12` specification. Read through and familiarize yourself with the [Open Broker API spec](https://github.com/openservicebrokerapi/servicebroker/blob/v2.12/spec.md){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"), and use the readme file as a guide to learn more.
 
-## View our {{site.data.keyword.Bluemix_notm}} broker samples
+## View the {{site.data.keyword.Bluemix_notm}} broker samples
 {: #samples}
 
-[https://github.com/IBM/sample-resource-service-brokers](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
+[Resource service broker samples](https://github.com/IBM/sample-resource-service-brokers){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon")
 
 Not all languages are represented by a sample. If you need a sample Python broker for example, you can find a Cloud Foundry sample by searching Google. You might need to adjust this sample to meet the OSB requirements.
 {: note}
 
-## View our {{site.data.keyword.Bluemix_notm}} Open Service Broker API Documentation
+## View the {{site.data.keyword.Bluemix_notm}} Open Service Broker API Documentation
 {: #docs}
 
 Service brokers can be developed with an understanding of the [{{site.data.keyword.Bluemix_notm}} Open Service Broker API](https://{DomainName}/apidocs/ibm-cloud-osb-api){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). Become familiar with the Broker API, and how it interacts with your broker or brokers.
@@ -81,7 +81,7 @@ Service brokers must provide a standard set of metadata values that are consumed
   <dd>Updates your service instance.</dd>
 </dl>
 
-**Note on catalog (GET)**: This endpoint defines the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. This endpoint returns the catalog metadata stored within your broker. These values define the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. All additional catalog metadata that isn't required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata must be updated in the resource management console, and not housed in your broker. None of metadata stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog. The following section shows the minimal required values that catalog (GET) returns:
+**Note on catalog (GET)**: This endpoint defines the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. This endpoint returns the catalog metadata stored within your broker. These values define the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. All additional catalog metadata that isn't required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata must be updated in the resource management console, and not housed in your broker. None of metadata that is stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog. The following section shows the minimal required values that catalog (GET) returns:
 
 ```
 {
@@ -127,13 +127,13 @@ The OSB specification doesn't* support a disabled instance state, but not yet de
   <dd>Allows you to enable or disable a service instance.</dd>
 </dl>
 
-It's the service provider's responsibility to disable access to the service instance when the disable endpoint starts and to reenable that access when the enable endpoint is started.
+It's the service provider's responsibility to disable access to the service instance when the disable endpoint starts and to re-enable that access when the enable endpoint is started.
 {: note}
 
 ## Learn how to use the exported metadata to guide your broker development
 {: #use-metadata}
 
-The metadata you exported from the resource management console can be used as a guide for developing your own broker. Not all of the values you entered into the resource management console are required to provision a service. The metadata that you exported from the resource management console defines the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. Your exported JSON provides the following values:
+The metadata that you exported from the resource management console can be used as a guide for developing your own broker. Not all of the values you entered in the resource management console are required to provision a service. The metadata that you exported from the resource management console defines the minimal provisioning contract between your service and the {{site.data.keyword.Bluemix_notm}} platform. Your exported JSON provides the following values:
 
 ```
 {
@@ -223,7 +223,7 @@ The **API version header** is [2.12](https://github.com/openservicebrokerapi/ser
 
 The OSB API supports both synchronous and asynchronous modes of operation. If your operations are going to take less than 10 seconds, then synchronous responses are recommended. Otherwise, you must use the asynchronous mode of operation. More information is contained in the OSB specification.
 
-If your async operation takes less than 10 seconds when you're provisioning an instance, the platform will time out.
+If your async operation takes less than 10 seconds when you're provisioning an instance, the platform times out.
 {: tip}
 
 ### Recommendations for managing brokers across locations
@@ -235,7 +235,7 @@ When you're provisioning service instances on {{site.data.keyword.Bluemix_notm}}
 
 If your third-party API-based service is implemented in another cloud and exposed into {{site.data.keyword.Bluemix_notm}}, the location indicates the service's location in the other cloud.
 
-When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location; this choice is up to the service provider.
+When you onboard to {{site.data.keyword.Bluemix_notm}}, you must implement at least one OSB broker. You can have more than one broker depending on your deployment strategy and the locations you want to support for your service. Within the resource management console tool, you established the mapping between your service/plan/location tuple and the broker that services operations for that tuple. The typical choices would be to define a single broker to service all locations for your service or to define a broker per location. This choice is up to the service provider.
 
 For a list of available locations, consult the [IBM Global Catalog Locations](https://globalcatalog.cloud.ibm.com/search?q=kind:geography){: new_window} ![External link icon](../icons/launch-glyph.svg "External link icon"). If your service requires more locations to be defined in the Global Catalog, consult the {{site.data.keyword.Bluemix_notm}} onboarding team.
 

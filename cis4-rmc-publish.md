@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-19"
 
 keywords: test criteria, IBM Cloud catalog, Add broker Click Manage
 
@@ -79,10 +79,10 @@ Because you deployed in limited visibility mode, only you can see your offering 
 8. Test `plan_changeable` if you support multiple plans. If you enable this by setting Yes, you need to extend your Open Service Broker to support plan changes for provisioned instances. If your offering supports multiple plans, and you want users to change plans for a provisioned instance, you need to enable the ability for users to update their service instance. For more details, see the /v2/service_instances/{instance_id} PATCH endpoint in the Open Service Broker API v2.12  - Patch - display that user can change plan on provisioned instance. To test, switch the plan on an existing provisioned service instance.
 9. The OSB specification doesn't support a disabled instance state, but not yet deleted instance state. In order for IBM Cloud to support customers that might experience a billing lapse or other situations that result in an account suspension (but not yet cancellation), IBM Cloud defines extended API endpoints that allow service instances to be disabled and re-enabled. The following endpoint extensions are **REQUIRED**. Work with your IBM representative and have them test your enable and disable endpoints:
    - enable and disable instances (GET): status - returns the state of your service instance.
-   - enable and disable instances (PUT): Allows you to enable or disable a service instance.
+   - enable and disable instances (PUT): You can enable or disable a service instance.
 10. Test usage submission if you support metered plans. For any plans with metered usage you must validate the following:
    - You can curl the usage API and correctly return accurate pricing based on usage.
-   - You can demonstrate that you have enabled automated hourly submission to usage, supporting all users who provision an instance of your service.
+   - You can demonstrate that you enabled automated hourly submission to usage, supporting all users who provision an instance of your service.
 
 If your tests are unsuccessful, repeat the previous steps to publish your service and test again, iterating until you're successful.
 

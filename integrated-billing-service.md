@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-20"
 
 keywords: billing service, resource management console, IBM Cloud, RMC, 
 
@@ -23,7 +23,7 @@ subcollection: third-party
 # Overview: Developing an integrated billing service
 {: #overview}
 
-This topic introduces you to the steps that are required to develop and publish your third-party integrated billing service in {{site.data.keyword.Bluemix}}. 
+You can develop and publish your third-party integrated billing service in {{site.data.keyword.Bluemix}} by completed the following required steps. 
 {:shortdesc}
 
 After you're approved to deliver your offering in the {{site.data.keyword.Bluemix_notm}} catalog, you start developing your offering in the resource management console, a guided UI experience. You design your catalog metadata, set up the service pricing plans, and integrate with {{site.data.keyword.Bluemix_notm}} Identity and Access Management (IAM). 
@@ -36,7 +36,7 @@ Next, outside of the resource management console, you perform code development t
 
 To deliver an integrated billing service, you work with the Provider workbench, the resource management console, and the development environment of your choice. See the [checklist](/docs/third-party?topic=third-party-checklist#checklist) to help track these steps.
 
-These steps assume that you're approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started)
+These steps assume that you're approved to deliver an Integrated Billing service. If you haven't completed the initial registration and approval in PWB, see: [Getting started by publishing your third-party offering in {{site.data.keyword.Bluemix_notm}}](/docs/third-party/index.md?topic=third-party-get-started#get-started)
 {: tip}
 
 1. [Create your documentation and marketing announcement](/docs/third-party?topic=third-party-content-tasks#content-tasks).

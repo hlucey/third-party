@@ -4,7 +4,7 @@ copyright:
 
   years: 2017, 2019
 
-lastupdated: "2019-06-05"
+lastupdated: "2019-08-20"
 
 keywords: Q P, offering usage, metering service, configuration, metering model, daily proration 
 
@@ -200,7 +200,7 @@ The following table provides detailed information about the pricing models that 
 | Linear         | Multiply the unit price per resource (P) by the usage quantity (Q) to get the total amount (T)  | P*Q    | P=$1 T=1*5000 =$5000        |
 | Proration      | Multiply the daily unit price per resource (P) by the daily usage quantity (Q) to get the total daily amount. The total charge involves cumulating the charges for all days within the month.         | T= (pd * Q1) + ...+(Pd *Qn)     | <ul><li>P= $30</li><li>Pd (daily price) =$30/30=$1 (assuming 30 days in a month)</li><li>T1= $1 * 1 =$1</li><li>T2 = $1 * 0 =$0</li><li>Tn = 1 * 1 =$1</li><li>T = $1 + $0 +...+$1 = $5000</li></ul>     |
 | Simple tier (granular tier)  | A P*Q model in which the unit price for all consumption is determined by the tier the quantity falls into.           | <ul><li>If Q is <=Q1, T=P1*Q</li><li>If Q1 < Q <=Q2, T=P2*Q</li><li>If Q2 < Q <=Q3, T=P3*Q</li></ul>     |   <ul><li>Q1=1000, P1=$1</li><li>Q2=2500, P2=$0.9</li><li>Q3=10000, P3=$0.75</li><li>T=$0.75*5000=$3750</li></ul>              |
-| Graduated tier (step tier)   | The price per unit varies as the quantity consumed moves into different predefined tiers. The total charge involves cumulating the charges from the previous tiers           | <ul><li>T1=P1*Q (0 < Q</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=$0.9, T2=0.9*1500</li><li>Q3=10000, P3=$0.75, T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
+| Graduated tier (step tier)   | The price per unit varies as the quantity used moves into different predefined tiers. The total charge involves cumulating the charges from the previous tiers           | <ul><li>T1=P1*Q (0 < Q</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>     | <ul><li>Q1=1000, P1=$1, T1=1*1000</li><li>Q2=1500, P2=$0.9, T2=0.9*1500</li><li>Q3=10000, P3=$0.75, T3=0.75*2500</li><li>T=1000 +1350+1875=$4225</li></ul>          |
 | Block tier (up to)           | The total amount that is charged is established by an "up to" quantity that doesn't vary within the block     | <ul><li>If Q is <=Q1, T=T1</li><li>If Q1 < Q <=Q2, T=T2</li><li>If Q2 < Q <=Q3, T=T3</li></ul>    |  <ul><li>Q1=1000, T1=$0</li><li>Q2=2500, T2=2500</li><li>Q3=10000, T3=$4500</li><li>T=$4500</li></ul>            |
 {: caption="Table 7. Pricing models" caption-side="top"}
 

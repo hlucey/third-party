@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-03-28"
+lastupdated: "2019-08-19"
 
 keywords: billing service, resource management console, pricing plans
 
@@ -92,7 +92,7 @@ The service provider needs to provide:
 2. Click **Enable IAM**. The resource management console registers your service with IAM, create your Service ID and Policy, and create an API Key for you. Additionally, it creates an incomplete Client ID and Secret. The Client ID must be updated with your redirect URI after you've it.
 3. Click **Status** to see the current state of your IAM enablement.
 
-You need to come back to the IAM page later to provide your `Redirect URI`. You won't have this value until you do some additional development to build an authentication flow. Later steps help guide you through discerning your Redirect URI value.
+You need to come back to the IAM page later to provide your `Redirect URI`. This value isn't available until you do some additional development to build an authentication flow. Later steps help guide you through discerning your Redirect URI value.
 {: note}
 
 You’re given your API Key when you **Enable IAM**. It’s critical that you save the API Key. The value isn’t shown again. If you lose your API Key, you can delete the key and create a new one: [Manage service ID API keys](/docs/iam?topic=iam-serviceidapikeys#serviceidapikeys).
@@ -107,8 +107,8 @@ When you onboard your service into {{site.data.keyword.Bluemix_notm}}, you must 
 2. Click **Add plan** to create a new plan entry and click **Edit plan** to edit the plan.
    * **Free plan**: All offerings can have one Lite plan that is free of charge, allowing users to try out your service. Free plans use *Lite* for the **Display Name** and *lite* for the **Programmatic Name**. Specify **Yes** for **Is this plan free?**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog.
    * **Subscription plan**: Specify **No** for **Is this plan free?**. Complete the required fields. Leave the default **Pricing metrics** metric. This default metric is provided for you to use to charge users a one-time monthly fee. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage.
-   * **Metered plan**: Specify **No** for **Is this plan free?**. Complete the required fields. *Delete* the default **Pricing metrics** subscription metric. Click **Add another metric**, complete the **Add pricing metric** page, and click **Add metric**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage. For help selecting the right metrics, see [Metering integration](/docs/third-party?topic=third-party-content-tasks#content-tasks).
-3. The **Pricing** page is now be marked complete, indicating that you passed the minimum requirements to complete this page.
+   * **Metered plan**: Specify **No** for **Is this plan free?**. Complete the required fields. *Delete* the default **Pricing metrics** subscription metric. Click **Add another metric**, complete the **Add pricing metric** page, and click **Add metric**. Click **Save**. Your plan is published to the {{site.data.keyword.Bluemix_notm}} catalog. Save the sample curl command to submit usage. For help with selecting the right metrics, see [Metering integration](/docs/third-party?topic=third-party-content-tasks#content-tasks).
+3. The **Pricing** page is now be marked complete, indicating that you passed the minimum requirements to complete the pricing page.
 
 Service providers are required to automate hourly usage submission for all metered plans. For more information, see: [Submitting usage for metered plans](/docs/third-party?topic=third-party-submitusage#submitusage).
 {: tip}
@@ -116,7 +116,7 @@ Service providers are required to automate hourly usage submission for all meter
 ## Export your metadata as JSON
 {: #export-metadata}
 
-Now that you defined your service within the resource management console, you can download a catalog.json file and use it to inform the development of your Open Service Broker. The catalog.json has metadata that must be hosted in your broker. These values define the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. All additional catalog metadata that isn’t required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata, are updated in the resource management console. They aren't housed in your broker. None of the metadata stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog.
+Now that you defined your service within the resource management console, you can download a catalog.json file and use it to inform the development of your Open Service Broker. The catalog.json has metadata that must be hosted in your broker. These values define the contract between the broker and the {{site.data.keyword.Bluemix_notm}} platform for the services and plans that the broker supports. All additional catalog metadata that isn’t required for provisioning is stored within the {{site.data.keyword.Bluemix_notm}} catalog. Any updates to catalog display values that are used to render your dashboard like links, icons, and i18n translated metadata, are updated in the resource management console. They aren't housed in your broker. None of the metadata that is stored in your broker is displayed in the {{site.data.keyword.Bluemix_notm}} console or the {{site.data.keyword.Bluemix_notm}} CLI. The console and CLI return what was set within resource management console and stored in the {{site.data.keyword.Bluemix_notm}} catalog.
 
 1. From the resource management console, open the **Deployments** page.
 2. Click **Manage**.

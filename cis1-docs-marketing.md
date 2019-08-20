@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-19"
 
 keywords: IBM Provider workbench, marketing announcement, billing service
 
@@ -58,4 +58,4 @@ After you submit your service announcement, an IBM marketing manager reviews and
 ## Next steps
 {: #next-steps}
 
-Now that you've started the tasks for creating your getting started documentation and service announcement, you're ready to define your offering in the resource management console. See [Step 2: Defining your offering in the resource management console](/docs/third-party?topic=third-party-step2-define#step2-define).
+Now that you started the tasks for creating your getting started documentation and service announcement, you're ready to define your offering in the resource management console. See [Step 2: Defining your offering in the resource management console](/docs/third-party?topic=third-party-step2-define#step2-define).

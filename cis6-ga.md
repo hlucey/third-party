@@ -4,7 +4,7 @@ copyright:
 
   years: 2018, 2019 
 
-lastupdated: "2019-02-25"
+lastupdated: "2019-08-20"
 
 keywords: Service providers, Windows Media Player, limited visibility service, record demo
 
@@ -56,5 +56,5 @@ Your demo is reviewed by IBM before final publish approval can be granted. Recor
 ## After approval is granted, IBM will GA your service
 {: #approval}
 
-When IBM approves your service, you'll receive an email and IBM coordinates the release of your General Availability service. IBM moves your service out of limited visibility mode and makes it fully visible to your customers.
+When IBM approves your service, you receive an email and IBM coordinates the release of your General Availability service. IBM moves your service out of limited visibility mode and makes it fully visible to your customers.
 
