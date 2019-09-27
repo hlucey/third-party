@@ -12,6 +12,7 @@ Developing third-party integrated billing services
     {: .navgroup-end}
 
     {: .navgroup id="howto"}
+    3pcustom_service_parameters.md
     integrated-billing-service.md
 
     {: .topicgroup}
@@ -34,6 +35,7 @@ Developing third-party integrated billing services
     {: .navgroup-end}
 
     {: .navgroup id="reference"}
+    3p_parameter_example.md
     [IBM Cloud Open Service Broker API Reference](https://cloud.ibm.com/apidocs/ibm-cloud-osb-api)
     [IBM Cloud Usage Metering API Reference](https://ibm-bluemix-docs.github.io/usage-submission/)
     {: .navgroup-end}
