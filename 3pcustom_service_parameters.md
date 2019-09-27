@@ -23,7 +23,7 @@ subcollection: third-party
 
 You can use service parameters to collect and add additional data points to a provisioning call when an {{site.data.keyword.Bluemix}} customer creates a service instance. The data is passed onto the service providers service broker and is used in the provisioning action that is executed by the service provider. This action supports additional preferences and configures which specific service a customer should select. 
 
-As you start working with custom service parameters, see [Service parameter definitions and examples](/docs/third-party?topic=third-party-3p_parameter_example#service_parameters_def_examples). 
+As you start working with custom service parameters, see [Service parameter definitions and examples](/docs/third-party?topic=third-party-service_parameters_def_examples). 
 
 ## Adding custom service parameters to your offering 
 
