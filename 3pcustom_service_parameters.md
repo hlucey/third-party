@@ -4,7 +4,7 @@ copyright:
 
   years: 2019
 
-lastupdated: "2019-09-27"
+lastupdated: "2019-10-08"
 
 keywords: Custom service parameters, parameters, RMC, service 
 
@@ -31,7 +31,7 @@ As a third-party provider, you have the option to add custom service parameters 
 
 1. Log in to the [staging console](https://console.test.cloud.ibm.com). 
 2. Go to the [RMC dashboard](https://console.test.cloud.ibm.com/onboarding/dashboard), and click the **Offering** tab. 
-3. Enter a valid JSON in the **Customer Service Parameter** input field. 
+3. Enter a valid JSON in the **Custom Service Parameter** input field. 
 The custom service parameters are published onto the Global Catalog deployment object when you are publishing a deployment for a plan. 
 {: note}
 
